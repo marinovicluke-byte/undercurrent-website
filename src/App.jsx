@@ -24,9 +24,9 @@ function HomePage() {
       <Navbar ready={loaderDone} />
       <Hero ready={loaderDone} />
       <Protocol />
-      <Features />
-      <Pricing />
       <WhatWeAutomate />
+      <Pricing />
+      <Features />
       <FAQ />
       <Contact />
       <Footer />

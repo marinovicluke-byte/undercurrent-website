@@ -157,39 +157,41 @@ function WaveformSVG() {
 const steps = [
   {
     num: '01',
-    navLabel: 'Map your business',
-    title: 'We Map\nYour Business',
+    navLabel: 'Map',
+    title: 'Map Your\nBusiness',
     points: [
-      { id: '1.1', text: '30-minute workflow audit' },
-      { id: '1.2', text: 'Identify your most repetitive tasks' },
-      { id: '1.3', text: 'Spot the hidden gaps costing you time' },
-      { id: '1.4', text: 'Prioritise by hours saved per week' },
+      { id: '1.1', text: '30 minute workflow audit' },
+      { id: '1.2', text: 'Find your repeat tasks' },
+      { id: '1.3', text: 'See where time leaks out' },
+      { id: '1.4', text: 'Rank by hours saved' },
     ],
     svg: <BusinessMapSVG />,
     svgBg: 'rgba(107,124,74,0.08)',
   },
   {
     num: '02',
-    navLabel: 'Deploy the system',
-    title: 'We Deploy\nthe System',
+    navLabel: 'Build',
+    title: 'Build Your\nSystem',
     points: [
-      { id: '2.1', text: 'Custom automation built around your operations' },
-      { id: '2.2', text: 'Triggers, logic, and agents — all yours' },
-      { id: '2.3', text: 'You own the code, the data, and the logic' },
-      { id: '2.4', text: 'Live within weeks, not months' },
+      { id: '2.1', text: 'Custom build phase' },
+      { id: '2.2', text: 'Automations shaped for your business' },
+      { id: '2.3', text: 'Triggers, logic, and smart agents' },
+      { id: '2.4', text: 'You own every line and flow' },
+      { id: '2.5', text: 'Ready in weeks, not months' },
     ],
     svg: <WorkflowSVG />,
     svgBg: 'rgba(143,175,159,0.1)',
   },
   {
     num: '03',
-    navLabel: 'Maintain & improve',
-    title: 'We Maintain\nand Improve',
+    navLabel: 'Flow',
+    title: 'Let It\nFlow',
     points: [
-      { id: '3.1', text: 'Ongoing retainer — we stay in the system' },
-      { id: '3.2', text: 'Monthly reviews and iteration cycles' },
-      { id: '3.3', text: 'Your team trained and fully handed over' },
-      { id: '3.4', text: 'Scales as your business grows' },
+      { id: '3.1', text: 'Keep it running' },
+      { id: '3.2', text: 'We stay in your system' },
+      { id: '3.3', text: 'Quarterly reviews and updates' },
+      { id: '3.4', text: 'Train and handover to your team' },
+      { id: '3.5', text: 'Grows as your business grows' },
     ],
     svg: <WaveformSVG />,
     svgBg: 'rgba(107,124,74,0.08)',
@@ -260,7 +262,7 @@ export default function Protocol() {
             </h2>
           </div>
           <p className="font-dm" style={{ fontSize: '1.05rem', fontWeight: 300, color: 'rgba(28,28,26,0.5)', maxWidth: '340px', lineHeight: 1.6 }}>
-            Three phases. One seamless handoff. Built to outlast any platform.
+            Three steps. One clean handoff. Built to last.
           </p>
         </div>
       </div>

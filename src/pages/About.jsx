@@ -166,13 +166,71 @@ const values = [
 ]
 
 const timeline = [
-  { year: '2021', event: 'Founded in Melbourne, initially consulting on CRM implementation for small businesses.' },
-  { year: '2022', event: 'Pivoted to workflow automation after watching clients lose hours daily to manual processes.' },
-  { year: '2023', event: 'First AI agent deployments — email triage, lead qualification, content scheduling.' },
-  { year: '2024', event: 'Refined the UnderCurrent methodology: map, build, maintain. Expanded to 40+ clients.' },
-  { year: '2025', event: 'Launched structured retainer model. Deepened AI capabilities across all four service areas.' },
-  { year: 'Now', event: 'Building the systems that let small businesses run with the leverage of a much larger team.' },
+  { year: '2026', event: 'Founded in Melbourne. Started with what we knew best — consulting for small businesses that were drowning in busywork and missing the bigger picture.' },
+  { year: 'NOW', event: 'Focused entirely on AI-powered automation. Helping small businesses reclaim time, remove friction, and build systems that actually run.', isCurrent: true },
 ]
+
+function StoryTypewriter() {
+  const [displayed, setDisplayed] = useState('')
+  const [started, setStarted] = useState(false)
+  const [blink, setBlink] = useState(true)
+  const ref = useRef(null)
+  const full = 'the story continues...'
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting && !started) setStarted(true) },
+      { threshold: 0.6 }
+    )
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [started])
+
+  useEffect(() => {
+    if (!started) return
+    let i = 0
+    const interval = setInterval(() => {
+      i++
+      setDisplayed(full.slice(0, i))
+      if (i >= full.length) clearInterval(interval)
+    }, 72)
+    return () => clearInterval(interval)
+  }, [started])
+
+  useEffect(() => {
+    const b = setInterval(() => setBlink(p => !p), 530)
+    return () => clearInterval(b)
+  }, [])
+
+  return (
+    <div ref={ref} className="flex items-center justify-center" style={{ paddingTop: '3.5rem', paddingBottom: '1rem' }}>
+      <span
+        className="font-cormorant italic"
+        style={{
+          fontSize: 'clamp(1.5rem, 3.5vw, 2.8rem)',
+          fontWeight: 300,
+          color: 'rgba(28,28,26,0.25)',
+          letterSpacing: '-0.01em',
+          userSelect: 'none',
+        }}
+      >
+        {displayed}
+        <span
+          style={{
+            display: 'inline-block',
+            width: '2px',
+            height: '1.1em',
+            backgroundColor: '#8FAF9F',
+            marginLeft: '3px',
+            verticalAlign: 'text-bottom',
+            opacity: blink ? 1 : 0,
+            transition: 'opacity 0.1s',
+          }}
+        />
+      </span>
+    </div>
+  )
+}
 
 export default function About() {
   const heroRef = useRef(null)
@@ -213,11 +271,11 @@ export default function About() {
           "@type": "AboutPage",
           "url": "https://undercurrent.au/about",
           "name": "About UnderCurrent",
-          "description": "UnderCurrent is a Melbourne-based AI automation studio specialising in workflow automation for small businesses. Founded 2021.",
+          "description": "UnderCurrent is a Melbourne-based AI automation studio specialising in workflow automation for small businesses. Founded 2026.",
           "mainEntity": {
             "@type": "Organization",
             "name": "UnderCurrent",
-            "foundingDate": "2021",
+            "foundingDate": "2026",
             "foundingLocation": "Melbourne, Australia",
             "description": "AI automation architecture for small businesses",
             "url": "https://undercurrent.au",
@@ -256,11 +314,11 @@ export default function About() {
               Built on the belief
             </span>
             <span className="block font-cormorant" style={{ fontSize: 'clamp(3rem, 7vw, 7rem)', fontWeight: 300, fontStyle: 'italic', letterSpacing: '-0.02em', color: 'rgba(143,175,159,0.9)', lineHeight: 1.05, marginTop: '0.08em' }}>
-              that work should work.
+              that work should flow.
             </span>
           </h1>
           <p ref={subRef} className="font-dm" style={{ fontSize: 'clamp(1rem, 1.5vw, 1.15rem)', fontWeight: 300, color: 'rgba(232,224,208,0.65)', lineHeight: 1.7, maxWidth: '44ch', marginTop: '2rem', opacity: 0 }}>
-            We're a Melbourne-based automation studio that maps your business, finds what's stealing your time, and builds the systems to take it back.
+            From Melbourne, Under Current works with small business owners to spot where time slips away and build systems that keep things moving.
           </p>
         </div>
         <div id="hero-sentinel" style={{ position: 'absolute', bottom: 0, left: 0, height: '1px', width: '100%' }} />
@@ -277,15 +335,15 @@ export default function About() {
               <div className="flex flex-col gap-6">
                 <div style={{ borderLeft: '2px solid rgba(143,175,159,0.4)', paddingLeft: '1.5rem' }}>
                   <p className="font-mono" style={{ fontSize: '0.65rem', letterSpacing: '0.12em', color: 'rgba(28,28,26,0.35)', marginBottom: '0.5rem' }}>
-                    EST. 2021 · MELBOURNE
+                    EST. 2026 · MELBOURNE
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-5">
                   {[
-                    { num: <Counter target={40} suffix="+" />, label: 'clients automated' },
-                    { num: <Counter target={200} suffix="+" />, label: 'hours saved weekly' },
-                    { num: <Counter target={3} suffix="×" />, label: 'avg pipeline growth' },
-                    { num: <Counter target={98} suffix="%" />, label: 'client retention' },
+                    { num: <Counter target={12} suffix="+" />, label: 'tools we work with' },
+                    { num: <Counter target={100} suffix="%" />, label: 'custom-built systems' },
+                    { num: <Counter target={1} suffix=" team" />, label: 'dedicated to your ops' },
+                    { num: <Counter target={0} suffix=" lock-in" />, label: 'no lock-in contracts' },
                   ].map((s, i) => (
                     <div key={i} className="py-4" style={{ borderTop: '1px solid rgba(212,201,176,0.5)' }}>
                       <div className="font-cormorant" style={{ fontSize: '2.2rem', fontWeight: 700, color: '#1C1C1A', lineHeight: 1 }}>{s.num}</div>
@@ -297,20 +355,159 @@ export default function About() {
             </Reveal>
             <Reveal delay={0.15} className="md:col-span-8">
               <h2 className="font-cormorant" style={{ fontSize: 'clamp(2.2rem, 4vw, 4rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-0.02em', color: '#1C1C1A', marginBottom: '2rem' }}>
-                Small businesses deserve the same operational leverage as large ones.
+                Small businesses deserve smart systems.
               </h2>
               <div className="space-y-5" style={{ borderTop: '1px solid rgba(212,201,176,0.5)', paddingTop: '2rem' }}>
                 <p className="font-dm" style={{ fontSize: '1.05rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(28,28,26,0.7)' }}>
-                  Every large company has teams of people whose only job is to keep things running — operations managers, admin coordinators, outreach specialists, content teams. Small businesses don't have that luxury.
+                  Big companies have teams to keep things running. Admin. Ops. Content. Outreach.
                 </p>
                 <p className="font-dm" style={{ fontSize: '1.05rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(28,28,26,0.7)' }}>
-                  That's where we come in. UnderCurrent builds the automated infrastructure that lets a team of five operate with the capacity of fifteen — without the payroll, the overhead, or the coordination cost.
+                  Small teams do not. But you should not need to.
                 </p>
                 <p className="font-dm" style={{ fontSize: '1.05rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(28,28,26,0.7)' }}>
-                  We don't sell software. We don't push platforms. We sit with you, understand your specific workflows, and build systems tailored exactly to how you work — then we stick around to make sure they keep working.
+                  We build the digital help your business needs. Systems that run in the background while you focus on the front.
+                </p>
+                <p className="font-dm" style={{ fontSize: '1.05rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(28,28,26,0.7)' }}>
+                  We build it. We maintain it. We keep it flowing as your business grows.
                 </p>
               </div>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder section */}
+      <section className="py-24 px-6 md:px-12" style={{ backgroundColor: '#1C1C1A' }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <Reveal className="md:col-span-5">
+              {/* Portrait placeholder — organic shape */}
+              <div
+                className="relative"
+                style={{ aspectRatio: '4/5', borderRadius: '40% 60% 55% 45% / 50% 45% 55% 50%', overflow: 'hidden', background: 'linear-gradient(135deg, #2a3028 0%, #3d4f42 50%, #8FAF9F 100%)', maxWidth: '420px' }}
+              >
+                <WaterCanvas opacity={0.5} />
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-10">
+                  <p className="font-cormorant" style={{ fontSize: '3rem', fontWeight: 300, fontStyle: 'italic', color: 'rgba(247,243,237,0.6)', lineHeight: 1 }}>
+                    "The undercurrent is what moves everything forward."
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal delay={0.15} className="md:col-span-7">
+              <p className="font-mono mb-6" style={{ fontSize: '0.65rem', letterSpacing: '0.18em', color: 'rgba(143,175,159,0.6)' }}>
+                FOUNDER · LUKE — MELBOURNE
+              </p>
+              <h2 className="font-cormorant" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.5rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-0.02em', color: '#F7F3ED', marginBottom: '2rem' }}>
+                I started Under Current because I was tired of watching good businesses drown in admin.
+              </h2>
+              <div className="space-y-5">
+                <p className="font-dm" style={{ fontSize: '1rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(247,243,237,0.6)' }}>
+                  I spent years inside small business and corporate teams. I saw smart people lose most of their day to admin and busy work that did not need a person at all.
+                </p>
+                <p className="font-dm" style={{ fontSize: '1rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(247,243,237,0.6)' }}>
+                  My work in finance. In sales. In my own small business. It all showed me the same thing. Owners were buried in tasks that could be run by simple automated systems for small business.
+                </p>
+                <p className="font-dm" style={{ fontSize: '1rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(247,243,237,0.6)' }}>
+                  Now I help you find that work and hand it to business automation and workflow tools. Emails that can write themselves. Leads that can sort themselves. Customers who get the right message at the right time without you watching the screen.
+                </p>
+                <p className="font-dm" style={{ fontSize: '1rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(247,243,237,0.6)' }}>
+                  Under Current is the studio I wished I had in every job before this. I build the quiet current under your business. It runs all day. It runs all night. So you can live your life and still have things move.
+                </p>
+              </div>
+              <div className="flex gap-4 mt-10">
+                <a href="/services" className="btn-sage-hero" style={{ fontSize: '0.875rem', padding: '0.75rem 1.75rem' }}>
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    See what we build
+                    <ArrowRight size={15} />
+                  </span>
+                </a>
+                <a href="mailto:hello@undercurrent.au" className="btn-sage-hero" style={{ fontSize: '0.875rem', padding: '0.75rem 1.75rem' }}>
+                  <span>Get in touch</span>
+                </a>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <section className="py-24 px-6 md:px-12" style={{ backgroundColor: '#F7F3ED' }}>
+        <div className="max-w-7xl mx-auto">
+          <Reveal>
+            <p className="font-dm mb-3" style={{ fontSize: '0.75rem', letterSpacing: '0.18em', fontWeight: 500, color: '#8FAF9F' }}>
+              OUR STORY
+            </p>
+            <h2 className="font-cormorant" style={{ fontSize: 'clamp(2.5rem, 5vw, 5rem)', fontWeight: 700, lineHeight: 1.0, letterSpacing: '-0.02em', color: '#1C1C1A', marginBottom: '4rem' }}>
+              How we got here.
+            </h2>
+          </Reveal>
+          <div className="relative">
+            {/* Vertical line — only spans the timeline entries, not the typewriter */}
+            <div
+              className="absolute left-0 md:left-1/2 top-0 w-px"
+              style={{
+                bottom: 0,
+                backgroundColor: 'rgba(212,201,176,0.45)',
+                transform: 'translateX(-0.5px)',
+                /* fade out at the bottom toward the typewriter */
+                maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)',
+                WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)',
+              }}
+            />
+            <div className="space-y-0">
+              {timeline.map((item, i) => (
+                <Reveal key={item.year} delay={i * 0.1}>
+                  <div className={`relative grid grid-cols-1 md:grid-cols-2 gap-8 py-12`}>
+                    {/* Dot */}
+                    <div
+                      className="absolute left-0 md:left-1/2 rounded-full"
+                      style={{
+                        width: item.isCurrent ? '14px' : '10px',
+                        height: item.isCurrent ? '14px' : '10px',
+                        backgroundColor: item.isCurrent ? '#8FAF9F' : '#D4C9B0',
+                        border: `2px solid ${item.isCurrent ? '#8FAF9F' : 'rgba(212,201,176,0.8)'}`,
+                        top: '50%',
+                        transform: 'translate(-50%, -50%)',
+                        zIndex: 1,
+                        boxShadow: item.isCurrent ? '0 0 0 4px rgba(143,175,159,0.15)' : 'none',
+                      }}
+                    />
+                    <div className={`pl-8 md:pl-0 ${i % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:col-start-2 md:pl-16'}`}>
+                      <span
+                        className="font-mono"
+                        style={{
+                          fontSize: '0.68rem',
+                          letterSpacing: '0.18em',
+                          color: item.isCurrent ? '#8FAF9F' : 'rgba(28,28,26,0.28)',
+                          display: 'block',
+                          marginBottom: '0.6rem',
+                        }}
+                      >
+                        {item.year}
+                      </span>
+                      <p
+                        className="font-dm"
+                        style={{
+                          fontSize: item.isCurrent ? '1.05rem' : '0.975rem',
+                          fontWeight: item.isCurrent ? 400 : 300,
+                          lineHeight: 1.75,
+                          color: item.isCurrent ? 'rgba(28,28,26,0.85)' : 'rgba(28,28,26,0.6)',
+                          maxWidth: '380px',
+                          ...(i % 2 === 0 ? { marginLeft: 'auto' } : {}),
+                        }}
+                      >
+                        {item.event}
+                      </p>
+                    </div>
+                    {i % 2 === 0 && <div className="hidden md:block" />}
+                    {i % 2 !== 0 && <div className="hidden md:block md:col-start-1 md:row-start-1" />}
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+            {/* Typewriter — story continues */}
+            <StoryTypewriter />
           </div>
         </div>
       </section>
@@ -366,109 +563,6 @@ export default function About() {
                 </div>
               </Reveal>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Founder section */}
-      <section className="py-24 px-6 md:px-12" style={{ backgroundColor: '#1C1C1A' }}>
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <Reveal className="md:col-span-5">
-              {/* Portrait placeholder — organic shape */}
-              <div
-                className="relative"
-                style={{ aspectRatio: '4/5', borderRadius: '40% 60% 55% 45% / 50% 45% 55% 50%', overflow: 'hidden', background: 'linear-gradient(135deg, #2a3028 0%, #3d4f42 50%, #8FAF9F 100%)', maxWidth: '420px' }}
-              >
-                <WaterCanvas opacity={0.5} />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-10">
-                  <p className="font-cormorant" style={{ fontSize: '3rem', fontWeight: 300, fontStyle: 'italic', color: 'rgba(247,243,237,0.6)', lineHeight: 1 }}>
-                    "The undercurrent is what moves everything forward."
-                  </p>
-                </div>
-              </div>
-            </Reveal>
-            <Reveal delay={0.15} className="md:col-span-7">
-              <p className="font-mono mb-6" style={{ fontSize: '0.65rem', letterSpacing: '0.18em', color: 'rgba(143,175,159,0.6)' }}>
-                FOUNDER · LUKE — MELBOURNE
-              </p>
-              <h2 className="font-cormorant" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.5rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-0.02em', color: '#F7F3ED', marginBottom: '2rem' }}>
-                I started UnderCurrent because I was tired of watching good businesses drown in admin.
-              </h2>
-              <div className="space-y-5">
-                <p className="font-dm" style={{ fontSize: '1rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(247,243,237,0.6)' }}>
-                  I spent years working with small businesses — in operations, consulting, and sales — and kept seeing the same pattern: talented people spending 60% of their time on work that could, and should, be automated.
-                </p>
-                <p className="font-dm" style={{ fontSize: '1rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(247,243,237,0.6)' }}>
-                  Emails that should draft themselves. Leads that should qualify themselves. Customers who should get the right message at the right time, without anyone having to manually trigger it.
-                </p>
-                <p className="font-dm" style={{ fontSize: '1rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(247,243,237,0.6)' }}>
-                  UnderCurrent is the studio I wished existed when I was working inside those businesses. We build the current that runs beneath everything — quietly, precisely, continuously.
-                </p>
-              </div>
-              <div className="flex gap-4 mt-10">
-                <a href="/services" className="btn-sage-hero" style={{ fontSize: '0.875rem', padding: '0.75rem 1.75rem' }}>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    See what we build
-                    <ArrowRight size={15} />
-                  </span>
-                </a>
-                <a href="mailto:hello@undercurrent.au" className="btn-sage-hero" style={{ fontSize: '0.875rem', padding: '0.75rem 1.75rem' }}>
-                  <span>Get in touch</span>
-                </a>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="py-24 px-6 md:px-12" style={{ backgroundColor: '#F7F3ED' }}>
-        <div className="max-w-7xl mx-auto">
-          <Reveal>
-            <p className="font-dm mb-3" style={{ fontSize: '0.75rem', letterSpacing: '0.18em', fontWeight: 500, color: '#8FAF9F' }}>
-              OUR STORY
-            </p>
-            <h2 className="font-cormorant" style={{ fontSize: 'clamp(2.5rem, 5vw, 5rem)', fontWeight: 700, lineHeight: 1.0, letterSpacing: '-0.02em', color: '#1C1C1A', marginBottom: '4rem' }}>
-              How we got here.
-            </h2>
-          </Reveal>
-          <div className="relative">
-            {/* Vertical line */}
-            <div
-              className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px"
-              style={{ backgroundColor: 'rgba(212,201,176,0.5)', transform: 'translateX(-0.5px)' }}
-            />
-            <div className="space-y-0">
-              {timeline.map((item, i) => (
-                <Reveal key={item.year} delay={i * 0.07}>
-                  <div className={`relative grid grid-cols-1 md:grid-cols-2 gap-8 py-10 ${i % 2 === 0 ? '' : ''}`}>
-                    {/* Dot on timeline */}
-                    <div
-                      className="absolute left-0 md:left-1/2 w-3 h-3 rounded-full"
-                      style={{
-                        backgroundColor: i === timeline.length - 1 ? '#8FAF9F' : '#D4C9B0',
-                        border: `2px solid ${i === timeline.length - 1 ? '#8FAF9F' : '#D4C9B0'}`,
-                        top: '50%',
-                        transform: 'translate(-50%, -50%)',
-                        zIndex: 1,
-                      }}
-                    />
-                    <div className={`pl-8 md:pl-0 ${i % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:col-start-2 md:pl-16'}`}>
-                      <span className="font-mono" style={{ fontSize: '0.7rem', letterSpacing: '0.15em', color: i === timeline.length - 1 ? '#8FAF9F' : 'rgba(28,28,26,0.3)', display: 'block', marginBottom: '0.5rem' }}>
-                        {item.year}
-                      </span>
-                      <p className="font-dm" style={{ fontSize: '1rem', fontWeight: 300, lineHeight: 1.7, color: 'rgba(28,28,26,0.7)' }}>
-                        {item.event}
-                      </p>
-                    </div>
-                    {/* Empty column for alternating layout */}
-                    {i % 2 === 0 && <div className="hidden md:block" />}
-                    {i % 2 !== 0 && <div className="hidden md:block md:col-start-1 md:row-start-1" />}
-                  </div>
-                </Reveal>
-              ))}
-            </div>
           </div>
         </div>
       </section>

@@ -4,6 +4,93 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
+// Subtle flowing current lines — same aesthetic as Hero but quieter
+function SectionCanvas() {
+  const canvasRef = useRef(null)
+  const rafRef = useRef(null)
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+    const ctx = canvas.getContext('2d')
+    const dpr = window.devicePixelRatio || 1
+
+    const resize = () => {
+      const w = canvas.offsetWidth
+      const h = canvas.offsetHeight
+      canvas.width = w * dpr
+      canvas.height = h * dpr
+      ctx.scale(dpr, dpr)
+    }
+    resize()
+    window.addEventListener('resize', resize)
+
+    const currents = [
+      { yFrac: 0.18, amp: 32, freq: 0.007, speed: 0.12,  phase: 0,   color: 'rgba(143,175,159,0.10)', lw: 1.0, dash: 0,  gap: 0 },
+      { yFrac: 0.28, amp: 22, freq: 0.009, speed: -0.09, phase: 1.4, color: 'rgba(212,201,176,0.09)', lw: 0.8, dash: 0,  gap: 0 },
+      { yFrac: 0.50, amp: 40, freq: 0.006, speed: 0.10,  phase: 2.8, color: 'rgba(143,175,159,0.07)', lw: 1.2, dash: 55, gap: 85 },
+      { yFrac: 0.62, amp: 18, freq: 0.011, speed: -0.14, phase: 0.8, color: 'rgba(143,175,159,0.08)', lw: 0.6, dash: 0,  gap: 0 },
+      { yFrac: 0.75, amp: 28, freq: 0.008, speed: 0.08,  phase: 3.5, color: 'rgba(212,201,176,0.07)', lw: 1.0, dash: 40, gap: 75 },
+      { yFrac: 0.88, amp: 14, freq: 0.013, speed: 0.18,  phase: 1.0, color: 'rgba(143,175,159,0.09)', lw: 0.5, dash: 0,  gap: 0 },
+    ]
+    const driftPhases = currents.map((_, i) => i * 0.9)
+    const driftAmps   = [0.030, 0.022, 0.038, 0.016, 0.025, 0.012]
+    const driftSpeeds = [0.0004, 0.00035, 0.0003, 0.0005, 0.00028, 0.0006]
+
+    let t = 0
+    const draw = () => {
+      const W = canvas.offsetWidth
+      const H = canvas.offsetHeight
+      ctx.clearRect(0, 0, W, H)
+
+      currents.forEach((c, i) => {
+        const drift = Math.sin(t * driftSpeeds[i] * 1000 + driftPhases[i]) * driftAmps[i]
+        const yCenter = (c.yFrac + drift) * H
+
+        ctx.beginPath()
+        ctx.strokeStyle = c.color
+        ctx.lineWidth = c.lw
+        ctx.lineCap = 'round'
+        if (c.dash > 0) {
+          ctx.setLineDash([c.dash, c.gap])
+          ctx.lineDashOffset = -(t * c.speed * 60) % (c.dash + c.gap)
+        } else {
+          ctx.setLineDash([])
+        }
+
+        for (let x = -20; x <= W + 20; x += 3) {
+          const y = yCenter + Math.sin(x * c.freq + t * c.speed * 60 + c.phase) * c.amp
+          x === -20 ? ctx.moveTo(x, y) : ctx.lineTo(x, y)
+        }
+        ctx.stroke()
+      })
+
+      t += 0.016
+      rafRef.current = requestAnimationFrame(draw)
+    }
+    rafRef.current = requestAnimationFrame(draw)
+
+    return () => {
+      cancelAnimationFrame(rafRef.current)
+      window.removeEventListener('resize', resize)
+    }
+  }, [])
+
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{
+        position: 'absolute',
+        inset: 0,
+        width: '100%',
+        height: '100%',
+        pointerEvents: 'none',
+        zIndex: 0,
+      }}
+    />
+  )
+}
+
 // Card 1: Sales Outbound — animated pipeline flow
 function SalesCard() {
   const [step, setStep] = useState(0)
@@ -460,8 +547,23 @@ export default function WhatWeAutomate() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="what-we-automate" className="py-20 px-6 md:px-12" style={{ backgroundColor: '#F7F3ED' }}>
-      <div className="max-w-7xl mx-auto">
+    <section ref={sectionRef} id="what-we-automate" className="py-20 px-6 md:px-12" style={{ backgroundColor: '#F7F3ED', position: 'relative', overflow: 'hidden' }}>
+      {/* Animated water-current background */}
+      <SectionCanvas />
+
+      {/* Radial gradient blooms for depth */}
+      <div style={{
+        position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0,
+        background: [
+          'radial-gradient(ellipse 70% 45% at 15% 12%, rgba(143,175,159,0.10) 0%, transparent 70%)',
+          'radial-gradient(ellipse 50% 35% at 85% 8%, rgba(212,201,176,0.12) 0%, transparent 65%)',
+          'radial-gradient(ellipse 60% 40% at 50% 55%, rgba(143,175,159,0.06) 0%, transparent 70%)',
+          'radial-gradient(ellipse 45% 30% at 10% 85%, rgba(212,201,176,0.08) 0%, transparent 65%)',
+          'radial-gradient(ellipse 55% 35% at 90% 90%, rgba(143,175,159,0.07) 0%, transparent 65%)',
+        ].join(', '),
+      }} />
+
+      <div className="max-w-7xl mx-auto" style={{ position: 'relative', zIndex: 1 }}>
         <div ref={headingRef} className="mb-10">
           <p className="font-dm text-charcoal/40 mb-3" style={{ fontSize: '0.8rem', letterSpacing: '0.18em', fontWeight: 500 }}>
             WHAT WE AUTOMATE

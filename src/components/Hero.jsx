@@ -254,9 +254,9 @@ export default function Hero({ ready = true }) {
             opacity: 0,
           }}
         >
-          We work with small businesses to map, build, and maintain
-          automation workflows — so the right things happen without
-          you having to touch them.
+          We build systems that run your business while you sleep.<br />
+          You focus on the work you love.<br />
+          We handle the rest.
         </p>
 
         {/* CTA */}

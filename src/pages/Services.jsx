@@ -69,29 +69,31 @@ function Terminal({ lines, typingSpeed = 38 }) {
   }, [lineIdx, charIdx, lines, typingSpeed])
 
   return (
-    <div className="rounded-2xl p-5 font-mono overflow-hidden" style={{ backgroundColor: '#1C1C1A', minHeight: '180px' }}>
+    <div className="rounded-2xl p-5 font-mono overflow-hidden" style={{ backgroundColor: '#1C1C1A', height: '240px', display: 'flex', flexDirection: 'column' }}>
       <div className="flex gap-1.5 mb-4">
         {['#FF5F57', '#FFBD2E', '#28C840'].map((c, i) => (
           <div key={i} className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: c, opacity: 0.7 }} />
         ))}
       </div>
-      {displayedLines.map((line, i) => (
-        <div key={i} style={{ fontSize: '0.72rem', color: '#8FAF9F', lineHeight: 1.85, opacity: i < displayedLines.length - 1 ? 0.45 : 0.75 }}>
-          {line}
-        </div>
-      ))}
-      {lineIdx < lines.length && (
-        <div style={{ fontSize: '0.72rem', color: '#8FAF9F', lineHeight: 1.85 }}>
-          {currentLine}
-          <span style={{ color: '#6B7C4A', animation: 'blink 1s step-end infinite' }}>█</span>
-        </div>
-      )}
-      {lineIdx >= lines.length && (
-        <div className="flex items-center gap-2 mt-3">
-          <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#6B7C4A', animation: 'pulse-dot 2s ease-in-out infinite' }} />
-          <span style={{ fontSize: '0.65rem', color: '#6B7C4A', letterSpacing: '0.1em' }}>COMPLETE</span>
-        </div>
-      )}
+      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+        {displayedLines.map((line, i) => (
+          <div key={i} style={{ fontSize: '0.72rem', color: '#8FAF9F', lineHeight: 1.85, opacity: i < displayedLines.length - 1 ? 0.45 : 0.75 }}>
+            {line}
+          </div>
+        ))}
+        {lineIdx < lines.length && (
+          <div style={{ fontSize: '0.72rem', color: '#8FAF9F', lineHeight: 1.85 }}>
+            {currentLine}
+            <span style={{ color: '#6B7C4A', animation: 'blink 1s step-end infinite' }}>█</span>
+          </div>
+        )}
+        {lineIdx >= lines.length && (
+          <div className="flex items-center gap-2 mt-3">
+            <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#6B7C4A', animation: 'pulse-dot 2s ease-in-out infinite' }} />
+            <span style={{ fontSize: '0.65rem', color: '#6B7C4A', letterSpacing: '0.1em' }}>COMPLETE</span>
+          </div>
+        )}
+      </div>
     </div>
   )
 }
