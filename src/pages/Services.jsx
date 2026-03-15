@@ -578,9 +578,10 @@ function ServiceNav() {
   const [active, setActive] = useState(null)
   const [visible, setVisible] = useState(false)
   const [navTop, setNavTop] = useState(80)
+  const scrollRef = useRef(null)
+  const activeRef = useRef(null)
 
   useEffect(() => {
-    // Measure the actual bottom of the floating navbar pill + 8px gap
     const measureNavbar = () => {
       const nav = document.querySelector('nav[class*="fixed"]')
       if (nav) {
@@ -591,7 +592,6 @@ function ServiceNav() {
     measureNavbar()
     window.addEventListener('resize', measureNavbar)
 
-    // Show nav only after scrolling past the hero
     const sentinel = document.getElementById('hero-sentinel')
     if (sentinel) {
       const sentinelObs = new IntersectionObserver(([entry]) => {
@@ -600,7 +600,6 @@ function ServiceNav() {
       sentinelObs.observe(sentinel)
     }
 
-    // Track which section is active
     const observers = services.map(s => {
       const el = document.getElementById(s.id)
       if (!el) return null
@@ -616,52 +615,107 @@ function ServiceNav() {
     }
   }, [])
 
+  // Auto-scroll active pill into view on mobile
+  useEffect(() => {
+    if (activeRef.current && scrollRef.current) {
+      const container = scrollRef.current
+      const pill = activeRef.current
+      const containerRect = container.getBoundingClientRect()
+      const pillRect = pill.getBoundingClientRect()
+      const scrollLeft = container.scrollLeft + (pillRect.left - containerRect.left) - (containerRect.width / 2) + (pillRect.width / 2)
+      container.scrollTo({ left: scrollLeft, behavior: 'smooth' })
+    }
+  }, [active])
+
   return (
     <div
-      className="fixed left-0 right-0 z-[150] flex justify-center px-4 transition-all duration-300"
+      className="fixed left-0 right-0 z-[150] flex justify-center transition-all duration-500"
       style={{
         top: `${navTop}px`,
         opacity: visible ? 1 : 0,
-        transform: visible ? 'translateY(0)' : 'translateY(-6px)',
+        transform: visible ? 'translateY(0)' : 'translateY(-10px)',
         pointerEvents: visible ? 'auto' : 'none',
       }}
     >
+      {/* Outer wrapper — pill shape, handles blur + border */}
       <div
-        className="flex items-center gap-2 px-4 py-2 overflow-x-auto"
         style={{
-          backgroundColor: 'rgba(232,224,208,0.88)',
-          backdropFilter: 'blur(20px) saturate(1.4)',
-          WebkitBackdropFilter: 'blur(20px) saturate(1.4)',
-          border: '1px solid rgba(212,201,176,0.6)',
+          backgroundColor: 'rgba(232,224,208,0.92)',
+          backdropFilter: 'blur(24px) saturate(1.5)',
+          WebkitBackdropFilter: 'blur(24px) saturate(1.5)',
+          border: '1px solid rgba(212,201,176,0.65)',
           borderRadius: '9999px',
-          boxShadow: '0 2px 24px rgba(28,28,26,0.08)',
+          boxShadow: '0 4px 32px rgba(28,28,26,0.10), 0 1px 0 rgba(255,255,255,0.5) inset',
           maxWidth: '820px',
-          width: '100%',
+          width: 'calc(100% - 2rem)',
+          display: 'flex',
+          alignItems: 'center',
+          overflow: 'hidden',
+          position: 'relative',
         }}
       >
-        <span className="font-dm mr-1 flex-shrink-0" style={{ fontSize: '0.68rem', letterSpacing: '0.15em', fontWeight: 500, color: 'rgba(28,28,26,0.35)' }}>
+        {/* Label — hidden on very small screens */}
+        <span
+          className="font-dm hidden sm:block flex-shrink-0 pl-4 pr-2"
+          style={{ fontSize: '0.65rem', letterSpacing: '0.15em', fontWeight: 500, color: 'rgba(28,28,26,0.32)', whiteSpace: 'nowrap' }}
+        >
           JUMP TO:
         </span>
-        {services.map(s => (
-          <a
-            key={s.id}
-            href={`#${s.id}`}
-            className="flex-shrink-0 rounded-full px-3.5 py-1 font-dm transition-all duration-300"
-            style={{
-              fontSize: '0.75rem',
-              fontWeight: active === s.id ? 600 : 400,
-              backgroundColor: active === s.id ? s.accentColor : 'transparent',
-              color: active === s.id ? '#1C1C1A' : 'rgba(28,28,26,0.6)',
-              border: `1px solid ${active === s.id ? s.accentColor : 'rgba(28,28,26,0.15)'}`,
-              textDecoration: 'none',
-              letterSpacing: '0.03em',
-              boxShadow: active === s.id ? `0 1px 8px ${s.accentColor}35` : 'none',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            {s.label.charAt(0) + s.label.slice(1).toLowerCase()}
-          </a>
-        ))}
+
+        {/* Left fade edge (mobile) */}
+        <div
+          className="absolute left-0 top-0 bottom-0 pointer-events-none sm:hidden z-10"
+          style={{ width: '1.5rem', background: 'linear-gradient(to right, rgba(232,224,208,0.95), transparent)' }}
+        />
+
+        {/* Scrollable pills row — scrollbar hidden via CSS */}
+        <div
+          ref={scrollRef}
+          className="flex items-center gap-1.5 px-3 py-2 service-nav-scroll"
+          style={{
+            overflowX: 'auto',
+            overflowY: 'hidden',
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+            WebkitOverflowScrolling: 'touch',
+            flex: 1,
+          }}
+        >
+          {services.map(s => {
+            const isActive = active === s.id
+            return (
+              <a
+                key={s.id}
+                ref={isActive ? activeRef : null}
+                href={`#${s.id}`}
+                className="flex-shrink-0 font-dm"
+                style={{
+                  fontSize: '0.75rem',
+                  fontWeight: isActive ? 600 : 400,
+                  backgroundColor: isActive ? s.accentColor : 'rgba(28,28,26,0.05)',
+                  color: isActive ? '#1C1C1A' : 'rgba(28,28,26,0.55)',
+                  border: `1px solid ${isActive ? s.accentColor : 'rgba(28,28,26,0.10)'}`,
+                  borderRadius: '9999px',
+                  padding: '0.3rem 0.9rem',
+                  textDecoration: 'none',
+                  letterSpacing: '0.02em',
+                  whiteSpace: 'nowrap',
+                  boxShadow: isActive ? `0 1px 10px ${s.accentColor}40` : 'none',
+                  transform: isActive ? 'scale(1.03)' : 'scale(1)',
+                  transition: 'background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease',
+                }}
+              >
+                {s.label.charAt(0) + s.label.slice(1).toLowerCase()}
+              </a>
+            )
+          })}
+        </div>
+
+        {/* Right fade edge */}
+        <div
+          className="absolute right-0 top-0 bottom-0 pointer-events-none z-10"
+          style={{ width: '2rem', background: 'linear-gradient(to left, rgba(232,224,208,0.95), transparent)' }}
+        />
       </div>
     </div>
   )

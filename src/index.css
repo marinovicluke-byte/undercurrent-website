@@ -181,6 +181,11 @@ body::before {
   transform: scale(1.01);
 }
 
+/* Service nav pill strip — hide scrollbar entirely */
+.service-nav-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 /* Typewriter cursor blink */
 @keyframes blink {
   0%, 100% { opacity: 1; }
