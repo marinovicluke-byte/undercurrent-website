@@ -147,26 +147,28 @@ function AdminCard() {
         <span className="font-dm text-charcoal/45" style={{ fontSize: '0.78rem', fontWeight: 400 }}>saved per week, per person</span>
       </div>
       <div
-        className="flex-1 rounded-2xl p-4 overflow-hidden font-mono"
-        style={{ backgroundColor: '#1C1C1A', minHeight: '140px' }}
+        className="flex-1 rounded-2xl p-4 font-mono"
+        style={{ backgroundColor: '#1C1C1A', height: '180px', minHeight: '180px', maxHeight: '180px', overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}
       >
-        {lines.map((line, i) => (
-          <div key={i} style={{ fontSize: '0.72rem', color: '#8FAF9F', lineHeight: 1.85, opacity: i < lines.length - 1 ? 0.5 : 0.75 }}>
-            {line}
-          </div>
-        ))}
-        {lineIdx < messages.length && (
-          <div style={{ fontSize: '0.72rem', color: '#8FAF9F', lineHeight: 1.85 }}>
-            {currentLine}
-            <span className="cursor-blink" style={{ color: '#6B7C4A' }}>█</span>
-          </div>
-        )}
-        {lineIdx >= messages.length && (
-          <div className="mt-2 flex items-center gap-2">
-            <div className="w-1.5 h-1.5 rounded-full pulse-dot" style={{ backgroundColor: '#6B7C4A' }} />
-            <span style={{ fontSize: '0.65rem', color: '#6B7C4A', letterSpacing: '0.1em' }}>SYSTEM IDLE</span>
-          </div>
-        )}
+        <div style={{ overflow: 'hidden' }}>
+          {lines.map((line, i) => (
+            <div key={i} style={{ fontSize: '0.72rem', color: '#8FAF9F', lineHeight: 1.85, opacity: i < lines.length - 1 ? 0.5 : 0.75 }}>
+              {line}
+            </div>
+          ))}
+          {lineIdx < messages.length && (
+            <div style={{ fontSize: '0.72rem', color: '#8FAF9F', lineHeight: 1.85 }}>
+              {currentLine}
+              <span className="cursor-blink" style={{ color: '#6B7C4A' }}>█</span>
+            </div>
+          )}
+          {lineIdx >= messages.length && (
+            <div className="mt-2 flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full pulse-dot" style={{ backgroundColor: '#6B7C4A' }} />
+              <span style={{ fontSize: '0.65rem', color: '#6B7C4A', letterSpacing: '0.1em' }}>SYSTEM IDLE</span>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )
