@@ -167,7 +167,8 @@ function BuildVisual() {
   return (
     <div style={{
       background: '#0d0d0c', borderRadius: 12, padding: '14px 16px',
-      fontFamily: 'DM Mono, monospace', width: '100%', minHeight: 180,
+      fontFamily: 'DM Mono, monospace', width: '100%', minHeight: 180, maxHeight: 180,
+      overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
       border: '1px solid rgba(143,175,159,0.12)',
       boxShadow: '0 0 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03)',
     }}>

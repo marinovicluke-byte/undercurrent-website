@@ -140,8 +140,8 @@ function TypewriterCard() {
       </p>
 
       <div
-        className="flex-1 rounded-[1.5rem] p-4 overflow-hidden font-mono"
-        style={{ backgroundColor: '#1C1C1A', minHeight: '130px' }}
+        className="flex-1 rounded-[1.5rem] p-4 font-mono"
+        style={{ backgroundColor: '#1C1C1A', height: '130px', minHeight: '130px', maxHeight: '130px', overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}
       >
         {lines.map((line, i) => (
           <div key={i} className="font-mono" style={{ fontSize: '0.72rem', color: '#8FAF9F', lineHeight: 1.8, opacity: 0.6 }}>
