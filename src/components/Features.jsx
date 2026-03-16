@@ -76,18 +76,9 @@ function AutomationCard() {
 }
 
 // Card 2: Telemetry Typewriter
-function useIsMobileFeatures() {
-  const [m, setM] = useState(() => window.innerWidth < 768)
-  useEffect(() => {
-    const h = () => setM(window.innerWidth < 768)
-    window.addEventListener('resize', h)
-    return () => window.removeEventListener('resize', h)
-  }, [])
-  return m
-}
+const IS_MOBILE = typeof window !== 'undefined' && window.innerWidth < 768
 
 function TypewriterCard() {
-  const isMobile = useIsMobileFeatures()
   const [lines, setLines] = useState([])
   const [currentLine, setCurrentLine] = useState('')
   const [lineIdx, setLineIdx] = useState(0)
@@ -103,7 +94,7 @@ function TypewriterCard() {
   ]
 
   useEffect(() => {
-    if (isMobile) return
+    if (IS_MOBILE) return
     if (lineIdx >= messages.length) {
       const reset = setTimeout(() => {
         setLines([])
@@ -129,7 +120,7 @@ function TypewriterCard() {
       }, 600)
       return () => clearTimeout(t)
     }
-  }, [lineIdx, charIdx, isMobile])
+  }, [lineIdx, charIdx])
 
   return (
     <div
@@ -155,13 +146,13 @@ function TypewriterCard() {
         style={{ backgroundColor: '#1C1C1A', height: '130px', minHeight: '130px', maxHeight: '130px', flexShrink: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}
       >
         <div style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
-          {(isMobile ? messages : lines).map((line, i) => (
-            <div key={i} className="font-mono" style={{ fontSize: '0.72rem', color: '#8FAF9F', lineHeight: 1.8, opacity: isMobile ? (i < messages.length - 1 ? 0.6 : 1) : 0.6 }}>
+          {(IS_MOBILE ? messages : lines).map((line, i) => (
+            <div key={i} className="font-mono" style={{ fontSize: '0.72rem', color: '#8FAF9F', lineHeight: 1.8, opacity: 0.6 }}>
               <span style={{ color: '#6B7C4A', marginRight: '0.5rem' }}>›</span>
               {line}
             </div>
           ))}
-          {!isMobile && lineIdx < messages.length && (
+          {!IS_MOBILE && lineIdx < messages.length && (
             <div className="font-mono" style={{ fontSize: '0.72rem', color: '#8FAF9F', lineHeight: 1.8 }}>
               <span style={{ color: '#6B7C4A', marginRight: '0.5rem' }}>›</span>
               {currentLine}

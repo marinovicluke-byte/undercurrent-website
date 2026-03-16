@@ -8,6 +8,8 @@ import PageHead from '../components/PageHead'
 
 gsap.registerPlugin(ScrollTrigger)
 
+const IS_MOBILE = typeof window !== 'undefined' && window.innerWidth < 768
+
 // ─── Grain Canvas overlay (animated noise per panel) ────────────────────────
 function GrainOverlay({ opacity = 0.055 }) {
   const canvasRef = useRef(null)
@@ -136,7 +138,6 @@ const BUILD_LINES = [
 ]
 
 function BuildVisual() {
-  const isMobile = useIsMobile()
   const [shown, setShown] = useState([])
   const [cur, setCur] = useState('')
   const [li, setLi] = useState(0)
@@ -149,7 +150,7 @@ function BuildVisual() {
   }, [])
 
   useEffect(() => {
-    if (isMobile) return
+    if (IS_MOBILE) return
     if (li >= BUILD_LINES.length) {
       const r = setTimeout(() => { setShown([]); setCur(''); setLi(0); setCi(0) }, 2800)
       return () => clearTimeout(r)
@@ -164,7 +165,7 @@ function BuildVisual() {
       setCur(''); setCi(0); setLi(l => l + 1)
     }, 160)
     return () => clearTimeout(t)
-  }, [li, ci, isMobile])
+  }, [li, ci])
 
   const boxStyle = {
     background: '#0d0d0c', borderRadius: 12, padding: '14px 16px',
@@ -184,7 +185,7 @@ function BuildVisual() {
   )
 
   // On mobile: render all lines statically, no typewriter
-  if (isMobile) {
+  if (IS_MOBILE) {
     return (
       <div style={boxStyle}>
         {dots}
@@ -330,7 +331,7 @@ function StepPanel({ step, index }) {
     const ghost = ghostRef.current
     const content = contentRef.current
 
-    if (isMobile) {
+    if (IS_MOBILE) {
       // On mobile: no clip-path (causes height recalc). Simple fade only.
       gsap.set(content, { opacity: 0 })
       gsap.set(ghost, { opacity: 0 })
