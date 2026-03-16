@@ -13,6 +13,8 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import About from './pages/About'
 import Services from './pages/Services'
+import ROICalculator from './pages/ROICalculator'
+import Process from './pages/Process'
 
 function HomePage() {
   const [loaderDone, setLoaderDone] = useState(false)
@@ -40,6 +42,8 @@ export default function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<About />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/roi" element={<ROICalculator />} />
+      <Route path="/process" element={<Process />} />
     </Routes>
   )
 }
