@@ -37,7 +37,7 @@ function AutomationCard() {
       </p>
 
       {/* Shuffling cards */}
-      <div className="relative flex-1 flex items-center justify-center" style={{ minHeight: '140px' }}>
+      <div className="relative flex-1 flex items-center justify-center" style={{ minHeight: '140px', height: '140px', overflow: 'hidden' }}>
         {items.map((item, i) => {
           const offset = (i - active + items.length) % items.length
           const isActive = offset === 0
@@ -63,6 +63,7 @@ function AutomationCard() {
                 zIndex: isActive ? 3 : isNext ? 2 : 1,
                 whiteSpace: 'nowrap',
                 border: `1px solid ${isActive ? 'transparent' : '#D4C9B0'}`,
+                willChange: 'transform, opacity',
               }}
             >
               {item}

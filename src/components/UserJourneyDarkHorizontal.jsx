@@ -535,10 +535,13 @@ const DARK_STEPS = [
 
 // ─── Mobile hook ──────────────────────────────────────────────────────────────
 function useIsMobile(breakpoint = 700) {
-  const [isMobile, setIsMobile] = useState(() => window.innerWidth < breakpoint)
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window === 'undefined') return false
+    return window.innerWidth < breakpoint
+  })
   useEffect(() => {
     const handler = () => setIsMobile(window.innerWidth < breakpoint)
-    window.addEventListener('resize', handler)
+    window.addEventListener('resize', handler, { passive: true })
     return () => window.removeEventListener('resize', handler)
   }, [breakpoint])
   return isMobile
@@ -630,6 +633,15 @@ export default function UserJourneyDarkHorizontal() {
         @keyframes ujdh-progress {
           from { transform: scaleX(0); }
           to   { transform: scaleX(1); }
+        }
+        /* Prevent grid from resizing when widget content changes */
+        .ujdh-grid {
+          grid-auto-rows: 1fr;
+        }
+        @media (max-width: 700px) {
+          .ujdh-grid {
+            grid-auto-rows: auto;
+          }
         }
         .ujdh-timeline-btn {
           background: none;
@@ -725,7 +737,7 @@ export default function UserJourneyDarkHorizontal() {
             display: 'grid',
             gridTemplateColumns: isMobile ? '1fr' : '40% 60%',
             minHeight: isMobile ? 'auto' : '420px',
-          }}>
+          }} className="ujdh-grid">
 
             {/* ── Left: narrative ── */}
             <div style={{
@@ -859,6 +871,7 @@ export default function UserJourneyDarkHorizontal() {
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
+              minHeight: isMobile ? '280px' : 'auto',
             }}>
               <div
                 key={`widget-${tick}`}

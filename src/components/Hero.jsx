@@ -12,8 +12,8 @@ function WaterCanvas({ opacity }) {
     if (!canvas) return
     const ctx = canvas.getContext('2d')
 
-    // Hi-DPI
-    const dpr = window.devicePixelRatio || 1
+    // Hi-DPI — cap dpr at 2 on mobile to reduce canvas memory
+    const dpr = Math.min(window.devicePixelRatio || 1, 2)
     const resize = () => {
       const w = canvas.offsetWidth
       const h = canvas.offsetHeight
@@ -26,6 +26,10 @@ function WaterCanvas({ opacity }) {
     let visible = true
     const visObserver = new IntersectionObserver(([e]) => { visible = e.isIntersecting }, { threshold: 0 })
     visObserver.observe(canvas)
+    // Throttle to 30fps on mobile to reduce jank
+    const isMobile = window.innerWidth < 768
+    let lastFrame = 0
+    const frameInterval = isMobile ? 33 : 16
 
     // Each "current" is a sine-based ribbon that flows horizontally
     // and gently bobs vertically over time
@@ -56,8 +60,12 @@ function WaterCanvas({ opacity }) {
 
     let t = 0
 
-    const draw = () => {
-      if (!visible) { rafRef.current = requestAnimationFrame(draw); return }
+    const draw = (timestamp) => {
+      rafRef.current = requestAnimationFrame(draw)
+      if (!visible) return
+      if (timestamp - lastFrame < frameInterval) return
+      lastFrame = timestamp
+
       const W = canvas.offsetWidth
       const H = canvas.offsetHeight
       ctx.clearRect(0, 0, W, H)
@@ -81,7 +89,7 @@ function WaterCanvas({ opacity }) {
         }
 
         // Draw the sine wave across full width with slight x-extend for seamless wrap
-        const step = 4
+        const step = isMobile ? 6 : 4
         for (let x = -step; x <= W + step; x += step) {
           const y = yCenter + Math.sin(x * c.freq + t * c.speed * 60) * c.amp
           if (x === -step) ctx.moveTo(x, y)
@@ -92,10 +100,9 @@ function WaterCanvas({ opacity }) {
       })
 
       t += 0.016 // ~60fps increment
-      rafRef.current = requestAnimationFrame(draw)
     }
 
-    draw()
+    rafRef.current = requestAnimationFrame(draw)
 
     return () => {
       cancelAnimationFrame(rafRef.current)

@@ -13,7 +13,7 @@ function SectionCanvas() {
     const canvas = canvasRef.current
     if (!canvas) return
     const ctx = canvas.getContext('2d')
-    const dpr = window.devicePixelRatio || 1
+    const dpr = Math.min(window.devicePixelRatio || 1, 2)
 
     const resize = () => {
       const w = canvas.offsetWidth
@@ -27,6 +27,9 @@ function SectionCanvas() {
     let visible = true
     const visObserver = new IntersectionObserver(([e]) => { visible = e.isIntersecting }, { threshold: 0 })
     visObserver.observe(canvas)
+    const isMobile = window.innerWidth < 768
+    let lastFrame = 0
+    const frameInterval = isMobile ? 33 : 16
 
     const currents = [
       { yFrac: 0.18, amp: 32, freq: 0.007, speed: 0.12,  phase: 0,   color: 'rgba(143,175,159,0.10)', lw: 1.0, dash: 0,  gap: 0 },
@@ -41,8 +44,12 @@ function SectionCanvas() {
     const driftSpeeds = [0.0004, 0.00035, 0.0003, 0.0005, 0.00028, 0.0006]
 
     let t = 0
-    const draw = () => {
-      if (!visible) { rafRef.current = requestAnimationFrame(draw); return }
+    const draw = (timestamp) => {
+      rafRef.current = requestAnimationFrame(draw)
+      if (!visible) return
+      if (timestamp - lastFrame < frameInterval) return
+      lastFrame = timestamp
+
       const W = canvas.offsetWidth
       const H = canvas.offsetHeight
       ctx.clearRect(0, 0, W, H)
@@ -62,7 +69,8 @@ function SectionCanvas() {
           ctx.setLineDash([])
         }
 
-        for (let x = -20; x <= W + 20; x += 3) {
+        const step = isMobile ? 6 : 3
+        for (let x = -20; x <= W + 20; x += step) {
           const y = yCenter + Math.sin(x * c.freq + t * c.speed * 60 + c.phase) * c.amp
           x === -20 ? ctx.moveTo(x, y) : ctx.lineTo(x, y)
         }
@@ -70,7 +78,6 @@ function SectionCanvas() {
       })
 
       t += 0.016
-      rafRef.current = requestAnimationFrame(draw)
     }
     rafRef.current = requestAnimationFrame(draw)
 
@@ -269,7 +276,7 @@ function PersonalCard() {
 // Card 3: Content Generation — stacked cycling cards
 function ContentCard() {
   const [active, setActive] = useState(0)
-  const [progress, setProgress] = useState(0)
+  const [progressKey, setProgressKey] = useState(0)
 
   const content = [
     { type: 'LinkedIn Post', preview: 'Why most agencies fail at AI: a thread on what we actually build for clients...', tag: 'Social', color: '#8FAF9F' },
@@ -280,22 +287,10 @@ function ContentCard() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActive(prev => (prev + 1) % content.length)
+      setProgressKey(k => k + 1)
     }, 3200)
     return () => clearInterval(interval)
   }, [])
-
-  useEffect(() => {
-    setProgress(0)
-    const startTime = Date.now()
-    const duration = 3200
-    const frame = () => {
-      const elapsed = Date.now() - startTime
-      setProgress(Math.min((elapsed / duration) * 100, 100))
-      if (elapsed < duration) requestAnimationFrame(frame)
-    }
-    const raf = requestAnimationFrame(frame)
-    return () => cancelAnimationFrame(raf)
-  }, [active])
 
   return (
     <div
@@ -321,11 +316,22 @@ function ContentCard() {
       <div className="flex-1 flex flex-col gap-3">
         <div className="h-0.5 rounded-full overflow-hidden" style={{ backgroundColor: '#D4C9B040' }}>
           <div
+            key={progressKey}
             className="h-full rounded-full"
-            style={{ width: `${progress}%`, backgroundColor: content[active].color, transition: progress === 0 ? 'none' : 'width 0.1s linear' }}
+            style={{
+              backgroundColor: content[active].color,
+              transformOrigin: 'left center',
+              animation: 'content-progress 3.2s linear forwards',
+            }}
           />
         </div>
-        <div className="relative flex-1" style={{ minHeight: '120px' }}>
+        <style>{`
+          @keyframes content-progress {
+            from { transform: scaleX(0); }
+            to   { transform: scaleX(1); }
+          }
+        `}</style>
+        <div className="relative flex-1" style={{ minHeight: '120px', height: '120px', overflow: 'hidden' }}>
           {content.map((item, i) => {
             const offset = (i - active + content.length) % content.length
             const isActive = offset === 0
@@ -1070,7 +1076,7 @@ export default function WhatWeAutomate() {
                 >
                   <div style={{ overflow: 'hidden' }}>
                     <div style={{ padding: '0 0.75rem 0.75rem' }}>
-                      {cards[i]}
+                      {isOpen && cards[i]}
                     </div>
                   </div>
                 </div>
