@@ -24,6 +24,9 @@ function SectionCanvas() {
     }
     resize()
     window.addEventListener('resize', resize)
+    let visible = true
+    const visObserver = new IntersectionObserver(([e]) => { visible = e.isIntersecting }, { threshold: 0 })
+    visObserver.observe(canvas)
 
     const currents = [
       { yFrac: 0.18, amp: 32, freq: 0.007, speed: 0.12,  phase: 0,   color: 'rgba(143,175,159,0.10)', lw: 1.0, dash: 0,  gap: 0 },
@@ -39,6 +42,7 @@ function SectionCanvas() {
 
     let t = 0
     const draw = () => {
+      if (!visible) { rafRef.current = requestAnimationFrame(draw); return }
       const W = canvas.offsetWidth
       const H = canvas.offsetHeight
       ctx.clearRect(0, 0, W, H)
@@ -73,6 +77,7 @@ function SectionCanvas() {
     return () => {
       cancelAnimationFrame(rafRef.current)
       window.removeEventListener('resize', resize)
+      visObserver.disconnect()
     }
   }, [])
 
@@ -451,20 +456,26 @@ function CustomerCard() {
           <button
             key={p.stage}
             onClick={() => setPhase(i)}
-            className="flex-1 rounded-full transition-all duration-500 text-center py-1"
+            className="flex-1 rounded-full transition-all duration-500 text-center"
             style={{
               backgroundColor: i === phase ? current.color : `${p.color}20`,
               cursor: 'pointer',
               border: 'none',
+              padding: '4px 2px',
+              minWidth: 0,
             }}
           >
             <span
               className="font-dm"
               style={{
-                fontSize: '0.6rem',
+                fontSize: 'clamp(0.48rem, 1.8vw, 0.6rem)',
                 fontWeight: 600,
-                letterSpacing: '0.06em',
+                letterSpacing: '0.03em',
                 color: i === phase ? '#1C1C1A' : '#1C1C1A50',
+                display: 'block',
+                whiteSpace: 'nowrap',
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
               }}
             >
               {p.stage.toUpperCase()}

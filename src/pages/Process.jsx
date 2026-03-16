@@ -15,21 +15,26 @@ function GrainOverlay({ opacity = 0.055 }) {
     const canvas = canvasRef.current
     const ctx = canvas.getContext('2d')
     let raf
+    let visible = false
+    const observer = new IntersectionObserver(([e]) => { visible = e.isIntersecting }, { threshold: 0 })
+    observer.observe(canvas)
     const draw = () => {
-      const w = canvas.width = canvas.offsetWidth
-      const h = canvas.height = canvas.offsetHeight
-      const img = ctx.createImageData(w, h)
-      const d = img.data
-      for (let i = 0; i < d.length; i += 4) {
-        const v = (Math.random() * 255) | 0
-        d[i] = d[i+1] = d[i+2] = v
-        d[i+3] = 18
+      if (visible) {
+        const w = canvas.width = canvas.offsetWidth
+        const h = canvas.height = canvas.offsetHeight
+        const img = ctx.createImageData(w, h)
+        const d = img.data
+        for (let i = 0; i < d.length; i += 4) {
+          const v = (Math.random() * 255) | 0
+          d[i] = d[i+1] = d[i+2] = v
+          d[i+3] = 18
+        }
+        ctx.putImageData(img, 0, 0)
       }
-      ctx.putImageData(img, 0, 0)
       raf = requestAnimationFrame(draw)
     }
     draw()
-    return () => cancelAnimationFrame(raf)
+    return () => { cancelAnimationFrame(raf); observer.disconnect() }
   }, [])
   return (
     <canvas
@@ -58,11 +63,15 @@ function ScrollSpotlight({ scrollPct }) {
 // ─── Animated SVG — Map (network graph pulsing) ─────────────────────────────
 function MapVisual() {
   const [phase, setPhase] = useState(0)
+  const visibleRef = useRef(false)
+  const svgRef = useRef(null)
   useEffect(() => {
     let raf
-    const loop = () => { setPhase(p => p + 0.012); raf = requestAnimationFrame(loop) }
+    const observer = new IntersectionObserver(([e]) => { visibleRef.current = e.isIntersecting }, { threshold: 0 })
+    if (svgRef.current) observer.observe(svgRef.current)
+    const loop = () => { if (visibleRef.current) setPhase(p => p + 0.012); raf = requestAnimationFrame(loop) }
     raf = requestAnimationFrame(loop)
-    return () => cancelAnimationFrame(raf)
+    return () => { cancelAnimationFrame(raf); observer.disconnect() }
   }, [])
   const nodes = [
     { x: 120, y: 50, r: 18, label: 'You', primary: true },
@@ -74,7 +83,7 @@ function MapVisual() {
   ]
   const edges = [[0,1],[0,2],[0,3],[1,4],[3,5],[2,4],[2,5]]
   return (
-    <svg viewBox="0 0 240 270" fill="none" style={{ width: '100%', maxWidth: 220, display: 'block' }}>
+    <svg ref={svgRef} viewBox="0 0 240 270" fill="none" style={{ width: '100%', maxWidth: 220, display: 'block' }}>
       {edges.map(([a, b], i) => {
         const na = nodes[a], nb = nodes[b]
         const pulse = 0.35 + 0.25 * Math.sin(phase + i * 0.8)
@@ -184,11 +193,15 @@ function BuildVisual() {
 // ─── Animated visual — Flow (orbiting system) ───────────────────────────────
 function FlowVisual() {
   const [t, setT] = useState(0)
+  const visibleRef = useRef(false)
+  const svgRef = useRef(null)
   useEffect(() => {
     let raf
-    const loop = () => { setT(p => p + 0.018); raf = requestAnimationFrame(loop) }
+    const observer = new IntersectionObserver(([e]) => { visibleRef.current = e.isIntersecting }, { threshold: 0 })
+    if (svgRef.current) observer.observe(svgRef.current)
+    const loop = () => { if (visibleRef.current) setT(p => p + 0.018); raf = requestAnimationFrame(loop) }
     raf = requestAnimationFrame(loop)
-    return () => cancelAnimationFrame(raf)
+    return () => { cancelAnimationFrame(raf); observer.disconnect() }
   }, [])
 
   const cx = 110, cy = 110
@@ -201,7 +214,7 @@ function FlowVisual() {
   ]
 
   return (
-    <svg viewBox="0 0 220 220" fill="none" style={{ width: '100%', maxWidth: 220, display: 'block' }}>
+    <svg ref={svgRef} viewBox="0 0 220 220" fill="none" style={{ width: '100%', maxWidth: 220, display: 'block' }}>
       {/* Orbit rings */}
       <circle cx={cx} cy={cy} r={60} stroke="rgba(143,175,159,0.08)" strokeWidth={1} />
       <circle cx={cx} cy={cy} r={85} stroke="rgba(143,175,159,0.05)" strokeWidth={1} />

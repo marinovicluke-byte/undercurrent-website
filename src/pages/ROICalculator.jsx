@@ -28,6 +28,9 @@ function WaterCanvas({ opacity = 1 }) {
     }
     resize()
     window.addEventListener('resize', resize)
+    let visible = true
+    const visObserver = new IntersectionObserver(([e]) => { visible = e.isIntersecting }, { threshold: 0 })
+    visObserver.observe(canvas)
 
     const currents = [
       { yFrac: 0.38, amp: 38, freq: 0.008, speed: 0.18, phase: 0,   color: 'rgba(143,175,159,0.20)', lw: 1.0, dash: 0,  gap: 0  },
@@ -45,6 +48,7 @@ function WaterCanvas({ opacity = 1 }) {
     let t = 0
 
     const draw = () => {
+      if (!visible) { rafRef.current = requestAnimationFrame(draw); return }
       const W = canvas.offsetWidth
       const H = canvas.offsetHeight
       ctx.clearRect(0, 0, W, H)
@@ -76,6 +80,7 @@ function WaterCanvas({ opacity = 1 }) {
     return () => {
       cancelAnimationFrame(rafRef.current)
       window.removeEventListener('resize', resize)
+      visObserver.disconnect()
     }
   }, [])
 

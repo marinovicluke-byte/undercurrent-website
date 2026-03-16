@@ -23,6 +23,9 @@ function WaterCanvas({ opacity }) {
     }
     resize()
     window.addEventListener('resize', resize)
+    let visible = true
+    const visObserver = new IntersectionObserver(([e]) => { visible = e.isIntersecting }, { threshold: 0 })
+    visObserver.observe(canvas)
 
     // Each "current" is a sine-based ribbon that flows horizontally
     // and gently bobs vertically over time
@@ -54,6 +57,7 @@ function WaterCanvas({ opacity }) {
     let t = 0
 
     const draw = () => {
+      if (!visible) { rafRef.current = requestAnimationFrame(draw); return }
       const W = canvas.offsetWidth
       const H = canvas.offsetHeight
       ctx.clearRect(0, 0, W, H)
@@ -96,6 +100,7 @@ function WaterCanvas({ opacity }) {
     return () => {
       cancelAnimationFrame(rafRef.current)
       window.removeEventListener('resize', resize)
+      visObserver.disconnect()
     }
   }, [])
 

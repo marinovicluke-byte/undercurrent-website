@@ -731,6 +731,9 @@ function HeroCanvas() {
     if (!canvas) return
     const ctx = canvas.getContext('2d')
     const dpr = window.devicePixelRatio || 1
+    let visible = true
+    const visObserver = new IntersectionObserver(([e]) => { visible = e.isIntersecting }, { threshold: 0 })
+    visObserver.observe(canvas)
     const resize = () => {
       canvas.width = canvas.offsetWidth * dpr
       canvas.height = canvas.offsetHeight * dpr
@@ -747,6 +750,7 @@ function HeroCanvas() {
     ]
     let t = 0
     const draw = () => {
+      if (!visible) { rafRef.current = requestAnimationFrame(draw); return }
       const W = canvas.offsetWidth, H = canvas.offsetHeight
       ctx.clearRect(0, 0, W, H)
       currents.forEach(c => {
@@ -771,7 +775,7 @@ function HeroCanvas() {
       rafRef.current = requestAnimationFrame(draw)
     }
     draw()
-    return () => { cancelAnimationFrame(rafRef.current); window.removeEventListener('resize', resize) }
+    return () => { cancelAnimationFrame(rafRef.current); window.removeEventListener('resize', resize); visObserver.disconnect() }
   }, [])
 
   return <canvas ref={canvasRef} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none' }} />
