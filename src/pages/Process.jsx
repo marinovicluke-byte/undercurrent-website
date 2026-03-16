@@ -168,7 +168,7 @@ function BuildVisual() {
     <div style={{
       background: '#0d0d0c', borderRadius: 12, padding: '14px 16px',
       fontFamily: 'DM Mono, monospace', width: '100%',
-      height: 200, flexShrink: 0,
+      height: '100%', maxHeight: '100%',
       overflow: 'hidden', display: 'flex', flexDirection: 'column',
       border: '1px solid rgba(143,175,159,0.12)',
       boxShadow: '0 0 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03)',
@@ -343,9 +343,9 @@ function StepPanel({ step, index }) {
         position: 'relative',
         background: '#1C1C1A',
         overflow: 'hidden',
-        minHeight: 'clamp(480px, 55vw, 600px)',
+        minHeight: isMobile ? 'auto' : 'clamp(480px, 55vw, 600px)',
         display: 'flex',
-        alignItems: 'center',
+        alignItems: isMobile ? 'stretch' : 'center',
       }}
     >
       <GrainOverlay opacity={0.04} />
@@ -456,19 +456,28 @@ function StepPanel({ step, index }) {
 
         {/* Visual side */}
         <div style={{
-          flex: '0 0 auto',
+          flex: '0 0 220px',
           width: isMobile ? '100%' : '40%',
-          maxWidth: 280,
-          minWidth: 160,
+          maxWidth: isMobile ? '100%' : 280,
           height: 220,
+          minHeight: 220,
+          maxHeight: 220,
           flexShrink: 0,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          opacity: 0.9,
+          flexGrow: 0,
+          position: 'relative',
           overflow: 'hidden',
+          opacity: 0.9,
         }}>
-          {step.visual}
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            overflow: 'hidden',
+          }}>
+            {step.visual}
+          </div>
         </div>
       </div>
     </div>
