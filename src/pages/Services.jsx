@@ -1186,7 +1186,7 @@ export default function Services() {
               Book a 30-minute workflow review. We'll map your biggest time drains across all five areas and tell you exactly where automation will have the most impact — ranked by ROI.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="mailto:hello@undercurrent.au" className="btn-sage-hero" style={{ fontSize: '0.95rem', padding: '0.9rem 2.5rem' }}>
+              <a href="https://cal.com/luke-marinovic-aqeosc/30min" target="_blank" rel="noopener noreferrer" className="btn-sage-hero" style={{ fontSize: '0.95rem', padding: '0.9rem 2.5rem' }}>
                 <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   Book a Workflow Review
                   <ArrowRight size={16} />

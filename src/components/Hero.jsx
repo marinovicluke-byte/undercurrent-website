@@ -273,7 +273,7 @@ export default function Hero({ ready = true }) {
 
         {/* CTA */}
         <div ref={ctaRef} style={{ opacity: 0, marginTop: '2.5rem' }}>
-          <a href="#contact" className="btn-sage-hero" style={{ fontSize: '0.9rem' }}>
+          <a href="https://cal.com/luke-marinovic-aqeosc/30min" target="_blank" rel="noopener noreferrer" className="btn-sage-hero" style={{ fontSize: '0.9rem' }}>
             <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               Book a Workflow Review
               <ArrowRight size={16} />

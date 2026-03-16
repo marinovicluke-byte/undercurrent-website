@@ -587,7 +587,7 @@ export default function About() {
                 Book a 30-minute discovery call. We'll map your biggest time drains and show you exactly what can be automated — no jargon, no commitment.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href="mailto:hello@undercurrent.au" className="btn-sage" style={{ fontSize: '0.95rem', padding: '0.875rem 2.5rem' }}>
+                <a href="https://cal.com/luke-marinovic-aqeosc/30min" target="_blank" rel="noopener noreferrer" className="btn-sage" style={{ fontSize: '0.95rem', padding: '0.875rem 2.5rem' }}>
                   <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     Book a Discovery Call
                     <ArrowRight size={16} />

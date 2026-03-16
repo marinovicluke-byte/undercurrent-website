@@ -799,7 +799,9 @@ export default function Process() {
             A 30-minute call. No pitch deck. Just your workflows and where they're leaking time.
           </p>
           <a
-            href="mailto:hello@undercurrent.au"
+            href="https://cal.com/luke-marinovic-aqeosc/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-sage-hero"
             style={{ marginTop: 8, padding: '0.85rem 2.4rem', fontSize: '0.88rem' }}
           >

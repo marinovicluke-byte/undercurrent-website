@@ -444,7 +444,9 @@ export default function Pricing() {
             {/* CTA */}
             <div ref={ctaRef} style={{ opacity: 0, flexShrink: 0 }}>
               <a
-                href="#contact"
+                href="https://cal.com/luke-marinovic-aqeosc/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-sage flex items-center gap-3"
                 style={{
                   borderColor: 'rgba(143,175,159,0.5)',
