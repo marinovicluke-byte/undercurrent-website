@@ -126,96 +126,178 @@ function MapVisual() {
   )
 }
 
-// ─── Animated visual — Build (live code block) ───────────────────────────────
-const BUILD_LINES = [
-  { t: '$ trigger  new_lead', c: 'rgba(143,175,159,0.9)' },
-  { t: '  ↳ enrich_contact()', c: 'rgba(212,201,176,0.7)' },
-  { t: '  ↳ score_lead(data)', c: 'rgba(212,201,176,0.7)' },
-  { t: '  ↳ if score > 80:', c: 'rgba(212,201,176,0.7)' },
-  { t: '      notify_sales()', c: 'rgba(247,243,237,0.85)' },
-  { t: '  ↳ log_to_crm()', c: 'rgba(212,201,176,0.7)' },
-  { t: '✓ done  0.3s elapsed', c: 'rgba(107,124,74,0.95)' },
-]
-
+// ─── Animated visual — Build (automation schematic assembling) ───────────────
 function BuildVisual() {
-  const [shown, setShown] = useState([])
-  const [cur, setCur] = useState('')
-  const [li, setLi] = useState(0)
-  const [ci, setCi] = useState(0)
-  const [blink, setBlink] = useState(true)
-
-  useEffect(() => {
-    const b = setInterval(() => setBlink(v => !v), 530)
-    return () => clearInterval(b)
-  }, [])
+  // On mobile, start fully built; on desktop, animate from phase 0
+  const [phase, setPhase] = useState(IS_MOBILE ? 13 : 0)
+  // 13 phases: trigger → wires + nodes → branch → glow
+  const TOTAL = 13
 
   useEffect(() => {
     if (IS_MOBILE) return
-    if (li >= BUILD_LINES.length) {
-      const r = setTimeout(() => { setShown([]); setCur(''); setLi(0); setCi(0) }, 2800)
-      return () => clearTimeout(r)
-    }
-    const line = BUILD_LINES[li].t
-    if (ci < line.length) {
-      const t = setTimeout(() => { setCur(p => p + line[ci]); setCi(c => c + 1) }, 22)
+    if (phase < TOTAL) {
+      const t = setTimeout(() => setPhase(p => p + 1), 370)
       return () => clearTimeout(t)
     }
-    const t = setTimeout(() => {
-      setShown(p => [...p, BUILD_LINES[li]])
-      setCur(''); setCi(0); setLi(l => l + 1)
-    }, 160)
+    const t = setTimeout(() => setPhase(0), 3800)
     return () => clearTimeout(t)
-  }, [li, ci])
+  }, [phase])
 
-  const boxStyle = {
-    background: '#0d0d0c', borderRadius: 12, padding: '14px 16px',
-    fontFamily: 'DM Mono, monospace', width: '100%',
-    height: 220, minHeight: 220, maxHeight: 220, flexShrink: 0,
-    overflow: 'hidden', display: 'flex', flexDirection: 'column',
-    border: '1px solid rgba(143,175,159,0.12)',
-    boxShadow: '0 0 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03)',
-  }
+  // stroke-dashoffset "pen drawing" helper — instant hide, animated reveal
+  const wire = (len, show) => ({
+    strokeDasharray: len,
+    strokeDashoffset: show ? 0 : len,
+    transition: show ? `stroke-dashoffset 0.42s ease` : 'stroke-dashoffset 0s',
+    fill: 'none',
+  })
 
-  const dots = (
-    <div style={{ display: 'flex', gap: 6, marginBottom: 12, flexShrink: 0 }}>
-      {['#FF5F57','#FFBD2E','#28C840'].map((c,i) => (
-        <div key={i} style={{ width: 8, height: 8, borderRadius: '50%', background: c, opacity: 0.6 }} />
-      ))}
-    </div>
-  )
+  // fade helper — instant hide, smooth reveal
+  const fade = (show) => ({
+    opacity: show ? 1 : 0,
+    transition: show ? 'opacity 0.28s ease' : 'opacity 0s',
+  })
 
-  // On mobile: render all lines statically, no typewriter
-  if (IS_MOBILE) {
-    return (
-      <div style={boxStyle}>
-        {dots}
-        <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
-          {BUILD_LINES.map((line, i) => (
-            <div key={i} style={{ fontSize: '0.75rem', color: line.c, lineHeight: 1.9, opacity: i < BUILD_LINES.length - 2 ? 0.4 : 0.85 }}>
-              {line.t}
-            </div>
-          ))}
-        </div>
-      </div>
-    )
-  }
+  // Phase map (0 = empty, 13 = fully built):
+  // 1  TRIGGER node
+  // 2  wire A: trigger → enrich  (24px vertical)
+  // 3  ENRICH node
+  // 4  wire B: enrich → score    (22px vertical)
+  // 5  SCORE node
+  // 6  wire C: score → diamond   (10px vertical)
+  // 7  ROUTE diamond (decision "> 80")
+  // 8  wire D: left branch       (L-shape, 46px)
+  // 9  NOTIFY node
+  // 10 wire E: right branch      (L-shape, 46px)
+  // 11 LOG node
+  // 12 port dots + branch labels
+  // 13 completion glow
+
+  const SAGE  = 'rgba(143,175,159,0.85)'
+  const SAND  = 'rgba(212,201,176,0.6)'
+  const DARK  = 'rgba(28,28,26,0.9)'
 
   return (
-    <div style={boxStyle}>
-      {dots}
-      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
-        {shown.map((line, i) => (
-          <div key={i} style={{ fontSize: '0.75rem', color: line.c, lineHeight: 1.9, opacity: i < shown.length - 2 ? 0.4 : 0.85 }}>
-            {line.t}
-          </div>
-        ))}
-        {li < BUILD_LINES.length && (
-          <div style={{ fontSize: '0.75rem', color: BUILD_LINES[li].c, lineHeight: 1.9 }}>
-            {cur}<span style={{ opacity: blink ? 1 : 0 }}>▋</span>
-          </div>
-        )}
-      </div>
-    </div>
+    <svg viewBox="0 0 160 192" fill="none"
+      style={{ width: '100%', maxWidth: 200, height: 200, display: 'block' }}>
+
+      {/* ── Dot-grid background (engineering graph paper feel) ── */}
+      {Array.from({ length: 5 }, (_, r) =>
+        Array.from({ length: 5 }, (_, c) => (
+          <circle key={`${r}-${c}`}
+            cx={8 + c * 36} cy={10 + r * 44} r={0.9}
+            fill="rgba(212,201,176,0.07)" />
+        ))
+      )}
+
+      {/* ── Wires (drawn via stroke-dashoffset) ── */}
+
+      {/* Wire A: trigger bottom → enrich top  (80,28)→(80,52)  len=24 */}
+      <line x1={80} y1={28} x2={80} y2={52}
+        stroke={SAND} strokeWidth={1} style={wire(24, phase > 1)} />
+
+      {/* Wire B: enrich bottom → score top  (80,76)→(80,98)  len=22 */}
+      <line x1={80} y1={76} x2={80} y2={98}
+        stroke={SAND} strokeWidth={1} style={wire(22, phase > 3)} />
+
+      {/* Wire C: score bottom → diamond top  (80,122)→(80,132)  len=10 */}
+      <line x1={80} y1={122} x2={80} y2={132}
+        stroke={SAND} strokeWidth={1} style={wire(10, phase > 5)} />
+
+      {/* Wire D: diamond left → notify  M62,144 L34,144 L34,162  len=28+18=46 */}
+      <path d="M62,144 L34,144 L34,162"
+        stroke={SAGE} strokeWidth={1} style={wire(46, phase > 7)} />
+
+      {/* Wire E: diamond right → log  M98,144 L126,144 L126,162  len=28+18=46 */}
+      <path d="M98,144 L126,144 L126,162"
+        stroke={SAND} strokeWidth={1} style={wire(46, phase > 9)} />
+
+      {/* ── Components ── */}
+
+      {/* TRIGGER — pulsing origin dot */}
+      <g style={fade(phase > 0)}>
+        <circle cx={80} cy={19} r={10}
+          fill={DARK} stroke={SAGE} strokeWidth={1} />
+        <circle cx={80} cy={19} r={3.5} fill={SAGE} />
+        <text x={80} y={15} textAnchor="middle"
+          fontFamily="DM Mono, monospace" fontSize={5}
+          fill="rgba(143,175,159,0.45)" letterSpacing="0.12em">TRIGGER</text>
+      </g>
+
+      {/* ENRICH block */}
+      <g style={fade(phase > 2)}>
+        <rect x={44} y={52} width={72} height={24} rx={2.5}
+          fill={DARK} stroke={SAND} strokeWidth={0.75} />
+        <rect x={44} y={52} width={72} height={2.5} rx={1}
+          fill="rgba(212,201,176,0.1)" />
+        <text x={80} y={67} textAnchor="middle"
+          fontFamily="DM Mono, monospace" fontSize={7}
+          fill="rgba(212,201,176,0.8)" letterSpacing="0.04em">enrich_data()</text>
+      </g>
+
+      {/* SCORE block */}
+      <g style={fade(phase > 4)}>
+        <rect x={44} y={98} width={72} height={24} rx={2.5}
+          fill={DARK} stroke={SAND} strokeWidth={0.75} />
+        <rect x={44} y={98} width={72} height={2.5} rx={1}
+          fill="rgba(212,201,176,0.1)" />
+        <text x={80} y={113} textAnchor="middle"
+          fontFamily="DM Mono, monospace" fontSize={7}
+          fill="rgba(212,201,176,0.8)" letterSpacing="0.04em">score_lead()</text>
+      </g>
+
+      {/* ROUTE diamond — decision node "> 80" */}
+      <g style={fade(phase > 6)}>
+        <polygon points="80,132 98,144 80,156 62,144"
+          fill={DARK} stroke={SAGE} strokeWidth={0.75} />
+        <text x={80} y={147} textAnchor="middle"
+          fontFamily="DM Mono, monospace" fontSize={6}
+          fill={SAGE} letterSpacing="0.04em">{`> 80`}</text>
+      </g>
+
+      {/* NOTIFY block (left / yes branch) */}
+      <g style={fade(phase > 8)}>
+        <rect x={8} y={162} width={52} height={22} rx={2.5}
+          fill={DARK} stroke={SAGE} strokeWidth={0.75} />
+        <rect x={8} y={162} width={52} height={2.5} rx={1}
+          fill="rgba(143,175,159,0.1)" />
+        <text x={34} y={176} textAnchor="middle"
+          fontFamily="DM Mono, monospace" fontSize={6.5}
+          fill={SAGE} letterSpacing="0.04em">notify()</text>
+      </g>
+
+      {/* LOG block (right / else branch) */}
+      <g style={fade(phase > 10)}>
+        <rect x={100} y={162} width={52} height={22} rx={2.5}
+          fill={DARK} stroke={SAND} strokeWidth={0.75} />
+        <rect x={100} y={162} width={52} height={2.5} rx={1}
+          fill="rgba(212,201,176,0.08)" />
+        <text x={126} y={176} textAnchor="middle"
+          fontFamily="DM Mono, monospace" fontSize={6.5}
+          fill="rgba(212,201,176,0.7)" letterSpacing="0.04em">log_crm()</text>
+      </g>
+
+      {/* ── Junction dots + branch labels ── */}
+      <g style={fade(phase > 11)}>
+        {/* Dots at wire junctions */}
+        <circle cx={80} cy={28} r={2} fill={SAND} />
+        <circle cx={80} cy={76} r={2} fill={SAND} />
+        <circle cx={80} cy={122} r={2} fill={SAND} />
+        <circle cx={34} cy={162} r={2} fill={SAGE} />
+        <circle cx={126} cy={162} r={2} fill={SAND} />
+        {/* Branch labels */}
+        <text x={47} y={141} textAnchor="middle"
+          fontFamily="DM Mono, monospace" fontSize={5}
+          fill="rgba(143,175,159,0.5)" letterSpacing="0.06em">yes</text>
+        <text x={113} y={141} textAnchor="middle"
+          fontFamily="DM Mono, monospace" fontSize={5}
+          fill="rgba(212,201,176,0.35)" letterSpacing="0.06em">log</text>
+      </g>
+
+      {/* ── Completion glow on NOTIFY (phase 13) ── */}
+      <rect x={8} y={162} width={52} height={22} rx={2.5}
+        fill="rgba(143,175,159,0.07)"
+        style={fade(phase >= 13)} />
+    </svg>
   )
 }
 

@@ -101,69 +101,148 @@ function MapVisual() {
   )
 }
 
-// ─── Build Visual — typewriter terminal ─────────────────────────────────────
-const BUILD_LINES = [
-  { t: '$ trigger  new_lead',   c: 'rgba(143,175,159,0.9)' },
-  { t: '  ↳ enrich_contact()',  c: 'rgba(212,201,176,0.7)' },
-  { t: '  ↳ score_lead(data)',  c: 'rgba(212,201,176,0.7)' },
-  { t: '  ↳ if score > 80:',    c: 'rgba(212,201,176,0.7)' },
-  { t: '      notify_sales()',  c: 'rgba(247,243,237,0.85)' },
-  { t: '  ↳ log_to_crm()',      c: 'rgba(212,201,176,0.7)' },
-  { t: '✓ done  0.3s elapsed',  c: 'rgba(107,124,74,0.95)' },
-]
-
+// ─── Build Visual — automation schematic assembling ──────────────────────────
 function BuildVisual() {
-  const [shown, setShown] = useState([])
-  const [cur, setCur] = useState('')
-  const [li, setLi] = useState(0)
-  const [ci, setCi] = useState(0)
-  const [blink, setBlink] = useState(true)
+  const [phase, setPhase] = useState(0)
+  const TOTAL = 13
 
   useEffect(() => {
-    const b = setInterval(() => setBlink(v => !v), 530)
-    return () => clearInterval(b)
-  }, [])
-
-  useEffect(() => {
-    if (li >= BUILD_LINES.length) {
-      const r = setTimeout(() => { setShown([]); setCur(''); setLi(0); setCi(0) }, 2800)
-      return () => clearTimeout(r)
-    }
-    const line = BUILD_LINES[li].t
-    if (ci < line.length) {
-      const t = setTimeout(() => { setCur(p => p + line[ci]); setCi(c => c + 1) }, 22)
+    if (phase < TOTAL) {
+      const t = setTimeout(() => setPhase(p => p + 1), 370)
       return () => clearTimeout(t)
     }
-    const t = setTimeout(() => {
-      setShown(p => [...p, BUILD_LINES[li]])
-      setCur(''); setCi(0); setLi(l => l + 1)
-    }, 160)
+    const t = setTimeout(() => setPhase(0), 3800)
     return () => clearTimeout(t)
-  }, [li, ci])
+  }, [phase])
+
+  // stroke-dashoffset "pen drawing" — instant hide, animated reveal
+  const wire = (len, show) => ({
+    strokeDasharray: len,
+    strokeDashoffset: show ? 0 : len,
+    transition: show ? 'stroke-dashoffset 0.42s ease' : 'stroke-dashoffset 0s',
+    fill: 'none',
+  })
+
+  const fade = (show) => ({
+    opacity: show ? 1 : 0,
+    transition: show ? 'opacity 0.28s ease' : 'opacity 0s',
+  })
+
+  const SAGE = 'rgba(143,175,159,0.85)'
+  const SAND = 'rgba(212,201,176,0.6)'
+  const DARK = 'rgba(28,28,26,0.9)'
 
   return (
-    <div style={{
-      background: '#0d0d0c', borderRadius: 10, padding: '12px 14px',
-      fontFamily: 'DM Mono, monospace', width: '100%',
-      border: '1px solid rgba(143,175,159,0.12)',
-      boxShadow: '0 0 30px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.03)',
-    }}>
-      <div style={{ display: 'flex', gap: 5, marginBottom: 10 }}>
-        {['#FF5F57','#FFBD2E','#28C840'].map((c, i) => (
-          <div key={i} style={{ width: 7, height: 7, borderRadius: '50%', background: c, opacity: 0.6 }} />
-        ))}
-      </div>
-      {shown.map((line, i) => (
-        <div key={i} style={{ fontSize: '0.75rem', color: line.c, lineHeight: 1.85, opacity: i < shown.length - 2 ? 0.4 : 0.85 }}>
-          {line.t}
-        </div>
-      ))}
-      {li < BUILD_LINES.length && (
-        <div style={{ fontSize: '0.75rem', color: BUILD_LINES[li].c, lineHeight: 1.85 }}>
-          {cur}<span style={{ opacity: blink ? 1 : 0 }}>▋</span>
-        </div>
+    <svg viewBox="0 0 160 192" fill="none"
+      style={{ width: '100%', maxWidth: 200, height: 200, display: 'block' }}>
+
+      {/* Dot-grid background */}
+      {Array.from({ length: 5 }, (_, r) =>
+        Array.from({ length: 5 }, (_, c) => (
+          <circle key={`${r}-${c}`}
+            cx={8 + c * 36} cy={10 + r * 44} r={0.9}
+            fill="rgba(212,201,176,0.07)" />
+        ))
       )}
-    </div>
+
+      {/* Wire A: trigger → enrich  (80,28)→(80,52)  len=24 */}
+      <line x1={80} y1={28} x2={80} y2={52}
+        stroke={SAND} strokeWidth={1} style={wire(24, phase > 1)} />
+
+      {/* Wire B: enrich → score  (80,76)→(80,98)  len=22 */}
+      <line x1={80} y1={76} x2={80} y2={98}
+        stroke={SAND} strokeWidth={1} style={wire(22, phase > 3)} />
+
+      {/* Wire C: score → diamond  (80,122)→(80,132)  len=10 */}
+      <line x1={80} y1={122} x2={80} y2={132}
+        stroke={SAND} strokeWidth={1} style={wire(10, phase > 5)} />
+
+      {/* Wire D: diamond left → notify  M62,144 L34,144 L34,162  len=46 */}
+      <path d="M62,144 L34,144 L34,162"
+        stroke={SAGE} strokeWidth={1} style={wire(46, phase > 7)} />
+
+      {/* Wire E: diamond right → log  M98,144 L126,144 L126,162  len=46 */}
+      <path d="M98,144 L126,144 L126,162"
+        stroke={SAND} strokeWidth={1} style={wire(46, phase > 9)} />
+
+      {/* TRIGGER node */}
+      <g style={fade(phase > 0)}>
+        <circle cx={80} cy={19} r={10} fill={DARK} stroke={SAGE} strokeWidth={1} />
+        <circle cx={80} cy={19} r={3.5} fill={SAGE} />
+        <text x={80} y={15} textAnchor="middle"
+          fontFamily="DM Mono, monospace" fontSize={5}
+          fill="rgba(143,175,159,0.45)" letterSpacing="0.12em">TRIGGER</text>
+      </g>
+
+      {/* ENRICH block */}
+      <g style={fade(phase > 2)}>
+        <rect x={44} y={52} width={72} height={24} rx={2.5}
+          fill={DARK} stroke={SAND} strokeWidth={0.75} />
+        <rect x={44} y={52} width={72} height={2.5} rx={1} fill="rgba(212,201,176,0.1)" />
+        <text x={80} y={67} textAnchor="middle"
+          fontFamily="DM Mono, monospace" fontSize={7}
+          fill="rgba(212,201,176,0.8)" letterSpacing="0.04em">enrich_data()</text>
+      </g>
+
+      {/* SCORE block */}
+      <g style={fade(phase > 4)}>
+        <rect x={44} y={98} width={72} height={24} rx={2.5}
+          fill={DARK} stroke={SAND} strokeWidth={0.75} />
+        <rect x={44} y={98} width={72} height={2.5} rx={1} fill="rgba(212,201,176,0.1)" />
+        <text x={80} y={113} textAnchor="middle"
+          fontFamily="DM Mono, monospace" fontSize={7}
+          fill="rgba(212,201,176,0.8)" letterSpacing="0.04em">score_lead()</text>
+      </g>
+
+      {/* ROUTE diamond */}
+      <g style={fade(phase > 6)}>
+        <polygon points="80,132 98,144 80,156 62,144"
+          fill={DARK} stroke={SAGE} strokeWidth={0.75} />
+        <text x={80} y={147} textAnchor="middle"
+          fontFamily="DM Mono, monospace" fontSize={6}
+          fill={SAGE} letterSpacing="0.04em">{`> 80`}</text>
+      </g>
+
+      {/* NOTIFY block */}
+      <g style={fade(phase > 8)}>
+        <rect x={8} y={162} width={52} height={22} rx={2.5}
+          fill={DARK} stroke={SAGE} strokeWidth={0.75} />
+        <rect x={8} y={162} width={52} height={2.5} rx={1} fill="rgba(143,175,159,0.1)" />
+        <text x={34} y={176} textAnchor="middle"
+          fontFamily="DM Mono, monospace" fontSize={6.5}
+          fill={SAGE} letterSpacing="0.04em">notify()</text>
+      </g>
+
+      {/* LOG block */}
+      <g style={fade(phase > 10)}>
+        <rect x={100} y={162} width={52} height={22} rx={2.5}
+          fill={DARK} stroke={SAND} strokeWidth={0.75} />
+        <rect x={100} y={162} width={52} height={2.5} rx={1} fill="rgba(212,201,176,0.08)" />
+        <text x={126} y={176} textAnchor="middle"
+          fontFamily="DM Mono, monospace" fontSize={6.5}
+          fill="rgba(212,201,176,0.7)" letterSpacing="0.04em">log_crm()</text>
+      </g>
+
+      {/* Junction dots + branch labels */}
+      <g style={fade(phase > 11)}>
+        <circle cx={80} cy={28} r={2} fill={SAND} />
+        <circle cx={80} cy={76} r={2} fill={SAND} />
+        <circle cx={80} cy={122} r={2} fill={SAND} />
+        <circle cx={34} cy={162} r={2} fill={SAGE} />
+        <circle cx={126} cy={162} r={2} fill={SAND} />
+        <text x={47} y={141} textAnchor="middle"
+          fontFamily="DM Mono, monospace" fontSize={5}
+          fill="rgba(143,175,159,0.5)" letterSpacing="0.06em">yes</text>
+        <text x={113} y={141} textAnchor="middle"
+          fontFamily="DM Mono, monospace" fontSize={5}
+          fill="rgba(212,201,176,0.35)" letterSpacing="0.06em">log</text>
+      </g>
+
+      {/* Completion glow on NOTIFY */}
+      <rect x={8} y={162} width={52} height={22} rx={2.5}
+        fill="rgba(143,175,159,0.07)"
+        style={fade(phase >= 13)} />
+    </svg>
   )
 }
 
