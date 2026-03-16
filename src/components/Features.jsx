@@ -140,22 +140,24 @@ function TypewriterCard() {
       </p>
 
       <div
-        className="flex-1 rounded-[1.5rem] p-4 font-mono"
-        style={{ backgroundColor: '#1C1C1A', height: '130px', minHeight: '130px', maxHeight: '130px', overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}
+        className="rounded-[1.5rem] p-4 font-mono"
+        style={{ backgroundColor: '#1C1C1A', height: '130px', flexShrink: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}
       >
-        {lines.map((line, i) => (
-          <div key={i} className="font-mono" style={{ fontSize: '0.72rem', color: '#8FAF9F', lineHeight: 1.8, opacity: 0.6 }}>
-            <span style={{ color: '#6B7C4A', marginRight: '0.5rem' }}>›</span>
-            {line}
-          </div>
-        ))}
-        {lineIdx < messages.length && (
-          <div className="font-mono" style={{ fontSize: '0.72rem', color: '#8FAF9F', lineHeight: 1.8 }}>
-            <span style={{ color: '#6B7C4A', marginRight: '0.5rem' }}>›</span>
-            {currentLine}
-            <span className="cursor-blink" style={{ color: '#6B7C4A' }}>█</span>
-          </div>
-        )}
+        <div style={{ overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+          {lines.map((line, i) => (
+            <div key={i} className="font-mono" style={{ fontSize: '0.72rem', color: '#8FAF9F', lineHeight: 1.8, opacity: 0.6 }}>
+              <span style={{ color: '#6B7C4A', marginRight: '0.5rem' }}>›</span>
+              {line}
+            </div>
+          ))}
+          {lineIdx < messages.length && (
+            <div className="font-mono" style={{ fontSize: '0.72rem', color: '#8FAF9F', lineHeight: 1.8 }}>
+              <span style={{ color: '#6B7C4A', marginRight: '0.5rem' }}>›</span>
+              {currentLine}
+              <span className="cursor-blink" style={{ color: '#6B7C4A' }}>█</span>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )

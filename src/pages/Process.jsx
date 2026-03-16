@@ -167,26 +167,29 @@ function BuildVisual() {
   return (
     <div style={{
       background: '#0d0d0c', borderRadius: 12, padding: '14px 16px',
-      fontFamily: 'DM Mono, monospace', width: '100%', minHeight: 180, maxHeight: 180,
-      overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
+      fontFamily: 'DM Mono, monospace', width: '100%',
+      height: 200, flexShrink: 0,
+      overflow: 'hidden', display: 'flex', flexDirection: 'column',
       border: '1px solid rgba(143,175,159,0.12)',
       boxShadow: '0 0 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03)',
     }}>
-      <div style={{ display: 'flex', gap: 6, marginBottom: 12 }}>
+      <div style={{ display: 'flex', gap: 6, marginBottom: 12, flexShrink: 0 }}>
         {['#FF5F57','#FFBD2E','#28C840'].map((c,i) => (
           <div key={i} style={{ width: 8, height: 8, borderRadius: '50%', background: c, opacity: 0.6 }} />
         ))}
       </div>
-      {shown.map((line, i) => (
-        <div key={i} style={{ fontSize: '0.75rem', color: line.c, lineHeight: 1.9, opacity: i < shown.length - 2 ? 0.4 : 0.85 }}>
-          {line.t}
-        </div>
-      ))}
-      {li < BUILD_LINES.length && (
-        <div style={{ fontSize: '0.75rem', color: BUILD_LINES[li].c, lineHeight: 1.9 }}>
-          {cur}<span style={{ opacity: blink ? 1 : 0 }}>▋</span>
-        </div>
-      )}
+      <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+        {shown.map((line, i) => (
+          <div key={i} style={{ fontSize: '0.75rem', color: line.c, lineHeight: 1.9, opacity: i < shown.length - 2 ? 0.4 : 0.85 }}>
+            {line.t}
+          </div>
+        ))}
+        {li < BUILD_LINES.length && (
+          <div style={{ fontSize: '0.75rem', color: BUILD_LINES[li].c, lineHeight: 1.9 }}>
+            {cur}<span style={{ opacity: blink ? 1 : 0 }}>▋</span>
+          </div>
+        )}
+      </div>
     </div>
   )
 }
@@ -453,13 +456,17 @@ function StepPanel({ step, index }) {
 
         {/* Visual side */}
         <div style={{
-          flex: '1 1 40%',
+          flex: '0 0 auto',
+          width: isMobile ? '100%' : '40%',
           maxWidth: 280,
           minWidth: 160,
+          height: 220,
+          flexShrink: 0,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           opacity: 0.9,
+          overflow: 'hidden',
         }}>
           {step.visual}
         </div>
