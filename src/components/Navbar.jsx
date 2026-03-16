@@ -3,6 +3,59 @@ import { gsap } from 'gsap'
 import { Menu, X } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
 
+function NavWave({ scrolled }) {
+  const canvasRef = useRef(null)
+  const rafRef = useRef(null)
+  const scrolledRef = useRef(scrolled)
+
+  useEffect(() => { scrolledRef.current = scrolled }, [scrolled])
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+    const ctx = canvas.getContext('2d')
+    const dpr = Math.min(window.devicePixelRatio || 1, 2)
+    const W = 52, H = 20
+    canvas.width = W * dpr
+    canvas.height = H * dpr
+    ctx.scale(dpr, dpr)
+
+    const currents = [
+      { yFrac: 0.30, amp: 3.8, freq: 0.11, speed: 0.18,  alpha: 0.90, lw: 1.3 },
+      { yFrac: 0.55, amp: 3.0, freq: 0.09, speed: -0.14, alpha: 0.55, lw: 0.9 },
+      { yFrac: 0.78, amp: 2.2, freq: 0.13, speed: 0.26,  alpha: 0.30, lw: 0.6 },
+    ]
+
+    let t = 0
+    const draw = () => {
+      rafRef.current = requestAnimationFrame(draw)
+      ctx.clearRect(0, 0, W, H)
+      const base = scrolledRef.current ? '107,124,74' : '143,175,159'
+      currents.forEach(c => {
+        ctx.beginPath()
+        ctx.strokeStyle = `rgba(${base},${c.alpha})`
+        ctx.lineWidth = c.lw
+        ctx.setLineDash([])
+        for (let x = 0; x <= W; x += 2) {
+          const y = c.yFrac * H + Math.sin(x * c.freq + t * c.speed * 60) * c.amp
+          x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y)
+        }
+        ctx.stroke()
+      })
+      t += 0.016
+    }
+    rafRef.current = requestAnimationFrame(draw)
+    return () => cancelAnimationFrame(rafRef.current)
+  }, [])
+
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{ width: '52px', height: '20px', display: 'block', flexShrink: 0 }}
+    />
+  )
+}
+
 export default function Navbar({ ready = true, isSubPage = false }) {
   const navRef = useRef(null)
   const [scrolled, setScrolled] = useState(false)
@@ -102,7 +155,7 @@ export default function Navbar({ ready = true, isSubPage = false }) {
         >
           {/* Wordmark */}
           <a href="/" style={{ textDecoration: 'none' }}>
-            <div className="flex flex-col leading-none">
+            <div className="flex items-center gap-2">
               <span
                 className="font-cormorant font-semibold"
                 style={{
@@ -115,6 +168,7 @@ export default function Navbar({ ready = true, isSubPage = false }) {
               >
                 UnderCurrent
               </span>
+              <NavWave scrolled={scrolled} />
             </div>
           </a>
 

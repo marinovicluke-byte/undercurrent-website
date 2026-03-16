@@ -78,6 +78,19 @@ export default function Loader({ onComplete }) {
         ref={wordmarkRef}
         style={{ textAlign: 'center', opacity: 0 }}
       >
+        {/* Wave brand icon */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 48 48"
+          style={{ display: 'block', margin: '0 auto 0.9rem' }}
+        >
+          <rect width="48" height="48" rx="10" fill="#1C1C1A"/>
+          <path d="M6 17 C10 12, 14 12, 18 17 C22 22, 26 22, 30 17 C34 12, 38 12, 42 17" stroke="#8FAF9F" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
+          <path d="M6 24 C10 19, 14 19, 18 24 C22 29, 26 29, 30 24 C34 19, 38 19, 42 24" stroke="#8FAF9F" strokeWidth="2" fill="none" strokeLinecap="round" opacity="0.65"/>
+          <path d="M6 31 C10 26, 14 26, 18 31 C22 36, 26 36, 30 31 C34 26, 38 26, 42 31" stroke="#8FAF9F" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.35"/>
+        </svg>
         <span
           style={{
             fontFamily: '"Cormorant Garamond", serif',
@@ -109,7 +122,7 @@ export default function Loader({ onComplete }) {
             display: 'block',
           }}
         >
-          AI Automation Architecture
+          AI Business Automation
         </span>
       </div>
 

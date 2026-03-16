@@ -32,7 +32,7 @@ export default function Footer() {
                 UnderCurrent
               </h3>
               <p className="font-dm text-warm-sand/60" style={{ fontSize: '0.75rem', letterSpacing: '0.08em', fontWeight: 300, color: '#D4C9B060' }}>
-                AI Automation Architecture
+                AI Business Automation
               </p>
             </div>
             <p className="font-dm" style={{ fontWeight: 300, fontSize: '0.875rem', color: '#D4C9B060', lineHeight: 1.7 }}>
