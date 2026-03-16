@@ -136,6 +136,7 @@ const BUILD_LINES = [
 ]
 
 function BuildVisual() {
+  const isMobile = useIsMobile()
   const [shown, setShown] = useState([])
   const [cur, setCur] = useState('')
   const [li, setLi] = useState(0)
@@ -148,6 +149,7 @@ function BuildVisual() {
   }, [])
 
   useEffect(() => {
+    if (isMobile) return
     if (li >= BUILD_LINES.length) {
       const r = setTimeout(() => { setShown([]); setCur(''); setLi(0); setCi(0) }, 2800)
       return () => clearTimeout(r)
@@ -162,22 +164,44 @@ function BuildVisual() {
       setCur(''); setCi(0); setLi(l => l + 1)
     }, 160)
     return () => clearTimeout(t)
-  }, [li, ci])
+  }, [li, ci, isMobile])
+
+  const boxStyle = {
+    background: '#0d0d0c', borderRadius: 12, padding: '14px 16px',
+    fontFamily: 'DM Mono, monospace', width: '100%',
+    height: 220, minHeight: 220, maxHeight: 220, flexShrink: 0,
+    overflow: 'hidden', display: 'flex', flexDirection: 'column',
+    border: '1px solid rgba(143,175,159,0.12)',
+    boxShadow: '0 0 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03)',
+  }
+
+  const dots = (
+    <div style={{ display: 'flex', gap: 6, marginBottom: 12, flexShrink: 0 }}>
+      {['#FF5F57','#FFBD2E','#28C840'].map((c,i) => (
+        <div key={i} style={{ width: 8, height: 8, borderRadius: '50%', background: c, opacity: 0.6 }} />
+      ))}
+    </div>
+  )
+
+  // On mobile: render all lines statically, no typewriter
+  if (isMobile) {
+    return (
+      <div style={boxStyle}>
+        {dots}
+        <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+          {BUILD_LINES.map((line, i) => (
+            <div key={i} style={{ fontSize: '0.75rem', color: line.c, lineHeight: 1.9, opacity: i < BUILD_LINES.length - 2 ? 0.4 : 0.85 }}>
+              {line.t}
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
 
   return (
-    <div style={{
-      background: '#0d0d0c', borderRadius: 12, padding: '14px 16px',
-      fontFamily: 'DM Mono, monospace', width: '100%',
-      height: 220, minHeight: 220, maxHeight: 220, flexShrink: 0,
-      overflow: 'hidden', display: 'flex', flexDirection: 'column',
-      border: '1px solid rgba(143,175,159,0.12)',
-      boxShadow: '0 0 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03)',
-    }}>
-      <div style={{ display: 'flex', gap: 6, marginBottom: 12, flexShrink: 0 }}>
-        {['#FF5F57','#FFBD2E','#28C840'].map((c,i) => (
-          <div key={i} style={{ width: 8, height: 8, borderRadius: '50%', background: c, opacity: 0.6 }} />
-        ))}
-      </div>
+    <div style={boxStyle}>
+      {dots}
       <div style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
         {shown.map((line, i) => (
           <div key={i} style={{ fontSize: '0.75rem', color: line.c, lineHeight: 1.9, opacity: i < shown.length - 2 ? 0.4 : 0.85 }}>
@@ -306,7 +330,19 @@ function StepPanel({ step, index }) {
     const ghost = ghostRef.current
     const content = contentRef.current
 
-    // Initial states
+    if (isMobile) {
+      // On mobile: no clip-path (causes height recalc). Simple fade only.
+      gsap.set(content, { opacity: 0 })
+      gsap.set(ghost, { opacity: 0 })
+      const tl = gsap.timeline({
+        scrollTrigger: { trigger: panel, start: 'top 80%', toggleActions: 'play none none none' }
+      })
+      tl.to(content, { opacity: 1, duration: 0.6, ease: 'power2.out' })
+        .to(ghost, { opacity: 1, duration: 0.6, ease: 'power2.out' }, '-=0.3')
+      return () => tl.scrollTrigger?.kill()
+    }
+
+    // Desktop: full clip-path reveal
     gsap.set(content, { clipPath: 'inset(0 100% 0 0)', opacity: 1 })
     gsap.set(ghost, { opacity: 0, x: -30 })
     gsap.set(tagRef.current, { y: 20, opacity: 0 })
@@ -332,7 +368,7 @@ function StepPanel({ step, index }) {
       .to(bodyRef.current, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.4')
 
     return () => tl.scrollTrigger?.kill()
-  }, [])
+  }, [isMobile])
 
   const isEven = index % 2 === 0
 
