@@ -83,7 +83,7 @@ function MapVisual() {
   ]
   const edges = [[0,1],[0,2],[0,3],[1,4],[3,5],[2,4],[2,5]]
   return (
-    <svg ref={svgRef} viewBox="0 0 240 270" fill="none" style={{ width: '100%', maxWidth: 220, display: 'block' }}>
+    <svg ref={svgRef} viewBox="0 0 240 270" fill="none" style={{ width: '100%', maxWidth: 200, height: 200, display: 'block' }}>
       {edges.map(([a, b], i) => {
         const na = nodes[a], nb = nodes[b]
         const pulse = 0.35 + 0.25 * Math.sin(phase + i * 0.8)
@@ -168,7 +168,7 @@ function BuildVisual() {
     <div style={{
       background: '#0d0d0c', borderRadius: 12, padding: '14px 16px',
       fontFamily: 'DM Mono, monospace', width: '100%',
-      height: '100%', maxHeight: '100%',
+      height: 220, minHeight: 220, maxHeight: 220, flexShrink: 0,
       overflow: 'hidden', display: 'flex', flexDirection: 'column',
       border: '1px solid rgba(143,175,159,0.12)',
       boxShadow: '0 0 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03)',
@@ -218,7 +218,7 @@ function FlowVisual() {
   ]
 
   return (
-    <svg ref={svgRef} viewBox="0 0 220 220" fill="none" style={{ width: '100%', maxWidth: 220, display: 'block' }}>
+    <svg ref={svgRef} viewBox="0 0 220 220" fill="none" style={{ width: '100%', maxWidth: 200, height: 200, display: 'block' }}>
       {/* Orbit rings */}
       <circle cx={cx} cy={cy} r={60} stroke="rgba(143,175,159,0.08)" strokeWidth={1} />
       <circle cx={cx} cy={cy} r={85} stroke="rgba(143,175,159,0.05)" strokeWidth={1} />
@@ -343,9 +343,9 @@ function StepPanel({ step, index }) {
         position: 'relative',
         background: '#1C1C1A',
         overflow: 'hidden',
-        minHeight: isMobile ? 'auto' : 'clamp(480px, 55vw, 600px)',
+        minHeight: isMobile ? 0 : 'clamp(480px, 55vw, 600px)',
         display: 'flex',
-        alignItems: isMobile ? 'stretch' : 'center',
+        alignItems: 'center',
       }}
     >
       <GrainOverlay opacity={0.04} />
@@ -456,7 +456,6 @@ function StepPanel({ step, index }) {
 
         {/* Visual side */}
         <div style={{
-          flex: '0 0 220px',
           width: isMobile ? '100%' : '40%',
           maxWidth: isMobile ? '100%' : 280,
           height: 220,
@@ -464,20 +463,13 @@ function StepPanel({ step, index }) {
           maxHeight: 220,
           flexShrink: 0,
           flexGrow: 0,
-          position: 'relative',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
           overflow: 'hidden',
           opacity: 0.9,
         }}>
-          <div style={{
-            position: 'absolute',
-            inset: 0,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            overflow: 'hidden',
-          }}>
-            {step.visual}
-          </div>
+          {step.visual}
         </div>
       </div>
     </div>
