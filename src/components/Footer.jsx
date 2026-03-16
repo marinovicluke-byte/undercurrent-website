@@ -31,7 +31,7 @@ export default function Footer() {
               <h3 className="font-cormorant text-off-white" style={{ fontSize: '1.5rem', fontWeight: 600, color: '#F7F3ED' }}>
                 UnderCurrent
               </h3>
-              <p className="font-dm text-warm-sand/60" style={{ fontSize: '0.65rem', letterSpacing: '0.08em', fontWeight: 300, color: '#D4C9B060' }}>
+              <p className="font-dm text-warm-sand/60" style={{ fontSize: '0.75rem', letterSpacing: '0.08em', fontWeight: 300, color: '#D4C9B060' }}>
                 AI Automation Architecture
               </p>
             </div>

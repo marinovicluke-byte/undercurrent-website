@@ -268,7 +268,7 @@ export default function Pricing() {
                       <span
                         className="font-mono"
                         style={{
-                          fontSize: '0.65rem',
+                          fontSize: '0.75rem',
                           fontWeight: 600,
                           letterSpacing: '0.15em',
                           color: step.accent,
@@ -288,7 +288,7 @@ export default function Pricing() {
                       <span
                         className="font-dm"
                         style={{
-                          fontSize: '0.65rem',
+                          fontSize: '0.75rem',
                           fontWeight: 500,
                           letterSpacing: '0.16em',
                           color: step.accent,
@@ -326,7 +326,7 @@ export default function Pricing() {
                       >
                         <span
                           className="font-dm"
-                          style={{ fontSize: '0.65rem', fontWeight: 500, color: '#8FAF9F', letterSpacing: '0.1em' }}
+                          style={{ fontSize: '0.75rem', fontWeight: 500, color: '#8FAF9F', letterSpacing: '0.1em' }}
                         >
                           FREE
                         </span>

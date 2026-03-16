@@ -177,12 +177,12 @@ function BuildVisual() {
         ))}
       </div>
       {shown.map((line, i) => (
-        <div key={i} style={{ fontSize: '0.62rem', color: line.c, lineHeight: 1.9, opacity: i < shown.length - 2 ? 0.4 : 0.85 }}>
+        <div key={i} style={{ fontSize: '0.75rem', color: line.c, lineHeight: 1.9, opacity: i < shown.length - 2 ? 0.4 : 0.85 }}>
           {line.t}
         </div>
       ))}
       {li < BUILD_LINES.length && (
-        <div style={{ fontSize: '0.62rem', color: BUILD_LINES[li].c, lineHeight: 1.9 }}>
+        <div style={{ fontSize: '0.75rem', color: BUILD_LINES[li].c, lineHeight: 1.9 }}>
           {cur}<span style={{ opacity: blink ? 1 : 0 }}>▋</span>
         </div>
       )}
@@ -248,6 +248,17 @@ function FlowVisual() {
   )
 }
 
+// ─── Mobile breakpoint hook ──────────────────────────────────────────────────
+function useIsMobile(bp = 700) {
+  const [m, setM] = useState(() => window.innerWidth < bp)
+  useEffect(() => {
+    const h = () => setM(window.innerWidth < bp)
+    window.addEventListener('resize', h)
+    return () => window.removeEventListener('resize', h)
+  }, [bp])
+  return m
+}
+
 // ─── Step panel ──────────────────────────────────────────────────────────────
 const STEPS = [
   {
@@ -284,6 +295,7 @@ function StepPanel({ step, index }) {
   const bodyRef = useRef(null)
   const numRef = useRef(null)
   const wordRefs = useRef([])
+  const isMobile = useIsMobile()
 
   useEffect(() => {
     const panel = panelRef.current
@@ -378,8 +390,8 @@ function StepPanel({ step, index }) {
           margin: '0 auto',
           padding: 'clamp(48px, 6vw, 80px) clamp(24px, 5vw, 72px)',
           display: 'flex',
-          flexDirection: isEven ? 'row' : 'row-reverse',
-          alignItems: 'center',
+          flexDirection: isMobile ? 'column' : (isEven ? 'row' : 'row-reverse'),
+          alignItems: isMobile ? 'flex-start' : 'center',
           gap: 'clamp(32px, 5vw, 80px)',
         }}
       >
@@ -388,7 +400,7 @@ function StepPanel({ step, index }) {
           {/* Step number inline */}
           <div ref={numRef} style={{
             fontFamily: 'DM Mono, monospace',
-            fontSize: '0.65rem',
+            fontSize: '0.75rem',
             letterSpacing: '0.16em',
             color: step.color,
             marginBottom: 20,
@@ -416,7 +428,7 @@ function StepPanel({ step, index }) {
           {/* Tagline */}
           <p ref={tagRef} style={{
             fontFamily: 'DM Mono, monospace',
-            fontSize: 'clamp(0.68rem, 1.1vw, 0.78rem)',
+            fontSize: 'clamp(0.75rem, 1.1vw, 0.85rem)',
             color: step.color,
             letterSpacing: '0.06em',
             marginBottom: 16,
@@ -428,7 +440,7 @@ function StepPanel({ step, index }) {
           {/* Body */}
           <p ref={bodyRef} style={{
             fontFamily: 'DM Sans, sans-serif',
-            fontSize: 'clamp(0.9rem, 1.4vw, 1.05rem)',
+            fontSize: 'clamp(0.95rem, 1.5vw, 1.1rem)',
             color: 'rgba(247,243,237,0.55)',
             lineHeight: 1.7,
             maxWidth: 400,
@@ -548,7 +560,7 @@ export default function Process() {
 
         <div style={{ position: 'relative', zIndex: 3, maxWidth: 1100, margin: '0 auto' }}>
           <p className="p-hero-eyebrow" style={{
-            fontFamily: 'DM Mono, monospace', fontSize: '0.65rem',
+            fontFamily: 'DM Mono, monospace', fontSize: '0.75rem',
             letterSpacing: '0.16em', color: '#8FAF9F',
             textTransform: 'uppercase', marginBottom: 20, opacity: 0,
           }}>
@@ -570,7 +582,7 @@ export default function Process() {
           <div className="p-hero-sub" style={{ opacity: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
             <p style={{
               fontFamily: 'DM Sans, sans-serif',
-              fontSize: 'clamp(0.9rem, 1.5vw, 1.05rem)',
+              fontSize: 'clamp(0.95rem, 1.5vw, 1.1rem)',
               color: 'rgba(247,243,237,0.45)',
               maxWidth: 340, lineHeight: 1.6, fontWeight: 300,
             }}>
@@ -580,7 +592,7 @@ export default function Process() {
             <div style={{ display: 'flex', gap: 8, marginTop: 20 }}>
               {STEPS.map((s, i) => (
                 <div key={i} style={{
-                  fontFamily: 'DM Mono, monospace', fontSize: '0.6rem',
+                  fontFamily: 'DM Mono, monospace', fontSize: '0.75rem',
                   letterSpacing: '0.1em', color: s.color,
                   border: `1px solid ${s.color}40`,
                   borderRadius: 9999, padding: '4px 12px',
@@ -634,7 +646,7 @@ export default function Process() {
           display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 24,
         }}>
           <p style={{
-            fontFamily: 'DM Mono, monospace', fontSize: '0.65rem',
+            fontFamily: 'DM Mono, monospace', fontSize: '0.75rem',
             letterSpacing: '0.14em', color: '#8FAF9F',
             textTransform: 'uppercase',
           }}>
@@ -652,7 +664,7 @@ export default function Process() {
           <p style={{
             fontFamily: 'DM Sans, sans-serif',
             color: 'rgba(247,243,237,0.4)',
-            fontSize: 'clamp(0.85rem, 1.3vw, 0.95rem)',
+            fontSize: 'clamp(0.95rem, 1.5vw, 1.05rem)',
             fontWeight: 300, lineHeight: 1.6,
             maxWidth: 320,
           }}>

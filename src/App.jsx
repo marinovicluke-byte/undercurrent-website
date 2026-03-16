@@ -8,6 +8,7 @@ import Features from './components/Features'
 import Protocol from './components/Protocol'
 import Pricing from './components/Pricing'
 import WhatWeAutomate from './components/WhatWeAutomate'
+import UserJourneyDarkHorizontal from './components/UserJourneyDarkHorizontal'
 import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -25,8 +26,9 @@ function HomePage() {
       <ScrollProgressBar />
       <Navbar ready={loaderDone} />
       <Hero ready={loaderDone} />
-      <Protocol />
+      <UserJourneyDarkHorizontal />
       <WhatWeAutomate />
+      <Protocol />
       <Pricing />
       <Features />
       <FAQ />

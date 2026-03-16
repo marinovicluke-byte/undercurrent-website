@@ -280,7 +280,7 @@ export default function Hero({ ready = true }) {
         className="absolute bottom-6 left-1/2 font-mono"
         style={{
           transform: 'translateX(-50%)',
-          fontSize: '0.65rem',
+          fontSize: '0.75rem',
           letterSpacing: '0.15em',
           color: 'rgba(212,201,176,0.35)',
           whiteSpace: 'nowrap',

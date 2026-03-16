@@ -474,7 +474,7 @@ export default function ROICalculator() {
           <div style={{ maxWidth: '1100px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(340px, 100%), 1fr))',
             gap: '32px',
             alignItems: 'start',
           }}>
@@ -555,7 +555,7 @@ export default function ROICalculator() {
                     </h3>
                     <span style={{
                       fontFamily: 'DM Mono, monospace',
-                      fontSize: '0.68rem',
+                      fontSize: '0.75rem',
                       color: '#1C1C1A',
                       opacity: 0.35,
                     }}>0 – 20 hrs</span>
@@ -661,7 +661,7 @@ export default function ROICalculator() {
                       >
                         <div style={{
                           fontFamily: 'DM Mono, monospace',
-                          fontSize: '0.68rem',
+                          fontSize: '0.75rem',
                           letterSpacing: '0.12em',
                           textTransform: 'uppercase',
                           color: '#8FAF9F',
@@ -742,7 +742,7 @@ export default function ROICalculator() {
                       <DollarSign size={14} color="#6B7C4A" />
                       <span style={{
                         fontFamily: 'DM Mono, monospace',
-                        fontSize: '0.68rem',
+                        fontSize: '0.75rem',
                         letterSpacing: '0.12em',
                         textTransform: 'uppercase',
                         color: '#6B7C4A',
@@ -761,7 +761,7 @@ export default function ROICalculator() {
                     ))}
                     <p style={{
                       fontFamily: 'DM Mono, monospace',
-                      fontSize: '0.65rem',
+                      fontSize: '0.75rem',
                       color: '#1C1C1A',
                       opacity: 0.3,
                       margin: '16px 0 0',

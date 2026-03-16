@@ -69,7 +69,7 @@ function MapVisual() {
   ]
   const edges = [[0,1],[0,2],[0,3],[1,4],[3,5],[2,4],[2,5]]
   return (
-    <svg ref={containerRef} viewBox="0 0 240 270" fill="none" style={{ width: '100%', maxWidth: 220, display: 'block' }}>
+    <svg ref={containerRef} viewBox="0 0 240 270" fill="none" style={{ width: '100%', maxWidth: 180, display: 'block' }}>
       {edges.map(([a, b], i) => {
         const na = nodes[a], nb = nodes[b]
         const pulse = 0.35 + 0.25 * Math.sin(phase + i * 0.8)
@@ -143,23 +143,23 @@ function BuildVisual() {
 
   return (
     <div style={{
-      background: '#0d0d0c', borderRadius: 12, padding: '14px 16px',
-      fontFamily: 'DM Mono, monospace', width: '100%', minHeight: 180,
+      background: '#0d0d0c', borderRadius: 10, padding: '12px 14px',
+      fontFamily: 'DM Mono, monospace', width: '100%',
       border: '1px solid rgba(143,175,159,0.12)',
-      boxShadow: '0 0 40px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.03)',
+      boxShadow: '0 0 30px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.03)',
     }}>
-      <div style={{ display: 'flex', gap: 6, marginBottom: 12 }}>
+      <div style={{ display: 'flex', gap: 5, marginBottom: 10 }}>
         {['#FF5F57','#FFBD2E','#28C840'].map((c, i) => (
-          <div key={i} style={{ width: 8, height: 8, borderRadius: '50%', background: c, opacity: 0.6 }} />
+          <div key={i} style={{ width: 7, height: 7, borderRadius: '50%', background: c, opacity: 0.6 }} />
         ))}
       </div>
       {shown.map((line, i) => (
-        <div key={i} style={{ fontSize: '0.62rem', color: line.c, lineHeight: 1.9, opacity: i < shown.length - 2 ? 0.4 : 0.85 }}>
+        <div key={i} style={{ fontSize: '0.75rem', color: line.c, lineHeight: 1.85, opacity: i < shown.length - 2 ? 0.4 : 0.85 }}>
           {line.t}
         </div>
       ))}
       {li < BUILD_LINES.length && (
-        <div style={{ fontSize: '0.62rem', color: BUILD_LINES[li].c, lineHeight: 1.9 }}>
+        <div style={{ fontSize: '0.75rem', color: BUILD_LINES[li].c, lineHeight: 1.85 }}>
           {cur}<span style={{ opacity: blink ? 1 : 0 }}>▋</span>
         </div>
       )}
@@ -194,7 +194,7 @@ function FlowVisual() {
   ]
 
   return (
-    <svg ref={containerRef} viewBox="0 0 220 220" fill="none" style={{ width: '100%', maxWidth: 220, display: 'block' }}>
+    <svg ref={containerRef} viewBox="0 0 220 220" fill="none" style={{ width: '100%', maxWidth: 180, display: 'block' }}>
       <circle cx={cx} cy={cy} r={60} stroke="rgba(143,175,159,0.08)" strokeWidth={1} />
       <circle cx={cx} cy={cy} r={85} stroke="rgba(143,175,159,0.05)" strokeWidth={1} />
       <circle cx={cx} cy={cy} r={28} fill="rgba(143,175,159,0.1)" stroke="rgba(143,175,159,0.5)" strokeWidth={1.5} />
@@ -248,187 +248,148 @@ const STEPS = [
   },
 ]
 
-// ─── Individual step panel ────────────────────────────────────────────────────
-function StepPanel({ step, index }) {
-  const panelRef = useRef(null)
-  const ghostRef = useRef(null)
-  const contentRef = useRef(null)
-  const tagRef = useRef(null)
-  const bodyRef = useRef(null)
-  const numRef = useRef(null)
+// ─── Compact step card ────────────────────────────────────────────────────────
+function StepCard({ step, index }) {
+  const cardRef = useRef(null)
 
   useEffect(() => {
-    const content = contentRef.current
-    const ghost = ghostRef.current
-
-    gsap.set(content, { clipPath: 'inset(0 100% 0 0)' })
-    gsap.set(ghost, { opacity: 0, x: -30 })
-    gsap.set(tagRef.current, { y: 20, opacity: 0 })
-    gsap.set(bodyRef.current, { y: 20, opacity: 0 })
-    gsap.set(numRef.current, { opacity: 0 })
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: panelRef.current,
-        start: 'top 72%',
-        toggleActions: 'play none none none',
+    const tween = gsap.fromTo(
+      cardRef.current,
+      { y: 40, opacity: 0 },
+      {
+        y: 0, opacity: 1, duration: 0.75, ease: 'power3.out',
+        delay: index * 0.12,
+        scrollTrigger: { trigger: cardRef.current, start: 'top 82%', toggleActions: 'play none none none' },
       }
-    })
-
-    tl.to(ghost,   { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out' })
-      .to(content, { clipPath: 'inset(0 0% 0 0)', duration: 0.85, ease: 'power4.inOut' }, '-=0.5')
-      .to(numRef.current, { opacity: 1, duration: 0.5, ease: 'power2.out' }, '-=0.3')
-      .to(tagRef.current, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.3')
-      .to(bodyRef.current, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.4')
-
-    return () => tl.scrollTrigger?.kill()
+    )
+    return () => tween.scrollTrigger?.kill()
   }, [])
-
-  const isEven = index % 2 === 0
-  const ghostRgb = step.color === '#8FAF9F' ? '143,175,159'
-                 : step.color === '#D4C9B0' ? '212,201,176'
-                 : '107,124,74'
 
   return (
     <div
-      ref={panelRef}
+      ref={cardRef}
       style={{
         position: 'relative',
-        background: '#1C1C1A',
-        overflow: 'hidden',
-        minHeight: 'clamp(460px, 52vw, 580px)',
+        background: 'rgba(255,255,255,0.03)',
+        border: `1px solid rgba(${step.color === '#8FAF9F' ? '143,175,159' : step.color === '#D4C9B0' ? '212,201,176' : '107,124,74'},0.14)`,
+        borderRadius: 20,
+        padding: 'clamp(24px, 3vw, 36px)',
         display: 'flex',
-        alignItems: 'center',
+        flexDirection: 'column',
+        gap: 20,
+        overflow: 'hidden',
       }}
     >
-      <GrainOverlay />
-
-      {/* Ghost number watermark */}
-      <div
-        ref={ghostRef}
-        style={{
-          position: 'absolute',
-          [isEven ? 'left' : 'right']: '-0.04em',
-          top: '50%',
-          transform: 'translateY(-54%)',
-          fontFamily: 'Cormorant Garamond, serif',
-          fontWeight: 700,
-          fontSize: 'clamp(200px, 28vw, 360px)',
-          lineHeight: 1,
-          color: 'transparent',
-          WebkitTextStroke: `1px rgba(${ghostRgb},0.09)`,
-          pointerEvents: 'none',
-          userSelect: 'none',
-          zIndex: 1,
-          letterSpacing: '-0.05em',
-        }}
-      >
+      {/* Ghost number — decorative, clipped inside card */}
+      <div style={{
+        position: 'absolute',
+        right: '-0.06em',
+        bottom: '-0.18em',
+        fontFamily: 'Cormorant Garamond, serif',
+        fontWeight: 700,
+        fontSize: 'clamp(100px, 14vw, 160px)',
+        lineHeight: 1,
+        color: 'transparent',
+        WebkitTextStroke: `1px rgba(${step.color === '#8FAF9F' ? '143,175,159' : step.color === '#D4C9B0' ? '212,201,176' : '107,124,74'},0.07)`,
+        pointerEvents: 'none',
+        userSelect: 'none',
+        zIndex: 0,
+        letterSpacing: '-0.04em',
+      }}>
         {step.num}
       </div>
 
-      {/* Side accent line */}
+      {/* Left accent line */}
       <div style={{
         position: 'absolute',
-        [isEven ? 'left' : 'right']: 0,
-        top: '15%', bottom: '15%',
+        left: 0, top: '20%', bottom: '20%',
         width: 2,
-        background: `linear-gradient(to bottom, transparent, ${step.color}55, transparent)`,
-        zIndex: 3,
+        borderRadius: 2,
+        background: `linear-gradient(to bottom, transparent, ${step.color}60, transparent)`,
       }} />
 
-      {/* Clip-path revealed content */}
-      <div
-        ref={contentRef}
-        style={{
-          position: 'relative', zIndex: 4,
-          width: '100%', maxWidth: 1100,
-          margin: '0 auto',
-          padding: 'clamp(40px, 5vw, 72px) clamp(24px, 5vw, 64px)',
-          display: 'flex',
-          flexDirection: isEven ? 'row' : 'row-reverse',
-          alignItems: 'center',
-          gap: 'clamp(28px, 5vw, 72px)',
-        }}
-      >
-        {/* Text */}
-        <div style={{ flex: '1 1 55%', minWidth: 0 }}>
-          <div ref={numRef} style={{
-            fontFamily: 'DM Mono, monospace', fontSize: '0.65rem',
-            letterSpacing: '0.16em', color: step.color, marginBottom: 18,
-            display: 'flex', alignItems: 'center', gap: 12,
-          }}>
-            <span>{step.num}</span>
-            <span style={{ flex: 1, height: 1, maxWidth: 80, background: `linear-gradient(to right, ${step.color}60, transparent)` }} />
-          </div>
-
-          <div style={{
-            fontFamily: 'Cormorant Garamond, serif',
-            fontSize: 'clamp(3.8rem, 8vw, 7.5rem)',
-            fontWeight: 600, lineHeight: 0.9,
-            letterSpacing: '-0.03em', color: '#F7F3ED',
-            marginBottom: 'clamp(18px, 2.5vw, 28px)',
-          }}>
-            {step.word}
-          </div>
-
-          <p ref={tagRef} style={{
-            fontFamily: 'DM Mono, monospace', fontSize: '0.72rem',
-            color: step.color, letterSpacing: '0.06em',
-            marginBottom: 14, lineHeight: 1.5, opacity: 0,
-          }}>
-            {step.tagline}
-          </p>
-
-          <p ref={bodyRef} style={{
-            fontFamily: 'DM Sans, sans-serif',
-            fontSize: 'clamp(0.88rem, 1.35vw, 1rem)',
-            color: 'rgba(247,243,237,0.52)',
-            lineHeight: 1.72, maxWidth: 400,
-            fontWeight: 300, opacity: 0,
-          }}>
-            {step.body}
-          </p>
-        </div>
-
-        {/* Visual */}
+      {/* Content */}
+      <div style={{ position: 'relative', zIndex: 1 }}>
+        {/* Number row */}
         <div style={{
-          flex: '1 1 40%', maxWidth: 260, minWidth: 140,
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          opacity: 0.92,
+          display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16,
         }}>
-          {step.visual}
+          <span style={{
+            fontFamily: 'DM Mono, monospace', fontSize: '0.75rem',
+            letterSpacing: '0.14em', color: step.color, fontWeight: 500,
+          }}>
+            {step.num}
+          </span>
+          <div style={{
+            flex: 1, height: 1, maxWidth: 60,
+            background: `linear-gradient(to right, ${step.color}50, transparent)`,
+          }} />
         </div>
+
+        {/* Word */}
+        <div style={{
+          fontFamily: 'Cormorant Garamond, serif',
+          fontSize: 'clamp(3rem, 5vw, 4.5rem)',
+          fontWeight: 600, lineHeight: 0.9,
+          letterSpacing: '-0.03em', color: '#F7F3ED',
+          marginBottom: 14,
+        }}>
+          {step.word}
+        </div>
+
+        {/* Tagline */}
+        <p style={{
+          fontFamily: 'DM Mono, monospace', fontSize: '0.75rem',
+          color: step.color, letterSpacing: '0.04em',
+          marginBottom: 10, lineHeight: 1.5,
+        }}>
+          {step.tagline}
+        </p>
+
+        {/* Body */}
+        <p style={{
+          fontFamily: 'DM Sans, sans-serif',
+          fontSize: 'clamp(0.95rem, 1.5vw, 1.1rem)',
+          color: 'rgba(247,243,237,0.48)',
+          lineHeight: 1.7, fontWeight: 300,
+        }}>
+          {step.body}
+        </p>
+      </div>
+
+      {/* Visual */}
+      <div style={{
+        display: 'flex', justifyContent: 'center', alignItems: 'center',
+        position: 'relative', zIndex: 1,
+        opacity: 0.9,
+        marginTop: 'auto',
+      }}>
+        {step.visual}
       </div>
     </div>
   )
 }
 
-// ─── Thin divider ─────────────────────────────────────────────────────────────
-function PanelDivider({ color }) {
-  return (
-    <div style={{ height: 1, background: `linear-gradient(to right, transparent, ${color}28, transparent)` }} />
-  )
-}
-
-// ─── Protocol section (drop-in replacement for homepage) ─────────────────────
+// ─── Protocol section ─────────────────────────────────────────────────────────
 export default function Protocol() {
-  const heroRef = useRef(null)
+  const heroRef  = useRef(null)
+  const gridRef  = useRef(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo('.proto-eyebrow',
         { y: 14, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.75, ease: 'power3.out', delay: 0.1,
+        { y: 0, opacity: 1, duration: 0.75, ease: 'power3.out',
           scrollTrigger: { trigger: heroRef.current, start: 'top 80%' } }
       )
       gsap.fromTo('.proto-h2',
         { y: 28, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: 'power3.out', delay: 0.25,
+        { y: 0, opacity: 1, duration: 1, ease: 'power3.out', delay: 0.15,
           scrollTrigger: { trigger: heroRef.current, start: 'top 80%' } }
       )
       gsap.fromTo('.proto-sub',
         { y: 18, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 0.45,
+        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 0.3,
           scrollTrigger: { trigger: heroRef.current, start: 'top 80%' } }
       )
     }, heroRef)
@@ -444,8 +405,8 @@ export default function Protocol() {
         style={{
           position: 'relative',
           overflow: 'hidden',
-          paddingTop: 'clamp(72px, 10vw, 112px)',
-          paddingBottom: 'clamp(48px, 6vw, 80px)',
+          paddingTop: 'clamp(56px, 8vw, 88px)',
+          paddingBottom: 'clamp(36px, 4vw, 56px)',
           paddingLeft: 'clamp(24px, 5vw, 64px)',
           paddingRight: 'clamp(24px, 5vw, 64px)',
         }}
@@ -456,7 +417,7 @@ export default function Protocol() {
         <div style={{
           position: 'absolute', right: '-0.04em', bottom: '-0.12em',
           fontFamily: 'Cormorant Garamond, serif', fontWeight: 700,
-          fontSize: 'clamp(160px, 24vw, 320px)', lineHeight: 1,
+          fontSize: 'clamp(120px, 18vw, 240px)', lineHeight: 1,
           letterSpacing: '-0.04em', color: 'transparent',
           WebkitTextStroke: '1px rgba(143,175,159,0.06)',
           pointerEvents: 'none', userSelect: 'none', zIndex: 1,
@@ -466,24 +427,20 @@ export default function Protocol() {
 
         <div style={{ position: 'relative', zIndex: 3, maxWidth: 1100, margin: '0 auto' }}>
           <p className="proto-eyebrow" style={{
-            fontFamily: 'DM Mono, monospace', fontSize: '0.65rem',
+            fontFamily: 'DM Mono, monospace', fontSize: '0.75rem',
             letterSpacing: '0.16em', color: '#8FAF9F',
-            textTransform: 'uppercase', marginBottom: 18, opacity: 0,
+            textTransform: 'uppercase', marginBottom: 16, opacity: 0,
           }}>
             The Process
           </p>
 
           <div style={{
-            display: 'flex',
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            alignItems: 'flex-end',
-            justifyContent: 'space-between',
-            gap: 24,
+            display: 'flex', flexDirection: 'row', flexWrap: 'wrap',
+            alignItems: 'flex-end', justifyContent: 'space-between', gap: 20,
           }}>
             <h2 className="proto-h2" style={{
               fontFamily: 'Cormorant Garamond, serif',
-              fontSize: 'clamp(3.2rem, 8vw, 7rem)',
+              fontSize: 'clamp(3rem, 7vw, 6rem)',
               fontWeight: 600, lineHeight: 0.93,
               letterSpacing: '-0.03em', color: '#F7F3ED',
               opacity: 0,
@@ -492,19 +449,19 @@ export default function Protocol() {
               <span style={{ color: '#8FAF9F' }}>work</span>
             </h2>
 
-            <div className="proto-sub" style={{ opacity: 0, maxWidth: 300, paddingBottom: 6 }}>
+            <div className="proto-sub" style={{ opacity: 0, maxWidth: 300, paddingBottom: 4 }}>
               <p style={{
                 fontFamily: 'DM Sans, sans-serif',
-                fontSize: 'clamp(0.88rem, 1.4vw, 1rem)',
+                fontSize: 'clamp(0.95rem, 1.5vw, 1.1rem)',
                 color: 'rgba(247,243,237,0.42)',
-                lineHeight: 1.65, fontWeight: 300, marginBottom: 20,
+                lineHeight: 1.65, fontWeight: 300, marginBottom: 16,
               }}>
                 Three steps. One clean handoff.<br />Runs without you.
               </p>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 {STEPS.map((s) => (
                   <div key={s.num} style={{
-                    fontFamily: 'DM Mono, monospace', fontSize: '0.58rem',
+                    fontFamily: 'DM Mono, monospace', fontSize: '0.75rem',
                     letterSpacing: '0.1em', color: s.color,
                     border: `1px solid ${s.color}40`,
                     borderRadius: 9999, padding: '3px 10px',
@@ -517,26 +474,30 @@ export default function Protocol() {
           </div>
         </div>
 
-        {/* Bottom fade into panels */}
+        {/* Bottom fade into grid */}
         <div style={{
-          position: 'absolute', bottom: 0, left: 0, right: 0, height: 60, zIndex: 4,
+          position: 'absolute', bottom: 0, left: 0, right: 0, height: 48, zIndex: 4,
           background: 'linear-gradient(to bottom, transparent, #1C1C1A)',
         }} />
       </div>
 
-      {/* ── Three step panels ── */}
-      {STEPS.map((step, i) => (
-        <div key={step.num}>
-          <StepPanel step={step} index={i} />
-          {i < STEPS.length - 1 && <PanelDivider color={step.color} />}
-        </div>
-      ))}
+      {/* ── Compact 3-column grid ── */}
+      <div
+        ref={gridRef}
+        style={{
+          maxWidth: 1100,
+          margin: '0 auto',
+          padding: 'clamp(16px, 3vw, 32px) clamp(24px, 5vw, 64px) clamp(56px, 7vw, 88px)',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: 'clamp(14px, 2vw, 22px)',
+        }}
+      >
+        {STEPS.map((step, i) => (
+          <StepCard key={step.num} step={step} index={i} />
+        ))}
+      </div>
 
-      {/* ── Bottom fade out to rest of page ── */}
-      <div style={{
-        height: 80,
-        background: 'linear-gradient(to bottom, #1C1C1A, #F7F3ED)',
-      }} />
     </section>
   )
 }

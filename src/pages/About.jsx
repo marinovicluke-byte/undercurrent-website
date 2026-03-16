@@ -339,7 +339,7 @@ export default function About() {
               </p>
               <div className="flex flex-col gap-6">
                 <div style={{ borderLeft: '2px solid rgba(143,175,159,0.4)', paddingLeft: '1.5rem' }}>
-                  <p className="font-mono" style={{ fontSize: '0.65rem', letterSpacing: '0.12em', color: 'rgba(28,28,26,0.35)', marginBottom: '0.5rem' }}>
+                  <p className="font-mono" style={{ fontSize: '0.75rem', letterSpacing: '0.12em', color: 'rgba(28,28,26,0.35)', marginBottom: '0.5rem' }}>
                     EST. 2026 · MELBOURNE
                   </p>
                 </div>
@@ -400,7 +400,7 @@ export default function About() {
               </div>
             </Reveal>
             <Reveal delay={0.15} className="md:col-span-7">
-              <p className="font-mono mb-6" style={{ fontSize: '0.65rem', letterSpacing: '0.18em', color: 'rgba(143,175,159,0.6)' }}>
+              <p className="font-mono mb-6" style={{ fontSize: '0.75rem', letterSpacing: '0.18em', color: 'rgba(143,175,159,0.6)' }}>
                 FOUNDER · LUKE — MELBOURNE
               </p>
               <h2 className="font-cormorant" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.5rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-0.02em', color: '#F7F3ED', marginBottom: '2rem' }}>
@@ -482,7 +482,7 @@ export default function About() {
                       <span
                         className="font-mono"
                         style={{
-                          fontSize: '0.68rem',
+                          fontSize: '0.75rem',
                           letterSpacing: '0.18em',
                           color: item.isCurrent ? '#8FAF9F' : 'rgba(28,28,26,0.28)',
                           display: 'block',
@@ -538,7 +538,7 @@ export default function About() {
                   onMouseLeave={e => e.currentTarget.style.backgroundColor = '#E8E0D0'}
                 >
                   <div className="flex items-start gap-6">
-                    <span className="font-mono flex-shrink-0" style={{ fontSize: '0.68rem', letterSpacing: '0.12em', color: 'rgba(143,175,159,0.6)', marginTop: '0.25rem' }}>
+                    <span className="font-mono flex-shrink-0" style={{ fontSize: '0.75rem', letterSpacing: '0.12em', color: 'rgba(143,175,159,0.6)', marginTop: '0.25rem' }}>
                       {v.num}
                     </span>
                     <div>
