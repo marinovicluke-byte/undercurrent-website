@@ -3,7 +3,7 @@ import { gsap } from 'gsap'
 import { X } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
 
-function NavWave({ scrolled }) {
+function NavWave({ scrolled, slow = false }) {
   const canvasRef = useRef(null)
   const rafRef = useRef(null)
   const scrolledRef = useRef(scrolled)
@@ -20,10 +20,11 @@ function NavWave({ scrolled }) {
     canvas.height = H * dpr
     ctx.scale(dpr, dpr)
 
+    const speedMult = slow ? 0.7 : 1
     const currents = [
-      { yFrac: 0.30, amp: 3.8, freq: 0.11, speed: 0.18,  alpha: 0.90, lw: 1.3 },
-      { yFrac: 0.55, amp: 3.0, freq: 0.09, speed: -0.14, alpha: 0.55, lw: 0.9 },
-      { yFrac: 0.78, amp: 2.2, freq: 0.13, speed: 0.26,  alpha: 0.30, lw: 0.6 },
+      { yFrac: 0.30, amp: 3.8, freq: 0.11, speed: 0.18  * speedMult, alpha: 0.90, lw: 1.3 },
+      { yFrac: 0.55, amp: 3.0, freq: 0.09, speed: -0.14 * speedMult, alpha: 0.55, lw: 0.9 },
+      { yFrac: 0.78, amp: 2.2, freq: 0.13, speed: 0.26  * speedMult, alpha: 0.30, lw: 0.6 },
     ]
 
     let t = 0
@@ -215,7 +216,7 @@ export default function Navbar({ ready = true, isSubPage = false }) {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
-            {mobileOpen ? <X size={20} /> : <NavWave scrolled={scrolled} />}
+            {mobileOpen ? <X size={20} /> : <NavWave scrolled={scrolled} slow />}
           </button>
         </div>
 
