@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { SpeedInsights } from '@vercel/speed-insights/react'
 import { Analytics } from '@vercel/analytics/react'
@@ -14,10 +14,11 @@ import UserJourneyDarkHorizontal from './components/UserJourneyDarkHorizontal'
 import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import About from './pages/About'
-import Services from './pages/Services'
-import ROICalculator from './pages/ROICalculator'
-import Process from './pages/Process'
+
+const About = lazy(() => import('./pages/About'))
+const Services = lazy(() => import('./pages/Services'))
+const ROICalculator = lazy(() => import('./pages/ROICalculator'))
+const Process = lazy(() => import('./pages/Process'))
 
 function HomePage() {
   const [loaderDone, setLoaderDone] = useState(false)
@@ -45,10 +46,10 @@ export default function App() {
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/roi" element={<ROICalculator />} />
-        <Route path="/process" element={<Process />} />
+        <Route path="/about" element={<Suspense fallback={null}><About /></Suspense>} />
+        <Route path="/services" element={<Suspense fallback={null}><Services /></Suspense>} />
+        <Route path="/roi" element={<Suspense fallback={null}><ROICalculator /></Suspense>} />
+        <Route path="/process" element={<Suspense fallback={null}><Process /></Suspense>} />
       </Routes>
       <SpeedInsights />
       <Analytics />

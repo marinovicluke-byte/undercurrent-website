@@ -25,31 +25,31 @@ export default function Loader({ onComplete }) {
       // Wordmark fades in
       .to(wordmarkRef.current, {
         opacity: 1,
-        duration: 0.45,
+        duration: 0.25,
         ease: 'power2.out',
       })
       // Sublabel fades in alongside wordmark tail
       .to(sublabelRef.current, {
         opacity: 1,
-        duration: 0.3,
+        duration: 0.2,
         ease: 'power2.out',
       }, '-=0.1')
       // Progress track appears
       .to(progressTrackRef.current, {
         opacity: 1,
-        duration: 0.2,
+        duration: 0.15,
         ease: 'power2.out',
-      }, '-=0.2')
+      }, '-=0.15')
       // Progress bar fills left to right
       .to(progressBarRef.current, {
         scaleX: 1,
-        duration: 0.7,
+        duration: 0.4,
         ease: 'power2.inOut',
       }, '<')
       // Entire loader fades out
       .to(containerRef.current, {
         opacity: 0,
-        duration: 0.35,
+        duration: 0.2,
         ease: 'power2.inOut',
       })
       // Remove from layout
