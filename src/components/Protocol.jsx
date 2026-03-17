@@ -305,24 +305,24 @@ const STEPS = [
     num: '01',
     word: 'Map',
     color: '#8FAF9F',
-    tagline: 'Understand before we touch anything.',
-    body: 'We audit your business in 30 minutes. Every repeated task, every bottleneck — ranked by time saved. You see exactly where hours are leaking.',
+    tagline: 'We find where your time is going.',
+    body: 'In a 30-minute call, we go through everything you and your team do repeatedly. We rank it by time saved and show you exactly what can be automated — and what the impact would be.',
     visual: <MapVisual />,
   },
   {
     num: '02',
     word: 'Build',
     color: '#D4C9B0',
-    tagline: 'Precision engineering, zero disruption.',
-    body: 'We build custom automations that plug directly into your existing tools. No new software to learn. No processes ripped up. Just the slow parts, gone.',
+    tagline: "We set it up. You don't lift a finger.",
+    body: 'We connect automations directly into the tools you already use. No new software to learn, nothing to change about how you work. We just remove the slow, repetitive parts.',
     visual: <BuildVisual />,
   },
   {
     num: '03',
     word: 'Flow',
     color: '#6B7C4A',
-    tagline: 'Set in motion. Stays in motion.',
-    body: "Your systems run 24/7. You get time back. We stay on call to tune and scale as you grow — so the work keeps moving even when you're not.",
+    tagline: "It runs. You don't have to.",
+    body: "Your systems work around the clock — following up leads, looking after clients, keeping your inbox clear. You get your time back, and it stays that way as your business grows.",
     visual: <FlowVisual />,
   },
 ]
@@ -334,11 +334,11 @@ function StepCard({ step, index }) {
   useEffect(() => {
     const tween = gsap.fromTo(
       cardRef.current,
-      { y: 40, opacity: 0 },
+      { y: 20, opacity: 0 },
       {
-        y: 0, opacity: 1, duration: 0.75, ease: 'power3.out',
-        delay: index * 0.12,
-        scrollTrigger: { trigger: cardRef.current, start: 'top 82%', toggleActions: 'play none none none' },
+        y: 0, opacity: 1, duration: 0.4, ease: 'power3.out',
+        delay: index * 0.07,
+        scrollTrigger: { trigger: cardRef.current, start: 'top 95%', toggleActions: 'play none none none' },
       }
     )
     return () => tween.scrollTrigger?.kill()
@@ -458,18 +458,18 @@ export default function Protocol() {
     const ctx = gsap.context(() => {
       gsap.fromTo('.proto-eyebrow',
         { y: 14, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.75, ease: 'power3.out',
-          scrollTrigger: { trigger: heroRef.current, start: 'top 80%' } }
+        { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out',
+          scrollTrigger: { trigger: heroRef.current, start: 'top 95%' } }
       )
       gsap.fromTo('.proto-h2',
-        { y: 28, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: 'power3.out', delay: 0.15,
-          scrollTrigger: { trigger: heroRef.current, start: 'top 80%' } }
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.45, ease: 'power3.out', delay: 0.08,
+          scrollTrigger: { trigger: heroRef.current, start: 'top 95%' } }
       )
       gsap.fromTo('.proto-sub',
-        { y: 18, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 0.3,
-          scrollTrigger: { trigger: heroRef.current, start: 'top 80%' } }
+        { y: 15, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out', delay: 0.15,
+          scrollTrigger: { trigger: heroRef.current, start: 'top 95%' } }
       )
     }, heroRef)
     return () => ctx.revert()
@@ -535,7 +535,7 @@ export default function Protocol() {
                 color: 'rgba(247,243,237,0.42)',
                 lineHeight: 1.65, fontWeight: 300, marginBottom: 16,
               }}>
-                Three steps. One clean handoff.<br />Runs without you.
+                Three steps. Then it runs itself.
               </p>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 {STEPS.map((s) => (

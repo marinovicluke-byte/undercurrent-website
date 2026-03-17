@@ -234,7 +234,7 @@ export default function Hero({ ready = true }) {
               lineHeight: 1.0,
             }}
           >
-            Less work.
+            Less Work,
           </span>
           <span
             className="block font-cormorant"
@@ -248,7 +248,7 @@ export default function Hero({ ready = true }) {
               marginTop: '0.08em',
             }}
           >
-            More growth.
+            More Growth.
           </span>
         </h1>
 
@@ -266,7 +266,7 @@ export default function Hero({ ready = true }) {
             opacity: 0,
           }}
         >
-          We build systems that run your business while you sleep.<br />
+          We automate the busywork so your business grows faster.<br />
           You focus on the work you love.<br />
           We handle the rest.
         </p>

@@ -36,7 +36,7 @@ export default function Footer() {
               </p>
             </div>
             <p className="font-dm" style={{ fontWeight: 300, fontSize: '0.875rem', color: '#D4C9B060', lineHeight: 1.7 }}>
-              We design the undercurrent that drives your business forward.
+              Intelligent automation for small business owners who want their time back.
             </p>
           </div>
 

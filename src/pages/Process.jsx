@@ -376,24 +376,24 @@ const STEPS = [
     num: '01',
     word: 'Map',
     color: '#8FAF9F',
-    tagline: 'Understand before we touch anything.',
-    body: 'We audit your business in 30 minutes. Every repeated task, every bottleneck — ranked by time saved. You see exactly where hours are leaking.',
+    tagline: 'We find where your time is going.',
+    body: 'In a 30-minute call, we go through everything you and your team do repeatedly. We rank it by time saved and show you exactly what can be automated — and what the impact would be.',
     visual: <MapVisual />,
   },
   {
     num: '02',
     word: 'Build',
     color: '#D4C9B0',
-    tagline: 'Precision engineering, zero disruption.',
-    body: 'We build custom automations that plug directly into your existing tools. No new software to learn. No processes ripped up. Just the slow parts, gone.',
+    tagline: "We set it up. You don't lift a finger.",
+    body: 'We connect automations directly into the tools you already use. No new software to learn, nothing to change about how you work. We just remove the slow, repetitive parts.',
     visual: <BuildVisual />,
   },
   {
     num: '03',
     word: 'Flow',
     color: '#6B7C4A',
-    tagline: 'Set in motion. Stays in motion.',
-    body: 'Your systems run 24/7. You get time back. We stay on call to tune and scale as you grow — so the work keeps moving even when you\'re not.',
+    tagline: "It runs. You don't have to.",
+    body: "Your systems work around the clock — following up leads, looking after clients, keeping your inbox clear. You get your time back, and it stays that way as your business grows.",
     visual: <FlowVisual />,
   },
 ]
@@ -418,10 +418,10 @@ function StepPanel({ step, index }) {
       gsap.set(content, { opacity: 0 })
       gsap.set(ghost, { opacity: 0 })
       const tl = gsap.timeline({
-        scrollTrigger: { trigger: panel, start: 'top 80%', toggleActions: 'play none none none' }
+        scrollTrigger: { trigger: panel, start: 'top 95%', toggleActions: 'play none none none' }
       })
-      tl.to(content, { opacity: 1, duration: 0.6, ease: 'power2.out' })
-        .to(ghost, { opacity: 1, duration: 0.6, ease: 'power2.out' }, '-=0.3')
+      tl.to(content, { opacity: 1, duration: 0.4, ease: 'power2.out' })
+        .to(ghost, { opacity: 1, duration: 0.4, ease: 'power2.out' }, '-=0.2')
       return () => tl.scrollTrigger?.kill()
     }
 
@@ -435,17 +435,17 @@ function StepPanel({ step, index }) {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: panel,
-        start: 'top 72%',
+        start: 'top 88%',
         toggleActions: 'play none none none',
       }
     })
 
-    tl.to(ghost, { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out' })
+    tl.to(ghost, { opacity: 1, x: 0, duration: 0.6, ease: 'power3.out' })
       .to(content, {
         clipPath: 'inset(0 0% 0 0)',
-        duration: 0.85,
+        duration: 0.6,
         ease: 'power4.inOut',
-      }, '-=0.5')
+      }, '-=0.4')
       .to(numRef.current, { opacity: 1, duration: 0.5, ease: 'power2.out' }, '-=0.3')
       .to(tagRef.current, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.3')
       .to(bodyRef.current, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, '-=0.4')
@@ -640,8 +640,8 @@ export default function Process() {
       scrollTrigger: { trigger: ctaRef.current, start: 'top 85%' }
     })
     ctaTl.fromTo(ctaRef.current,
-      { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out' }
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.45, ease: 'power3.out' }
     )
 
     return () => { ctx.revert(); ctaTl.scrollTrigger?.kill() }
@@ -714,7 +714,7 @@ export default function Process() {
               color: 'rgba(247,243,237,0.45)',
               maxWidth: 340, lineHeight: 1.6, fontWeight: 300,
             }}>
-              Three steps. Clean handoff. Runs without you.
+              Three steps. Then it runs itself.
             </p>
             {/* Step index pills */}
             <div style={{ display: 'flex', gap: 8, marginTop: 20 }}>
@@ -796,7 +796,7 @@ export default function Process() {
             fontWeight: 300, lineHeight: 1.6,
             maxWidth: 320,
           }}>
-            A 30-minute call. No pitch deck. Just your workflows and where they're leaking time.
+            A 30-minute call. No pitch deck. Just a clear look at where your time is going — and what it would look like to get it back.
           </p>
           <a
             href="https://cal.com/luke-marinovic-aqeosc/30min"

@@ -798,15 +798,15 @@ export default function WhatWeAutomate() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         headingRef.current,
-        { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out',
-          scrollTrigger: { trigger: headingRef.current, start: 'top 82%' } }
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.45, ease: 'power3.out',
+          scrollTrigger: { trigger: headingRef.current, start: 'top 95%' } }
       )
       gsap.fromTo(
         selectorRef.current,
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out',
-          scrollTrigger: { trigger: selectorRef.current, start: 'top 85%' } }
+        { y: 15, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out',
+          scrollTrigger: { trigger: selectorRef.current, start: 'top 95%' } }
       )
     }, sectionRef)
     return () => ctx.revert()

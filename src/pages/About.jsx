@@ -113,7 +113,7 @@ function Counter({ target, suffix = '', duration = 1800 }) {
         }
         requestAnimationFrame(update)
       }
-    }, { threshold: 0.5 })
+    }, { threshold: 0.1, rootMargin: '0px 0px 100px 0px' })
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [target, duration])
@@ -130,12 +130,12 @@ function Reveal({ children, delay = 0, className = '', style = {} }) {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         gsap.fromTo(el,
-          { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out', delay }
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.45, ease: 'power3.out', delay }
         )
         observer.disconnect()
       }
-    }, { threshold: 0.1 })
+    }, { threshold: 0, rootMargin: '0px 0px 150px 0px' })
     observer.observe(el)
     return () => observer.disconnect()
   }, [delay])
@@ -185,7 +185,7 @@ function StoryTypewriter() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting && !started) setStarted(true) },
-      { threshold: 0.6 }
+      { threshold: 0.1 }
     )
     if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
@@ -323,7 +323,7 @@ export default function About() {
             </span>
           </h1>
           <p ref={subRef} className="font-dm" style={{ fontSize: 'clamp(1rem, 1.5vw, 1.15rem)', fontWeight: 300, color: 'rgba(232,224,208,0.65)', lineHeight: 1.7, maxWidth: '44ch', marginTop: '2rem', opacity: 0 }}>
-            From Melbourne, Under Current works with small business owners to spot where time slips away and build systems that keep things moving.
+            UnderCurrent is a Melbourne-based automation studio. We work with small business owners who are good at what they do — and tired of everything else that comes with it.
           </p>
         </div>
         <div id="hero-sentinel" style={{ position: 'absolute', bottom: 0, left: 0, height: '1px', width: '100%' }} />
@@ -364,16 +364,10 @@ export default function About() {
               </h2>
               <div className="space-y-5" style={{ borderTop: '1px solid rgba(212,201,176,0.5)', paddingTop: '2rem' }}>
                 <p className="font-dm" style={{ fontSize: '1.05rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(28,28,26,0.7)' }}>
-                  Big companies have teams to keep things running. Admin. Ops. Content. Outreach.
+                  Big companies have entire teams for admin, ops, content, and outreach. Small businesses don't. But that shouldn't mean doing it all yourself.
                 </p>
                 <p className="font-dm" style={{ fontSize: '1.05rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(28,28,26,0.7)' }}>
-                  Small teams do not. But you should not need to.
-                </p>
-                <p className="font-dm" style={{ fontSize: '1.05rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(28,28,26,0.7)' }}>
-                  We build the digital help your business needs. Systems that run in the background while you focus on the front.
-                </p>
-                <p className="font-dm" style={{ fontSize: '1.05rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(28,28,26,0.7)' }}>
-                  We build it. We maintain it. We keep it flowing as your business grows.
+                  We build the systems that run in the background — so you can stay focused on the front.
                 </p>
               </div>
             </Reveal>
@@ -404,20 +398,17 @@ export default function About() {
                 FOUNDER · LUKE — MELBOURNE
               </p>
               <h2 className="font-cormorant" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.5rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-0.02em', color: '#F7F3ED', marginBottom: '2rem' }}>
-                I started Under Current because I was tired of watching good businesses drown in admin.
+                UnderCurrent is the studio I wished I had in every job before this.
               </h2>
               <div className="space-y-5">
                 <p className="font-dm" style={{ fontSize: '1rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(247,243,237,0.6)' }}>
-                  I spent years inside small business and corporate teams. I saw smart people lose most of their day to admin and busy work that did not need a person at all.
+                  I spent years inside small business and corporate teams — finance, sales, operations. In every environment, I watched the same thing happen: smart, capable people losing most of their day to tasks that didn't need a person. Chasing emails. Updating records. Following up manually. Work that was eating the best hours of people who should have been doing something else entirely.
                 </p>
                 <p className="font-dm" style={{ fontSize: '1rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(247,243,237,0.6)' }}>
-                  My work in finance. In sales. In my own small business. It all showed me the same thing. Owners were buried in tasks that could be run by simple automated systems for small business.
+                  I built UnderCurrent to fix that. Not with generic software. Not with templates. With systems that are actually designed around how your business works — and then handed over to run without you.
                 </p>
                 <p className="font-dm" style={{ fontSize: '1rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(247,243,237,0.6)' }}>
-                  Now I help you find that work and hand it to business automation and workflow tools. Emails that can write themselves. Leads that can sort themselves. Customers who get the right message at the right time without you watching the screen.
-                </p>
-                <p className="font-dm" style={{ fontSize: '1rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(247,243,237,0.6)' }}>
-                  Under Current is the studio I wished I had in every job before this. I build the quiet current under your business. It runs all day. It runs all night. So you can live your life and still have things move.
+                  The undercurrent is what moves everything forward. It runs all day, all night — and you barely notice it's there.
                 </p>
               </div>
               <div className="flex gap-4 mt-10">
@@ -584,7 +575,7 @@ export default function About() {
                 Ready to build your undercurrent?
               </h2>
               <p className="font-dm" style={{ fontWeight: 300, fontSize: '1.05rem', lineHeight: 1.75, color: 'rgba(28,28,26,0.6)', marginBottom: '2.5rem', maxWidth: '480px' }}>
-                Book a 30-minute discovery call. We'll map your biggest time drains and show you exactly what can be automated — no jargon, no commitment.
+                Book a 30-minute call. We'll map your biggest time drains and show you exactly what can be automated.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="https://cal.com/luke-marinovic-aqeosc/30min" target="_blank" rel="noopener noreferrer" className="btn-sage" style={{ fontSize: '0.95rem', padding: '0.875rem 2.5rem' }}>

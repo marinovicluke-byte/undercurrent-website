@@ -101,12 +101,12 @@ function Reveal({ children, delay = 0, className = '', style = {} }) {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         gsap.fromTo(el,
-          { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out', delay }
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.45, ease: 'power3.out', delay }
         )
         observer.disconnect()
       }
-    }, { threshold: 0.1 })
+    }, { threshold: 0, rootMargin: '0px 0px 150px 0px' })
     observer.observe(el)
     return () => observer.disconnect()
   }, [delay])

@@ -18,12 +18,12 @@ function Reveal({ children, delay = 0, className = '', style = {} }) {
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
         gsap.fromTo(el,
-          { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out', delay }
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.45, ease: 'power3.out', delay }
         )
         observer.disconnect()
       }
-    }, { threshold: 0.1 })
+    }, { threshold: 0, rootMargin: '0px 0px 150px 0px' })
     observer.observe(el)
     return () => observer.disconnect()
   }, [delay])
@@ -212,9 +212,9 @@ const services = [
     label: 'CUSTOMER EXPERIENCE',
     headline: 'Every customer feels like your only one.',
     subhead: 'From the moment they sign to the day they refer their friends — the full journey, automated.',
-    description: `Customer experience is the entire arc of a client relationship — and it starts the second they say yes. Onboarding sets the tone. Consistent follow-up builds trust. Timely check-ins prevent churn. Reviews and referrals come naturally when the journey feels effortless.
+    description: `Without a system, everything relies on someone remembering. Clients fall through the gaps. Reviews never get asked for. And referrals — the best leads you'll ever get — just don't happen.
 
-    We build automated systems that handle the full lifecycle: welcome sequences, setup checklists, intake forms, milestone celebrations, satisfaction surveys, review requests, and referral programs. Every touchpoint lands at the right time, on the right channel — without your team manually firing each one.`,
+    We build the system that handles all of it — welcome emails, check-ins, surveys, review requests, referral triggers — so every client gets the same great experience, every time.`,
     accentColor: '#8FAF9F',
     bgDark: 'rgba(143,175,159,0.06)',
     metric: { value: '68%', label: 'reduction in early churn' },
@@ -249,10 +249,8 @@ const services = [
     index: '02',
     label: 'SALES',
     headline: 'More pipeline. Same headcount.',
-    subhead: 'Outreach, qualification, follow-up, nurture. The entire sales process is automatable — most businesses just haven\'t done it yet.',
-    description: `Sales is where most automation has the clearest ROI. Every hour your team spends manually researching prospects, writing first-contact emails, or chasing non-replies is an hour not spent closing.
-
-    We build end-to-end sales automation: lead sourcing, enrichment, personalised outreach, follow-up sequences, qualification workflows, and pipeline management. All of it running in the background — so when a prospect replies, they're already warmed up and your team just has to close.`,
+    subhead: 'Every hour spent manually researching prospects, writing first emails, or chasing non-replies is an hour not spent closing. We automate the whole process — so your team only steps in when someone\'s ready to talk.',
+    description: `Lead sourcing, personalised outreach, follow-up sequences, qualification, pipeline management. All running in the background.`,
     accentColor: '#6B7C4A',
     bgDark: 'rgba(107,124,74,0.06)',
     metric: { value: '3×', label: 'more pipeline, same team' },
@@ -285,10 +283,10 @@ const services = [
     index: '03',
     label: 'CONTENT DESIGN',
     headline: 'Publish more. Write less.',
-    subhead: 'Content is your compounding asset — but only if you actually publish consistently. We make that the easy part.',
+    subhead: 'A month of content used to take 10 hours a week. Now it takes 1 hour — you show up, give direction, and the system handles the rest.',
     description: `Most businesses know they should be publishing content. Most businesses don't, because the process of creating, formatting, reviewing, and distributing is too slow and too manual to sustain.
 
-    We build content automation pipelines that take you from brief (or no brief) to published — across every channel you use. Blog posts drafted from transcripts. Social content repurposed from long-form. Newsletters assembled from existing content. All reviewed, all formatted, all distributed. You show up to give feedback. The system handles everything else.`,
+    We build content pipelines that go from a voice note or rough brief all the way to published — blog posts, social content, newsletters, all formatted and distributed across every channel you use.`,
     accentColor: '#8FAF9F',
     bgDark: 'rgba(143,175,159,0.06)',
     metric: { value: '10×', label: 'output, same creative effort' },
@@ -318,7 +316,7 @@ const services = [
     label: 'PERSONAL SYSTEM',
     headline: 'Your inbox, handled. Your calendar, owned.',
     subhead: 'You didn\'t start a business to spend your days in email. We give you your time back.',
-    description: `The average business owner loses 3–4 hours a day to email, scheduling, and admin. That's 800+ hours a year not building, not selling, not thinking. AI-powered personal assistance changes that — not by giving you another tool to manage, but by handling the management for you.
+    description: `The average business owner loses 3–4 hours a day to email, scheduling, and admin. That's 800+ hours a year not building, not selling, not thinking. We build systems that handle it — so you only touch what actually needs you.
 
     We build custom AI assistant workflows that draft replies, summarise threads, book meetings, manage follow-ups, brief you before calls, and keep your calendar clean. Connected to your actual inbox, your actual calendar, your actual tools.`,
     accentColor: '#8FAF9F',
@@ -340,7 +338,7 @@ const services = [
       '> Booking: discovery call — Wed 10am confirmed.',
       '> Pre-meeting brief generated for Thursday.',
       '> No-meeting block applied: Friday afternoon.',
-      '> Inbox: 0 items requiring action.',
+      '> Inbox: 3 items flagged for your review.',
     ],
     faqs: [
       { q: 'Is this an AI agent with access to my inbox?', a: 'Yes. We set up a secure OAuth connection to your Gmail or Outlook. The AI reads, drafts, and flags — but never sends without your review (unless you explicitly configure it to). Full audit trail maintained.' },
@@ -352,9 +350,9 @@ const services = [
     id: 'finance',
     index: '05',
     label: 'FINANCE',
-    headline: 'Your finances, tracked. Your admin, gone.',
-    subhead: 'Invoice chasing, expense tracking, financial research — the back-office work that eats hours every week. Automated.',
-    description: `Finance admin is one of the most consistent time drains in any small business. Invoices go out late. Expenses pile up unreconciled. Cash flow visibility is murky. And every hour spent chasing payments or compiling reports is an hour not spent growing.
+    headline: 'Stop chasing invoices. Stop drowning in receipts.',
+    subhead: 'The admin is never going away — but it should stop being your problem.',
+    description: `Every hour spent chasing a late payment or reconciling expenses is an hour not spent growing your business. We automate the full finance back-office so your books stay clean without you touching them.
 
     We build financial automation systems that handle invoice creation and follow-up, expense categorisation, cash flow reporting, and vendor research — so your books stay clean and your attention stays where it belongs.`,
     accentColor: '#A89F7A',
@@ -1051,18 +1049,18 @@ export default function Services() {
 
         <div className="relative max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-center" style={{ minHeight: '80dvh', paddingTop: '8rem', paddingBottom: '5rem' }}>
           <p className="font-mono mb-5" style={{ fontSize: '0.7rem', letterSpacing: '0.2em', color: 'rgba(143,175,159,0.7)' }}>
-            WHAT WE BUILD
+            WHERE IS YOUR TIME GOING?
           </p>
           <h1 ref={headlineRef} style={{ opacity: 0 }}>
             <span className="block font-dm" style={{ fontSize: 'clamp(3rem, 7vw, 7.5rem)', fontWeight: 700, letterSpacing: '-0.03em', color: '#F7F3ED', lineHeight: 1.0 }}>
-              Five systems.
+              Five areas.
             </span>
             <span className="block font-cormorant" style={{ fontSize: 'clamp(3rem, 7vw, 7.5rem)', fontWeight: 300, fontStyle: 'italic', letterSpacing: '-0.02em', color: 'rgba(143,175,159,0.9)', lineHeight: 1.05 }}>
-              Infinite leverage.
+              Every one a leak.
             </span>
           </h1>
           <p ref={subRef} className="font-dm" style={{ fontSize: 'clamp(1rem, 1.5vw, 1.15rem)', fontWeight: 300, color: 'rgba(232,224,208,0.6)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '2rem', opacity: 0 }}>
-            We go deep in five operational areas — the ones where small businesses consistently lose the most time, money, and momentum. Each one is a complete system, built to run without you.
+            Most small business owners lose 15–25 hours a week to work that a well-built system could handle entirely. We've mapped where it happens — and built the solution for each one.
           </p>
 
           {/* Service selector cards */}

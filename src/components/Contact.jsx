@@ -12,10 +12,10 @@ export default function Contact() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(contentRef.current,
-        { y: 40, opacity: 0 },
+        { y: 20, opacity: 0 },
         {
-          y: 0, opacity: 1, duration: 1, ease: 'power3.out',
-          scrollTrigger: { trigger: sectionRef.current, start: 'top 70%' }
+          y: 0, opacity: 1, duration: 0.5, ease: 'power3.out',
+          scrollTrigger: { trigger: sectionRef.current, start: 'top 95%' }
         }
       )
     }, sectionRef)
@@ -33,16 +33,16 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto">
         <div ref={contentRef} className="max-w-2xl">
           <p className="font-dm text-charcoal/40 mb-3" style={{ fontSize: '0.75rem', letterSpacing: '0.18em', fontWeight: 500 }}>
-            GET STARTED
+            READY TO START
           </p>
           <h2
             className="font-cormorant italic text-charcoal mb-6"
             style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 400, lineHeight: 1.1, letterSpacing: '-0.02em' }}
           >
-            Ready to run on autopilot?
+            What would you do with 10 hours back every week?
           </h2>
           <p className="font-dm text-charcoal/60 mb-10" style={{ fontWeight: 300, fontSize: '1.05rem', lineHeight: 1.75, maxWidth: '480px' }}>
-            Book a 30-minute discovery call. We'll map your biggest time drains and show you exactly what can be automated — no jargon, no commitment.
+            Book a free 30-minute call. We'll show you exactly where your time is going and what it would look like to get it back. No obligation — just a clear picture.
           </p>
           <a
             href="https://cal.com/luke-marinovic-aqeosc/30min"
@@ -52,7 +52,7 @@ export default function Contact() {
             style={{ fontSize: '0.95rem', padding: '0.875rem 2.5rem' }}
           >
             <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              Book a Discovery Call
+              Book Your Free Workflow Review
               <ArrowRight size={16} />
             </span>
           </a>

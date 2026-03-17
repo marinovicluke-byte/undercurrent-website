@@ -8,21 +8,21 @@ gsap.registerPlugin(ScrollTrigger)
 const steps = [
   {
     number: '01',
-    phase: 'Discovery Call',
-    headline: 'We map your operation.',
-    body: 'Most owners know they\'re wasting time but can\'t see where. In one focused call, we lay it all out so you finally see what\'s holding you back.',
-    detail: 'Free. No obligation. Just clarity.',
+    phase: 'Project Fee',
+    headline: 'Tailored to your scope.',
+    body: 'A one-time cost to map, build, and deploy your automations — scoped to the specific areas we\'re solving for you. Priced on the value it creates, not an hourly rate.',
+    detail: 'Scoped to what you actually need.',
     accent: '#8FAF9F',
-    tag: 'START HERE',
+    tag: 'PROJECT FEE',
   },
   {
     number: '02',
-    phase: 'Value-Based Pricing',
-    headline: 'Only pay when it works.',
-    body: 'If we cut 10 hours from your week, or $100k from your overhead, you keep the gain and pay a fraction of it back. Fair, simple, and clear.',
-    detail: 'Direct partnership. Aligned incentives.',
+    phase: 'Monthly Subscription',
+    headline: 'Stays running as you grow.',
+    body: 'Ongoing access, maintenance, and improvements as your business grows. Your systems stay up to date, and we\'re on call when anything needs adjusting.',
+    detail: 'Maintenance, updates, and support included.',
     accent: '#D4C9B0',
-    tag: 'HOW IT WORKS',
+    tag: 'MONTHLY SUBSCRIPTION',
   },
 ]
 
@@ -49,7 +49,7 @@ export default function Pricing() {
           duration: 1,
           ease: 'power4.out',
           stagger: 0.07,
-          scrollTrigger: { trigger: headingRef.current, start: 'top 80%' },
+          scrollTrigger: { trigger: headingRef.current, start: 'top 95%' },
         }
       )
 
@@ -60,10 +60,10 @@ export default function Pricing() {
         {
           y: 0,
           opacity: 1,
-          duration: 0.9,
+          duration: 0.45,
           ease: 'power3.out',
-          delay: 0.3,
-          scrollTrigger: { trigger: headingRef.current, start: 'top 75%' },
+          delay: 0.1,
+          scrollTrigger: { trigger: headingRef.current, start: 'top 95%' },
         }
       )
 
@@ -73,38 +73,38 @@ export default function Pricing() {
         { scaleX: 0 },
         {
           scaleX: 1,
-          duration: 1.2,
+          duration: 0.7,
           ease: 'power3.inOut',
-          scrollTrigger: { trigger: cardsRef.current, start: 'top 75%' },
+          scrollTrigger: { trigger: cardsRef.current, start: 'top 95%' },
         }
       )
 
       // Cards stagger
       gsap.fromTo(
         cardsRef.current.querySelectorAll('.step-card'),
-        { y: 60, opacity: 0, scale: 0.96 },
+        { y: 30, opacity: 0, scale: 0.98 },
         {
           y: 0,
           opacity: 1,
           scale: 1,
-          duration: 0.9,
+          duration: 0.45,
           ease: 'power3.out',
-          stagger: 0.18,
-          scrollTrigger: { trigger: cardsRef.current, start: 'top 75%' },
+          stagger: 0.1,
+          scrollTrigger: { trigger: cardsRef.current, start: 'top 95%' },
         }
       )
 
       // Divider + CTA
       gsap.fromTo(
         [dividerRef.current, ctaRef.current],
-        { y: 30, opacity: 0 },
+        { y: 20, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 0.8,
+          duration: 0.4,
           ease: 'power3.out',
-          stagger: 0.15,
-          scrollTrigger: { trigger: dividerRef.current, start: 'top 85%' },
+          stagger: 0.08,
+          scrollTrigger: { trigger: dividerRef.current, start: 'top 95%' },
         }
       )
     }, sectionRef)
@@ -112,7 +112,7 @@ export default function Pricing() {
     return () => ctx.revert()
   }, [])
 
-  const headlineWords = ['Pricing', 'built', 'around', 'your', 'results.']
+  const headlineWords = ['Priced', 'around', 'your', 'business.', 'Not', 'a', 'package.']
 
   return (
     <section
@@ -153,7 +153,7 @@ export default function Pricing() {
           className="font-dm mb-4"
           style={{ fontSize: '0.75rem', letterSpacing: '0.18em', fontWeight: 500, color: '#6B7C4A' }}
         >
-          INVESTMENT
+          PRICING
         </p>
 
         {/* Headline */}
@@ -176,8 +176,8 @@ export default function Pricing() {
                   display: 'inline-block',
                   marginRight: i < headlineWords.length - 1 ? '0.3em' : 0,
                   opacity: 0,
-                  color: word === 'results.' ? '#8FAF9F' : '#F7F3ED',
-                  fontStyle: word === 'results.' ? 'italic' : 'normal',
+                  color: word === 'package.' ? '#8FAF9F' : '#F7F3ED',
+                  fontStyle: word === 'package.' ? 'italic' : 'normal',
                 }}
               >
                 {word}
@@ -199,7 +199,7 @@ export default function Pricing() {
             opacity: 0,
           }}
         >
-          No fixed packages. We structure every engagement around the value we create for your business — nothing more, nothing less.
+          Every engagement is scoped to what your business actually needs — so you're not paying for things that don't apply to you. We build your system, then stay on to keep it running.
         </p>
 
         {/* Connector bar between cards */}
@@ -328,7 +328,7 @@ export default function Pricing() {
                           className="font-dm"
                           style={{ fontSize: '0.75rem', fontWeight: 500, color: '#8FAF9F', letterSpacing: '0.1em' }}
                         >
-                          FREE
+                          ONE-TIME
                         </span>
                       </div>
                     )}
@@ -431,13 +431,13 @@ export default function Pricing() {
                   letterSpacing: '-0.01em',
                 }}
               >
-                "You win, we win — that's the only model we believe in."
+                "See what's possible — book a free call."
               </p>
               <p
                 className="font-dm mt-3"
                 style={{ fontWeight: 300, fontSize: '0.875rem', color: '#D4C9B040', letterSpacing: '0.03em' }}
               >
-                Undercurrent charges a fraction of what we save you — every time.
+                One build. Ongoing support. No lock-in.
               </p>
             </div>
 
@@ -456,7 +456,7 @@ export default function Pricing() {
                 }}
               >
                 <span style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                  Book discovery call
+                  Book a free call
                   <ArrowRight size={14} />
                 </span>
               </a>

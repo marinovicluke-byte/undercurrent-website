@@ -581,23 +581,23 @@ export default function UserJourneyDarkHorizontal() {
     const ctx = gsap.context(() => {
       gsap.fromTo('.ujdh-eyebrow',
         { y: 14, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.75, ease: 'power3.out',
-          scrollTrigger: { trigger: headingRef.current, start: 'top 82%' } }
+        { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out',
+          scrollTrigger: { trigger: headingRef.current, start: 'top 95%' } }
       )
       gsap.fromTo('.ujdh-h2',
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, ease: 'power3.out', delay: 0.15,
-          scrollTrigger: { trigger: headingRef.current, start: 'top 82%' } }
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.45, ease: 'power3.out', delay: 0.08,
+          scrollTrigger: { trigger: headingRef.current, start: 'top 95%' } }
       )
       gsap.fromTo('.ujdh-sub',
-        { y: 18, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', delay: 0.3,
-          scrollTrigger: { trigger: headingRef.current, start: 'top 82%' } }
+        { y: 15, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out', delay: 0.15,
+          scrollTrigger: { trigger: headingRef.current, start: 'top 95%' } }
       )
       gsap.fromTo('.ujdh-card',
-        { y: 48, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1.1, ease: 'power3.out', delay: 0.45,
-          scrollTrigger: { trigger: headingRef.current, start: 'top 82%' } }
+        { y: 25, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.45, ease: 'power3.out', delay: 0.2,
+          scrollTrigger: { trigger: headingRef.current, start: 'top 95%' } }
       )
     }, sectionRef)
     return () => ctx.revert()
@@ -703,8 +703,8 @@ export default function UserJourneyDarkHorizontal() {
               letterSpacing: '-0.025em',
               opacity: 0,
             }}>
-              One person.<br />
-              <span style={{ color: '#8FAF9F', display: 'block', marginTop: '0.25em' }}>A full operation.</span>
+              Save Hours. Cut Costs.<br />
+              <span style={{ color: '#8FAF9F', display: 'block', marginTop: '0.25em' }}>Grow Faster.</span>
             </h2>
             <div className="ujdh-sub" style={{ opacity: 0, maxWidth: isMobile ? '100%' : '280px', paddingBottom: '0.4rem' }}>
               <p style={{
@@ -714,7 +714,7 @@ export default function UserJourneyDarkHorizontal() {
                 lineHeight: 1.65,
                 fontWeight: 300,
               }}>
-                What a day looks like when you're a tradie, service provider, or sole operator with AI working beside you.
+                Real results from AI that automates quoting, scheduling, and admin — so your business runs smarter every day.
               </p>
             </div>
           </div>

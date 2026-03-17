@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: 'Do we own the system or is this a subscription?',
-    a: 'You own it. We build custom systems that live in your accounts and tools. There\'s no ongoing platform fee just to keep running — the automation is yours after we hand it over.',
+    a: 'Both. The automations we build are yours — they live in your tools and accounts. The monthly subscription keeps them maintained, improved, and running as your business changes.',
   },
   {
     q: 'Can we customise the rules and workflows for our business?',
@@ -189,18 +189,18 @@ export default function FAQ() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         headingRef.current,
-        { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: headingRef.current, start: 'top 82%' } }
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.45, ease: 'power3.out', scrollTrigger: { trigger: headingRef.current, start: 'top 95%' } }
       )
       gsap.fromTo(
         leftColRef.current,
-        { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.85, ease: 'power3.out', scrollTrigger: { trigger: leftColRef.current, start: 'top 78%' } }
+        { y: 25, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out', scrollTrigger: { trigger: leftColRef.current, start: 'top 95%' } }
       )
       gsap.fromTo(
         rightColRef.current,
-        { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.85, ease: 'power3.out', delay: 0.12, scrollTrigger: { trigger: rightColRef.current, start: 'top 78%' } }
+        { y: 25, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out', delay: 0.08, scrollTrigger: { trigger: rightColRef.current, start: 'top 95%' } }
       )
     }, sectionRef)
     return () => ctx.revert()
@@ -219,10 +219,10 @@ export default function FAQ() {
             className="font-cormorant text-charcoal"
             style={{ fontSize: 'clamp(3rem, 5.5vw, 6rem)', fontWeight: 700, lineHeight: 1.0, letterSpacing: '-0.02em' }}
           >
-            Everything you<br />need to know.
+            Questions people ask<br />before getting started.
           </h2>
           <p className="font-dm text-charcoal/50 mt-4" style={{ fontSize: '1.05rem', fontWeight: 300, maxWidth: '480px', lineHeight: 1.7 }}>
-            Straightforward answers to the questions we hear most before getting started.
+            Straightforward answers to the questions we hear most.
           </p>
         </div>
 

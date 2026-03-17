@@ -135,10 +135,10 @@ function TypewriterCard() {
       </div>
 
       <h3 className="font-cormorant text-charcoal mb-2" style={{ fontSize: '2.4rem', fontWeight: 600, lineHeight: 1.1 }}>
-        Built for Your Business
+        Built Around How You Work
       </h3>
       <p className="font-dm text-charcoal/60 mb-6" style={{ fontWeight: 300, fontSize: '1.1rem', lineHeight: 1.65 }}>
-        Every workflow is custom-designed around how your business actually operates — not a generic template.
+        Every workflow is built to match how your business already runs — not a generic template you have to adapt to.
       </p>
 
       <div
@@ -196,10 +196,10 @@ function SchedulerCard() {
       </div>
 
       <h3 className="font-cormorant text-charcoal mb-2" style={{ fontSize: '2.4rem', fontWeight: 600, lineHeight: 1.1 }}>
-        Labour Replacement
+        Work You Shouldn't Be Doing
       </h3>
       <p className="font-dm text-charcoal/60 mb-6" style={{ fontWeight: 300, fontSize: '1.1rem', lineHeight: 1.65 }}>
-        We replace repetitive admin work with intelligent AI agents so your team focuses on revenue.
+        We hand the repetitive stuff to intelligent systems so you and your team can focus on work that actually moves things forward.
       </p>
 
       {/* Weekly grid */}
@@ -258,18 +258,18 @@ export default function Features() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(headingRef.current,
-        { y: 40, opacity: 0 },
+        { y: 20, opacity: 0 },
         {
-          y: 0, opacity: 1, duration: 0.9, ease: 'power3.out',
-          scrollTrigger: { trigger: headingRef.current, start: 'top 80%' }
+          y: 0, opacity: 1, duration: 0.45, ease: 'power3.out',
+          scrollTrigger: { trigger: headingRef.current, start: 'top 95%' }
         }
       )
 
       gsap.fromTo(cardsRef.current.children,
-        { y: 50, opacity: 0 },
+        { y: 25, opacity: 0 },
         {
-          y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', stagger: 0.15,
-          scrollTrigger: { trigger: cardsRef.current, start: 'top 75%' }
+          y: 0, opacity: 1, duration: 0.4, ease: 'power3.out', stagger: 0.08,
+          scrollTrigger: { trigger: cardsRef.current, start: 'top 95%' }
         }
       )
     }, sectionRef)
@@ -285,7 +285,7 @@ export default function Features() {
             WHAT WE BUILD
           </p>
           <h2 className="font-cormorant text-charcoal" style={{ fontSize: 'clamp(3.5rem, 6vw, 6.5rem)', fontWeight: 600, lineHeight: 1.0, letterSpacing: '-0.02em' }}>
-            Three systems.<br />One invisible engine.
+            The work that's eating your day — handled.
           </h2>
         </div>
 
