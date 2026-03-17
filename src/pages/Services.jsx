@@ -694,25 +694,125 @@ function ContentRotator({ items }) {
   )
 }
 
-// Individual service section
-function ServiceSection({ service, isEven }) {
-  const sectionRef = useRef(null)
+// Sticky tab strip — lives just below the hero
+function ServiceTabs({ services, activeId, onSelect }) {
+  const scrollRef = useRef(null)
+  const activeRef = useRef(null)
+
+  useEffect(() => {
+    if (activeRef.current && scrollRef.current) {
+      const container = scrollRef.current
+      const pill = activeRef.current
+      const containerRect = container.getBoundingClientRect()
+      const pillRect = pill.getBoundingClientRect()
+      const scrollLeft = container.scrollLeft + (pillRect.left - containerRect.left) - (containerRect.width / 2) + (pillRect.width / 2)
+      container.scrollTo({ left: scrollLeft, behavior: 'smooth' })
+    }
+  }, [activeId])
 
   return (
-    <section
-      ref={sectionRef}
-      id={service.id}
-      className="py-24 px-6 md:px-12 relative overflow-hidden"
-      style={{ backgroundColor: isEven ? '#F7F3ED' : '#EEEAE2', scrollMarginTop: '8rem' }}
+    <div
+      style={{
+        position: 'sticky',
+        top: 0,
+        zIndex: 150,
+        backgroundColor: 'rgba(247,243,237,0.96)',
+        backdropFilter: 'blur(20px) saturate(1.4)',
+        WebkitBackdropFilter: 'blur(20px) saturate(1.4)',
+        borderBottom: '1px solid rgba(212,201,176,0.55)',
+        boxShadow: '0 2px 20px rgba(28,28,26,0.06)',
+      }}
     >
-      {/* Large background number */}
+      <div
+        style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '0.65rem 1.5rem',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.75rem',
+        }}
+      >
+        <span
+          className="font-dm hidden sm:block flex-shrink-0"
+          style={{ fontSize: '0.68rem', letterSpacing: '0.2em', fontWeight: 500, color: 'rgba(28,28,26,0.28)', whiteSpace: 'nowrap' }}
+        >
+          SERVICES
+        </span>
+        <div
+          ref={scrollRef}
+          style={{
+            display: 'flex',
+            gap: '0.45rem',
+            overflowX: 'auto',
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+            WebkitOverflowScrolling: 'touch',
+            flex: 1,
+          }}
+        >
+          {services.map(s => {
+            const isActive = s.id === activeId
+            return (
+              <button
+                key={s.id}
+                ref={isActive ? activeRef : null}
+                onClick={() => onSelect(s.id)}
+                className="font-dm"
+                style={{
+                  flexShrink: 0,
+                  padding: '0.32rem 1rem',
+                  borderRadius: '9999px',
+                  border: `1px solid ${isActive ? s.accentColor : 'rgba(28,28,26,0.11)'}`,
+                  backgroundColor: isActive ? s.accentColor : 'transparent',
+                  color: isActive ? '#1C1C1A' : 'rgba(28,28,26,0.52)',
+                  fontSize: '0.76rem',
+                  fontWeight: isActive ? 600 : 400,
+                  letterSpacing: '0.03em',
+                  cursor: 'pointer',
+                  transition: 'all 0.22s ease',
+                  boxShadow: isActive ? `0 2px 14px ${s.accentColor}45` : 'none',
+                  whiteSpace: 'nowrap',
+                  transform: isActive ? 'scale(1.02)' : 'scale(1)',
+                }}
+              >
+                {s.index} · {s.label.charAt(0) + s.label.slice(1).toLowerCase()}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Single content panel — animates in when active service changes
+function ActiveServicePanel({ service }) {
+  const panelRef = useRef(null)
+
+  useEffect(() => {
+    if (panelRef.current) {
+      gsap.fromTo(panelRef.current,
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.42, ease: 'power3.out' }
+      )
+    }
+  }, [service.id])
+
+  return (
+    <div
+      ref={panelRef}
+      className="py-20 px-6 md:px-12 relative overflow-hidden"
+      style={{ backgroundColor: '#F7F3ED', minHeight: '80vh' }}
+    >
+      {/* Large background index number */}
       <div
         className="absolute select-none pointer-events-none"
         style={{
           fontFamily: '"Cormorant Garamond", serif',
           fontSize: 'clamp(10rem, 20vw, 22rem)',
           fontWeight: 700,
-          color: 'rgba(28,28,26,0.03)',
+          color: 'rgba(28,28,26,0.025)',
           lineHeight: 1,
           top: '-0.15em',
           right: '-0.05em',
@@ -724,7 +824,7 @@ function ServiceSection({ service, isEven }) {
 
       <div className="max-w-7xl mx-auto relative">
         {/* Header */}
-        <Reveal>
+        <div className="mb-10">
           <div className="flex items-center gap-4 mb-3">
             <span className="font-mono" style={{ fontSize: '0.75rem', letterSpacing: '0.2em', color: service.accentColor, opacity: 0.8 }}>
               {service.index}
@@ -737,15 +837,15 @@ function ServiceSection({ service, isEven }) {
           <h2 className="font-cormorant" style={{ fontSize: 'clamp(2.5rem, 5vw, 5.5rem)', fontWeight: 700, lineHeight: 1.0, letterSpacing: '-0.02em', color: '#1C1C1A', marginBottom: '1rem', maxWidth: '18ch' }}>
             {service.headline}
           </h2>
-          <p className="font-dm" style={{ fontSize: '1.05rem', fontWeight: 400, lineHeight: 1.6, color: 'rgba(28,28,26,0.55)', maxWidth: '60ch', marginBottom: '3rem' }}>
+          <p className="font-dm" style={{ fontSize: '1.05rem', fontWeight: 400, lineHeight: 1.6, color: 'rgba(28,28,26,0.55)', maxWidth: '60ch' }}>
             {service.subhead}
           </p>
-        </Reveal>
+        </div>
 
-        {/* Two-column layout: description + visual */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start mb-14`}>
+        {/* Two-column layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start mb-14">
           {/* Left: description + deliverables */}
-          <Reveal delay={0.05}>
+          <div>
             <div className="space-y-5 mb-8">
               {service.description.split('\n\n').map((para, i) => (
                 <p key={i} className="font-dm" style={{ fontSize: '0.975rem', fontWeight: 300, lineHeight: 1.8, color: 'rgba(28,28,26,0.65)' }}>
@@ -766,203 +866,38 @@ function ServiceSection({ service, isEven }) {
                 ))}
               </div>
             </div>
-          </Reveal>
+          </div>
 
-          {/* Right: animated visual */}
-          <Reveal delay={0.12}>
-            <div
-              className="rounded-4xl p-7 sticky top-24"
-              style={{ backgroundColor: service.bgDark, border: `1px solid ${service.accentColor}20` }}
-            >
-              {/* Metric */}
-              <div className="mb-5 pb-5" style={{ borderBottom: `1px solid ${service.accentColor}20` }}>
-                <MetricBadge value={service.metric.value} label={service.metric.label} color={service.accentColor} />
-              </div>
-
-              {/* Visual animation — differs by service */}
-              {service.pipeline && (
-                <Pipeline steps={service.pipeline} accentColor={service.accentColor} />
-              )}
-              {service.terminalLines && (
-                <Terminal lines={service.terminalLines} typingSpeed={35} />
-              )}
-              {service.contentRotator && (
-                <ContentRotator items={service.contentRotator} />
-              )}
-              {service.invoiceFlow && (
-                <InvoiceFlow />
-              )}
-
-              {/* CTA */}
-              <div className="mt-6">
-                <a href="mailto:hello@undercurrent.au" className="btn-sage" style={{ width: '100%', justifyContent: 'center', fontSize: '0.85rem' }}>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    Automate my {service.label.toLowerCase()}
-                    <ArrowRight size={14} />
-                  </span>
-                </a>
-              </div>
+          {/* Right: metric + visual + CTA */}
+          <div
+            className="rounded-4xl p-7"
+            style={{ backgroundColor: service.bgDark, border: `1px solid ${service.accentColor}20`, position: 'sticky', top: '6rem' }}
+          >
+            <div className="mb-5 pb-5" style={{ borderBottom: `1px solid ${service.accentColor}20` }}>
+              <MetricBadge value={service.metric.value} label={service.metric.label} color={service.accentColor} />
             </div>
-          </Reveal>
+            {service.pipeline && <Pipeline steps={service.pipeline} accentColor={service.accentColor} />}
+            {service.terminalLines && <Terminal lines={service.terminalLines} typingSpeed={35} />}
+            {service.contentRotator && <ContentRotator items={service.contentRotator} />}
+            {service.invoiceFlow && <InvoiceFlow />}
+            <div className="mt-6">
+              <a href="mailto:hello@undercurrent.au" className="btn-sage" style={{ width: '100%', justifyContent: 'center', fontSize: '0.85rem' }}>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  Automate my {service.label.toLowerCase()}
+                  <ArrowRight size={14} />
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* FAQs */}
-        <Reveal delay={0.1}>
-          <div>
-            <p className="font-dm mb-2" style={{ fontSize: '0.7rem', letterSpacing: '0.18em', fontWeight: 500, color: 'rgba(28,28,26,0.4)' }}>
-              COMMON QUESTIONS
-            </p>
-            <ServiceFAQ items={service.faqs} />
-          </div>
-        </Reveal>
-      </div>
-    </section>
-  )
-}
-
-// Nav pills for jumping to each service
-function ServiceNav() {
-  const [active, setActive] = useState(null)
-  const [visible, setVisible] = useState(false)
-  const [navTop, setNavTop] = useState(80)
-  const scrollRef = useRef(null)
-  const activeRef = useRef(null)
-
-  useEffect(() => {
-    const measureNavbar = () => {
-      const nav = document.querySelector('nav[class*="fixed"]')
-      if (nav) {
-        const rect = nav.getBoundingClientRect()
-        setNavTop(rect.bottom + 8)
-      }
-    }
-    measureNavbar()
-    window.addEventListener('resize', measureNavbar)
-
-    const sentinel = document.getElementById('hero-sentinel')
-    if (sentinel) {
-      const sentinelObs = new IntersectionObserver(([entry]) => {
-        setVisible(!entry.isIntersecting)
-      }, { threshold: 0 })
-      sentinelObs.observe(sentinel)
-    }
-
-    const observers = services.map(s => {
-      const el = document.getElementById(s.id)
-      if (!el) return null
-      const observer = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting) setActive(s.id)
-      }, { threshold: 0.3 })
-      observer.observe(el)
-      return observer
-    })
-    return () => {
-      observers.forEach(o => o && o.disconnect())
-      window.removeEventListener('resize', measureNavbar)
-    }
-  }, [])
-
-  // Auto-scroll active pill into view on mobile
-  useEffect(() => {
-    if (activeRef.current && scrollRef.current) {
-      const container = scrollRef.current
-      const pill = activeRef.current
-      const containerRect = container.getBoundingClientRect()
-      const pillRect = pill.getBoundingClientRect()
-      const scrollLeft = container.scrollLeft + (pillRect.left - containerRect.left) - (containerRect.width / 2) + (pillRect.width / 2)
-      container.scrollTo({ left: scrollLeft, behavior: 'smooth' })
-    }
-  }, [active])
-
-  return (
-    <div
-      className="fixed left-0 right-0 z-[150] flex justify-center transition-all duration-500"
-      style={{
-        top: `${navTop}px`,
-        opacity: visible ? 1 : 0,
-        transform: visible ? 'translateY(0)' : 'translateY(-10px)',
-        pointerEvents: visible ? 'auto' : 'none',
-      }}
-    >
-      {/* Outer wrapper — pill shape, handles blur + border */}
-      <div
-        style={{
-          backgroundColor: 'rgba(232,224,208,0.92)',
-          backdropFilter: 'blur(24px) saturate(1.5)',
-          WebkitBackdropFilter: 'blur(24px) saturate(1.5)',
-          border: '1px solid rgba(212,201,176,0.65)',
-          borderRadius: '9999px',
-          boxShadow: '0 4px 32px rgba(28,28,26,0.10), 0 1px 0 rgba(255,255,255,0.5) inset',
-          maxWidth: '820px',
-          width: 'calc(100% - 2rem)',
-          display: 'flex',
-          alignItems: 'center',
-          overflow: 'hidden',
-          position: 'relative',
-        }}
-      >
-        {/* Label — hidden on very small screens */}
-        <span
-          className="font-dm hidden sm:block flex-shrink-0 pl-4 pr-2"
-          style={{ fontSize: '0.75rem', letterSpacing: '0.15em', fontWeight: 500, color: 'rgba(28,28,26,0.32)', whiteSpace: 'nowrap' }}
-        >
-          JUMP TO:
-        </span>
-
-        {/* Left fade edge (mobile) */}
-        <div
-          className="absolute left-0 top-0 bottom-0 pointer-events-none sm:hidden z-10"
-          style={{ width: '1.5rem', background: 'linear-gradient(to right, rgba(232,224,208,0.95), transparent)' }}
-        />
-
-        {/* Scrollable pills row — scrollbar hidden via CSS */}
-        <div
-          ref={scrollRef}
-          className="flex items-center gap-1.5 px-3 py-2 service-nav-scroll"
-          style={{
-            overflowX: 'auto',
-            overflowY: 'hidden',
-            scrollbarWidth: 'none',
-            msOverflowStyle: 'none',
-            WebkitOverflowScrolling: 'touch',
-            flex: 1,
-          }}
-        >
-          {services.map(s => {
-            const isActive = active === s.id
-            return (
-              <a
-                key={s.id}
-                ref={isActive ? activeRef : null}
-                href={`#${s.id}`}
-                className="flex-shrink-0 font-dm"
-                style={{
-                  fontSize: '0.75rem',
-                  fontWeight: isActive ? 600 : 400,
-                  backgroundColor: isActive ? s.accentColor : 'rgba(28,28,26,0.05)',
-                  color: isActive ? '#1C1C1A' : 'rgba(28,28,26,0.55)',
-                  border: `1px solid ${isActive ? s.accentColor : 'rgba(28,28,26,0.10)'}`,
-                  borderRadius: '9999px',
-                  padding: '0.3rem 0.9rem',
-                  textDecoration: 'none',
-                  letterSpacing: '0.02em',
-                  whiteSpace: 'nowrap',
-                  boxShadow: isActive ? `0 1px 10px ${s.accentColor}40` : 'none',
-                  transform: isActive ? 'scale(1.03)' : 'scale(1)',
-                  transition: 'background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease',
-                }}
-              >
-                {s.label.charAt(0) + s.label.slice(1).toLowerCase()}
-              </a>
-            )
-          })}
+        <div>
+          <p className="font-dm mb-2" style={{ fontSize: '0.7rem', letterSpacing: '0.18em', fontWeight: 500, color: 'rgba(28,28,26,0.4)' }}>
+            COMMON QUESTIONS
+          </p>
+          <ServiceFAQ items={service.faqs} />
         </div>
-
-        {/* Right fade edge */}
-        <div
-          className="absolute right-0 top-0 bottom-0 pointer-events-none z-10"
-          style={{ width: '2rem', background: 'linear-gradient(to left, rgba(232,224,208,0.95), transparent)' }}
-        />
       </div>
     </div>
   )
@@ -1033,6 +968,16 @@ export default function Services() {
   const headlineRef = useRef(null)
   const subRef = useRef(null)
   const glowRef = useRef(null)
+  const [activeService, setActiveService] = useState(services[0].id)
+
+  const activeServiceData = services.find(s => s.id === activeService)
+
+  const handleHeroCardClick = (id) => {
+    setActiveService(id)
+    setTimeout(() => {
+      document.getElementById('service-panel')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 50)
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -1120,51 +1065,52 @@ export default function Services() {
             We go deep in five operational areas — the ones where small businesses consistently lose the most time, money, and momentum. Each one is a complete system, built to run without you.
           </p>
 
-          {/* Service index preview */}
+          {/* Service selector cards */}
           <div className="mt-12 grid grid-cols-2 md:grid-cols-5 gap-3">
-            {services.map((s, i) => (
-              <a
-                key={s.id}
-                href={`#${s.id}`}
-                className="group flex flex-col gap-1 p-4 rounded-2xl transition-all duration-300"
-                style={{
-                  backgroundColor: 'rgba(143,175,159,0.22)',
-                  border: '1px solid rgba(143,175,159,0.55)',
-                  boxShadow: '0 2px 16px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.06)',
-                  textDecoration: 'none',
-                }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.backgroundColor = 'rgba(143,175,159,0.35)'
-                  e.currentTarget.style.borderColor = 'rgba(143,175,159,0.8)'
-                  e.currentTarget.style.boxShadow = '0 4px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.08)'
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.backgroundColor = 'rgba(143,175,159,0.22)'
-                  e.currentTarget.style.borderColor = 'rgba(143,175,159,0.55)'
-                  e.currentTarget.style.boxShadow = '0 2px 16px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.06)'
-                }}
-              >
-                <span className="font-mono" style={{ fontSize: '0.75rem', letterSpacing: '0.15em', color: s.accentColor, opacity: 1 }}>
-                  {s.index}
-                </span>
-                <span className="font-dm" style={{ fontSize: '0.78rem', fontWeight: 500, color: 'rgba(247,243,237,0.95)', letterSpacing: '0.02em' }}>
-                  {s.label.charAt(0) + s.label.slice(1).toLowerCase()}
-                </span>
-              </a>
-            ))}
+            {services.map((s) => {
+              const isActive = activeService === s.id
+              return (
+                <button
+                  key={s.id}
+                  onClick={() => handleHeroCardClick(s.id)}
+                  className="group flex flex-col gap-1 p-4 rounded-2xl transition-all duration-300"
+                  style={{
+                    backgroundColor: isActive ? 'rgba(143,175,159,0.38)' : 'rgba(247,243,237,0.10)',
+                    border: `1px solid ${isActive ? 'rgba(143,175,159,0.85)' : 'rgba(247,243,237,0.28)'}`,
+                    boxShadow: isActive
+                      ? '0 4px 28px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.15), 0 0 24px rgba(143,175,159,0.25)'
+                      : '0 2px 12px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.10)',
+                    cursor: 'pointer',
+                    textAlign: 'left',
+                    transform: isActive ? 'translateY(-2px)' : 'none',
+                    outline: 'none',
+                  }}
+                >
+                  <span className="font-mono" style={{ fontSize: '0.75rem', letterSpacing: '0.15em', color: isActive ? '#8FAF9F' : 'rgba(212,201,176,0.75)' }}>
+                    {s.index}
+                  </span>
+                  <span className="font-dm" style={{ fontSize: '0.78rem', fontWeight: 500, color: isActive ? '#F7F3ED' : 'rgba(247,243,237,0.75)', letterSpacing: '0.02em' }}>
+                    {s.label.charAt(0) + s.label.slice(1).toLowerCase()}
+                  </span>
+                  {isActive && (
+                    <span style={{ fontSize: '0.62rem', color: '#D4C9B0', fontFamily: 'DM Sans', fontWeight: 500, marginTop: '0.15rem', letterSpacing: '0.06em' }}>
+                      viewing ↓
+                    </span>
+                  )}
+                </button>
+              )
+            })}
           </div>
         </div>
 
         <div id="hero-sentinel" style={{ position: 'absolute', bottom: 0, left: 0, height: '1px', width: '100%' }} />
       </section>
 
-      {/* Sticky service nav */}
-      <ServiceNav />
-
-      {/* Service deep dives */}
-      {services.map((s, i) => (
-        <ServiceSection key={s.id} service={s} isEven={i % 2 === 0} />
-      ))}
+      {/* Service tabs + content panel */}
+      <ServiceTabs services={services} activeId={activeService} onSelect={setActiveService} />
+      <div id="service-panel">
+        <ActiveServicePanel key={activeService} service={activeServiceData} />
+      </div>
 
       {/* Final CTA */}
       <section
