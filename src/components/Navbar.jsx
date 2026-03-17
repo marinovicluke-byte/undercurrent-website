@@ -215,13 +215,7 @@ export default function Navbar({ ready = true, isSubPage = false }) {
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
-            {mobileOpen ? <X size={20} /> : (
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
-                <path d="M2 5 C4.5 2, 7 2, 9.5 5 C12 8, 14.5 8, 17 5 C19.5 2, 22 2, 26 5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
-                <path d="M2 10 C4.5 7, 7 7, 9.5 10 C12 13, 14.5 13, 17 10 C19.5 7, 22 7, 26 10" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" opacity="0.65"/>
-                <path d="M2 15 C4.5 12, 7 12, 9.5 15 C12 18, 14.5 18, 17 15 C19.5 12, 22 12, 26 15" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.35"/>
-              </svg>
-            )}
+            {mobileOpen ? <X size={20} /> : <NavWave scrolled={scrolled} />}
           </button>
         </div>
 
