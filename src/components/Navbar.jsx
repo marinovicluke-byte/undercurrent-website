@@ -168,7 +168,7 @@ export default function Navbar({ ready = true, isSubPage = false }) {
               >
                 UnderCurrent
               </span>
-              <NavWave scrolled={scrolled} />
+              <span className="hidden md:block"><NavWave scrolled={scrolled} /></span>
             </div>
           </a>
 
