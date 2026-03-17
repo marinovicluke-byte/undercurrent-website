@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { SpeedInsights } from '@vercel/speed-insights/react'
+import { Analytics } from '@vercel/analytics/react'
 import Loader from './components/Loader'
 import ScrollProgressBar from './components/ScrollProgressBar'
 import Navbar from './components/Navbar'
@@ -40,12 +42,16 @@ function HomePage() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/roi" element={<ROICalculator />} />
-      <Route path="/process" element={<Process />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/roi" element={<ROICalculator />} />
+        <Route path="/process" element={<Process />} />
+      </Routes>
+      <SpeedInsights />
+      <Analytics />
+    </>
   )
 }
