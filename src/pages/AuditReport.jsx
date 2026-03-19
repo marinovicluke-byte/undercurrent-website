@@ -274,8 +274,8 @@ export default function AuditReport() {
                     <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(2.8rem, 6vw, 4rem)', fontWeight: 800, color: i === 0 ? C.red : C.text, margin: 0, lineHeight: 1 }}>
                       {fmt(leak.monthlyLoss)}
                     </p>
-                    <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.6rem', color: C.faint, margin: '5px 0 0', letterSpacing: '0.08em' }}>
-                      per month · {leak.hours} hrs/wk
+                    <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.82rem', color: C.muted, margin: '6px 0 0', letterSpacing: '0.01em' }}>
+                      per month &nbsp;·&nbsp; {leak.hours} hrs/wk
                     </p>
                   </div>
                   {/* Right — rank + title */}
