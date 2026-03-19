@@ -91,7 +91,7 @@ Same dark bar as existing. Structural change: none. Copy change: replace existin
 5 cards in a horizontal row. Desktop: all 5 visible. Mobile: swipe carousel with edge fade hinting more cards exist.
 
 **Card design:**
-- Large ghost number (01–05) in Cormorant at 6% opacity — scales to full opacity and sage (`#8FAF9F`) on hover. All five cards use sage as the hover accent colour. No individual per-card accent.
+- Large ghost number (01–05) in Cormorant at 6% opacity — scales to 45% opacity and sage (`#8FAF9F`) on hover. All five cards use sage as the hover accent colour. No individual per-card accent. 45% is intentional — readable but not overpowering the card title.
 - Bold problem title, one-line description
 - Small pulsing dot (soft red/amber, 2s pulse loop) in top-right corner — signals the problem is happening right now
 - On hover: card lifts (`translateY -6px`), sage accent bar slides in from left along top edge, subtle warm glow behind card
@@ -133,7 +133,7 @@ Same dark bar as existing. Structural change: none. Copy change: replace existin
 **Card 3 — Growth** (slate accent `#89ACBE`)
 - Stat: `+40% More Leads Converted` (consistent with Section 2 proof strip — same number used throughout)
 - Copy: Every enquiry gets a fast, personal reply. Every lead gets followed up. No one slips through the cracks.
-- Animated visual: Mini pipeline — three labelled nodes (Enquiry → Follow-up → Booked) connected by a track. A single dot animates along the track left to right, taking 1.5s per traverse with a 0.5s pause at each node. Triggered on scroll-enter, loops continuously.
+- Animated visual: Mini pipeline — three circular nodes (16px diameter, filled with slate `#89ACBE` at 30% opacity, border 1px solid `#89ACBE`) labelled below in DM Sans 10px at 50% opacity (labels: "Enquiry", "Follow-up", "Booked"). Nodes connected by a horizontal dashed line (1px, `#89ACBE` at 20% opacity). A single dot (8px, solid `#89ACBE`) animates along the track left to right, taking 1.5s per traverse with a 0.5s pause at each node. Triggered on scroll-enter, loops continuously.
 - Service tags: `Sales · Content`
 
 **Below all three cards:**
@@ -191,7 +191,7 @@ Same dark bar as existing. Structural change: none. Copy change: replace existin
 > *Done for you, inside the tools you already use.*
 > *Results in 30 days. Or we keep going — no charge.*
 
-**Divider:** Thin sage line draws left to right before the statements appear. Signals ceremony/importance.
+**Divider:** Thin sage line (1px, `#8FAF9F` at 20% opacity) draws left to right before the statements appear. Duration: 0.6s ease-in-out. Triggered when section is 20% into the viewport. The first statement begins fading in 0.2s after the line draw completes. Signals ceremony/importance.
 
 **Guarantee card** (sage border, Shield icon):
 > **Zero-Risk Guarantee.** If we can't find you at least 5 hours a week to automate in the free audit — the call is free and you keep every insight.
@@ -199,7 +199,7 @@ Same dark bar as existing. Structural change: none. Copy change: replace existin
 **Guarantee card animation:** Slow pulsing sage glow around the border. ~3 second pulse loop. Signals safety and confidence.
 
 **Two CTAs:**
-- Primary (solid sage): `Book Your Free Audit →` — subtle one-time shimmer sweep on section enter
+- Primary (solid sage): `Book Your Free Audit →` — subtle one-time shimmer sweep (45-degree white sweep at 20% opacity, 0.6s duration) on first scroll-enter only. Does not repeat if user scrolls away and back. Intent: catches the eye at the moment the user is most likely to convert, without being distracting on repeat views.
 - Secondary (ghost): `Try the Free Calculator →`
 
 ---
