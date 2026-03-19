@@ -22,6 +22,7 @@ const Process = lazy(() => import('./pages/Process'))
 const Stats = lazy(() => import('./pages/Stats'))
 const LandingPage = lazy(() => import('./pages/LandingPage'))
 const BusinessAudit = lazy(() => import('./pages/BusinessAudit'))
+const BusinessAuditV2 = lazy(() => import('./pages/BusinessAuditV2'))
 
 function HomePage() {
   const [loaderDone, setLoaderDone] = useState(false)
@@ -56,6 +57,7 @@ export default function App() {
         <Route path="/stats" element={<Suspense fallback={null}><Stats /></Suspense>} />
         <Route path="/lp" element={<Suspense fallback={null}><LandingPage /></Suspense>} />
         <Route path="/audit" element={<Suspense fallback={null}><BusinessAudit /></Suspense>} />
+        <Route path="/audit-v2" element={<Suspense fallback={null}><BusinessAuditV2 /></Suspense>} />
       </Routes>
       <SpeedInsights />
       <Analytics />
