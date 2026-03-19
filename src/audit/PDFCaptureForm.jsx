@@ -26,6 +26,9 @@ export default function PDFCaptureForm({ onSubmit, payload }) {
     setStatus('loading')
 
     const webhookUrl = import.meta.env.VITE_N8N_AUDIT_WEBHOOK_URL
+    if (!webhookUrl && import.meta.env.DEV) {
+      console.warn('[PDFCaptureForm] VITE_N8N_AUDIT_WEBHOOK_URL is not set — form submission will fail')
+    }
     const body = {
       ...payload,
       contact: {
@@ -137,17 +140,19 @@ export default function PDFCaptureForm({ onSubmit, payload }) {
             { field: 'phone',        label: 'Phone (optional)', type: 'tel', placeholder: '04XX XXX XXX' },
           ].map(({ field, label, type, placeholder }) => (
             <div key={field}>
-              <label style={labelStyle}>{label}</label>
+              <label htmlFor={field} style={labelStyle}>{label}</label>
               <input
+                id={field}
                 type={type}
                 value={form[field]}
                 onChange={set(field)}
                 placeholder={placeholder}
                 style={fieldStyle(!!errors[field])}
+                aria-describedby={errors[field] ? `${field}-error` : undefined}
                 onFocus={e => { e.target.style.borderColor = '#8FAF9F' }}
                 onBlur={e => { e.target.style.borderColor = errors[field] ? 'rgba(220,60,60,0.5)' : 'rgba(212,201,176,0.6)' }}
               />
-              {errors[field] && <p style={errStyle}>{errors[field]}</p>}
+              {errors[field] && <p id={`${field}-error`} role="alert" style={errStyle}>{errors[field]}</p>}
             </div>
           ))}
         </div>
