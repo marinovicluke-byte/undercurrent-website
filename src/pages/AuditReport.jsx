@@ -243,8 +243,19 @@ export default function AuditReport() {
                   {i + 1}
                 </div>
 
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '18px', flexWrap: 'wrap', gap: '10px' }}>
-                  <div>
+                {/* Hero row: big number left, label + title right */}
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '24px', marginBottom: '20px' }}>
+                  {/* Left — dollar hero */}
+                  <div style={{ flexShrink: 0 }}>
+                    <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(2.8rem, 6vw, 4rem)', fontWeight: 800, color: i === 0 ? C.red : C.text, margin: 0, lineHeight: 1 }}>
+                      {fmt(leak.monthlyLoss)}
+                    </p>
+                    <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.6rem', color: C.faint, margin: '5px 0 0', letterSpacing: '0.08em' }}>
+                      per month · {leak.hours} hrs/wk
+                    </p>
+                  </div>
+                  {/* Right — rank + title */}
+                  <div style={{ paddingTop: '6px' }}>
                     <span style={{
                       fontFamily: 'DM Mono, monospace',
                       fontSize: '0.6rem',
@@ -256,15 +267,6 @@ export default function AuditReport() {
                     </span>
                     <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '1.1rem', fontWeight: 600, color: C.text, margin: '6px 0 0' }}>
                       {leak.copy.label}
-                    </p>
-                  </div>
-                  <div style={{ textAlign: 'right' }}>
-                    <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.62rem', color: C.faint, margin: '0 0 4px', letterSpacing: '0.08em' }}>
-                      {leak.hours} hrs/wk
-                    </p>
-                    <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '1.5rem', fontWeight: 700, color: i === 0 ? C.red : C.text, margin: 0, lineHeight: 1 }}>
-                      {fmt(leak.monthlyLoss)}
-                      <span style={{ fontSize: '0.75rem', fontWeight: 400, color: C.muted, marginLeft: '3px' }}>/mo</span>
                     </p>
                   </div>
                 </div>
