@@ -86,9 +86,9 @@ function NumberInputDark({ label, value, onChange, prefix = '$', placeholder = '
       </label>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: '3px' }}>
         <span style={{
-          fontFamily: 'Cormorant Garamond, serif',
+          fontFamily: 'DM Sans, sans-serif',
           fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)',
-          fontWeight: 600,
+          fontWeight: 700,
           color: '#8FAF9F',
           lineHeight: 1,
         }}>{prefix}</span>
@@ -103,9 +103,9 @@ function NumberInputDark({ label, value, onChange, prefix = '$', placeholder = '
             background: 'transparent',
             border: 'none',
             outline: 'none',
-            fontFamily: 'Cormorant Garamond, serif',
+            fontFamily: 'DM Sans, sans-serif',
             fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)',
-            fontWeight: 600,
+            fontWeight: 700,
             color: '#F7F3ED',
             width: '100%',
             caretColor: '#8FAF9F',
@@ -251,13 +251,13 @@ function ResultCard({ title, price, subtitle, priceColor = '#F7F3ED', gradient =
         {title}
       </p>
       <p style={{
-        fontFamily: 'Cormorant Garamond, serif',
+        fontFamily: 'DM Sans, sans-serif',
         fontSize: gradient ? 'clamp(2rem, 4vw, 2.8rem)' : 'clamp(1.6rem, 3vw, 2.2rem)',
-        fontWeight: 600,
+        fontWeight: 700,
         color: priceColor,
         margin: 0,
         lineHeight: 1,
-        letterSpacing: '-0.02em',
+        letterSpacing: '-0.03em',
       }}>
         {price}
       </p>
@@ -689,7 +689,7 @@ export default function BusinessAuditV2() {
                 <NumberInputDark label="Leads per month" value={leadsPerMonth} onChange={setLeadsPerMonth} prefix="#" placeholder="0" />
               </div>
 
-              {/* Response time */}
+              {/* Response time — pill buttons */}
               <div>
                 <label style={{
                   display: 'block',
@@ -698,21 +698,38 @@ export default function BusinessAuditV2() {
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
                   color: 'rgba(143,175,159,0.65)',
-                  marginBottom: '6px',
+                  marginBottom: '10px',
                 }}>
                   Avg lead response time
                 </label>
-                <select
-                  value={responseTime}
-                  onChange={e => setResponseTime(e.target.value)}
-                  style={{
-                    ...selectStyle,
-                    color: responseTime ? '#F7F3ED' : 'rgba(247,243,237,0.3)',
-                  }}
-                >
-                  <option value="">Select response time…</option>
-                  {RESPONSE_OPTIONS.map(opt => <option key={opt.value} value={opt.value} style={{ background: '#1a1a1a', color: '#F7F3ED' }}>{opt.label}</option>)}
-                </select>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                  {RESPONSE_OPTIONS.map(opt => {
+                    const active = responseTime === opt.value
+                    return (
+                      <button
+                        key={opt.value}
+                        type="button"
+                        onClick={() => setResponseTime(active ? '' : opt.value)}
+                        style={{
+                          height: '32px',
+                          padding: '0 14px',
+                          borderRadius: '9999px',
+                          border: active ? '1px solid #8FAF9F' : '1px solid rgba(255,255,255,0.15)',
+                          background: active ? 'rgba(143,175,159,0.15)' : 'transparent',
+                          color: active ? '#8FAF9F' : 'rgba(247,243,237,0.45)',
+                          fontFamily: 'DM Mono, monospace',
+                          fontSize: '0.72rem',
+                          letterSpacing: '0.04em',
+                          cursor: 'pointer',
+                          transition: 'all 0.15s ease',
+                          whiteSpace: 'nowrap',
+                        }}
+                      >
+                        {opt.label}
+                      </button>
+                    )
+                  })}
+                </div>
               </div>
             </div>
 
