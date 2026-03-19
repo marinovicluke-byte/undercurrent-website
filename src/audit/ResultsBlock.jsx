@@ -42,7 +42,7 @@ function RatingBadge({ rating }) {
   )
 }
 
-export default function ResultsBlock({ pillars, hourlyRate, leadsPerMonth, projectValue, responseTimeBand, totalMonthly, totalYearly, leadBleedMonthly }) {
+export default function ResultsBlock({ pillars, hourlyRate, responseTimeBand, totalMonthly, totalYearly, leadBleedMonthly }) {
   // Sort pillars by monthly loss descending, preserve original order for ties
   const sorted = PILLARS.map((p, originalIndex) => ({
     ...p,
@@ -50,8 +50,10 @@ export default function ResultsBlock({ pillars, hourlyRate, leadsPerMonth, proje
     monthly: calcPillarMonthly(pillars[p.key].hours, hourlyRate),
     hours: pillars[p.key].hours,
     selfRating: pillars[p.key].selfRating,
-    calcRating: calcRating(pillars[p.key].hours),
+    calcedRating: calcRating(pillars[p.key].hours),
   })).sort((a, b) => b.monthly - a.monthly || a.originalIndex - b.originalIndex)
+
+  const pillarTotal = sorted.reduce((acc, p) => acc + p.monthly, 0)
 
   return (
     <div>
@@ -143,7 +145,7 @@ export default function ResultsBlock({ pillars, hourlyRate, leadsPerMonth, proje
             </thead>
             <tbody>
               {sorted.map(p => {
-                const gap = calcGap(p.selfRating, p.calcRating, p.hours)
+                const gap = calcGap(p.selfRating, p.calcedRating, p.hours)
                 const gapStyle = gap ? GAP_STYLES[gap] : null
                 return (
                   <tr key={p.key}>
@@ -154,7 +156,7 @@ export default function ResultsBlock({ pillars, hourlyRate, leadsPerMonth, proje
                       <RatingBadge rating={p.selfRating} />
                     </td>
                     <td style={{ padding: '10px 12px 10px 0', borderBottom: '1px solid rgba(212,201,176,0.25)' }}>
-                      <RatingBadge rating={p.hours > 0 ? p.calcRating : null} />
+                      <RatingBadge rating={p.hours > 0 ? p.calcedRating : null} />
                     </td>
                     <td style={{ padding: '10px 0 10px 0', borderBottom: '1px solid rgba(212,201,176,0.25)', fontFamily: 'DM Sans, sans-serif', fontSize: '0.82rem', color: gapStyle?.color ?? 'rgba(28,28,26,0.3)' }}>
                       {gapStyle ? `${gapStyle.icon} ${gap}` : '—'}
@@ -212,7 +214,7 @@ export default function ResultsBlock({ pillars, hourlyRate, leadsPerMonth, proje
         </div>
             <div style={{ height: '4px', backgroundColor: 'rgba(143,175,159,0.15)', borderRadius: '2px', overflow: 'hidden' }}>
               <div style={{
-                width: `${Math.min((p.monthly / (totalMonthly || 1)) * 100, 100)}%`,
+                width: `${Math.min((p.monthly / (pillarTotal || 1)) * 100, 100)}%`,
                 height: '100%',
                 background: 'linear-gradient(90deg, #8FAF9F, #6B7C4A)',
                 borderRadius: '2px',
