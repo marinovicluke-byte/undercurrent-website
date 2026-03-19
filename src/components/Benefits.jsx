@@ -38,18 +38,21 @@ function ProblemCard({ problem, index }) {
       style={{
         flex: '1 1 0',
         minWidth: 0,
-        backgroundColor: '#FFFFFF',
-        border: '1px solid rgba(212,201,176,0.6)',
+        background: hovered
+          ? 'linear-gradient(160deg, #1C1C1A 0%, #2a3d33 100%)'
+          : 'linear-gradient(160deg, #1e1e1c 0%, #243329 100%)',
+        border: '1px solid rgba(143,175,159,0.15)',
         borderRadius: '1.25rem',
-        padding: '2rem 1.5rem',
+        padding: '2.25rem 1.75rem 2.75rem',
         position: 'relative',
         overflow: 'hidden',
         cursor: 'default',
+        minHeight: '220px',
         transform: hovered ? 'translateY(-6px)' : 'translateY(0)',
-        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease',
         boxShadow: hovered
-          ? '0 12px 40px rgba(143,175,159,0.15)'
-          : '0 2px 8px rgba(28,28,26,0.04)',
+          ? '0 16px 48px rgba(0,0,0,0.4)'
+          : '0 4px 16px rgba(0,0,0,0.2)',
         display: 'flex',
         flexDirection: 'column',
         gap: '0.75rem',
@@ -86,20 +89,21 @@ function ProblemCard({ problem, index }) {
         }}
       />
 
-      {/* Ghost number */}
+      {/* Ghost number — bottom right, faded */}
       <div
         className="font-cormorant"
         style={{
-          fontSize: '5rem',
+          position: 'absolute',
+          bottom: '-0.5rem',
+          right: '1rem',
+          fontSize: '6rem',
           fontWeight: 700,
           lineHeight: 1,
-          color: hovered ? '#8FAF9F' : 'rgba(28,28,26,0.06)',
-          opacity: hovered ? 0.45 : 1,
-          transition: 'color 0.3s ease, opacity 0.3s ease',
+          color: 'rgba(143,175,159,0.08)',
           letterSpacing: '-0.04em',
           userSelect: 'none',
           pointerEvents: 'none',
-          marginBottom: '-0.5rem',
+          transition: 'color 0.3s ease',
         }}
       >
         {problem.num}
@@ -109,11 +113,12 @@ function ProblemCard({ problem, index }) {
       <p
         className="font-dm"
         style={{
-          fontSize: '0.95rem',
-          fontWeight: 600,
-          color: '#1C1C1A',
-          lineHeight: 1.35,
+          fontSize: 'clamp(1.1rem, 1.6vw, 1.3rem)',
+          fontWeight: 700,
+          color: '#F7F3ED',
+          lineHeight: 1.3,
           margin: 0,
+          letterSpacing: '-0.01em',
         }}
       >
         {problem.title}
@@ -125,7 +130,7 @@ function ProblemCard({ problem, index }) {
         style={{
           fontSize: '0.82rem',
           fontWeight: 300,
-          color: 'rgba(28,28,26,0.5)',
+          color: 'rgba(247,243,237,0.5)',
           lineHeight: 1.65,
           margin: 0,
         }}
