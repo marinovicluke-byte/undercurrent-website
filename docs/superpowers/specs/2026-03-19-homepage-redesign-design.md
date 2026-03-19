@@ -10,7 +10,7 @@
 
 Redesign the main homepage to be outcome-first and customer-centric. The customer (small business owner wearing too many hats) is the hero. Undercurrent is the guide. Every section answers one question the visitor is already asking.
 
-Copy must be Grade 5 language — clear, simple, no jargon. Design keeps the existing brand: dark (`#1C1C1A`), sage (`#8FAF9F`), cream (`#F7F3ED`, `#D4C9B0`), Cormorant + DM Sans + mono fonts. Animations stay but serve the story — not the other way around.
+Copy must be Grade 5 language — clear, simple, no jargon. Design keeps the existing brand: dark (`#1C1C1A`), sage (`#8FAF9F`), cream (`#F7F3ED`, `#D4C9B0`), gold (`#C4A97A`), slate (`#89ACBE`), forest (`#6B7C4A`), Cormorant + DM Sans + mono fonts. Animations stay but serve the story — not the other way around.
 
 ---
 
@@ -91,7 +91,7 @@ Same dark bar as existing. Structural change: none. Copy change: replace existin
 5 cards in a horizontal row. Desktop: all 5 visible. Mobile: swipe carousel with edge fade hinting more cards exist.
 
 **Card design:**
-- Large ghost number (01–05) in Cormorant at 6% opacity — scales to full opacity and accent colour on hover
+- Large ghost number (01–05) in Cormorant at 6% opacity — scales to full opacity and sage (`#8FAF9F`) on hover. All five cards use sage as the hover accent colour. No individual per-card accent.
 - Bold problem title, one-line description
 - Small pulsing dot (soft red/amber, 2s pulse loop) in top-right corner — signals the problem is happening right now
 - On hover: card lifts (`translateY -6px`), sage accent bar slides in from left along top edge, subtle warm glow behind card
@@ -121,19 +121,19 @@ Same dark bar as existing. Structural change: none. Copy change: replace existin
 **Card 1 — Time** (sage accent `#8FAF9F`)
 - Stat: `12 Hours Back Every Week`
 - Copy: Your follow-ups, reminders, and inbox — handled automatically. You only touch what actually needs you.
-- Animated visual: Live time ticker counting hours saved this week. Numbers tick up slowly on loop.
+- Animated visual: Numeric counter. Starts at 0, counts up to 12 over 2.5s with an ease-out curve. Triggered on scroll-enter. Holds at 12 — does not loop. Unit label "hrs/week" appears alongside the number.
 - Service tags: `Sales · Personal Admin`
 
 **Card 2 — Money** (gold accent `#C4A97A`)
 - Stat: `$800+ Saved Every Week`
 - Copy: Every invoice chased, every receipt logged, every overdue payment followed up — without you lifting a finger.
-- Animated visual: Rising bar graph or dollar counter that climbs slowly on scroll-enter.
+- Animated visual: Dollar counter. Starts at $0, counts up to $800 over 2.5s with an ease-out curve. Triggered on scroll-enter. Holds at $800+ — does not loop. Uses a CSS number counter animation (no external library required).
 - Service tags: `Finance · Customer Experience`
 
 **Card 3 — Growth** (slate accent `#89ACBE`)
-- Stat: `3× More Leads Become Clients`
+- Stat: `+40% More Leads Converted` (consistent with Section 2 proof strip — same number used throughout)
 - Copy: Every enquiry gets a fast, personal reply. Every lead gets followed up. No one slips through the cracks.
-- Animated visual: Mini pipeline with three dots moving along a track: Enquiry → Follow-up → Booked. Loops continuously.
+- Animated visual: Mini pipeline — three labelled nodes (Enquiry → Follow-up → Booked) connected by a track. A single dot animates along the track left to right, taking 1.5s per traverse with a 0.5s pause at each node. Triggered on scroll-enter, loops continuously.
 - Service tags: `Sales · Content`
 
 **Below all three cards:**
@@ -281,5 +281,5 @@ Same dark bar as existing. Structural change: none. Copy change: replace existin
 - `src/components/Pricing.jsx` — rewrite as Offer section (Section 6)
 - `src/components/FAQ.jsx` — copy rewrite only
 - `src/components/Contact.jsx` — replace with Final CTA section (Section 8)
-- `src/components/Features.jsx` — evaluate whether to keep or remove
+- `src/components/Features.jsx` — **remove from homepage.** This component is replaced by the Dream section (Section 4). Delete the import and usage in `App.jsx`. Do not delete the file itself in case it is used on other routes.
 - `src/index.css` — no change expected
