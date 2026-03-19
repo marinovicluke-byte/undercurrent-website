@@ -303,26 +303,29 @@ function FlowVisual() {
 const STEPS = [
   {
     num: '01',
-    word: 'Map',
+    word: 'Audit',
     color: '#8FAF9F',
     tagline: 'We find where your time is going.',
-    body: 'In a 30-minute call, we go through everything you and your team do repeatedly. We rank it by time saved and show you exactly what can be automated — and what the impact would be.',
+    body: 'In a free 30-minute call we look at everything you do every week. We show you exactly what can be automated and how much time it will give back.',
+    tag: 'Free 30-min call',
     visual: <MapVisual />,
   },
   {
     num: '02',
     word: 'Build',
-    color: '#D4C9B0',
-    tagline: "We set it up. You don't lift a finger.",
-    body: 'We connect automations directly into the tools you already use. No new software to learn, nothing to change about how you work. We just remove the slow, repetitive parts.',
+    color: '#C4A97A',
+    tagline: "We build it. You don't touch a thing.",
+    body: "We set everything up inside the tools you already use. No new software. No learning curve. Nothing changes about how you work — we just remove the slow parts.",
+    tag: 'Done for you · 2 weeks',
     visual: <BuildVisual />,
   },
   {
     num: '03',
     word: 'Flow',
     color: '#6B7C4A',
-    tagline: "It runs. You don't have to.",
-    body: "Your systems work around the clock — following up leads, looking after clients, keeping your inbox clear. You get your time back, and it stays that way as your business grows.",
+    tagline: "It runs. You get your time back.",
+    body: "Your leads get followed up. Your clients feel looked after. Your inbox stays clear. It works around the clock so you don't have to.",
+    tag: 'Ongoing · Always on',
     visual: <FlowVisual />,
   },
 ]
@@ -350,7 +353,7 @@ function StepCard({ step, index }) {
       style={{
         position: 'relative',
         background: 'rgba(255,255,255,0.03)',
-        border: `1px solid rgba(${step.color === '#8FAF9F' ? '143,175,159' : step.color === '#D4C9B0' ? '212,201,176' : '107,124,74'},0.14)`,
+        border: `1px solid rgba(${step.color === '#8FAF9F' ? '143,175,159' : step.color === '#C4A97A' ? '196,169,122' : '107,124,74'},0.14)`,
         borderRadius: 20,
         padding: 'clamp(24px, 3vw, 36px)',
         display: 'flex',
@@ -369,7 +372,7 @@ function StepCard({ step, index }) {
         fontSize: 'clamp(100px, 14vw, 160px)',
         lineHeight: 1,
         color: 'transparent',
-        WebkitTextStroke: `1px rgba(${step.color === '#8FAF9F' ? '143,175,159' : step.color === '#D4C9B0' ? '212,201,176' : '107,124,74'},0.07)`,
+        WebkitTextStroke: `1px rgba(${step.color === '#8FAF9F' ? '143,175,159' : step.color === '#C4A97A' ? '196,169,122' : '107,124,74'},0.07)`,
         pointerEvents: 'none',
         userSelect: 'none',
         zIndex: 0,
@@ -434,6 +437,24 @@ function StepCard({ step, index }) {
         }}>
           {step.body}
         </p>
+
+        {/* Tag */}
+        <div style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          marginTop: '1.25rem',
+          padding: '0.3rem 0.75rem',
+          borderRadius: '9999px',
+          background: `${step.color}15`,
+          border: `1px solid ${step.color}35`,
+        }}>
+          <span
+            className="font-mono"
+            style={{ fontSize: '0.6rem', letterSpacing: '0.12em', color: step.color, fontWeight: 500 }}
+          >
+            {step.tag}
+          </span>
+        </div>
       </div>
 
       {/* Visual */}
@@ -445,6 +466,60 @@ function StepCard({ step, index }) {
       }}>
         {step.visual}
       </div>
+    </div>
+  )
+}
+
+// ─── Connector line (desktop only, draws on scroll-enter) ────────────────────
+function ConnectorLine({ gridRef }) {
+  const lineRef = useRef(null)
+  const [drawn, setDrawn] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 900)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
+
+  useEffect(() => {
+    const el = gridRef.current
+    if (!el) return
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setDrawn(true); obs.disconnect() } },
+      { threshold: 0.2 }
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [gridRef])
+
+  if (isMobile) return null
+
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        top: 'calc(clamp(16px, 3vw, 32px) + 80px)',
+        left: 'clamp(24px, 5vw, 64px)',
+        right: 'clamp(24px, 5vw, 64px)',
+        height: '1px',
+        pointerEvents: 'none',
+        zIndex: 0,
+        overflow: 'hidden',
+      }}
+    >
+      <div
+        ref={lineRef}
+        style={{
+          height: '1px',
+          width: '100%',
+          background: 'repeating-linear-gradient(to right, rgba(143,175,159,0.35) 0px, rgba(143,175,159,0.35) 6px, transparent 6px, transparent 12px)',
+          transform: drawn ? 'scaleX(1)' : 'scaleX(0)',
+          transformOrigin: 'left center',
+          transition: 'transform 0.8s cubic-bezier(0.4,0,0.2,1)',
+        }}
+      />
     </div>
   )
 }
@@ -524,8 +599,8 @@ export default function Protocol() {
               letterSpacing: '-0.03em', color: '#F7F3ED',
               opacity: 0,
             }}>
-              How we<br />
-              <span style={{ color: '#8FAF9F' }}>work</span>
+              Three steps.<br />
+              <span style={{ color: '#8FAF9F' }}>Then it runs itself.</span>
             </h2>
 
             <div className="proto-sub" style={{ opacity: 0, maxWidth: 300, paddingBottom: 4 }}>
@@ -535,7 +610,7 @@ export default function Protocol() {
                 color: 'rgba(247,243,237,0.42)',
                 lineHeight: 1.65, fontWeight: 300, marginBottom: 16,
               }}>
-                Three steps. Then it runs itself.
+                You don't need to know how it works. You just need to know it does.
               </p>
               <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                 {STEPS.map((s) => (
@@ -567,14 +642,21 @@ export default function Protocol() {
           maxWidth: 1100,
           margin: '0 auto',
           padding: 'clamp(16px, 3vw, 32px) clamp(24px, 5vw, 64px) clamp(56px, 7vw, 88px)',
+          position: 'relative',
+        }}
+      >
+        {/* Connector line — desktop only, draws on scroll-enter */}
+        <ConnectorLine gridRef={gridRef} />
+
+        <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
           gap: 'clamp(14px, 2vw, 22px)',
-        }}
-      >
-        {STEPS.map((step, i) => (
-          <StepCard key={step.num} step={step} index={i} />
-        ))}
+        }}>
+          {STEPS.map((step, i) => (
+            <StepCard key={step.num} step={step} index={i} />
+          ))}
+        </div>
       </div>
 
     </section>
