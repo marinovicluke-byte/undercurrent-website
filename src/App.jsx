@@ -6,6 +6,7 @@ import Loader from './components/Loader'
 import ScrollProgressBar from './components/ScrollProgressBar'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import ProofStrip from './components/ProofStrip'
 import Features from './components/Features'
 import Protocol from './components/Protocol'
 import Pricing from './components/Pricing'
@@ -34,6 +35,7 @@ function HomePage() {
       <ScrollProgressBar />
       <Navbar ready={loaderDone} />
       <Hero ready={loaderDone} />
+      <ProofStrip />
       <Benefits />
       <WhatWeAutomate />
       <Protocol />
