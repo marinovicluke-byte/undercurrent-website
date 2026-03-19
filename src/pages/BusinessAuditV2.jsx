@@ -396,6 +396,7 @@ function ReportModal({ isOpen, onClose, payload }) {
                     onChange={set(field)}
                     placeholder={placeholder}
                     style={inputStyle(!!errors[field])}
+                    onInput={set(field)}
                     onFocus={e => { e.target.style.borderColor = '#8FAF9F' }}
                     onBlur={e => { e.target.style.borderColor = errors[field] ? 'rgba(220,80,60,0.6)' : 'rgba(143,175,159,0.2)' }}
                   />
