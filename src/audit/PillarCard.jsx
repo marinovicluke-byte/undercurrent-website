@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { ChevronDown, ChevronUp } from 'lucide-react'
-import { calcRating } from './calculations.js'
 
 const HEALTH_COLORS = {
   Red:    { bg: 'rgba(220,60,60,0.12)',  border: 'rgba(220,60,60,0.5)',  text: '#dc3c3c' },
@@ -10,6 +9,7 @@ const HEALTH_COLORS = {
 
 function HealthPill({ rating, selected, onClick }) {
   const c = HEALTH_COLORS[rating]
+  if (!c) return null
   return (
     <button
       onClick={() => onClick(rating)}
@@ -61,7 +61,6 @@ function AuditSlider({ label, value, max, onChange, showValue = true }) {
 export default function PillarCard({ pillar, state, onChange }) {
   const [expanded, setExpanded] = useState(false)
   const { hours, selfRating, subtasks } = state
-  const calcedRating = calcRating(hours)
 
   const handleHours = (val) => onChange({ ...state, hours: val })
   const handleRating = (rating) => onChange({ ...state, selfRating: rating === selfRating ? null : rating })
@@ -136,6 +135,7 @@ export default function PillarCard({ pillar, state, onChange }) {
       {/* Expand / collapse trigger */}
       <button
         onClick={() => setExpanded(v => !v)}
+        aria-expanded={expanded}
         style={{
           display: 'flex',
           alignItems: 'center',
