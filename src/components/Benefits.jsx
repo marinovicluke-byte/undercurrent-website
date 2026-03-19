@@ -1,333 +1,314 @@
-import { useEffect, useRef, useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
-// ─── Stat counter ─────────────────────────────────────────────────────────────────
-function useCounter(target, duration, active) {
-  const [count, setCount] = useState(0)
-  useEffect(() => {
-    if (!active) return
-    let start = null
-    let raf
-    const step = (ts) => {
-      if (!start) start = ts
-      const progress = Math.min((ts - start) / duration, 1)
-      const eased = 1 - Math.pow(1 - progress, 3)
-      setCount(Math.round(eased * target))
-      if (progress < 1) raf = requestAnimationFrame(step)
-    }
-    raf = requestAnimationFrame(step)
-    return () => cancelAnimationFrame(raf)
-  }, [target, duration, active])
-  return count
-}
-
-// ─── Data ─────────────────────────────────────────────────────────────────────────
-const BENEFITS = [
+const PROBLEMS = [
   {
-    id: 'reviews',
-    statNum: 31,
-    statPrefix: '+',
-    statSuffix: '%',
-    statLabel: 'more 5-star reviews',
-    description: 'Timed follow-ups land when the job is still fresh. No awkward asks. No chasing required.',
-    color: '#C4A97A',
-    story: [
-      { type: 'trigger', label: 'Trigger',                 text: 'Job completed · 14 days ago' },
-      { type: 'message', label: 'SMS to Mike · Auto-sent', text: "Hi Mike — hope the kitchen's coming along nicely! If you have 30 seconds, a Google review would mean the world to us. 🙏" },
-      { type: 'result',  label: 'Result',                  text: 'Review posted · Google', stars: true },
-    ],
+    num: '01',
+    title: "You're losing clients before they even start",
+    desc: 'No follow-up system means leads go cold and clients feel ignored.',
   },
   {
-    id: 'leads',
-    statNum: 40,
-    statPrefix: '+',
-    statSuffix: '%',
-    statLabel: 'more leads converted',
-    description: 'Every enquiry gets an instant, personal reply — even at 11pm on a Sunday.',
-    color: '#8FAF9F',
-    story: [
-      { type: 'trigger', label: 'Trigger',                       text: 'New enquiry received · 9:47 PM' },
-      { type: 'message', label: 'Auto-reply to Sarah · Instant', text: "Hey Sarah! Thanks for reaching out — I'd love to help. Are you free for a quick call this week? 📅" },
-      { type: 'result',  label: 'Result',                       text: 'Call booked · next morning', check: true },
-    ],
+    num: '02',
+    title: "Your best leads are going cold right now",
+    desc: 'Every hour without a reply is a deal sliding to your competitor.',
   },
   {
-    id: 'time',
-    statNum: 12,
-    statPrefix: '',
-    statSuffix: ' hrs',
-    statLabel: 'back every week',
-    description: 'Invoices, reminders, follow-ups — all handled automatically after every single job.',
-    color: '#89ACBE',
-    story: [
-      { type: 'trigger', label: 'Trigger',              text: 'Job marked complete · 4:15 PM' },
-      { type: 'message', label: 'Invoice · Auto-sent',  text: 'Invoice #247 · $3,200\nDue in 14 days — sent automatically.' },
-      { type: 'result',  label: 'Result',               text: 'Paid · 6 days early', check: true },
-    ],
+    num: '03',
+    title: "You're invisible online because content takes too long",
+    desc: "You know you should post. You never have time.",
+  },
+  {
+    num: '04',
+    title: "Your inbox is running your day, not you",
+    desc: '3–4 hours a day on email and scheduling. Every single day.',
+  },
+  {
+    num: '05',
+    title: "You're chasing money you've already earned",
+    desc: 'Late invoices and manual reconciliation are costing you hours and cash.',
   },
 ]
 
-// ─── Story item ───────────────────────────────────────────────────────────────────
-function StoryItem({ item, active, color }) {
-  return (
-    <div style={{
-      opacity: active ? 1 : 0.1,
-      transform: active ? 'translateY(0)' : 'translateY(5px)',
-      transition: 'opacity 0.6s ease, transform 0.6s ease',
-    }}>
-      <div style={{
-        fontFamily: 'DM Mono, monospace',
-        fontSize: 'clamp(0.54rem, 0.8vw, 0.6rem)',
-        letterSpacing: '0.14em',
-        color: item.type === 'result' ? color + 'CC' : 'rgba(247,243,237,0.32)',
-        textTransform: 'uppercase',
-        marginBottom: '0.35rem',
-      }}>
-        {item.label}
-      </div>
-
-      {item.type === 'message' && (
-        <div style={{
-          background: 'rgba(255,255,255,0.05)',
-          border: '1px solid rgba(255,255,255,0.09)',
-          borderRadius: '0.6rem',
-          padding: '0.7rem 0.85rem',
-          fontFamily: 'DM Sans, sans-serif',
-          fontSize: 'clamp(0.82rem, 1.3vw, 0.9rem)',
-          color: 'rgba(247,243,237,0.75)',
-          lineHeight: 1.6,
-          whiteSpace: 'pre-line',
-        }}>
-          {item.text}
-        </div>
-      )}
-
-      {item.type === 'result' && (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.55rem' }}>
-          {item.stars && (
-            <span style={{ color, fontSize: '0.95rem', letterSpacing: '0.06em', lineHeight: 1 }}>★★★★★</span>
-          )}
-          {item.check && (
-            <span style={{
-              width: '1.2rem', height: '1.2rem', borderRadius: '50%',
-              background: `${color}20`, border: `1.5px solid ${color}60`,
-              display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
-            }}>
-              <svg width="7" height="6" viewBox="0 0 7 6" fill="none">
-                <path d="M1 3L3 5L6 1" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </span>
-          )}
-          <span style={{
-            fontFamily: 'DM Sans, sans-serif',
-            fontSize: 'clamp(0.85rem, 1.4vw, 0.92rem)',
-            color: 'rgba(247,243,237,0.88)',
-            fontWeight: 500,
-          }}>
-            {item.text}
-          </span>
-        </div>
-      )}
-
-      {item.type === 'trigger' && (
-        <div style={{
-          fontFamily: 'DM Mono, monospace',
-          fontSize: 'clamp(0.72rem, 1.1vw, 0.8rem)',
-          color: 'rgba(247,243,237,0.55)',
-          letterSpacing: '0.02em',
-          lineHeight: 1.5,
-        }}>
-          {item.text}
-        </div>
-      )}
-    </div>
-  )
-}
-
-// ─── Benefit card ─────────────────────────────────────────────────────────────────
-function BenefitCard({ benefit, index }) {
-  const [active, setActive] = useState(false)
-  const [step, setStep]     = useState(-1)
-  const cardRef = useRef(null)
-  const count   = useCounter(benefit.statNum, 1100, active)
-
-  useEffect(() => {
-    const el = cardRef.current
-    if (!el) return
-    const timeouts = []
-    const offset = index * 180
-
-    const runSeq = () => {
-      setStep(-1)
-      timeouts.push(setTimeout(() => setStep(0), 550 + offset))
-      timeouts.push(setTimeout(() => setStep(1), 1500 + offset))
-      timeouts.push(setTimeout(() => setStep(2), 2600 + offset))
-      timeouts.push(setTimeout(runSeq, 7500))
-    }
-
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setActive(true)
-          runSeq()
-          obs.disconnect()
-        }
-      },
-      { threshold: 0.15 }
-    )
-    obs.observe(el)
-    return () => {
-      obs.disconnect()
-      timeouts.forEach(clearTimeout)
-    }
-  }, [index])
+function ProblemCard({ problem, index }) {
+  const [hovered, setHovered] = useState(false)
 
   return (
     <div
-      ref={cardRef}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
       style={{
-        background: '#0F0F0D',
-        border: '1px solid rgba(255,255,255,0.07)',
-        borderTop: `3px solid ${benefit.color}`,
+        flex: '1 1 0',
+        minWidth: 0,
+        backgroundColor: '#FFFFFF',
+        border: '1px solid rgba(212,201,176,0.6)',
         borderRadius: '1.25rem',
-        padding: 'clamp(1.5rem, 3vw, 2rem)',
+        padding: '2rem 1.5rem',
+        position: 'relative',
+        overflow: 'hidden',
+        cursor: 'default',
+        transform: hovered ? 'translateY(-6px)' : 'translateY(0)',
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+        boxShadow: hovered
+          ? '0 12px 40px rgba(143,175,159,0.15)'
+          : '0 2px 8px rgba(28,28,26,0.04)',
         display: 'flex',
         flexDirection: 'column',
+        gap: '0.75rem',
       }}
     >
-      {/* Check badge */}
-      <div style={{
-        width: '2.1rem', height: '2.1rem', borderRadius: '50%',
-        background: `${benefit.color}15`, border: `1.5px solid ${benefit.color}38`,
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        marginBottom: '1.35rem', flexShrink: 0,
-      }}>
-        <svg width="13" height="10" viewBox="0 0 13 10" fill="none">
-          <path d="M1.5 5.5L5 9L11.5 1" stroke={benefit.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
+      {/* Sage accent bar — slides in from left on hover */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          height: '3px',
+          width: '100%',
+          background: '#8FAF9F',
+          transform: hovered ? 'scaleX(1)' : 'scaleX(0)',
+          transformOrigin: 'left center',
+          transition: 'transform 0.35s ease',
+          borderRadius: '0 0 2px 2px',
+        }}
+      />
+
+      {/* Pulsing dot — top right */}
+      <div
+        style={{
+          position: 'absolute',
+          top: '1.25rem',
+          right: '1.25rem',
+          width: '8px',
+          height: '8px',
+          borderRadius: '50%',
+          backgroundColor: '#D97757',
+          animation: 'problem-pulse 2s ease-in-out infinite',
+          animationDelay: `${index * 0.3}s`,
+        }}
+      />
+
+      {/* Ghost number */}
+      <div
+        className="font-cormorant"
+        style={{
+          fontSize: '5rem',
+          fontWeight: 700,
+          lineHeight: 1,
+          color: hovered ? '#8FAF9F' : 'rgba(28,28,26,0.06)',
+          opacity: hovered ? 0.45 : 1,
+          transition: 'color 0.3s ease, opacity 0.3s ease',
+          letterSpacing: '-0.04em',
+          userSelect: 'none',
+          pointerEvents: 'none',
+          marginBottom: '-0.5rem',
+        }}
+      >
+        {problem.num}
       </div>
 
-      {/* Stat */}
-      <div style={{
-        fontFamily: 'DM Sans, sans-serif',
-        fontSize: 'clamp(3.5rem, 6vw, 5.5rem)',
-        fontWeight: 800,
-        color: '#F7F3ED',
-        lineHeight: 0.92,
-        letterSpacing: '-0.045em',
-        marginBottom: '0.5rem',
-      }}>
-        {benefit.statPrefix}{count}{benefit.statSuffix}
-      </div>
-
-      <div style={{
-        fontFamily: 'DM Sans, sans-serif',
-        fontSize: 'clamp(0.88rem, 1.5vw, 1rem)',
-        color: benefit.color,
-        fontWeight: 500,
-        marginBottom: '0.9rem',
-      }}>
-        {benefit.statLabel}
-      </div>
-
-      <p style={{
-        fontFamily: 'DM Sans, sans-serif',
-        fontSize: 'clamp(0.85rem, 1.4vw, 0.94rem)',
-        color: 'rgba(247,243,237,0.38)',
-        lineHeight: 1.7,
-        fontWeight: 300,
-        margin: 0,
-      }}>
-        {benefit.description}
+      {/* Title */}
+      <p
+        className="font-dm"
+        style={{
+          fontSize: '0.95rem',
+          fontWeight: 600,
+          color: '#1C1C1A',
+          lineHeight: 1.35,
+          margin: 0,
+        }}
+      >
+        {problem.title}
       </p>
 
-      {/* Divider */}
-      <div style={{
-        height: '1px',
-        background: `linear-gradient(to right, ${benefit.color}45, rgba(255,255,255,0.06) 55%, transparent)`,
-        margin: '1.5rem 0',
-      }} />
+      {/* Description */}
+      <p
+        className="font-dm"
+        style={{
+          fontSize: '0.82rem',
+          fontWeight: 300,
+          color: 'rgba(28,28,26,0.5)',
+          lineHeight: 1.65,
+          margin: 0,
+        }}
+      >
+        {problem.desc}
+      </p>
 
-      {/* Animated story */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem', flex: 1 }}>
-        {benefit.story.map((item, i) => (
-          <div key={i}>
-            <StoryItem item={item} active={step >= i} color={benefit.color} />
-            {i < benefit.story.length - 1 && (
-              <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)', marginTop: '1.1rem' }} />
-            )}
-          </div>
-        ))}
-      </div>
-
-      {/* Progress dots */}
-      <div style={{ display: 'flex', gap: '0.4rem', marginTop: '1.5rem', alignItems: 'center' }}>
-        {benefit.story.map((_, i) => (
-          <div key={i} style={{
-            height: '3px',
-            width: step >= i ? '1.8rem' : '0.55rem',
-            borderRadius: '9999px',
-            background: step >= i ? benefit.color : 'rgba(255,255,255,0.12)',
-            transition: 'width 0.45s cubic-bezier(0.34,1.56,0.64,1), background 0.35s ease',
-            flexShrink: 0,
-          }} />
-        ))}
-      </div>
+      {/* Warm glow overlay on hover */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          borderRadius: '1.25rem',
+          background: 'radial-gradient(ellipse at 50% 100%, rgba(196,169,122,0.07) 0%, transparent 70%)',
+          opacity: hovered ? 1 : 0,
+          transition: 'opacity 0.3s ease',
+          pointerEvents: 'none',
+        }}
+      />
     </div>
   )
 }
 
-// ─── Section ──────────────────────────────────────────────────────────────────────
 export default function Benefits() {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
+  const stripRef = useRef(null)
+  const sectionRef = useRef(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 900)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
+
+  // Detect active card on mobile scroll
+  useEffect(() => {
+    if (!isMobile || !stripRef.current) return
+    const el = stripRef.current
+    const handleScroll = () => {
+      const cardWidth = el.scrollWidth / PROBLEMS.length
+      const idx = Math.round(el.scrollLeft / cardWidth)
+      setActiveIndex(Math.min(idx, PROBLEMS.length - 1))
+    }
+    el.addEventListener('scroll', handleScroll, { passive: true })
+    return () => el.removeEventListener('scroll', handleScroll)
+  }, [isMobile])
+
+  // Fade in section
+  useEffect(() => {
+    const el = sectionRef.current
+    if (!el) return
+    const obs = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); obs.disconnect() } },
+      { threshold: 0.1 }
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [])
+
   return (
-    <section style={{
-      backgroundColor: '#1C1C1A',
-      padding: 'clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 4rem)',
-    }}>
+    <section
+      ref={sectionRef}
+      style={{
+        backgroundColor: '#F7F3ED',
+        padding: '7rem 1.5rem',
+        opacity: visible ? 1 : 0,
+        transform: visible ? 'translateY(0)' : 'translateY(20px)',
+        transition: 'opacity 0.7s ease, transform 0.7s ease',
+      }}
+    >
+      <style>{`
+        @keyframes problem-pulse {
+          0%, 100% { transform: scale(1); opacity: 0.7; }
+          50% { transform: scale(1.5); opacity: 0.3; }
+        }
+        .problem-strip::-webkit-scrollbar { display: none; }
+        .problem-strip { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
+
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ marginBottom: 'clamp(2.5rem, 5vw, 4rem)' }}>
-          <h2 style={{
-            fontFamily: 'Cormorant Garamond, serif',
-            fontSize: 'clamp(2.8rem, 6vw, 5.5rem)',
-            fontWeight: 700,
-            lineHeight: 1.0,
-            letterSpacing: '-0.025em',
-            maxWidth: '800px',
-            marginBottom: '1.25rem',
-          }}>
-            <span style={{ color: '#F7F3ED' }}>Save Hours. Cut Costs.</span>
-            <br />
-            <span style={{ color: '#8FAF9F' }}>Grow Faster.</span>
+        {/* Header */}
+        <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+          <p
+            className="font-mono"
+            style={{ fontSize: '0.68rem', letterSpacing: '0.18em', color: '#8FAF9F', marginBottom: '1rem', fontWeight: 500 }}
+          >
+            THE PROBLEM
+          </p>
+          <h2
+            className="font-cormorant"
+            style={{
+              fontSize: 'clamp(2rem, 4vw, 3.5rem)',
+              fontWeight: 600,
+              color: '#1C1C1A',
+              lineHeight: 1.15,
+              marginBottom: '1rem',
+            }}
+          >
+            You're the most expensive person in your business —<br />doing the cheapest tasks.
           </h2>
-          <p style={{
-            fontFamily: 'DM Sans, sans-serif',
-            fontSize: 'clamp(0.9rem, 1.2vw, 1rem)',
-            color: '#8A8A7A',
-            lineHeight: 1.6,
-            maxWidth: '340px',
-          }}>
-            Real results from AI that automates quoting, scheduling, and admin — so your business runs smarter every day.
+          <p
+            className="font-dm"
+            style={{
+              fontSize: '1.05rem',
+              fontWeight: 300,
+              color: 'rgba(28,28,26,0.55)',
+              maxWidth: '520px',
+              margin: '0 auto',
+              lineHeight: 1.7,
+            }}
+          >
+            Every hour you spend chasing invoices, following up leads, or writing the same email again is an hour you're not growing your business.
           </p>
         </div>
 
-        <div className="benefits-grid" style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: 'clamp(1rem, 2vw, 1.5rem)',
-        }}>
-          {BENEFITS.map((b, i) => (
-            <BenefitCard key={b.id} benefit={b} index={i} />
-          ))}
-        </div>
-      </div>
+        {/* Card strip */}
+        <div style={{ position: 'relative' }}>
+          {/* Edge fade — left */}
+          {isMobile && (
+            <div style={{
+              position: 'absolute', left: 0, top: 0, bottom: 0, width: '40px', zIndex: 2, pointerEvents: 'none',
+              background: 'linear-gradient(to right, #F7F3ED, transparent)',
+            }} />
+          )}
+          {/* Edge fade — right */}
+          {isMobile && (
+            <div style={{
+              position: 'absolute', right: 0, top: 0, bottom: 0, width: '40px', zIndex: 2, pointerEvents: 'none',
+              background: 'linear-gradient(to left, #F7F3ED, transparent)',
+            }} />
+          )}
 
-      <style>{`
-        @media (max-width: 860px) {
-          .benefits-grid { grid-template-columns: 1fr !important; }
-        }
-        @media (min-width: 861px) and (max-width: 1060px) {
-          .benefits-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-      `}</style>
+          <div
+            ref={stripRef}
+            className="problem-strip"
+            style={{
+              display: 'flex',
+              gap: '1rem',
+              overflowX: isMobile ? 'auto' : 'visible',
+              paddingBottom: isMobile ? '0.5rem' : 0,
+              scrollSnapType: isMobile ? 'x mandatory' : 'none',
+            }}
+          >
+            {PROBLEMS.map((p, i) => (
+              <div
+                key={p.num}
+                style={{
+                  scrollSnapAlign: isMobile ? 'center' : 'none',
+                  flexShrink: isMobile ? 0 : 1,
+                  width: isMobile ? '78vw' : 'auto',
+                  flex: isMobile ? 'none' : '1 1 0',
+                  transform: isMobile && activeIndex !== i ? 'scale(0.97)' : 'scale(1)',
+                  opacity: isMobile && activeIndex !== i ? 0.8 : 1,
+                  transition: 'transform 0.3s ease, opacity 0.3s ease',
+                }}
+              >
+                <ProblemCard problem={p} index={i} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile scroll dots */}
+        {isMobile && (
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '0.4rem', marginTop: '1.5rem' }}>
+            {PROBLEMS.map((_, i) => (
+              <div
+                key={i}
+                style={{
+                  height: '3px',
+                  width: activeIndex === i ? '1.5rem' : '0.5rem',
+                  borderRadius: '9999px',
+                  background: activeIndex === i ? '#8FAF9F' : 'rgba(143,175,159,0.25)',
+                  transition: 'width 0.3s ease, background 0.3s ease',
+                }}
+              />
+            ))}
+          </div>
+        )}
+      </div>
     </section>
   )
 }
