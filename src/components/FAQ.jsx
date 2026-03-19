@@ -6,28 +6,20 @@ gsap.registerPlugin(ScrollTrigger)
 
 const faqs = [
   {
-    q: 'How does this work with our existing tools and systems?',
-    a: 'We build on top of what you already use. Whether that\'s HubSpot, Notion, Gmail, Slack, or custom software — our automations connect your stack without replacing it. No rip-and-replace, just intelligent layers on top.',
+    q: 'Will this work for my type of business?',
+    a: "If you run a service business and you have repetitive tasks — yes. We work with coaches, consultants, trades, agencies, and healthcare practices. If you're wearing too many hats, we can help. The free audit tells you exactly how much.",
   },
   {
-    q: 'What happens if the AI makes a mistake?',
-    a: 'Every system we build has human checkpoints for anything consequential. AI handles the volume work; humans approve anything that matters. You stay in control — we just remove the grunt work.',
+    q: 'Do I need to learn new software?',
+    a: "No. We build everything inside the tools you already use — Gmail, Notion, HubSpot, Slack, whatever you've got. Nothing changes about how you work. We just remove the slow parts.",
   },
   {
-    q: 'Do we own the system or is this a subscription?',
-    a: 'Both. The automations we build are yours — they live in your tools and accounts. The monthly subscription keeps them maintained, improved, and running as your business changes.',
+    q: 'How long until I see results?',
+    a: "Most clients save meaningful time in the first two weeks. Full ROI usually lands within six months. We move fast because we've done this before.",
   },
   {
-    q: 'Can we customise the rules and workflows for our business?',
-    a: 'Entirely. Every automation is built around your specific processes, language, and standards. Nothing is templated — it\'s designed for how your business actually works.',
-  },
-  {
-    q: 'How long until we see results?',
-    a: 'Most clients see meaningful time savings within the first two weeks of deployment. Full ROI typically lands within the first month. We move fast because we\'ve built this before.',
-  },
-  {
-    q: 'How is this different from chatbots or other AI tools?',
-    a: 'Chatbots answer questions. We build systems that take actions — researching leads, sending emails, updating records, generating content. It\'s the difference between a receptionist and an operations team.',
+    q: "What if it doesn't work?",
+    a: "That's what the free audit is for. Before we build anything, we show you exactly what we'll automate and how many hours it saves. You see the numbers first. If they don't impress you — walk away, no charge.",
   },
 ]
 
@@ -213,13 +205,13 @@ export default function FAQ() {
         {/* Section heading */}
         <div ref={headingRef} className="mb-12">
           <p className="font-dm text-charcoal/40 mb-3" style={{ fontSize: '0.8rem', letterSpacing: '0.18em', fontWeight: 500 }}>
-            COMMON QUESTIONS
+            QUESTIONS
           </p>
           <h2
             className="font-cormorant text-charcoal"
-            style={{ fontSize: 'clamp(3rem, 5.5vw, 6rem)', fontWeight: 700, lineHeight: 1.0, letterSpacing: '-0.02em' }}
+            style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(3rem, 5.5vw, 6rem)', fontWeight: 700, lineHeight: 1.0, letterSpacing: '-0.02em' }}
           >
-            Questions people ask<br />before getting started.
+            You probably have a few questions.<br />Here are the honest answers.
           </h2>
           <p className="font-dm text-charcoal/50 mt-4" style={{ fontSize: '1.05rem', fontWeight: 300, maxWidth: '480px', lineHeight: 1.7 }}>
             Straightforward answers to the questions we hear most.
