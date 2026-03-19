@@ -217,6 +217,30 @@ export default function AuditReport() {
                 </p>
               </div>
             </div>
+
+            {/* CTA under hero stats */}
+            <div style={{ marginTop: '28px', textAlign: 'center' }}>
+              <a
+                href={CALENDAR_LINK}
+                style={{
+                  display: 'inline-block',
+                  background: C.green,
+                  color: '#0c0c0c',
+                  fontFamily: 'DM Sans, sans-serif',
+                  fontSize: '0.95rem',
+                  fontWeight: 700,
+                  padding: '15px 36px',
+                  borderRadius: '9999px',
+                  textDecoration: 'none',
+                  letterSpacing: '0.01em',
+                }}
+              >
+                Show me how to stop the bleeding →
+              </a>
+              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.75rem', color: C.faint, margin: '10px 0 0' }}>
+                Free 30-min strategy call · No pitch deck · No obligation
+              </p>
+            </div>
           </div>
 
           <Divider />
