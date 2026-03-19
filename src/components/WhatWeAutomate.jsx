@@ -91,7 +91,7 @@ function PipelineVisual({ color }) {
 
       {/* Animated dot */}
       <circle
-        cx={dotPos}
+        cx={dotX}
         cy={28}
         r={5}
         fill={color}
