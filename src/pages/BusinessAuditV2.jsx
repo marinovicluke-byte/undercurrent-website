@@ -124,7 +124,11 @@ function PillarSection({ pillar, state, onChange }) {
 
   const setHours = (val) => onChange({ ...state, hours: val })
   const setRating = (r) => onChange({ ...state, selfRating: r === state.selfRating ? null : r })
-  const setSubtask = (key, val) => onChange({ ...state, subtasks: { ...state.subtasks, [key]: val } })
+  const setSubtask = (key, val) => {
+    const newSubtasks = { ...state.subtasks, [key]: val }
+    const subtaskSum = pillar.subtasks.reduce((sum, st) => sum + (newSubtasks[st.key] || 0), 0)
+    onChange({ ...state, subtasks: newSubtasks, hours: subtaskSum })
+  }
 
   const pillStyle = {
     padding: '20px 0',
@@ -158,7 +162,7 @@ function PillarSection({ pillar, state, onChange }) {
         label="Hours per week"
         value={state.hours}
         onChange={setHours}
-        max={40}
+        max={Math.max(40, state.hours)}
         step={0.5}
       />
 
