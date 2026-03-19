@@ -55,7 +55,7 @@ const STORIES = [
 ]
 
 // ─── Individual story card ────────────────────────────────────────────────────
-function StoryCard({ story, isActive, index, totalCards }) {
+function StoryCard({ story, isActive, index, totalCards, onActivate }) {
   const [phase, setPhase] = useState(0)
   const timers = useRef([])
 
@@ -76,6 +76,7 @@ function StoryCard({ story, isActive, index, totalCards }) {
 
   return (
     <div
+      onClick={!isActive ? onActivate : undefined}
       style={{
         flexShrink: 0,
         width: 'var(--card-width)',
@@ -87,6 +88,7 @@ function StoryCard({ story, isActive, index, totalCards }) {
         scrollSnapAlign: 'center',
         display: 'flex',
         flexDirection: 'column',
+        cursor: !isActive ? 'pointer' : 'default',
         transition: 'opacity 0.3s ease, transform 0.3s ease',
         opacity: isActive ? 1 : 0.5,
         transform: isActive ? 'scale(1)' : 'scale(0.97)',
@@ -231,6 +233,17 @@ export default function Benefits() {
   const stripRef = useRef(null)
   const [activeIndex, setActiveIndex] = useState(0)
 
+  // Click a card to activate it — scroll it into view
+  const handleActivate = (index) => {
+    const el = stripRef.current
+    if (!el) return
+    const firstCard = el.firstElementChild
+    if (!firstCard) return
+    const cardW = firstCard.offsetWidth + 20
+    el.scrollTo({ left: index * cardW, behavior: 'smooth' })
+    setActiveIndex(index)
+  }
+
   // Track active card by scroll position
   useEffect(() => {
     const el = stripRef.current
@@ -306,6 +319,7 @@ export default function Benefits() {
             isActive={activeIndex === i}
             index={i}
             totalCards={STORIES.length}
+            onActivate={() => handleActivate(i)}
           />
         ))}
       </div>
