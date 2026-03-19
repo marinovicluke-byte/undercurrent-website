@@ -109,6 +109,7 @@ export function buildPayload({ contact, context, pillars, totalMonthly, response
       response_time_band: responseTimeBand || null,
       leads_per_month_band: bandLeads(leadsPerMonth),
       project_value_band: bandProjectValue(projectValue),
+      total_monthly_loss: Math.round(totalMonthly),
       total_monthly_loss_band: bandMonthlyLoss(totalMonthly),
       pillars: activePillars,
     },

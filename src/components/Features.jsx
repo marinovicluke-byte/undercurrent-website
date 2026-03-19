@@ -36,13 +36,11 @@ function AutomationCard() {
         Lead follow-up, client onboarding, bookings, and re-engagement running 24/7 without human input.
       </p>
 
-      {/* Shuffling cards */}
       <div className="relative flex-1 flex items-center justify-center" style={{ minHeight: '140px', height: '140px', overflow: 'hidden' }}>
         {items.map((item, i) => {
           const offset = (i - active + items.length) % items.length
           const isActive = offset === 0
           const isNext = offset === 1
-          const isPrev = offset === 2
 
           return (
             <div
@@ -202,7 +200,6 @@ function SchedulerCard() {
         We hand the repetitive stuff to intelligent systems so you and your team can focus on work that actually moves things forward.
       </p>
 
-      {/* Weekly grid */}
       <div className="flex-1">
         <div className="grid grid-cols-5 gap-1.5 mb-3">
           {days.map((day, i) => (
@@ -223,7 +220,7 @@ function SchedulerCard() {
         </div>
 
         <div className="space-y-2">
-          {events.map((event, i) => (
+          {events.map((event) => (
             <div
               key={event.label}
               className="flex items-center gap-3 rounded-xl px-3 py-2 transition-all duration-700"
@@ -253,27 +250,21 @@ function SchedulerCard() {
 export default function Features() {
   const sectionRef = useRef(null)
   const headingRef = useRef(null)
-  const cardsRef = useRef(null)
+  const cardsRef   = useRef(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(headingRef.current,
         { y: 20, opacity: 0 },
-        {
-          y: 0, opacity: 1, duration: 0.45, ease: 'power3.out',
-          scrollTrigger: { trigger: headingRef.current, start: 'top 95%' }
-        }
+        { y: 0, opacity: 1, duration: 0.45, ease: 'power3.out',
+          scrollTrigger: { trigger: headingRef.current, start: 'top 95%' } }
       )
-
       gsap.fromTo(cardsRef.current.children,
         { y: 25, opacity: 0 },
-        {
-          y: 0, opacity: 1, duration: 0.4, ease: 'power3.out', stagger: 0.08,
-          scrollTrigger: { trigger: cardsRef.current, start: 'top 95%' }
-        }
+        { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out', stagger: 0.08,
+          scrollTrigger: { trigger: cardsRef.current, start: 'top 95%' } }
       )
     }, sectionRef)
-
     return () => ctx.revert()
   }, [])
 

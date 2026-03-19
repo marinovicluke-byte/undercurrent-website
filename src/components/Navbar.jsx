@@ -113,14 +113,14 @@ export default function Navbar({ ready = true, isSubPage = false }) {
         { label: 'How it works', href: '#protocol' },
         { label: 'Services', href: '/services' },
         { label: 'Pricing', href: '#pricing' },
-        { label: 'ROI Calculator', href: '/roi' },
+        { label: 'Business Audit', href: '/audit' },
         { label: 'About', href: '/about' },
       ]
     : [
         { label: 'How it works', href: '/#protocol' },
         { label: 'Services', href: '/services' },
         { label: 'Pricing', href: '/#pricing' },
-        { label: 'ROI Calculator', href: '/roi' },
+        { label: 'Business Audit', href: '/audit' },
         { label: 'About', href: '/about' },
       ]
 

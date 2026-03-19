@@ -232,6 +232,345 @@ function BreakdownBar({ label, hours, hourlyRate, maxCost }) {
   )
 }
 
+// ─── Project Estimation Calculator ───────────────────────────────────────────
+function ProjectEstimationCalc() {
+  const [serviceType, setServiceType] = useState('both')
+  const [workflows, setWorkflows] = useState(3)
+  const [aiTraining, setAiTraining] = useState(false)
+  const [maintenance, setMaintenance] = useState(false)
+  const [timeline, setTimeline] = useState('regular')
+
+  const isBoth = serviceType === 'both'
+
+  const calculatePrice = () => {
+    const bases = { strategy: 599, automation: 999, both: 1299 }
+    const perW  = { strategy: 200, automation: 350, both: 499 }
+    let total = bases[serviceType] + (workflows - 1) * perW[serviceType]
+    if (aiTraining) total += workflows * 200
+    if (maintenance) total += workflows * 100
+    if (timeline === 'rush') total += workflows * 300
+    if (timeline === 'fast') total += workflows * 100
+    return total
+  }
+
+  const calculateAgencyCost = () => {
+    const perW = isBoth ? 3000 : 1500
+    return 20000 + (workflows - 1) * perW
+  }
+
+  const calculateFreelancerCost = () => {
+    const perW = isBoth ? 1000 : 500
+    return 3000 + (workflows - 1) * perW
+  }
+
+  const price          = calculatePrice()
+  const agencyCost     = calculateAgencyCost()
+  const freelancerCost = calculateFreelancerCost()
+
+  const radioOuter = (active) => ({
+    width: '20px', height: '20px', borderRadius: '50%',
+    border: `2px solid ${active ? '#8FAF9F' : 'rgba(232,224,208,0.28)'}`,
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+    flexShrink: 0, transition: 'border-color 0.2s',
+    backgroundColor: active ? 'rgba(143,175,159,0.12)' : 'transparent',
+    cursor: 'pointer',
+  })
+  const radioInner = (active) => ({
+    width: '8px', height: '8px', borderRadius: '50%',
+    backgroundColor: '#8FAF9F',
+    opacity: active ? 1 : 0, transition: 'opacity 0.2s',
+  })
+  const checkboxOuter = (active) => ({
+    width: '20px', height: '20px', borderRadius: '4px',
+    border: `2px solid ${active ? '#8FAF9F' : 'rgba(232,224,208,0.28)'}`,
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+    flexShrink: 0, transition: 'all 0.2s',
+    backgroundColor: active ? '#8FAF9F' : 'transparent',
+    cursor: 'pointer',
+  })
+
+  const labelText = (active) => ({
+    fontFamily: 'DM Sans, sans-serif', fontSize: '0.87rem',
+    color: '#E8E0D0', opacity: active ? 1 : 0.55, transition: 'opacity 0.2s',
+  })
+
+  const sectionDivider = {
+    borderTop: '1px solid rgba(232,224,208,0.1)',
+    paddingTop: '20px', marginTop: '20px',
+  }
+
+  const costCard = {
+    padding: '18px 22px', borderRadius: '16px',
+    backgroundColor: 'rgba(232,224,208,0.08)',
+    border: '1px solid rgba(212,201,176,0.18)',
+  }
+
+  return (
+    <section style={{ padding: '0 24px 80px', position: 'relative' }}>
+      <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+
+        {/* Header */}
+        <Reveal>
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <p style={{
+              fontFamily: 'DM Mono, monospace', fontSize: '0.68rem',
+              letterSpacing: '0.2em', textTransform: 'uppercase',
+              color: '#8FAF9F', marginBottom: '10px',
+            }}>
+              Project Estimation Calculator
+            </p>
+            <h2 style={{
+              fontFamily: 'Cormorant Garamond, serif',
+              fontSize: 'clamp(1.9rem, 3.8vw, 3rem)',
+              fontWeight: 400, color: '#1C1C1A', margin: 0, letterSpacing: '-0.02em',
+            }}>
+              Get your automation package within budget
+            </h2>
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(320px, 100%), 1fr))',
+            borderRadius: '24px', overflow: 'hidden',
+            border: '1px solid rgba(212,201,176,0.45)',
+            boxShadow: '0 8px 48px rgba(28,28,26,0.10)',
+          }}>
+
+            {/* ── LEFT: Form ─────────────────────────────────────────── */}
+            <div style={{ backgroundColor: '#1C1C1A', padding: 'clamp(24px, 4vw, 40px)' }}>
+
+              {/* Service Type */}
+              <div>
+                <h3 style={{
+                  fontFamily: 'Cormorant Garamond, serif', fontSize: '1.1rem',
+                  fontWeight: 600, color: '#E8E0D0', margin: '0 0 14px',
+                }}>
+                  What do you need?
+                </h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  {[
+                    { value: 'automation', label: 'Automation Build Only' },
+                    { value: 'strategy',   label: 'Strategy & Audit Only' },
+                    { value: 'both',       label: 'Strategy + Automation' },
+                  ].map(opt => (
+                    <label
+                      key={opt.value}
+                      style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer' }}
+                      onClick={() => setServiceType(opt.value)}
+                    >
+                      <div style={radioOuter(serviceType === opt.value)}>
+                        <div style={radioInner(serviceType === opt.value)} />
+                      </div>
+                      <span style={labelText(serviceType === opt.value)}>{opt.label}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Number of Workflows */}
+              <div style={sectionDivider}>
+                <h3 style={{
+                  fontFamily: 'Cormorant Garamond, serif', fontSize: '1.1rem',
+                  fontWeight: 600, color: '#E8E0D0', margin: '0 0 14px',
+                }}>
+                  Workflows to automate:{' '}
+                  <span style={{ color: '#8FAF9F' }}>{workflows}</span>
+                </h3>
+                <input
+                  type="range" min={1} max={20} step={1}
+                  value={workflows}
+                  onChange={e => setWorkflows(Number(e.target.value))}
+                  className="est-slider"
+                />
+                <div style={{
+                  display: 'flex', justifyContent: 'space-between',
+                  fontFamily: 'DM Mono, monospace', fontSize: '0.7rem',
+                  color: 'rgba(232,224,208,0.3)', marginTop: '4px',
+                }}>
+                  <span>1</span><span>20</span>
+                </div>
+              </div>
+
+              {/* Add-ons */}
+              <div style={sectionDivider}>
+                <h3 style={{
+                  fontFamily: 'Cormorant Garamond, serif', fontSize: '1.1rem',
+                  fontWeight: 600, color: '#E8E0D0', margin: '0 0 14px',
+                }}>
+                  Add-ons
+                </h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  {[
+                    { label: 'Custom AI training & prompting', price: '+$200/workflow', val: aiTraining, toggle: () => setAiTraining(v => !v) },
+                    { label: 'Ongoing support & maintenance',  price: '+$100/workflow', val: maintenance, toggle: () => setMaintenance(v => !v) },
+                  ].map(item => (
+                    <label
+                      key={item.label}
+                      style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer' }}
+                      onClick={item.toggle}
+                    >
+                      <div style={checkboxOuter(item.val)}>
+                        {item.val && (
+                          <svg width="11" height="8" viewBox="0 0 11 8" fill="none">
+                            <path d="M1 4L4 7L10 1" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        )}
+                      </div>
+                      <span style={{ ...labelText(item.val), flex: 1 }}>{item.label}</span>
+                      <span style={{
+                        fontFamily: 'DM Mono, monospace', fontSize: '0.72rem',
+                        color: '#8FAF9F', whiteSpace: 'nowrap',
+                      }}>{item.price}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Timeline */}
+              <div style={sectionDivider}>
+                <h3 style={{
+                  fontFamily: 'Cormorant Garamond, serif', fontSize: '1.1rem',
+                  fontWeight: 600, color: '#E8E0D0', margin: '0 0 14px',
+                }}>
+                  How fast do you need this?
+                </h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  {[
+                    { value: 'rush',    label: 'Within 1 Week',              price: '+$300/workflow' },
+                    { value: 'fast',    label: 'Within 2 Weeks',             price: '+$100/workflow' },
+                    { value: 'regular', label: 'Flexible (Based on Discussion)', price: null },
+                  ].map(opt => (
+                    <label
+                      key={opt.value}
+                      style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer' }}
+                      onClick={() => setTimeline(opt.value)}
+                    >
+                      <div style={radioOuter(timeline === opt.value)}>
+                        <div style={radioInner(timeline === opt.value)} />
+                      </div>
+                      <span style={{ ...labelText(timeline === opt.value), flex: 1 }}>{opt.label}</span>
+                      {opt.price && (
+                        <span style={{
+                          fontFamily: 'DM Mono, monospace', fontSize: '0.72rem',
+                          color: '#8FAF9F', whiteSpace: 'nowrap',
+                        }}>{opt.price}</span>
+                      )}
+                    </label>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* ── RIGHT: Cost Estimation ──────────────────────────────── */}
+            <div style={{
+              backgroundColor: '#FDFAF6',
+              padding: 'clamp(24px, 4vw, 40px)',
+              display: 'flex', flexDirection: 'column', gap: '14px',
+              borderLeft: '1px solid rgba(212,201,176,0.35)',
+            }}>
+              <div>
+                <h3 style={{
+                  fontFamily: 'Cormorant Garamond, serif', fontSize: '1.3rem',
+                  fontWeight: 600, color: '#1C1C1A', margin: '0 0 6px',
+                }}>
+                  Estimated Cost
+                </h3>
+                <p style={{
+                  fontFamily: 'DM Sans, sans-serif', fontSize: '0.82rem',
+                  color: '#1C1C1A', opacity: 0.45, margin: 0,
+                }}>
+                  See how UnderCurrent compares
+                </p>
+              </div>
+
+              {/* Agency */}
+              <div style={costCard}>
+                <div style={{
+                  fontFamily: 'DM Mono, monospace', fontSize: '0.68rem',
+                  letterSpacing: '0.1em', textTransform: 'uppercase',
+                  color: '#1C1C1A', opacity: 0.45, marginBottom: '6px',
+                }}>
+                  Typical agency charges minimum
+                </div>
+                <div style={{
+                  fontFamily: 'Cormorant Garamond, serif',
+                  fontSize: 'clamp(1.8rem, 3vw, 2.4rem)',
+                  fontWeight: 700, color: '#1C1C1A',
+                  lineHeight: 1.05, letterSpacing: '-0.02em',
+                }}>
+                  ${agencyCost.toLocaleString()}
+                </div>
+                <div style={{
+                  fontFamily: 'DM Sans, sans-serif', fontSize: '0.76rem',
+                  color: '#1C1C1A', opacity: 0.4, marginTop: '4px',
+                }}>
+                  + Long timelines &amp; ongoing retainer fees
+                </div>
+              </div>
+
+              {/* Freelancer */}
+              <div style={costCard}>
+                <div style={{
+                  fontFamily: 'DM Mono, monospace', fontSize: '0.68rem',
+                  letterSpacing: '0.1em', textTransform: 'uppercase',
+                  color: '#1C1C1A', opacity: 0.45, marginBottom: '6px',
+                }}>
+                  Regular freelancer charges minimum
+                </div>
+                <div style={{
+                  fontFamily: 'Cormorant Garamond, serif',
+                  fontSize: 'clamp(1.8rem, 3vw, 2.4rem)',
+                  fontWeight: 700, color: '#1C1C1A',
+                  lineHeight: 1.05, letterSpacing: '-0.02em',
+                }}>
+                  ${freelancerCost.toLocaleString()}
+                </div>
+                <div style={{
+                  fontFamily: 'DM Sans, sans-serif', fontSize: '0.76rem',
+                  color: '#1C1C1A', opacity: 0.4, marginTop: '4px',
+                }}>
+                  + Inconsistent quality &amp; no AI expertise
+                </div>
+              </div>
+
+              {/* UnderCurrent price */}
+              <div style={{
+                padding: '22px 24px', borderRadius: '16px',
+                background: 'linear-gradient(135deg, #8FAF9F 0%, #6B7C4A 100%)',
+              }}>
+                <div style={{
+                  fontFamily: 'DM Mono, monospace', fontSize: '0.68rem',
+                  letterSpacing: '0.1em', textTransform: 'uppercase',
+                  color: 'rgba(255,255,255,0.72)', marginBottom: '6px',
+                }}>
+                  With UnderCurrent
+                </div>
+                <div style={{
+                  fontFamily: 'Cormorant Garamond, serif',
+                  fontSize: 'clamp(2rem, 3.5vw, 2.8rem)',
+                  fontWeight: 700, color: '#fff',
+                  lineHeight: 1.05, letterSpacing: '-0.02em',
+                }}>
+                  ${price.toLocaleString()}
+                </div>
+                <div style={{
+                  fontFamily: 'DM Sans, sans-serif', fontSize: '0.82rem',
+                  color: 'rgba(255,255,255,0.85)', marginTop: '4px',
+                }}>
+                  Save time, money &amp; get real results
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  )
+}
+
 // ─── Hero entrance animation hook ────────────────────────────────────────────
 function useHeroEntrance(heroRef, glowRef, headlineRef, subRef) {
   useEffect(() => {
@@ -413,6 +752,46 @@ export default function ROICalculator() {
         @keyframes blink {
           0%, 100% { opacity: 1; }
           50%       { opacity: 0; }
+        }
+
+        /* ── Project estimation slider (dark bg) ── */
+        .est-slider {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 100%;
+          height: 3px;
+          background: rgba(143,175,159,0.25);
+          border-radius: 2px;
+          outline: none;
+          cursor: pointer;
+          margin-bottom: 4px;
+          transition: background 0.2s;
+          display: block;
+        }
+        .est-slider:hover { background: rgba(143,175,159,0.42); }
+        .est-slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          background: #8FAF9F;
+          border: 2px solid #1C1C1A;
+          box-shadow: 0 0 0 1px #8FAF9F, 0 2px 8px rgba(143,175,159,0.45);
+          cursor: pointer;
+          transition: transform 0.15s ease, background 0.15s ease;
+        }
+        .est-slider::-webkit-slider-thumb:hover {
+          transform: scale(1.2);
+          background: #6B7C4A;
+          box-shadow: 0 0 0 1px #6B7C4A, 0 4px 16px rgba(107,124,74,0.45);
+        }
+        .est-slider::-moz-range-thumb {
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          background: #8FAF9F;
+          border: 2px solid #1C1C1A;
+          cursor: pointer;
         }
       `}</style>
 
@@ -776,6 +1155,9 @@ export default function ROICalculator() {
           </div>
           </div>
         </section>
+
+        {/* ── Project Estimation Calculator ─────────────────────────────── */}
+        <ProjectEstimationCalc />
 
         {/* ── CTA Strip ─────────────────────────────────────────────────── */}
         <Reveal>

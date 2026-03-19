@@ -1,10 +1,9 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ScrollProgressBar from '../components/ScrollProgressBar'
 import PageHead from '../components/PageHead'
-import PDFCaptureForm from '../audit/PDFCaptureForm.jsx'
 import { PILLARS, INDUSTRIES, RESPONSE_OPTIONS, defaultPillarState } from '../audit/config.js'
 import { calcPillarMonthly, calcLeadBleed, calcTotals, calcRating, calcGap, buildPayload } from '../audit/calculations.js'
 
@@ -226,60 +225,222 @@ function PillarSection({ pillar, state, onChange }) {
   )
 }
 
-// ─── ResultCard ───────────────────────────────────────────────────────────────
-function ResultCard({ title, price, subtitle, priceColor = '#F7F3ED', gradient = false, sageBorder = false, secondaryLabel, secondaryValue }) {
+// ─── ReportModal ──────────────────────────────────────────────────────────────
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+function ReportModal({ isOpen, onClose, payload }) {
+  const [form, setForm] = useState({ businessName: '', fullName: '', email: '', phone: '' })
+  const [errors, setErrors] = useState({})
+  const [status, setStatus] = useState('idle')
+
+  const set = (f) => (e) => setForm(p => ({ ...p, [f]: e.target.value }))
+
+  const validate = () => {
+    const errs = {}
+    if (!form.businessName.trim()) errs.businessName = 'Required'
+    if (!form.fullName.trim())     errs.fullName     = 'Required'
+    if (!form.email.trim())        errs.email        = 'Required'
+    else if (!EMAIL_RE.test(form.email)) errs.email  = 'Enter a valid email'
+    if (!form.phone.trim())        errs.phone        = 'Required'
+    return errs
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const errs = validate()
+    if (Object.keys(errs).length) { setErrors(errs); return }
+    setErrors({})
+    setStatus('loading')
+    const webhookUrl = import.meta.env.VITE_N8N_AUDIT_WEBHOOK_URL
+    if (!webhookUrl && import.meta.env.DEV) console.warn('[ReportModal] VITE_N8N_AUDIT_WEBHOOK_URL not set')
+    try {
+      const res = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...payload,
+          contact: {
+            business_name: form.businessName.trim(),
+            full_name: form.fullName.trim(),
+            email: form.email.trim(),
+            phone: form.phone.trim(),
+          },
+        }),
+      })
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      setStatus('success')
+    } catch {
+      setStatus('error')
+    }
+  }
+
+  // Close on ESC
+  useEffect(() => {
+    if (!isOpen) return
+    const fn = (e) => { if (e.key === 'Escape') onClose() }
+    document.addEventListener('keydown', fn)
+    return () => document.removeEventListener('keydown', fn)
+  }, [isOpen, onClose])
+
+  // Reset form when modal opens
+  useEffect(() => {
+    if (isOpen) { setForm({ businessName: '', fullName: '', email: '', phone: '' }); setErrors({}); setStatus('idle') }
+  }, [isOpen])
+
+  if (!isOpen) return null
+
+  const inputStyle = (hasErr) => ({
+    width: '100%',
+    padding: '12px 14px',
+    borderRadius: '10px',
+    border: `1.5px solid ${hasErr ? 'rgba(220,80,60,0.6)' : 'rgba(143,175,159,0.2)'}`,
+    background: 'rgba(255,255,255,0.05)',
+    fontFamily: 'DM Sans, sans-serif',
+    fontSize: '0.9rem',
+    color: '#F7F3ED',
+    outline: 'none',
+    boxSizing: 'border-box',
+    transition: 'border-color 0.15s',
+  })
+
+  const labelStyle = {
+    display: 'block',
+    fontFamily: 'DM Mono, monospace',
+    fontSize: '0.62rem',
+    letterSpacing: '0.12em',
+    textTransform: 'uppercase',
+    color: '#8FAF9F',
+    marginBottom: '6px',
+  }
+
   return (
-    <div style={{
-      borderRadius: '16px',
-      padding: '20px 24px',
-      background: gradient
-        ? 'linear-gradient(135deg, #1a2e24 0%, #2a3d30 40%, #3d4f42 100%)'
-        : 'rgba(255,255,255,0.04)',
-      border: sageBorder
-        ? '1px solid rgba(143,175,159,0.35)'
-        : '1px solid rgba(255,255,255,0.08)',
-      marginBottom: '10px',
-    }}>
-      <p style={{
-        fontFamily: 'DM Mono, monospace',
-        fontSize: '0.62rem',
-        letterSpacing: '0.14em',
-        textTransform: 'uppercase',
-        color: 'rgba(143,175,159,0.7)',
-        margin: '0 0 8px',
+    <div
+      onClick={(e) => { if (e.target === e.currentTarget) onClose() }}
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: 9999,
+        background: 'rgba(0,0,0,0.82)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '24px',
+        backdropFilter: 'blur(4px)',
+      }}
+    >
+      <div style={{
+        background: '#141414',
+        border: '1px solid rgba(143,175,159,0.2)',
+        borderRadius: '24px',
+        padding: 'clamp(28px, 5vw, 44px)',
+        width: '100%',
+        maxWidth: '480px',
+        position: 'relative',
       }}>
-        {title}
-      </p>
-      <p style={{
-        fontFamily: 'DM Sans, sans-serif',
-        fontSize: gradient ? 'clamp(2rem, 4vw, 2.8rem)' : 'clamp(1.6rem, 3vw, 2.2rem)',
-        fontWeight: 700,
-        color: priceColor,
-        margin: 0,
-        lineHeight: 1,
-        letterSpacing: '-0.03em',
-      }}>
-        {price}
-      </p>
-      {secondaryLabel && (
-        <p style={{
-          fontFamily: 'DM Sans, sans-serif',
-          fontSize: '0.82rem',
-          color: '#8FAF9F',
-          margin: '4px 0 0',
-        }}>
-          {secondaryLabel}: <strong>{secondaryValue}</strong>
-        </p>
-      )}
-      <p style={{
-        fontFamily: 'DM Sans, sans-serif',
-        fontSize: '0.78rem',
-        color: 'rgba(247,243,237,0.38)',
-        margin: '8px 0 0',
-        lineHeight: 1.4,
-      }}>
-        {subtitle}
-      </p>
+        {/* Close */}
+        <button
+          onClick={onClose}
+          style={{
+            position: 'absolute',
+            top: '16px',
+            right: '20px',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            color: 'rgba(247,243,237,0.4)',
+            fontSize: '1.2rem',
+            lineHeight: 1,
+            padding: '4px',
+            transition: 'color 0.15s',
+          }}
+          onMouseEnter={e => e.currentTarget.style.color = '#F7F3ED'}
+          onMouseLeave={e => e.currentTarget.style.color = 'rgba(247,243,237,0.4)'}
+        >
+          ✕
+        </button>
+
+        {status === 'success' ? (
+          <div style={{ textAlign: 'center', padding: '16px 0' }}>
+            <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.68rem', letterSpacing: '0.2em', color: '#8FAF9F', margin: '0 0 12px', textTransform: 'uppercase' }}>
+              Report sent
+            </p>
+            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(1.4rem, 3vw, 2rem)', fontWeight: 700, letterSpacing: '-0.02em', color: '#F7F3ED', margin: '0 0 10px', lineHeight: 1.2 }}>
+              Check your inbox.
+            </p>
+            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.88rem', color: 'rgba(247,243,237,0.45)', margin: 0, lineHeight: 1.6 }}>
+              Your full audit report is on its way — we'll be in touch shortly.
+            </p>
+          </div>
+        ) : (
+          <>
+            <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.62rem', letterSpacing: '0.18em', color: 'rgba(143,175,159,0.7)', margin: '0 0 6px', textTransform: 'uppercase' }}>
+              Get your full report
+            </p>
+            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(1.2rem, 2.5vw, 1.7rem)', fontWeight: 700, letterSpacing: '-0.02em', color: '#F7F3ED', margin: '0 0 24px', lineHeight: 1.2 }}>
+              We'll send your personalised breakdown straight to your inbox.
+            </p>
+
+            <form onSubmit={handleSubmit} noValidate style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+              {[
+                { field: 'businessName', label: 'Business name',  type: 'text',  placeholder: 'Acme Plumbing' },
+                { field: 'fullName',     label: 'Your name',      type: 'text',  placeholder: 'Jane Smith' },
+                { field: 'email',        label: 'Email address',  type: 'email', placeholder: 'jane@example.com' },
+                { field: 'phone',        label: 'Phone number',   type: 'tel',   placeholder: '04XX XXX XXX' },
+              ].map(({ field, label, type, placeholder }) => (
+                <div key={field}>
+                  <label htmlFor={`modal-${field}`} style={labelStyle}>{label}</label>
+                  <input
+                    id={`modal-${field}`}
+                    type={type}
+                    value={form[field]}
+                    onChange={set(field)}
+                    placeholder={placeholder}
+                    style={inputStyle(!!errors[field])}
+                    onFocus={e => { e.target.style.borderColor = '#8FAF9F' }}
+                    onBlur={e => { e.target.style.borderColor = errors[field] ? 'rgba(220,80,60,0.6)' : 'rgba(143,175,159,0.2)' }}
+                  />
+                  {errors[field] && (
+                    <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.74rem', color: 'rgba(220,80,60,0.9)', margin: '4px 0 0' }}>
+                      {errors[field]}
+                    </p>
+                  )}
+                </div>
+              ))}
+
+              {status === 'error' && (
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.82rem', color: 'rgba(220,80,60,0.9)', margin: '0' }}>
+                  Something went wrong — please try again.
+                </p>
+              )}
+
+              <button
+                type="submit"
+                disabled={status === 'loading'}
+                style={{
+                  marginTop: '4px',
+                  padding: '14px 28px',
+                  borderRadius: '9999px',
+                  border: '1.5px solid #8FAF9F',
+                  background: status === 'loading' ? 'rgba(143,175,159,0.1)' : 'rgba(143,175,159,0.12)',
+                  color: '#8FAF9F',
+                  fontFamily: 'DM Sans, sans-serif',
+                  fontSize: '0.9rem',
+                  fontWeight: 600,
+                  letterSpacing: '0.02em',
+                  cursor: status === 'loading' ? 'default' : 'pointer',
+                  opacity: status === 'loading' ? 0.6 : 1,
+                  transition: 'all 0.2s',
+                  width: '100%',
+                }}
+                onMouseEnter={e => { if (status !== 'loading') { e.currentTarget.style.background = '#8FAF9F'; e.currentTarget.style.color = '#0D0D0D' } }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'rgba(143,175,159,0.12)'; e.currentTarget.style.color = '#8FAF9F' }}
+              >
+                {status === 'loading' ? 'Sending…' : 'Send me the full report'}
+              </button>
+            </form>
+          </>
+        )}
+      </div>
     </div>
   )
 }
@@ -377,6 +538,7 @@ export default function BusinessAuditV2() {
   const [leadsPerMonth, setLeadsPerMonth]   = useState(0)
   const [responseTime, setResponseTime]     = useState('')
   const [pillars, setPillars]               = useState(defaultPillarState)
+  const [modalOpen, setModalOpen]           = useState(false)
 
   const pillarHandlers = useMemo(() => {
     const handlers = {}
@@ -406,11 +568,6 @@ export default function BusinessAuditV2() {
   const timeCostMonthly = useMemo(
     () => Object.values(pillarMonthly).reduce((a, b) => a + b, 0),
     [pillarMonthly]
-  )
-
-  const industryAverage = useMemo(
-    () => Math.max(2500, totalMonthly * 2.4),
-    [totalMonthly]
   )
 
   const hasResults = useMemo(() => PILLARS.some(p => pillars[p.key].hours > 0), [pillars])
@@ -522,43 +679,6 @@ export default function BusinessAuditV2() {
           background: #8FAF9F;
           color: #1C1C1A;
           transform: scale(1.03);
-        }
-        /* Dark override for PDFCaptureForm inside V2 */
-        .audit-v2-pdf-wrapper > div {
-          background: rgba(255,255,255,0.03) !important;
-          border-color: rgba(143,175,159,0.2) !important;
-        }
-        .audit-v2-pdf-wrapper h2 {
-          color: #F7F3ED !important;
-          font-size: clamp(1.2rem, 2.5vw, 1.7rem) !important;
-        }
-        .audit-v2-pdf-wrapper p {
-          color: rgba(247,243,237,0.45) !important;
-        }
-        .audit-v2-pdf-wrapper label {
-          color: #8FAF9F !important;
-        }
-        .audit-v2-pdf-wrapper input,
-        .audit-v2-pdf-wrapper select {
-          background: rgba(255,255,255,0.06) !important;
-          border: 1.5px solid rgba(143,175,159,0.2) !important;
-          border-radius: 10px !important;
-          color: #F7F3ED !important;
-        }
-        .audit-v2-pdf-wrapper input:focus {
-          border-color: #8FAF9F !important;
-          outline: none !important;
-        }
-        .audit-v2-pdf-wrapper input::placeholder {
-          color: rgba(247,243,237,0.22) !important;
-        }
-        .audit-v2-pdf-wrapper button[type="submit"] {
-          border-color: #8FAF9F !important;
-          color: #F7F3ED !important;
-        }
-        .audit-v2-pdf-wrapper button[type="submit"]:hover {
-          background: #8FAF9F !important;
-          color: #0D0D0D !important;
         }
         /* Scroll bounce animation */
         @keyframes audit-bounce {
@@ -831,48 +951,119 @@ export default function BusinessAuditV2() {
               Based on your inputs — updated live as you fill in the form.
             </p>
 
-            {/* Card 1 — Industry average */}
-            <ResultCard
-              title="What businesses typically lose"
-              price={fmt(industryAverage)}
-              subtitle="Per month — across typical SMB operations"
-            />
+            {/* ── Headline: total estimated loss ── */}
+            <div style={{
+              padding: 'clamp(20px, 3vw, 28px)',
+              borderRadius: '20px',
+              background: hasResults ? 'linear-gradient(135deg, rgba(143,175,159,0.1) 0%, rgba(107,124,74,0.08) 100%)' : 'rgba(255,255,255,0.03)',
+              border: `1.5px solid ${hasResults ? 'rgba(143,175,159,0.3)' : 'rgba(255,255,255,0.06)'}`,
+              marginBottom: '14px',
+              transition: 'all 0.3s ease',
+            }}>
+              <p style={{
+                fontFamily: 'DM Mono, monospace',
+                fontSize: '0.58rem',
+                letterSpacing: '0.16em',
+                textTransform: 'uppercase',
+                color: 'rgba(143,175,159,0.6)',
+                margin: '0 0 8px',
+              }}>
+                Estimated monthly loss
+              </p>
+              <p style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: 'clamp(2.4rem, 5vw, 3.6rem)',
+                fontWeight: 700,
+                letterSpacing: '-0.03em',
+                color: hasResults ? '#F7F3ED' : 'rgba(247,243,237,0.18)',
+                margin: '0 0 4px',
+                lineHeight: 1,
+              }}>
+                {hasResults ? fmt(totalMonthly) : '$0'}
+              </p>
+              <p style={{
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: '0.82rem',
+                color: 'rgba(247,243,237,0.38)',
+                margin: 0,
+              }}>
+                {hasResults ? `${fmt(totalYearly)} per year` : 'Fill in your details to see your numbers'}
+              </p>
+            </div>
 
-            {/* Card 2 — Time cost */}
-            <ResultCard
-              title="Your time cost (manual labour)"
-              price={fmt(timeCostMonthly)}
-              priceColor="#8FAF9F"
-              subtitle="Per month"
-              secondaryLabel="Per year"
-              secondaryValue={fmt(timeCostMonthly * 12)}
-            />
-
-            {/* Card 3 — Total estimated loss */}
-            <ResultCard
-              title="Your total estimated loss"
-              price={fmt(totalMonthly)}
-              priceColor="#F7F3ED"
-              subtitle="Including time cost + lead bleed"
-              gradient
-              sageBorder
-              secondaryLabel="Per year"
-              secondaryValue={fmt(totalYearly)}
-            />
+            {/* ── Breakdown tiles ── */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '20px' }}>
+              {/* Time cost tile */}
+              <div style={{
+                padding: '16px',
+                borderRadius: '14px',
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.07)',
+              }}>
+                <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.55rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(143,175,159,0.5)', margin: '0 0 8px' }}>
+                  Time cost
+                </p>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 700, color: '#8FAF9F', margin: '0 0 2px', letterSpacing: '-0.02em' }}>
+                  {fmt(timeCostMonthly)}
+                </p>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', color: 'rgba(247,243,237,0.3)', margin: 0 }}>
+                  per month
+                </p>
+              </div>
+              {/* Lead bleed tile */}
+              <div style={{
+                padding: '16px',
+                borderRadius: '14px',
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.07)',
+              }}>
+                <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.55rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(143,175,159,0.5)', margin: '0 0 8px' }}>
+                  Lead bleed
+                </p>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 700, color: leadBleedMonthly > 0 ? 'rgba(220,100,80,0.85)' : 'rgba(247,243,237,0.18)', margin: '0 0 2px', letterSpacing: '-0.02em' }}>
+                  {leadBleedMonthly > 0 ? fmt(leadBleedMonthly) : '—'}
+                </p>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', color: 'rgba(247,243,237,0.3)', margin: 0 }}>
+                  per month
+                </p>
+              </div>
+            </div>
 
             {/* Gap analysis */}
             <GapTable pillars={pillars} leadBleedMonthly={leadBleedMonthly} />
 
-            {/* PDF Capture Form */}
+            {/* CTA button */}
             {hasResults && (
-              <div style={{
-                marginTop: '24px',
-                paddingTop: '24px',
-                borderTop: '1px solid rgba(143,175,159,0.1)',
-              }}>
-                <div className="audit-v2-pdf-wrapper">
-                  <PDFCaptureForm payload={webhookPayload} />
-                </div>
+              <div style={{ marginTop: '24px', paddingTop: '24px', borderTop: '1px solid rgba(143,175,159,0.1)' }}>
+                <button
+                  type="button"
+                  onClick={() => setModalOpen(true)}
+                  style={{
+                    width: '100%',
+                    padding: '16px 28px',
+                    borderRadius: '9999px',
+                    border: '1.5px solid #8FAF9F',
+                    background: 'rgba(143,175,159,0.1)',
+                    color: '#8FAF9F',
+                    fontFamily: 'DM Sans, sans-serif',
+                    fontSize: '0.95rem',
+                    fontWeight: 600,
+                    letterSpacing: '0.02em',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '8px',
+                  }}
+                  onMouseEnter={e => { e.currentTarget.style.background = '#8FAF9F'; e.currentTarget.style.color = '#0D0D0D' }}
+                  onMouseLeave={e => { e.currentTarget.style.background = 'rgba(143,175,159,0.1)'; e.currentTarget.style.color = '#8FAF9F' }}
+                >
+                  Get your full report →
+                </button>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.75rem', color: 'rgba(247,243,237,0.28)', margin: '10px 0 0', textAlign: 'center', lineHeight: 1.5 }}>
+                  We'll send a personalised breakdown straight to your inbox.
+                </p>
               </div>
             )}
 
@@ -881,6 +1072,8 @@ export default function BusinessAuditV2() {
 
         <Footer />
       </div>
+
+      <ReportModal isOpen={modalOpen} onClose={() => setModalOpen(false)} payload={webhookPayload} />
     </>
   )
 }
