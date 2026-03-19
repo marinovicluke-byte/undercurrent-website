@@ -83,7 +83,7 @@ export const INDUSTRIES = [
   'Real Estate',
   'Health & Wellness',
   'Beauty & Personal Care',
-  'Professional Services (Legal, Accounting, Finance)',
+  'Professional Services - Legal - Accounting - Finance',
   'Marketing & Creative Agency',
   'Coaching & Consulting',
   'Hospitality & Events',

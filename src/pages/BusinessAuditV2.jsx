@@ -913,6 +913,29 @@ export default function BusinessAuditV2() {
               </div>
             </div>
 
+            {/* How it works — 3-step guide */}
+            <div style={{ marginBottom: '28px', padding: '20px 22px', borderRadius: '14px', background: 'rgba(143,175,159,0.05)', border: '1px solid rgba(143,175,159,0.12)' }}>
+              <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.62rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(143,175,159,0.65)', margin: '0 0 14px' }}>
+                How it works
+              </p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                {[
+                  { n: '1', text: 'Rate each area — pick Red, Orange, or Green based on how well it\'s running.' },
+                  { n: '2', text: 'Drag the slider to show how many hours a week you\'re spending on it manually.' },
+                  { n: '3', text: 'Watch your numbers update live — your estimated monthly loss appears on the right.' },
+                ].map(step => (
+                  <div key={step.n} style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
+                    <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.72rem', color: '#8FAF9F', background: 'rgba(143,175,159,0.12)', border: '1px solid rgba(143,175,159,0.2)', borderRadius: '50%', width: '22px', height: '22px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '1px' }}>
+                      {step.n}
+                    </span>
+                    <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.84rem', color: 'rgba(247,243,237,0.6)', margin: 0, lineHeight: 1.55 }}>
+                      {step.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Sections 2–6: Five Pillars */}
             {PILLARS.map(pillar => (
               <PillarSection
