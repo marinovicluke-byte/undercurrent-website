@@ -169,7 +169,8 @@ export default function AuditReport() {
         }
         @media (max-width: 600px) {
           .hero-grid { grid-template-columns: 1fr !important; }
-          .stats-grid { grid-template-columns: 1fr 1fr !important; }
+          .recovery-grid { grid-template-columns: 1fr !important; }
+          .stats-grid { grid-template-columns: 1fr !important; }
           .page-pad { padding: 0 20px !important; }
           .header-inner { padding: 16px 20px !important; }
         }
@@ -318,7 +319,7 @@ export default function AuditReport() {
               What would you do with {totalHoursMonthly} extra hours a month?
             </h2>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '20px' }}>
+            <div className="recovery-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '12px', marginBottom: '20px' }}>
               {[
                 { stat: fmt(totalRecovery) + '/mo', label: 'Revenue recovered', sub: 'From your top 3 leaks' },
                 { stat: totalHoursMonthly + ' hrs', label: 'Freed each month', sub: 'Time to grow, not operate' },
