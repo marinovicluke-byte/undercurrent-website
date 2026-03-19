@@ -36,7 +36,7 @@ function ProblemCard({ problem, index }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        flex: '1 1 0',
+        flex: 1,
         minWidth: 0,
         background: hovered
           ? 'linear-gradient(160deg, #1C1C1A 0%, #2a3d33 100%)'
@@ -47,7 +47,8 @@ function ProblemCard({ problem, index }) {
         position: 'relative',
         overflow: 'hidden',
         cursor: 'default',
-        minHeight: '220px',
+        minHeight: '280px',
+        height: '100%',
         transform: hovered ? 'translateY(-6px)' : 'translateY(0)',
         transition: 'transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease',
         boxShadow: hovered
@@ -128,7 +129,7 @@ function ProblemCard({ problem, index }) {
       <p
         className="font-dm"
         style={{
-          fontSize: '0.82rem',
+          fontSize: '0.9rem',
           fontWeight: 300,
           color: 'rgba(247,243,237,0.5)',
           lineHeight: 1.65,
@@ -251,29 +252,16 @@ export default function Benefits() {
 
         {/* Card strip */}
         <div style={{ position: 'relative' }}>
-          {/* Edge fade — left */}
-          {isMobile && (
-            <div style={{
-              position: 'absolute', left: 0, top: 0, bottom: 0, width: '40px', zIndex: 2, pointerEvents: 'none',
-              background: 'linear-gradient(to right, #F7F3ED, transparent)',
-            }} />
-          )}
-          {/* Edge fade — right */}
-          {isMobile && (
-            <div style={{
-              position: 'absolute', right: 0, top: 0, bottom: 0, width: '40px', zIndex: 2, pointerEvents: 'none',
-              background: 'linear-gradient(to left, #F7F3ED, transparent)',
-            }} />
-          )}
 
           <div
             ref={stripRef}
             className="problem-strip"
             style={{
               display: 'flex',
+              alignItems: 'stretch',
               gap: '1rem',
               overflowX: isMobile ? 'auto' : 'visible',
-              paddingBottom: isMobile ? '0.5rem' : 0,
+              paddingBottom: isMobile ? '1rem' : 0,
               scrollSnapType: isMobile ? 'x mandatory' : 'none',
             }}
           >
@@ -283,10 +271,11 @@ export default function Benefits() {
                 style={{
                   scrollSnapAlign: isMobile ? 'center' : 'none',
                   flexShrink: isMobile ? 0 : 1,
-                  width: isMobile ? '78vw' : 'auto',
+                  width: isMobile ? '85vw' : 'auto',
                   flex: isMobile ? 'none' : '1 1 0',
-                  transform: isMobile && activeIndex !== i ? 'scale(0.97)' : 'scale(1)',
-                  opacity: isMobile && activeIndex !== i ? 0.8 : 1,
+                  display: 'flex',
+                  transform: isMobile && activeIndex !== i ? 'scale(0.95)' : 'scale(1)',
+                  opacity: isMobile && activeIndex !== i ? 0.65 : 1,
                   transition: 'transform 0.3s ease, opacity 0.3s ease',
                 }}
               >
