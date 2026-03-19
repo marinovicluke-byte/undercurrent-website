@@ -227,28 +227,28 @@ export default function Hero({ ready = true }) {
           <span
             className="block font-dm"
             style={{
-              fontSize: 'clamp(3.8rem, 9vw, 9.5rem)',
+              fontSize: 'clamp(3.2rem, 7.5vw, 8rem)',
               fontWeight: 700,
               letterSpacing: '-0.03em',
               color: '#F7F3ED',
               lineHeight: 1.0,
             }}
           >
-            Less Work,
+            Your Business Should Run
           </span>
           <span
             className="block font-cormorant"
             style={{
-              fontSize: 'clamp(3.8rem, 9vw, 9.5rem)',
+              fontSize: 'clamp(3.2rem, 7.5vw, 8rem)',
               fontWeight: 300,
               fontStyle: 'italic',
               letterSpacing: '-0.02em',
               color: 'rgba(143,175,159,0.9)',
               lineHeight: 1.05,
-              marginTop: '0.08em',
+              marginTop: '0.05em',
             }}
           >
-            More Growth.
+            Without You Doing Everything.
           </span>
         </h1>
 
@@ -266,19 +266,69 @@ export default function Hero({ ready = true }) {
             opacity: 0,
           }}
         >
-          We automate the busywork so your business grows faster.<br />
-          You focus on the work you love.<br />
-          We handle the rest.
+          We build AI systems that chase your leads, follow up your clients, and clear your inbox — so you can get back to the work that actually grows your business.
         </p>
 
         {/* CTA */}
-        <div ref={ctaRef} style={{ opacity: 0, marginTop: '2.5rem' }}>
-          <a href="https://cal.com/luke-marinovic-aqeosc/30min" target="_blank" rel="noopener noreferrer" className="btn-sage-hero" style={{ fontSize: '0.9rem' }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              Book a Workflow Review
-              <ArrowRight size={16} />
-            </span>
-          </a>
+        <div ref={ctaRef} style={{ opacity: 0, marginTop: '2.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.25rem' }}>
+          {/* Primary + Secondary CTA row */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <a
+              href="https://cal.com/luke-marinovic-aqeosc/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-sage-hero"
+              style={{ fontSize: '0.9rem' }}
+            >
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                Book a Free Audit
+                <ArrowRight size={16} />
+              </span>
+            </a>
+            <a
+              href="/audit"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                fontSize: '0.9rem',
+                fontFamily: 'DM Sans, sans-serif',
+                fontWeight: 400,
+                color: 'rgba(232,224,208,0.7)',
+                border: '1px solid rgba(232,224,208,0.2)',
+                borderRadius: '9999px',
+                padding: '0.7rem 1.5rem',
+                textDecoration: 'none',
+                transition: 'color 0.2s ease, border-color 0.2s ease',
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.color = 'rgba(232,224,208,1)'
+                e.currentTarget.style.borderColor = 'rgba(232,224,208,0.4)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.color = 'rgba(232,224,208,0.7)'
+                e.currentTarget.style.borderColor = 'rgba(232,224,208,0.2)'
+              }}
+            >
+              Try the Free Calculator
+              <ArrowRight size={14} />
+            </a>
+          </div>
+
+          {/* Trust chips */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+            {['No tech knowledge needed', 'Live in 14 days', 'Results in 30 days or we keep going'].map((chip, i) => (
+              <span key={chip} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                {i > 0 && <span style={{ color: 'rgba(143,175,159,0.3)', fontSize: '0.7rem' }}>·</span>}
+                <span
+                  className="font-mono"
+                  style={{ fontSize: '0.62rem', letterSpacing: '0.12em', color: 'rgba(232,224,208,0.35)' }}
+                >
+                  {chip}
+                </span>
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 
