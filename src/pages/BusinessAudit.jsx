@@ -83,7 +83,7 @@ function Reveal({ children, delay = 0, className = '', style = {} }) {
 }
 
 // ─── Number input (matching ROI calculator style) ──────────────────────────────
-function NumberInput({ label, value, onChange, prefix = '$', placeholder = '0', defaultVal }) {
+function NumberInput({ label, value, onChange, prefix = '$', placeholder = '0' }) {
   return (
     <div style={{ padding: '16px 20px', borderRadius: '14px', background: 'rgba(232,224,208,0.45)', border: '1px solid rgba(212,201,176,0.65)' }}>
       <label style={{ display: 'block', fontFamily: 'DM Mono, monospace', fontSize: '0.68rem', letterSpacing: '0.12em', color: '#8FAF9F', textTransform: 'uppercase', marginBottom: '6px' }}>
@@ -130,7 +130,13 @@ export default function BusinessAudit() {
   const [responseTime, setResponseTime]   = useState('')
   const [pillars, setPillars]             = useState(defaultPillarState)
 
-  const handlePillarChange = (key) => (newState) => setPillars(prev => ({ ...prev, [key]: newState }))
+  const pillarHandlers = useMemo(() => {
+    const handlers = {}
+    for (const p of PILLARS) {
+      handlers[p.key] = (newState) => setPillars(prev => ({ ...prev, [p.key]: newState }))
+    }
+    return handlers
+  }, [])
 
   // ─── Calculations ────────────────────────────────────────────────────────────
   const pillarMonthly = useMemo(() => {
@@ -220,8 +226,9 @@ export default function BusinessAudit() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(260px, 100%), 1fr))', gap: '16px' }}>
               {/* Industry */}
               <div style={{ padding: '16px 20px', borderRadius: '14px', background: 'rgba(232,224,208,0.45)', border: '1px solid rgba(212,201,176,0.65)' }}>
-                <label style={{ display: 'block', fontFamily: 'DM Mono, monospace', fontSize: '0.68rem', letterSpacing: '0.12em', color: '#8FAF9F', textTransform: 'uppercase', marginBottom: '8px' }}>Industry</label>
+                <label htmlFor="industry-select" style={{ display: 'block', fontFamily: 'DM Mono, monospace', fontSize: '0.68rem', letterSpacing: '0.12em', color: '#8FAF9F', textTransform: 'uppercase', marginBottom: '8px' }}>Industry</label>
                 <select
+                  id="industry-select"
                   value={industry}
                   onChange={e => setIndustry(e.target.value)}
                   style={{ width: '100%', background: 'transparent', border: 'none', outline: 'none', fontFamily: 'DM Sans, sans-serif', fontSize: '0.95rem', color: industry ? '#1C1C1A' : 'rgba(28,28,26,0.4)', cursor: 'pointer' }}
@@ -246,8 +253,9 @@ export default function BusinessAudit() {
 
               {/* Response time */}
               <div style={{ padding: '16px 20px', borderRadius: '14px', background: 'rgba(232,224,208,0.45)', border: '1px solid rgba(212,201,176,0.65)' }}>
-                <label style={{ display: 'block', fontFamily: 'DM Mono, monospace', fontSize: '0.68rem', letterSpacing: '0.12em', color: '#8FAF9F', textTransform: 'uppercase', marginBottom: '8px' }}>Avg lead response time</label>
+                <label htmlFor="response-time-select" style={{ display: 'block', fontFamily: 'DM Mono, monospace', fontSize: '0.68rem', letterSpacing: '0.12em', color: '#8FAF9F', textTransform: 'uppercase', marginBottom: '8px' }}>Avg lead response time</label>
                 <select
+                  id="response-time-select"
                   value={responseTime}
                   onChange={e => setResponseTime(e.target.value)}
                   style={{ width: '100%', background: 'transparent', border: 'none', outline: 'none', fontFamily: 'DM Sans, sans-serif', fontSize: '0.95rem', color: responseTime ? '#1C1C1A' : 'rgba(28,28,26,0.4)', cursor: 'pointer' }}
@@ -278,7 +286,7 @@ export default function BusinessAudit() {
                 <PillarCard
                   pillar={pillar}
                   state={pillars[pillar.key]}
-                  onChange={handlePillarChange(pillar.key)}
+                  onChange={pillarHandlers[pillar.key]}
                 />
               </Reveal>
             ))}
