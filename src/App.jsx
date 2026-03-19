@@ -7,7 +7,6 @@ import ScrollProgressBar from './components/ScrollProgressBar'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import ProofStrip from './components/ProofStrip'
-import Features from './components/Features'
 import Protocol from './components/Protocol'
 import Pricing from './components/Pricing'
 import WhatWeAutomate from './components/WhatWeAutomate'
@@ -40,7 +39,6 @@ function HomePage() {
       <WhatWeAutomate />
       <Protocol />
       <Pricing />
-      <Features />
       <FAQ />
       <Contact />
       <Footer />
