@@ -15,6 +15,11 @@ export default function ProofStrip() {
         padding: '3rem 1.5rem',
       }}
     >
+      <style>{`
+        @media (max-width: 600px) {
+          .proof-strip-grid { grid-template-columns: 1fr 1fr !important; gap: 1.25rem !important; }
+        }
+      `}</style>
       <div
         className="proof-strip-grid"
         style={{
@@ -54,11 +59,6 @@ export default function ProofStrip() {
           </div>
         ))}
       </div>
-      <style>{`
-        @media (max-width: 600px) {
-          .proof-strip-grid { grid-template-columns: 1fr 1fr !important; gap: 1.25rem !important; }
-        }
-      `}</style>
     </section>
   )
 }
