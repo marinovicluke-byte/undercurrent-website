@@ -482,10 +482,10 @@ function GapTable({ pillars, leadBleedMonthly }) {
             {['Area', 'Self', 'Calc', 'Status'].map(h => (
               <th key={h} style={{
                 fontFamily: 'DM Mono, monospace',
-                fontSize: '0.58rem',
+                fontSize: '0.72rem',
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
-                color: 'rgba(247,243,237,0.28)',
+                color: 'rgba(247,243,237,0.5)',
                 textAlign: 'left',
                 paddingBottom: '6px',
                 paddingRight: h !== 'Status' ? '8px' : '0',
@@ -778,7 +778,7 @@ export default function BusinessAuditV2() {
           }}>
             <span style={{
               fontFamily: 'DM Mono, monospace',
-              fontSize: '0.58rem',
+              fontSize: '0.72rem',
               letterSpacing: '0.2em',
               color: '#8FAF9F',
               textTransform: 'uppercase',
@@ -963,7 +963,7 @@ export default function BusinessAuditV2() {
             }}>
               <p style={{
                 fontFamily: 'DM Mono, monospace',
-                fontSize: '0.58rem',
+                fontSize: '0.72rem',
                 letterSpacing: '0.16em',
                 textTransform: 'uppercase',
                 color: 'rgba(143,175,159,0.6)',
@@ -976,7 +976,7 @@ export default function BusinessAuditV2() {
                 fontSize: 'clamp(2.4rem, 5vw, 3.6rem)',
                 fontWeight: 700,
                 letterSpacing: '-0.03em',
-                color: hasResults ? '#F7F3ED' : 'rgba(247,243,237,0.18)',
+                color: hasResults ? '#F7F3ED' : 'rgba(247,243,237,0.4)',
                 margin: '0 0 4px',
                 lineHeight: 1,
               }}>
@@ -985,7 +985,7 @@ export default function BusinessAuditV2() {
               <p style={{
                 fontFamily: 'DM Sans, sans-serif',
                 fontSize: '0.82rem',
-                color: 'rgba(247,243,237,0.38)',
+                color: 'rgba(247,243,237,0.55)',
                 margin: 0,
               }}>
                 {hasResults ? `${fmt(totalYearly)} per year` : 'Fill in your details to see your numbers'}
@@ -1001,13 +1001,13 @@ export default function BusinessAuditV2() {
                 background: 'rgba(255,255,255,0.03)',
                 border: '1px solid rgba(255,255,255,0.07)',
               }}>
-                <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.55rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(143,175,159,0.5)', margin: '0 0 8px' }}>
+                <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(143,175,159,0.5)', margin: '0 0 8px' }}>
                   Time cost
                 </p>
                 <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 700, color: '#8FAF9F', margin: '0 0 2px', letterSpacing: '-0.02em' }}>
                   {fmt(timeCostMonthly)}
                 </p>
-                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', color: 'rgba(247,243,237,0.3)', margin: 0 }}>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', color: 'rgba(247,243,237,0.5)', margin: 0 }}>
                   per month
                 </p>
               </div>
@@ -1018,13 +1018,13 @@ export default function BusinessAuditV2() {
                 background: 'rgba(255,255,255,0.03)',
                 border: '1px solid rgba(255,255,255,0.07)',
               }}>
-                <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.55rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(143,175,159,0.5)', margin: '0 0 8px' }}>
+                <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(143,175,159,0.5)', margin: '0 0 8px' }}>
                   Lead bleed
                 </p>
                 <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 700, color: leadBleedMonthly > 0 ? 'rgba(220,100,80,0.85)' : 'rgba(247,243,237,0.18)', margin: '0 0 2px', letterSpacing: '-0.02em' }}>
                   {leadBleedMonthly > 0 ? fmt(leadBleedMonthly) : '—'}
                 </p>
-                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', color: 'rgba(247,243,237,0.3)', margin: 0 }}>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', color: 'rgba(247,243,237,0.5)', margin: 0 }}>
                   per month
                 </p>
               </div>
@@ -1062,7 +1062,7 @@ export default function BusinessAuditV2() {
                 >
                   Get your full report →
                 </button>
-                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.75rem', color: 'rgba(247,243,237,0.28)', margin: '10px 0 0', textAlign: 'center', lineHeight: 1.5 }}>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.75rem', color: 'rgba(247,243,237,0.5)', margin: '10px 0 0', textAlign: 'center', lineHeight: 1.5 }}>
                   We'll send a personalised breakdown straight to your inbox.
                 </p>
               </div>

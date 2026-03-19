@@ -64,8 +64,8 @@ const C = {
   greenBorder: 'rgba(143,175,159,0.18)',
   greenBg: 'rgba(143,175,159,0.06)',
   text: '#F7F3ED',
-  muted: 'rgba(247,243,237,0.45)',
-  faint: 'rgba(247,243,237,0.2)',
+  muted: 'rgba(247,243,237,0.55)',
+  faint: 'rgba(247,243,237,0.4)',
   red: '#FF6B50',
   redBg: 'rgba(255,80,60,0.06)',
   redBorder: 'rgba(255,80,60,0.18)',
@@ -76,8 +76,8 @@ function Label({ children, style }) {
   return (
     <p style={{
       fontFamily: 'DM Mono, monospace',
-      fontSize: '0.62rem',
-      letterSpacing: '0.18em',
+      fontSize: '0.72rem',
+      letterSpacing: '0.14em',
       textTransform: 'uppercase',
       color: C.label,
       margin: '0 0 10px',
@@ -379,7 +379,7 @@ export default function AuditReport() {
                     <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.88rem', fontWeight: 500, color: C.text }}>
                       {copy.label}
                     </span>
-                    <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.65rem', color: C.faint }}>
+                    <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.75rem', color: C.muted }}>
                       {yours} hrs vs {bench} hrs
                     </span>
                   </div>
@@ -395,7 +395,7 @@ export default function AuditReport() {
                           transition: 'width 1s ease',
                         }} />
                       </div>
-                      <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.58rem', color: C.faint, width: '36px' }}>You</span>
+                      <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.72rem', color: C.muted, width: '36px' }}>You</span>
                     </div>
                   </div>
 
@@ -404,7 +404,7 @@ export default function AuditReport() {
                       <div style={{ flex: 1, height: '7px', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', overflow: 'hidden' }}>
                         <div style={{ height: '100%', width: `${(bench / max) * 100}%`, background: C.green, borderRadius: '4px' }} />
                       </div>
-                      <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.58rem', color: 'rgba(143,175,159,0.5)', width: '36px' }}>Auto</span>
+                      <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.72rem', color: 'rgba(143,175,159,0.75)', width: '36px' }}>Auto</span>
                     </div>
                   </div>
                 </div>
@@ -414,11 +414,11 @@ export default function AuditReport() {
             <div style={{ display: 'flex', gap: '20px', marginTop: '8px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
                 <div style={{ width: '14px', height: '4px', borderRadius: '2px', background: '#e8a05a' }} />
-                <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.6rem', color: C.faint }}>Your current hours</span>
+                <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.72rem', color: C.muted }}>Your current hours</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
                 <div style={{ width: '14px', height: '4px', borderRadius: '2px', background: C.green }} />
-                <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.6rem', color: C.faint }}>Automated benchmark</span>
+                <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.72rem', color: 'rgba(143,175,159,0.75)' }}>Automated benchmark</span>
               </div>
             </div>
           </div>
