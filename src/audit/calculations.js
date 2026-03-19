@@ -3,6 +3,7 @@ import { RESPONSE_MULTIPLIERS } from './config.js'
 const RATING_SCORE = { Red: 1, Orange: 2, Green: 3 }
 
 // Returns 'Red' | 'Orange' | 'Green' based on hours/week for a single pillar
+// Scale: more hours = worse rating (Green means <2 hrs — automated/delegated, not necessarily healthy)
 export function calcRating(hours) {
   if (hours < 2) return 'Green'
   if (hours <= 6) return 'Orange'
@@ -28,7 +29,8 @@ export function calcPillarMonthly(hours, hourlyRate) {
 // Returns 0 if any input is missing/zero or response time is unset / lt5
 export function calcLeadBleed(leadsPerMonth, projectValue, responseTimeBand) {
   if (!leadsPerMonth || !projectValue || !responseTimeBand) return 0
-  const multiplier = RESPONSE_MULTIPLIERS[responseTimeBand] ?? 1
+  const multiplier = RESPONSE_MULTIPLIERS[responseTimeBand]
+  if (multiplier === undefined) return 0  // unknown band — treat as no data
   const potential = leadsPerMonth * projectValue * 0.20
   const actual    = leadsPerMonth * projectValue * (0.20 * multiplier)
   return potential - actual
