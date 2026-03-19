@@ -524,14 +524,46 @@ export default function BusinessAuditV2() {
           transform: scale(1.03);
         }
         /* Dark override for PDFCaptureForm inside V2 */
+        .audit-v2-pdf-wrapper > div {
+          background: rgba(255,255,255,0.03) !important;
+          border-color: rgba(143,175,159,0.2) !important;
+        }
+        .audit-v2-pdf-wrapper h2 {
+          color: #F7F3ED !important;
+          font-size: clamp(1.2rem, 2.5vw, 1.7rem) !important;
+        }
+        .audit-v2-pdf-wrapper p {
+          color: rgba(247,243,237,0.45) !important;
+        }
+        .audit-v2-pdf-wrapper label {
+          color: #8FAF9F !important;
+        }
         .audit-v2-pdf-wrapper input,
         .audit-v2-pdf-wrapper select {
-          background: rgba(255,255,255,0.05) !important;
-          border-color: rgba(255,255,255,0.12) !important;
+          background: rgba(255,255,255,0.06) !important;
+          border: 1.5px solid rgba(143,175,159,0.2) !important;
+          border-radius: 10px !important;
           color: #F7F3ED !important;
         }
+        .audit-v2-pdf-wrapper input:focus {
+          border-color: #8FAF9F !important;
+          outline: none !important;
+        }
         .audit-v2-pdf-wrapper input::placeholder {
-          color: rgba(247,243,237,0.3) !important;
+          color: rgba(247,243,237,0.22) !important;
+        }
+        .audit-v2-pdf-wrapper button[type="submit"] {
+          border-color: #8FAF9F !important;
+          color: #F7F3ED !important;
+        }
+        .audit-v2-pdf-wrapper button[type="submit"]:hover {
+          background: #8FAF9F !important;
+          color: #0D0D0D !important;
+        }
+        /* Scroll bounce animation */
+        @keyframes audit-bounce {
+          0%, 100% { transform: translateX(-50%) translateY(0); }
+          50% { transform: translateX(-50%) translateY(6px); }
         }
       `}</style>
 
@@ -541,7 +573,7 @@ export default function BusinessAuditV2() {
 
         {/* ── Hero ────────────────────────────────────────────────────────── */}
         <section style={{
-          height: '300px',
+          minHeight: '420px',
           background: 'linear-gradient(160deg, #0D0D0D 0%, #111111 40%, #1a2e24 70%, #2a3d30 100%)',
           position: 'relative',
           overflow: 'hidden',
@@ -550,7 +582,7 @@ export default function BusinessAuditV2() {
           alignItems: 'center',
           justifyContent: 'center',
           textAlign: 'center',
-          padding: '0 24px',
+          padding: '100px 24px 60px',
         }}>
           {/* Subtle grid */}
           <div style={{
@@ -609,6 +641,29 @@ export default function BusinessAuditV2() {
           }}>
             Five areas. Real numbers. See exactly where your business is bleeding time and money.
           </p>
+
+          {/* Scroll indicator */}
+          <div style={{
+            position: 'absolute',
+            bottom: '24px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '6px',
+            opacity: 0.5,
+            animation: 'audit-bounce 2s ease-in-out infinite',
+          }}>
+            <span style={{
+              fontFamily: 'DM Mono, monospace',
+              fontSize: '0.58rem',
+              letterSpacing: '0.2em',
+              color: '#8FAF9F',
+              textTransform: 'uppercase',
+            }}>scroll</span>
+            <ChevronDown size={16} color="#8FAF9F" strokeWidth={1.5} />
+          </div>
         </section>
 
         {/* ── 2-column layout ─────────────────────────────────────────────── */}
