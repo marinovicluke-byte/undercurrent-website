@@ -150,6 +150,14 @@ export default function Hero({ ready = true }) {
               <ArrowRight size={16} />
             </span>
           </a>
+          <p className="font-mono" style={{
+            marginTop: '0.75rem',
+            fontSize: '0.6rem',
+            letterSpacing: '0.14em',
+            color: 'rgba(212,201,176,0.5)',
+          }}>
+            FREE · TAKES 3 MINUTES
+          </p>
         </div>
       </div>
 
