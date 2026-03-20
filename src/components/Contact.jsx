@@ -128,7 +128,7 @@ export default function Contact() {
               {i > 0 && <span style={{ color: 'rgba(143,175,159,0.2)', fontSize: '0.7rem' }}>·</span>}
               <span
                 className="font-mono"
-                style={{ fontSize: '0.62rem', letterSpacing: '0.12em', color: 'rgba(247,243,237,0.22)' }}
+                style={{ fontSize: '0.62rem', letterSpacing: '0.12em', color: 'rgba(247,243,237,0.45)' }}
               >
                 {chip}
               </span>

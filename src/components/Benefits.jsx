@@ -133,7 +133,7 @@ function StoryCard({ story, isActive, index, totalCards, onActivate }) {
       <p className="font-dm" style={{
         fontSize: '0.88rem',
         fontWeight: 300,
-        color: 'rgba(247,243,237,0.5)',
+        color: 'rgba(247,243,237,0.72)',
         lineHeight: 1.7,
         margin: '0 0 1.25rem',
         flex: 1,
@@ -153,7 +153,7 @@ function StoryCard({ story, isActive, index, totalCards, onActivate }) {
           transform: phase >= 1 ? 'translateY(0)' : 'translateY(6px)',
           transition: 'opacity 0.4s ease, transform 0.4s ease',
         }}>
-          <p className="font-mono" style={{ fontSize: '0.56rem', letterSpacing: '0.14em', color: 'rgba(247,243,237,0.25)', marginBottom: '0.35rem' }}>
+          <p className="font-mono" style={{ fontSize: '0.56rem', letterSpacing: '0.14em', color: 'rgba(247,243,237,0.42)', marginBottom: '0.35rem' }}>
             TRIGGER
           </p>
           <p className="font-mono" style={{ fontSize: '0.78rem', color: 'rgba(247,243,237,0.55)', margin: 0 }}>
@@ -167,7 +167,7 @@ function StoryCard({ story, isActive, index, totalCards, onActivate }) {
           transform: phase >= 2 ? 'translateY(0)' : 'translateY(6px)',
           transition: 'opacity 0.4s ease 0.07s, transform 0.4s ease 0.07s',
         }}>
-          <p className="font-mono" style={{ fontSize: '0.56rem', letterSpacing: '0.14em', color: 'rgba(247,243,237,0.25)', marginBottom: '0.5rem' }}>
+          <p className="font-mono" style={{ fontSize: '0.56rem', letterSpacing: '0.14em', color: 'rgba(247,243,237,0.42)', marginBottom: '0.5rem' }}>
             {story.actionLabel}
           </p>
           <div style={{
@@ -190,7 +190,7 @@ function StoryCard({ story, isActive, index, totalCards, onActivate }) {
           display: 'flex', alignItems: 'center', gap: '0.6rem',
         }}>
           <div style={{ flexShrink: 0 }}>
-            <p className="font-mono" style={{ fontSize: '0.56rem', letterSpacing: '0.14em', color: 'rgba(247,243,237,0.25)', marginBottom: '0.35rem' }}>
+            <p className="font-mono" style={{ fontSize: '0.56rem', letterSpacing: '0.14em', color: 'rgba(247,243,237,0.42)', marginBottom: '0.35rem' }}>
               RESULT
             </p>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -261,7 +261,7 @@ export default function Benefits() {
   }, [])
 
   return (
-    <section style={{ backgroundColor: '#1C1C1A', padding: '6rem 0' }}>
+    <section style={{ background: 'linear-gradient(160deg, #111810 0%, #182018 50%, #131813 100%)', padding: '6rem 0' }}>
       <style>{`
         .story-strip::-webkit-scrollbar { display: none; }
         .story-strip { -ms-overflow-style: none; scrollbar-width: none; }
@@ -291,7 +291,7 @@ export default function Benefits() {
         </h2>
         <p className="font-dm" style={{
           fontSize: '1.05rem', fontWeight: 300,
-          color: 'rgba(247,243,237,0.45)',
+          color: 'rgba(247,243,237,0.70)',
           maxWidth: '520px', margin: '0 auto', lineHeight: 1.7,
         }}>
           Every hour spent chasing invoices, following up leads, or writing the same email again is an hour you're not growing.
@@ -329,7 +329,7 @@ export default function Benefits() {
         textAlign: 'center',
         fontSize: '0.6rem',
         letterSpacing: '0.14em',
-        color: 'rgba(247,243,237,0.2)',
+        color: 'rgba(247,243,237,0.55)',
         marginTop: '0.5rem',
       }}>
         SCROLL TO EXPLORE →

@@ -110,16 +110,14 @@ export default function Navbar({ ready = true, isSubPage = false }) {
   // Nav links — anchor-based on home, page links on sub-pages
   const links = onHome
     ? [
-        { label: 'How it works', href: '#protocol' },
+        { label: 'Home', href: '#' },
         { label: 'Services', href: '/services' },
-        { label: 'Pricing', href: '#pricing' },
         { label: 'Business Audit', href: '/audit' },
         { label: 'About', href: '/about' },
       ]
     : [
-        { label: 'How it works', href: '/#protocol' },
+        { label: 'Home', href: '/' },
         { label: 'Services', href: '/services' },
-        { label: 'Pricing', href: '/#pricing' },
         { label: 'Business Audit', href: '/audit' },
         { label: 'About', href: '/about' },
       ]
