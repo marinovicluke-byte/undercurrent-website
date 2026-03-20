@@ -90,14 +90,14 @@ export default function Hero({ ready = true }) {
       {/* Content — centred */}
       <div
         className="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
-        style={{ paddingTop: '5rem' }}
+        style={{ paddingTop: '5rem', paddingBottom: '7rem' }}
       >
         {/* Headline */}
         <h1 ref={headlineRef} style={{ opacity: 0, lineHeight: 1 }}>
           <span
             className="block font-dm"
             style={{
-              fontSize: 'clamp(3.2rem, 7.5vw, 8rem)',
+              fontSize: 'clamp(2rem, 7.5vw, 8rem)',
               fontWeight: 700,
               letterSpacing: '-0.03em',
               color: '#F7F3ED',
@@ -109,7 +109,7 @@ export default function Hero({ ready = true }) {
           <span
             className="block font-dm"
             style={{
-              fontSize: 'clamp(3.2rem, 7.5vw, 8rem)',
+              fontSize: 'clamp(2rem, 7.5vw, 8rem)',
               fontWeight: 700,
               letterSpacing: '-0.03em',
               color: 'rgba(143,175,159,0.9)',

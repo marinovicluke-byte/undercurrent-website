@@ -27,8 +27,13 @@ function NavWave({ scrolled }) {
     ]
 
     let t = 0
-    const draw = () => {
+    let lastTs = 0
+    const isMobileDevice = window.innerWidth < 768
+    const frameInterval = isMobileDevice ? 50 : 16 // ~20fps mobile, ~60fps desktop
+    const draw = (ts) => {
       rafRef.current = requestAnimationFrame(draw)
+      if (ts - lastTs < frameInterval) return
+      lastTs = ts
       ctx.clearRect(0, 0, W, H)
       const base = scrolledRef.current ? '107,124,74' : '143,175,159'
       currents.forEach(c => {

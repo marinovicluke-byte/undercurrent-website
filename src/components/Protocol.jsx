@@ -191,7 +191,7 @@ export default function Protocol() {
   }
 
   return (
-    <section style={{ backgroundColor: '#F7F3ED', padding: '7rem 1.5rem 6rem' }}>
+    <section style={{ backgroundColor: '#F7F3ED', padding: '7rem 1.5rem 6rem', marginTop: '-2px', position: 'relative', zIndex: 1 }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
 
         {/* ── Heading ──────────────────────────────────────────────────────── */}

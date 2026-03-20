@@ -1,6 +1,17 @@
 import { useEffect, useRef, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
+  return isMobile
+}
+
 function useVisible(threshold = 0.1) {
   const ref = useRef(null)
   const [visible, setVisible] = useState(false)
@@ -18,7 +29,7 @@ function useVisible(threshold = 0.1) {
 }
 
 // ─── Audit report mockup ─────────────────────────────────────────────────────
-function AuditMockup() {
+function AuditMockup({ isMobile }) {
   const GAPS = [
     { area: 'Customer Experience', self: 'Red', calc: 'Orange', status: 'Under-estimated', statusColor: '#C4A97A' },
     { area: 'Sales & Follow-up',   self: 'Orange', calc: 'Orange', status: 'Accurate',        statusColor: 'rgba(247,243,237,0.5)' },
@@ -100,7 +111,7 @@ function AuditMockup() {
         </div>
 
         {/* Right: results */}
-        <div style={{ flex: '1 1 50%', padding: '1.25rem' }}>
+        <div style={{ flex: '1 1 50%', padding: '1.25rem', overflow: 'hidden' }}>
           <p style={{ fontSize: '0.55rem', letterSpacing: '0.14em', color: 'rgba(143,175,159,0.7)', marginBottom: '0.85rem', fontWeight: 600 }}>ESTIMATED LOSS</p>
 
           {/* Big number */}
@@ -123,8 +134,8 @@ function AuditMockup() {
 
           {/* Gap table */}
           <p style={{ fontSize: '0.5rem', letterSpacing: '0.1em', color: 'rgba(247,243,237,0.55)', margin: '0 0 0.5rem' }}>GAP ANALYSIS</p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr auto auto auto', gap: '0.2rem 0.5rem', alignItems: 'center' }}>
-            {['AREA', 'SELF', 'CALC', 'STATUS'].map(h => (
+          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr auto auto' : '1fr auto auto auto', gap: '0.2rem 0.5rem', alignItems: 'center' }}>
+            {(isMobile ? ['AREA', 'SELF', 'CALC'] : ['AREA', 'SELF', 'CALC', 'STATUS']).map(h => (
               <span key={h} style={{ fontSize: '0.45rem', color: 'rgba(247,243,237,0.48)', letterSpacing: '0.08em' }}>{h}</span>
             ))}
             {GAPS.map(row => (
@@ -132,7 +143,7 @@ function AuditMockup() {
                 <span key={row.area + 'a'} style={{ fontSize: '0.6rem', color: 'rgba(247,243,237,0.75)' }}>{row.area}</span>
                 <span key={row.area + 'b'} style={{ fontSize: '0.6rem', color: labelColor(row.self) }}>{row.self}</span>
                 <span key={row.area + 'c'} style={{ fontSize: '0.6rem', color: labelColor(row.calc) }}>{row.calc}</span>
-                <span key={row.area + 'd'} style={{ fontSize: '0.6rem', color: row.statusColor }}>{row.status}</span>
+                {!isMobile && <span key={row.area + 'd'} style={{ fontSize: '0.6rem', color: row.statusColor }}>{row.status}</span>}
               </>
             ))}
           </div>
@@ -145,6 +156,7 @@ function AuditMockup() {
 // ─── Section ─────────────────────────────────────────────────────────────────
 export default function CalculatorTeaser() {
   const [ref, visible] = useVisible(0.08)
+  const isMobile = useIsMobile()
 
   return (
     <section style={{
@@ -226,10 +238,10 @@ export default function CalculatorTeaser() {
           borderRadius: '1.5rem',
           overflow: 'hidden',
           boxShadow: '0 24px 80px rgba(0,0,0,0.5), 0 8px 24px rgba(0,0,0,0.35)',
-          transform: 'perspective(1200px) rotateX(1.5deg)',
+          transform: isMobile ? 'none' : 'perspective(1200px) rotateX(1.5deg)',
           transformOrigin: 'top center',
         }}>
-          <AuditMockup />
+          <AuditMockup isMobile={isMobile} />
         </div>
 
         {/* CTA */}
