@@ -87,17 +87,30 @@ export default function Hero({ ready = true }) {
         }}
       />
 
-      {/* Content — centred */}
+      {/* Content — left-aligned, top-positioned (matches Services page structure) */}
       <div
-        className="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
-        style={{ paddingTop: '5rem', paddingBottom: '7rem' }}
+        className="absolute inset-0 flex flex-col px-6 md:px-12"
+        style={{ paddingTop: '7rem', paddingBottom: '5rem', maxWidth: '1200px' }}
       >
+        {/* Eyebrow */}
+        <p
+          className="font-mono"
+          style={{
+            fontSize: '0.68rem',
+            letterSpacing: '0.2em',
+            color: 'rgba(143,175,159,0.75)',
+            marginBottom: '1.25rem',
+          }}
+        >
+          AI AUTOMATION · SMALL BUSINESS
+        </p>
+
         {/* Headline */}
         <h1 ref={headlineRef} style={{ opacity: 0, lineHeight: 1 }}>
           <span
             className="block font-dm"
             style={{
-              fontSize: 'clamp(2rem, 7.5vw, 8rem)',
+              fontSize: 'clamp(2.8rem, 7vw, 7.5rem)',
               fontWeight: 700,
               letterSpacing: '-0.03em',
               color: '#F7F3ED',
@@ -109,12 +122,12 @@ export default function Hero({ ready = true }) {
           <span
             className="block font-dm"
             style={{
-              fontSize: 'clamp(2rem, 7.5vw, 8rem)',
+              fontSize: 'clamp(2.8rem, 7vw, 7.5rem)',
               fontWeight: 700,
               letterSpacing: '-0.03em',
               color: 'rgba(143,175,159,0.9)',
               lineHeight: 1.05,
-              marginTop: '0.05em',
+              marginTop: '0.03em',
             }}
           >
             Without You Doing Everything.
@@ -126,12 +139,12 @@ export default function Hero({ ready = true }) {
           ref={bodyRef}
           className="font-dm"
           style={{
-            fontSize: 'clamp(1rem, 1.5vw, 1.18rem)',
+            fontSize: 'clamp(0.95rem, 1.4vw, 1.1rem)',
             fontWeight: 300,
             color: 'rgba(232,224,208,0.65)',
             lineHeight: 1.7,
-            maxWidth: '42ch',
-            marginTop: '2rem',
+            maxWidth: '44ch',
+            marginTop: '1.5rem',
             opacity: 0,
           }}
         >
@@ -139,19 +152,19 @@ export default function Hero({ ready = true }) {
         </p>
 
         {/* CTA */}
-        <div ref={ctaRef} style={{ opacity: 0, marginTop: '2.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.25rem' }}>
-          {/* Primary + Secondary CTA row */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+        <div ref={ctaRef} style={{ opacity: 0, marginTop: '2rem' }}>
+          {/* Both buttons on the same line */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
             <a
               href="https://cal.com/luke-marinovic-aqeosc/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-sage-hero"
-              style={{ fontSize: '0.9rem' }}
+              style={{ fontSize: '0.85rem', padding: '0.7rem 1.35rem', whiteSpace: 'nowrap' }}
             >
-              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                 Book a Free Audit
-                <ArrowRight size={16} />
+                <ArrowRight size={15} />
               </span>
             </a>
             <a
@@ -159,15 +172,16 @@ export default function Hero({ ready = true }) {
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '0.5rem',
-                fontSize: '0.9rem',
+                gap: '0.4rem',
+                fontSize: '0.85rem',
                 fontFamily: 'DM Sans, sans-serif',
                 fontWeight: 400,
                 color: 'rgba(232,224,208,0.7)',
                 border: '1px solid rgba(232,224,208,0.2)',
                 borderRadius: '9999px',
-                padding: '0.7rem 1.5rem',
+                padding: '0.7rem 1.25rem',
                 textDecoration: 'none',
+                whiteSpace: 'nowrap',
                 transition: 'color 0.2s ease, border-color 0.2s ease',
               }}
               onMouseEnter={e => {
@@ -179,19 +193,19 @@ export default function Hero({ ready = true }) {
                 e.currentTarget.style.borderColor = 'rgba(232,224,208,0.2)'
               }}
             >
-              Try the Free Calculator
-              <ArrowRight size={14} />
+              Free Calculator
+              <ArrowRight size={13} />
             </a>
           </div>
 
-          {/* Trust chips */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+          {/* Trust chips — below buttons */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', marginTop: '1.25rem' }}>
             {['No tech knowledge needed', 'Live in 14 days', 'Results in 30 days or we keep going'].map((chip, i) => (
               <span key={chip} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                {i > 0 && <span style={{ color: 'rgba(143,175,159,0.65)', fontSize: '0.85rem' }}>·</span>}
+                {i > 0 && <span style={{ color: 'rgba(143,175,159,0.5)', fontSize: '0.8rem' }}>·</span>}
                 <span
                   className="font-mono"
-                  style={{ fontSize: '0.65rem', letterSpacing: '0.12em', color: 'rgba(232,224,208,0.78)' }}
+                  style={{ fontSize: '0.62rem', letterSpacing: '0.11em', color: 'rgba(232,224,208,0.65)' }}
                 >
                   {chip}
                 </span>
@@ -201,15 +215,15 @@ export default function Hero({ ready = true }) {
         </div>
       </div>
 
-      {/* Scroll indicator — sits above the bottom wave */}
+      {/* Scroll indicator — bottom left, clearly below all content */}
       <div
-        className="absolute left-1/2 font-mono"
+        className="absolute font-mono"
         style={{
-          bottom: '6rem',
-          transform: 'translateX(-50%)',
-          fontSize: '0.75rem',
+          bottom: '5.5rem',
+          left: '1.5rem',
+          fontSize: '0.7rem',
           letterSpacing: '0.15em',
-          color: 'rgba(212,201,176,0.72)',
+          color: 'rgba(212,201,176,0.6)',
           whiteSpace: 'nowrap',
           zIndex: 2,
         }}
