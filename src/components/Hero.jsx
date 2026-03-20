@@ -139,7 +139,7 @@ export default function Hero({ ready = true }) {
         </p>
 
         {/* Single CTA */}
-        <div ref={ctaRef} style={{ opacity: 0, marginTop: '2rem' }}>
+        <div ref={ctaRef} style={{ opacity: 0, marginTop: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
           <a
             href="/audit"
             className="btn-sage-hero hero-cta"
@@ -159,10 +159,21 @@ export default function Hero({ ready = true }) {
               FREE · TAKES 3 MINUTES
             </span>
           </a>
+          {/* Mobile-only scroll hint — centred under button */}
+          <p className="md:hidden font-mono" style={{
+            marginTop: '1.25rem',
+            alignSelf: 'center',
+            fontSize: '0.7rem',
+            letterSpacing: '0.15em',
+            color: 'rgba(212,201,176,0.6)',
+            whiteSpace: 'nowrap',
+          }}>
+            ↓ scroll to explore
+          </p>
         </div>
       </div>
 
-      {/* Scroll indicator — left on mobile, centred on desktop */}
+      {/* Scroll indicator — desktop only, centred */}
       <style>{`
         .hero-scroll { left: 1.5rem; }
         .hero-cta { font-size: 0.9rem !important; padding: 0.75rem 1.6rem !important; }
@@ -172,7 +183,7 @@ export default function Hero({ ready = true }) {
         }
       `}</style>
       <div
-        className="absolute font-mono hero-scroll"
+        className="hidden md:block absolute font-mono hero-scroll"
         style={{
           bottom: '5.5rem',
           fontSize: '0.7rem',
