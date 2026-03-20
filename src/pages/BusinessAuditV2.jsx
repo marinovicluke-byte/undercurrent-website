@@ -699,7 +699,7 @@ export default function BusinessAuditV2() {
         {/* ── Hero ────────────────────────────────────────────────────────── */}
         <section style={{
           minHeight: '420px',
-          background: 'linear-gradient(160deg, #0D0D0D 0%, #111111 40%, #1a2e24 70%, #2a3d30 100%)',
+          background: '#1C1C1A',
           position: 'relative',
           overflow: 'hidden',
           display: 'flex',
@@ -709,13 +709,25 @@ export default function BusinessAuditV2() {
           textAlign: 'center',
           padding: '100px 24px 60px',
         }}>
-          {/* Subtle grid */}
-          <div style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundImage: 'linear-gradient(rgba(143,175,159,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(143,175,159,0.04) 1px, transparent 1px)',
-            backgroundSize: '40px 40px',
-            pointerEvents: 'none',
+          <video
+            autoPlay muted loop playsInline
+            style={{
+              position: 'absolute', inset: 0,
+              width: '100%', height: '100%',
+              objectFit: 'cover', objectPosition: 'center',
+              opacity: 1, pointerEvents: 'none',
+            }}
+          >
+            <source src="/hero-bg.mp4" type="video/mp4" />
+          </video>
+          <div aria-hidden="true" style={{
+            position: 'absolute', inset: 0, pointerEvents: 'none',
+            background: [
+              'linear-gradient(to bottom, #1C1C1A 0%, transparent 28%)',
+              'linear-gradient(to top,    #1C1C1A 0%, transparent 32%)',
+              'linear-gradient(to right,  #1C1C1A 0%, transparent 22%)',
+              'linear-gradient(to left,   #1C1C1A 0%, transparent 22%)',
+            ].join(', '),
           }} />
 
           <p style={{
@@ -725,10 +737,11 @@ export default function BusinessAuditV2() {
             color: 'rgba(143,175,159,0.65)',
             margin: '0 0 14px',
             position: 'relative',
+            zIndex: 1,
           }}>
             BUSINESS AUDIT
           </p>
-          <h1 style={{ margin: 0, position: 'relative' }}>
+          <h1 style={{ margin: 0, position: 'relative', zIndex: 1 }}>
             <span style={{
               display: 'block',
               fontFamily: 'DM Sans, sans-serif',
@@ -742,12 +755,11 @@ export default function BusinessAuditV2() {
             </span>
             <span style={{
               display: 'block',
-              fontFamily: 'Cormorant Garamond, serif',
+              fontFamily: 'DM Sans, sans-serif',
               fontSize: 'clamp(2rem, 5vw, 3.8rem)',
-              fontWeight: 300,
-              fontStyle: 'italic',
-              letterSpacing: '-0.02em',
-              color: 'rgba(143,175,159,0.85)',
+              fontWeight: 700,
+              letterSpacing: '-0.03em',
+              color: 'rgba(143,175,159,0.9)',
               lineHeight: 1.08,
               marginTop: '0.06em',
             }}>
@@ -763,6 +775,7 @@ export default function BusinessAuditV2() {
             maxWidth: '44ch',
             marginTop: '1.2rem',
             position: 'relative',
+            zIndex: 1,
           }}>
             Five areas. Real numbers. See exactly where your business is bleeding time and money.
           </p>

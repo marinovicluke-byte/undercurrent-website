@@ -965,7 +965,7 @@ export default function Services() {
   const heroRef = useRef(null)
   const headlineRef = useRef(null)
   const subRef = useRef(null)
-  const glowRef = useRef(null)
+  const videoRef = useRef(null)
   const [activeService, setActiveService] = useState(services[0].id)
 
   const activeServiceData = services.find(s => s.id === activeService)
@@ -981,9 +981,9 @@ export default function Services() {
     window.scrollTo(0, 0)
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.1 })
-      tl.fromTo(glowRef.current,
-        { opacity: 0, scale: 0.7 },
-        { opacity: 1, scale: 1, duration: 1.8, ease: 'power2.out' }
+      tl.fromTo(videoRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 1.8, ease: 'power2.out' }
       )
       .fromTo(headlineRef.current,
         { y: 50, opacity: 0 },
@@ -1034,18 +1034,29 @@ export default function Services() {
         className="relative w-full overflow-hidden"
         style={{
           minHeight: '80dvh',
-          background: 'linear-gradient(160deg, #1C1C1A 0%, #2a3028 30%, #3d4f42 55%, #8FAF9F 80%, #D4C9B0 100%)',
+          background: '#1C1C1A',
         }}
       >
-        <div ref={glowRef} style={{
-          position: 'absolute', top: '45%', left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: '90vw', maxWidth: '1000px', height: '90vw', maxHeight: '1000px',
-          borderRadius: '50%',
-          background: 'radial-gradient(ellipse at center, rgba(143,175,159,0.2) 0%, rgba(143,175,159,0.06) 45%, transparent 70%)',
-          pointerEvents: 'none', opacity: 0,
+        <video
+          ref={videoRef}
+          src="/hero-bg.mp4"
+          autoPlay muted loop playsInline
+          style={{
+            position: 'absolute', inset: 0,
+            width: '100%', height: '100%',
+            objectFit: 'cover', objectPosition: 'center',
+            opacity: 0, pointerEvents: 'none',
+          }}
+        />
+        <div aria-hidden="true" style={{
+          position: 'absolute', inset: 0, pointerEvents: 'none',
+          background: [
+            'linear-gradient(to bottom, #1C1C1A 0%, transparent 28%)',
+            'linear-gradient(to top,    #1C1C1A 0%, transparent 32%)',
+            'linear-gradient(to right,  #1C1C1A 0%, transparent 22%)',
+            'linear-gradient(to left,   #1C1C1A 0%, transparent 22%)',
+          ].join(', '),
         }} />
-        <HeroCanvas />
 
         <div className="relative max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-center" style={{ minHeight: '80dvh', paddingTop: '8rem', paddingBottom: '5rem' }}>
           <p className="font-mono mb-5" style={{ fontSize: '0.7rem', letterSpacing: '0.2em', color: 'rgba(143,175,159,0.7)' }}>
@@ -1055,7 +1066,7 @@ export default function Services() {
             <span className="block font-dm" style={{ fontSize: 'clamp(3rem, 7vw, 7.5rem)', fontWeight: 700, letterSpacing: '-0.03em', color: '#F7F3ED', lineHeight: 1.0 }}>
               Five areas.
             </span>
-            <span className="block font-cormorant" style={{ fontSize: 'clamp(3rem, 7vw, 7.5rem)', fontWeight: 300, fontStyle: 'italic', letterSpacing: '-0.02em', color: 'rgba(143,175,159,0.9)', lineHeight: 1.05 }}>
+            <span className="block font-dm" style={{ fontSize: 'clamp(3rem, 7vw, 7.5rem)', fontWeight: 700, letterSpacing: '-0.03em', color: 'rgba(143,175,159,0.9)', lineHeight: 1.05 }}>
               Every one a leak.
             </span>
           </h1>
