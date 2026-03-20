@@ -143,21 +143,22 @@ export default function Hero({ ready = true }) {
           <a
             href="/audit"
             className="btn-sage-hero"
-            style={{ fontSize: '0.9rem', padding: '0.8rem 1.6rem' }}
+            style={{ fontSize: '0.9rem', padding: '0.75rem 1.6rem', flexDirection: 'column', gap: '0.2rem', alignItems: 'center' }}
           >
             <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               See What You're Losing Each Month
               <ArrowRight size={16} />
             </span>
+            <span className="font-mono" style={{
+              fontSize: '0.55rem',
+              letterSpacing: '0.14em',
+              color: 'rgba(212,201,176,0.55)',
+              position: 'relative',
+              zIndex: 1,
+            }}>
+              FREE · TAKES 3 MINUTES
+            </span>
           </a>
-          <p className="font-mono" style={{
-            marginTop: '0.75rem',
-            fontSize: '0.6rem',
-            letterSpacing: '0.14em',
-            color: 'rgba(212,201,176,0.5)',
-          }}>
-            FREE · TAKES 3 MINUTES
-          </p>
         </div>
       </div>
 
