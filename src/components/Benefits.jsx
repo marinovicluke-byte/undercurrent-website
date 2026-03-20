@@ -1,274 +1,226 @@
 import { useEffect, useRef, useState } from 'react'
 
-// ─── Stat counter ─────────────────────────────────────────────────────────────────
-function useCounter(target, duration, active) {
-  const [count, setCount] = useState(0)
-  useEffect(() => {
-    if (!active) return
-    let start = null
-    let raf
-    const step = (ts) => {
-      if (!start) start = ts
-      const progress = Math.min((ts - start) / duration, 1)
-      const eased = 1 - Math.pow(1 - progress, 3)
-      setCount(Math.round(eased * target))
-      if (progress < 1) raf = requestAnimationFrame(step)
-    }
-    raf = requestAnimationFrame(step)
-    return () => cancelAnimationFrame(raf)
-  }, [target, duration, active])
-  return count
-}
-
-// ─── Data ─────────────────────────────────────────────────────────────────────────
-const BENEFITS = [
+// StoryBrand framing: Problem → Villain → Guide → Result
+const STORIES = [
   {
-    id: 'reviews',
-    statNum: 31,
-    statPrefix: '+',
-    statSuffix: '%',
-    statLabel: 'more 5-star reviews',
-    description: 'Timed follow-ups land when the job is still fresh. No awkward asks. No chasing required.',
-    color: '#C4A97A',
-    story: [
-      { type: 'trigger', label: 'Trigger',                 text: 'Job completed · 14 days ago' },
-      { type: 'message', label: 'SMS to Mike · Auto-sent', text: "Hi Mike — hope the kitchen's coming along nicely! If you have 30 seconds, a Google review would mean the world to us. 🙏" },
-      { type: 'result',  label: 'Result',                  text: 'Review posted · Google', stars: true },
-    ],
-  },
-  {
-    id: 'leads',
-    statNum: 40,
-    statPrefix: '+',
-    statSuffix: '%',
-    statLabel: 'more leads converted',
-    description: 'Every enquiry gets an instant, personal reply — even at 11pm on a Sunday.',
+    stat: '+40%',
+    label: 'more leads converted',
     color: '#8FAF9F',
-    story: [
-      { type: 'trigger', label: 'Trigger',                       text: 'New enquiry received · 9:47 PM' },
-      { type: 'message', label: 'Auto-reply to Sarah · Instant', text: "Hey Sarah! Thanks for reaching out — I'd love to help. Are you free for a quick call this week? 📅" },
-      { type: 'result',  label: 'Result',                       text: 'Call booked · next morning', check: true },
-    ],
+    desc: "Sarah enquired at 9:47pm. By morning, three competitors had already replied. You were still asleep. Every hour without a reply is a deal sliding away.",
+    trigger: 'New enquiry received · 9:47 PM',
+    actionLabel: 'AUTO-REPLY TO SARAH · INSTANT',
+    message: "Hey Sarah! Thanks for reaching out — I'd love to help. Are you free for a quick chat this week? 📅",
+    result: 'Call booked · next morning',
   },
   {
-    id: 'time',
-    statNum: 12,
-    statPrefix: '',
-    statSuffix: ' hrs',
-    statLabel: 'back every week',
-    description: 'Invoices, reminders, follow-ups — all handled automatically after every single job.',
+    stat: '+31%',
+    label: 'more 5-star reviews',
+    color: '#C4A97A',
+    desc: "You do great work. Your clients love you. But asking for a review feels awkward — so it never happens. Meanwhile your competitor has 200 reviews and you have 12.",
+    trigger: 'Job completed · 14 days ago',
+    actionLabel: 'SMS TO MIKE · AUTO-SENT',
+    message: "Hi Mike — hope the kitchen's coming along nicely! If you have 30 seconds, a Google review would mean the world to us. 🙏",
+    result: '★★★★★  Review posted · Google',
+  },
+  {
+    stat: '12 hrs',
+    label: 'back every week',
     color: '#89ACBE',
-    story: [
-      { type: 'trigger', label: 'Trigger',              text: 'Job marked complete · 4:15 PM' },
-      { type: 'message', label: 'Invoice · Auto-sent',  text: 'Invoice #247 · $3,200\nDue in 14 days — sent automatically.' },
-      { type: 'result',  label: 'Result',               text: 'Paid · 6 days early', check: true },
-    ],
+    desc: "It's 9pm. You're still doing invoices. The actual work finished at 4. The paperwork followed you home — again. This is the hidden cost no one warns you about.",
+    trigger: 'Job marked complete · 4:15 PM',
+    actionLabel: 'INVOICE · AUTO-SENT',
+    message: 'Invoice #247 · $3,200\nDue in 14 days — sent automatically.',
+    result: 'Paid · 6 days early',
+  },
+  {
+    stat: '5 hrs',
+    label: 'of content every week, on autopilot',
+    color: '#8FAF9F',
+    desc: "Your competitor posts every day. You haven't posted in six weeks. You know consistent content builds trust — you just never have time to sit down and write it.",
+    trigger: 'Job completed · this morning',
+    actionLabel: 'SOCIAL POST · AUTO-PUBLISHED',
+    message: "Just wrapped this bathroom reno in Toorak ✨ Three weeks, zero hiccups. Swipe to see the before. ➡️",
+    result: 'Posted · Instagram · 47 likes',
+  },
+  {
+    stat: '$800+',
+    label: 'saved per week in admin',
+    color: '#C4A97A',
+    desc: "You've already done the work. You've already earned the money. But it's still sitting in their account while you send polite follow-up emails into the void.",
+    trigger: 'Invoice #1047 · overdue 14 days',
+    actionLabel: 'REMINDER TO JAMES · AUTO-SENT',
+    message: "Hi James — just a friendly nudge. Invoice #1047 for $2,400 is still outstanding. Pay securely here: [link] 👍",
+    result: 'Payment received · $2,400',
   },
 ]
 
-// ─── Story item ───────────────────────────────────────────────────────────────────
-function StoryItem({ item, active, color }) {
-  return (
-    <div style={{
-      opacity: active ? 1 : 0.1,
-      transform: active ? 'translateY(0)' : 'translateY(5px)',
-      transition: 'opacity 0.6s ease, transform 0.6s ease',
-    }}>
-      <div style={{
-        fontFamily: 'DM Mono, monospace',
-        fontSize: 'clamp(0.54rem, 0.8vw, 0.6rem)',
-        letterSpacing: '0.14em',
-        color: item.type === 'result' ? color + 'CC' : 'rgba(247,243,237,0.32)',
-        textTransform: 'uppercase',
-        marginBottom: '0.35rem',
-      }}>
-        {item.label}
-      </div>
-
-      {item.type === 'message' && (
-        <div style={{
-          background: 'rgba(255,255,255,0.05)',
-          border: '1px solid rgba(255,255,255,0.09)',
-          borderRadius: '0.6rem',
-          padding: '0.7rem 0.85rem',
-          fontFamily: 'DM Sans, sans-serif',
-          fontSize: 'clamp(0.82rem, 1.3vw, 0.9rem)',
-          color: 'rgba(247,243,237,0.75)',
-          lineHeight: 1.6,
-          whiteSpace: 'pre-line',
-        }}>
-          {item.text}
-        </div>
-      )}
-
-      {item.type === 'result' && (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.55rem' }}>
-          {item.stars && (
-            <span style={{ color, fontSize: '0.95rem', letterSpacing: '0.06em', lineHeight: 1 }}>★★★★★</span>
-          )}
-          {item.check && (
-            <span style={{
-              width: '1.2rem', height: '1.2rem', borderRadius: '50%',
-              background: `${color}20`, border: `1.5px solid ${color}60`,
-              display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
-            }}>
-              <svg width="7" height="6" viewBox="0 0 7 6" fill="none">
-                <path d="M1 3L3 5L6 1" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </span>
-          )}
-          <span style={{
-            fontFamily: 'DM Sans, sans-serif',
-            fontSize: 'clamp(0.85rem, 1.4vw, 0.92rem)',
-            color: 'rgba(247,243,237,0.88)',
-            fontWeight: 500,
-          }}>
-            {item.text}
-          </span>
-        </div>
-      )}
-
-      {item.type === 'trigger' && (
-        <div style={{
-          fontFamily: 'DM Mono, monospace',
-          fontSize: 'clamp(0.72rem, 1.1vw, 0.8rem)',
-          color: 'rgba(247,243,237,0.55)',
-          letterSpacing: '0.02em',
-          lineHeight: 1.5,
-        }}>
-          {item.text}
-        </div>
-      )}
-    </div>
-  )
-}
-
-// ─── Benefit card ─────────────────────────────────────────────────────────────────
-function BenefitCard({ benefit, index }) {
-  const [active, setActive] = useState(false)
-  const [step, setStep]     = useState(-1)
-  const cardRef = useRef(null)
-  const count   = useCounter(benefit.statNum, 1100, active)
+// ─── Individual story card ────────────────────────────────────────────────────
+function StoryCard({ story, isActive, index, totalCards, onActivate }) {
+  const [phase, setPhase] = useState(0)
+  const timers = useRef([])
 
   useEffect(() => {
-    const el = cardRef.current
-    if (!el) return
-    const timeouts = []
-    const offset = index * 180
-
-    const runSeq = () => {
-      setStep(-1)
-      timeouts.push(setTimeout(() => setStep(0), 550 + offset))
-      timeouts.push(setTimeout(() => setStep(1), 1500 + offset))
-      timeouts.push(setTimeout(() => setStep(2), 2600 + offset))
-      timeouts.push(setTimeout(runSeq, 7500))
+    timers.current.forEach(clearTimeout)
+    if (isActive) {
+      setPhase(0)
+      timers.current = [
+        setTimeout(() => setPhase(1), 400),
+        setTimeout(() => setPhase(2), 950),
+        setTimeout(() => setPhase(3), 1600),
+      ]
+    } else {
+      setPhase(0)
     }
-
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setActive(true)
-          runSeq()
-          obs.disconnect()
-        }
-      },
-      { threshold: 0.15 }
-    )
-    obs.observe(el)
-    return () => {
-      obs.disconnect()
-      timeouts.forEach(clearTimeout)
-    }
-  }, [index])
+    return () => timers.current.forEach(clearTimeout)
+  }, [isActive])
 
   return (
     <div
-      ref={cardRef}
+      onClick={!isActive ? onActivate : undefined}
       style={{
-        background: '#0F0F0D',
-        border: '1px solid rgba(255,255,255,0.07)',
-        borderTop: `3px solid ${benefit.color}`,
+        flexShrink: 0,
+        width: 'var(--card-width)',
+        background: 'linear-gradient(160deg, #1a1a18 0%, #1e2d24 100%)',
+        border: `1px solid ${story.color}22`,
+        borderTop: `2px solid ${story.color}55`,
         borderRadius: '1.25rem',
-        padding: 'clamp(1.5rem, 3vw, 2rem)',
+        padding: '1.75rem',
+        scrollSnapAlign: 'center',
         display: 'flex',
         flexDirection: 'column',
+        cursor: !isActive ? 'pointer' : 'default',
+        transition: 'opacity 0.3s ease, transform 0.3s ease',
+        opacity: isActive ? 1 : 0.5,
+        transform: isActive ? 'scale(1)' : 'scale(0.97)',
       }}
     >
       {/* Check badge */}
       <div style={{
-        width: '2.1rem', height: '2.1rem', borderRadius: '50%',
-        background: `${benefit.color}15`, border: `1.5px solid ${benefit.color}38`,
+        width: 38, height: 38, borderRadius: '50%',
+        background: `${story.color}15`,
+        border: `1px solid ${story.color}40`,
         display: 'flex', alignItems: 'center', justifyContent: 'center',
-        marginBottom: '1.35rem', flexShrink: 0,
+        marginBottom: '1.5rem', flexShrink: 0,
       }}>
-        <svg width="13" height="10" viewBox="0 0 13 10" fill="none">
-          <path d="M1.5 5.5L5 9L11.5 1" stroke={benefit.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8l3.5 3.5L13 4.5" stroke={story.color} strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </div>
 
       {/* Stat */}
-      <div style={{
-        fontFamily: 'DM Sans, sans-serif',
-        fontSize: 'clamp(3.5rem, 6vw, 5.5rem)',
+      <div className="font-dm" style={{
+        fontSize: 'clamp(3rem, 5vw, 4.5rem)',
         fontWeight: 800,
         color: '#F7F3ED',
-        lineHeight: 0.92,
-        letterSpacing: '-0.045em',
-        marginBottom: '0.5rem',
+        lineHeight: 1,
+        letterSpacing: '-0.03em',
+        marginBottom: '0.4rem',
       }}>
-        {benefit.statPrefix}{count}{benefit.statSuffix}
+        {story.stat}
       </div>
 
-      <div style={{
-        fontFamily: 'DM Sans, sans-serif',
-        fontSize: 'clamp(0.88rem, 1.5vw, 1rem)',
-        color: benefit.color,
-        fontWeight: 500,
-        marginBottom: '0.9rem',
+      {/* Label */}
+      <div className="font-dm" style={{
+        fontSize: '0.95rem',
+        fontWeight: 600,
+        color: story.color,
+        marginBottom: '0.85rem',
       }}>
-        {benefit.statLabel}
+        {story.label}
       </div>
 
-      <p style={{
-        fontFamily: 'DM Sans, sans-serif',
-        fontSize: 'clamp(0.85rem, 1.4vw, 0.94rem)',
-        color: 'rgba(247,243,237,0.38)',
-        lineHeight: 1.7,
+      {/* Description */}
+      <p className="font-dm" style={{
+        fontSize: '0.88rem',
         fontWeight: 300,
-        margin: 0,
+        color: 'rgba(247,243,237,0.72)',
+        lineHeight: 1.7,
+        margin: '0 0 1.25rem',
+        flex: 1,
       }}>
-        {benefit.description}
+        {story.desc}
       </p>
 
       {/* Divider */}
-      <div style={{
-        height: '1px',
-        background: `linear-gradient(to right, ${benefit.color}45, rgba(255,255,255,0.06) 55%, transparent)`,
-        margin: '1.5rem 0',
-      }} />
+      <div style={{ height: 1, background: 'rgba(247,243,237,0.07)', marginBottom: '1.25rem' }} />
 
-      {/* Animated story */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem', flex: 1 }}>
-        {benefit.story.map((item, i) => (
-          <div key={i}>
-            <StoryItem item={item} active={step >= i} color={benefit.color} />
-            {i < benefit.story.length - 1 && (
-              <div style={{ height: '1px', background: 'rgba(255,255,255,0.05)', marginTop: '1.1rem' }} />
-            )}
+      {/* Story phases */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
+
+        {/* Trigger */}
+        <div style={{
+          opacity: phase >= 1 ? 1 : 0,
+          transform: phase >= 1 ? 'translateY(0)' : 'translateY(6px)',
+          transition: 'opacity 0.4s ease, transform 0.4s ease',
+        }}>
+          <p className="font-mono" style={{ fontSize: '0.56rem', letterSpacing: '0.14em', color: 'rgba(247,243,237,0.42)', marginBottom: '0.35rem' }}>
+            TRIGGER
+          </p>
+          <p className="font-mono" style={{ fontSize: '0.78rem', color: 'rgba(247,243,237,0.55)', margin: 0 }}>
+            {story.trigger}
+          </p>
+        </div>
+
+        {/* Action / message */}
+        <div style={{
+          opacity: phase >= 2 ? 1 : 0,
+          transform: phase >= 2 ? 'translateY(0)' : 'translateY(6px)',
+          transition: 'opacity 0.4s ease 0.07s, transform 0.4s ease 0.07s',
+        }}>
+          <p className="font-mono" style={{ fontSize: '0.56rem', letterSpacing: '0.14em', color: 'rgba(247,243,237,0.42)', marginBottom: '0.5rem' }}>
+            {story.actionLabel}
+          </p>
+          <div style={{
+            background: 'rgba(255,255,255,0.04)',
+            border: '1px solid rgba(247,243,237,0.07)',
+            borderRadius: '0.65rem',
+            padding: '0.75rem 0.9rem',
+          }}>
+            <p className="font-dm" style={{ fontSize: '0.85rem', color: 'rgba(247,243,237,0.72)', lineHeight: 1.6, margin: 0, whiteSpace: 'pre-line' }}>
+              {story.message}
+            </p>
           </div>
-        ))}
+        </div>
+
+        {/* Result */}
+        <div style={{
+          opacity: phase >= 3 ? 1 : 0,
+          transform: phase >= 3 ? 'translateY(0)' : 'translateY(6px)',
+          transition: 'opacity 0.4s ease 0.07s, transform 0.4s ease 0.07s',
+          display: 'flex', alignItems: 'center', gap: '0.6rem',
+        }}>
+          <div style={{ flexShrink: 0 }}>
+            <p className="font-mono" style={{ fontSize: '0.56rem', letterSpacing: '0.14em', color: 'rgba(247,243,237,0.42)', marginBottom: '0.35rem' }}>
+              RESULT
+            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <div style={{
+                width: 18, height: 18, borderRadius: '50%',
+                background: `${story.color}20`,
+                border: `1px solid ${story.color}50`,
+                display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+              }}>
+                <svg width="10" height="10" viewBox="0 0 16 16" fill="none">
+                  <path d="M3 8l3.5 3.5L13 4.5" stroke={story.color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+              <p className="font-mono" style={{ fontSize: '0.78rem', color: story.color, margin: 0 }}>
+                {story.result}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Progress dots */}
-      <div style={{ display: 'flex', gap: '0.4rem', marginTop: '1.5rem', alignItems: 'center' }}>
-        {benefit.story.map((_, i) => (
+      {/* Slide dots */}
+      <div style={{ display: 'flex', gap: '0.3rem', marginTop: '1.75rem' }}>
+        {STORIES.map((_, i) => (
           <div key={i} style={{
-            height: '3px',
-            width: step >= i ? '1.8rem' : '0.55rem',
+            height: 3,
+            width: i === index ? '1.5rem' : '0.4rem',
             borderRadius: '9999px',
-            background: step >= i ? benefit.color : 'rgba(255,255,255,0.12)',
-            transition: 'width 0.45s cubic-bezier(0.34,1.56,0.64,1), background 0.35s ease',
-            flexShrink: 0,
+            background: i === index ? story.color : 'rgba(247,243,237,0.12)',
+            transition: 'width 0.3s ease',
           }} />
         ))}
       </div>
@@ -276,58 +228,112 @@ function BenefitCard({ benefit, index }) {
   )
 }
 
-// ─── Section ──────────────────────────────────────────────────────────────────────
+// ─── Section ──────────────────────────────────────────────────────────────────
 export default function Benefits() {
+  const stripRef = useRef(null)
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  // Click a card to activate it — scroll it into view
+  const handleActivate = (index) => {
+    const el = stripRef.current
+    if (!el) return
+    const firstCard = el.firstElementChild
+    if (!firstCard) return
+    const cardW = firstCard.offsetWidth + 20
+    el.scrollTo({ left: index * cardW, behavior: 'smooth' })
+    setActiveIndex(index)
+  }
+
+  // Track active card by scroll position
+  useEffect(() => {
+    const el = stripRef.current
+    if (!el) return
+    const handleScroll = () => {
+      // Each card is card-width + gap. Read the actual card width from the first child.
+      const firstCard = el.firstElementChild
+      if (!firstCard) return
+      const cardW = firstCard.offsetWidth + 20 // gap = 20px
+      const idx = Math.round(el.scrollLeft / cardW)
+      setActiveIndex(Math.min(idx, STORIES.length - 1))
+    }
+    el.addEventListener('scroll', handleScroll, { passive: true })
+    return () => el.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <section style={{
-      backgroundColor: '#1C1C1A',
-      padding: 'clamp(4rem, 8vw, 7rem) clamp(1.25rem, 5vw, 4rem)',
-    }}>
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <div style={{ marginBottom: 'clamp(2.5rem, 5vw, 4rem)' }}>
-          <h2 style={{
-            fontFamily: 'Cormorant Garamond, serif',
-            fontSize: 'clamp(2.8rem, 6vw, 5.5rem)',
-            fontWeight: 700,
-            lineHeight: 1.0,
-            letterSpacing: '-0.025em',
-            maxWidth: '800px',
-            marginBottom: '1.25rem',
-          }}>
-            <span style={{ color: '#F7F3ED' }}>Save Hours. Cut Costs.</span>
-            <br />
-            <span style={{ color: '#8FAF9F' }}>Grow Faster.</span>
-          </h2>
-          <p style={{
-            fontFamily: 'DM Sans, sans-serif',
-            fontSize: 'clamp(0.9rem, 1.2vw, 1rem)',
-            color: '#8A8A7A',
-            lineHeight: 1.6,
-            maxWidth: '340px',
-          }}>
-            Real results from AI that automates quoting, scheduling, and admin — so your business runs smarter every day.
-          </p>
-        </div>
-
-        <div className="benefits-grid" style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: 'clamp(1rem, 2vw, 1.5rem)',
-        }}>
-          {BENEFITS.map((b, i) => (
-            <BenefitCard key={b.id} benefit={b} index={i} />
-          ))}
-        </div>
-      </div>
-
+    <section style={{ background: 'linear-gradient(160deg, #111810 0%, #182018 50%, #131813 100%)', padding: '6rem 0' }}>
       <style>{`
-        @media (max-width: 860px) {
-          .benefits-grid { grid-template-columns: 1fr !important; }
-        }
-        @media (min-width: 861px) and (max-width: 1060px) {
-          .benefits-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        .story-strip::-webkit-scrollbar { display: none; }
+        .story-strip { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Desktop: ~3 cards visible */
+        :root { --card-width: min(400px, 34vw); }
+
+        /* Mobile: 1 card + peek */
+        @media (max-width: 768px) {
+          :root { --card-width: min(85vw, 360px); }
         }
       `}</style>
+
+      {/* Header */}
+      <div style={{ textAlign: 'center', padding: '0 1.5rem', marginBottom: '3.5rem' }}>
+        <p className="font-mono" style={{
+          fontSize: '0.68rem', letterSpacing: '0.18em',
+          color: '#8FAF9F', marginBottom: '1rem', fontWeight: 500,
+        }}>
+          THE PROBLEM
+        </p>
+        <h2 className="font-cormorant" style={{
+          fontSize: 'clamp(2rem, 4vw, 3.5rem)',
+          fontWeight: 600, color: '#F7F3ED', lineHeight: 1.15, marginBottom: '1rem',
+        }}>
+          You're the most expensive person in your business —<br />doing the cheapest tasks.
+        </h2>
+        <p className="font-dm" style={{
+          fontSize: '1.05rem', fontWeight: 300,
+          color: 'rgba(247,243,237,0.70)',
+          maxWidth: '520px', margin: '0 auto', lineHeight: 1.7,
+        }}>
+          Every hour spent chasing invoices, following up leads, or writing the same email again is an hour you're not growing.
+        </p>
+      </div>
+
+      {/* Horizontal scroll strip */}
+      <div
+        ref={stripRef}
+        className="story-strip"
+        style={{
+          display: 'flex',
+          gap: '1.25rem',
+          overflowX: 'auto',
+          scrollSnapType: 'x mandatory',
+          WebkitOverflowScrolling: 'touch',
+          padding: '0.5rem 2.5rem 1.5rem',
+          alignItems: 'stretch',
+        }}
+      >
+        {STORIES.map((story, i) => (
+          <StoryCard
+            key={i}
+            story={story}
+            isActive={activeIndex === i}
+            index={i}
+            totalCards={STORIES.length}
+            onActivate={() => handleActivate(i)}
+          />
+        ))}
+      </div>
+
+      {/* Hint arrow on desktop — fades out after first scroll */}
+      <p className="font-mono" style={{
+        textAlign: 'center',
+        fontSize: '0.6rem',
+        letterSpacing: '0.14em',
+        color: 'rgba(247,243,237,0.55)',
+        marginTop: '0.5rem',
+      }}>
+        SCROLL TO EXPLORE →
+      </p>
     </section>
   )
 }
