@@ -61,38 +61,11 @@ export default function Footer() {
   return (
     <footer style={{ backgroundColor: '#1C1C1A', borderRadius: '4rem 4rem 0 0', overflow: 'hidden', position: 'relative' }}>
 
-      {/* ── Flowing silk background ── */}
+      {/* ── Ambient background ── */}
       <div aria-hidden="true" style={{ position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' }}>
-        {/* Ambient colour pools */}
-        <div style={{ position: 'absolute', width: '900px', height: '700px', left: '-250px', top: '-100px', background: 'radial-gradient(ellipse, rgba(143,175,159,0.09) 0%, transparent 68%)', filter: 'blur(80px)' }} />
-        <div style={{ position: 'absolute', width: '700px', height: '600px', right: '-180px', top: '100px', background: 'radial-gradient(ellipse, rgba(143,175,159,0.07) 0%, transparent 68%)', filter: 'blur(100px)' }} />
-        <div style={{ position: 'absolute', width: '600px', height: '400px', left: '25%', bottom: '5%', background: 'radial-gradient(ellipse, rgba(212,201,176,0.06) 0%, transparent 68%)', filter: 'blur(80px)' }} />
-
-        {/* Flowing wisp paths — silk / undercurrent effect */}
-        <svg
-          width="100%" height="100%"
-          viewBox="0 0 1440 1100"
-          preserveAspectRatio="xMidYMid slice"
-          style={{ position: 'absolute', inset: 0 }}
-        >
-          <defs>
-            <filter id="footerWisp">
-              <feGaussianBlur stdDeviation="18" />
-            </filter>
-          </defs>
-          <g filter="url(#footerWisp)" opacity="1">
-            <path d="M -150 280 C 180 120 520 420 840 220 S 1260 20 1620 280"
-              stroke="rgba(143,175,159,0.22)" strokeWidth="90" fill="none" strokeLinecap="round" />
-            <path d="M -150 480 C 280 620 680 320 1020 500 S 1420 620 1700 420"
-              stroke="rgba(143,175,159,0.14)" strokeWidth="110" fill="none" strokeLinecap="round" />
-            <path d="M 80 680 C 380 520 740 740 1080 580 S 1440 480 1750 680"
-              stroke="rgba(212,201,176,0.1)" strokeWidth="80" fill="none" strokeLinecap="round" />
-            <path d="M -200 160 C 240 380 640 180 960 380 S 1360 580 1760 280"
-              stroke="rgba(143,175,159,0.09)" strokeWidth="140" fill="none" strokeLinecap="round" />
-            <path d="M 200 900 C 500 760 820 960 1140 820 S 1500 700 1800 900"
-              stroke="rgba(212,201,176,0.07)" strokeWidth="100" fill="none" strokeLinecap="round" />
-          </g>
-        </svg>
+        <div style={{ position: 'absolute', width: '900px', height: '700px', left: '-250px', top: '-100px', background: 'radial-gradient(ellipse, rgba(143,175,159,0.09) 0%, transparent 68%)' }} />
+        <div style={{ position: 'absolute', width: '700px', height: '600px', right: '-180px', top: '100px', background: 'radial-gradient(ellipse, rgba(143,175,159,0.07) 0%, transparent 68%)' }} />
+        <div style={{ position: 'absolute', width: '600px', height: '400px', left: '25%', bottom: '5%', background: 'radial-gradient(ellipse, rgba(212,201,176,0.06) 0%, transparent 68%)' }} />
       </div>
 
       {/* ── Tile CTA section ── */}
@@ -135,7 +108,6 @@ export default function Footer() {
                 padding: '1.75rem',
                 display: 'flex',
                 flexDirection: 'column',
-                backdropFilter: 'blur(2px)',
               }}
             >
               {/* Icon + label row */}
