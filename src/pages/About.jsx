@@ -241,15 +241,15 @@ export default function About() {
   const heroRef = useRef(null)
   const headlineRef = useRef(null)
   const subRef = useRef(null)
-  const glowRef = useRef(null)
+  const videoRef = useRef(null)
 
   useEffect(() => {
     window.scrollTo(0, 0)
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.1 })
-      tl.fromTo(glowRef.current,
-        { opacity: 0, scale: 0.7 },
-        { opacity: 1, scale: 1, duration: 1.8, ease: 'power2.out' }
+      tl.fromTo(videoRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 1.8, ease: 'power2.out' }
       )
       .fromTo(headlineRef.current,
         { y: 50, opacity: 0 },
@@ -298,18 +298,32 @@ export default function About() {
         style={{
           height: '70dvh',
           minHeight: '520px',
-          background: 'linear-gradient(160deg, #1C1C1A 0%, #2a3028 30%, #3d4f42 55%, #8FAF9F 80%, #D4C9B0 100%)',
+          background: '#1C1C1A',
         }}
       >
-        <div ref={glowRef} style={{
-          position: 'absolute', top: '42%', left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: '80vw', maxWidth: '900px', height: '80vw', maxHeight: '900px',
-          borderRadius: '50%',
-          background: 'radial-gradient(ellipse at center, rgba(143,175,159,0.22) 0%, rgba(143,175,159,0.08) 45%, transparent 70%)',
-          pointerEvents: 'none', opacity: 0,
+        <video
+          ref={videoRef}
+          src="/hero-bg.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: 'absolute', inset: 0,
+            width: '100%', height: '100%',
+            objectFit: 'cover', objectPosition: 'center',
+            opacity: 0, pointerEvents: 'none',
+          }}
+        />
+        <div aria-hidden="true" style={{
+          position: 'absolute', inset: 0, pointerEvents: 'none',
+          background: [
+            'linear-gradient(to bottom, #1C1C1A 0%, transparent 28%)',
+            'linear-gradient(to top,    #1C1C1A 0%, transparent 32%)',
+            'linear-gradient(to right,  #1C1C1A 0%, transparent 22%)',
+            'linear-gradient(to left,   #1C1C1A 0%, transparent 22%)',
+          ].join(', '),
         }} />
-        <WaterCanvas opacity={0.8} />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6" style={{ paddingTop: '5rem' }}>
           <p className="font-mono mb-4" style={{ fontSize: '0.7rem', letterSpacing: '0.2em', color: 'rgba(143,175,159,0.7)' }}>
             ABOUT UNDERCURRENT
@@ -318,7 +332,7 @@ export default function About() {
             <span className="block font-dm" style={{ fontSize: 'clamp(3rem, 7vw, 7rem)', fontWeight: 700, letterSpacing: '-0.03em', color: '#F7F3ED', lineHeight: 1.0 }}>
               Built on the belief
             </span>
-            <span className="block font-cormorant" style={{ fontSize: 'clamp(3rem, 7vw, 7rem)', fontWeight: 300, fontStyle: 'italic', letterSpacing: '-0.02em', color: 'rgba(143,175,159,0.9)', lineHeight: 1.05, marginTop: '0.08em' }}>
+            <span className="block font-dm" style={{ fontSize: 'clamp(3rem, 7vw, 7rem)', fontWeight: 700, letterSpacing: '-0.03em', color: 'rgba(143,175,159,0.9)', lineHeight: 1.05, marginTop: '0.08em' }}>
               that work should flow.
             </span>
           </h1>
