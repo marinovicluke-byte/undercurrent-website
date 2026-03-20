@@ -142,8 +142,8 @@ export default function Hero({ ready = true }) {
         <div ref={ctaRef} style={{ opacity: 0, marginTop: '2rem' }}>
           <a
             href="/audit"
-            className="btn-sage-hero"
-            style={{ fontSize: '0.9rem', padding: '0.75rem 1.6rem', flexDirection: 'column', gap: '0.2rem', alignItems: 'center' }}
+            className="btn-sage-hero hero-cta"
+            style={{ flexDirection: 'column', gap: '0.2rem', alignItems: 'center' }}
           >
             <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               See What You're Losing Each Month
@@ -162,12 +162,19 @@ export default function Hero({ ready = true }) {
         </div>
       </div>
 
-      {/* Scroll indicator — bottom left, clearly below all content */}
+      {/* Scroll indicator — left on mobile, centred on desktop */}
+      <style>{`
+        .hero-scroll { left: 1.5rem; }
+        .hero-cta { font-size: 0.9rem !important; padding: 0.75rem 1.6rem !important; }
+        @media (min-width: 768px) {
+          .hero-scroll { left: 50% !important; transform: translateX(-50%); }
+          .hero-cta { font-size: 1rem !important; padding: 1.1rem 3rem !important; }
+        }
+      `}</style>
       <div
-        className="absolute font-mono"
+        className="absolute font-mono hero-scroll"
         style={{
           bottom: '5.5rem',
-          left: '1.5rem',
           fontSize: '0.7rem',
           letterSpacing: '0.15em',
           color: 'rgba(212,201,176,0.6)',

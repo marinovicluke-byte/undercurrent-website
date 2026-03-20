@@ -226,8 +226,8 @@ export default function Protocol() {
           ref={tabRef}
           style={{
             display: 'grid',
-            gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)',
-            gap: '0.75rem',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '0.5rem',
             marginBottom: '1.5rem',
             opacity: tabVisible ? 1 : 0,
             transform: tabVisible ? 'translateY(0)' : 'translateY(14px)',
@@ -241,30 +241,33 @@ export default function Protocol() {
                 key={s.num}
                 onClick={() => setActive(i)}
                 style={{
-                  display: 'flex', alignItems: 'center', gap: '1rem',
-                  padding: '1.1rem 1.5rem', borderRadius: '0.875rem',
+                  display: 'flex', alignItems: 'center', justifyContent: isMobile ? 'center' : 'flex-start',
+                  gap: isMobile ? '0.35rem' : '1rem',
+                  padding: isMobile ? '0.7rem 0.5rem' : '1.1rem 1.5rem', borderRadius: '0.875rem',
                   border: isActive ? `1.5px solid ${s.color}50` : '1.5px solid rgba(28,28,26,0.1)',
                   background: isActive ? '#FFFFFF' : 'rgba(28,28,26,0.04)',
-                  cursor: 'pointer', textAlign: 'left',
+                  cursor: 'pointer', textAlign: 'center',
                   transition: 'all 0.25s ease',
                   boxShadow: isActive ? '0 4px 20px rgba(28,28,26,0.08)' : 'none',
                 }}
               >
-                <span className="font-mono" style={{
-                  fontSize: '0.65rem', letterSpacing: '0.1em',
-                  color: isActive ? s.color : 'rgba(28,28,26,0.28)',
-                  transition: 'color 0.25s ease', flexShrink: 0,
-                }}>
-                  {s.num}
-                </span>
+                {!isMobile && (
+                  <span className="font-mono" style={{
+                    fontSize: '0.65rem', letterSpacing: '0.1em',
+                    color: isActive ? s.color : 'rgba(28,28,26,0.28)',
+                    transition: 'color 0.25s ease', flexShrink: 0,
+                  }}>
+                    {s.num}
+                  </span>
+                )}
                 <span className="font-dm" style={{
-                  fontSize: '1.05rem', fontWeight: 600,
+                  fontSize: isMobile ? '0.9rem' : '1.05rem', fontWeight: 600,
                   color: isActive ? '#1C1C1A' : 'rgba(28,28,26,0.45)',
                   transition: 'color 0.25s ease',
                 }}>
                   {s.word}
                 </span>
-                {isActive && (
+                {isActive && !isMobile && (
                   <span style={{
                     marginLeft: 'auto', width: '7px', height: '7px', borderRadius: '50%',
                     background: s.color, boxShadow: `0 0 6px ${s.color}`, flexShrink: 0,
