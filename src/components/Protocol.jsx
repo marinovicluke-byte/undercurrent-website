@@ -191,7 +191,7 @@ export default function Protocol() {
   }
 
   return (
-    <section style={{ backgroundColor: '#F7F3ED', padding: '7rem 1.5rem 6rem', marginTop: '-2px', position: 'relative', zIndex: 1 }}>
+    <section style={{ backgroundColor: '#F7F3ED', padding: '4rem 1.5rem 6rem', marginTop: '-2px', position: 'relative', zIndex: 1 }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
 
         {/* ── Heading ──────────────────────────────────────────────────────── */}
@@ -215,20 +215,10 @@ export default function Protocol() {
           </h2>
           <p className="font-dm" style={{
             fontSize: '1rem', color: 'rgba(28,28,26,0.55)',
-            maxWidth: '420px', lineHeight: 1.7, margin: '0 0 1.5rem',
+            maxWidth: '420px', lineHeight: 1.7, margin: 0,
           }}>
             You don't need to know how it works. You just need to know it does.
           </p>
-          <div style={{
-            display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
-            padding: '0.3rem 0.85rem', borderRadius: '9999px',
-            background: 'rgba(143,175,159,0.12)', border: '1px solid rgba(143,175,159,0.3)',
-          }}>
-            <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: '#8FAF9F' }} />
-            <span className="font-mono" style={{ fontSize: '0.58rem', letterSpacing: '0.14em', color: '#8FAF9F', textTransform: 'uppercase' }}>
-              The Process
-            </span>
-          </div>
         </div>
 
         {/* ── Tab buttons — Map / Build / Maintain ─────────────────────────── */}

@@ -68,7 +68,7 @@ export default function FAQ() {
   const activeFaq = FAQS[active]
 
   return (
-    <section id="faq" style={{ backgroundColor: '#F7F3ED', padding: '6rem 1.5rem' }}>
+    <section id="faq" style={{ backgroundColor: '#F7F3ED', padding: '3.5rem 1.5rem' }}>
       <style>{`
         .faq-tiles {
           display: grid;
