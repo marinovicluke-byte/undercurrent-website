@@ -176,7 +176,7 @@ export default function Footer() {
 
             {/* ── Column 1: Logo + nav links + socials ── */}
             <div
-              className="flex-1 order-2 md:order-1 border-b md:border-b-0 md:border-r"
+              className="flex-1 order-3 md:order-1 border-b md:border-b-0 md:border-r"
               style={{ padding: '2.5rem 1.5rem', borderColor: 'rgba(212,201,176,0.08)' }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.35rem' }}>
@@ -277,7 +277,7 @@ export default function Footer() {
 
             {/* ── Column 3: Contact + legal ── */}
             <div
-              className="flex-1"
+              className="flex-1 order-2 md:order-3"
               style={{ padding: '2.5rem 1.5rem' }}
             >
               <a
