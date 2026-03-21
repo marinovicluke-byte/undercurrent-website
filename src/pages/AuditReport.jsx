@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import PageHead from '../components/PageHead'
 import { calcPillarMonthly } from '../audit/calculations.js'
+import RadarChart from '../audit/RadarChart.jsx'
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 const CALENDAR_LINK = 'https://cal.com/luke-marinovic-aqeosc/30min'
@@ -433,6 +434,18 @@ export default function AuditReport() {
                 <div style={{ width: '14px', height: '4px', borderRadius: '2px', background: C.green }} />
                 <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.72rem', color: 'rgba(143,175,159,0.75)' }}>Automated benchmark</span>
               </div>
+            </div>
+          </div>
+
+          <Divider />
+
+          <div className="ri" style={{ animationDelay: '0.4s' }}>
+            <Label>Your Business at a Glance</Label>
+            <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(22px, 4vw, 32px)', fontWeight: 700, color: C.text, margin: '0 0 32px' }}>
+              Where your time is going
+            </h2>
+            <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: '14px', padding: '32px 24px' }}>
+              <RadarChart pillars={data.p} size={320} />
             </div>
           </div>
 
