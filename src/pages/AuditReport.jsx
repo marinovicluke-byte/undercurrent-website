@@ -507,7 +507,7 @@ export default function AuditReport() {
             padding: 40px 16px 40px !important;
           }
           .report-page:first-of-type {
-            padding-top: 80px !important;
+            padding-top: 130px !important;
           }
           .section-divider {
             display: block !important;
