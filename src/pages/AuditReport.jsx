@@ -354,7 +354,7 @@ function SectionLabel({ children }) {
 
 function ScrollPrompt({ text = 'Scroll to continue' }) {
   return (
-    <div style={{
+    <div className="mobile-hide-scroll-prompt" style={{
       position: 'absolute',
       bottom: '32px',
       left: '50%',
@@ -376,6 +376,10 @@ function ScrollPrompt({ text = 'Scroll to continue' }) {
       <span style={{ color: 'rgba(143,175,159,0.4)', fontSize: '1.2rem' }}>&#8595;</span>
     </div>
   )
+}
+
+function SectionDivider() {
+  return <div className="section-divider" />
 }
 
 function PageNumber({ current, total }) {
@@ -468,6 +472,9 @@ export default function AuditReport() {
           overflow: hidden;
           background: #1C1C1A;
         }
+        .section-divider {
+          display: none;
+        }
         .report-inner {
           max-width: 820px;
           margin: 0 auto;
@@ -490,8 +497,31 @@ export default function AuditReport() {
         }
 
         @media (max-width: 640px) {
-          .report-page { padding: 80px 16px 50px; }
+          .report-scroll-container {
+            scroll-snap-type: none !important;
+            height: auto !important;
+          }
+          .report-page {
+            min-height: auto !important;
+            scroll-snap-align: none !important;
+            padding: 40px 16px 40px !important;
+          }
+          .report-page:first-of-type {
+            padding-top: 80px !important;
+          }
+          .section-divider {
+            display: block !important;
+            height: 2px;
+            margin: 0 24px;
+            border-radius: 1px;
+            background: rgba(143,175,159,0.25);
+            box-shadow: 0 0 12px rgba(143,175,159,0.15), 0 0 4px rgba(143,175,159,0.1);
+          }
           .hero-stats-grid { grid-template-columns: 1fr !important; }
+          .hero-stat-box { padding: 24px 20px !important; }
+          .hero-stat-box p.hero-stat-number { font-size: clamp(2rem, 5vw, 2.8rem) !important; }
+          .mobile-hide-cta { display: none !important; }
+          .mobile-hide-scroll-prompt { display: none !important; }
           .leak-card { grid-template-columns: 1fr !important; }
           .leak-card-divider { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.08); }
           .stats-row { grid-template-columns: 1fr !important; }
@@ -531,18 +561,18 @@ export default function AuditReport() {
 
             <FadeSection delay={0.3}>
               <div className="hero-stats-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '28px' }}>
-                <div style={{ ...CARD_RED, padding: '36px 32px' }}>
+                <div className="hero-stat-box" style={{ ...CARD_RED, padding: '36px 32px' }}>
                   <SectionLabel>Est. monthly loss</SectionLabel>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(2.6rem, 6vw, 3.8rem)', fontWeight: 800, color: '#FF6B50', margin: 0, lineHeight: 1 }}>
+                  <p className="hero-stat-number" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(2.6rem, 6vw, 3.8rem)', fontWeight: 800, color: '#FF6B50', margin: 0, lineHeight: 1 }}>
                     {fmt(totalMonthly)}
                   </p>
                   <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.78rem', color: 'rgba(247,243,237,0.32)', margin: '10px 0 0' }}>
                     in unbilled time, missed leads & manual work
                   </p>
                 </div>
-                <div style={{ ...CARD_RED, padding: '36px 32px', background: 'rgba(255,107,80,0.10)', border: '1px solid rgba(255,107,80,0.25)' }}>
+                <div className="hero-stat-box" style={{ ...CARD_RED, padding: '36px 32px', background: 'rgba(255,107,80,0.10)', border: '1px solid rgba(255,107,80,0.25)' }}>
                   <SectionLabel>That's per year</SectionLabel>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(3rem, 7vw, 4.4rem)', fontWeight: 800, color: '#FF6B50', margin: 0, lineHeight: 1 }}>
+                  <p className="hero-stat-number" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 'clamp(3rem, 7vw, 4.4rem)', fontWeight: 800, color: '#FF6B50', margin: 0, lineHeight: 1 }}>
                     {fmt(totalYearly)}
                   </p>
                 </div>
@@ -561,7 +591,7 @@ export default function AuditReport() {
 
             {/* CTA — below pills, above scroll prompt */}
             <FadeSection delay={0.45}>
-              <div style={{ textAlign: 'center', marginTop: '32px' }}>
+              <div className="mobile-hide-cta" style={{ textAlign: 'center', marginTop: '32px' }}>
                 <a href={CALENDAR_LINK} target="_blank" rel="noopener noreferrer" style={{
                   display: 'inline-block', background: '#8FAF9F', color: '#1C1C1A',
                   fontFamily: "'DM Sans', sans-serif", fontSize: '0.95rem', fontWeight: 700,
@@ -581,6 +611,7 @@ export default function AuditReport() {
           </div>
           <ScrollPrompt text="Scroll to see your biggest leaks" />
         </section>
+        <SectionDivider />
 
         {/* ══════════════ PAGE 2 — TIME WASTERS ══════════════ */}
         <section className="report-page" style={{ justifyContent: 'flex-start', paddingTop: '100px' }}>
@@ -635,6 +666,7 @@ export default function AuditReport() {
           </div>
           <ScrollPrompt text="Scroll to see how you compare" />
         </section>
+        <SectionDivider />
 
         {/* ══════════════ PAGE 3 — BENCHMARKS ══════════════ */}
         <section className="report-page" style={{ justifyContent: 'flex-start', paddingTop: '100px' }}>
@@ -706,6 +738,7 @@ export default function AuditReport() {
           </div>
           <ScrollPrompt text="Scroll to see the big picture" />
         </section>
+        <SectionDivider />
 
         {/* ══════════════ PAGE 4 — STATS + RADAR ══════════════ */}
         <section className="report-page" style={{ justifyContent: 'flex-start', paddingTop: '100px' }}>
@@ -786,6 +819,7 @@ export default function AuditReport() {
           </div>
           <ScrollPrompt text="Scroll for your next steps" />
         </section>
+        <SectionDivider />
 
         {/* ══════════════ PAGE 5 — SUMMARY + CTA ══════════════ */}
         <section className="report-page">
