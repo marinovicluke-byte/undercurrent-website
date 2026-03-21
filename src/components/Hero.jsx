@@ -97,7 +97,7 @@ export default function Hero({ ready = true }) {
           <span
             className="block font-dm"
             style={{
-              fontSize: 'clamp(3.6rem, 7vw, 7.5rem)',
+              fontSize: 'clamp(2.6rem, 7vw, 7.5rem)',
               fontWeight: 700,
               letterSpacing: '-0.03em',
               color: '#F7F3ED',
@@ -109,7 +109,7 @@ export default function Hero({ ready = true }) {
           <span
             className="block font-dm"
             style={{
-              fontSize: 'clamp(3.6rem, 7vw, 7.5rem)',
+              fontSize: 'clamp(2.6rem, 7vw, 7.5rem)',
               fontWeight: 700,
               letterSpacing: '-0.03em',
               color: 'rgba(143,175,159,0.9)',

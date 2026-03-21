@@ -287,7 +287,7 @@ export default function Benefits() {
           fontSize: 'clamp(2rem, 4vw, 3.5rem)',
           fontWeight: 600, color: '#F7F3ED', lineHeight: 1.15, marginBottom: '1rem',
         }}>
-          You're the most expensive person in your business —<br />doing the cheapest tasks.
+          You're the most expensive person in your business,<br />doing the cheapest tasks.
         </h2>
         <p className="font-dm" style={{
           fontSize: '1.05rem', fontWeight: 300,
