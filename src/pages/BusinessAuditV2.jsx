@@ -372,7 +372,7 @@ function ReportModal({ isOpen, onClose, payload }) {
               Check your inbox.
             </p>
             <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.88rem', color: 'rgba(247,243,237,0.45)', margin: 0, lineHeight: 1.6 }}>
-              Your full audit report is on its way — we'll be in touch shortly.
+              Your full audit report is on its way, we'll be in touch shortly.
             </p>
           </div>
         ) : (
@@ -414,7 +414,7 @@ function ReportModal({ isOpen, onClose, payload }) {
 
               {status === 'error' && (
                 <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.82rem', color: 'rgba(220,80,60,0.9)', margin: '0' }}>
-                  Something went wrong — please try again.
+                  Something went wrong, please try again.
                 </p>
               )}
 
@@ -933,9 +933,9 @@ export default function BusinessAuditV2() {
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {[
-                  { n: '1', text: 'Rate each area — pick Red, Orange, or Green based on how well it\'s running.' },
+                  { n: '1', text: 'Rate each area, pick Red, Orange, or Green based on how well it\'s running.' },
                   { n: '2', text: 'Drag the slider to show how many hours a week you\'re spending on it manually.' },
-                  { n: '3', text: 'Watch your numbers update live — your estimated monthly loss appears on the right.' },
+                  { n: '3', text: 'Watch your numbers update live, your estimated monthly loss appears on the right.' },
                 ].map(step => (
                   <div key={step.n} style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
                     <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.72rem', color: '#8FAF9F', background: 'rgba(143,175,159,0.12)', border: '1px solid rgba(143,175,159,0.2)', borderRadius: '50%', width: '22px', height: '22px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '1px' }}>
@@ -989,7 +989,7 @@ export default function BusinessAuditV2() {
               margin: '0 0 20px',
               lineHeight: 1.5,
             }}>
-              Based on your inputs — updated live as you fill in the form.
+              Based on your inputs, updated live as you fill in the form.
             </p>
 
             {/* ── Headline: total estimated loss ── */}

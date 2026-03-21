@@ -149,7 +149,7 @@ const STEPS = [
     num: '01', word: 'Map', color: '#8FAF9F',
     tag: '30-min call · Free',
     title: 'We Find Where Your Time Is Going.',
-    body: 'In a free 30-minute call, we go through everything you and your team do repeatedly. We rank tasks by time saved and show you exactly what can be automated — and what the impact would be. No obligation. You leave with a clear picture regardless.',
+    body: 'In a free 30-minute call, we go through everything you and your team do repeatedly. We rank tasks by time saved and show you exactly what can be automated, and what the impact would be. No obligation. You leave with a clear picture regardless.',
     bullets: ['Map every repetitive task in your business', 'Rank by time saved and revenue impact', 'Show you exactly what automation looks like for you'],
   },
   {
@@ -157,14 +157,14 @@ const STEPS = [
     tag: '2-week build · Done-for-you',
     title: "We Set It Up. You Don't Lift a Finger.",
     body: "We connect automations directly into the tools you already use. No new software to learn. Nothing changes about how you work. We just remove the slow, repetitive parts. Most clients are live within two weeks.",
-    bullets: ['Built inside your existing tools — no new software', 'Full setup handled by our team', 'Live and running within 14 days'],
+    bullets: ['Built inside your existing tools, no new software', 'Full setup handled by our team', 'Live and running within 14 days'],
   },
   {
     num: '03', word: 'Maintain', color: '#6B7C4A',
     tag: 'Ongoing · Always on',
     title: 'It Runs. You Get Your Time Back.',
-    body: "Your systems work around the clock — following up leads, looking after clients, keeping your inbox clear. You get your time back, and it stays that way as your business grows. We monitor, maintain, and improve everything as you scale.",
-    bullets: ['Automations run 24/7 — even while you sleep', 'We monitor and maintain everything', 'Scales as your business grows'],
+    body: "Your systems work around the clock, following up leads, looking after clients, keeping your inbox clear. You get your time back, and it stays that way as your business grows. We monitor, maintain, and improve everything as you scale.",
+    bullets: ['Automations run 24/7, even while you sleep', 'We monitor and maintain everything', 'Scales as your business grows'],
   },
 ]
 

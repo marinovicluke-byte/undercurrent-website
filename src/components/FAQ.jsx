@@ -21,15 +21,15 @@ function useVisible(threshold = 0.1) {
 const FEATURED = [
   {
     q: '"Will this actually work for my type of business?"',
-    a: 'We work with any service-based business — tradies, consultants, coaches, agencies, healthcare practices. If you have repetitive tasks and customers, we can automate it. The audit tells you exactly how much.',
+    a: 'We work with any service-based business, tradies, consultants, coaches, agencies, healthcare practices. If you have repetitive tasks and customers, we can automate it. The audit tells you exactly how much.',
   },
   {
-    q: '"I\'m not tech-savvy — will I be able to manage this?"',
+    q: '"I\'m not tech-savvy, will I be able to manage this?"',
     a: "You don't manage anything. We build it, we maintain it, we fix it when something changes. You just receive the results. Most clients never need to open a settings panel.",
   },
   {
     q: '"What if it doesn\'t save me as much time as you say?"',
-    a: "We don't guess. In the audit, we show you the exact hours and tasks we'll automate before we build anything. You see the numbers first. If they don't impress you, walk away — no charge.",
+    a: "We don't guess. In the audit, we show you the exact hours and tasks we'll automate before we build anything. You see the numbers first. If they don't impress you, walk away, no charge.",
   },
 ]
 
@@ -37,12 +37,12 @@ const FAQS = [
   {
     num: '01',
     q: 'How does this work with our existing tools?',
-    a: "We connect to the software you already use — Gmail, HubSpot, Notion, Slack, Xero, whatever you have. Nothing changes about how your team works. We add automation underneath, so the results happen without you having to think about it.",
+    a: "We connect to the software you already use, Gmail, HubSpot, Notion, Slack, Xero, whatever you have. Nothing changes about how your team works. We add automation underneath, so the results happen without you having to think about it.",
   },
   {
     num: '02',
     q: 'What does it actually cost?',
-    a: "We price based on what we save you. If automation saves your business $20,000 a year, we take a small share — you keep the rest. Most clients see their full investment back within six months. We show you the numbers in the free audit before you spend anything.",
+    a: "We price based on what we save you. If automation saves your business $20,000 a year, we take a small share, you keep the rest. Most clients see their full investment back within six months. We show you the numbers in the free audit before you spend anything.",
   },
   {
     num: '03',
@@ -52,7 +52,7 @@ const FAQS = [
   {
     num: '04',
     q: 'Do we own the automations or are we locked in?',
-    a: "You own everything we build. If you ever want to take it in-house or move on, the automations stay with you. We're not a subscription you can't escape — we're here to build something that works for your business long term.",
+    a: "You own everything we build. If you ever want to take it in-house or move on, the automations stay with you. We're not a subscription you can't escape, we're here to build something that works for your business long term.",
   },
 ]
 

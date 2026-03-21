@@ -170,6 +170,7 @@ function Connector({ isMobile, visible }) {
       flexDirection: isMobile ? 'row' : 'column',
       alignItems: 'center',
       justifyContent: 'center',
+      alignSelf: 'center',
       gap: '1rem',
       padding: isMobile ? '2rem 0' : '0 2.5rem',
     }}>
@@ -236,9 +237,9 @@ function Connector({ isMobile, visible }) {
 // ─── After Panel ──────────────────────────────────────────────────────────────
 function AfterPanel({ visible }) {
   const outcomes = [
-    { stat: '12',    unit: 'hrs/week', label: 'Back, every week',       color: '#8FAF9F', desc: 'Follow-ups, reminders, and inbox — handled automatically.' },
-    { stat: '+40%',  unit: '',         label: 'More leads converted',    color: '#C4A97A', desc: 'Every enquiry gets a personal reply — even at 11pm.' },
-    { stat: '$800+', unit: '/wk',      label: 'Saved in admin costs',    color: '#89ACBE', desc: 'Invoices chased, receipts logged — without lifting a finger.' },
+    { stat: '12',    unit: 'hrs/week', label: 'Back, every week',       color: '#8FAF9F', desc: 'Follow-ups, reminders, and inbox, handled automatically.' },
+    { stat: '+40%',  unit: '',         label: 'More leads converted',    color: '#C4A97A', desc: 'Every enquiry gets a personal reply, even at 11pm.' },
+    { stat: '$800+', unit: '/wk',      label: 'Saved in admin costs',    color: '#89ACBE', desc: 'Invoices chased, receipts logged, without lifting a finger.' },
   ]
 
   return (
@@ -274,7 +275,7 @@ function AfterPanel({ visible }) {
           fontSize: '0.6rem', letterSpacing: '0.18em', color: 'rgba(143,175,159,0.6)',
           textTransform: 'uppercase', margin: '0 0 1.25rem',
         }}>
-          Your week — from now on
+          Your week, from now on
         </p>
 
         {/* Outcome rows */}
@@ -373,7 +374,7 @@ export default function WhatWeAutomate() {
           style={{
             display: 'grid',
             gridTemplateColumns: isMobile ? '1fr' : '1fr auto 1fr',
-            alignItems: 'center',
+            alignItems: 'start',
           }}
         >
           <BeforePanel visible={journeyVisible} />

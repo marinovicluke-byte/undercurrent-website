@@ -89,27 +89,27 @@ export default function Hero({ ready = true }) {
 
       {/* Content — left-aligned, top-positioned */}
       <div
-        className="absolute inset-0 flex flex-col px-6 md:px-12"
-        style={{ paddingTop: '8rem', paddingBottom: '5rem', maxWidth: '1200px' }}
+        className="absolute inset-0 flex flex-col items-start justify-start px-6 md:px-12 pt-36 md:pt-40"
+        style={{ paddingBottom: '5rem', maxWidth: '1200px' }}
       >
         {/* Headline */}
         <h1 ref={headlineRef} style={{ opacity: 0, lineHeight: 1 }}>
           <span
             className="block font-dm"
             style={{
-              fontSize: 'clamp(2.8rem, 7vw, 7.5rem)',
+              fontSize: 'clamp(3.6rem, 7vw, 7.5rem)',
               fontWeight: 700,
               letterSpacing: '-0.03em',
               color: '#F7F3ED',
               lineHeight: 1.0,
             }}
           >
-            Your Business Should Run
+            What Would You Do With
           </span>
           <span
             className="block font-dm"
             style={{
-              fontSize: 'clamp(2.8rem, 7vw, 7.5rem)',
+              fontSize: 'clamp(3.6rem, 7vw, 7.5rem)',
               fontWeight: 700,
               letterSpacing: '-0.03em',
               color: 'rgba(143,175,159,0.9)',
@@ -117,7 +117,7 @@ export default function Hero({ ready = true }) {
               marginTop: '0.03em',
             }}
           >
-            Without You Doing Everything.
+            12 Hours Back Every Week?
           </span>
         </h1>
 
@@ -130,12 +130,12 @@ export default function Hero({ ready = true }) {
             fontWeight: 300,
             color: 'rgba(232,224,208,0.65)',
             lineHeight: 1.7,
-            maxWidth: '44ch',
-            marginTop: '1.5rem',
+            maxWidth: '68ch',
+            marginTop: '2rem',
             opacity: 0,
           }}
         >
-          We build AI systems that chase your leads, follow up your clients, and clear your inbox — so you can get back to the work that actually grows your business.
+          We build AI systems that chase your leads, follow up your clients, and clear your inbox, so you can get back to the work that actually grows your business.
         </p>
 
         {/* Single CTA */}
@@ -161,7 +161,7 @@ export default function Hero({ ready = true }) {
           </a>
           {/* Mobile-only scroll hint — centred under button */}
           <p className="md:hidden font-mono" style={{
-            marginTop: '1.25rem',
+            marginTop: '3.5rem',
             alignSelf: 'center',
             fontSize: '0.7rem',
             letterSpacing: '0.15em',

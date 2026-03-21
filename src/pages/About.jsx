@@ -151,12 +151,12 @@ const values = [
   {
     num: '01',
     title: 'Systems thinking',
-    body: 'We see the whole picture before we touch a single tool. Every workflow is mapped end-to-end — where work enters, where it stalls, where it leaves. Only then do we build.',
+    body: 'We see the whole picture before we touch a single tool. Every workflow is mapped end-to-end, where work enters, where it stalls, where it leaves. Only then do we build.',
   },
   {
     num: '02',
     title: 'Silent precision',
-    body: 'Great automation is invisible. You shouldn\'t feel a system running — you should just notice that things are getting done without you having to do them.',
+    body: 'Great automation is invisible. You shouldn\'t feel a system running, you should just notice that things are getting done without you having to do them.',
   },
   {
     num: '03',
@@ -171,7 +171,7 @@ const values = [
 ]
 
 const timeline = [
-  { year: '2026', event: 'Founded in Melbourne. Started with what we knew best — consulting for small businesses that were drowning in busywork and missing the bigger picture.' },
+  { year: '2026', event: 'Founded in Melbourne. Started with what we knew best, consulting for small businesses that were drowning in busywork and missing the bigger picture.' },
   { year: 'NOW', event: 'Focused entirely on AI-powered automation. Helping small businesses reclaim time, remove friction, and build systems that actually run.', isCurrent: true },
 ]
 
@@ -337,7 +337,7 @@ export default function About() {
             </span>
           </h1>
           <p ref={subRef} className="font-dm" style={{ fontSize: 'clamp(1rem, 1.5vw, 1.15rem)', fontWeight: 300, color: 'rgba(232,224,208,0.65)', lineHeight: 1.7, maxWidth: '44ch', marginTop: '2rem', opacity: 0 }}>
-            UnderCurrent is a Melbourne-based automation studio. We work with small business owners who are good at what they do — and tired of everything else that comes with it.
+            UnderCurrent is a Melbourne-based automation studio. We work with small business owners who are good at what they do, and tired of everything else that comes with it.
           </p>
         </div>
         <div id="hero-sentinel" style={{ position: 'absolute', bottom: 0, left: 0, height: '1px', width: '100%' }} />
@@ -381,7 +381,7 @@ export default function About() {
                   Big companies have entire teams for admin, ops, content, and outreach. Small businesses don't. But that shouldn't mean doing it all yourself.
                 </p>
                 <p className="font-dm" style={{ fontSize: '1.05rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(28,28,26,0.7)' }}>
-                  We build the systems that run in the background — so you can stay focused on the front.
+                  We build the systems that run in the background, so you can stay focused on the front.
                 </p>
               </div>
             </Reveal>
@@ -409,20 +409,20 @@ export default function About() {
             </Reveal>
             <Reveal delay={0.15} className="md:col-span-7">
               <p className="font-mono mb-6" style={{ fontSize: '0.75rem', letterSpacing: '0.18em', color: 'rgba(143,175,159,0.6)' }}>
-                FOUNDER · LUKE — MELBOURNE
+                FOUNDER · LUKE, MELBOURNE
               </p>
               <h2 className="font-cormorant" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.5rem)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-0.02em', color: '#F7F3ED', marginBottom: '2rem' }}>
                 UnderCurrent is the studio I wished I had in every job before this.
               </h2>
               <div className="space-y-5">
                 <p className="font-dm" style={{ fontSize: '1rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(247,243,237,0.6)' }}>
-                  I spent years inside small business and corporate teams — finance, sales, operations. In every environment, I watched the same thing happen: smart, capable people losing most of their day to tasks that didn't need a person. Chasing emails. Updating records. Following up manually. Work that was eating the best hours of people who should have been doing something else entirely.
+                  I spent years inside small business and corporate teams, finance, sales, operations. In every environment, I watched the same thing happen: smart, capable people losing most of their day to tasks that didn't need a person. Chasing emails. Updating records. Following up manually. Work that was eating the best hours of people who should have been doing something else entirely.
                 </p>
                 <p className="font-dm" style={{ fontSize: '1rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(247,243,237,0.6)' }}>
-                  I built UnderCurrent to fix that. Not with generic software. Not with templates. With systems that are actually designed around how your business works — and then handed over to run without you.
+                  I built UnderCurrent to fix that. Not with generic software. Not with templates. With systems that are actually designed around how your business works, and then handed over to run without you.
                 </p>
                 <p className="font-dm" style={{ fontSize: '1rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(247,243,237,0.6)' }}>
-                  The undercurrent is what moves everything forward. It runs all day, all night — and you barely notice it's there.
+                  The undercurrent is what moves everything forward. It runs all day, all night, and you barely notice it's there.
                 </p>
               </div>
               <div className="flex gap-4 mt-10">

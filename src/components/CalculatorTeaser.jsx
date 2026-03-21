@@ -229,7 +229,7 @@ export default function CalculatorTeaser() {
             maxWidth: '480px',
             lineHeight: 1.65,
           }}>
-            Most consultants charge <span style={{ color: '#C4A97A', fontWeight: 600 }}>$5,000</span> for an automation audit. Ours is completely free — and you get the full report instantly.
+            Most consultants charge <span style={{ color: '#C4A97A', fontWeight: 600 }}>$5,000</span> for an automation audit. Ours is completely free, and you get the full report instantly.
           </p>
         </div>
 

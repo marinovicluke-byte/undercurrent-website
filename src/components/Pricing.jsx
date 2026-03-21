@@ -21,7 +21,7 @@ function useVisible(threshold = 0.12) {
 
 const BULLETS = [
   { label: 'Built for your business', sub: 'No templates. Every automation is mapped to how you actually work.' },
-  { label: 'Custom-built, not off-the-shelf', sub: 'Works inside the tools you already use — no switching, no disruption.' },
+  { label: 'Custom-built, not off-the-shelf', sub: 'Works inside the tools you already use, no switching, no disruption.' },
   { label: 'Live in 30 days', sub: 'Fast implementation with results you can see quickly.' },
   { label: 'You keep the majority', sub: 'We take a small share of what we save you. You keep the rest.' },
   { label: 'Ongoing support included', sub: 'We stay on to tune, improve, and expand as your business grows.' },
@@ -108,7 +108,7 @@ export default function Pricing() {
             margin: '0 auto',
             lineHeight: 1.7,
           }}>
-            We price on value, not hours. If your business saves $20,000 a year, you keep most of it — we take a small share. Most clients see full ROI within six months.
+            We price on value, not hours. If your business saves $20,000 a year, you keep most of it, we take a small share. Most clients see full ROI within six months.
           </p>
         </div>
 
@@ -172,7 +172,7 @@ export default function Pricing() {
                   lineHeight: 1.2,
                   letterSpacing: '-0.01em',
                 }}>
-                  Value-based — not an hourly rate.
+                  Value-based, not an hourly rate.
                 </p>
                 <p className="font-dm" style={{ fontSize: '0.85rem', fontWeight: 400, color: 'rgba(247,243,237,0.65)', lineHeight: 1.65, margin: '0 0 2rem' }}>
                   Your investment is tied directly to the results we deliver. We only win when you win.
@@ -227,7 +227,7 @@ export default function Pricing() {
             <Shield size={16} color="#8FAF9F" style={{ flexShrink: 0, marginTop: '2px' }} />
             <p className="font-dm" style={{ fontSize: '0.84rem', fontWeight: 400, color: 'rgba(247,243,237,0.8)', margin: 0, lineHeight: 1.65 }}>
               <strong style={{ color: '#F7F3ED', fontWeight: 600 }}>Zero-Risk Guarantee.</strong>{' '}
-              If we can't find you at least 5 hours a week to automate in the free audit — the call is free and you keep every insight.
+              If we can't find you at least 5 hours a week to automate in the free audit, the call is free and you keep every insight.
             </p>
           </div>
         </div>

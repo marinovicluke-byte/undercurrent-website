@@ -211,10 +211,10 @@ const services = [
     index: '01',
     label: 'CUSTOMER EXPERIENCE',
     headline: 'Every customer feels like your only one.',
-    subhead: 'From the moment they sign to the day they refer their friends — the full journey, automated.',
-    description: `Without a system, everything relies on someone remembering. Clients fall through the gaps. Reviews never get asked for. And referrals — the best leads you'll ever get — just don't happen.
+    subhead: 'From the moment they sign to the day they refer their friends, the full journey, automated.',
+    description: `Without a system, everything relies on someone remembering. Clients fall through the gaps. Reviews never get asked for. And referrals, the best leads you'll ever get, just don't happen.
 
-    We build the system that handles all of it — welcome emails, check-ins, surveys, review requests, referral triggers — so every client gets the same great experience, every time.`,
+    We build the system that handles all of it, welcome emails, check-ins, surveys, review requests, referral triggers, so every client gets the same great experience, every time.`,
     accentColor: '#8FAF9F',
     bgDark: 'rgba(143,175,159,0.06)',
     metric: { value: '68%', label: 'reduction in early churn' },
@@ -239,9 +239,9 @@ const services = [
       'Review received → referral offer sent',
     ],
     faqs: [
-      { q: 'What tools do you build this on?', a: 'We work tool-agnostic — Zapier, Make (Integromat), n8n, or native API integrations depending on what\'s already in your stack. We don\'t impose a platform.' },
-      { q: 'How do you personalise at scale?', a: 'We use data already in your CRM — service type, purchase date, usage patterns, location — to branch automation flows so each client gets a message relevant to their situation.' },
-      { q: 'What if a client gives negative feedback?', a: 'We build conditional branches for negative sentiment — routing them to a human escalation flow rather than the review request sequence. These clients get personal outreach instead.' },
+      { q: 'What tools do you build this on?', a: 'We work tool-agnostic, Zapier, Make (Integromat), n8n, or native API integrations depending on what\'s already in your stack. We don\'t impose a platform.' },
+      { q: 'How do you personalise at scale?', a: 'We use data already in your CRM, service type, purchase date, usage patterns, location, to branch automation flows so each client gets a message relevant to their situation.' },
+      { q: 'What if a client gives negative feedback?', a: 'We build conditional branches for negative sentiment, routing them to a human escalation flow rather than the review request sequence. These clients get personal outreach instead.' },
     ],
   },
   {
@@ -249,7 +249,7 @@ const services = [
     index: '02',
     label: 'SALES',
     headline: 'More pipeline. Same headcount.',
-    subhead: 'Every hour spent manually researching prospects, writing first emails, or chasing non-replies is an hour not spent closing. We automate the whole process — so your team only steps in when someone\'s ready to talk.',
+    subhead: 'Every hour spent manually researching prospects, writing first emails, or chasing non-replies is an hour not spent closing. We automate the whole process, so your team only steps in when someone\'s ready to talk.',
     description: `Lead sourcing, personalised outreach, follow-up sequences, qualification, pipeline management. All running in the background.`,
     accentColor: '#6B7C4A',
     bgDark: 'rgba(107,124,74,0.06)',
@@ -270,12 +270,12 @@ const services = [
       '> Subject line variant A/B split applied.',
       '> Sequence queued. Day 1 sends: 47.',
       '> Day 3 follow-up scheduled.',
-      '> Meeting booked: Sarah M. — Thursday 2pm.',
+      '> Meeting booked: Sarah M., Thursday 2pm.',
     ],
     faqs: [
-      { q: 'Is this just mass cold email?', a: 'No. Mass, non-personalised outreach is spam and damages your domain. We build personalised sequences that use real data points about each prospect — their company, role, recent activity — to make every message feel individually written.' },
+      { q: 'Is this just mass cold email?', a: 'No. Mass, non-personalised outreach is spam and damages your domain. We build personalised sequences that use real data points about each prospect, their company, role, recent activity, to make every message feel individually written.' },
       { q: 'How do you avoid landing in spam?', a: 'We configure proper email infrastructure: SPF, DKIM, DMARC, mailbox warm-up, send volume management, and domain health monitoring. This is foundational to everything we build.' },
-      { q: 'Do you write the copy?', a: 'Yes. Copywriting for outreach sequences is included. We work with you to nail your ICP, value proposition, and tone — then build sequences that sound like you, not a robot.' },
+      { q: 'Do you write the copy?', a: 'Yes. Copywriting for outreach sequences is included. We work with you to nail your ICP, value proposition, and tone, then build sequences that sound like you, not a robot.' },
     ],
   },
   {
@@ -283,10 +283,10 @@ const services = [
     index: '03',
     label: 'CONTENT DESIGN',
     headline: 'Publish more. Write less.',
-    subhead: 'A month of content used to take 10 hours a week. Now it takes 1 hour — you show up, give direction, and the system handles the rest.',
+    subhead: 'A month of content used to take 10 hours a week. Now it takes 1 hour, you show up, give direction, and the system handles the rest.',
     description: `Most businesses know they should be publishing content. Most businesses don't, because the process of creating, formatting, reviewing, and distributing is too slow and too manual to sustain.
 
-    We build content pipelines that go from a voice note or rough brief all the way to published — blog posts, social content, newsletters, all formatted and distributed across every channel you use.`,
+    We build content pipelines that go from a voice note or rough brief all the way to published, blog posts, social content, newsletters, all formatted and distributed across every channel you use.`,
     accentColor: '#8FAF9F',
     bgDark: 'rgba(143,175,159,0.06)',
     metric: { value: '10×', label: 'output, same creative effort' },
@@ -300,12 +300,12 @@ const services = [
     ],
     contentRotator: [
       { label: 'LinkedIn Post', preview: 'Why most agencies fail at AI: a thread on what we actually build for clients and what the data shows...', tag: 'Social', color: '#8FAF9F' },
-      { label: 'Case Study', preview: 'How a 3-person firm replaced 20 hrs/wk of admin with a single automation stack — and doubled revenue...', tag: 'Long-form', color: '#6B7C4A' },
+      { label: 'Case Study', preview: 'How a 3-person firm replaced 20 hrs/wk of admin with a single automation stack, and doubled revenue...', tag: 'Long-form', color: '#6B7C4A' },
       { label: 'Newsletter', preview: 'This week: 3 workflows we deployed, 1 client result, and a tool you should know about...', tag: 'Email', color: '#A89F7A' },
-      { label: 'Blog Article', preview: 'The four areas where small business automation has the clearest ROI — and how to sequence them...', tag: 'SEO', color: '#D4C9B0' },
+      { label: 'Blog Article', preview: 'The four areas where small business automation has the clearest ROI, and how to sequence them...', tag: 'SEO', color: '#D4C9B0' },
     ],
     faqs: [
-      { q: 'Does this replace a content writer?', a: 'It replaces the production work — drafting, formatting, scheduling, distributing. Strategy, voice, and final approval stay with you or your team. We\'re the production engine, not the creative director.' },
+      { q: 'Does this replace a content writer?', a: 'It replaces the production work, drafting, formatting, scheduling, distributing. Strategy, voice, and final approval stay with you or your team. We\'re the production engine, not the creative director.' },
       { q: 'How do you maintain brand voice at scale?', a: 'We document your brand voice in detail at the start of the engagement: tone, vocabulary, things to avoid, example posts you love. This becomes the system prompt layer that governs every output.' },
       { q: 'Which platforms can you publish to?', a: 'LinkedIn, Instagram, Facebook, X, TikTok (caption + brief), your WordPress or Webflow blog, your email platform (Mailchimp, ConvertKit, ActiveCampaign, etc.), and more.' },
     ],
@@ -316,7 +316,7 @@ const services = [
     label: 'PERSONAL SYSTEM',
     headline: 'Your inbox, handled. Your calendar, owned.',
     subhead: 'You didn\'t start a business to spend your days in email. We give you your time back.',
-    description: `The average business owner loses 3–4 hours a day to email, scheduling, and admin. That's 800+ hours a year not building, not selling, not thinking. We build systems that handle it — so you only touch what actually needs you.
+    description: `The average business owner loses 3-4 hours a day to email, scheduling, and admin. That's 800+ hours a year not building, not selling, not thinking. We build systems that handle it, so you only touch what actually needs you.
 
     We build custom AI assistant workflows that draft replies, summarise threads, book meetings, manage follow-ups, brief you before calls, and keep your calendar clean. Connected to your actual inbox, your actual calendar, your actual tools.`,
     accentColor: '#8FAF9F',
@@ -335,13 +335,13 @@ const services = [
       '> Urgent flagged: contract renewal (3 days).',
       '> Drafting reply to: sarah@clientco.com...',
       '> Summarising 5-thread project discussion...',
-      '> Booking: discovery call — Wed 10am confirmed.',
+      '> Booking: discovery call, Wed 10am confirmed.',
       '> Pre-meeting brief generated for Thursday.',
       '> No-meeting block applied: Friday afternoon.',
       '> Inbox: 3 items flagged for your review.',
     ],
     faqs: [
-      { q: 'Is this an AI agent with access to my inbox?', a: 'Yes. We set up a secure OAuth connection to your Gmail or Outlook. The AI reads, drafts, and flags — but never sends without your review (unless you explicitly configure it to). Full audit trail maintained.' },
+      { q: 'Is this an AI agent with access to my inbox?', a: 'Yes. We set up a secure OAuth connection to your Gmail or Outlook. The AI reads, drafts, and flags, but never sends without your review (unless you explicitly configure it to). Full audit trail maintained.' },
       { q: 'What if the AI gets something wrong?', a: 'All drafts go to a review queue first. Over time, as you approve and edit, the system learns your preferences and improves. We also build escalation rules so genuinely sensitive emails always reach you directly.' },
       { q: 'Which calendar and email tools work with this?', a: 'Gmail, Google Calendar, Outlook, Microsoft 365. For task management: Notion, Asana, ClickUp, Linear, Monday.com. We configure the stack to match what you already use.' },
     ],
@@ -351,10 +351,10 @@ const services = [
     index: '05',
     label: 'FINANCE',
     headline: 'Stop chasing invoices. Stop drowning in receipts.',
-    subhead: 'The admin is never going away — but it should stop being your problem.',
+    subhead: 'The admin is never going away, but it should stop being your problem.',
     description: `Every hour spent chasing a late payment or reconciling expenses is an hour not spent growing your business. We automate the full finance back-office so your books stay clean without you touching them.
 
-    We build financial automation systems that handle invoice creation and follow-up, expense categorisation, cash flow reporting, and vendor research — so your books stay clean and your attention stays where it belongs.`,
+    We build financial automation systems that handle invoice creation and follow-up, expense categorisation, cash flow reporting, and vendor research, so your books stay clean and your attention stays where it belongs.`,
     accentColor: '#A89F7A',
     bgDark: 'rgba(168,159,122,0.06)',
     metric: { value: '5 hrs', label: 'saved on finance admin per week' },
@@ -369,8 +369,8 @@ const services = [
     invoiceFlow: true,
     faqs: [
       { q: 'Which accounting tools do you integrate with?', a: 'We integrate with Xero, QuickBooks, MYOB, and FreshBooks. If your accounting tool has an API, we can connect it.' },
-      { q: 'Can you automate invoice chasing without being annoying?', a: 'Yes. We build smart sequences that adjust tone based on how overdue an invoice is — a gentle reminder at 7 days, firmer language at 21, and escalation routing at 30+. All personalised, all on autopilot.' },
-      { q: 'What about expense tracking?', a: 'We connect to bank feeds, receipt scanning tools (like Dext or Hubdoc), and card providers to automatically categorise and push expenses into your accounting software — no manual data entry.' },
+      { q: 'Can you automate invoice chasing without being annoying?', a: 'Yes. We build smart sequences that adjust tone based on how overdue an invoice is, a gentle reminder at 7 days, firmer language at 21, and escalation routing at 30+. All personalised, all on autopilot.' },
+      { q: 'What about expense tracking?', a: 'We connect to bank feeds, receipt scanning tools (like Dext or Hubdoc), and card providers to automatically categorise and push expenses into your accounting software, no manual data entry.' },
     ],
   },
 ]
@@ -616,7 +616,7 @@ function InvoiceFlow() {
             color: phase >= 6 ? (paid ? green : red) : 'rgba(28,28,26,0.28)',
             transition: 'color 0.5s ease',
           }}>
-            {phase >= 6 ? (paid ? 'PAID — COMPLETE' : 'OVERDUE — CHASING') : 'IN PROGRESS'}
+            {phase >= 6 ? (paid ? 'PAID - COMPLETE' : 'OVERDUE - CHASING') : 'IN PROGRESS'}
           </span>
         </div>
       </div>
@@ -1071,7 +1071,7 @@ export default function Services() {
             </span>
           </h1>
           <p ref={subRef} className="font-dm" style={{ fontSize: 'clamp(1rem, 1.5vw, 1.15rem)', fontWeight: 300, color: 'rgba(232,224,208,0.6)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '2rem', opacity: 0 }}>
-            Most small business owners lose 15–25 hours a week to work that a well-built system could handle entirely. We've mapped where it happens — and built the solution for each one.
+            Most small business owners lose 15-25 hours a week to work that a well-built system could handle entirely. We've mapped where it happens, and built the solution for each one.
           </p>
 
           {/* Service selector cards */}
@@ -1138,7 +1138,7 @@ export default function Services() {
               Not sure where to start?
             </h2>
             <p className="font-dm" style={{ fontSize: '1.05rem', fontWeight: 300, lineHeight: 1.75, color: 'rgba(247,243,237,0.5)', maxWidth: '48ch', marginBottom: '3rem' }}>
-              Book a 30-minute workflow review. We'll map your biggest time drains across all five areas and tell you exactly where automation will have the most impact — ranked by ROI.
+              Book a 30-minute workflow review. We'll map your biggest time drains across all five areas and tell you exactly where automation will have the most impact, ranked by ROI.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="https://cal.com/luke-marinovic-aqeosc/30min" target="_blank" rel="noopener noreferrer" className="btn-sage-hero" style={{ fontSize: '0.95rem', padding: '0.9rem 2.5rem' }}>
