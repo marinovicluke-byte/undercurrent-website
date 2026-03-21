@@ -10,7 +10,7 @@ const PILLAR_COPY = {
   customer_experience: {
     label: 'Customer Experience',
     headline: "A lead messaged you at 9pm. By morning they'd booked someone else.",
-    fix: "We set up an instant-response system that replies, qualifies, and books — while you sleep.",
+    fix: "We set up an instant-response system that replies, qualifies, and books, while you sleep.",
   },
   sales: {
     label: 'Sales',
@@ -20,12 +20,12 @@ const PILLAR_COPY = {
   content_design: {
     label: 'Content & Design',
     headline: "You know you need to post. You just never have time to sit down and do it.",
-    fix: "One piece of content gets turned into a week of posts, captions, and emails — automatically.",
+    fix: "One piece of content gets turned into a week of posts, captions, and emails, automatically.",
   },
   personal_systems: {
     label: 'Personal Systems',
     headline: "You're running the business and doing the admin of a business. That's two full-time jobs.",
-    fix: "We take the second one off your plate — inbox, scheduling, meeting notes, reporting.",
+    fix: "We take the second one off your plate, inbox, scheduling, meeting notes, reporting.",
   },
   finance: {
     label: 'Finance',
@@ -47,7 +47,7 @@ const STATS = [
   { n: '72%', text: 'of business owners who automate report lower stress and a better work-life balance' },
   { n: '15 hrs', text: 'average time saved per week by businesses running workflow automation (Zapier, 2023)' },
   { n: '40%', text: 'faster lead response rates for businesses with automated follow-up systems' },
-  { n: '3–10×', text: 'average ROI reported for every dollar invested in business automation' },
+  { n: '3 to 10x', text: 'average ROI reported for every dollar invested in business automation' },
 ]
 
 function fmt(n) {
@@ -155,7 +155,7 @@ export default function AuditReport() {
   return (
     <>
       <PageHead
-        title={`${data.b} — Audit Report | Undercurrent`}
+        title={`${data.b}, Audit Report | Undercurrent`}
         description="Your personalised business automation audit report."
       />
 
@@ -195,7 +195,7 @@ export default function AuditReport() {
 
           {/* ── Hero ───────────────────────────────────────────────────────── */}
           <div className="ri" style={{ padding: '56px 0 48px', animationDelay: '0.05s' }}>
-            <Label>Business Health Report — {data.i}</Label>
+            <Label>Business Health Report, {data.i}</Label>
             <h1 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(32px, 6vw, 52px)', fontWeight: 700, color: C.text, margin: '0 0 6px', lineHeight: 1.1 }}>
               {data.b}
             </h1>
@@ -248,7 +248,7 @@ export default function AuditReport() {
 
           {/* ── Top 3 Leaks ────────────────────────────────────────────────── */}
           <div className="ri" style={{ animationDelay: '0.15s' }}>
-            <Label>Revenue leaks — ranked</Label>
+            <Label>Revenue leaks, ranked</Label>
             <h2 style={{ fontFamily: 'Cormorant Garamond, Georgia, serif', fontSize: 'clamp(22px, 4vw, 32px)', fontWeight: 700, color: C.text, margin: '0 0 28px' }}>
               Where the money is going
             </h2>
@@ -323,7 +323,7 @@ export default function AuditReport() {
               {[
                 { stat: fmt(totalRecovery) + '/mo', label: 'Revenue recovered', sub: 'From your top 3 leaks' },
                 { stat: totalHoursMonthly + ' hrs', label: 'Freed each month', sub: 'Time to grow, not operate' },
-                { stat: '3–10×', label: 'Average ROI', sub: 'Per $1 spent on automation' },
+                { stat: '3 to 10x', label: 'Average ROI', sub: 'Per $1 spent on automation' },
               ].map((item, i) => (
                 <div key={i} style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: '12px', padding: '20px' }}>
                   <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(1.4rem, 3vw, 1.9rem)', fontWeight: 700, color: C.green, margin: '0 0 4px', lineHeight: 1 }}>
@@ -433,7 +433,7 @@ export default function AuditReport() {
                 Let's plug the leaks, {firstName}.
               </h2>
               <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.95rem', color: C.muted, margin: '0 auto 32px', maxWidth: '440px', lineHeight: 1.7 }}>
-                Book a free 30-minute strategy call. We'll walk through your top leaks and map out exactly what to automate first — no fluff, no pitch deck.
+                Book a free 30-minute strategy call. We'll walk through your top leaks and map out exactly what to automate first, no fluff, no pitch deck.
               </p>
               <a
                 href={CALENDAR_LINK}
