@@ -44,9 +44,9 @@ const AUTO_BENCHMARKS = {
 }
 
 const STATS = [
-  { n: '72%', text: 'of business owners who automate report lower stress and a better work-life balance' },
-  { n: '15 hrs', text: 'average time saved per week by businesses running workflow automation (Zapier, 2023)' },
-  { n: '40%', text: 'faster lead response rates for businesses with automated follow-up systems' },
+  { n: '20 hrs', text: 'average time saved per week by small businesses using strategic automation' },
+  { n: '20-30%', text: 'reduction in operational costs reported by businesses automating key workflows' },
+  { n: '3-6 mo', text: 'typical time to achieve full ROI on automation investment' },
   { n: '3 to 10x', text: 'average ROI reported for every dollar invested in business automation' },
 ]
 
@@ -242,6 +242,19 @@ export default function AuditReport() {
                 Free 30-min strategy call · No pitch deck · No obligation
               </p>
             </div>
+          </div>
+
+          <div style={{ textAlign: 'center', padding: '32px 0 0' }}>
+            <p style={{
+              fontFamily: 'DM Mono, monospace',
+              fontSize: '0.62rem',
+              letterSpacing: '0.14em',
+              textTransform: 'uppercase',
+              color: 'rgba(143,175,159,0.35)',
+              margin: 0,
+            }}>
+              ↓ SCROLL DOWN FOR MORE
+            </p>
           </div>
 
           <Divider />
@@ -458,7 +471,7 @@ export default function AuditReport() {
           {/* ── Footer ─────────────────────────────────────────────────────── */}
           <div style={{ textAlign: 'center', padding: '48px 0 0' }}>
             <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.6rem', color: 'rgba(247,243,237,0.18)', letterSpacing: '0.1em', margin: 0 }}>
-              UNDERCURRENT AUTOMATIONS · undercurrentautomations.com.au
+              UnderCurrent Automations
             </p>
           </div>
 
