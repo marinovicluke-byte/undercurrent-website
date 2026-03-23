@@ -365,7 +365,7 @@ export default function Stats() {
   return (
     <div ref={sectionRef} style={{ backgroundColor: '#1C1C1A', minHeight: '100vh', overflowX: 'hidden' }}>
       <PageHead
-        title="Results — UnderCurrent"
+        title="Results - AI Automation Impact | UnderCurrent"
         description="Three things UnderCurrent does for your business every single week. More reviews. More leads. More time back."
         canonical="https://www.undercurrentautomations.com/stats"
       />

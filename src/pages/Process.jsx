@@ -640,7 +640,7 @@ export default function Process() {
   return (
     <div style={{ backgroundColor: '#F7F3ED', overflowX: 'hidden' }}>
       <PageHead
-        title="How We Work — UnderCurrent"
+        title="How It Works - AI Automation Process | UnderCurrent"
         description="Three precise steps: Map your workflows, Build automations that fit, let them Flow around the clock."
         canonical="https://www.undercurrentautomations.com/process"
       />

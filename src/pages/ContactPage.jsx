@@ -32,7 +32,7 @@ export default function ContactPage() {
   return (
     <div style={{ backgroundColor: '#1C1C1A', minHeight: '100vh', overflowX: 'hidden' }}>
       <PageHead
-        title="Contact — UnderCurrent"
+        title="Contact Us - AI Automation Enquiry | UnderCurrent"
         description="Get in touch with UnderCurrent. We typically respond within one business day."
         canonical="https://www.undercurrentautomations.com/contact"
       />

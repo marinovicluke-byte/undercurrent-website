@@ -286,7 +286,7 @@ export default function Resources() {
   return (
     <div style={{ backgroundColor: '#1C1C1A', minHeight: '100vh', overflowX: 'hidden' }}>
       <PageHead
-        title="Resources — UnderCurrent"
+        title="Resources - AI & Automation Guides | UnderCurrent"
         description="Guides, playbooks, and lessons from the field. Everything we've learned building AI automation for small businesses, organised by topic."
         canonical="https://www.undercurrentautomations.com/resources"
       />

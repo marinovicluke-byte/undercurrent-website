@@ -162,7 +162,7 @@ export default function About() {
   return (
     <div style={{ backgroundColor: '#F7F3ED', overflowX: 'hidden' }}>
       <PageHead
-        title="About — UnderCurrent | Our Story & Approach"
+        title="About Us - AI Automation Studio | UnderCurrent"
         description="Meet the team behind UnderCurrent. Learn how we started, what drives our approach to business automation, and why small business owners trust us to redesign their workflows."
         canonical="https://www.undercurrentautomations.com/about"
         jsonLd={{

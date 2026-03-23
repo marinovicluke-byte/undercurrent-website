@@ -622,7 +622,7 @@ export default function BusinessAuditV2() {
   return (
     <>
       <PageHead
-        title="Business Audit — UnderCurrent"
+        title="Free Business Audit - Find Time Leaks | UnderCurrent"
         description="Find the holes in your business. See exactly how much time and money you're losing across the five core areas of your operation."
         canonical="https://www.undercurrentautomations.com/audit"
       />

@@ -31,7 +31,7 @@ export default function TermsOfService() {
   return (
     <div style={{ backgroundColor: '#1C1C1A', minHeight: '100vh', overflowX: 'hidden' }}>
       <PageHead
-        title="Terms of Service — UnderCurrent"
+        title="Terms of Service | UnderCurrent"
         description="Terms and conditions for using the UnderCurrent website and AI automation services. Read our service agreement, limitations, and policies."
         canonical={`${DOMAIN}/terms`}
       />

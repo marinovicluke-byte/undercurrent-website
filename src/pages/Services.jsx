@@ -979,7 +979,7 @@ export default function Services() {
   return (
     <div style={{ backgroundColor: '#F7F3ED', overflowX: 'hidden' }}>
       <PageHead
-        title="Services — UnderCurrent | CX, Sales, Content, Personal & Finance Automation"
+        title="AI Automation Services - Small Business | UnderCurrent"
         description="Deep-dive into UnderCurrent's five automation services: customer experience, sales, content design, personal system, and finance. Built for small businesses."
         canonical="https://www.undercurrentautomations.com/services"
         jsonLd={{

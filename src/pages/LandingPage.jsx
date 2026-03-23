@@ -120,7 +120,7 @@ export default function LandingPage() {
   return (
     <div style={{ backgroundColor: '#F7F3ED', overflowX: 'hidden' }}>
       <PageHead
-        title="UnderCurrent — AI Business Automation for Small Business"
+        title="AI Automation for Small Business | UnderCurrent"
         description="See how AI automation can transform your small business operations. Free audit, real results."
         canonical="https://www.undercurrentautomations.com/lp"
       />

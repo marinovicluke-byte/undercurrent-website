@@ -21,7 +21,7 @@ const DOMAIN = 'https://www.undercurrentautomations.com'
 const ROUTES = [
   {
     path: '/',
-    title: 'UnderCurrent — AI Business Automation',
+    title: 'AI Business Automation Melbourne | UnderCurrent',
     description: 'Melbourne-based AI automation studio. We map small business workflows and build custom AI-powered systems that run your operations — silently, continuously, precisely.',
     jsonLd: {
       '@context': 'https://schema.org',
@@ -79,22 +79,22 @@ const ROUTES = [
   },
   {
     path: '/about',
-    title: 'About — UnderCurrent | AI Automation Studio, Melbourne',
+    title: 'About Us - AI Automation Studio | UnderCurrent',
     description: 'Learn about UnderCurrent — the Melbourne-based AI automation studio that maps small business workflows and builds custom systems to run your operations continuously and precisely.',
   },
   {
     path: '/services',
-    title: 'Services — UnderCurrent | CX, Sales, Content, Personal & Finance Automation',
+    title: 'AI Automation Services - Small Business | UnderCurrent',
     description: 'Full-service AI automation: customer experience, sales pipelines, content creation, personal assistant AI, and financial operations — all automated, all connected.',
   },
   {
     path: '/process',
-    title: 'Our Process — UnderCurrent | Map, Build, Maintain',
+    title: 'How It Works - AI Automation Process | UnderCurrent',
     description: 'How UnderCurrent works: we map your workflows, build custom AI automation, and maintain your systems continuously. Three steps to operational freedom.',
   },
   {
     path: '/contact',
-    title: 'Contact — UnderCurrent',
+    title: 'Contact Us - AI Automation Enquiry | UnderCurrent',
     description: 'Get in touch with UnderCurrent. We typically respond within one business day.',
   },
   {
@@ -104,37 +104,37 @@ const ROUTES = [
   },
   {
     path: '/roi',
-    title: 'ROI Calculator — UnderCurrent | See Your Automation Savings',
+    title: 'ROI Calculator - Automation Savings | UnderCurrent',
     description: 'Calculate how much time and money AI automation could save your business. Free, instant results.',
   },
   {
     path: '/audit',
-    title: 'Free Business Audit — UnderCurrent | Find Your Automation Opportunities',
+    title: 'Free Business Audit - Find Time Leaks | UnderCurrent',
     description: 'Get a free AI-powered audit of your business operations. Discover where automation can save you time, money, and missed revenue.',
   },
   {
     path: '/lp',
-    title: 'UnderCurrent — AI Business Automation for Small Business',
+    title: 'AI Automation for Small Business | UnderCurrent',
     description: 'See how AI automation can transform your small business operations. Free audit, real results.',
   },
   {
     path: '/case-study',
-    title: 'Case Studies — UnderCurrent',
+    title: 'Case Studies - AI Automation Results | UnderCurrent',
     description: 'See how we\'ve helped small businesses reclaim their time and scale their operations with AI automation. Real businesses, real results.',
   },
   {
     path: '/resources',
-    title: 'Resources — UnderCurrent',
+    title: 'Resources - AI & Automation Guides | UnderCurrent',
     description: 'Guides, playbooks, and lessons from the field. Everything we\'ve learned building AI automation for small businesses, packaged for you.',
   },
   {
     path: '/privacy',
-    title: 'Privacy Policy — UnderCurrent',
+    title: 'Privacy Policy | UnderCurrent',
     description: 'How UnderCurrent collects, uses, and protects your personal information. We respect your privacy and handle data responsibly.',
   },
   {
     path: '/terms',
-    title: 'Terms of Service — UnderCurrent',
+    title: 'Terms of Service | UnderCurrent',
     description: 'Terms and conditions for using the UnderCurrent website and AI automation services. Read our service agreement, limitations, and policies.',
   },
 ]

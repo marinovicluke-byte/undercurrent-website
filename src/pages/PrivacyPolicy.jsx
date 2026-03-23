@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
   return (
     <div style={{ backgroundColor: '#1C1C1A', minHeight: '100vh', overflowX: 'hidden' }}>
       <PageHead
-        title="Privacy Policy — UnderCurrent"
+        title="Privacy Policy | UnderCurrent"
         description="How UnderCurrent collects, uses, and protects your personal information. We respect your privacy and handle data responsibly."
         canonical={`${DOMAIN}/privacy`}
       />

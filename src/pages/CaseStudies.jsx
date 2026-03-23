@@ -86,7 +86,7 @@ export default function CaseStudies() {
   return (
     <div style={{ backgroundColor: '#1C1C1A', minHeight: '100vh', overflowX: 'hidden' }}>
       <PageHead
-        title="Case Studies — UnderCurrent"
+        title="Case Studies - AI Automation Results | UnderCurrent"
         description="See how we've helped small businesses reclaim their time and scale their operations with AI automation. Real businesses, real results."
         canonical="https://www.undercurrentautomations.com/case-study"
       />
