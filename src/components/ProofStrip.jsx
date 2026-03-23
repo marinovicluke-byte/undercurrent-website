@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import useVisible from '../hooks/useVisible'
 
 function useCounter(target, duration, active) {
@@ -55,18 +55,19 @@ function ArcGauge({ color, active }) {
 
 // ─── Line chart ───────────────────────────────────────────────────────────────
 function LineChart({ color, active }) {
+  const gradientId = useId()
   const pts = [[0,62],[18,58],[36,52],[54,45],[72,36],[90,25],[108,16],[128,6]]
   const d = pts.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p[0]} ${p[1]}`).join(' ')
 
   return (
     <svg width="128" height="68" viewBox="0 0 128 68" style={{ display: 'block' }}>
       <defs>
-        <linearGradient id="lg1" x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor={color} stopOpacity="0.2" />
           <stop offset="100%" stopColor={color} stopOpacity="0" />
         </linearGradient>
       </defs>
-      <path d={`${d} L 128 68 L 0 68 Z`} fill="url(#lg1)"
+      <path d={`${d} L 128 68 L 0 68 Z`} fill={`url(#${gradientId})`}
         opacity={active ? 1 : 0}
         style={{ transition: active ? 'opacity 0.8s ease 0.7s' : 'none' }}
       />

@@ -398,18 +398,24 @@ function CloseDarkWidget() {
     const TARGET_TASKS = 14
     const TARGET_REV = 4850
     let t = 0
-    const interval = setInterval(() => {
-      t = Math.min(t + 1, TARGET_TASKS)
-      setCount(t)
-      setRevenue(Math.min(Math.ceil((t / TARGET_TASKS) * TARGET_REV), TARGET_REV))
-      if (t >= TARGET_TASKS) clearInterval(interval)
-    }, 100)
-    const reset = setInterval(() => {
+    let counting = null
+
+    const startCounting = () => {
+      t = 0
       setCount(0)
       setRevenue(0)
-      t = 0
-    }, 6000)
-    return () => { clearInterval(interval); clearInterval(reset) }
+      if (counting) clearInterval(counting)
+      counting = setInterval(() => {
+        t = Math.min(t + 1, TARGET_TASKS)
+        setCount(t)
+        setRevenue(Math.min(Math.ceil((t / TARGET_TASKS) * TARGET_REV), TARGET_REV))
+        if (t >= TARGET_TASKS) clearInterval(counting)
+      }, 100)
+    }
+
+    startCounting()
+    const reset = setInterval(startCounting, 6000)
+    return () => { clearInterval(counting); clearInterval(reset) }
   }, [])
 
   const systems = [

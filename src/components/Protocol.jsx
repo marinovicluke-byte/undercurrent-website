@@ -5,13 +5,9 @@ import useVisible from '../hooks/useVisible'
 
 // Map: pulsing network diagram
 function MapAnim({ color }) {
-  const [phase, setPhase] = useState(0)
-  const raf = useRef(null)
-  useEffect(() => {
-    const loop = () => { setPhase(p => p + 0.018); raf.current = requestAnimationFrame(loop) }
-    raf.current = requestAnimationFrame(loop)
-    return () => cancelAnimationFrame(raf.current)
-  }, [])
+  const svgRef = useRef(null)
+  const rafRef = useRef(null)
+  const phaseRef = useRef(0)
 
   const nodes = [
     { x: 100, y: 50,  r: 14, label: 'You' },
@@ -23,21 +19,43 @@ function MapAnim({ color }) {
   ]
   const edges = [[0,1],[0,2],[0,3],[1,4],[3,5],[2,4],[2,5]]
 
+  useEffect(() => {
+    const svg = svgRef.current
+    if (!svg) return
+    const lines = svg.querySelectorAll('.edge-line')
+    const halos = svg.querySelectorAll('.node-halo')
+
+    const loop = () => {
+      phaseRef.current += 0.018
+      lines.forEach((line, i) => {
+        const pulse = 0.25 + 0.22 * Math.sin(phaseRef.current + i * 0.9)
+        line.setAttribute('stroke-opacity', pulse)
+        line.setAttribute('stroke-width', 0.7 + pulse * 0.8)
+      })
+      halos.forEach((halo, i) => {
+        const opacity = 0.06 + 0.06 * Math.sin(phaseRef.current + i)
+        halo.setAttribute('fill-opacity', opacity)
+      })
+      rafRef.current = requestAnimationFrame(loop)
+    }
+    rafRef.current = requestAnimationFrame(loop)
+    return () => cancelAnimationFrame(rafRef.current)
+  }, [])
+
   return (
-    <svg viewBox="0 0 200 230" style={{ width: '100%', maxWidth: '180px' }}>
+    <svg ref={svgRef} viewBox="0 0 200 230" style={{ width: '100%', maxWidth: '180px' }}>
       {edges.map(([a, b], i) => {
         const na = nodes[a], nb = nodes[b]
-        const pulse = 0.25 + 0.22 * Math.sin(phase + i * 0.9)
         return (
-          <line key={i} x1={na.x} y1={na.y} x2={nb.x} y2={nb.y}
-            stroke={color} strokeOpacity={pulse}
-            strokeWidth={0.7 + pulse * 0.8} strokeDasharray="3 5" />
+          <line key={i} className="edge-line" x1={na.x} y1={na.y} x2={nb.x} y2={nb.y}
+            stroke={color} strokeOpacity="0.25"
+            strokeWidth="1.1" strokeDasharray="3 5" />
         )
       })}
       {nodes.map((n, i) => (
         <g key={i}>
-          <circle cx={n.x} cy={n.y} r={n.r + 4}
-            fill={color} fillOpacity={0.06 + 0.06 * Math.sin(phase + i)} />
+          <circle className="node-halo" cx={n.x} cy={n.y} r={n.r + 4}
+            fill={color} fillOpacity="0.06" />
           <circle cx={n.x} cy={n.y} r={n.r}
             fill={i === 0 ? color : 'white'}
             fillOpacity={i === 0 ? 0.9 : 1}
@@ -92,38 +110,63 @@ function BuildAnim({ color, active }) {
 
 // Maintain: continuous orbit loop
 function MaintainAnim({ color }) {
-  const [phase, setPhase] = useState(0)
-  const raf = useRef(null)
-  useEffect(() => {
-    const loop = () => { setPhase(p => p + 0.022); raf.current = requestAnimationFrame(loop) }
-    raf.current = requestAnimationFrame(loop)
-    return () => cancelAnimationFrame(raf.current)
-  }, [])
+  const svgRef = useRef(null)
+  const rafRef = useRef(null)
+  const phaseRef = useRef(0)
 
   const cx = 90, cy = 100, r = 60
-  const dots = [0, 1, 2, 3].map(i => {
-    const angle = phase + (i * Math.PI * 2) / 4
-    return { x: cx + r * Math.cos(angle), y: cy + r * Math.sin(angle), i }
-  })
   const labels = ['Leads', 'Clients', 'Invoices', 'Inbox']
 
+  useEffect(() => {
+    const svg = svgRef.current
+    if (!svg) return
+    const dotGroups = svg.querySelectorAll('.orbit-dot')
+
+    const loop = () => {
+      phaseRef.current += 0.022
+      dotGroups.forEach((g, i) => {
+        const angle = phaseRef.current + (i * Math.PI * 2) / 4
+        const x = cx + r * Math.cos(angle)
+        const y = cy + r * Math.sin(angle)
+        const circle = g.querySelector('circle')
+        const text = g.querySelector('text')
+        if (circle) {
+          circle.setAttribute('cx', x)
+          circle.setAttribute('cy', y)
+        }
+        if (text) {
+          text.setAttribute('x', x)
+          text.setAttribute('y', y + 3)
+        }
+      })
+      rafRef.current = requestAnimationFrame(loop)
+    }
+    rafRef.current = requestAnimationFrame(loop)
+    return () => cancelAnimationFrame(rafRef.current)
+  }, [])
+
   return (
-    <svg viewBox="0 0 180 200" style={{ width: '100%', maxWidth: '180px' }}>
+    <svg ref={svgRef} viewBox="0 0 180 200" style={{ width: '100%', maxWidth: '180px' }}>
       {/* Orbit ring */}
       <circle cx={cx} cy={cy} r={r} fill="none" stroke={color} strokeOpacity="0.12" strokeWidth="1" strokeDasharray="4 6" />
       {/* Centre */}
       <circle cx={cx} cy={cy} r={18} fill={color} fillOpacity="0.1" stroke={color} strokeOpacity="0.25" strokeWidth="1" />
       <text x={cx} y={cy + 4} textAnchor="middle" fontFamily="DM Sans, sans-serif" fontSize="7.5" fontWeight="600" fill={color} fillOpacity="0.8">Always</text>
       <text x={cx} y={cy + 13} textAnchor="middle" fontFamily="DM Sans, sans-serif" fontSize="7" fill={color} fillOpacity="0.55">on</text>
-      {/* Orbiting dots */}
-      {dots.map(d => (
-        <g key={d.i}>
-          <circle cx={d.x} cy={d.y} r="8" fill="white" stroke={color} strokeOpacity="0.35" strokeWidth="1" />
-          <text x={d.x} y={d.y + 3} textAnchor="middle" fontFamily="DM Mono, monospace" fontSize="5.5" fill={color} fillOpacity="0.8">
-            {labels[d.i]}
-          </text>
-        </g>
-      ))}
+      {/* Orbiting dots — initial positions, updated via RAF */}
+      {labels.map((label, i) => {
+        const angle = (i * Math.PI * 2) / 4
+        const x = cx + r * Math.cos(angle)
+        const y = cy + r * Math.sin(angle)
+        return (
+          <g key={i} className="orbit-dot">
+            <circle cx={x} cy={y} r="8" fill="white" stroke={color} strokeOpacity="0.35" strokeWidth="1" />
+            <text x={x} y={y + 3} textAnchor="middle" fontFamily="DM Mono, monospace" fontSize="5.5" fill={color} fillOpacity="0.8">
+              {label}
+            </text>
+          </g>
+        )
+      })}
     </svg>
   )
 }
