@@ -1,123 +1,180 @@
 /**
- * Pre-render script — visits each route in a headless browser after vite build
- * and saves the fully rendered HTML so crawlers see real content.
+ * SEO meta injection script — creates per-route HTML files with correct
+ * <title>, <meta>, <link rel="canonical">, Open Graph, Twitter, and JSON-LD
+ * so crawlers and social scrapers see the right metadata without JavaScript.
+ *
+ * No browser needed — works in any CI environment (including Vercel).
  *
  * Usage: node scripts/prerender.js
- * Runs automatically via "npm run build" (postbuild hook).
+ * Runs automatically after "vite build" via package.json build script.
  */
 
-import { execSync, spawn } from 'child_process'
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST = join(__dirname, '..', 'dist')
+const DOMAIN = 'https://www.undercurrentautomations.com'
 
-// Routes to pre-render (public-facing pages)
+// Per-route SEO metadata
 const ROUTES = [
-  '/',
-  '/about',
-  '/services',
-  '/process',
-  '/contact',
-  '/stats',
-  '/roi',
-  '/audit',
-  '/lp',
+  {
+    path: '/',
+    title: 'UnderCurrent — AI Business Automation',
+    description: 'Melbourne-based AI automation studio. We map small business workflows and build custom AI-powered systems that run your operations — silently, continuously, precisely.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'LocalBusiness',
+          '@id': `${DOMAIN}/#business`,
+          name: 'UnderCurrent',
+          alternateName: 'UnderCurrent AI Automation',
+          description: 'Melbourne-based AI automation studio specialising in workflow automation for small businesses.',
+          url: DOMAIN,
+          logo: `${DOMAIN}/favicon.svg`,
+          image: `${DOMAIN}/og-image.jpg`,
+          address: { '@type': 'PostalAddress', addressLocality: 'Melbourne', addressRegion: 'VIC', addressCountry: 'AU' },
+          areaServed: { '@type': 'Country', name: 'Australia' },
+          serviceType: ['AI Business Automation', 'Workflow Automation', 'Business Process Automation', 'AI Agent Deployment'],
+          email: 'luke@undercurrentautomations.com',
+          foundingDate: '2021',
+        },
+        {
+          '@type': 'WebSite',
+          '@id': `${DOMAIN}/#website`,
+          url: DOMAIN,
+          name: 'UnderCurrent',
+          publisher: { '@id': `${DOMAIN}/#business` },
+        },
+      ],
+    },
+  },
+  {
+    path: '/about',
+    title: 'About — UnderCurrent | AI Automation Studio, Melbourne',
+    description: 'Learn about UnderCurrent — the Melbourne-based AI automation studio that maps small business workflows and builds custom systems to run your operations continuously and precisely.',
+  },
+  {
+    path: '/services',
+    title: 'Services — UnderCurrent | CX, Sales, Content, Personal & Finance Automation',
+    description: 'Full-service AI automation: customer experience, sales pipelines, content creation, personal assistant AI, and financial operations — all automated, all connected.',
+  },
+  {
+    path: '/process',
+    title: 'Our Process — UnderCurrent | Map, Build, Maintain',
+    description: 'How UnderCurrent works: we map your workflows, build custom AI automation, and maintain your systems continuously. Three steps to operational freedom.',
+  },
+  {
+    path: '/contact',
+    title: 'Contact — UnderCurrent',
+    description: 'Get in touch with UnderCurrent. We typically respond within one business day.',
+  },
+  {
+    path: '/stats',
+    title: 'Results — UnderCurrent | AI Automation Impact',
+    description: 'See the measurable impact of AI automation on small business operations — time saved, revenue recovered, and efficiency gained.',
+  },
+  {
+    path: '/roi',
+    title: 'ROI Calculator — UnderCurrent | See Your Automation Savings',
+    description: 'Calculate how much time and money AI automation could save your business. Free, instant results.',
+  },
+  {
+    path: '/audit',
+    title: 'Free Business Audit — UnderCurrent | Find Your Automation Opportunities',
+    description: 'Get a free AI-powered audit of your business operations. Discover where automation can save you time, money, and missed revenue.',
+  },
+  {
+    path: '/lp',
+    title: 'UnderCurrent — AI Business Automation for Small Business',
+    description: 'See how AI automation can transform your small business operations. Free audit, real results.',
+  },
 ]
 
-const PORT = 4884
+function injectMeta(html, route) {
+  const canonical = `${DOMAIN}${route.path === '/' ? '' : route.path}`
+  const ogImage = `${DOMAIN}/og-image.jpg`
 
-async function prerender() {
-  console.log('\n🔍 Pre-rendering routes for SEO...\n')
+  // Replace <title>
+  html = html.replace(
+    /<title>[^<]*<\/title>/,
+    `<title>${route.title}</title>`
+  )
 
-  // Start a local preview server
-  const server = spawn('npx', ['vite', 'preview', '--port', String(PORT)], {
-    cwd: join(__dirname, '..'),
-    stdio: 'pipe',
-  })
-
-  // Wait for server to be ready
-  await new Promise((resolve, reject) => {
-    const timeout = setTimeout(() => reject(new Error('Server start timeout')), 15000)
-    server.stdout.on('data', (data) => {
-      if (data.toString().includes(String(PORT))) {
-        clearTimeout(timeout)
-        resolve()
-      }
-    })
-    server.stderr.on('data', (data) => {
-      const msg = data.toString()
-      if (msg.includes(String(PORT))) {
-        clearTimeout(timeout)
-        resolve()
-      }
-    })
-  })
-
-  // Small delay to ensure server is fully ready
-  await new Promise(r => setTimeout(r, 1000))
-
-  try {
-    const puppeteer = await import('puppeteer')
-    const browser = await puppeteer.default.launch({
-      headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    })
-
-    for (const route of ROUTES) {
-      const page = await browser.newPage()
-
-      // Block unnecessary resources to speed up rendering
-      await page.setRequestInterception(true)
-      page.on('request', (req) => {
-        const type = req.resourceType()
-        if (['image', 'font', 'media'].includes(type)) {
-          req.abort()
-        } else {
-          req.continue()
-        }
-      })
-
-      const url = `http://localhost:${PORT}${route}`
-      console.log(`  Rendering ${route}...`)
-
-      await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 })
-
-      // Wait a bit for GSAP animations to initialize and content to render
-      await page.waitForFunction(() => document.querySelector('#root')?.innerHTML?.length > 100, {
-        timeout: 10000,
-      })
-
-      // Get the full rendered HTML
-      const html = await page.content()
-
-      // Determine output path
-      const outDir = route === '/'
-        ? DIST
-        : join(DIST, route)
-
-      if (!existsSync(outDir)) {
-        mkdirSync(outDir, { recursive: true })
-      }
-
-      writeFileSync(join(outDir, 'index.html'), html)
-      console.log(`  ✓ ${route} → ${join(outDir, 'index.html').replace(DIST, 'dist')}`)
-
-      await page.close()
-    }
-
-    await browser.close()
-    console.log(`\n✅ Pre-rendered ${ROUTES.length} routes successfully\n`)
-  } finally {
-    server.kill()
+  // Replace or inject meta description
+  if (html.includes('name="description"')) {
+    html = html.replace(
+      /<meta name="description" content="[^"]*"\s*\/?>/,
+      `<meta name="description" content="${route.description}" />`
+    )
+  } else {
+    html = html.replace('</title>', `</title>\n    <meta name="description" content="${route.description}" />`)
   }
+
+  // Replace canonical
+  html = html.replace(
+    /<link rel="canonical" href="[^"]*"\s*\/?>/,
+    `<link rel="canonical" href="${canonical}" />`
+  )
+
+  // Replace OG tags
+  html = html.replace(
+    /<meta property="og:url" content="[^"]*"\s*\/?>/,
+    `<meta property="og:url" content="${canonical}" />`
+  )
+  html = html.replace(
+    /<meta property="og:title" content="[^"]*"\s*\/?>/,
+    `<meta property="og:title" content="${route.title}" />`
+  )
+  html = html.replace(
+    /<meta property="og:description" content="[^"]*"\s*\/?>/,
+    `<meta property="og:description" content="${route.description}" />`
+  )
+
+  // Replace Twitter tags
+  html = html.replace(
+    /<meta name="twitter:title" content="[^"]*"\s*\/?>/,
+    `<meta name="twitter:title" content="${route.title}" />`
+  )
+  html = html.replace(
+    /<meta name="twitter:description" content="[^"]*"\s*\/?>/,
+    `<meta name="twitter:description" content="${route.description}" />`
+  )
+
+  // Replace JSON-LD if route has custom schema
+  if (route.jsonLd) {
+    html = html.replace(
+      /<script type="application\/ld\+json">[\s\S]*?<\/script>/,
+      `<script type="application/ld+json">\n    ${JSON.stringify(route.jsonLd)}\n    </script>`
+    )
+  }
+
+  return html
 }
 
-prerender().catch((err) => {
-  console.error('Pre-render failed:', err.message)
-  // Don't fail the build — pre-rendering is an enhancement
-  // The SPA still works without it
-  process.exit(0)
-})
+function run() {
+  console.log('\n  Injecting per-route SEO metadata...\n')
+
+  const baseHtml = readFileSync(join(DIST, 'index.html'), 'utf-8')
+
+  for (const route of ROUTES) {
+    const html = injectMeta(baseHtml, route)
+
+    const outDir = route.path === '/'
+      ? DIST
+      : join(DIST, route.path)
+
+    if (!existsSync(outDir)) {
+      mkdirSync(outDir, { recursive: true })
+    }
+
+    writeFileSync(join(outDir, 'index.html'), html)
+    console.log(`  ✓ ${route.path} → ${route.title}`)
+  }
+
+  console.log(`\n  Done — ${ROUTES.length} routes with unique SEO metadata\n`)
+}
+
+run()
