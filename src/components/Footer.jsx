@@ -1,4 +1,4 @@
-import { FileText, Instagram, Calculator, CalendarDays, Facebook } from 'lucide-react'
+import { FileText, Instagram, Calculator, CalendarDays, Facebook, Linkedin } from 'lucide-react'
 
 const tiles = [
   {
@@ -34,7 +34,7 @@ const tiles = [
     title: 'Follow Along',
     sub: 'Behind-the-scenes automation tips and real client wins.',
     cta: 'Follow Us',
-    href: 'https://www.instagram.com/undercurrent.ai',
+    href: 'https://www.instagram.com/undercurrent.automations/',
     primary: false,
     external: true,
   },
@@ -201,8 +201,9 @@ export default function Footer() {
 
               <div style={{ display: 'flex', gap: '0.75rem' }}>
                 {[
-                  { href: 'https://www.instagram.com/undercurrent.ai', Icon: Instagram, label: 'Instagram' },
-                  { href: 'https://www.facebook.com/undercurrent.ai', Icon: Facebook, label: 'Facebook' },
+                  { href: 'https://www.instagram.com/undercurrent.automations/', Icon: Instagram, label: 'Instagram' },
+                  { href: 'https://www.facebook.com/profile.php?id=61578553167947', Icon: Facebook, label: 'Facebook' },
+                  { href: 'https://www.linkedin.com/company/undercurrent-automations', Icon: Linkedin, label: 'LinkedIn' },
                 ].map(({ href, Icon, label }) => (
                   <a
                     key={label}

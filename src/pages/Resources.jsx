@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -68,18 +68,118 @@ function OceanCanvas() {
   )
 }
 
-const CARDS = [
-  { category: 'GUIDE', title: 'The Small Business Automation Playbook', desc: 'A step-by-step framework for identifying which parts of your business to automate first.', cta: 'Read More' },
-  { category: 'ARTICLE', title: '5 Signs Your Follow-Up Is Costing You Clients', desc: 'How slow response times silently erode your pipeline — and what to do about it.', cta: 'Read More' },
-  { category: 'PLAYBOOK', title: 'Automating Onboarding Without Losing the Personal Touch', desc: 'How to welcome new clients with AI while keeping it warm and human.', cta: 'Read More' },
-  { category: 'TOOL', title: 'The AI Readiness Checklist', desc: 'A free checklist to assess whether your business is ready for automation.', cta: 'Download' },
-  { category: 'ARTICLE', title: 'Why Most Businesses Automate the Wrong Things First', desc: 'The counterintuitive order of operations that gets results fastest.', cta: 'Read More' },
-  { category: 'GUIDE', title: 'From Inbox Zero to Inbox Automated', desc: 'How to build a personal AI assistant that handles your email triage.', cta: 'Read More' },
+/* ── Topic Clusters ── */
+const TOPICS = [
+  {
+    id: 'automation',
+    label: 'AUTOMATION',
+    pillar: {
+      title: 'The Complete Guide to Small Business Automation',
+      desc: 'Everything you need to know about automating your business — from first steps to full-scale systems. The definitive pillar guide.',
+      isPillar: true,
+    },
+    articles: [
+      { title: 'The Small Business Automation Playbook', desc: 'A step-by-step framework for identifying which parts of your business to automate first.' },
+      { title: 'Why Most Businesses Automate the Wrong Things First', desc: 'The counterintuitive order of operations that gets results fastest.' },
+      { title: 'Automating Onboarding Without Losing the Personal Touch', desc: 'How to welcome new clients with AI while keeping it warm and human.' },
+    ],
+  },
+  {
+    id: 'ai',
+    label: 'AI FOR BUSINESS',
+    pillar: {
+      title: 'AI for Small Business: A Practical Guide',
+      desc: 'Cut through the hype. A grounded guide to what AI can actually do for businesses under 50 people.',
+      isPillar: true,
+    },
+    articles: [
+      { title: 'From Inbox Zero to Inbox Automated', desc: 'How to build a personal AI assistant that handles your email triage.' },
+      { title: '5 Signs Your Follow-Up Is Costing You Clients', desc: 'How slow response times silently erode your pipeline — and what to do about it.' },
+      { title: 'The AI Readiness Checklist', desc: 'A free checklist to assess whether your business is ready for automation.' },
+    ],
+  },
+  {
+    id: 'growth',
+    label: 'BUSINESS GROWTH',
+    pillar: {
+      title: 'Scaling Without Scaling Headcount',
+      desc: 'How to grow revenue and capacity without proportionally growing your team — using systems, not staff.',
+      isPillar: true,
+    },
+    articles: [
+      { title: 'The Hidden Cost of Manual Processes', desc: 'Calculate what repetitive tasks are actually costing your business in lost revenue and burnout.' },
+      { title: 'Building Systems That Run Without You', desc: 'The operator\'s guide to removing yourself from day-to-day execution.' },
+    ],
+  },
 ]
 
-const FILTERS = ['ALL', 'GUIDES', 'ARTICLES', 'PLAYBOOKS', 'TOOLS']
+const FILTERS = ['ALL', ...TOPICS.map(t => t.label)]
 
-function ResourceCard({ category, title, desc, cta, delay }) {
+function PillarCard({ title, desc, topic, delay }) {
+  return (
+    <Reveal delay={delay} y={30}>
+      <div
+        className="resource-card"
+        style={{
+          background: 'linear-gradient(145deg, rgba(143,175,159,0.1) 0%, rgba(28,28,26,0.3) 100%)',
+          border: '1px solid rgba(143,175,159,0.2)',
+          borderRadius: '1.25rem',
+          overflow: 'hidden',
+          cursor: 'pointer',
+          transition: 'all 0.35s ease',
+          gridColumn: '1 / -1',
+        }}
+        onMouseEnter={e => {
+          e.currentTarget.style.borderColor = 'rgba(143,175,159,0.35)'
+          e.currentTarget.style.transform = 'translateY(-4px)'
+          e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.3)'
+        }}
+        onMouseLeave={e => {
+          e.currentTarget.style.borderColor = 'rgba(143,175,159,0.2)'
+          e.currentTarget.style.transform = 'translateY(0)'
+          e.currentTarget.style.boxShadow = 'none'
+        }}
+      >
+        <div style={{ padding: '2rem 2.5rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+            <span className="font-mono" style={{
+              fontSize: '0.5rem', letterSpacing: '0.16em',
+              color: '#8FAF9F',
+              border: '1px solid rgba(143,175,159,0.3)',
+              padding: '0.2rem 0.6rem',
+              borderRadius: '9999px',
+              background: 'rgba(143,175,159,0.08)',
+            }}>
+              PILLAR GUIDE
+            </span>
+            <span className="font-mono" style={{ fontSize: '0.5rem', letterSpacing: '0.16em', color: 'rgba(143,175,159,0.5)' }}>
+              {topic}
+            </span>
+          </div>
+          <h3 className="font-cormorant" style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.75rem)', fontWeight: 600, color: '#F7F3ED', lineHeight: 1.25 }}>
+            {title}
+          </h3>
+          <p className="font-dm" style={{ fontSize: '0.9rem', fontWeight: 300, color: 'rgba(212,201,176,0.5)', lineHeight: 1.7, maxWidth: '60ch' }}>
+            {desc}
+          </p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: '0.5rem' }}>
+            <span className="font-dm" style={{ fontSize: '0.8rem', fontWeight: 400, color: '#8FAF9F', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
+              Read the Guide <span>→</span>
+            </span>
+            <span className="font-mono" style={{
+              fontSize: '0.5rem', letterSpacing: '0.14em',
+              color: 'rgba(143,175,159,0.35)',
+            }}>
+              COMING SOON
+            </span>
+          </div>
+        </div>
+      </div>
+    </Reveal>
+  )
+}
+
+function ResourceCard({ title, desc, topic, delay }) {
   return (
     <Reveal delay={delay} y={30}>
       <div
@@ -148,7 +248,7 @@ function ResourceCard({ category, title, desc, cta, delay }) {
         {/* Card body */}
         <div style={{ padding: '1.25rem 1.5rem 1.5rem' }}>
           <p className="font-mono" style={{ fontSize: '0.5rem', letterSpacing: '0.16em', color: 'rgba(143,175,159,0.6)', marginBottom: '0.6rem' }}>
-            {category}
+            {topic}
           </p>
           <h3 className="font-cormorant" style={{ fontSize: '1.25rem', fontWeight: 600, color: '#F7F3ED', lineHeight: 1.25, marginBottom: '0.5rem' }}>
             {title}
@@ -157,7 +257,7 @@ function ResourceCard({ category, title, desc, cta, delay }) {
             {desc}
           </p>
           <span className="font-dm" style={{ fontSize: '0.78rem', fontWeight: 400, color: '#8FAF9F', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
-            {cta} <span>→</span>
+            Read More <span>→</span>
           </span>
         </div>
       </div>
@@ -170,6 +270,7 @@ export default function Resources() {
   const videoRef = useRef(null)
   const headlineRef = useRef(null)
   const subRef = useRef(null)
+  const [activeFilter, setActiveFilter] = useState('ALL')
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
@@ -178,11 +279,15 @@ export default function Resources() {
     tl.fromTo(subRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, 0.6)
   }, [])
 
+  const filteredTopics = activeFilter === 'ALL'
+    ? TOPICS
+    : TOPICS.filter(t => t.label === activeFilter)
+
   return (
     <div style={{ backgroundColor: '#1C1C1A', minHeight: '100vh', overflowX: 'hidden' }}>
       <PageHead
         title="Resources — UnderCurrent"
-        description="Guides, playbooks, and lessons from the field. Everything we've learned building AI automation for small businesses, packaged for you."
+        description="Guides, playbooks, and lessons from the field. Everything we've learned building AI automation for small businesses, organised by topic."
         canonical="https://www.undercurrentautomations.com/resources"
       />
       <ScrollProgressBar />
@@ -228,7 +333,7 @@ export default function Resources() {
             </span>
           </h1>
           <p ref={subRef} className="font-dm" style={{ fontSize: 'clamp(1rem, 1.5vw, 1.15rem)', fontWeight: 300, color: 'rgba(232,224,208,0.65)', lineHeight: 1.7, maxWidth: '48ch', marginTop: '2rem', opacity: 0 }}>
-            Guides, playbooks, and lessons we've learned building AI automation for small businesses.
+            Guides, playbooks, and lessons we've learned building AI automation for small businesses — organised by topic.
           </p>
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 font-mono" style={{ fontSize: '0.65rem', letterSpacing: '0.15em', color: 'rgba(143,175,159,0.35)' }}>
@@ -252,53 +357,92 @@ export default function Resources() {
         <Reveal>
           <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
             <p className="font-mono" style={{ fontSize: '0.65rem', letterSpacing: '0.18em', fontWeight: 500, color: '#8FAF9F', marginBottom: '1rem' }}>
-              BROWSE RESOURCES
+              BROWSE BY TOPIC
             </p>
             <h2 className="font-cormorant" style={{
               fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 600,
               color: '#F7F3ED', lineHeight: 1.15, letterSpacing: '-0.01em', marginBottom: '0.75rem',
             }}>
-              Everything We Know,<br />Packaged for You
+              Deep Dives, Organised<br />by What Matters
             </h2>
             <p className="font-dm" style={{ fontSize: '0.95rem', fontWeight: 300, color: 'rgba(212,201,176,0.45)', lineHeight: 1.7 }}>
-              Actionable guides and frameworks to help you understand where automation fits in your business.
+              Each topic cluster starts with a comprehensive pillar guide, supported by focused articles that go deeper on specific questions.
             </p>
           </div>
         </Reveal>
 
-        {/* Filter pills */}
+        {/* Topic filter pills */}
         <Reveal delay={0.1}>
           <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
-            {FILTERS.map((f, i) => (
-              <div
-                key={f}
-                className="font-mono"
-                style={{
-                  fontSize: '0.6rem', letterSpacing: '0.12em',
-                  padding: '0.45rem 1rem', borderRadius: '9999px',
-                  border: `1px solid ${i === 0 ? 'rgba(143,175,159,0.35)' : 'rgba(143,175,159,0.15)'}`,
-                  background: i === 0 ? 'rgba(143,175,159,0.1)' : 'transparent',
-                  color: i === 0 ? '#8FAF9F' : 'rgba(212,201,176,0.45)',
-                  cursor: 'pointer', transition: 'all 0.3s ease',
-                }}
-              >
-                {f}
-              </div>
-            ))}
+            {FILTERS.map(f => {
+              const isActive = f === activeFilter
+              return (
+                <button
+                  key={f}
+                  className="font-mono"
+                  onClick={() => setActiveFilter(f)}
+                  style={{
+                    fontSize: '0.6rem', letterSpacing: '0.12em',
+                    padding: '0.45rem 1rem', borderRadius: '9999px',
+                    border: `1px solid ${isActive ? 'rgba(143,175,159,0.35)' : 'rgba(143,175,159,0.15)'}`,
+                    background: isActive ? 'rgba(143,175,159,0.1)' : 'transparent',
+                    color: isActive ? '#8FAF9F' : 'rgba(212,201,176,0.45)',
+                    cursor: 'pointer', transition: 'all 0.3s ease',
+                  }}
+                >
+                  {f}
+                </button>
+              )
+            })}
           </div>
         </Reveal>
 
-        {/* Card grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" style={{ maxWidth: '1100px', margin: '0 auto', paddingBottom: '4rem' }}>
-          {CARDS.map((card, i) => (
-            <ResourceCard key={card.title} {...card} delay={0.05 * i} />
+        {/* Topic cluster sections */}
+        <div style={{ maxWidth: '1100px', margin: '0 auto', paddingBottom: '4rem' }}>
+          {filteredTopics.map((topic, ti) => (
+            <div key={topic.id} style={{ marginBottom: ti < filteredTopics.length - 1 ? '4rem' : 0 }}>
+              {/* Topic heading */}
+              <Reveal delay={0.05}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+                  <div style={{ width: '28px', height: '1px', background: 'rgba(143,175,159,0.3)' }} />
+                  <h3 className="font-mono" style={{ fontSize: '0.65rem', letterSpacing: '0.18em', color: '#8FAF9F', fontWeight: 500 }}>
+                    {topic.label}
+                  </h3>
+                  <div style={{ flex: 1, height: '1px', background: 'rgba(143,175,159,0.08)' }} />
+                  <span className="font-mono" style={{ fontSize: '0.5rem', letterSpacing: '0.14em', color: 'rgba(143,175,159,0.3)' }}>
+                    {topic.articles.length + 1} ARTICLES
+                  </span>
+                </div>
+              </Reveal>
+
+              {/* Pillar card (full width) */}
+              <PillarCard
+                title={topic.pillar.title}
+                desc={topic.pillar.desc}
+                topic={topic.label}
+                delay={0.1}
+              />
+
+              {/* Supporting article cards */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" style={{ marginTop: '1.25rem' }}>
+                {topic.articles.map((article, ai) => (
+                  <ResourceCard
+                    key={article.title}
+                    title={article.title}
+                    desc={article.desc}
+                    topic={topic.label}
+                    delay={0.05 * (ai + 1)}
+                  />
+                ))}
+              </div>
+            </div>
           ))}
         </div>
 
         {/* Bottom message */}
         <div style={{ textAlign: 'center', padding: '0 1.5rem 3rem' }}>
           <p className="font-dm" style={{ fontSize: '0.85rem', fontWeight: 300, color: 'rgba(212,201,176,0.25)', lineHeight: 1.7 }}>
-            More resources are on the way. We're packaging everything we've learned<br />building automation for small businesses into actionable guides.
+            More resources are on the way. We're building out each topic cluster<br />with in-depth guides and actionable frameworks.
           </p>
         </div>
       </section>
