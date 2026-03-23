@@ -79,8 +79,24 @@ export default function PageHead({
       document.head.appendChild(script)
     }
 
-    // Cleanup
+    // Cleanup — restore index.html defaults so stale SEO data doesn't persist on navigation
     return () => {
+      document.title = 'UnderCurrent — AI Business Automation'
+      const defaultDesc = 'Melbourne-based AI automation studio. We map small business workflows and build custom AI-powered systems that run your operations — silently, continuously, precisely.'
+      const resetMeta = (selector, attr, value) => {
+        const el = document.querySelector(selector)
+        if (el) el.setAttribute('content', value)
+      }
+      resetMeta('meta[name="description"]', 'content', defaultDesc)
+      resetMeta('meta[property="og:title"]', 'content', 'UnderCurrent — AI Business Automation')
+      resetMeta('meta[property="og:description"]', 'content', defaultDesc)
+      resetMeta('meta[name="twitter:title"]', 'content', 'UnderCurrent — AI Business Automation')
+      resetMeta('meta[name="twitter:description"]', 'content', defaultDesc)
+      resetMeta('meta[property="og:image"]', 'content', 'https://undercurrent.au/og-image.jpg')
+      resetMeta('meta[name="twitter:image"]', 'content', 'https://undercurrent.au/og-image.jpg')
+      resetMeta('meta[property="og:url"]', 'content', 'https://undercurrent.au/')
+      const link = document.querySelector('link[rel="canonical"]')
+      if (link) link.setAttribute('href', 'https://undercurrent.au/')
       if (jsonLd) {
         const el = document.getElementById('page-json-ld')
         if (el) el.remove()

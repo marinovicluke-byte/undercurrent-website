@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 import { AlertTriangle, TrendingDown, Clock, DollarSign, ArrowRight, Zap } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { CTA_HREF } from '../constants'
 import ScrollProgressBar from '../components/ScrollProgressBar'
 import PageHead from '../components/PageHead'
 
@@ -802,7 +803,7 @@ export default function MissedRevenueAudit() {
                       Check your inbox. While you wait — want to walk through the numbers together?
                     </p>
                     <a
-                      href="https://cal.com/luke-marinovic-aqeosc/30min"
+                      href={CTA_HREF}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-sage"

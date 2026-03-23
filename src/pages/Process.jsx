@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import { CTA_HREF } from '../constants'
 import ScrollProgressBar from '../components/ScrollProgressBar'
 import PageHead from '../components/PageHead'
 import useIsMobile from '../hooks/useIsMobile'
@@ -788,7 +789,7 @@ export default function Process() {
             A 30-minute call. No pitch deck. Just a clear look at where your time is going — and what it would look like to get it back.
           </p>
           <a
-            href="https://cal.com/luke-marinovic-aqeosc/30min"
+            href={CTA_HREF}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-sage-hero"

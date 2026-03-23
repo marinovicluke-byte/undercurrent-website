@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ArrowRight } from 'lucide-react'
 import Navbar from '../components/Navbar'
+import { CTA_HREF } from '../constants'
 import Footer from '../components/Footer'
 import ScrollProgressBar from '../components/ScrollProgressBar'
 import PageHead from '../components/PageHead'
@@ -478,7 +479,7 @@ export default function About() {
                 Book a 30-minute call. We'll map your biggest time drains and show you exactly what can be automated.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href="https://cal.com/luke-marinovic-aqeosc/30min" target="_blank" rel="noopener noreferrer" className="btn-sage" style={{ fontSize: '0.95rem', padding: '0.875rem 2.5rem' }}>
+                <a href={CTA_HREF} target="_blank" rel="noopener noreferrer" className="btn-sage" style={{ fontSize: '0.95rem', padding: '0.875rem 2.5rem' }}>
                   <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     Book a Discovery Call
                     <ArrowRight size={16} />

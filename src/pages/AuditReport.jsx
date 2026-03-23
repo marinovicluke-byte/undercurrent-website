@@ -3,9 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import PageHead from '../components/PageHead'
 import { calcPillarMonthly } from '../audit/calculations.js'
 import RadarChart from '../audit/RadarChart.jsx'
-
-// ─── Config ───────────────────────────────────────────────────────────────────
-const CALENDAR_LINK = 'https://cal.com/luke-marinovic-aqeosc/30min'
+import { CTA_HREF } from '../constants'
 
 const PILLAR_META = {
   customer_experience: {
@@ -181,7 +179,7 @@ function ReportNav() {
           </span>
           <span className="report-nav-wave"><ReportWave /></span>
         </a>
-        <a href={CALENDAR_LINK} target="_blank" rel="noopener noreferrer" style={{
+        <a href={CTA_HREF} target="_blank" rel="noopener noreferrer" style={{
           display: 'inline-flex', alignItems: 'center', gap: '6px',
           background: '#8FAF9F', color: '#1C1C1A',
           fontFamily: "'DM Sans', sans-serif", fontWeight: 700,
@@ -398,6 +396,16 @@ function PageNumber({ current, total }) {
   )
 }
 
+// ─── Validation ───────────────────────────────────────────────────────────────
+function validateAuditData(data) {
+  if (!data || typeof data !== 'object') return null
+  if (typeof data.b !== 'string' || data.b.length > 200) return null  // business name
+  if (typeof data.n !== 'string' || data.n.length > 200) return null  // person name
+  if (data.r !== undefined && typeof data.r !== 'number') return null  // rate
+  if (data.p !== undefined && typeof data.p !== 'object') return null  // pillars
+  return data
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
 export default function AuditReport() {
   const [searchParams] = useSearchParams()
@@ -406,7 +414,8 @@ export default function AuditReport() {
     try {
       const encoded = searchParams.get('d')
       if (!encoded) return null
-      return JSON.parse(atob(decodeURIComponent(encoded)))
+      const parsed = JSON.parse(atob(decodeURIComponent(encoded)))
+      return validateAuditData(parsed)
     } catch {
       return null
     }
@@ -592,7 +601,7 @@ export default function AuditReport() {
             {/* CTA — below pills, above scroll prompt */}
             <FadeSection delay={0.45}>
               <div className="mobile-hide-cta" style={{ textAlign: 'center', marginTop: '32px' }}>
-                <a href={CALENDAR_LINK} target="_blank" rel="noopener noreferrer" style={{
+                <a href={CTA_HREF} target="_blank" rel="noopener noreferrer" style={{
                   display: 'inline-block', background: '#8FAF9F', color: '#1C1C1A',
                   fontFamily: "'DM Sans', sans-serif", fontSize: '0.95rem', fontWeight: 700,
                   padding: '16px 60px', borderRadius: '9999px', textDecoration: 'none',
@@ -862,7 +871,7 @@ export default function AuditReport() {
                 <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.95rem', color: 'rgba(247,243,237,0.42)', margin: '0 auto 36px', maxWidth: '440px', lineHeight: 1.7 }}>
                   Book a free 30-minute strategy call. We'll walk through your top leaks and map out exactly what to automate first, no fluff, no pitch deck.
                 </p>
-                <a href={CALENDAR_LINK} target="_blank" rel="noopener noreferrer" style={{
+                <a href={CTA_HREF} target="_blank" rel="noopener noreferrer" style={{
                   display: 'inline-block', background: '#8FAF9F', color: '#1C1C1A',
                   fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', fontWeight: 700,
                   padding: '18px 48px', borderRadius: '9999px', textDecoration: 'none',

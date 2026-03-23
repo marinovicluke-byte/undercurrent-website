@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Shield, ArrowRight, Check } from 'lucide-react'
 import useVisible from '../hooks/useVisible'
-
-const CTA_HREF = 'https://cal.com/luke-marinovic-aqeosc/30min'
+import { CTA_HREF } from '../constants'
 
 const BULLETS = [
   { label: 'Built for your business', sub: 'No templates. Every automation is mapped to how you actually work.' },

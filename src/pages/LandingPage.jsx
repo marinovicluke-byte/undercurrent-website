@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { ArrowRight, Check, Shield } from 'lucide-react'
 import Navbar from '../components/Navbar'
+import { CTA_HREF } from '../constants'
 import Footer from '../components/Footer'
 import ScrollProgressBar from '../components/ScrollProgressBar'
 import useFadeIn from '../hooks/useFadeIn'
@@ -91,9 +92,6 @@ function StoryRow({ dot, label, text }) {
     </div>
   )
 }
-
-// ─── CTA LINK ─────────────────────────────────────────────────────────────────
-const CTA_HREF = 'https://cal.com/luke-marinovic-aqeosc/30min'
 
 // ─── MAIN PAGE ────────────────────────────────────────────────────────────────
 export default function LandingPage() {

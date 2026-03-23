@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 import useFadeIn from '../hooks/useFadeIn'
-
-const CTA_HREF = 'https://cal.com/luke-marinovic-aqeosc/30min'
+import { CTA_HREF } from '../constants'
 
 export default function Contact() {
   const [h2Ref, h2Visible] = useFadeIn(0)

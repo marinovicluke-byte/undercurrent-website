@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { X } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
+import { CTA_HREF } from '../constants'
 
 function NavWave({ scrolled }) {
   const canvasRef = useRef(null)
@@ -195,11 +196,11 @@ export default function Navbar({ ready = true, isSubPage = false }) {
           {/* CTA */}
           <div className="hidden md:block">
             {scrolled ? (
-              <a href="https://cal.com/luke-marinovic-aqeosc/30min" target="_blank" rel="noopener noreferrer" className="btn-sage" style={{ padding: '0.5rem 1.25rem' }}>
+              <a href={CTA_HREF} target="_blank" rel="noopener noreferrer" className="btn-sage" style={{ padding: '0.5rem 1.25rem' }}>
                 <span>Book a Call</span>
               </a>
             ) : (
-              <a href="https://cal.com/luke-marinovic-aqeosc/30min" target="_blank" rel="noopener noreferrer" className="btn-sage-hero" style={{ padding: '0.5rem 1.25rem', fontSize: '0.875rem' }}>
+              <a href={CTA_HREF} target="_blank" rel="noopener noreferrer" className="btn-sage-hero" style={{ padding: '0.5rem 1.25rem', fontSize: '0.875rem' }}>
                 <span>Book a Call</span>
               </a>
             )}
@@ -244,7 +245,7 @@ export default function Navbar({ ready = true, isSubPage = false }) {
               </a>
             ))}
             <a
-              href="https://cal.com/luke-marinovic-aqeosc/30min" target="_blank" rel="noopener noreferrer"
+              href={CTA_HREF} target="_blank" rel="noopener noreferrer"
               className="btn-sage mt-2"
               style={{ justifyContent: 'center' }}
               onClick={() => setMobileOpen(false)}
