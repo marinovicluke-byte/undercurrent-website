@@ -1118,6 +1118,36 @@ export default function ROICalculator() {
           </section>
         </Reveal>
 
+        {/* ── Related Pages ── */}
+        <section style={{ position: 'relative', zIndex: 10, maxWidth: '1100px', margin: '0 auto', padding: '0 24px 80px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
+            {[
+              { href: '/case-study', label: 'Case Studies', desc: 'See how AI automation has transformed real businesses.' },
+              { href: '/audit', label: 'Free Business Audit', desc: 'Get a personalised breakdown of where your business is leaking time.' },
+              { href: '/services', label: 'Our Services', desc: 'Explore the AI business automation systems we build.' },
+            ].map(link => (
+              <a
+                key={link.href}
+                href={link.href}
+                style={{
+                  flex: '1 1 280px', maxWidth: '340px',
+                  padding: '1.25rem 1.5rem',
+                  background: 'rgba(143,175,159,0.04)',
+                  border: '1px solid rgba(143,175,159,0.1)',
+                  borderRadius: '1rem',
+                  textDecoration: 'none',
+                  transition: 'all 0.3s ease',
+                }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(143,175,159,0.25)'; e.currentTarget.style.transform = 'translateY(-2px)' }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(143,175,159,0.1)'; e.currentTarget.style.transform = 'translateY(0)' }}
+              >
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.9rem', fontWeight: 500, color: '#F7F3ED', marginBottom: '0.3rem' }}>{link.label}</p>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.78rem', fontWeight: 300, color: 'rgba(212,201,176,0.4)', lineHeight: 1.6, margin: 0 }}>{link.desc}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+
         <Footer />
       </div>
     </>

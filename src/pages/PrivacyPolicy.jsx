@@ -163,6 +163,20 @@ export default function PrivacyPolicy() {
 
       </div>
 
+      {/* ── Related Pages ── */}
+      <div style={{ maxWidth: '720px', margin: '0 auto', padding: '0 1.5rem 4rem' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+          <a href="/terms" style={{ flex: '1 1 200px', padding: '1rem 1.25rem', background: 'rgba(143,175,159,0.04)', border: '1px solid rgba(143,175,159,0.1)', borderRadius: '0.75rem', textDecoration: 'none', transition: 'border-color 0.3s' }} onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(143,175,159,0.25)'} onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(143,175,159,0.1)'}>
+            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', fontWeight: 500, color: '#F7F3ED', margin: '0 0 0.2rem' }}>Terms of Service</p>
+            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.75rem', fontWeight: 300, color: 'rgba(212,201,176,0.4)', margin: 0 }}>Review our terms and conditions.</p>
+          </a>
+          <a href="/contact" style={{ flex: '1 1 200px', padding: '1rem 1.25rem', background: 'rgba(143,175,159,0.04)', border: '1px solid rgba(143,175,159,0.1)', borderRadius: '0.75rem', textDecoration: 'none', transition: 'border-color 0.3s' }} onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(143,175,159,0.25)'} onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(143,175,159,0.1)'}>
+            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.85rem', fontWeight: 500, color: '#F7F3ED', margin: '0 0 0.2rem' }}>Contact Us</p>
+            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.75rem', fontWeight: 300, color: 'rgba(212,201,176,0.4)', margin: 0 }}>Questions about your data? Get in touch.</p>
+          </a>
+        </div>
+      </div>
+
       <Footer />
     </div>
   )
