@@ -91,6 +91,16 @@ const ROUTES = [
     title: 'UnderCurrent — AI Business Automation for Small Business',
     description: 'See how AI automation can transform your small business operations. Free audit, real results.',
   },
+  {
+    path: '/privacy',
+    title: 'Privacy Policy — UnderCurrent',
+    description: 'How UnderCurrent collects, uses, and protects your personal information. We respect your privacy and handle data responsibly.',
+  },
+  {
+    path: '/terms',
+    title: 'Terms of Service — UnderCurrent',
+    description: 'Terms and conditions for using the UnderCurrent website and AI automation services. Read our service agreement, limitations, and policies.',
+  },
 ]
 
 function injectMeta(html, route) {

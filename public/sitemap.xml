@@ -32,4 +32,12 @@
     <loc>https://www.undercurrentautomations.com/audit</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.undercurrentautomations.com/privacy</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.undercurrentautomations.com/terms</loc>
+    <priority>0.3</priority>
+  </url>
 </urlset>

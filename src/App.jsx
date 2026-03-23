@@ -27,6 +27,8 @@ const BusinessAuditV2 = lazy(() => import('./pages/BusinessAuditV2'))
 const AuditReport = lazy(() => import('./pages/AuditReport'))
 const ContactPage = lazy(() => import('./pages/ContactPage'))
 const MissedRevenueAudit = lazy(() => import('./pages/MissedRevenueAudit'))
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
+const TermsOfService = lazy(() => import('./pages/TermsOfService'))
 
 // Brand colors — match exact section backgrounds
 const LIGHT         = '#F7F3ED'
@@ -153,6 +155,8 @@ export default function App() {
         <Route path="/report" element={<Suspense fallback={<LoadingSpinner />}><AuditReport /></Suspense>} />
         <Route path="/contact" element={<Suspense fallback={<LoadingSpinner />}><ContactPage /></Suspense>} />
         <Route path="/missed-revenue" element={<Suspense fallback={<LoadingSpinner />}><MissedRevenueAudit /></Suspense>} />
+        <Route path="/privacy" element={<Suspense fallback={<LoadingSpinner />}><PrivacyPolicy /></Suspense>} />
+        <Route path="/terms" element={<Suspense fallback={<LoadingSpinner />}><TermsOfService /></Suspense>} />
         <Route path="*" element={<Suspense fallback={<LoadingSpinner />}><NotFound /></Suspense>} />
       </Routes>
       <SpeedInsights />
