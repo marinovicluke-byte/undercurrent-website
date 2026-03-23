@@ -184,7 +184,7 @@ function ReportNav() {
         <a href={CALENDAR_LINK} target="_blank" rel="noopener noreferrer" style={{
           display: 'inline-flex', alignItems: 'center', gap: '6px',
           background: '#8FAF9F', color: '#1C1C1A',
-          fontFamily: "'DM Sans', sans-serif", fontSize: '0.85rem', fontWeight: 700,
+          fontFamily: "'DM Sans', sans-serif", fontWeight: 700,
           padding: '12px 36px', borderRadius: '9999px', textDecoration: 'none', fontSize: '0.9rem',
           transition: 'transform 0.2s ease, box-shadow 0.2s ease',
         }}

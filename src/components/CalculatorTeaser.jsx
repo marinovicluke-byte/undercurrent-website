@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, Fragment } from 'react'
 import { ArrowRight } from 'lucide-react'
 import useVisible from '../hooks/useVisible'
 import useIsMobile from '../hooks/useIsMobile'
@@ -114,12 +114,12 @@ function AuditMockup({ isMobile }) {
               <span key={h} style={{ fontSize: '0.45rem', color: 'rgba(247,243,237,0.48)', letterSpacing: '0.08em' }}>{h}</span>
             ))}
             {GAPS.map(row => (
-              <>
-                <span key={row.area + 'a'} style={{ fontSize: '0.6rem', color: 'rgba(247,243,237,0.75)' }}>{row.area}</span>
-                <span key={row.area + 'b'} style={{ fontSize: '0.6rem', color: labelColor(row.self) }}>{row.self}</span>
-                <span key={row.area + 'c'} style={{ fontSize: '0.6rem', color: labelColor(row.calc) }}>{row.calc}</span>
-                {!isMobile && <span key={row.area + 'd'} style={{ fontSize: '0.6rem', color: row.statusColor }}>{row.status}</span>}
-              </>
+              <Fragment key={row.area}>
+                <span style={{ fontSize: '0.6rem', color: 'rgba(247,243,237,0.75)' }}>{row.area}</span>
+                <span style={{ fontSize: '0.6rem', color: labelColor(row.self) }}>{row.self}</span>
+                <span style={{ fontSize: '0.6rem', color: labelColor(row.calc) }}>{row.calc}</span>
+                {!isMobile && <span style={{ fontSize: '0.6rem', color: row.statusColor }}>{row.status}</span>}
+              </Fragment>
             ))}
           </div>
         </div>

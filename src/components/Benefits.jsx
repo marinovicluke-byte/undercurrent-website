@@ -55,7 +55,7 @@ const STORIES = [
 ]
 
 // ─── Individual story card ────────────────────────────────────────────────────
-function StoryCard({ story, isActive, index, totalCards, onActivate }) {
+function StoryCard({ story, isActive, index, onActivate }) {
   const [phase, setPhase] = useState(0)
   const timers = useRef([])
 
@@ -318,7 +318,6 @@ export default function Benefits() {
             story={story}
             isActive={activeIndex === i}
             index={i}
-            totalCards={STORIES.length}
             onActivate={() => handleActivate(i)}
           />
         ))}
