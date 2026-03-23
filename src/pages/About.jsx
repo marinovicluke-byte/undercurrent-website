@@ -164,11 +164,11 @@ export default function About() {
       <PageHead
         title="About — UnderCurrent | AI Automation Studio, Melbourne"
         description="Learn about UnderCurrent — the Melbourne-based AI automation studio that maps small business workflows and builds custom systems to run your operations continuously and precisely."
-        canonical="https://undercurrent.au/about"
+        canonical="https://www.undercurrentautomations.com/about"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "AboutPage",
-          "url": "https://undercurrent.au/about",
+          "url": "https://www.undercurrentautomations.com/about",
           "name": "About UnderCurrent",
           "description": "UnderCurrent is a Melbourne-based AI automation studio specialising in workflow automation for small businesses. Founded 2026.",
           "mainEntity": {
@@ -177,8 +177,8 @@ export default function About() {
             "foundingDate": "2026",
             "foundingLocation": "Melbourne, Australia",
             "description": "AI automation architecture for small businesses",
-            "url": "https://undercurrent.au",
-            "email": "hello@undercurrent.au"
+            "url": "https://www.undercurrentautomations.com",
+            "email": "luke@undercurrentautomations.com"
           }
         }}
       />
@@ -326,7 +326,7 @@ export default function About() {
                     <ArrowRight size={15} />
                   </span>
                 </a>
-                <a href="mailto:hello@undercurrent.au" className="btn-sage-hero" style={{ fontSize: '0.875rem', padding: '0.75rem 1.75rem' }}>
+                <a href="mailto:luke@undercurrentautomations.com" className="btn-sage-hero" style={{ fontSize: '0.875rem', padding: '0.75rem 1.75rem' }}>
                   <span>Get in touch</span>
                 </a>
               </div>

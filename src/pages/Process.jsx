@@ -642,7 +642,7 @@ export default function Process() {
       <PageHead
         title="How We Work — UnderCurrent"
         description="Three precise steps: Map your workflows, Build automations that fit, let them Flow around the clock."
-        canonical="https://undercurrent.au/process"
+        canonical="https://www.undercurrentautomations.com/process"
       />
       <ScrollProgressBar />
       <Navbar isSubPage={true} />

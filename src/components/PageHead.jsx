@@ -19,7 +19,7 @@ export default function PageHead({
   canonical,
   ogTitle,
   ogDescription,
-  ogImage = 'https://undercurrent.au/og-image.jpg',
+  ogImage = 'https://www.undercurrentautomations.com/og-image.jpg',
   jsonLd,
 }) {
   useEffect(() => {
@@ -92,11 +92,11 @@ export default function PageHead({
       resetMeta('meta[property="og:description"]', 'content', defaultDesc)
       resetMeta('meta[name="twitter:title"]', 'content', 'UnderCurrent — AI Business Automation')
       resetMeta('meta[name="twitter:description"]', 'content', defaultDesc)
-      resetMeta('meta[property="og:image"]', 'content', 'https://undercurrent.au/og-image.jpg')
-      resetMeta('meta[name="twitter:image"]', 'content', 'https://undercurrent.au/og-image.jpg')
-      resetMeta('meta[property="og:url"]', 'content', 'https://undercurrent.au/')
+      resetMeta('meta[property="og:image"]', 'content', 'https://www.undercurrentautomations.com/og-image.jpg')
+      resetMeta('meta[name="twitter:image"]', 'content', 'https://www.undercurrentautomations.com/og-image.jpg')
+      resetMeta('meta[property="og:url"]', 'content', 'https://www.undercurrentautomations.com/')
       const link = document.querySelector('link[rel="canonical"]')
-      if (link) link.setAttribute('href', 'https://undercurrent.au/')
+      if (link) link.setAttribute('href', 'https://www.undercurrentautomations.com/')
       if (jsonLd) {
         const el = document.getElementById('page-json-ld')
         if (el) el.remove()

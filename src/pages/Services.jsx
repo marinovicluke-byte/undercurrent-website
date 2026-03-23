@@ -856,7 +856,7 @@ function ActiveServicePanel({ service }) {
             {service.contentRotator && <ContentRotator items={service.contentRotator} />}
             {service.invoiceFlow && <InvoiceFlow />}
             <div className="mt-6">
-              <a href="mailto:hello@undercurrent.au" className="btn-sage" style={{ width: '100%', justifyContent: 'center', fontSize: '0.85rem' }}>
+              <a href="mailto:luke@undercurrentautomations.com" className="btn-sage" style={{ width: '100%', justifyContent: 'center', fontSize: '0.85rem' }}>
                 <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   Automate my {service.label.toLowerCase()}
                   <ArrowRight size={14} />
@@ -981,24 +981,24 @@ export default function Services() {
       <PageHead
         title="Services — UnderCurrent | CX, Sales, Content, Personal & Finance Automation"
         description="Deep-dive into UnderCurrent's five automation services: customer experience, sales, content design, personal system, and finance. Built for small businesses."
-        canonical="https://undercurrent.au/services"
+        canonical="https://www.undercurrentautomations.com/services"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          "url": "https://undercurrent.au/services",
+          "url": "https://www.undercurrentautomations.com/services",
           "name": "UnderCurrent Services",
           "description": "AI automation services for small businesses: customer experience, sales automation, content design, personal system, and finance.",
           "provider": {
             "@type": "Organization",
             "name": "UnderCurrent",
-            "url": "https://undercurrent.au"
+            "url": "https://www.undercurrentautomations.com"
           },
           "hasPart": [
-            { "@type": "Service", "name": "Customer Experience Automation", "url": "https://undercurrent.au/services#customer-experience", "description": "Full customer lifecycle automation — onboarding, satisfaction surveys, review requests, referral programs, and re-engagement flows." },
-            { "@type": "Service", "name": "Sales Automation", "url": "https://undercurrent.au/services#sales", "description": "Lead sourcing, personalised outreach, follow-up sequences, and CRM pipeline automation." },
-            { "@type": "Service", "name": "Content Design Automation", "url": "https://undercurrent.au/services#content-design", "description": "Content creation pipelines — blog posts, social content, newsletters, and multi-channel distribution." },
-            { "@type": "Service", "name": "Personal System AI", "url": "https://undercurrent.au/services#personal-system", "description": "AI-powered inbox management, calendar automation, meeting scheduling, and task extraction." },
-            { "@type": "Service", "name": "Finance Automation", "url": "https://undercurrent.au/services#finance", "description": "Invoice generation, overdue follow-up, expense tracking, cash flow reporting, and financial research automation." }
+            { "@type": "Service", "name": "Customer Experience Automation", "url": "https://www.undercurrentautomations.com/services#customer-experience", "description": "Full customer lifecycle automation — onboarding, satisfaction surveys, review requests, referral programs, and re-engagement flows." },
+            { "@type": "Service", "name": "Sales Automation", "url": "https://www.undercurrentautomations.com/services#sales", "description": "Lead sourcing, personalised outreach, follow-up sequences, and CRM pipeline automation." },
+            { "@type": "Service", "name": "Content Design Automation", "url": "https://www.undercurrentautomations.com/services#content-design", "description": "Content creation pipelines — blog posts, social content, newsletters, and multi-channel distribution." },
+            { "@type": "Service", "name": "Personal System AI", "url": "https://www.undercurrentautomations.com/services#personal-system", "description": "AI-powered inbox management, calendar automation, meeting scheduling, and task extraction." },
+            { "@type": "Service", "name": "Finance Automation", "url": "https://www.undercurrentautomations.com/services#finance", "description": "Invoice generation, overdue follow-up, expense tracking, cash flow reporting, and financial research automation." }
           ]
         }}
       />

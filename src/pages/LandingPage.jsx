@@ -5,6 +5,7 @@ import { CTA_HREF } from '../constants'
 import Footer from '../components/Footer'
 import ScrollProgressBar from '../components/ScrollProgressBar'
 import useFadeIn from '../hooks/useFadeIn'
+import PageHead from '../components/PageHead'
 
 // ─── Animated section wrapper ─────────────────────────────────────────────────
 function Reveal({ children, delay = 0, style = {}, className = '' }) {
@@ -118,6 +119,11 @@ export default function LandingPage() {
 
   return (
     <div style={{ backgroundColor: '#F7F3ED', overflowX: 'hidden' }}>
+      <PageHead
+        title="UnderCurrent — AI Business Automation for Small Business"
+        description="See how AI automation can transform your small business operations. Free audit, real results."
+        canonical="https://www.undercurrentautomations.com/lp"
+      />
       <style>{`
         .lp-hero-bullets li {
           display: flex;
