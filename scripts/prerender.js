@@ -27,11 +27,11 @@ const ROUTES = [
       '@context': 'https://schema.org',
       '@graph': [
         {
-          '@type': 'LocalBusiness',
+          '@type': ['LocalBusiness', 'Organization'],
           '@id': `${DOMAIN}/#business`,
           name: 'UnderCurrent',
           alternateName: 'UnderCurrent AI Automation',
-          description: 'Melbourne-based AI automation studio specialising in workflow automation for small businesses.',
+          description: 'Melbourne-based AI automation studio specialising in workflow automation for small businesses — onboarding, customer experience, sales, content design, and personal assistant AI systems.',
           url: DOMAIN,
           logo: `${DOMAIN}/favicon.svg`,
           image: `${DOMAIN}/og-image.jpg`,
@@ -40,6 +40,20 @@ const ROUTES = [
           serviceType: ['AI Business Automation', 'Workflow Automation', 'Business Process Automation', 'AI Agent Deployment'],
           email: 'luke@undercurrentautomations.com',
           foundingDate: '2021',
+          sameAs: [
+            'https://www.instagram.com/undercurrent.automations/',
+            'https://www.facebook.com/profile.php?id=61578553167947',
+            'https://www.linkedin.com/company/undercurrent-automations',
+          ],
+          founder: {
+            '@type': 'Person',
+            name: 'Luke Marinovic',
+            jobTitle: 'Founder',
+            url: `${DOMAIN}/about`,
+            sameAs: [
+              'https://www.linkedin.com/company/undercurrent-automations',
+            ],
+          },
         },
         {
           '@type': 'WebSite',
