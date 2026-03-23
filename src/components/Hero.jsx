@@ -59,6 +59,7 @@ export default function Hero({ ready = true }) {
         muted
         loop
         playsInline
+        aria-hidden="true"
         style={{
           position: 'absolute',
           inset: 0,

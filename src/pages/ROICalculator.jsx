@@ -75,6 +75,7 @@ function TaskSlider({ label, value, onChange, maxWeeklyHrs }) {
           value={value}
           onChange={e => onChange(Number(e.target.value))}
           className="roi-slider"
+          aria-label={label}
         />
         <div style={{
           position: 'absolute',
@@ -277,6 +278,7 @@ function ProjectEstimationCalc() {
                   value={workflows}
                   onChange={e => setWorkflows(Number(e.target.value))}
                   className="est-slider"
+                  aria-label="Workflows to automate"
                 />
                 <div style={{
                   display: 'flex', justifyContent: 'space-between',

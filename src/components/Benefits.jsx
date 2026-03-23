@@ -77,6 +77,10 @@ function StoryCard({ story, isActive, index, onActivate }) {
   return (
     <div
       onClick={!isActive ? onActivate : undefined}
+      onKeyDown={!isActive ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onActivate() } } : undefined}
+      role={!isActive ? 'button' : undefined}
+      tabIndex={!isActive ? 0 : undefined}
+      aria-label={!isActive ? `View ${story.label} story` : undefined}
       style={{
         flexShrink: 0,
         width: 'var(--card-width)',

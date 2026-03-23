@@ -291,6 +291,9 @@ export default function FAQ() {
               <div key={faq.num}>
                 <button
                   onClick={() => setOpenAccordion(openAccordion === i ? null : i)}
+                  aria-expanded={openAccordion === i}
+                  aria-controls={`faq-panel-${i}`}
+                  id={`faq-btn-${i}`}
                   style={{
                     width: '100%',
                     display: 'flex',
@@ -332,7 +335,12 @@ export default function FAQ() {
                 </button>
 
                 {openAccordion === i && (
-                  <div style={{ padding: '0 1.5rem 1.5rem 3.5rem' }}>
+                  <div
+                    id={`faq-panel-${i}`}
+                    role="region"
+                    aria-labelledby={`faq-btn-${i}`}
+                    style={{ padding: '0 1.5rem 1.5rem 3.5rem' }}
+                  >
                     <p className="font-dm" style={{
                       fontSize: '0.88rem',
                       color: 'rgba(28,28,26,0.78)',

@@ -114,6 +114,7 @@ export default function PillarCard({ pillar, state, onChange }) {
           value={hours}
           onChange={e => handleHours(Number(e.target.value))}
           className="roi-slider"
+          aria-label="Hours per week"
         />
       </div>
 

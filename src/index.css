@@ -104,6 +104,17 @@ html {
   z-index: 1;
 }
 
+/* Keyboard focus indicator */
+:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 2px;
+}
+
+/* Remove default outlines for mouse users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
 /* Hero CTA button — light variant for dark hero background */
 .btn-sage-hero {
   display: inline-flex;

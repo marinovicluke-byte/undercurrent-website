@@ -450,17 +450,10 @@ export default function About() {
                   </div>
                   {/* Accent line that grows on hover */}
                   <div
-                    className="absolute bottom-0 left-0 h-0.5"
+                    className="absolute bottom-0 left-0 h-0.5 w-0 group-hover:w-full"
                     style={{
-                      width: '0%',
                       backgroundColor: '#8FAF9F',
                       transition: 'width 0.5s cubic-bezier(0.25,0.46,0.45,0.94)',
-                    }}
-                    ref={el => {
-                      if (!el) return
-                      const parent = el.parentElement
-                      parent.addEventListener('mouseenter', () => { el.style.width = '100%' })
-                      parent.addEventListener('mouseleave', () => { el.style.width = '0%' })
                     }}
                   />
                 </div>

@@ -79,10 +79,11 @@ export default function ContactPage() {
           <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
               <div>
-                <label className="font-mono" style={{ display: 'block', fontSize: '0.58rem', letterSpacing: '0.16em', color: 'rgba(143,175,159,0.7)', marginBottom: '0.5rem' }}>
+                <label htmlFor="contact-name" className="font-mono" style={{ display: 'block', fontSize: '0.58rem', letterSpacing: '0.16em', color: 'rgba(143,175,159,0.7)', marginBottom: '0.5rem' }}>
                   YOUR NAME
                 </label>
                 <input
+                  id="contact-name"
                   name="name"
                   value={form.name}
                   onChange={handle}
@@ -94,10 +95,11 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label className="font-mono" style={{ display: 'block', fontSize: '0.58rem', letterSpacing: '0.16em', color: 'rgba(143,175,159,0.7)', marginBottom: '0.5rem' }}>
+                <label htmlFor="contact-business" className="font-mono" style={{ display: 'block', fontSize: '0.58rem', letterSpacing: '0.16em', color: 'rgba(143,175,159,0.7)', marginBottom: '0.5rem' }}>
                   BUSINESS NAME
                 </label>
                 <input
+                  id="contact-business"
                   name="business"
                   value={form.business}
                   onChange={handle}
@@ -110,10 +112,11 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <label className="font-mono" style={{ display: 'block', fontSize: '0.58rem', letterSpacing: '0.16em', color: 'rgba(143,175,159,0.7)', marginBottom: '0.5rem' }}>
+              <label htmlFor="contact-email" className="font-mono" style={{ display: 'block', fontSize: '0.58rem', letterSpacing: '0.16em', color: 'rgba(143,175,159,0.7)', marginBottom: '0.5rem' }}>
                 EMAIL ADDRESS
               </label>
               <input
+                id="contact-email"
                 name="email"
                 type="email"
                 value={form.email}
@@ -127,10 +130,11 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <label className="font-mono" style={{ display: 'block', fontSize: '0.58rem', letterSpacing: '0.16em', color: 'rgba(143,175,159,0.7)', marginBottom: '0.5rem' }}>
+              <label htmlFor="contact-message" className="font-mono" style={{ display: 'block', fontSize: '0.58rem', letterSpacing: '0.16em', color: 'rgba(143,175,159,0.7)', marginBottom: '0.5rem' }}>
                 MESSAGE
               </label>
               <textarea
+                id="contact-message"
                 name="message"
                 value={form.message}
                 onChange={handle}
