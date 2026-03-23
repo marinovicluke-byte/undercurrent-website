@@ -73,8 +73,8 @@ const ROUTES = [
   },
   {
     path: '/services',
-    title: 'AI Automation Services - Small Business | UnderCurrent',
-    description: 'Full-service AI automation: customer experience, sales pipelines, content creation, personal assistant AI, and financial operations — all automated, all connected.',
+    title: 'Workflow Automation & AI Agent Services | UnderCurrent',
+    description: 'Custom workflow automation and AI agent deployment — customer experience, sales pipelines, content creation, personal assistant AI, and financial operations built to run on autopilot.',
   },
   {
     path: '/process',
@@ -93,8 +93,8 @@ const ROUTES = [
   },
   {
     path: '/roi',
-    title: 'ROI Calculator - Automation Savings | UnderCurrent',
-    description: 'Calculate how much time and money AI automation could save your business. Free, instant results.',
+    title: 'ROI Calculator - How Much Could You Save? | UnderCurrent',
+    description: 'Calculate how much time and money workflow automation could save your business. Free, instant ROI estimate.',
   },
   {
     path: '/audit',
@@ -103,8 +103,8 @@ const ROUTES = [
   },
   {
     path: '/lp',
-    title: 'AI Automation for Small Business | UnderCurrent',
-    description: 'See how AI automation can transform your small business operations. Free audit, real results.',
+    title: 'Automate Your Small Business Operations | UnderCurrent',
+    description: 'See how custom automation systems can transform your daily operations. Free audit, real results.',
   },
   {
     path: '/case-study',

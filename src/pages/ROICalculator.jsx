@@ -998,7 +998,10 @@ export default function ROICalculator() {
                         <strong style={{ color: '#6B7C4A', fontWeight: 600 }}>
                           {totalHoursPerWeek.toFixed(1)} hours
                         </strong>
-                        {' '}of automatable work per week
+                        {' '}of automatable work per week —{' '}
+                        <a href="/case-study" style={{ color: '#6B7C4A', textDecoration: 'underline', textUnderlineOffset: '2px' }}>
+                          see real automation results
+                        </a>
                       </span>
                     </div>
                   )}

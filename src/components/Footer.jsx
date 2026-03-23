@@ -1,4 +1,5 @@
 import { FileText, Instagram, Calculator, CalendarDays, Facebook, Linkedin } from 'lucide-react'
+import { useLocation } from 'react-router-dom'
 
 const tiles = [
   {
@@ -41,6 +42,7 @@ const tiles = [
 ]
 
 export default function Footer() {
+  const location = useLocation()
   const services = [
     { label: 'All Services', href: '/services' },
     { label: 'Onboarding Automation', href: '/services#onboarding' },
@@ -204,11 +206,18 @@ export default function Footer() {
               </p>
 
               <div className="grid grid-cols-2 gap-x-6 gap-y-3" style={{ marginBottom: '2rem' }}>
-                {[...services, ...tools, ...company, ...explore, ...legal].map(s => (
-                  <a key={s.label} href={s.href} className="font-dm nav-link" style={{ fontWeight: 300, fontSize: '0.82rem', color: 'rgba(212,201,176,0.45)' }}>
-                    {s.label}
-                  </a>
-                ))}
+                {[...services, ...tools, ...company, ...explore, ...legal].map(s => {
+                  const isSelf = s.href === location.pathname || (s.href === '/' && location.pathname === '/')
+                  return isSelf ? (
+                    <span key={s.label} className="font-dm" style={{ fontWeight: 300, fontSize: '0.82rem', color: 'rgba(212,201,176,0.45)', cursor: 'default' }}>
+                      {s.label}
+                    </span>
+                  ) : (
+                    <a key={s.label} href={s.href} className="font-dm nav-link" style={{ fontWeight: 300, fontSize: '0.82rem', color: 'rgba(212,201,176,0.45)' }}>
+                      {s.label}
+                    </a>
+                  )
+                })}
               </div>
 
               <div style={{ display: 'flex', gap: '0.75rem' }}>

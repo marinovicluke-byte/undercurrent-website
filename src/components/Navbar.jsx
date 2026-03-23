@@ -180,7 +180,20 @@ export default function Navbar({ ready = true, isSubPage = false }) {
           <div className="hidden md:flex items-center gap-6">
             {links.map(link => {
               const isCurrent = link.href === location.pathname || (link.href === '#' && onHome)
-              return (
+              return isCurrent ? (
+                <span
+                  key={link.href}
+                  className="nav-link"
+                  aria-current="page"
+                  style={{
+                    color: scrolled ? 'rgba(28,28,26,0.75)' : 'rgba(247,243,237,0.85)',
+                    transition: 'color 0.5s ease',
+                    cursor: 'default',
+                  }}
+                >
+                  {link.label}
+                </span>
+              ) : (
                 <a
                   key={link.href}
                   href={link.href === '#' ? '/' : link.href}
@@ -189,7 +202,6 @@ export default function Navbar({ ready = true, isSubPage = false }) {
                     color: scrolled ? 'rgba(28,28,26,0.75)' : 'rgba(247,243,237,0.85)',
                     transition: 'color 0.5s ease',
                   }}
-                  {...(isCurrent ? { 'aria-current': 'page' } : {})}
                   onClick={link.href === '#' ? (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) } : undefined}
                 >
                   {link.label}
@@ -240,13 +252,22 @@ export default function Navbar({ ready = true, isSubPage = false }) {
           >
             {links.map(link => {
               const isCurrent = link.href === location.pathname || (link.href === '#' && onHome)
-              return (
+              return isCurrent ? (
+                <span
+                  key={link.href}
+                  className="nav-link"
+                  aria-current="page"
+                  style={{ fontSize: '1.1rem', color: '#1C1C1A', cursor: 'default' }}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.label}
+                </span>
+              ) : (
                 <a
                   key={link.href}
                   href={link.href === '#' ? '/' : link.href}
                   className="nav-link"
                   style={{ fontSize: '1.1rem', color: '#1C1C1A' }}
-                  {...(isCurrent ? { 'aria-current': 'page' } : {})}
                   onClick={(e) => {
                     if (link.href === '#') { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }
                     setMobileOpen(false)

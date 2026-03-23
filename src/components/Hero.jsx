@@ -55,6 +55,7 @@ export default function Hero({ ready = true }) {
       <video
         ref={videoRef}
         src="/hero-bg.mp4"
+        preload="auto"
         autoPlay
         muted
         loop
