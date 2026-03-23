@@ -50,6 +50,32 @@ export default function FAQ() {
   const [tilesRef, tilesVisible] = useVisible(0.08)
   const [carouselRef, carouselVisible] = useVisible(0.08)
 
+  // Inject FAQPage schema on mount
+  useEffect(() => {
+    const allFaqs = [...FEATURED, ...FAQS]
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': allFaqs.map(f => ({
+        '@type': 'Question',
+        'name': f.q.replace(/^"|"$/g, ''),
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': f.a,
+        },
+      })),
+    }
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.id = 'faq-json-ld'
+    script.textContent = JSON.stringify(schema)
+    document.head.appendChild(script)
+    return () => {
+      const el = document.getElementById('faq-json-ld')
+      if (el) el.remove()
+    }
+  }, [])
+
   const activeFaq = FAQS[active]
 
   return (
