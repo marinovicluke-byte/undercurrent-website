@@ -9,6 +9,7 @@ import ScrollProgressBar from '../components/ScrollProgressBar'
 import PageHead from '../components/PageHead'
 import WaterCanvas from '../components/WaterCanvas'
 import Reveal from '../components/Reveal'
+import Breadcrumb from '../components/Breadcrumb'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -184,6 +185,7 @@ export default function About() {
       />
       <ScrollProgressBar />
       <Navbar ready={true} isSubPage={true} />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
 
       {/* Hero */}
       <section

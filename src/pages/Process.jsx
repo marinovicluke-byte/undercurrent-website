@@ -7,6 +7,7 @@ import { CTA_HREF } from '../constants'
 import ScrollProgressBar from '../components/ScrollProgressBar'
 import PageHead from '../components/PageHead'
 import useIsMobile from '../hooks/useIsMobile'
+import Breadcrumb from '../components/Breadcrumb'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -646,6 +647,7 @@ export default function Process() {
       />
       <ScrollProgressBar />
       <Navbar isSubPage={true} />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'How It Works' }]} />
 
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <section

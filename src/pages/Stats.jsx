@@ -6,6 +6,7 @@ import Footer from '../components/Footer'
 import ScrollProgressBar from '../components/ScrollProgressBar'
 import PageHead from '../components/PageHead'
 import Reveal from '../components/Reveal'
+import Breadcrumb from '../components/Breadcrumb'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -371,6 +372,7 @@ export default function Stats() {
       />
       <ScrollProgressBar />
       <Navbar isSubPage />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Results' }]} />
 
       <style>{`
         .benefits-grid {

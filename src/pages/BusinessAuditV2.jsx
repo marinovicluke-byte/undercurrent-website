@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ScrollProgressBar from '../components/ScrollProgressBar'
 import PageHead from '../components/PageHead'
+import Breadcrumb from '../components/Breadcrumb'
 import { PILLARS, INDUSTRIES, RESPONSE_OPTIONS, defaultPillarState } from '../audit/config.js'
 import { calcPillarMonthly, calcLeadBleed, calcTotals, calcRating, calcGap, buildPayload } from '../audit/calculations.js'
 
@@ -698,6 +699,7 @@ export default function BusinessAuditV2() {
       <div style={{ backgroundColor: '#0D0D0D', minHeight: '100vh', overflowX: 'hidden', color: '#F7F3ED' }}>
         <ScrollProgressBar />
         <Navbar isSubPage />
+        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Business Audit' }]} />
 
         {/* ── Hero ────────────────────────────────────────────────────────── */}
         <section style={{

@@ -8,6 +8,7 @@ import Footer from '../components/Footer'
 import ScrollProgressBar from '../components/ScrollProgressBar'
 import PageHead from '../components/PageHead'
 import Reveal from '../components/Reveal'
+import Breadcrumb from '../components/Breadcrumb'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -1004,6 +1005,7 @@ export default function Services() {
       />
       <ScrollProgressBar />
       <Navbar ready={true} isSubPage={true} />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Services' }]} />
 
       {/* Hero */}
       <section

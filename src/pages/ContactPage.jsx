@@ -3,6 +3,7 @@ import { Send } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import PageHead from '../components/PageHead'
+import Breadcrumb from '../components/Breadcrumb'
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', business: '', message: '' })
@@ -37,6 +38,7 @@ export default function ContactPage() {
         canonical="https://www.undercurrentautomations.com/contact"
       />
       <Navbar ready isSubPage />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} />
 
       {/* Background wisps */}
       <div aria-hidden="true" style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 0 }}>

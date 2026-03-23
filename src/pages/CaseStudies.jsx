@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import ScrollProgressBar from '../components/ScrollProgressBar'
 import PageHead from '../components/PageHead'
 import Reveal from '../components/Reveal'
+import Breadcrumb from '../components/Breadcrumb'
 
 function OceanCanvas() {
   const canvasRef = useRef(null)
@@ -92,6 +93,7 @@ export default function CaseStudies() {
       />
       <ScrollProgressBar />
       <Navbar ready isSubPage />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Case Studies' }]} />
 
       {/* ── Hero ── */}
       <section

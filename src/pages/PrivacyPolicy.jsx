@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import PageHead from '../components/PageHead'
+import Breadcrumb from '../components/Breadcrumb'
 
 const DOMAIN = 'https://www.undercurrentautomations.com'
 const EMAIL = 'luke@undercurrentautomations.com'
@@ -36,6 +37,7 @@ export default function PrivacyPolicy() {
         canonical={`${DOMAIN}/privacy`}
       />
       <Navbar ready />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Privacy Policy' }]} />
 
       <div style={{ position: 'relative', zIndex: 10, maxWidth: '720px', margin: '0 auto', padding: '10rem 1.5rem 6rem' }}>
 

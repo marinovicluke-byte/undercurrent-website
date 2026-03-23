@@ -8,6 +8,7 @@ import ScrollProgressBar from '../components/ScrollProgressBar'
 import PageHead from '../components/PageHead'
 import WaterCanvas from '../components/WaterCanvas'
 import Reveal from '../components/Reveal'
+import Breadcrumb from '../components/Breadcrumb'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -695,6 +696,7 @@ export default function ROICalculator() {
       <div style={{ backgroundColor: '#F7F3ED', overflowX: 'hidden' }}>
         <ScrollProgressBar />
         <Navbar isSubPage />
+        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'ROI Calculator' }]} />
 
         {/* ── Hero ──────────────────────────────────────────────────────── */}
         <section
