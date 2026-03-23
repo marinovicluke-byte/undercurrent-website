@@ -1045,14 +1045,14 @@ export default function Services() {
           </p>
           <h1 ref={headlineRef} style={{ opacity: 0 }}>
             <span className="block font-dm" style={{ fontSize: 'clamp(3rem, 7vw, 7.5rem)', fontWeight: 700, letterSpacing: '-0.03em', color: '#F7F3ED', lineHeight: 1.0 }}>
-              Five areas.
+              Business Automation
             </span>
             <span className="block font-dm" style={{ fontSize: 'clamp(3rem, 7vw, 7.5rem)', fontWeight: 700, letterSpacing: '-0.03em', color: 'rgba(143,175,159,0.9)', lineHeight: 1.05 }}>
-              Every one a leak.
+              Services.
             </span>
           </h1>
           <p ref={subRef} className="font-dm" style={{ fontSize: 'clamp(1rem, 1.5vw, 1.15rem)', fontWeight: 300, color: 'rgba(232,224,208,0.6)', lineHeight: 1.75, maxWidth: '48ch', marginTop: '2rem', opacity: 0 }}>
-            Most small business owners lose 15-25 hours a week to work that a well-built system could handle entirely. We've mapped where it happens, and built the solution for each one.
+            Five areas. Every one a leak. Most small business owners lose 15-25 hours a week to work that a well-built system could handle. We've mapped where it happens, and built the automation for each one.
           </p>
 
           {/* Service selector cards */}

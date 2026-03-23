@@ -413,7 +413,7 @@ export default function Stats() {
           fontWeight: 700, color: '#F7F3ED', lineHeight: 1, letterSpacing: '-0.025em',
           marginBottom: '1.5rem', opacity: 0,
         }}>
-          What You Get.
+          Automation Impact.
         </h1>
         <p className="stats-sub" style={{
           fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(0.95rem, 2vw, 1.1rem)',

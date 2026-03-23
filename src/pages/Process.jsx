@@ -695,8 +695,8 @@ export default function Process() {
             marginBottom: 'clamp(24px, 3vw, 36px)',
             opacity: 0,
           }}>
-            How we<br/>
-            <span style={{ color: '#8FAF9F' }}>work</span>
+            Our Automation<br/>
+            <span style={{ color: '#8FAF9F' }}>Process</span>
           </h1>
 
           <div className="p-hero-sub" style={{ opacity: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>

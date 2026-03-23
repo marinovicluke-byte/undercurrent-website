@@ -328,14 +328,14 @@ export default function Resources() {
           </p>
           <h1 ref={headlineRef} style={{ opacity: 0, lineHeight: 1 }}>
             <span className="block font-dm" style={{ fontSize: 'clamp(3rem, 7vw, 7rem)', fontWeight: 700, letterSpacing: '-0.03em', color: '#F7F3ED', lineHeight: 1.0 }}>
-              Insights From
+              AI & Automation
             </span>
             <span className="block font-dm" style={{ fontSize: 'clamp(3rem, 7vw, 7rem)', fontWeight: 700, letterSpacing: '-0.03em', color: 'rgba(143,175,159,0.9)', lineHeight: 1.05, marginTop: '0.08em' }}>
-              the Field.
+              Guides.
             </span>
           </h1>
           <p ref={subRef} className="font-dm" style={{ fontSize: 'clamp(1rem, 1.5vw, 1.15rem)', fontWeight: 300, color: 'rgba(232,224,208,0.65)', lineHeight: 1.7, maxWidth: '48ch', marginTop: '2rem', opacity: 0 }}>
-            Guides, playbooks, and lessons we've learned building AI automation for small businesses — organised by topic.
+            Insights from the field. Guides, playbooks, and lessons we've learned building AI automation for small businesses — organised by topic.
           </p>
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 font-mono" style={{ fontSize: '0.65rem', letterSpacing: '0.15em', color: 'rgba(143,175,159,0.35)' }}>

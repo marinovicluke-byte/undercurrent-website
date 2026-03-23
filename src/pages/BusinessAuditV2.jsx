@@ -757,7 +757,7 @@ export default function BusinessAuditV2() {
               color: '#F7F3ED',
               lineHeight: 1.0,
             }}>
-              Find the holes
+              Free Business Audit.
             </span>
             <span style={{
               display: 'block',
@@ -769,7 +769,7 @@ export default function BusinessAuditV2() {
               lineHeight: 1.08,
               marginTop: '0.06em',
             }}>
-              in your business.
+              Find the Leaks.
             </span>
           </h1>
           <p style={{
