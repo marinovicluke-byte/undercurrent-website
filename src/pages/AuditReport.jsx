@@ -888,7 +888,7 @@ export default function AuditReport() {
 
             <FadeSection delay={0.55}>
               <p style={{ fontFamily: "'DM Mono', monospace", fontSize: '0.55rem', letterSpacing: '0.1em', color: 'rgba(247,243,237,0.12)', margin: '48px 0 0' }}>
-                &copy; 2026 Undercurrent Automations &middot; Australia
+                &copy; 2026 UnderCurrent &middot; Australia
               </p>
             </FadeSection>
           </div>

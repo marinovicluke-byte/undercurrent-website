@@ -29,7 +29,7 @@ function AuditMockup({ isMobile }) {
         <span style={{ width: 9, height: 9, borderRadius: '50%', background: '#bf7a7a', opacity: 0.7 }} />
         <span style={{ width: 9, height: 9, borderRadius: '50%', background: '#C4A97A', opacity: 0.7 }} />
         <span style={{ width: 9, height: 9, borderRadius: '50%', background: '#8FAF9F', opacity: 0.7 }} />
-        <span style={{ marginLeft: '0.5rem', fontSize: '0.65rem', color: 'rgba(247,243,237,0.52)', letterSpacing: '0.06em' }}>BUSINESS AUDIT — undercurrent.com.au/audit</span>
+        <span style={{ marginLeft: '0.5rem', fontSize: '0.65rem', color: 'rgba(247,243,237,0.52)', letterSpacing: '0.06em' }}>BUSINESS AUDIT — undercurrentautomations.com/audit</span>
       </div>
 
       {/* Content */}

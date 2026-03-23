@@ -39,7 +39,7 @@ const ROUTES = [
           areaServed: { '@type': 'Country', name: 'Australia' },
           serviceType: ['AI Business Automation', 'Workflow Automation', 'Business Process Automation', 'AI Agent Deployment'],
           email: 'luke@undercurrentautomations.com',
-          foundingDate: '2021',
+          foundingDate: '2026',
           sameAs: [
             'https://www.instagram.com/undercurrent.automations/',
             'https://www.facebook.com/profile.php?id=61578553167947',
