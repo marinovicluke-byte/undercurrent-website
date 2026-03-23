@@ -53,7 +53,7 @@ export default function Footer() {
     { label: 'Case Studies', href: '/case-study' },
     { label: 'Resources', href: '/resources' },
     { label: 'How it works', href: '/#protocol' },
-    { label: 'Contact', href: '/#contact' },
+    { label: 'Contact', href: '/contact' },
   ]
   const legal = [
     { label: 'Privacy Policy', href: '/privacy' },
