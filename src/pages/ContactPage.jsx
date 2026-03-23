@@ -36,7 +36,7 @@ export default function ContactPage() {
         description="Get in touch with UnderCurrent. We typically respond within one business day."
         canonical="https://www.undercurrentautomations.com/contact"
       />
-      <Navbar ready />
+      <Navbar ready isSubPage />
 
       {/* Background wisps */}
       <div aria-hidden="true" style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
