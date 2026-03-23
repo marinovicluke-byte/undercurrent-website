@@ -245,7 +245,6 @@ function ReportModal({ isOpen, onClose, payload }) {
     if (!form.fullName.trim())     errs.fullName     = 'Required'
     if (!form.email.trim())        errs.email        = 'Required'
     else if (!EMAIL_RE.test(form.email)) errs.email  = 'Enter a valid email'
-    if (!form.phone.trim())        errs.phone        = 'Required'
     return errs
   }
 
@@ -256,7 +255,10 @@ function ReportModal({ isOpen, onClose, payload }) {
     setErrors({})
     setStatus('loading')
     const webhookUrl = import.meta.env.VITE_N8N_AUDIT_WEBHOOK_URL
-    if (!webhookUrl && import.meta.env.DEV) console.warn('[ReportModal] VITE_N8N_AUDIT_WEBHOOK_URL not set')
+    if (!webhookUrl) {
+      setStatus('error')
+      return
+    }
     try {
       const res = await fetch(webhookUrl, {
         method: 'POST',

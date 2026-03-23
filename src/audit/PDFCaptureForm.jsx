@@ -26,8 +26,9 @@ export default function PDFCaptureForm({ onSubmit, payload }) {
     setStatus('loading')
 
     const webhookUrl = import.meta.env.VITE_N8N_AUDIT_WEBHOOK_URL
-    if (!webhookUrl && import.meta.env.DEV) {
-      console.warn('[PDFCaptureForm] VITE_N8N_AUDIT_WEBHOOK_URL is not set — form submission will fail')
+    if (!webhookUrl) {
+      setStatus('error')
+      return
     }
     const body = {
       ...payload,
@@ -160,7 +161,7 @@ export default function PDFCaptureForm({ onSubmit, payload }) {
         {status === 'error' && (
           <p style={{ ...errStyle, marginBottom: '16px', fontSize: '0.84rem' }}>
             Something went wrong — please try again or email us directly at{' '}
-            <a href="mailto:hello@undercurrent.com.au" style={{ color: '#dc3c3c' }}>hello@undercurrent.com.au</a>
+            <a href="mailto:luke@undercurrentautomations.com" style={{ color: '#dc3c3c' }}>luke@undercurrentautomations.com</a>
           </p>
         )}
 

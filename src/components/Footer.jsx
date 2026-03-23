@@ -262,14 +262,15 @@ export default function Footer() {
                   />
                   <button
                     type="submit"
+                    disabled
                     className="font-dm"
                     style={{
                       padding: '0.7rem 1.1rem', background: '#F0EBE2', color: '#1C1C1A',
                       border: 'none', borderRadius: '0.5rem', fontSize: '0.78rem',
-                      fontWeight: 500, cursor: 'pointer', whiteSpace: 'nowrap',
+                      fontWeight: 500, cursor: 'default', whiteSpace: 'nowrap', opacity: 0.45,
                     }}
                   >
-                    Sign Up
+                    Coming Soon
                   </button>
                 </div>
               </form>

@@ -11,7 +11,7 @@ export default function ContactPage() {
 
   const submit = e => {
     e.preventDefault()
-    window.location.href = `mailto:luke@undercurrentautomations.com?subject=Enquiry from ${encodeURIComponent(form.name)} — ${encodeURIComponent(form.business)}&body=${encodeURIComponent(form.message)}%0A%0AReply to: ${encodeURIComponent(form.email)}`
+    window.open(`mailto:luke@undercurrentautomations.com?subject=Enquiry from ${encodeURIComponent(form.name)} — ${encodeURIComponent(form.business)}&body=${encodeURIComponent(form.message)}%0A%0AReply to: ${encodeURIComponent(form.email)}`, '_blank')
     setSent(true)
   }
 
@@ -72,8 +72,8 @@ export default function ContactPage() {
 
         {sent ? (
           <div style={{ textAlign: 'center', padding: '3rem', border: '1px solid rgba(143,175,159,0.2)', borderRadius: '1.25rem', background: 'rgba(143,175,159,0.05)' }}>
-            <p className="font-cormorant" style={{ fontSize: '1.6rem', color: '#F7F3ED', marginBottom: '0.5rem' }}>Message sent.</p>
-            <p className="font-dm" style={{ fontSize: '0.85rem', color: 'rgba(212,201,176,0.5)' }}>We'll be in touch soon.</p>
+            <p className="font-cormorant" style={{ fontSize: '1.6rem', color: '#F7F3ED', marginBottom: '0.5rem' }}>Almost there!</p>
+            <p className="font-dm" style={{ fontSize: '0.85rem', color: 'rgba(212,201,176,0.5)' }}>Your email client should have opened with a pre-filled message. Send it to complete your enquiry.</p>
           </div>
         ) : (
           <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
