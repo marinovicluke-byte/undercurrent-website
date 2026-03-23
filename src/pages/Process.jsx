@@ -5,10 +5,9 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ScrollProgressBar from '../components/ScrollProgressBar'
 import PageHead from '../components/PageHead'
+import useIsMobile from '../hooks/useIsMobile'
 
 gsap.registerPlugin(ScrollTrigger)
-
-const IS_MOBILE = typeof window !== 'undefined' && window.innerWidth < 768
 
 // ─── Grain Canvas overlay (animated noise per panel) ────────────────────────
 function GrainOverlay({ opacity = 0.055 }) {
@@ -128,13 +127,14 @@ function MapVisual() {
 
 // ─── Animated visual — Build (automation schematic assembling) ───────────────
 function BuildVisual() {
+  const isMobile = useIsMobile()
   // On mobile, start fully built; on desktop, animate from phase 0
-  const [phase, setPhase] = useState(IS_MOBILE ? 13 : 0)
+  const [phase, setPhase] = useState(() => (typeof window !== 'undefined' && window.innerWidth < 768) ? 13 : 0)
   // 13 phases: trigger → wires + nodes → branch → glow
   const TOTAL = 13
 
   useEffect(() => {
-    if (IS_MOBILE) return
+    if (isMobile) return
     if (phase < TOTAL) {
       const t = setTimeout(() => setPhase(p => p + 1), 370)
       return () => clearTimeout(t)
@@ -359,17 +359,6 @@ function FlowVisual() {
   )
 }
 
-// ─── Mobile breakpoint hook ──────────────────────────────────────────────────
-function useIsMobile(bp = 700) {
-  const [m, setM] = useState(() => window.innerWidth < bp)
-  useEffect(() => {
-    const h = () => setM(window.innerWidth < bp)
-    window.addEventListener('resize', h)
-    return () => window.removeEventListener('resize', h)
-  }, [bp])
-  return m
-}
-
 // ─── Step panel ──────────────────────────────────────────────────────────────
 const STEPS = [
   {
@@ -406,14 +395,14 @@ function StepPanel({ step, index }) {
   const bodyRef = useRef(null)
   const numRef = useRef(null)
   const wordRefs = useRef([])
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile(700)
 
   useEffect(() => {
     const panel = panelRef.current
     const ghost = ghostRef.current
     const content = contentRef.current
 
-    if (IS_MOBILE) {
+    if (isMobile) {
       // On mobile: no clip-path (causes height recalc). Simple fade only.
       gsap.set(content, { opacity: 0 })
       gsap.set(ghost, { opacity: 0 })

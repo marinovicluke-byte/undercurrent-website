@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import useIsMobile from '../hooks/useIsMobile'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -533,20 +534,6 @@ const DARK_STEPS = [
   },
 ]
 
-// ─── Mobile hook ──────────────────────────────────────────────────────────────
-function useIsMobile(breakpoint = 700) {
-  const [isMobile, setIsMobile] = useState(() => {
-    if (typeof window === 'undefined') return false
-    return window.innerWidth < breakpoint
-  })
-  useEffect(() => {
-    const handler = () => setIsMobile(window.innerWidth < breakpoint)
-    window.addEventListener('resize', handler, { passive: true })
-    return () => window.removeEventListener('resize', handler)
-  }, [breakpoint])
-  return isMobile
-}
-
 // ─── Main section ─────────────────────────────────────────────────────────────
 export default function UserJourneyDarkHorizontal() {
   const [active, setActive] = useState(0)
@@ -554,7 +541,7 @@ export default function UserJourneyDarkHorizontal() {
   const intervalRef = useRef(null)
   const sectionRef = useRef(null)
   const headingRef = useRef(null)
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile(700)
 
   const startTimer = useCallback(() => {
     clearInterval(intervalRef.current)

@@ -1,20 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-
-function useVisible(threshold = 0.1) {
-  const ref = useRef(null)
-  const [visible, setVisible] = useState(false)
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect() } },
-      { threshold }
-    )
-    obs.observe(el)
-    return () => obs.disconnect()
-  }, [threshold])
-  return [ref, visible]
-}
+import useVisible from '../hooks/useVisible'
 
 // ─── Step animations ──────────────────────────────────────────────────────────
 

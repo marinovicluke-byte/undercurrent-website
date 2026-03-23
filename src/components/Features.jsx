@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import useIsMobile from '../hooks/useIsMobile'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -74,9 +75,8 @@ function AutomationCard() {
 }
 
 // Card 2: Telemetry Typewriter
-const IS_MOBILE = typeof window !== 'undefined' && window.innerWidth < 768
-
 function TypewriterCard() {
+  const IS_MOBILE = useIsMobile()
   const [lines, setLines] = useState([])
   const [currentLine, setCurrentLine] = useState('')
   const [lineIdx, setLineIdx] = useState(0)

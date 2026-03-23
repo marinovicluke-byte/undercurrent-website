@@ -1,21 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-
-// ─── Scroll visibility hook ────────────────────────────────────────────────────
-function useVisible(threshold = 0.12) {
-  const ref = useRef(null)
-  const [visible, setVisible] = useState(false)
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect() } },
-      { threshold }
-    )
-    obs.observe(el)
-    return () => obs.disconnect()
-  }, [threshold])
-  return [ref, visible]
-}
+import useVisible from '../hooks/useVisible'
 
 // ─── Column Header (sits above each card) ─────────────────────────────────────
 function ColumnHeader({ label, stat, statSub, accent, visible, delay = 0 }) {

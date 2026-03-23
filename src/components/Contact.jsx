@@ -1,23 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
+import useFadeIn from '../hooks/useFadeIn'
 
 const CTA_HREF = 'https://cal.com/luke-marinovic-aqeosc/30min'
-
-function useFadeIn(delay = 0) {
-  const ref = useRef(null)
-  const [visible, setVisible] = useState(false)
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setTimeout(() => setVisible(true), delay); obs.disconnect() } },
-      { threshold: 0.12 }
-    )
-    obs.observe(el)
-    return () => obs.disconnect()
-  }, [delay])
-  return [ref, visible]
-}
 
 export default function Contact() {
   const [h2Ref, h2Visible] = useFadeIn(0)

@@ -1,23 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { Shield, ArrowRight, Check } from 'lucide-react'
+import useVisible from '../hooks/useVisible'
 
 const CTA_HREF = 'https://cal.com/luke-marinovic-aqeosc/30min'
-
-function useVisible(threshold = 0.12) {
-  const ref = useRef(null)
-  const [visible, setVisible] = useState(false)
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); obs.disconnect() } },
-      { threshold }
-    )
-    obs.observe(el)
-    return () => obs.disconnect()
-  }, [threshold])
-  return [ref, visible]
-}
 
 const BULLETS = [
   { label: 'Built for your business', sub: 'No templates. Every automation is mapped to how you actually work.' },

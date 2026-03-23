@@ -3,30 +3,7 @@ import { ArrowRight, Check, Shield } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ScrollProgressBar from '../components/ScrollProgressBar'
-
-// ─── Intersection Observer fade-in hook ──────────────────────────────────────
-function useFadeIn() {
-  const ref = useRef(null)
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true)
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.12 }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [])
-
-  return [ref, visible]
-}
+import useFadeIn from '../hooks/useFadeIn'
 
 // ─── Animated section wrapper ─────────────────────────────────────────────────
 function Reveal({ children, delay = 0, style = {}, className = '' }) {
