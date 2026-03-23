@@ -4,83 +4,13 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ScrollProgressBar from '../components/ScrollProgressBar'
 import PageHead from '../components/PageHead'
+import WaterCanvas from '../components/WaterCanvas'
+import Reveal from '../components/Reveal'
 import PillarCard from '../audit/PillarCard.jsx'
 import ResultsBlock from '../audit/ResultsBlock.jsx'
 import PDFCaptureForm from '../audit/PDFCaptureForm.jsx'
 import { PILLARS, INDUSTRIES, RESPONSE_OPTIONS, defaultPillarState } from '../audit/config.js'
 import { calcPillarMonthly, calcLeadBleed, calcTotals, buildPayload } from '../audit/calculations.js'
-
-// ─── Water canvas (matches hero/roi pattern) ──────────────────────────────────
-function WaterCanvas({ opacity = 1 }) {
-  const canvasRef = useRef(null)
-  const rafRef = useRef(null)
-
-  useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
-    const ctx = canvas.getContext('2d')
-    const dpr = window.devicePixelRatio || 1
-    const resize = () => {
-      const w = canvas.offsetWidth; const h = canvas.offsetHeight
-      canvas.width = w * dpr; canvas.height = h * dpr; ctx.scale(dpr, dpr)
-    }
-    resize()
-    window.addEventListener('resize', resize)
-    let visible = true
-    const obs = new IntersectionObserver(([e]) => { visible = e.isIntersecting }, { threshold: 0 })
-    obs.observe(canvas)
-    const currents = [
-      { yFrac: 0.38, amp: 38, freq: 0.008, speed: 0.18,  phase: 0,   color: 'rgba(143,175,159,0.20)', lw: 1.0, dash: 0,  gap: 0  },
-      { yFrac: 0.48, amp: 28, freq: 0.010, speed: -0.14, phase: 1.2, color: 'rgba(143,175,159,0.16)', lw: 0.8, dash: 0,  gap: 0  },
-      { yFrac: 0.52, amp: 20, freq: 0.013, speed: 0.22,  phase: 2.4, color: 'rgba(212,201,176,0.13)', lw: 0.7, dash: 0,  gap: 0  },
-      { yFrac: 0.44, amp: 44, freq: 0.007, speed: -0.28, phase: 0.6, color: 'rgba(143,175,159,0.12)', lw: 0.5, dash: 0,  gap: 0  },
-      { yFrac: 0.56, amp: 16, freq: 0.011, speed: 0.12,  phase: 3.6, color: 'rgba(212,201,176,0.18)', lw: 1.2, dash: 60, gap: 90 },
-    ]
-    const driftPhases = currents.map((_, i) => i * 0.7)
-    const driftAmps   = [0.035, 0.028, 0.022, 0.040, 0.018]
-    const driftSpeeds = [0.0004, 0.0003, 0.0005, 0.00035, 0.00025]
-    let t = 0
-    const draw = () => {
-      if (!visible) { rafRef.current = requestAnimationFrame(draw); return }
-      const W = canvas.offsetWidth; const H = canvas.offsetHeight
-      ctx.clearRect(0, 0, W, H)
-      currents.forEach((c, i) => {
-        const drift = Math.sin(t * driftSpeeds[i] * 1000 + driftPhases[i]) * driftAmps[i]
-        const yCenter = (c.yFrac + drift) * H
-        ctx.beginPath(); ctx.strokeStyle = c.color; ctx.lineWidth = c.lw; ctx.lineCap = 'round'
-        if (c.dash > 0) { ctx.setLineDash([c.dash, c.gap]); ctx.lineDashOffset = -(t * c.speed * 60) % (c.dash + c.gap) }
-        else ctx.setLineDash([])
-        for (let x = -4; x <= W + 4; x += 4) {
-          const y = yCenter + Math.sin(x * c.freq + t * c.speed * 60) * c.amp
-          if (x === -4) ctx.moveTo(x, y); else ctx.lineTo(x, y)
-        }
-        ctx.stroke()
-      })
-      t += 0.016; rafRef.current = requestAnimationFrame(draw)
-    }
-    draw()
-    return () => { cancelAnimationFrame(rafRef.current); window.removeEventListener('resize', resize); obs.disconnect() }
-  }, [])
-
-  return <canvas ref={canvasRef} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity, pointerEvents: 'none' }} />
-}
-
-// ─── Scroll reveal ─────────────────────────────────────────────────────────────
-function Reveal({ children, delay = 0, className = '', style = {} }) {
-  const ref = useRef(null)
-  useEffect(() => {
-    const el = ref.current; if (!el) return
-    const obs = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        gsap.fromTo(el, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: 'power3.out', delay })
-        obs.disconnect()
-      }
-    }, { threshold: 0, rootMargin: '0px 0px 150px 0px' })
-    obs.observe(el)
-    return () => obs.disconnect()
-  }, [delay])
-  return <div ref={ref} className={className} style={{ opacity: 0, ...style }}>{children}</div>
-}
 
 // ─── Number input (matching ROI calculator style) ──────────────────────────────
 function NumberInput({ label, value, onChange, prefix = '$', placeholder = '0' }) {

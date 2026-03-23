@@ -5,29 +5,9 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ScrollProgressBar from '../components/ScrollProgressBar'
 import PageHead from '../components/PageHead'
+import Reveal from '../components/Reveal'
 
 gsap.registerPlugin(ScrollTrigger)
-
-// ─── Reveal ──────────────────────────────────────────────────────────────────────
-function Reveal({ children, delay = 0, style = {} }) {
-  const ref = useRef(null)
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const obs = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          gsap.fromTo(el, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: 'power3.out', delay })
-          obs.disconnect()
-        }
-      },
-      { threshold: 0, rootMargin: '0px 0px 80px 0px' }
-    )
-    obs.observe(el)
-    return () => obs.disconnect()
-  }, [delay])
-  return <div ref={ref} style={{ opacity: 0, ...style }}>{children}</div>
-}
 
 // ─── Benefits data ────────────────────────────────────────────────────────────────
 const BENEFITS = [
@@ -458,7 +438,7 @@ export default function Stats() {
         padding: '0 clamp(20px, 5vw, 64px) clamp(80px, 10vw, 130px)',
         maxWidth: 1100, margin: '0 auto',
       }}>
-        <Reveal>
+        <Reveal y={30} duration={0.55} rootMargin="0px 0px 80px 0px">
           <div style={{
             borderRadius: '1.5rem',
             background: 'rgba(247,243,237,0.025)',
@@ -494,7 +474,7 @@ export default function Stats() {
                 gap: 'clamp(1.5rem, 3vw, 2.5rem)', marginBottom: 'clamp(2.5rem, 4vw, 3.5rem)',
               }}>
                 {TOTALS.map((t, i) => (
-                  <Reveal key={t.label} delay={i * 0.08}>
+                  <Reveal key={t.label} delay={i * 0.08} y={30} duration={0.55} rootMargin="0px 0px 80px 0px">
                     <div style={{ textAlign: 'center' }}>
                       <div style={{
                         fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(2.5rem, 6vw, 4rem)',
@@ -519,7 +499,7 @@ export default function Stats() {
                 ))}
               </div>
 
-              <Reveal delay={0.3}>
+              <Reveal delay={0.3} y={30} duration={0.55} rootMargin="0px 0px 80px 0px">
                 <div style={{ textAlign: 'center' }}>
                   <a
                     href="/roi"

@@ -6,33 +6,9 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ScrollProgressBar from '../components/ScrollProgressBar'
 import PageHead from '../components/PageHead'
+import Reveal from '../components/Reveal'
 
 gsap.registerPlugin(ScrollTrigger)
-
-// Reveal wrapper
-function Reveal({ children, delay = 0, className = '', style = {} }) {
-  const ref = useRef(null)
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        gsap.fromTo(el,
-          { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.45, ease: 'power3.out', delay }
-        )
-        observer.disconnect()
-      }
-    }, { threshold: 0, rootMargin: '0px 0px 150px 0px' })
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [delay])
-  return (
-    <div ref={ref} className={className} style={{ opacity: 0, ...style }}>
-      {children}
-    </div>
-  )
-}
 
 // Typewriter terminal — used in multiple service visualisations
 function Terminal({ lines, typingSpeed = 38 }) {
