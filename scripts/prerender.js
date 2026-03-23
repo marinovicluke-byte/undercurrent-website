@@ -92,6 +92,16 @@ const ROUTES = [
     description: 'See how AI automation can transform your small business operations. Free audit, real results.',
   },
   {
+    path: '/case-study',
+    title: 'Case Studies — UnderCurrent',
+    description: 'See how we\'ve helped small businesses reclaim their time and scale their operations with AI automation. Real businesses, real results.',
+  },
+  {
+    path: '/resources',
+    title: 'Resources — UnderCurrent',
+    description: 'Guides, playbooks, and lessons from the field. Everything we\'ve learned building AI automation for small businesses, packaged for you.',
+  },
+  {
     path: '/privacy',
     title: 'Privacy Policy — UnderCurrent',
     description: 'How UnderCurrent collects, uses, and protects your personal information. We respect your privacy and handle data responsibly.',
@@ -168,6 +178,7 @@ function generateSitemap() {
   const today = new Date().toISOString().split('T')[0]
   const priorities = {
     '/': '1.0', '/services': '0.9', '/about': '0.8', '/audit': '0.8',
+    '/case-study': '0.7', '/resources': '0.7',
     '/process': '0.7', '/contact': '0.7', '/roi': '0.7',
     '/stats': '0.6', '/privacy': '0.3', '/terms': '0.3',
   }

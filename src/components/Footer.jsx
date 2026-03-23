@@ -50,6 +50,8 @@ export default function Footer() {
   ]
   const company = [
     { label: 'About', href: '/about' },
+    { label: 'Case Studies', href: '/case-study' },
+    { label: 'Resources', href: '/resources' },
     { label: 'How it works', href: '/#protocol' },
     { label: 'Contact', href: '/#contact' },
   ]
