@@ -171,15 +171,20 @@ export default function About() {
           "@type": "AboutPage",
           "url": "https://www.undercurrentautomations.com/about",
           "name": "About UnderCurrent",
-          "description": "UnderCurrent is a Melbourne-based AI automation studio specialising in workflow automation for small businesses. Founded 2026.",
+          "description": "UnderCurrent is a Melbourne-based AI automation studio specialising in workflow automation for small businesses. Founded 2021.",
           "mainEntity": {
             "@type": "Organization",
             "name": "UnderCurrent",
-            "foundingDate": "2026",
+            "foundingDate": "2021",
             "foundingLocation": "Melbourne, Australia",
-            "description": "AI automation architecture for small businesses",
+            "description": "Melbourne-based AI automation studio specialising in workflow automation for small businesses.",
             "url": "https://www.undercurrentautomations.com",
-            "email": "luke@undercurrentautomations.com"
+            "email": "luke@undercurrentautomations.com",
+            "sameAs": [
+              "https://www.instagram.com/undercurrent.automations/",
+              "https://www.facebook.com/profile.php?id=61578553167947",
+              "https://www.linkedin.com/company/undercurrent-automations"
+            ]
           }
         }}
       />

@@ -991,6 +991,7 @@ export default function Services() {
           "description": "AI automation services for small businesses: customer experience, sales automation, content design, personal system, and finance.",
           "provider": {
             "@type": "Organization",
+            "@id": "https://www.undercurrentautomations.com/#business",
             "name": "UnderCurrent",
             "url": "https://www.undercurrentautomations.com"
           },
