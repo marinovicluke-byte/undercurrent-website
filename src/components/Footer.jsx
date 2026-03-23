@@ -42,18 +42,30 @@ const tiles = [
 
 export default function Footer() {
   const services = [
-    { label: 'Onboarding', href: '/services#onboarding' },
+    { label: 'All Services', href: '/services' },
+    { label: 'Onboarding Automation', href: '/services#onboarding' },
     { label: 'Customer Experience', href: '/services#customer-experience' },
     { label: 'Sales Automation', href: '/services#sales' },
     { label: 'Content Design', href: '/services#content-design' },
     { label: 'Personal Assistant', href: '/services#personal-assistant' },
   ]
+  const tools = [
+    { label: 'Business Audit', href: '/audit' },
+    { label: 'ROI Calculator', href: '/roi' },
+    { label: 'How It Works', href: '/process' },
+  ]
   const company = [
-    { label: 'About', href: '/about' },
+    { label: 'About UnderCurrent', href: '/about' },
     { label: 'Case Studies', href: '/case-study' },
     { label: 'Resources', href: '/resources' },
-    { label: 'How it works', href: '/#protocol' },
     { label: 'Contact', href: '/contact' },
+  ]
+  const explore = [
+    { label: 'Home', href: '/' },
+    { label: 'Our Process', href: '/#protocol' },
+    { label: 'Pricing', href: '/#pricing' },
+    { label: 'FAQ', href: '/#faq' },
+    { label: 'Book a Call', href: '/contact' },
   ]
   const legal = [
     { label: 'Privacy Policy', href: '/privacy' },
@@ -192,7 +204,7 @@ export default function Footer() {
               </p>
 
               <div className="grid grid-cols-2 gap-x-6 gap-y-3" style={{ marginBottom: '2rem' }}>
-                {[...services, ...company, ...legal].map(s => (
+                {[...services, ...tools, ...company, ...explore, ...legal].map(s => (
                   <a key={s.label} href={s.href} className="font-dm nav-link" style={{ fontWeight: 300, fontSize: '0.82rem', color: 'rgba(212,201,176,0.45)' }}>
                     {s.label}
                   </a>

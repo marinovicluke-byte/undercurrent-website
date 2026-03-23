@@ -800,6 +800,39 @@ export default function Process() {
         </div>
       </section>
 
+      {/* ── Related Pages ── */}
+      <section style={{ position: 'relative', zIndex: 10, maxWidth: '900px', margin: '0 auto', padding: '0 1.5rem 5rem' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
+          {[
+            { href: '/services', label: 'Our Services', desc: 'See the full range of AI automation systems we build.' },
+            { href: '/audit', label: 'Free Business Audit', desc: 'Find out exactly where your business is leaking time.' },
+            { href: '/roi', label: 'ROI Calculator', desc: 'Calculate the return on your automation investment.' },
+            { href: '/case-study', label: 'Case Studies', desc: 'See real results from businesses using our automation.' },
+            { href: '/about', label: 'About Us', desc: 'The team and story behind UnderCurrent.' },
+            { href: '/contact', label: 'Get in Touch', desc: 'Ready to start? Let\'s talk about your business.' },
+          ].map(link => (
+            <a
+              key={link.href}
+              href={link.href}
+              style={{
+                flex: '1 1 240px', maxWidth: '280px',
+                padding: '1.25rem 1.5rem',
+                background: 'rgba(143,175,159,0.04)',
+                border: '1px solid rgba(143,175,159,0.1)',
+                borderRadius: '1rem',
+                textDecoration: 'none',
+                transition: 'all 0.3s ease',
+              }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(143,175,159,0.25)'; e.currentTarget.style.transform = 'translateY(-2px)' }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(143,175,159,0.1)'; e.currentTarget.style.transform = 'translateY(0)' }}
+            >
+              <p className="font-dm" style={{ fontSize: '0.9rem', fontWeight: 500, color: '#F7F3ED', marginBottom: '0.3rem' }}>{link.label}</p>
+              <p className="font-dm" style={{ fontSize: '0.78rem', fontWeight: 300, color: 'rgba(212,201,176,0.4)', lineHeight: 1.6, margin: 0 }}>{link.desc}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <Footer />
     </div>
   )
