@@ -189,6 +189,7 @@ export default function MissedRevenueAudit() {
       <PageHead
         title="Missed Revenue Auditor — UnderCurrent"
         description="Find out exactly how much revenue your service business is losing to slow follow-up. Free 60-second audit for trades, cleaners, and service businesses."
+        canonical="https://www.undercurrentautomations.com/missed-revenue"
       />
 
       <style>{`

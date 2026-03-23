@@ -164,6 +164,28 @@ function injectMeta(html, route) {
   return html
 }
 
+function generateSitemap() {
+  const today = new Date().toISOString().split('T')[0]
+  const priorities = {
+    '/': '1.0', '/services': '0.9', '/about': '0.8', '/audit': '0.8',
+    '/process': '0.7', '/contact': '0.7', '/roi': '0.7',
+    '/stats': '0.6', '/privacy': '0.3', '/terms': '0.3',
+  }
+
+  const urls = ROUTES
+    .filter(r => r.path !== '/lp')
+    .map(r => {
+      const loc = `${DOMAIN}${r.path === '/' ? '/' : r.path}`
+      const priority = priorities[r.path] || '0.5'
+      return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today}</lastmod>\n    <priority>${priority}</priority>\n  </url>`
+    })
+    .join('\n')
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`
+  writeFileSync(join(DIST, 'sitemap.xml'), sitemap)
+  console.log(`  ✓ sitemap.xml → ${ROUTES.filter(r => r.path !== '/lp').length} URLs (lastmod: ${today})`)
+}
+
 function run() {
   console.log('\n  Injecting per-route SEO metadata...\n')
 
@@ -183,6 +205,8 @@ function run() {
     writeFileSync(join(outDir, 'index.html'), html)
     console.log(`  ✓ ${route.path} → ${route.title}`)
   }
+
+  generateSitemap()
 
   console.log(`\n  Done — ${ROUTES.length} routes with unique SEO metadata\n`)
 }

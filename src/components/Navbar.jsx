@@ -178,19 +178,34 @@ export default function Navbar({ ready = true, isSubPage = false }) {
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-6">
-            {links.map(link => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="nav-link"
-                style={{
-                  color: scrolled ? 'rgba(28,28,26,0.75)' : 'rgba(247,243,237,0.85)',
-                  transition: 'color 0.5s ease',
-                }}
-              >
-                {link.label}
-              </a>
-            ))}
+            {links.map(link => {
+              const isCurrent = link.href === location.pathname || (link.href === '#' && onHome)
+              return isCurrent ? (
+                <span
+                  key={link.href}
+                  className="nav-link"
+                  style={{
+                    color: scrolled ? 'rgba(28,28,26,0.75)' : 'rgba(247,243,237,0.85)',
+                    transition: 'color 0.5s ease',
+                  }}
+                  aria-current="page"
+                >
+                  {link.label}
+                </span>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="nav-link"
+                  style={{
+                    color: scrolled ? 'rgba(28,28,26,0.75)' : 'rgba(247,243,237,0.85)',
+                    transition: 'color 0.5s ease',
+                  }}
+                >
+                  {link.label}
+                </a>
+              )
+            })}
           </div>
 
           {/* CTA */}
@@ -233,17 +248,29 @@ export default function Navbar({ ready = true, isSubPage = false }) {
               border: '1px solid rgba(212,201,176,0.6)',
             }}
           >
-            {links.map(link => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="nav-link"
-                style={{ fontSize: '1.1rem', color: '#1C1C1A' }}
-                onClick={() => setMobileOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
+            {links.map(link => {
+              const isCurrent = link.href === location.pathname || (link.href === '#' && onHome)
+              return isCurrent ? (
+                <span
+                  key={link.href}
+                  className="nav-link"
+                  style={{ fontSize: '1.1rem', color: '#1C1C1A' }}
+                  aria-current="page"
+                >
+                  {link.label}
+                </span>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="nav-link"
+                  style={{ fontSize: '1.1rem', color: '#1C1C1A' }}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.label}
+                </a>
+              )
+            })}
             <a
               href={CTA_HREF} target="_blank" rel="noopener noreferrer"
               className="btn-sage mt-2"

@@ -1017,6 +1017,7 @@ export default function Services() {
         <video
           ref={videoRef}
           src="/hero-bg.mp4"
+          preload="none"
           autoPlay muted loop playsInline
           style={{
             position: 'absolute', inset: 0,

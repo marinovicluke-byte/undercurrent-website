@@ -180,7 +180,7 @@ export default function Footer() {
               style={{ padding: '2.5rem 1.5rem', borderColor: 'rgba(212,201,176,0.08)' }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.35rem' }}>
-                <img src="/LOGO.png" alt="" style={{ height: '24px', width: '24px', objectFit: 'contain', opacity: 0.85 }} />
+                <img src="/LOGO.png" alt="UnderCurrent logo" style={{ height: '24px', width: '24px', objectFit: 'contain', opacity: 0.85 }} />
                 <span className="font-cormorant" style={{ fontSize: '1.2rem', fontWeight: 600, color: '#F7F3ED', lineHeight: 1 }}>
                   UnderCurrent
                 </span>
@@ -325,9 +325,15 @@ export default function Footer() {
                 System Operational
               </span>
             </div>
-            <span className="font-dm" style={{ fontWeight: 300, fontSize: '0.75rem', color: 'rgba(212,201,176,0.28)' }}>
-              © 2026 UnderCurrent. All rights reserved.
-            </span>
+            <div className="flex items-center gap-3">
+              <span className="font-dm" style={{ fontWeight: 300, fontSize: '0.75rem', color: 'rgba(212,201,176,0.28)' }}>
+                © {new Date().getFullYear()} UnderCurrent. All rights reserved.
+              </span>
+              <span style={{ color: 'rgba(212,201,176,0.15)' }}>·</span>
+              <span className="font-mono" style={{ fontSize: '0.6rem', color: 'rgba(212,201,176,0.22)', letterSpacing: '0.08em' }}>
+                Updated {new Date().toLocaleDateString('en-AU', { month: 'long', year: 'numeric' })}
+              </span>
+            </div>
           </div>
 
         </div>

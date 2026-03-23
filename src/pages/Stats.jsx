@@ -367,6 +367,7 @@ export default function Stats() {
       <PageHead
         title="Results — UnderCurrent"
         description="Three things UnderCurrent does for your business every single week. More reviews. More leads. More time back."
+        canonical="https://www.undercurrentautomations.com/stats"
       />
       <ScrollProgressBar />
       <Navbar isSubPage />

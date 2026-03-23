@@ -546,6 +546,7 @@ export default function ROICalculator() {
       <PageHead
         title="ROI Calculator — UnderCurrent"
         description="See exactly how much time and money you're leaving on the table. Calculate your automation ROI in seconds."
+        canonical="https://www.undercurrentautomations.com/roi"
       />
 
       <style>{`
@@ -708,6 +709,7 @@ export default function ROICalculator() {
           <video
             ref={videoRef}
             src="/hero-bg.mp4"
+            preload="none"
             autoPlay
             muted
             loop

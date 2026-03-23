@@ -622,8 +622,9 @@ export default function BusinessAuditV2() {
   return (
     <>
       <PageHead
-        title="Business Audit V2 — UnderCurrent"
+        title="Business Audit — UnderCurrent"
         description="Find the holes in your business. See exactly how much time and money you're losing across the five core areas of your operation."
+        canonical="https://www.undercurrentautomations.com/audit"
       />
 
       <style>{`
@@ -712,6 +713,7 @@ export default function BusinessAuditV2() {
           padding: '100px 24px 60px',
         }}>
           <video
+            preload="none"
             autoPlay muted loop playsInline
             style={{
               position: 'absolute', inset: 0,

@@ -162,8 +162,8 @@ export default function About() {
   return (
     <div style={{ backgroundColor: '#F7F3ED', overflowX: 'hidden' }}>
       <PageHead
-        title="About — UnderCurrent | AI Automation Studio, Melbourne"
-        description="Learn about UnderCurrent — the Melbourne-based AI automation studio that maps small business workflows and builds custom systems to run your operations continuously and precisely."
+        title="About — UnderCurrent | Our Story & Approach"
+        description="Meet the team behind UnderCurrent. Learn how we started, what drives our approach to business automation, and why small business owners trust us to redesign their workflows."
         canonical="https://www.undercurrentautomations.com/about"
         jsonLd={{
           "@context": "https://schema.org",
@@ -198,6 +198,7 @@ export default function About() {
         <video
           ref={videoRef}
           src="/hero-bg.mp4"
+          preload="none"
           autoPlay
           muted
           loop
