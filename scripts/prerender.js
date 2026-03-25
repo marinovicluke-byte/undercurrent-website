@@ -9,13 +9,105 @@
  * Runs automatically after "vite build" via package.json build script.
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs'
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'fs'
 import { join, dirname } from 'path'
+import matter from 'gray-matter'
+import { marked } from 'marked'
 import { fileURLToPath } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST = join(__dirname, '..', 'dist')
 const DOMAIN = 'https://www.undercurrentautomations.com'
+
+// Configure marked to generate heading IDs (matches client-side config)
+marked.use({
+  renderer: {
+    heading({ tokens, depth }) {
+      const text = tokens.map(t => t.raw || t.text || '').join('')
+      const id = text.toLowerCase().replace(/[^\w]+/g, '-').replace(/(^-|-$)/g, '')
+      const Tag = `h${depth}`
+      return `<${Tag} id="${id}">${this.parser.parseInline(tokens)}</${Tag}>\n`
+    }
+  }
+})
+
+const ARTICLES_DIR = join(__dirname, '..', 'src', 'content', 'articles')
+
+function loadArticles() {
+  if (!existsSync(ARTICLES_DIR)) return []
+  const files = readdirSync(ARTICLES_DIR).filter(f => f.endsWith('.md'))
+  return files.map(file => {
+    const raw = readFileSync(join(ARTICLES_DIR, file), 'utf-8')
+    const { data, content } = matter(raw)
+    const html = marked.parse(content)
+    return { frontmatter: data, html }
+  }).sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
+}
+
+function generateArticleRoutes(articles) {
+  return articles.map(({ frontmatter }) => ({
+    path: `/resources/${frontmatter.slug}`,
+    title: `${frontmatter.title} | UnderCurrent`,
+    description: frontmatter.description,
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: frontmatter.title,
+      description: frontmatter.description,
+      author: { '@type': 'Person', name: frontmatter.author || 'Luke Marinovic' },
+      publisher: {
+        '@type': 'Organization',
+        name: 'UnderCurrent',
+        logo: { '@type': 'ImageObject', url: `${DOMAIN}/favicon.svg` },
+      },
+      datePublished: frontmatter.date,
+      dateModified: frontmatter.date,
+      keywords: frontmatter.keyword,
+      mainEntityOfPage: { '@type': 'WebPage', '@id': `${DOMAIN}/resources/${frontmatter.slug}` },
+    },
+  }))
+}
+
+function injectArticleContent(html, articleHtml) {
+  const articleDiv = `<div id="article-content" style="max-width:680px;margin:0 auto;padding:2rem 1.5rem;font-family:'DM Sans',sans-serif;color:rgba(232,224,208,0.75);background:#1C1C1A">${articleHtml}</div>\n<script>document.getElementById('article-content').style.display='none'</script>\n`
+  return html.replace('<div id="root">', articleDiv + '<div id="root">')
+}
+
+function escXml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+}
+
+function generateRssFeed(articles) {
+  const now = new Date().toUTCString()
+  const items = articles.map(({ frontmatter, html }) => {
+    const link = `${DOMAIN}/resources/${frontmatter.slug}`
+    const pubDate = new Date(frontmatter.date + 'T00:00:00Z').toUTCString()
+    return `    <item>
+      <title>${escXml(frontmatter.title)}</title>
+      <description>${escXml(frontmatter.description)}</description>
+      <link>${link}</link>
+      <guid isPermaLink="true">${link}</guid>
+      <pubDate>${pubDate}</pubDate>
+      <content:encoded><![CDATA[${html}]]></content:encoded>
+    </item>`
+  }).join('\n')
+
+  const feed = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>UnderCurrent - AI &amp; Automation Guides</title>
+    <description>Guides, playbooks, and lessons from the field. AI automation for Australian small businesses.</description>
+    <link>${DOMAIN}/resources</link>
+    <atom:link href="${DOMAIN}/feed.xml" rel="self" type="application/rss+xml" />
+    <language>en-AU</language>
+    <lastBuildDate>${now}</lastBuildDate>
+${items}
+  </channel>
+</rss>
+`
+  writeFileSync(join(DIST, 'feed.xml'), feed)
+  console.log(`  ✓ feed.xml → ${articles.length} articles`)
+}
 
 // Per-route SEO metadata
 const ROUTES = [
@@ -189,7 +281,7 @@ function injectMeta(html, route) {
   return html
 }
 
-function generateSitemap() {
+function generateSitemap(allRoutes) {
   const today = new Date().toISOString().split('T')[0]
   const priorities = {
     '/': '1.0', '/services': '0.9', '/about': '0.8', '/audit': '0.8',
@@ -198,18 +290,18 @@ function generateSitemap() {
     '/stats': '0.6', '/privacy': '0.3', '/terms': '0.3',
   }
 
-  const urls = ROUTES
+  const urls = allRoutes
     .filter(r => r.path !== '/lp')
     .map(r => {
       const loc = `${DOMAIN}${r.path === '/' ? '/' : r.path}`
-      const priority = priorities[r.path] || '0.5'
+      const priority = priorities[r.path] || (r.path.startsWith('/resources/') ? '0.7' : '0.5')
       return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today}</lastmod>\n    <priority>${priority}</priority>\n  </url>`
     })
     .join('\n')
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`
   writeFileSync(join(DIST, 'sitemap.xml'), sitemap)
-  console.log(`  ✓ sitemap.xml → ${ROUTES.filter(r => r.path !== '/lp').length} URLs (lastmod: ${today})`)
+  console.log(`  ✓ sitemap.xml → ${allRoutes.filter(r => r.path !== '/lp').length} URLs (lastmod: ${today})`)
 }
 
 function run() {
@@ -217,8 +309,26 @@ function run() {
 
   const baseHtml = readFileSync(join(DIST, 'index.html'), 'utf-8')
 
-  for (const route of ROUTES) {
-    const html = injectMeta(baseHtml, route)
+  // Load articles from markdown files
+  const articles = loadArticles()
+  const articleRoutes = generateArticleRoutes(articles)
+
+  // Build a lookup of article HTML by path for injection
+  const articleHtmlByPath = {}
+  articles.forEach(({ frontmatter, html }) => {
+    articleHtmlByPath[`/resources/${frontmatter.slug}`] = html
+  })
+
+  // Combine static routes with article routes
+  const allRoutes = [...ROUTES, ...articleRoutes]
+
+  for (const route of allRoutes) {
+    let html = injectMeta(baseHtml, route)
+
+    // If this is an article route, inject the full article HTML
+    if (articleHtmlByPath[route.path]) {
+      html = injectArticleContent(html, articleHtmlByPath[route.path])
+    }
 
     const outDir = route.path === '/'
       ? DIST
@@ -232,9 +342,12 @@ function run() {
     console.log(`  ✓ ${route.path} → ${route.title}`)
   }
 
-  generateSitemap()
+  generateSitemap(allRoutes)
+  if (articles.length > 0) {
+    generateRssFeed(articles)
+  }
 
-  console.log(`\n  Done — ${ROUTES.length} routes with unique SEO metadata\n`)
+  console.log(`\n  Done — ${allRoutes.length} routes with unique SEO metadata\n`)
 }
 
 run()
