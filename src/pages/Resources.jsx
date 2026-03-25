@@ -6,6 +6,8 @@ import ScrollProgressBar from '../components/ScrollProgressBar'
 import PageHead from '../components/PageHead'
 import Reveal from '../components/Reveal'
 import Breadcrumb from '../components/Breadcrumb'
+import { Link } from 'react-router-dom'
+import { getAllArticles, CLUSTER_LABELS } from '../utils/articles'
 
 function OceanCanvas() {
   const canvasRef = useRef(null)
@@ -115,6 +117,7 @@ const TOPICS = [
 ]
 
 const FILTERS = ['ALL', ...TOPICS.map(t => t.label)]
+const publishedArticles = getAllArticles()
 
 function PillarCard({ title, desc, topic, delay }) {
   return (
@@ -266,6 +269,87 @@ function ResourceCard({ title, desc, topic, delay }) {
   )
 }
 
+function PublishedArticleCard({ article, delay }) {
+  return (
+    <Reveal delay={delay} y={30}>
+      <Link to={`/resources/${article.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
+        <div
+          className="resource-card"
+          style={{
+            background: 'linear-gradient(145deg, rgba(143,175,159,0.05) 0%, rgba(28,28,26,0.2) 100%)',
+            border: '1px solid rgba(143,175,159,0.1)',
+            borderRadius: '1.25rem',
+            overflow: 'hidden',
+            cursor: 'pointer',
+            transition: 'all 0.35s ease',
+          }}
+          onMouseEnter={e => {
+            e.currentTarget.style.borderColor = 'rgba(143,175,159,0.25)'
+            e.currentTarget.style.transform = 'translateY(-4px)'
+            e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.3)'
+          }}
+          onMouseLeave={e => {
+            e.currentTarget.style.borderColor = 'rgba(143,175,159,0.1)'
+            e.currentTarget.style.transform = 'translateY(0)'
+            e.currentTarget.style.boxShadow = 'none'
+          }}
+        >
+          {/* Hero image area */}
+          <div style={{
+            width: '100%', height: '180px',
+            background: 'linear-gradient(135deg, rgba(143,175,159,0.06) 0%, rgba(28,28,26,0.4) 100%)',
+            position: 'relative', overflow: 'hidden',
+          }}>
+            <img
+              src={`/articles/${article.slug}/hero.jpg`}
+              alt=""
+              loading="lazy"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              onError={e => { e.currentTarget.style.display = 'none' }}
+            />
+            {/* Card wave decoration */}
+            <div aria-hidden="true" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '40px', overflow: 'hidden' }}>
+              <svg style={{ position: 'absolute', bottom: 0, width: '200%', height: '40px', animation: `cardWave 7s ease-in-out infinite` }} viewBox="0 0 1440 40" preserveAspectRatio="none">
+                <path d="M0,20 C360,40 720,0 1080,20 C1260,30 1440,10 1440,20 L1440,40 L0,40 Z" fill="rgba(143,175,159,0.12)" />
+              </svg>
+            </div>
+          </div>
+
+          {/* Card body */}
+          <div style={{ padding: '1.25rem 1.5rem 1.5rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.6rem', flexWrap: 'wrap' }}>
+              <span className="font-mono" style={{ fontSize: '0.5rem', letterSpacing: '0.16em', color: 'rgba(143,175,159,0.6)' }}>
+                {CLUSTER_LABELS[article.cluster]?.toUpperCase() || article.cluster.toUpperCase()}
+              </span>
+              <span className="font-mono" style={{ fontSize: '0.45rem', letterSpacing: '0.12em', color: 'rgba(212,201,176,0.3)' }}>
+                {article.readingTime} MIN
+              </span>
+              <span className="font-mono" style={{
+                fontSize: '0.45rem', letterSpacing: '0.12em',
+                color: 'rgba(212,201,176,0.3)',
+                border: '1px solid rgba(212,201,176,0.1)',
+                padding: '0.1rem 0.4rem',
+                borderRadius: '9999px',
+              }}>
+                {article.level?.toUpperCase() || 'GUIDE'}
+              </span>
+            </div>
+            <h3 className="font-cormorant" style={{ fontSize: '1.25rem', fontWeight: 600, color: '#F7F3ED', lineHeight: 1.25, marginBottom: '0.5rem' }}>
+              {article.title}
+            </h3>
+            <p className="font-dm" style={{ fontSize: '0.82rem', fontWeight: 300, color: 'rgba(212,201,176,0.4)', lineHeight: 1.65, marginBottom: '1rem' }}>
+              {article.description}
+            </p>
+            <span className="font-dm" style={{ fontSize: '0.78rem', fontWeight: 400, color: '#8FAF9F', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
+              Read Article <span>→</span>
+            </span>
+          </div>
+        </div>
+      </Link>
+    </Reveal>
+  )
+}
+
 export default function Resources() {
   const heroRef = useRef(null)
   const videoRef = useRef(null)
@@ -412,7 +496,7 @@ export default function Resources() {
                   </h3>
                   <div style={{ flex: 1, height: '1px', background: 'rgba(143,175,159,0.08)' }} />
                   <span className="font-mono" style={{ fontSize: '0.5rem', letterSpacing: '0.14em', color: 'rgba(143,175,159,0.3)' }}>
-                    {topic.articles.length + 1} ARTICLES
+                    {topic.articles.length + 1 + publishedArticles.filter(a => a.cluster === topic.id).length} ARTICLES
                   </span>
                 </div>
               </Reveal>
@@ -437,6 +521,18 @@ export default function Resources() {
                   />
                 ))}
               </div>
+              {/* Published articles from markdown files */}
+              {publishedArticles.filter(a => a.cluster === topic.id).length > 0 && (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" style={{ marginTop: '1.25rem' }}>
+                  {publishedArticles.filter(a => a.cluster === topic.id).map((article, ai) => (
+                    <PublishedArticleCard
+                      key={article.slug}
+                      article={article}
+                      delay={0.05 * (ai + 1)}
+                    />
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
