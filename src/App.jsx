@@ -29,6 +29,7 @@ const ContactPage = lazy(() => import('./pages/ContactPage'))
 const MissedRevenueAudit = lazy(() => import('./pages/MissedRevenueAudit'))
 const CaseStudies = lazy(() => import('./pages/CaseStudies'))
 const Resources = lazy(() => import('./pages/Resources'))
+const Article = lazy(() => import('./pages/Article'))
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
 const TermsOfService = lazy(() => import('./pages/TermsOfService'))
 
@@ -159,6 +160,7 @@ export default function App() {
         <Route path="/missed-revenue" element={<Suspense fallback={<LoadingSpinner />}><MissedRevenueAudit /></Suspense>} />
         <Route path="/case-study" element={<Suspense fallback={<LoadingSpinner />}><CaseStudies /></Suspense>} />
         <Route path="/resources" element={<Suspense fallback={<LoadingSpinner />}><Resources /></Suspense>} />
+        <Route path="/resources/:slug" element={<Suspense fallback={<LoadingSpinner />}><Article /></Suspense>} />
         <Route path="/privacy" element={<Suspense fallback={<LoadingSpinner />}><PrivacyPolicy /></Suspense>} />
         <Route path="/terms" element={<Suspense fallback={<LoadingSpinner />}><TermsOfService /></Suspense>} />
         <Route path="*" element={<Suspense fallback={<LoadingSpinner />}><NotFound /></Suspense>} />
