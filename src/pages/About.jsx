@@ -142,11 +142,7 @@ export default function About() {
     window.scrollTo(0, 0)
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.1 })
-      tl.fromTo(videoRef.current,
-        { opacity: 0 },
-        { opacity: 1, duration: 1.8, ease: 'power2.out' }
-      )
-      .fromTo(headlineRef.current,
+      tl.fromTo(headlineRef.current,
         { y: 50, opacity: 0 },
         { y: 0, opacity: 1, duration: 1.1, ease: 'power3.out' },
         '-=1.0'
@@ -190,14 +186,12 @@ export default function About() {
       />
       <ScrollProgressBar />
       <Navbar ready={true} isSubPage={true} />
-      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
-
       {/* Hero */}
       <section
         ref={heroRef}
         className="relative w-full overflow-hidden"
         style={{
-          height: '70dvh',
+          height: '100dvh',
           minHeight: '520px',
           background: '#1C1C1A',
         }}
@@ -214,9 +208,10 @@ export default function About() {
             position: 'absolute', inset: 0,
             width: '100%', height: '100%',
             objectFit: 'cover', objectPosition: 'center',
-            opacity: 0, pointerEvents: 'none',
+            opacity: 1, pointerEvents: 'none',
           }}
         />
+        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
         <div aria-hidden="true" style={{
           position: 'absolute', inset: 0, pointerEvents: 'none',
           background: [

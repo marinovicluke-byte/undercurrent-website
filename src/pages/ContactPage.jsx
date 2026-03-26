@@ -38,7 +38,6 @@ export default function ContactPage() {
         canonical="https://www.undercurrentautomations.com/contact"
       />
       <Navbar ready isSubPage />
-      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} />
 
       {/* Video background */}
       <div aria-hidden="true" style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
@@ -70,6 +69,8 @@ export default function ContactPage() {
           ].join(', '),
         }} />
       </div>
+
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} />
 
       {/* Page content */}
       <div style={{ position: 'relative', zIndex: 10, maxWidth: '640px', margin: '0 auto', padding: '10rem 1.5rem 6rem' }}>

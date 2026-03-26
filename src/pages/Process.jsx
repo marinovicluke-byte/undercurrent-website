@@ -647,8 +647,6 @@ export default function Process() {
       />
       <ScrollProgressBar />
       <Navbar isSubPage={true} />
-      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'How It Works' }]} />
-
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <section
         ref={heroRef}
@@ -656,6 +654,7 @@ export default function Process() {
           position: 'relative',
           background: '#1C1C1A',
           overflow: 'hidden',
+          minHeight: '100dvh',
           paddingTop: 'clamp(120px, 16vw, 160px)',
           paddingBottom: 'clamp(56px, 8vw, 96px)',
           paddingLeft: 'clamp(24px, 5vw, 72px)',
@@ -697,6 +696,7 @@ export default function Process() {
         />
         <GrainOverlay opacity={0.045} />
         <ScrollSpotlight scrollPct={scrollPct} />
+        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'How It Works' }]} />
 
         {/* Background text watermark */}
         <div style={{

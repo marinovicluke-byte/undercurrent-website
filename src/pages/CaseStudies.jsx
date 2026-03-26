@@ -77,7 +77,6 @@ export default function CaseStudies() {
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
-    tl.fromTo(videoRef.current, { opacity: 0 }, { opacity: 0.35, duration: 1.8 })
     tl.fromTo(headlineRef.current, { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1 }, 0.3)
     tl.fromTo(subRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, 0.6)
   }, [])
@@ -93,8 +92,6 @@ export default function CaseStudies() {
       />
       <ScrollProgressBar />
       <Navbar ready isSubPage />
-      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Case Studies' }]} />
-
       {/* ── Hero ── */}
       <section
         ref={heroRef}
@@ -110,9 +107,10 @@ export default function CaseStudies() {
             position: 'absolute', inset: 0,
             width: '100%', height: '100%',
             objectFit: 'cover', objectPosition: 'center',
-            opacity: 0, pointerEvents: 'none',
+            opacity: 0.35, pointerEvents: 'none',
           }}
         />
+        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Case Studies' }]} />
         <div aria-hidden="true" style={{
           position: 'absolute', inset: 0, pointerEvents: 'none',
           background: [

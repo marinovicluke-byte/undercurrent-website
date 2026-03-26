@@ -17,11 +17,7 @@ export default function Hero({ ready = true }) {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.05 })
 
-      tl.fromTo(videoRef.current,
-        { opacity: 0 },
-        { opacity: 1, duration: 1.8, ease: 'power2.out' }
-      )
-      .fromTo(headlineRef.current,
+      tl.fromTo(headlineRef.current,
         { y: 30, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.65, ease: 'power3.out' },
         '-=0.3'
@@ -68,7 +64,7 @@ export default function Hero({ ready = true }) {
           height: '100%',
           objectFit: 'cover',
           objectPosition: 'center',
-          opacity: 0,
+          opacity: 1,
           pointerEvents: 'none',
         }}
       />

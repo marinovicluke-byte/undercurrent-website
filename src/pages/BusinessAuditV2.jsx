@@ -699,11 +699,9 @@ export default function BusinessAuditV2() {
       <div style={{ backgroundColor: '#0D0D0D', minHeight: '100vh', overflowX: 'hidden', color: '#F7F3ED' }}>
         <ScrollProgressBar />
         <Navbar isSubPage />
-        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Business Audit' }]} />
-
         {/* ── Hero ────────────────────────────────────────────────────────── */}
         <section style={{
-          minHeight: '420px',
+          minHeight: '100dvh',
           background: '#1C1C1A',
           position: 'relative',
           overflow: 'hidden',
@@ -714,6 +712,7 @@ export default function BusinessAuditV2() {
           textAlign: 'center',
           padding: '100px 24px 60px',
         }}>
+          <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Business Audit' }]} />
           <video
             preload="auto"
             autoPlay muted loop playsInline
