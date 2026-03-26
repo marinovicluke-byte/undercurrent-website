@@ -260,7 +260,7 @@ export default function ProofStrip() {
   ]
 
   return (
-    <section style={{ backgroundColor: '#1C1C1A', padding: '5rem 1.5rem' }}>
+    <section style={{ backgroundColor: '#1C1C1A', padding: '7.5rem 1.5rem' }}>
       <style>{`
         @media (max-width: 860px) {
           .proof-cards { grid-template-columns: 1fr !important; }
@@ -278,7 +278,7 @@ export default function ProofStrip() {
           ref={headRef}
           style={{
             textAlign: 'center',
-            marginBottom: '3.5rem',
+            marginBottom: '3rem',
             opacity: headVisible ? 1 : 0,
             transform: headVisible ? 'translateY(0)' : 'translateY(18px)',
             transition: 'opacity 0.65s ease, transform 0.65s ease',

@@ -778,7 +778,7 @@ function ActiveServicePanel({ service }) {
   return (
     <div
       ref={panelRef}
-      className="py-20 px-6 md:px-12 relative overflow-hidden"
+      className="py-[7.5rem] px-6 md:px-12 relative overflow-hidden"
       style={{ backgroundColor: '#F7F3ED', minHeight: '80vh' }}
     >
       {/* Large background index number */}
@@ -1039,7 +1039,7 @@ export default function Services() {
           ].join(', '),
         }} />
 
-        <div className="relative max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-center" style={{ minHeight: '80dvh', paddingTop: '8rem', paddingBottom: '5rem' }}>
+        <div className="relative max-w-7xl mx-auto px-6 md:px-12 flex flex-col justify-center" style={{ minHeight: '80dvh', paddingTop: '7.5rem', paddingBottom: '7.5rem' }}>
           <p className="font-mono mb-5" style={{ fontSize: '0.7rem', letterSpacing: '0.2em', color: 'rgba(143,175,159,0.7)' }}>
             WHERE IS YOUR TIME GOING?
           </p>
@@ -1104,7 +1104,7 @@ export default function Services() {
 
       {/* Final CTA */}
       <section
-        className="py-28 px-6 md:px-12 relative overflow-hidden"
+        className="py-[7.5rem] px-6 md:px-12 relative overflow-hidden"
         style={{ backgroundColor: '#1C1C1A' }}
       >
         <div className="absolute inset-0 pointer-events-none" style={{

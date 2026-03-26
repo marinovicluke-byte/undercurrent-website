@@ -182,7 +182,7 @@ export default function CalculatorTeaser() {
         }}
       >
         {/* Heading — sits in the dark half */}
-        <div style={{ textAlign: 'center', paddingTop: '4rem', paddingBottom: '2.5rem' }}>
+        <div style={{ textAlign: 'center', paddingTop: '2.5rem', paddingBottom: '2.5rem' }}>
           <p className="font-mono" style={{ fontSize: '0.65rem', letterSpacing: '0.18em', color: '#8FAF9F', marginBottom: '0.75rem', fontWeight: 500 }}>
             FREE REPORT
           </p>
@@ -220,7 +220,7 @@ export default function CalculatorTeaser() {
         </div>
 
         {/* CTA */}
-        <div style={{ textAlign: 'center', padding: '2.5rem 0 5rem' }}>
+        <div style={{ textAlign: 'center', padding: '2.5rem 0 6rem' }}>
           <a
             href="/audit"
             className="btn-sage-hero"

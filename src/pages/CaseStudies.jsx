@@ -153,7 +153,7 @@ export default function CaseStudies() {
       <OceanCanvas />
 
       {/* ── Album section ── */}
-      <section style={{ position: 'relative', zIndex: 10, padding: '5rem 1.5rem 6rem' }}>
+      <section style={{ position: 'relative', zIndex: 10, padding: '7.5rem 1.5rem 7.5rem' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
           <Reveal>
             <div style={{

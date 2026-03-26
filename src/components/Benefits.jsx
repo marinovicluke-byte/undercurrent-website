@@ -265,7 +265,7 @@ export default function Benefits() {
   }, [])
 
   return (
-    <section style={{ background: 'linear-gradient(160deg, #111810 0%, #182018 50%, #131813 100%)', padding: '6rem 0' }}>
+    <section style={{ background: 'linear-gradient(160deg, #111810 0%, #182018 50%, #131813 100%)', padding: '7.5rem 0' }}>
       <style>{`
         .story-strip::-webkit-scrollbar { display: none; }
         .story-strip { -ms-overflow-style: none; scrollbar-width: none; }
@@ -280,7 +280,7 @@ export default function Benefits() {
       `}</style>
 
       {/* Header */}
-      <div style={{ textAlign: 'center', padding: '0 1.5rem', marginBottom: '3.5rem' }}>
+      <div style={{ textAlign: 'center', padding: '0 1.5rem', marginBottom: '3rem' }}>
         <p className="font-mono" style={{
           fontSize: '0.68rem', letterSpacing: '0.18em',
           color: '#8FAF9F', marginBottom: '1rem', fontWeight: 500,

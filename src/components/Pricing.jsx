@@ -16,7 +16,7 @@ export default function Pricing() {
   const [cardRef, cardVisible] = useVisible(0.1)
 
   return (
-    <section style={{ background: 'linear-gradient(160deg, #1a1816 0%, #1f1e1b 50%, #1a1816 100%)', padding: '6rem 1.5rem 5rem' }}>
+    <section style={{ background: 'linear-gradient(160deg, #1a1816 0%, #1f1e1b 50%, #1a1816 100%)', padding: '7.5rem 1.5rem 7.5rem' }}>
       <style>{`
         @keyframes guarantee-pulse {
           0%, 100% { box-shadow: 0 0 0 0 rgba(143,175,159,0); }

@@ -85,7 +85,7 @@ export default function Footer() {
       </div>
 
       {/* ── Tile CTA section ── */}
-      <div style={{ position: 'relative', zIndex: 10, maxWidth: '860px', margin: '0 auto', padding: '5.5rem 1.5rem 4.5rem' }}>
+      <div style={{ position: 'relative', zIndex: 10, maxWidth: '860px', margin: '0 auto', padding: '5.5rem 1.5rem 5.5rem' }}>
 
         {/* Label badge */}
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.5rem' }}>

@@ -437,7 +437,7 @@ export default function Resources() {
       <OceanCanvas />
 
       {/* ── Content section ── */}
-      <section style={{ position: 'relative', zIndex: 10, padding: '5rem 1.5rem 2rem' }}>
+      <section style={{ position: 'relative', zIndex: 10, padding: '7.5rem 1.5rem 7.5rem' }}>
 
         {/* Section header */}
         <Reveal>

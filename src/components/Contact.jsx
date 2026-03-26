@@ -10,7 +10,7 @@ export default function Contact() {
   const [chipsRef, chipsVisible] = useFadeIn(300)
 
   return (
-    <section style={{ backgroundColor: '#1C1C1A', padding: '8rem 1.5rem', textAlign: 'center' }}>
+    <section style={{ backgroundColor: '#1C1C1A', padding: '7.5rem 1.5rem', textAlign: 'center' }}>
       <div style={{ maxWidth: '600px', margin: '0 auto' }}>
 
         {/* Headline */}

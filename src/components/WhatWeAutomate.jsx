@@ -330,7 +330,7 @@ export default function WhatWeAutomate() {
   }, [])
 
   return (
-    <section style={{ background: 'linear-gradient(160deg, #1C1C1A 0%, #1e2820 45%, #192217 80%, #1a1c1a 100%)', padding: '7rem 1.5rem 9rem', overflow: 'hidden', position: 'relative' }}>
+    <section style={{ background: 'linear-gradient(160deg, #1C1C1A 0%, #1e2820 45%, #192217 80%, #1a1c1a 100%)', padding: '7.5rem 1.5rem 7.5rem', overflow: 'hidden', position: 'relative' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
 
         {/* Headline */}
@@ -338,7 +338,7 @@ export default function WhatWeAutomate() {
           ref={headRef}
           style={{
             textAlign: 'center',
-            marginBottom: '4.5rem',
+            marginBottom: '3rem',
             opacity: headVisible ? 1 : 0,
             transform: headVisible ? 'translateY(0)' : 'translateY(20px)',
             transition: 'opacity 0.7s ease, transform 0.7s ease',
@@ -374,7 +374,7 @@ export default function WhatWeAutomate() {
             fontSize: 'clamp(1.05rem, 1.8vw, 1.4rem)',
             fontWeight: 400, fontStyle: 'italic',
             color: 'rgba(247,243,237,0.72)',
-            marginTop: '4rem',
+            marginTop: '5rem',
             letterSpacing: '-0.01em',
             opacity: journeyVisible ? 1 : 0,
             transition: 'opacity 0.7s ease 0.9s',

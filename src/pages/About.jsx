@@ -246,7 +246,7 @@ export default function About() {
       </section>
 
       {/* Mission statement */}
-      <section className="py-24 px-6 md:px-12" style={{ backgroundColor: '#F7F3ED' }}>
+      <section className="py-[7.5rem] px-6 md:px-12" style={{ backgroundColor: '#F7F3ED' }}>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
             <Reveal className="md:col-span-4">
@@ -292,7 +292,7 @@ export default function About() {
       </section>
 
       {/* Founder section */}
-      <section className="py-24 px-6 md:px-12" style={{ backgroundColor: '#1C1C1A' }}>
+      <section className="py-[7.5rem] px-6 md:px-12" style={{ backgroundColor: '#1C1C1A' }}>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
             <Reveal className="md:col-span-5">
@@ -344,7 +344,7 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="py-24 px-6 md:px-12" style={{ backgroundColor: '#F7F3ED' }}>
+      <section className="py-[7.5rem] px-6 md:px-12" style={{ backgroundColor: '#F7F3ED' }}>
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <p className="font-dm mb-3" style={{ fontSize: '0.75rem', letterSpacing: '0.18em', fontWeight: 500, color: '#8FAF9F' }}>
@@ -425,7 +425,7 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="py-24 px-6 md:px-12" style={{ backgroundColor: '#E8E0D0' }}>
+      <section className="py-[7.5rem] px-6 md:px-12" style={{ backgroundColor: '#E8E0D0' }}>
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <p className="font-dm mb-3" style={{ fontSize: '0.75rem', letterSpacing: '0.18em', fontWeight: 500, color: '#6B7C4A' }}>
@@ -473,7 +473,7 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 md:px-12" style={{ backgroundColor: '#E8E0D0' }}>
+      <section className="py-[7.5rem] px-6 md:px-12" style={{ backgroundColor: '#E8E0D0' }}>
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <div className="max-w-2xl">

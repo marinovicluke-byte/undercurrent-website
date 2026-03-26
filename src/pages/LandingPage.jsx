@@ -386,7 +386,7 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════════
           SECTION 3 — PROBLEM
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: '#F7F3ED', padding: '7rem 1.5rem' }}>
+      <section style={{ backgroundColor: '#F7F3ED', padding: '7.5rem 1.5rem' }}>
         <div style={{ maxWidth: '1040px', margin: '0 auto' }}>
           <Reveal style={{ textAlign: 'center', marginBottom: '1rem' }}>
             <Eyebrow>THE PROBLEM</Eyebrow>
@@ -417,7 +417,7 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════════
           SECTION 4 — WHAT YOU GET
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: '#1C1C1A', padding: '7rem 1.5rem' }}>
+      <section style={{ backgroundColor: '#1C1C1A', padding: '7.5rem 1.5rem' }}>
         <div style={{ maxWidth: '1040px', margin: '0 auto' }}>
           <Reveal style={{ textAlign: 'center', marginBottom: '1rem' }}>
             <Eyebrow light>WHAT YOU GET</Eyebrow>
@@ -516,7 +516,7 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════════
           SECTION 5 — HOW IT WORKS
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: '#F7F3ED', padding: '7rem 1.5rem' }}>
+      <section style={{ backgroundColor: '#F7F3ED', padding: '7.5rem 1.5rem' }}>
         <div style={{ maxWidth: '1040px', margin: '0 auto' }}>
           <Reveal style={{ textAlign: 'center', marginBottom: '1rem' }}>
             <Eyebrow>THE PROCESS</Eyebrow>
@@ -620,7 +620,7 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════════
           SECTION 6 — GRAND SLAM OFFER
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: '#1C1C1A', padding: '7rem 1.5rem' }}>
+      <section style={{ backgroundColor: '#1C1C1A', padding: '7.5rem 1.5rem' }}>
         <div style={{ maxWidth: '680px', margin: '0 auto', textAlign: 'center' }}>
           <Reveal style={{ marginBottom: '1rem' }}>
             <Eyebrow light>THE OFFER</Eyebrow>
@@ -680,7 +680,7 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════════
           SECTION 7 — OBJECTION KILLERS
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: '#F7F3ED', padding: '7rem 1.5rem' }}>
+      <section style={{ backgroundColor: '#F7F3ED', padding: '7.5rem 1.5rem' }}>
         <div style={{ maxWidth: '1040px', margin: '0 auto' }}>
           <Reveal style={{ textAlign: 'center', marginBottom: '1rem' }}>
             <Eyebrow>COMMON CONCERNS</Eyebrow>
@@ -733,7 +733,7 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════════
           SECTION 8 — FAQ
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: '#F7F3ED', padding: '3rem 1.5rem 7rem' }}>
+      <section style={{ backgroundColor: '#F7F3ED', padding: '3rem 1.5rem 7.5rem' }}>
         <div style={{ maxWidth: '680px', margin: '0 auto' }}>
           <Reveal style={{ textAlign: 'center', marginBottom: '1rem' }}>
             <Eyebrow>QUESTIONS</Eyebrow>
@@ -791,7 +791,7 @@ export default function LandingPage() {
       {/* ═══════════════════════════════════════════════════════════════════════
           SECTION 9 — FINAL CTA
       ═══════════════════════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: '#1C1C1A', padding: '8rem 1.5rem', textAlign: 'center' }}>
+      <section style={{ backgroundColor: '#1C1C1A', padding: '7.5rem 1.5rem', textAlign: 'center' }}>
         <div style={{ maxWidth: '600px', margin: '0 auto' }}>
           <Reveal>
             <h2

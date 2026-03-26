@@ -219,7 +219,7 @@ export default function Protocol() {
   }
 
   return (
-    <section style={{ backgroundColor: '#F7F3ED', padding: '4rem 1.5rem 6rem', marginTop: '-2px', position: 'relative', zIndex: 1 }}>
+    <section style={{ backgroundColor: '#F7F3ED', padding: '7.5rem 1.5rem 7.5rem', marginTop: '-2px', position: 'relative', zIndex: 1 }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
 
         {/* ── Heading ──────────────────────────────────────────────────────── */}
@@ -256,7 +256,7 @@ export default function Protocol() {
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
             gap: '0.5rem',
-            marginBottom: '1.5rem',
+            marginBottom: '1.25rem',
             opacity: tabVisible ? 1 : 0,
             transform: tabVisible ? 'translateY(0)' : 'translateY(14px)',
             transition: 'opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s',
