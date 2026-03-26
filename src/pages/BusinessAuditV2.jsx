@@ -747,10 +747,9 @@ export default function BusinessAuditV2() {
             BUSINESS AUDIT
           </p>
           <h1 style={{ margin: 0, position: 'relative', zIndex: 1 }}>
-            <span style={{
+            <span className="block font-dm" style={{
               display: 'block',
-              fontFamily: 'DM Sans, sans-serif',
-              fontSize: 'clamp(2rem, 5vw, 3.8rem)',
+              fontSize: 'clamp(3rem, 7vw, 7.5rem)',
               fontWeight: 700,
               letterSpacing: '-0.03em',
               color: '#F7F3ED',
@@ -758,27 +757,25 @@ export default function BusinessAuditV2() {
             }}>
               Free Business Audit.
             </span>
-            <span style={{
+            <span className="block font-dm" style={{
               display: 'block',
-              fontFamily: 'DM Sans, sans-serif',
-              fontSize: 'clamp(2rem, 5vw, 3.8rem)',
+              fontSize: 'clamp(3rem, 7vw, 7.5rem)',
               fontWeight: 700,
               letterSpacing: '-0.03em',
               color: 'rgba(143,175,159,0.9)',
-              lineHeight: 1.08,
-              marginTop: '0.06em',
+              lineHeight: 1.05,
+              marginTop: '0.03em',
             }}>
               Find the Leaks.
             </span>
           </h1>
-          <p style={{
-            fontFamily: 'DM Sans, sans-serif',
-            fontSize: '0.95rem',
+          <p className="font-dm" style={{
+            fontSize: 'clamp(1rem, 1.5vw, 1.15rem)',
             fontWeight: 300,
-            color: 'rgba(247,243,237,0.45)',
-            lineHeight: 1.65,
-            maxWidth: '44ch',
-            marginTop: '1.2rem',
+            color: 'rgba(232,224,208,0.6)',
+            lineHeight: 1.75,
+            maxWidth: '48ch',
+            marginTop: '2rem',
             position: 'relative',
             zIndex: 1,
           }}>
