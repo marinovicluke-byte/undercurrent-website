@@ -40,17 +40,35 @@ export default function ContactPage() {
       <Navbar ready isSubPage />
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} />
 
-      {/* Background wisps */}
+      {/* Video background */}
       <div aria-hidden="true" style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
-        <div style={{ position: 'absolute', width: '700px', height: '600px', left: '-200px', top: '10%', background: 'radial-gradient(ellipse, rgba(143,175,159,0.09) 0%, transparent 70%)', filter: 'blur(80px)' }} />
-        <div style={{ position: 'absolute', width: '600px', height: '500px', right: '-150px', top: '30%', background: 'radial-gradient(ellipse, rgba(143,175,159,0.06) 0%, transparent 70%)', filter: 'blur(100px)' }} />
-        <svg width="100%" height="100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" style={{ position: 'absolute', inset: 0 }}>
-          <defs><filter id="cWisp"><feGaussianBlur stdDeviation="20" /></filter></defs>
-          <g filter="url(#cWisp)">
-            <path d="M -100 300 C 200 150 600 400 900 250 S 1300 100 1600 320" stroke="rgba(143,175,159,0.18)" strokeWidth="90" fill="none" strokeLinecap="round" />
-            <path d="M -100 520 C 300 650 700 380 1050 540 S 1420 640 1700 460" stroke="rgba(143,175,159,0.11)" strokeWidth="110" fill="none" strokeLinecap="round" />
-          </g>
-        </svg>
+        <video
+          src="/hero-bg.mp4"
+          preload="auto"
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+            opacity: 0.35,
+            pointerEvents: 'none',
+          }}
+        />
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          pointerEvents: 'none',
+          background: [
+            'linear-gradient(to bottom, #1C1C1A 0%, transparent 28%)',
+            'linear-gradient(to top,    #1C1C1A 0%, transparent 32%)',
+          ].join(', '),
+        }} />
       </div>
 
       {/* Page content */}

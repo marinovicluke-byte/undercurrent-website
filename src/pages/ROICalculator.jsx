@@ -711,7 +711,7 @@ export default function ROICalculator() {
           <video
             ref={videoRef}
             src="/hero-bg.mp4"
-            preload="none"
+            preload="auto"
             autoPlay
             muted
             loop

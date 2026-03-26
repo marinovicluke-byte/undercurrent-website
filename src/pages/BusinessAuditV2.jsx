@@ -715,7 +715,7 @@ export default function BusinessAuditV2() {
           padding: '100px 24px 60px',
         }}>
           <video
-            preload="none"
+            preload="auto"
             autoPlay muted loop playsInline
             style={{
               position: 'absolute', inset: 0,

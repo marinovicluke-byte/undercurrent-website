@@ -662,6 +662,39 @@ export default function Process() {
           paddingRight: 'clamp(24px, 5vw, 72px)',
         }}
       >
+        <video
+          src="/hero-bg.mp4"
+          preload="auto"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+            opacity: 1,
+            pointerEvents: 'none',
+          }}
+        />
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            pointerEvents: 'none',
+            background: [
+              'linear-gradient(to bottom, #1C1C1A 0%, transparent 28%)',
+              'linear-gradient(to top,    #1C1C1A 0%, transparent 32%)',
+              'linear-gradient(to right,  #1C1C1A 0%, transparent 22%)',
+              'linear-gradient(to left,   #1C1C1A 0%, transparent 22%)',
+            ].join(', '),
+          }}
+        />
         <GrainOverlay opacity={0.045} />
         <ScrollSpotlight scrollPct={scrollPct} />
 

@@ -205,7 +205,7 @@ export default function About() {
         <video
           ref={videoRef}
           src="/hero-bg.mp4"
-          preload="none"
+          preload="auto"
           autoPlay
           muted
           loop

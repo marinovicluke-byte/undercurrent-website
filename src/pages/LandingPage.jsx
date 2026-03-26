@@ -191,7 +191,7 @@ export default function LandingPage() {
       <section
         style={{
           minHeight: '100vh',
-          background: 'linear-gradient(160deg, #1C1C1A 0%, #2a3028 30%, #3d4f42 55%, #8FAF9F 80%, #D4C9B0 100%)',
+          background: '#1C1C1A',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -201,14 +201,39 @@ export default function LandingPage() {
           textAlign: 'center',
         }}
       >
-        {/* Noise overlay */}
-        <div
+        {/* Video background */}
+        <video
+          src="/hero-bg.mp4"
+          preload="auto"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
           style={{
             position: 'absolute',
             inset: 0,
-            backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\' opacity=\'0.04\'/%3E%3C/svg%3E")',
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+            opacity: 1,
             pointerEvents: 'none',
-            opacity: 0.5,
+          }}
+        />
+        {/* Inward masking gradients */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            pointerEvents: 'none',
+            background: [
+              'linear-gradient(to bottom, #1C1C1A 0%, transparent 28%)',
+              'linear-gradient(to top,    #1C1C1A 0%, transparent 32%)',
+              'linear-gradient(to right,  #1C1C1A 0%, transparent 22%)',
+              'linear-gradient(to left,   #1C1C1A 0%, transparent 22%)',
+            ].join(', '),
           }}
         />
 

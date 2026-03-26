@@ -388,7 +388,7 @@ export default function Resources() {
         <video
           ref={videoRef}
           src="/hero-bg.mp4"
-          preload="none"
+          preload="auto"
           autoPlay muted loop playsInline
           style={{
             position: 'absolute', inset: 0,
