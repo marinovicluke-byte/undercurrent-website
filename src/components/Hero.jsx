@@ -50,7 +50,6 @@ export default function Hero({ ready = true }) {
       {/* Video background */}
       <video
         ref={videoRef}
-        src="/hero-bg.mp4"
         preload="auto"
         autoPlay
         muted
@@ -67,7 +66,9 @@ export default function Hero({ ready = true }) {
           opacity: 1,
           pointerEvents: 'none',
         }}
-      />
+      >
+        <source src="/hero-bg.mp4" type="video/mp4" />
+      </video>
 
       {/* Inward masking gradients — fade video into dark bg on all edges */}
       <div

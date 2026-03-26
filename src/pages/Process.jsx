@@ -662,7 +662,6 @@ export default function Process() {
         }}
       >
         <video
-          src="/hero-bg.mp4"
           preload="auto"
           autoPlay
           muted
@@ -679,7 +678,9 @@ export default function Process() {
             opacity: 1,
             pointerEvents: 'none',
           }}
-        />
+        >
+          <source src="/hero-bg.mp4" type="video/mp4" />
+        </video>
         <div
           aria-hidden="true"
           style={{

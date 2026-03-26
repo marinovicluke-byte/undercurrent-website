@@ -1013,7 +1013,6 @@ export default function Services() {
       >
         <video
           ref={videoRef}
-          src="/hero-bg.mp4"
           preload="auto"
           autoPlay muted loop playsInline
           style={{
@@ -1022,7 +1021,9 @@ export default function Services() {
             objectFit: 'cover', objectPosition: 'center',
             opacity: 1, pointerEvents: 'none',
           }}
-        />
+        >
+          <source src="/hero-bg.mp4" type="video/mp4" />
+        </video>
         <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Services' }]} />
         <div aria-hidden="true" style={{
           position: 'absolute', inset: 0, pointerEvents: 'none',

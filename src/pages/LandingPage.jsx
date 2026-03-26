@@ -203,7 +203,6 @@ export default function LandingPage() {
       >
         {/* Video background */}
         <video
-          src="/hero-bg.mp4"
           preload="auto"
           autoPlay
           muted
@@ -220,7 +219,9 @@ export default function LandingPage() {
             opacity: 1,
             pointerEvents: 'none',
           }}
-        />
+        >
+          <source src="/hero-bg.mp4" type="video/mp4" />
+        </video>
         {/* Inward masking gradients */}
         <div
           aria-hidden="true"

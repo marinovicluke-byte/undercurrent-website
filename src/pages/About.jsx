@@ -198,7 +198,6 @@ export default function About() {
       >
         <video
           ref={videoRef}
-          src="/hero-bg.mp4"
           preload="auto"
           autoPlay
           muted
@@ -210,7 +209,9 @@ export default function About() {
             objectFit: 'cover', objectPosition: 'center',
             opacity: 1, pointerEvents: 'none',
           }}
-        />
+        >
+          <source src="/hero-bg.mp4" type="video/mp4" />
+        </video>
         <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
         <div aria-hidden="true" style={{
           position: 'absolute', inset: 0, pointerEvents: 'none',

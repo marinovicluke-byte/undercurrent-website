@@ -26,56 +26,6 @@ export default function Breadcrumb({ items }) {
     }
   }, [items])
 
-  return (
-    <nav
-      aria-label="Breadcrumb"
-      style={{
-        position: 'relative',
-        zIndex: 20,
-        padding: '6.5rem 1.5rem 0',
-        maxWidth: '1100px',
-        margin: '0 auto',
-      }}
-    >
-      <ol
-        className="font-mono"
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '0.4rem',
-          listStyle: 'none',
-          margin: 0,
-          padding: 0,
-          fontSize: '0.55rem',
-          letterSpacing: '0.14em',
-        }}
-      >
-        {items.map((item, i) => (
-          <li key={item.label} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-            {i > 0 && (
-              <span style={{ color: 'rgba(143,175,159,0.25)' }}>/</span>
-            )}
-            {item.href ? (
-              <a
-                href={item.href}
-                style={{
-                  color: 'rgba(143,175,159,0.45)',
-                  textDecoration: 'none',
-                  transition: 'color 0.2s',
-                }}
-                onMouseEnter={e => { e.currentTarget.style.color = '#8FAF9F' }}
-                onMouseLeave={e => { e.currentTarget.style.color = 'rgba(143,175,159,0.45)' }}
-              >
-                {item.label}
-              </a>
-            ) : (
-              <span style={{ color: 'rgba(212,201,176,0.35)' }}>
-                {item.label}
-              </span>
-            )}
-          </li>
-        ))}
-      </ol>
-    </nav>
-  )
+  // Visually hidden — SEO structured data is injected via JSON-LD above
+  return null
 }

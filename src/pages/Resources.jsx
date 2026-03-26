@@ -384,7 +384,6 @@ export default function Resources() {
       >
         <video
           ref={videoRef}
-          src="/hero-bg.mp4"
           preload="auto"
           autoPlay muted loop playsInline
           style={{
@@ -393,7 +392,9 @@ export default function Resources() {
             objectFit: 'cover', objectPosition: 'center',
             opacity: 0.35, pointerEvents: 'none',
           }}
-        />
+        >
+          <source src="/hero-bg.mp4" type="video/mp4" />
+        </video>
         <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Resources' }]} />
         <div aria-hidden="true" style={{
           position: 'absolute', inset: 0, pointerEvents: 'none',

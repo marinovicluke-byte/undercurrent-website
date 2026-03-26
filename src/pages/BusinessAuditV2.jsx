@@ -710,7 +710,7 @@ export default function BusinessAuditV2() {
           alignItems: 'center',
           justifyContent: 'center',
           textAlign: 'center',
-          padding: '100px 24px 60px',
+          padding: '100px 24px 120px',
         }}>
           <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Business Audit' }]} />
           <video

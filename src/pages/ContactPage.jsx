@@ -42,7 +42,6 @@ export default function ContactPage() {
       {/* Video background */}
       <div aria-hidden="true" style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
         <video
-          src="/hero-bg.mp4"
           preload="auto"
           autoPlay
           muted
@@ -58,7 +57,9 @@ export default function ContactPage() {
             opacity: 0.35,
             pointerEvents: 'none',
           }}
-        />
+        >
+          <source src="/hero-bg.mp4" type="video/mp4" />
+        </video>
         <div style={{
           position: 'absolute',
           inset: 0,

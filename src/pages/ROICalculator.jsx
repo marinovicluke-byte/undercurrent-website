@@ -704,7 +704,6 @@ export default function ROICalculator() {
         >
           <video
             ref={videoRef}
-            src="/hero-bg.mp4"
             preload="auto"
             autoPlay
             muted
@@ -716,7 +715,9 @@ export default function ROICalculator() {
               objectFit: 'cover', objectPosition: 'center',
               opacity: 1, pointerEvents: 'none',
             }}
-          />
+          >
+            <source src="/hero-bg.mp4" type="video/mp4" />
+          </video>
           <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'ROI Calculator' }]} />
           <div aria-hidden="true" style={{
             position: 'absolute', inset: 0, pointerEvents: 'none',
