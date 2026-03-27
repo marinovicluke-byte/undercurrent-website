@@ -1,6 +1,6 @@
 import { marked } from 'marked'
 
-// Configure marked to generate heading IDs for deep linking
+// Configure marked to generate heading IDs and handle external links
 marked.use({
   renderer: {
     heading({ tokens, depth }) {
@@ -8,9 +8,55 @@ marked.use({
       const id = text.toLowerCase().replace(/[^\w]+/g, '-').replace(/(^-|-$)/g, '')
       const Tag = `h${depth}`
       return `<${Tag} id="${id}">${this.parser.parseInline(tokens)}</${Tag}>\n`
+    },
+    link({ href, title, tokens }) {
+      const text = this.parser.parseInline(tokens)
+      const isExternal = href && href.startsWith('http') && !href.includes('undercurrentautomations')
+      const attrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : ''
+      const titleAttr = title ? ` title="${title}"` : ''
+      return `<a href="${href}"${titleAttr}${attrs}>${text}</a>`
+    },
+    table({ header, rows }) {
+      const headerCells = header.map(cell => `<th>${this.parser.parseInline(cell.tokens)}</th>`).join('')
+      const bodyRows = rows.map(row =>
+        `<tr>${row.map(cell => `<td>${this.parser.parseInline(cell.tokens)}</td>`).join('')}</tr>`
+      ).join('\n')
+      return `<div class="table-scroll-wrapper"><table><thead><tr>${headerCells}</tr></thead><tbody>${bodyRows}</tbody></table></div>\n`
     }
   }
 })
+
+function stripHtml(html) {
+  return html.replace(/<[^>]+>/g, '').trim()
+}
+
+function extractFaqFromHtml(html) {
+  const items = []
+  const faqMatch = html.match(/<h2[^>]*>[^<]*(?:FAQ|Frequently Asked)[^<]*<\/h2>([\s\S]*?)(?=<h2[^>]*>|$)/i)
+  if (!faqMatch) return items
+
+  const section = faqMatch[1]
+  const pairs = [...section.matchAll(/<h3[^>]*>([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/gi)]
+  for (const match of pairs) {
+    items.push({
+      question: stripHtml(match[1]),
+      answer: stripHtml(match[2]),
+    })
+  }
+  return items
+}
+
+function extractHowToSteps(html) {
+  const steps = []
+  const matches = [...html.matchAll(/<h3[^>]*>\s*(?:Step\s*\d+[:.)\s]*)([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/gi)]
+  for (const match of matches) {
+    steps.push({
+      name: stripHtml(match[1]),
+      text: stripHtml(match[2]),
+    })
+  }
+  return steps
+}
 
 // Load all .md files as raw strings at build time
 const articleFiles = import.meta.glob('../content/articles/*.md', {
@@ -59,7 +105,10 @@ export function getArticleBySlug(slug) {
   const article = articles.find(a => a.slug === slug)
   if (!article) return null
   const { _body, ...meta } = article
-  return { ...meta, html: marked.parse(_body) }
+  const html = marked.parse(_body)
+  const faqItems = extractFaqFromHtml(html)
+  const howToSteps = extractHowToSteps(html)
+  return { ...meta, html, faqItems, howToSteps }
 }
 
 export function getArticlesByCluster(cluster) {

@@ -113,6 +113,32 @@ export default function MarkdownRenderer({ html }) {
           line-height: 1.6;
         }
 
+        .article-body .table-scroll-wrapper {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          margin: 1.5rem 0;
+        }
+
+        .article-body table {
+          width: 100%;
+          border-collapse: collapse;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.95rem;
+          color: rgba(232, 224, 208, 0.75);
+        }
+        .article-body th {
+          text-align: left;
+          font-weight: 500;
+          color: #F7F3ED;
+          padding: 0.75rem 1rem;
+          border-bottom: 1px solid rgba(143, 175, 159, 0.2);
+          white-space: nowrap;
+        }
+        .article-body td {
+          padding: 0.6rem 1rem;
+          border-bottom: 1px solid rgba(143, 175, 159, 0.06);
+        }
+
         .article-body img {
           width: 100%;
           border-radius: 0.75rem;

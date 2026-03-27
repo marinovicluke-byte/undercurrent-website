@@ -34,6 +34,44 @@ function ArticleHero({ slug }) {
   )
 }
 
+function AuthorBox() {
+  return (
+    <Reveal>
+      <aside style={{
+        maxWidth: '680px',
+        margin: '3rem auto 0',
+        padding: '1.5rem',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '1.25rem',
+        borderTop: '1px solid rgba(143,175,159,0.1)',
+      }}>
+        <div style={{ flex: 1 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem' }}>
+            <span className="font-mono" style={{ fontSize: '0.55rem', letterSpacing: '0.16em', color: 'rgba(143,175,159,0.5)' }}>
+              WRITTEN BY
+            </span>
+          </div>
+          <Link to="/about" style={{ textDecoration: 'none' }}>
+            <span className="font-dm" style={{ fontSize: '1rem', fontWeight: 500, color: '#F7F3ED' }}>
+              Luke Marinovic
+            </span>
+          </Link>
+          <p className="font-dm" style={{
+            fontSize: '0.85rem',
+            fontWeight: 300,
+            color: 'rgba(212,201,176,0.45)',
+            lineHeight: 1.6,
+            marginTop: '0.35rem',
+          }}>
+            Founder of UnderCurrent. Builds AI automation systems for small businesses across Australia.
+          </p>
+        </div>
+      </aside>
+    </Reveal>
+  )
+}
+
 function RelatedArticles({ cluster, currentSlug }) {
   const related = getArticlesByCluster(cluster).filter(a => a.slug !== currentSlug).slice(0, 3)
   if (related.length === 0) return null
@@ -144,6 +182,75 @@ function formatDate(dateStr) {
   return d.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' })
 }
 
+function buildJsonLdSchemas(article, canonical) {
+  // Article schema (existing, enhanced)
+  const articleLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.description,
+    author: {
+      '@type': 'Person',
+      name: article.author || 'Luke Marinovic',
+      url: `${DOMAIN}/about`,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'UnderCurrent',
+      url: DOMAIN,
+      logo: { '@type': 'ImageObject', url: `${DOMAIN}/favicon.svg` },
+    },
+    datePublished: article.date,
+    dateModified: article.date,
+    keywords: article.keyword,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+    image: `${DOMAIN}/articles/${article.slug}/hero.jpg`,
+    wordCount: article.html ? article.html.replace(/<[^>]+>/g, '').trim().split(/\s+/).length : undefined,
+  }
+
+  // BreadcrumbList schema
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: DOMAIN },
+      { '@type': 'ListItem', position: 2, name: 'Resources', item: `${DOMAIN}/resources` },
+      { '@type': 'ListItem', position: 3, name: article.title, item: canonical },
+    ],
+  }
+
+  const schemas = [articleLd, breadcrumbLd]
+
+  // FAQ schema (auto-parsed from content)
+  if (article.faqItems && article.faqItems.length > 0) {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: article.faqItems.map(item => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: { '@type': 'Answer', text: item.answer },
+      })),
+    })
+  }
+
+  // HowTo schema (auto-parsed from step headings)
+  if (article.howToSteps && article.howToSteps.length > 0) {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: article.title,
+      step: article.howToSteps.map((step, i) => ({
+        '@type': 'HowToStep',
+        name: step.name || `Step ${i + 1}`,
+        text: step.text,
+      })),
+    })
+  }
+
+  return schemas
+}
+
 export default function Article() {
   const { slug } = useParams()
   const article = getArticleBySlug(slug)
@@ -151,22 +258,16 @@ export default function Article() {
   if (!article) return <Navigate to="/resources" replace />
 
   const canonical = `${DOMAIN}/resources/${article.slug}`
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: article.title,
-    description: article.description,
-    author: { '@type': 'Person', name: article.author || 'Luke Marinovic' },
-    publisher: {
-      '@type': 'Organization',
-      name: 'UnderCurrent',
-      logo: { '@type': 'ImageObject', url: `${DOMAIN}/favicon.svg` },
-    },
-    datePublished: article.date,
-    dateModified: article.date,
-    keywords: article.keyword,
-    mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
-  }
+  const jsonLdSchemas = buildJsonLdSchemas(article, canonical)
+
+  const extraMeta = [
+    { property: 'og:type', content: 'article' },
+    { property: 'og:site_name', content: 'UnderCurrent' },
+    { property: 'article:published_time', content: article.date },
+    { property: 'article:author', content: article.author || 'Luke Marinovic' },
+    { property: 'article:section', content: CLUSTER_LABELS[article.cluster] || article.cluster },
+    { property: 'article:tag', content: article.keyword },
+  ]
 
   return (
     <div style={{ backgroundColor: '#1C1C1A', minHeight: '100vh', overflowX: 'hidden' }}>
@@ -174,7 +275,9 @@ export default function Article() {
         title={`${article.title} | UnderCurrent`}
         description={article.description}
         canonical={canonical}
-        jsonLd={jsonLd}
+        ogImage={`${DOMAIN}/articles/${article.slug}/hero.jpg`}
+        jsonLd={jsonLdSchemas}
+        extraMeta={extraMeta}
       />
       <ScrollProgressBar />
       <Navbar ready isSubPage />
@@ -256,6 +359,8 @@ export default function Article() {
             <MarkdownRenderer html={article.html} />
           </div>
         </Reveal>
+
+        <AuthorBox />
       </article>
 
       <RelatedArticles cluster={article.cluster} currentSlug={article.slug} />

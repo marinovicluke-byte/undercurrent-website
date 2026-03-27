@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 
 /**
  * Sets document title, meta description, canonical URL, og:* and twitter:* tags,
- * and injects a JSON-LD <script> tag — all imperatively so no extra dependency is needed.
+ * and injects JSON-LD <script> tags — all imperatively so no extra dependency is needed.
  *
  * Props:
  *   title        – Full <title> string
@@ -11,7 +11,8 @@ import { useEffect } from 'react'
  *   ogTitle      – og:title (defaults to title)
  *   ogDescription– og:description (defaults to description)
  *   ogImage      – og:image URL
- *   jsonLd       – object to serialize as application/ld+json (optional)
+ *   jsonLd       – object or array of objects to serialize as application/ld+json
+ *   extraMeta    – array of { property|name, content } for additional meta tags
  */
 export default function PageHead({
   title,
@@ -21,6 +22,7 @@ export default function PageHead({
   ogDescription,
   ogImage = 'https://www.undercurrentautomations.com/og-image.jpg',
   jsonLd,
+  extraMeta,
 }) {
   useEffect(() => {
     // Title
@@ -63,21 +65,46 @@ export default function PageHead({
       setMeta('meta[name="twitter:image"]', 'name=twitter:image', ogImage)
     }
 
+    setMeta('meta[name="twitter:card"]', 'name=twitter:card', 'summary_large_image')
+
     if (canonical) {
       setLink('canonical', canonical)
       setMeta('meta[property="og:url"]', 'property=og:url', canonical)
     }
 
-    // JSON-LD
-    if (jsonLd) {
-      const existing = document.getElementById('page-json-ld')
-      if (existing) existing.remove()
+    // Extra meta tags (article:published_time, article:author, etc.)
+    const extraEls = []
+    if (extraMeta) {
+      for (const meta of extraMeta) {
+        const attr = meta.property ? 'property' : 'name'
+        const val = meta.property || meta.name
+        const selector = `meta[${attr}="${val}"]`
+        let el = document.querySelector(selector)
+        if (!el) {
+          el = document.createElement('meta')
+          el.setAttribute(attr, val)
+          document.head.appendChild(el)
+          extraEls.push(el)
+        }
+        el.setAttribute('content', meta.content)
+      }
+    }
+
+    // JSON-LD — support single object or array of objects
+    const ldItems = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : []
+    // Remove any existing page JSON-LD scripts
+    document.querySelectorAll('script[data-page-ld]').forEach(el => el.remove())
+    const existing = document.getElementById('page-json-ld')
+    if (existing) existing.remove()
+
+    const ldScripts = ldItems.filter(Boolean).map((ld, i) => {
       const script = document.createElement('script')
       script.type = 'application/ld+json'
-      script.id = 'page-json-ld'
-      script.textContent = JSON.stringify(jsonLd)
+      script.setAttribute('data-page-ld', '')
+      script.textContent = JSON.stringify(ld)
       document.head.appendChild(script)
-    }
+      return script
+    })
 
     // Cleanup — restore index.html defaults so stale SEO data doesn't persist on navigation
     return () => {
@@ -97,12 +124,10 @@ export default function PageHead({
       resetMeta('meta[property="og:url"]', 'content', 'https://www.undercurrentautomations.com/')
       const link = document.querySelector('link[rel="canonical"]')
       if (link) link.setAttribute('href', 'https://www.undercurrentautomations.com/')
-      if (jsonLd) {
-        const el = document.getElementById('page-json-ld')
-        if (el) el.remove()
-      }
+      ldScripts.forEach(s => s.remove())
+      extraEls.forEach(el => el.remove())
     }
-  }, [title, description, canonical, ogTitle, ogDescription, ogImage, jsonLd])
+  }, [title, description, canonical, ogTitle, ogDescription, ogImage, jsonLd, extraMeta])
 
   return null
 }

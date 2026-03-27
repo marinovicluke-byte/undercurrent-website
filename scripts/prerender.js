@@ -19,7 +19,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST = join(__dirname, '..', 'dist')
 const DOMAIN = 'https://www.undercurrentautomations.com'
 
-// Configure marked to generate heading IDs (matches client-side config)
+// Configure marked to generate heading IDs and handle external links (matches client-side config)
 marked.use({
   renderer: {
     heading({ tokens, depth }) {
@@ -27,11 +27,51 @@ marked.use({
       const id = text.toLowerCase().replace(/[^\w]+/g, '-').replace(/(^-|-$)/g, '')
       const Tag = `h${depth}`
       return `<${Tag} id="${id}">${this.parser.parseInline(tokens)}</${Tag}>\n`
+    },
+    link({ href, title, tokens }) {
+      const text = this.parser.parseInline(tokens)
+      const isExternal = href && href.startsWith('http') && !href.includes('undercurrentautomations')
+      const attrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : ''
+      const titleAttr = title ? ` title="${title}"` : ''
+      return `<a href="${href}"${titleAttr}${attrs}>${text}</a>`
+    },
+    table({ header, rows }) {
+      const headerCells = header.map(cell => `<th>${this.parser.parseInline(cell.tokens)}</th>`).join('')
+      const bodyRows = rows.map(row =>
+        `<tr>${row.map(cell => `<td>${this.parser.parseInline(cell.tokens)}</td>`).join('')}</tr>`
+      ).join('\n')
+      return `<div class="table-scroll-wrapper"><table><thead><tr>${headerCells}</tr></thead><tbody>${bodyRows}</tbody></table></div>\n`
     }
   }
 })
 
 const ARTICLES_DIR = join(__dirname, '..', 'src', 'content', 'articles')
+const CLUSTER_LABELS = { automation: 'Automation', ai: 'AI for Business', growth: 'Business Growth' }
+
+function stripHtml(html) {
+  return html.replace(/<[^>]+>/g, '').trim()
+}
+
+function extractFaqFromHtml(html) {
+  const items = []
+  const faqMatch = html.match(/<h2[^>]*>[^<]*(?:FAQ|Frequently Asked)[^<]*<\/h2>([\s\S]*?)(?=<h2[^>]*>|$)/i)
+  if (!faqMatch) return items
+  const section = faqMatch[1]
+  const pairs = [...section.matchAll(/<h3[^>]*>([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/gi)]
+  for (const match of pairs) {
+    items.push({ question: stripHtml(match[1]), answer: stripHtml(match[2]) })
+  }
+  return items
+}
+
+function extractHowToSteps(html) {
+  const steps = []
+  const matches = [...html.matchAll(/<h3[^>]*>\s*(?:Step\s*\d+[:.)\s]*)([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/gi)]
+  for (const match of matches) {
+    steps.push({ name: stripHtml(match[1]), text: stripHtml(match[2]) })
+  }
+  return steps
+}
 
 function loadArticles() {
   if (!existsSync(ARTICLES_DIR)) return []
@@ -40,30 +80,95 @@ function loadArticles() {
     const raw = readFileSync(join(ARTICLES_DIR, file), 'utf-8')
     const { data, content } = matter(raw)
     const html = marked.parse(content)
-    return { frontmatter: data, html }
+    const faqItems = extractFaqFromHtml(html)
+    const howToSteps = extractHowToSteps(html)
+    return { frontmatter: data, html, faqItems, howToSteps }
   }).sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
 }
 
-function generateArticleRoutes(articles) {
-  return articles.map(({ frontmatter }) => ({
-    path: `/resources/${frontmatter.slug}`,
-    title: `${frontmatter.title} | UnderCurrent`,
-    description: frontmatter.description,
-    jsonLd: {
+function buildArticleSchemas(frontmatter, html, faqItems, howToSteps) {
+  const canonical = `${DOMAIN}/resources/${frontmatter.slug}`
+  const wordCount = html ? stripHtml(html).split(/\s+/).length : undefined
+
+  const schemas = [
+    // Article schema
+    {
       '@context': 'https://schema.org',
       '@type': 'Article',
       headline: frontmatter.title,
       description: frontmatter.description,
-      author: { '@type': 'Person', name: frontmatter.author || 'Luke Marinovic' },
+      author: {
+        '@type': 'Person',
+        name: frontmatter.author || 'Luke Marinovic',
+        url: `${DOMAIN}/about`,
+      },
       publisher: {
         '@type': 'Organization',
         name: 'UnderCurrent',
+        url: DOMAIN,
         logo: { '@type': 'ImageObject', url: `${DOMAIN}/favicon.svg` },
       },
       datePublished: frontmatter.date,
       dateModified: frontmatter.date,
       keywords: frontmatter.keyword,
-      mainEntityOfPage: { '@type': 'WebPage', '@id': `${DOMAIN}/resources/${frontmatter.slug}` },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+      image: `${DOMAIN}/articles/${frontmatter.slug}/hero.jpg`,
+      wordCount,
+    },
+    // BreadcrumbList schema
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: DOMAIN },
+        { '@type': 'ListItem', position: 2, name: 'Resources', item: `${DOMAIN}/resources` },
+        { '@type': 'ListItem', position: 3, name: frontmatter.title, item: canonical },
+      ],
+    },
+  ]
+
+  // FAQ schema
+  if (faqItems.length > 0) {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map(item => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: { '@type': 'Answer', text: item.answer },
+      })),
+    })
+  }
+
+  // HowTo schema
+  if (howToSteps.length > 0) {
+    schemas.push({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: frontmatter.title,
+      step: howToSteps.map((step, i) => ({
+        '@type': 'HowToStep',
+        name: step.name || `Step ${i + 1}`,
+        text: step.text,
+      })),
+    })
+  }
+
+  return schemas
+}
+
+function generateArticleRoutes(articles) {
+  return articles.map(({ frontmatter, html, faqItems, howToSteps }) => ({
+    path: `/resources/${frontmatter.slug}`,
+    title: `${frontmatter.title} | UnderCurrent`,
+    description: frontmatter.description,
+    jsonLd: buildArticleSchemas(frontmatter, html, faqItems, howToSteps),
+    articleMeta: {
+      date: frontmatter.date,
+      author: frontmatter.author || 'Luke Marinovic',
+      section: CLUSTER_LABELS[frontmatter.cluster] || frontmatter.cluster,
+      keyword: frontmatter.keyword,
+      slug: frontmatter.slug,
     },
   }))
 }
@@ -154,7 +259,6 @@ const ROUTES = [
           name: 'UnderCurrent',
           publisher: { '@id': `${DOMAIN}/#business` },
         },
-        // FAQPage schema is injected dynamically by FAQ.jsx component
       ],
     },
   },
@@ -222,7 +326,9 @@ const ROUTES = [
 
 function injectMeta(html, route) {
   const canonical = `${DOMAIN}${route.path === '/' ? '' : route.path}`
-  const ogImage = `${DOMAIN}/og-image.jpg`
+  const ogImage = route.articleMeta
+    ? `${DOMAIN}/articles/${route.articleMeta.slug}/hero.jpg`
+    : `${DOMAIN}/og-image.jpg`
 
   // Replace <title>
   html = html.replace(
@@ -259,6 +365,10 @@ function injectMeta(html, route) {
     /<meta property="og:description" content="[^"]*"\s*\/?>/,
     `<meta property="og:description" content="${route.description}" />`
   )
+  html = html.replace(
+    /<meta property="og:image" content="[^"]*"\s*\/?>/,
+    `<meta property="og:image" content="${ogImage}" />`
+  )
 
   // Replace Twitter tags
   html = html.replace(
@@ -269,12 +379,44 @@ function injectMeta(html, route) {
     /<meta name="twitter:description" content="[^"]*"\s*\/?>/,
     `<meta name="twitter:description" content="${route.description}" />`
   )
+  html = html.replace(
+    /<meta name="twitter:image" content="[^"]*"\s*\/?>/,
+    `<meta name="twitter:image" content="${ogImage}" />`
+  )
 
-  // Replace JSON-LD if route has custom schema
+  // Inject twitter:card if not present
+  if (!html.includes('twitter:card')) {
+    html = html.replace('</head>', '    <meta name="twitter:card" content="summary_large_image" />\n  </head>')
+  }
+
+  // Article-specific OG meta tags
+  if (route.articleMeta) {
+    const am = route.articleMeta
+    // Replace og:type from "website" to "article"
+    html = html.replace(
+      /<meta property="og:type" content="[^"]*"\s*\/?>/,
+      `<meta property="og:type" content="article" />`
+    )
+    const articleMetaTags = [
+      `<meta property="og:site_name" content="UnderCurrent" />`,
+      `<meta property="article:published_time" content="${am.date}" />`,
+      `<meta property="article:author" content="${am.author}" />`,
+      `<meta property="article:section" content="${am.section}" />`,
+      `<meta property="article:tag" content="${am.keyword}" />`,
+    ].join('\n    ')
+    html = html.replace('</head>', `    ${articleMetaTags}\n  </head>`)
+  }
+
+  // Replace JSON-LD — support single object or array of schemas
   if (route.jsonLd) {
+    const ldArray = Array.isArray(route.jsonLd) ? route.jsonLd : [route.jsonLd]
+    const ldScripts = ldArray
+      .map(ld => `<script type="application/ld+json">\n    ${JSON.stringify(ld)}\n    </script>`)
+      .join('\n    ')
+
     html = html.replace(
       /<script type="application\/ld\+json">[\s\S]*?<\/script>/,
-      `<script type="application/ld+json">\n    ${JSON.stringify(route.jsonLd)}\n    </script>`
+      ldScripts
     )
   }
 
