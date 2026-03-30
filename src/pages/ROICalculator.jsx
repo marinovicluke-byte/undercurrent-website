@@ -544,6 +544,25 @@ export default function ROICalculator() {
         title="ROI Calculator - Automation Savings | UnderCurrent"
         description="See exactly how much time and money you're leaving on the table. Calculate your automation ROI in seconds."
         canonical="https://www.undercurrentautomations.com/roi"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'WebApplication',
+          name: 'AI Automation ROI Calculator',
+          description: 'Free calculator to estimate how much time and money workflow automation could save your business.',
+          url: 'https://www.undercurrentautomations.com/roi',
+          applicationCategory: 'BusinessApplication',
+          operatingSystem: 'Web',
+          offers: {
+            '@type': 'Offer',
+            price: '0',
+            priceCurrency: 'AUD',
+          },
+          provider: {
+            '@type': 'Organization',
+            '@id': 'https://www.undercurrentautomations.com/#business',
+            name: 'UnderCurrent',
+          },
+        }}
       />
 
       <style>{`

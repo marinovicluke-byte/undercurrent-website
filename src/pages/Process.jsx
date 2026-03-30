@@ -644,6 +644,22 @@ export default function Process() {
         title="How It Works - AI Automation Process | UnderCurrent"
         description="Three precise steps: Map your workflows, Build automations that fit, let them Flow around the clock."
         canonical="https://www.undercurrentautomations.com/process"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'HowTo',
+          name: 'How UnderCurrent AI Automation Works',
+          description: 'Three precise steps to automate your small business operations: Map your workflows, Build custom automations, let them Flow continuously.',
+          step: [
+            { '@type': 'HowToStep', name: 'Map', text: 'We map your existing workflows, identify bottlenecks, and design automation blueprints tailored to your operations.' },
+            { '@type': 'HowToStep', name: 'Build', text: 'We build custom AI-powered automations that fit your business, integrating with your existing tools and processes.' },
+            { '@type': 'HowToStep', name: 'Flow', text: 'Your automations run around the clock, silently handling operations while we monitor, maintain, and optimise continuously.' },
+          ],
+          provider: {
+            '@type': 'Organization',
+            '@id': 'https://www.undercurrentautomations.com/#business',
+            name: 'UnderCurrent',
+          },
+        }}
       />
       <ScrollProgressBar />
       <Navbar isSubPage={true} />

@@ -373,6 +373,18 @@ export default function Resources() {
         title="Resources - AI & Automation Guides | UnderCurrent"
         description="Guides, playbooks, and lessons from the field. Everything we've learned building AI automation for small businesses, organised by topic."
         canonical="https://www.undercurrentautomations.com/resources"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'UnderCurrent Resources',
+          description: 'Guides, playbooks, and lessons from the field. AI automation knowledge for Australian small businesses.',
+          url: 'https://www.undercurrentautomations.com/resources',
+          provider: {
+            '@type': 'Organization',
+            '@id': 'https://www.undercurrentautomations.com/#business',
+            name: 'UnderCurrent',
+          },
+        }}
       />
       <ScrollProgressBar />
       <Navbar ready isSubPage />

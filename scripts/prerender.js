@@ -276,11 +276,31 @@ const ROUTES = [
     path: '/process',
     title: 'How It Works - AI Automation Process | UnderCurrent',
     description: 'How UnderCurrent works: we map your workflows, build custom AI automation, and maintain your systems continuously. Three steps to operational freedom.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'How UnderCurrent AI Automation Works',
+      description: 'Three precise steps to automate your small business operations: Map your workflows, Build custom automations, let them Flow continuously.',
+      step: [
+        { '@type': 'HowToStep', name: 'Map', text: 'We map your existing workflows, identify bottlenecks, and design automation blueprints tailored to your operations.' },
+        { '@type': 'HowToStep', name: 'Build', text: 'We build custom AI-powered automations that fit your business, integrating with your existing tools and processes.' },
+        { '@type': 'HowToStep', name: 'Flow', text: 'Your automations run around the clock, silently handling operations while we monitor, maintain, and optimise continuously.' },
+      ],
+      provider: { '@type': 'Organization', '@id': `${DOMAIN}/#business`, name: 'UnderCurrent' },
+    },
   },
   {
     path: '/contact',
     title: 'Contact Us - AI Automation Enquiry | UnderCurrent',
     description: 'Get in touch with UnderCurrent. We typically respond within one business day.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      name: 'Contact UnderCurrent',
+      description: 'Get in touch with UnderCurrent for AI automation enquiries. We typically respond within one business day.',
+      url: `${DOMAIN}/contact`,
+      mainEntity: { '@type': 'Organization', '@id': `${DOMAIN}/#business`, name: 'UnderCurrent', email: 'luke@undercurrentautomations.com' },
+    },
   },
   {
     path: '/stats',
@@ -291,6 +311,17 @@ const ROUTES = [
     path: '/roi',
     title: 'ROI Calculator - How Much Could You Save? | UnderCurrent',
     description: 'Calculate how much time and money workflow automation could save your business. Free, instant ROI estimate.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'WebApplication',
+      name: 'AI Automation ROI Calculator',
+      description: 'Free calculator to estimate how much time and money workflow automation could save your business.',
+      url: `${DOMAIN}/roi`,
+      applicationCategory: 'BusinessApplication',
+      operatingSystem: 'Web',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'AUD' },
+      provider: { '@type': 'Organization', '@id': `${DOMAIN}/#business`, name: 'UnderCurrent' },
+    },
   },
   {
     path: '/audit',
@@ -306,11 +337,27 @@ const ROUTES = [
     path: '/case-study',
     title: 'Case Studies - AI Automation Results | UnderCurrent',
     description: 'See how we\'ve helped small businesses reclaim their time and scale their operations with AI automation. Real businesses, real results.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'UnderCurrent Case Studies',
+      description: 'Real results from AI automation for small businesses. See how we have helped businesses reclaim their time and scale operations.',
+      url: `${DOMAIN}/case-study`,
+      provider: { '@type': 'Organization', '@id': `${DOMAIN}/#business`, name: 'UnderCurrent' },
+    },
   },
   {
     path: '/resources',
     title: 'Resources - AI & Automation Guides | UnderCurrent',
     description: 'Guides, playbooks, and lessons from the field. Everything we\'ve learned building AI automation for small businesses, packaged for you.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'UnderCurrent Resources',
+      description: 'Guides, playbooks, and lessons from the field. AI automation knowledge for Australian small businesses.',
+      url: `${DOMAIN}/resources`,
+      provider: { '@type': 'Organization', '@id': `${DOMAIN}/#business`, name: 'UnderCurrent' },
+    },
   },
   {
     path: '/privacy',
@@ -446,6 +493,139 @@ function generateSitemap(allRoutes) {
   console.log(`  ✓ sitemap.xml → ${allRoutes.filter(r => r.path !== '/lp').length} URLs (lastmod: ${today})`)
 }
 
+function generateLlmsTxt(articles) {
+  const articleLines = articles.map(({ frontmatter }) =>
+    `- [${frontmatter.title}](${DOMAIN}/resources/${frontmatter.slug}): ${frontmatter.description}`
+  ).join('\n')
+
+  const llms = `# UnderCurrent Automations
+
+> AI automation studio for small businesses in Melbourne, Australia.
+
+UnderCurrent maps small business workflows and builds custom AI-powered systems that run operations silently, continuously, and precisely. We serve Australian small businesses with 1-50 employees.
+
+## Primary Services
+
+- AI Business Automation: End-to-end workflow automation using AI agents and custom integrations
+- Workflow Design: Mapping existing processes, identifying bottlenecks, and designing automation blueprints
+- Lead Management: Automated lead sourcing, personalised outreach, follow-up sequences, and CRM pipeline automation
+- Content Systems: Content creation pipelines for blog posts, social content, newsletters, and multi-channel distribution
+- Customer Experience Automation: Onboarding, satisfaction surveys, review requests, referral programs, and re-engagement flows
+
+## Key Pages
+
+- [Homepage](${DOMAIN}/): AI business automation for Melbourne small businesses
+- [Services](${DOMAIN}/services): Full list of automation services
+- [How It Works](${DOMAIN}/process): Our three-step process, Map, Build, Flow
+- [About](${DOMAIN}/about): About UnderCurrent and founder Luke Marinovic
+- [Case Studies](${DOMAIN}/case-study): Real results from AI automation clients
+- [Resources](${DOMAIN}/resources): Guides, playbooks, and lessons from the field
+- [ROI Calculator](${DOMAIN}/roi): Free tool to estimate automation savings
+- [Free Business Audit](${DOMAIN}/audit): AI-powered audit of your business operations
+- [Contact](${DOMAIN}/contact): Get in touch
+
+## Published Articles
+
+${articleLines || '(Articles coming soon)'}
+
+## Contact
+
+- Email: luke@undercurrentautomations.com
+- Website: ${DOMAIN}
+- Instagram: https://www.instagram.com/undercurrent.automations/
+- Facebook: https://www.facebook.com/profile.php?id=61578553167947
+- LinkedIn: https://www.linkedin.com/company/undercurrent-automations
+
+## Geographic Scope
+
+Serves Australian small businesses, 1-50 employees. Based in Melbourne, VIC, Australia.
+`
+  writeFileSync(join(DIST, 'llms.txt'), llms)
+  console.log(`  ✓ llms.txt → ${articles.length} articles`)
+}
+
+function generateLlmsFullTxt(articles) {
+  const articleSections = articles.map(({ frontmatter, html }) => {
+    const plainText = stripHtml(html).substring(0, 500)
+    return `### ${frontmatter.title}
+
+- URL: ${DOMAIN}/resources/${frontmatter.slug}
+- Published: ${frontmatter.date}
+- Author: ${frontmatter.author || 'Luke Marinovic'}
+- Category: ${CLUSTER_LABELS[frontmatter.cluster] || frontmatter.cluster}
+- Keywords: ${frontmatter.keyword}
+
+${frontmatter.description}
+
+${plainText}...`
+  }).join('\n\n---\n\n')
+
+  const llmsFull = `# UnderCurrent Automations — Full Reference
+
+> AI automation studio for small businesses in Melbourne, Australia.
+
+## About
+
+UnderCurrent is a Melbourne-based AI automation studio founded in 2026 by Luke Marinovic. We specialise in mapping small business workflows and building custom AI-powered systems that run operations silently, continuously, and precisely. Our clients are Australian small businesses with 1-50 employees who want to reclaim their time and scale without hiring.
+
+## Services (Detailed)
+
+### Customer Experience Automation
+Full customer lifecycle automation: onboarding sequences, satisfaction surveys, review requests, referral programs, and re-engagement flows. We build systems that nurture every customer relationship automatically.
+URL: ${DOMAIN}/services
+
+### Sales Automation
+Automated lead sourcing, personalised outreach, follow-up sequences, and CRM pipeline management. From first touch to closed deal, every step runs on autopilot.
+URL: ${DOMAIN}/services
+
+### Content Design Automation
+Content creation pipelines for blog posts, social media content, newsletters, and multi-channel distribution. AI-assisted writing with human quality control.
+URL: ${DOMAIN}/services
+
+### Personal System AI
+AI-powered inbox management, calendar automation, meeting scheduling, and task extraction. A digital chief of staff that handles the operational noise.
+URL: ${DOMAIN}/services
+
+### Finance Automation
+Invoice generation, overdue follow-up, expense tracking, cash flow reporting, and financial research automation. Keep your books clean without the manual work.
+URL: ${DOMAIN}/services
+
+## Process
+
+We follow three steps:
+1. **Map** — We audit your workflows, identify bottlenecks, and design automation blueprints.
+2. **Build** — We build custom AI automations that integrate with your existing tools.
+3. **Flow** — Your systems run 24/7 while we monitor, maintain, and optimise.
+URL: ${DOMAIN}/process
+
+## Tools
+
+### ROI Calculator
+Free tool to estimate how much time and money workflow automation could save your business. Input your hours spent on repetitive tasks and get an instant ROI estimate.
+URL: ${DOMAIN}/roi
+
+### Free Business Audit
+AI-powered audit of your business operations. Discover where automation can save you time, money, and missed revenue.
+URL: ${DOMAIN}/audit
+
+## Published Articles
+
+${articleSections || '(Articles coming soon)'}
+
+## Contact
+
+- Founder: Luke Marinovic
+- Email: luke@undercurrentautomations.com
+- Website: ${DOMAIN}
+- Location: Melbourne, VIC, Australia
+- Instagram: https://www.instagram.com/undercurrent.automations/
+- Facebook: https://www.facebook.com/profile.php?id=61578553167947
+- LinkedIn: https://www.linkedin.com/company/undercurrent-automations
+`
+  writeFileSync(join(DIST, 'llms-full.txt'), llmsFull)
+  console.log(`  ✓ llms-full.txt → ${articles.length} articles (expanded)`)
+}
+
 function run() {
   console.log('\n  Injecting per-route SEO metadata...\n')
 
@@ -485,6 +665,8 @@ function run() {
   }
 
   generateSitemap(allRoutes)
+  generateLlmsTxt(articles)
+  generateLlmsFullTxt(articles)
   if (articles.length > 0) {
     generateRssFeed(articles)
   }

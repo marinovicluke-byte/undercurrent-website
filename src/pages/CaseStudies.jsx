@@ -89,6 +89,18 @@ export default function CaseStudies() {
         title="Case Studies - AI Automation Results | UnderCurrent"
         description="See how we've helped small businesses reclaim their time and scale their operations with AI automation. Real businesses, real results."
         canonical="https://www.undercurrentautomations.com/case-study"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'UnderCurrent Case Studies',
+          description: 'Real results from AI automation for small businesses. See how we have helped businesses reclaim their time and scale operations.',
+          url: 'https://www.undercurrentautomations.com/case-study',
+          provider: {
+            '@type': 'Organization',
+            '@id': 'https://www.undercurrentautomations.com/#business',
+            name: 'UnderCurrent',
+          },
+        }}
       />
       <ScrollProgressBar />
       <Navbar ready isSubPage />

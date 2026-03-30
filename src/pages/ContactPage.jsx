@@ -36,6 +36,19 @@ export default function ContactPage() {
         title="Contact Us - AI Automation Enquiry | UnderCurrent"
         description="Get in touch with UnderCurrent. We typically respond within one business day."
         canonical="https://www.undercurrentautomations.com/contact"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'ContactPage',
+          name: 'Contact UnderCurrent',
+          description: 'Get in touch with UnderCurrent for AI automation enquiries. We typically respond within one business day.',
+          url: 'https://www.undercurrentautomations.com/contact',
+          mainEntity: {
+            '@type': 'Organization',
+            '@id': 'https://www.undercurrentautomations.com/#business',
+            name: 'UnderCurrent',
+            email: 'luke@undercurrentautomations.com',
+          },
+        }}
       />
       <Navbar ready isSubPage />
 

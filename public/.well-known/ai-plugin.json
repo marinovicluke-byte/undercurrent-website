@@ -1,0 +1,16 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "UnderCurrent Automations",
+  "name_for_model": "undercurrent_automations",
+  "description_for_human": "AI automation studio for small businesses in Melbourne, Australia.",
+  "description_for_model": "UnderCurrent Automations is a Melbourne-based AI automation studio that builds custom workflow automation systems for Australian small businesses (1-50 employees). Services include customer experience automation, sales automation, content design automation, personal system AI, and finance automation. Founded 2026 by Luke Marinovic.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "none"
+  },
+  "logo_url": "https://www.undercurrentautomations.com/favicon.svg",
+  "contact_email": "luke@undercurrentautomations.com",
+  "legal_info_url": "https://www.undercurrentautomations.com/terms"
+}
