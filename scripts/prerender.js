@@ -101,7 +101,7 @@ function buildArticleSchemas(frontmatter, html, faqItems, howToSteps) {
       description: frontmatter.description,
       author: {
         '@type': 'Person',
-        name: frontmatter.author || 'Luke Marinovic',
+        name: frontmatter.author || 'Luke',
         url: `${DOMAIN}/about`,
       },
       publisher: {
@@ -167,7 +167,7 @@ function generateArticleRoutes(articles) {
     jsonLd: buildArticleSchemas(frontmatter, html, faqItems, howToSteps),
     articleMeta: {
       date: frontmatter.date,
-      author: frontmatter.author || 'Luke Marinovic',
+      author: frontmatter.author || 'Luke',
       section: CLUSTER_LABELS[frontmatter.cluster] || frontmatter.cluster,
       keyword: frontmatter.keyword,
       slug: frontmatter.slug,
@@ -246,7 +246,7 @@ const ROUTES = [
           ],
           founder: {
             '@type': 'Person',
-            name: 'Luke Marinovic',
+            name: 'Luke',
             jobTitle: 'Founder',
             url: `${DOMAIN}/about`,
             sameAs: [
@@ -600,7 +600,7 @@ UnderCurrent maps small business workflows and builds custom AI-powered systems 
 - [Homepage](${DOMAIN}/): AI business automation for Melbourne small businesses
 - [Services](${DOMAIN}/services): Full list of automation services
 - [How It Works](${DOMAIN}/process): Our three-step process, Map, Build, Flow
-- [About](${DOMAIN}/about): About UnderCurrent and founder Luke Marinovic
+- [About](${DOMAIN}/about): About UnderCurrent and founder Luke
 - [Case Studies](${DOMAIN}/case-study): Real results from AI automation clients
 - [Resources](${DOMAIN}/resources): Guides, playbooks, and lessons from the field
 - [ROI Calculator](${DOMAIN}/roi): Free tool to estimate automation savings
@@ -634,7 +634,7 @@ function generateLlmsFullTxt(articles) {
 
 - URL: ${DOMAIN}/resources/${frontmatter.slug}
 - Published: ${frontmatter.date}
-- Author: ${frontmatter.author || 'Luke Marinovic'}
+- Author: ${frontmatter.author || 'Luke'}
 - Category: ${CLUSTER_LABELS[frontmatter.cluster] || frontmatter.cluster}
 - Keywords: ${frontmatter.keyword}
 
@@ -649,7 +649,7 @@ ${plainText}...`
 
 ## About
 
-UnderCurrent is a Melbourne-based AI automation studio founded in 2026 by Luke Marinovic. We specialise in mapping small business workflows and building custom AI-powered systems that run operations silently, continuously, and precisely. Our clients are Australian small businesses with 1-50 employees who want to reclaim their time and scale without hiring.
+UnderCurrent is a Melbourne-based AI automation studio founded in 2026 by Luke. We specialise in mapping small business workflows and building custom AI-powered systems that run operations silently, continuously, and precisely. Our clients are Australian small businesses with 1-50 employees who want to reclaim their time and scale without hiring.
 
 ## Services (Detailed)
 
@@ -697,7 +697,7 @@ ${articleSections || '(Articles coming soon)'}
 
 ## Contact
 
-- Founder: Luke Marinovic
+- Founder: Luke
 - Email: luke@undercurrentautomations.com
 - Website: ${DOMAIN}
 - Location: Melbourne, VIC, Australia
