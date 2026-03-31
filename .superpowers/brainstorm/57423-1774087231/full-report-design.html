@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UnderCurrent Audit Report - Full Design Preview</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400&family=DM+Sans:wght@300;400;500;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #111;
+    color: #F7F3ED;
+    font-family: 'DM Sans', sans-serif;
+    padding: 40px 20px;
+  }
+
+  .page-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #8FAF9F;
+    margin-bottom: 12px;
+    padding: 6px 14px;
+    border: 1px solid rgba(143,175,159,0.3);
+    border-radius: 999px;
+    display: inline-block;
+  }
+
+  .report-page {
+    max-width: 680px;
+    margin: 0 auto 60px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* ─── PAGE 1: COVER ─── */
+  .cover {
+    background: linear-gradient(160deg, #1C1C1A 0%, #2a3028 30%, #3d4f42 55%, #8FAF9F 80%, #D4C9B0 100%);
+    padding: 60px 48px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(143,175,159,0.15) 0%, transparent 70%);
+  }
+  .cover * { position: relative; z-index: 1; }
+  .cover .logo { width: 80px; height: 80px; margin-bottom: 32px; border-radius: 16px; }
+  .cover .brand-name {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(232,224,208,0.6);
+    margin-bottom: 32px;
+  }
+  .cover h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: #F7F3ED;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 4px;
+  }
+  .cover .h1-italic {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 2.4rem;
+    color: #8FAF9F;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  .cover .divider { width: 48px; height: 1.5px; background: rgba(143,175,159,0.5); margin: 0 auto 24px; }
+  .cover .meta { font-size: 0.8rem; color: rgba(232,224,208,0.45); line-height: 1.6; }
+  .cover .meta strong { color: rgba(232,224,208,0.7); }
+
+  /* ─── PAGE 2: EXECUTIVE SUMMARY ─── */
+  .exec-summary {
+    background: #1C1C1A;
+    padding: 48px;
+    border: 1px solid rgba(143,175,159,0.15);
+  }
+  .exec-summary .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(143,175,159,0.6);
+    margin-bottom: 20px;
+  }
+  .loss-hero {
+    text-align: center;
+    padding: 32px 0;
+    margin-bottom: 28px;
+    border-bottom: 1px solid rgba(212,201,176,0.12);
+  }
+  .loss-hero .prefix {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(143,175,159,0.6);
+    margin-bottom: 8px;
+  }
+  .loss-hero .amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 3.2rem;
+    color: #F7F3ED;
+    letter-spacing: -0.02em;
+  }
+  .loss-hero .amount span { font-size: 0.45em; opacity: 0.5; font-weight: 400; }
+  .loss-hero .yearly {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: rgba(143,175,159,0.8);
+    margin-top: 4px;
+  }
+
+  .top-bleeders { margin-top: 20px; }
+  .top-bleeders h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(232,224,208,0.7);
+    margin-bottom: 16px;
+  }
+  .bleeder-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    background: rgba(143,175,159,0.06);
+    border: 1px solid rgba(143,175,159,0.1);
+    border-radius: 12px;
+    margin-bottom: 8px;
+  }
+  .bleeder-row .name { font-size: 0.82rem; color: #F7F3ED; }
+  .bleeder-row .cost {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    color: #8FAF9F;
+  }
+  .bleeder-bar {
+    height: 4px;
+    background: rgba(143,175,159,0.15);
+    border-radius: 2px;
+    margin-top: 8px;
+    overflow: hidden;
+  }
+  .bleeder-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #8FAF9F, #6B7C4A);
+    border-radius: 2px;
+  }
+
+  /* ─── PAGE 3: BENCHMARK COMPARISON ─── */
+  .benchmarks {
+    background: #1C1C1A;
+    padding: 48px;
+    border: 1px solid rgba(143,175,159,0.15);
+  }
+  .benchmark-card {
+    background: rgba(143,175,159,0.06);
+    border: 1px solid rgba(143,175,159,0.12);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 12px;
+  }
+  .benchmark-card .pillar-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #F7F3ED;
+    margin-bottom: 12px;
+  }
+  .benchmark-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .benchmark-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .benchmark-bar-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    color: rgba(232,224,208,0.45);
+    width: 100px;
+    flex-shrink: 0;
+    text-align: right;
+  }
+  .benchmark-bar-track {
+    flex: 1;
+    height: 8px;
+    background: rgba(232,224,208,0.06);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .benchmark-bar-track .fill-you {
+    height: 100%;
+    background: linear-gradient(90deg, #dc6c4c, #dc3c3c);
+    border-radius: 4px;
+    position: absolute;
+    top: 0; left: 0;
+  }
+  .benchmark-bar-track .fill-auto {
+    height: 100%;
+    background: linear-gradient(90deg, #8FAF9F, #6B7C4A);
+    border-radius: 4px;
+    position: absolute;
+    top: 0; left: 0;
+  }
+  .benchmark-bar-value {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: rgba(232,224,208,0.6);
+    width: 60px;
+    flex-shrink: 0;
+  }
+  .benchmark-legend {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(212,201,176,0.1);
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    color: rgba(232,224,208,0.55);
+  }
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+  }
+
+  /* Gemini image placeholder */
+  .gemini-image {
+    background: rgba(143,175,159,0.08);
+    border: 1px dashed rgba(143,175,159,0.25);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    margin: 20px 0;
+    color: rgba(143,175,159,0.5);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+  }
+  .gemini-image .icon { font-size: 1.5rem; margin-bottom: 8px; display: block; }
+
+  /* ─── PAGE 4: PILLAR BREAKDOWN ─── */
+  .pillar-breakdown {
+    background: #1C1C1A;
+    padding: 48px;
+    border: 1px solid rgba(143,175,159,0.15);
+  }
+  .pillar-detail {
+    background: rgba(232,224,208,0.04);
+    border: 1px solid rgba(212,201,176,0.1);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 12px;
+  }
+  .pillar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .pillar-header .name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #F7F3ED;
+  }
+  .pillar-header .monthly {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #8FAF9F;
+  }
+  .pillar-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 0.72rem;
+    color: rgba(232,224,208,0.45);
+    font-family: 'DM Mono', monospace;
+  }
+  .rating-pill {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    font-family: 'DM Mono', monospace;
+  }
+  .rating-red { background: rgba(220,60,60,0.15); color: #dc3c3c; }
+  .rating-orange { background: rgba(212,140,0,0.12); color: #d48c00; }
+  .rating-green { background: rgba(143,175,159,0.15); color: #8FAF9F; }
+  .gap-blind { color: #d48c00; }
+  .gap-accurate { color: #8FAF9F; }
+
+  /* ─── PAGE 5: REVENUE LEAKS ─── */
+  .revenue-leaks {
+    background: #1C1C1A;
+    padding: 48px;
+    border: 1px solid rgba(143,175,159,0.15);
+  }
+  .leak-card {
+    background: rgba(220,60,60,0.04);
+    border: 1px solid rgba(220,60,60,0.15);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .leak-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgba(220,60,60,0.25);
+    position: absolute;
+    top: 16px;
+    right: 20px;
+  }
+  .leak-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #F7F3ED;
+    margin-bottom: 6px;
+  }
+  .leak-impact {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: #dc6c4c;
+    margin-bottom: 12px;
+  }
+  .leak-desc {
+    font-size: 0.8rem;
+    color: rgba(232,224,208,0.55);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .leak-fix {
+    background: rgba(143,175,159,0.08);
+    border: 1px solid rgba(143,175,159,0.15);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .leak-fix-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #8FAF9F;
+    margin-bottom: 6px;
+  }
+  .leak-fix-title {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #F7F3ED;
+    margin-bottom: 4px;
+  }
+  .leak-fix-desc {
+    font-size: 0.75rem;
+    color: rgba(232,224,208,0.5);
+    line-height: 1.5;
+  }
+
+  /* ─── PAGE 6: CTA ─── */
+  .cta-page {
+    background: linear-gradient(160deg, #1C1C1A 0%, #2a3028 40%, #3d4f42 70%, #8FAF9F 100%);
+    padding: 60px 48px;
+    text-align: center;
+    position: relative;
+  }
+  .cta-page::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(143,175,159,0.18) 0%, transparent 70%);
+  }
+  .cta-page * { position: relative; z-index: 1; }
+  .cta-page h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #F7F3ED;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+  }
+  .cta-page .h2-italic {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.8rem;
+    color: #8FAF9F;
+    margin-bottom: 16px;
+  }
+  .cta-page p {
+    font-size: 0.85rem;
+    color: rgba(232,224,208,0.55);
+    max-width: 400px;
+    margin: 0 auto 28px;
+    line-height: 1.6;
+  }
+  .cta-button {
+    display: inline-block;
+    padding: 14px 36px;
+    border-radius: 999px;
+    border: 1.5px solid rgba(143,175,159,0.75);
+    background: rgba(143,175,159,0.15);
+    color: #F7F3ED;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    box-shadow: 0 0 18px rgba(143,175,159,0.15);
+  }
+  .cta-contact {
+    margin-top: 20px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: rgba(232,224,208,0.35);
+  }
+
+  /* Section divider */
+  .section-gap {
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(143,175,159,0.2), transparent);
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: COVER -->
+<div style="text-align: center; margin-bottom: 8px;"><span class="page-label">Page 1 &mdash; Cover</span></div>
+<div class="report-page">
+  <div class="cover">
+    <img src="LOGO.png" class="logo" alt="UnderCurrent">
+    <div class="brand-name">UnderCurrent</div>
+    <h1>Business Health</h1>
+    <div class="h1-italic">Audit Report</div>
+    <div class="divider"></div>
+    <div class="meta">
+      Prepared for <strong>{{business_name}}</strong><br>
+      {{submission_date}}
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2: EXECUTIVE SUMMARY -->
+<div style="text-align: center; margin-bottom: 8px;"><span class="page-label">Page 2 &mdash; Executive Summary</span></div>
+<div class="report-page">
+  <div class="exec-summary">
+    <div class="section-label">Executive Summary</div>
+    <div class="loss-hero">
+      <div class="prefix">You're leaving an estimated</div>
+      <div class="amount">$4,200<span>/month</span></div>
+      <div class="yearly">$50,400 / year</div>
+    </div>
+
+    <div class="top-bleeders">
+      <h3>Top bleeding areas</h3>
+      <div class="bleeder-row">
+        <span class="name">Customer Experience</span>
+        <span class="cost">$1,732/mo</span>
+      </div>
+      <div class="bleeder-bar"><div class="bleeder-bar-fill" style="width: 100%;"></div></div>
+
+      <div class="bleeder-row" style="margin-top: 8px;">
+        <span class="name">Sales</span>
+        <span class="cost">$1,299/mo</span>
+      </div>
+      <div class="bleeder-bar"><div class="bleeder-bar-fill" style="width: 75%;"></div></div>
+
+      <div class="bleeder-row" style="margin-top: 8px;">
+        <span class="name">Personal Systems</span>
+        <span class="cost">$649/mo</span>
+      </div>
+      <div class="bleeder-bar"><div class="bleeder-bar-fill" style="width: 37%;"></div></div>
+    </div>
+
+    <div class="gemini-image">
+      <span class="icon">&#x1F3A8;</span>
+      GEMINI-GENERATED: Executive summary infographic<br>
+      Radar chart showing 5 pillars with data overlay
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 3: BENCHMARK COMPARISON -->
+<div style="text-align: center; margin-bottom: 8px;"><span class="page-label">Page 3 &mdash; Automation Benchmarks</span></div>
+<div class="report-page">
+  <div class="benchmarks">
+    <div class="section-label">How You Compare</div>
+    <h3 style="font-family: 'DM Sans', sans-serif; font-size: 1.1rem; font-weight: 500; color: #F7F3ED; margin-bottom: 4px;">Without automation vs with automation</h3>
+    <p style="font-size: 0.78rem; color: rgba(232,224,208,0.4); margin-bottom: 24px; line-height: 1.5;">Average small business benchmarks. Your hours are shown against what businesses using automation typically spend.</p>
+
+    <div class="benchmark-legend">
+      <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #dc6c4c, #dc3c3c);"></div> You (current)</div>
+      <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #8FAF9F, #6B7C4A);"></div> With automation</div>
+    </div>
+
+    <!-- Customer Experience -->
+    <div class="benchmark-card">
+      <div class="pillar-name">Customer Experience</div>
+      <div class="benchmark-bars">
+        <div class="benchmark-bar-row">
+          <span class="benchmark-bar-label">You</span>
+          <div class="benchmark-bar-track"><div class="fill-you" style="width: 80%;"></div></div>
+          <span class="benchmark-bar-value">8 hrs/wk</span>
+        </div>
+        <div class="benchmark-bar-row">
+          <span class="benchmark-bar-label">Automated</span>
+          <div class="benchmark-bar-track"><div class="fill-auto" style="width: 20%;"></div></div>
+          <span class="benchmark-bar-value">2 hrs/wk</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sales -->
+    <div class="benchmark-card">
+      <div class="pillar-name">Sales</div>
+      <div class="benchmark-bars">
+        <div class="benchmark-bar-row">
+          <span class="benchmark-bar-label">You</span>
+          <div class="benchmark-bar-track"><div class="fill-you" style="width: 60%;"></div></div>
+          <span class="benchmark-bar-value">6 hrs/wk</span>
+        </div>
+        <div class="benchmark-bar-row">
+          <span class="benchmark-bar-label">Automated</span>
+          <div class="benchmark-bar-track"><div class="fill-auto" style="width: 15%;"></div></div>
+          <span class="benchmark-bar-value">1.5 hrs/wk</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Finance -->
+    <div class="benchmark-card">
+      <div class="pillar-name">Finance</div>
+      <div class="benchmark-bars">
+        <div class="benchmark-bar-row">
+          <span class="benchmark-bar-label">You</span>
+          <div class="benchmark-bar-track"><div class="fill-you" style="width: 40%;"></div></div>
+          <span class="benchmark-bar-value">4 hrs/wk</span>
+        </div>
+        <div class="benchmark-bar-row">
+          <span class="benchmark-bar-label">Automated</span>
+          <div class="benchmark-bar-track"><div class="fill-auto" style="width: 10%;"></div></div>
+          <span class="benchmark-bar-value">1 hr/wk</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="gemini-image">
+      <span class="icon">&#x1F3A8;</span>
+      GEMINI-GENERATED: Before/after comparison graphic<br>
+      Side-by-side visual showing manual vs automated workflow
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 4: PILLAR BREAKDOWN -->
+<div style="text-align: center; margin-bottom: 8px;"><span class="page-label">Page 4 &mdash; Pillar Breakdown</span></div>
+<div class="report-page">
+  <div class="pillar-breakdown">
+    <div class="section-label">Pillar-by-Pillar Breakdown</div>
+    <h3 style="font-family: 'DM Sans', sans-serif; font-size: 1.1rem; font-weight: 500; color: #F7F3ED; margin-bottom: 20px;">Health assessment &amp; cost analysis</h3>
+
+    <div class="pillar-detail">
+      <div class="pillar-header">
+        <span class="name">Customer Experience</span>
+        <span class="monthly">$1,732/mo</span>
+      </div>
+      <div class="pillar-meta">
+        <span>8 hrs/wk</span>
+        <span>Self: <span class="rating-pill rating-green">Green</span></span>
+        <span>Calc: <span class="rating-pill rating-red">Red</span></span>
+        <span class="gap-blind">&#9888; Blind spot</span>
+      </div>
+    </div>
+
+    <div class="pillar-detail">
+      <div class="pillar-header">
+        <span class="name">Sales</span>
+        <span class="monthly">$1,299/mo</span>
+      </div>
+      <div class="pillar-meta">
+        <span>6 hrs/wk</span>
+        <span>Self: <span class="rating-pill rating-orange">Orange</span></span>
+        <span>Calc: <span class="rating-pill rating-orange">Orange</span></span>
+        <span class="gap-accurate">&#10003; Accurate</span>
+      </div>
+    </div>
+
+    <div class="pillar-detail">
+      <div class="pillar-header">
+        <span class="name">Personal Systems</span>
+        <span class="monthly">$649/mo</span>
+      </div>
+      <div class="pillar-meta">
+        <span>3 hrs/wk</span>
+        <span>Self: <span class="rating-pill rating-green">Green</span></span>
+        <span>Calc: <span class="rating-pill rating-orange">Orange</span></span>
+        <span class="gap-blind">&#9888; Blind spot</span>
+      </div>
+    </div>
+
+    <div class="pillar-detail">
+      <div class="pillar-header">
+        <span class="name">Finance</span>
+        <span class="monthly">$433/mo</span>
+      </div>
+      <div class="pillar-meta">
+        <span>2 hrs/wk</span>
+        <span>Self: <span class="rating-pill rating-orange">Orange</span></span>
+        <span>Calc: <span class="rating-pill rating-orange">Orange</span></span>
+        <span class="gap-accurate">&#10003; Accurate</span>
+      </div>
+    </div>
+
+    <!-- Lead bleed callout -->
+    <div style="background: rgba(220,60,60,0.06); border: 1px solid rgba(220,60,60,0.2); border-radius: 12px; padding: 16px 20px; margin-top: 16px; display: flex; align-items: center; gap: 12px;">
+      <span style="font-size: 1.1rem;">&#9889;</span>
+      <div>
+        <span style="font-size: 0.82rem; color: #F7F3ED;">
+          Lead bleed: <strong style="color: #dc3c3c;">$1,560/mo</strong> &mdash; responding in <strong>5&ndash;30 min</strong>
+        </span>
+        <div style="font-size: 0.7rem; color: rgba(232,224,208,0.4); margin-top: 4px;">
+          Responding in &lt;5 min would recover most of this revenue
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 5: REVENUE LEAKS + FIXES -->
+<div style="text-align: center; margin-bottom: 8px;"><span class="page-label">Page 5 &mdash; Revenue Leaks &amp; Fixes</span></div>
+<div class="report-page">
+  <div class="revenue-leaks">
+    <div class="section-label">Revenue Leaks</div>
+    <h3 style="font-family: 'DM Sans', sans-serif; font-size: 1.1rem; font-weight: 500; color: #F7F3ED; margin-bottom: 4px;">Your top 3 leaks &mdash; and how to fix them</h3>
+    <p style="font-size: 0.78rem; color: rgba(232,224,208,0.4); margin-bottom: 24px; line-height: 1.5;">Based on your audit data, these are the biggest opportunities for automation.</p>
+
+    <!-- Leak 1 -->
+    <div class="leak-card">
+      <div class="leak-number">01</div>
+      <div class="leak-title">Slow lead response is costing you clients</div>
+      <div class="leak-impact">Estimated loss: $1,560/mo &middot; $18,720/yr</div>
+      <div class="leak-desc">You're responding to leads in 5&ndash;30 min. Research shows 78% of buyers go with the first responder. Every minute past 5 costs you conversions.</div>
+      <div class="leak-fix">
+        <div class="leak-fix-label">UnderCurrent Fix</div>
+        <div class="leak-fix-title">AI-Powered Instant Lead Response</div>
+        <div class="leak-fix-desc">Automated SMS + email reply within 60 seconds of enquiry. AI qualifies the lead, books a call, and notifies you &mdash; before your competitors even see the message.</div>
+      </div>
+    </div>
+
+    <!-- Leak 2 -->
+    <div class="leak-card">
+      <div class="leak-number">02</div>
+      <div class="leak-title">Manual follow-up is dropping warm leads</div>
+      <div class="leak-impact">Estimated loss: $1,732/mo &middot; $20,784/yr</div>
+      <div class="leak-desc">8 hours/week on customer follow-up means leads are falling through the cracks. Without a system, follow-up depends on memory and good intentions.</div>
+      <div class="leak-fix">
+        <div class="leak-fix-label">UnderCurrent Fix</div>
+        <div class="leak-fix-title">Automated Follow-Up & Review Collection</div>
+        <div class="leak-fix-desc">Trigger-based sequences that follow up after quotes, chase post-job reviews, and re-engage dormant leads &mdash; all running in the background while you focus on delivery.</div>
+      </div>
+    </div>
+
+    <!-- Leak 3 -->
+    <div class="leak-card">
+      <div class="leak-number">03</div>
+      <div class="leak-title">Pipeline tracking lives in your head</div>
+      <div class="leak-impact">Estimated loss: $1,299/mo &middot; $15,588/yr</div>
+      <div class="leak-desc">6 hours/week on CRM updates and proposal tracking. Without automation, deals stall and nothing gets measured.</div>
+      <div class="leak-fix">
+        <div class="leak-fix-label">UnderCurrent Fix</div>
+        <div class="leak-fix-title">Automated CRM & Pipeline Management</div>
+        <div class="leak-fix-desc">Leads auto-populate your CRM, move through stages based on actions, and trigger alerts when deals go cold. Zero manual data entry.</div>
+      </div>
+    </div>
+
+    <div class="gemini-image">
+      <span class="icon">&#x1F3A8;</span>
+      GEMINI-GENERATED: Revenue recovery projection<br>
+      Visual showing potential savings with automation applied
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 6: CTA -->
+<div style="text-align: center; margin-bottom: 8px;"><span class="page-label">Page 6 &mdash; Call to Action</span></div>
+<div class="report-page">
+  <div class="cta-page">
+    <img src="LOGO.png" style="width: 56px; height: 56px; border-radius: 12px; margin-bottom: 24px;" alt="UnderCurrent">
+    <h2>Let's fix</h2>
+    <div class="h2-italic">the leaks.</div>
+    <p>Book a free 30-minute strategy call. We'll walk through your report, identify quick wins, and map out what automation looks like for your business.</p>
+    <a href="#" class="cta-button">Book Your Strategy Call</a>
+    <div class="cta-contact">
+      hello@undercurrent.com.au &middot; undercurrentautomations.com
+    </div>
+  </div>
+</div>
+
+<div style="text-align: center; margin-top: 40px; padding: 24px; color: rgba(232,224,208,0.3); font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em;">
+  DASHED BOXES = GEMINI API GENERATED IMAGES &middot; ALL DATA IS DYNAMIC FROM WEBHOOK PAYLOAD
+</div>
+
+</body>
+</html>

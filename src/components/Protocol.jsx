@@ -230,6 +230,7 @@ export default function Protocol() {
             opacity: headVisible ? 1 : 0,
             transform: headVisible ? 'translateY(0)' : 'translateY(20px)',
             transition: 'opacity 0.7s ease, transform 0.7s ease',
+            textAlign: 'center',
           }}
         >
           <h2 className="font-cormorant" style={{
@@ -243,7 +244,7 @@ export default function Protocol() {
           </h2>
           <p className="font-dm" style={{
             fontSize: '1rem', color: 'rgba(28,28,26,0.55)',
-            maxWidth: '420px', lineHeight: 1.7, margin: 0,
+            maxWidth: '420px', lineHeight: 1.7, margin: '0 auto',
           }}>
             You don't need to know how it works. You just need to know it does.
           </p>

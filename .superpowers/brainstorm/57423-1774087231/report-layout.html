@@ -1,0 +1,83 @@
+<h2>PDF Report Layout Direction</h2>
+<p class="subtitle">Which overall structure and feel best fits the UnderCurrent brand?</p>
+
+<div class="cards">
+  <!-- Option A: Dark & Bold -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: linear-gradient(160deg, #1C1C1A 0%, #2a3028 30%, #3d4f42 55%, #8FAF9F 80%, #D4C9B0 100%); padding: 24px; min-height: 320px; font-family: system-ui, sans-serif;">
+      <!-- Mock cover -->
+      <div style="text-align: center; padding-top: 20px;">
+        <div style="font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(143,175,159,0.7); margin-bottom: 8px;">UNDERCURRENT</div>
+        <div style="font-size: 1.6rem; font-weight: 300; color: #F7F3ED; font-style: italic; margin-bottom: 4px;">Business Health</div>
+        <div style="font-size: 1.6rem; font-weight: 700; color: #F7F3ED;">Audit Report</div>
+        <div style="width: 40px; height: 1px; background: #8FAF9F; margin: 16px auto;"></div>
+        <div style="font-size: 0.7rem; color: rgba(232,224,208,0.5);">Prepared for Acme Plumbing</div>
+      </div>
+      <!-- Mock exec summary -->
+      <div style="background: rgba(0,0,0,0.3); border-radius: 12px; padding: 16px; margin-top: 20px; border: 1px solid rgba(143,175,159,0.2);">
+        <div style="font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(143,175,159,0.6); margin-bottom: 6px;">ESTIMATED LOSS</div>
+        <div style="font-size: 1.8rem; font-weight: 600; color: #F7F3ED;">$4,200<span style="font-size: 0.5em; opacity: 0.5;">/month</span></div>
+        <div style="font-size: 0.7rem; color: rgba(143,175,159,0.8); font-style: italic;">$50,400 / year</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A. Dark & Bold</h3>
+      <p>Full charcoal-to-sage gradient. Hero-style cover. Dark cards throughout. Maximum brand impact — feels like a premium consulting deliverable.</p>
+    </div>
+  </div>
+
+  <!-- Option B: Light & Editorial -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #F7F3ED; padding: 24px; min-height: 320px; font-family: system-ui, sans-serif; border-bottom: 1px solid rgba(212,201,176,0.45);">
+      <!-- Mock cover -->
+      <div style="text-align: left; padding-top: 12px;">
+        <div style="font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: #8FAF9F; margin-bottom: 16px;">UNDERCURRENT</div>
+        <div style="font-size: 1.5rem; font-weight: 300; color: #1C1C1A; font-style: italic; line-height: 1.2;">Business Health</div>
+        <div style="font-size: 1.5rem; font-weight: 700; color: #1C1C1A; margin-bottom: 8px;">Audit Report</div>
+        <div style="width: 60px; height: 2px; background: #8FAF9F; margin: 12px 0;"></div>
+        <div style="font-size: 0.7rem; color: rgba(28,28,26,0.45);">Prepared for Acme Plumbing &mdash; 21 March 2026</div>
+      </div>
+      <!-- Mock exec summary -->
+      <div style="background: #E8E0D0; border-radius: 12px; padding: 16px; margin-top: 20px; border: 1px solid rgba(212,201,176,0.45);">
+        <div style="font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(28,28,26,0.4); margin-bottom: 6px;">ESTIMATED LOSS</div>
+        <div style="font-size: 1.8rem; font-weight: 600; color: #1C1C1A;">$4,200<span style="font-size: 0.5em; opacity: 0.4;">/month</span></div>
+        <div style="font-size: 0.7rem; color: #8FAF9F; font-style: italic;">$50,400 / year</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B. Light & Editorial</h3>
+      <p>Off-white and parchment base. Left-aligned editorial typography. Sage accents. Feels like a high-end magazine report — clean and readable.</p>
+    </div>
+  </div>
+
+  <!-- Option C: Hybrid -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: linear-gradient(180deg, #1C1C1A 0%, #1C1C1A 45%, #F7F3ED 45%, #F7F3ED 100%); padding: 24px; min-height: 320px; font-family: system-ui, sans-serif;">
+      <!-- Mock cover - dark top -->
+      <div style="text-align: center; padding-top: 8px;">
+        <div style="font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(143,175,159,0.7); margin-bottom: 8px;">UNDERCURRENT</div>
+        <div style="font-size: 1.4rem; font-weight: 300; color: #F7F3ED; font-style: italic;">Business Health</div>
+        <div style="font-size: 1.4rem; font-weight: 700; color: #F7F3ED; margin-bottom: 4px;">Audit Report</div>
+      </div>
+      <!-- Light section below -->
+      <div style="margin-top: 24px;">
+        <div style="background: #E8E0D0; border-radius: 12px; padding: 16px; border: 1px solid rgba(212,201,176,0.45);">
+          <div style="font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(28,28,26,0.4); margin-bottom: 6px;">ESTIMATED LOSS</div>
+          <div style="font-size: 1.8rem; font-weight: 600; color: #1C1C1A;">$4,200<span style="font-size: 0.5em; opacity: 0.4;">/month</span></div>
+          <div style="font-size: 0.7rem; color: #8FAF9F; font-style: italic;">$50,400 / year</div>
+        </div>
+        <!-- Mini pillar bars -->
+        <div style="margin-top: 12px; display: flex; gap: 4px;">
+          <div style="flex: 3; height: 6px; background: linear-gradient(90deg, #8FAF9F, #6B7C4A); border-radius: 3px;"></div>
+          <div style="flex: 2; height: 6px; background: linear-gradient(90deg, #8FAF9F, #6B7C4A); border-radius: 3px; opacity: 0.7;"></div>
+          <div style="flex: 1.5; height: 6px; background: linear-gradient(90deg, #8FAF9F, #6B7C4A); border-radius: 3px; opacity: 0.5;"></div>
+          <div style="flex: 1; height: 6px; background: linear-gradient(90deg, #8FAF9F, #6B7C4A); border-radius: 3px; opacity: 0.3;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C. Hybrid (Recommended)</h3>
+      <p>Dark gradient cover + CTA pages. Light parchment for data sections (pillar breakdown, benchmarks, revenue leaks). Best of both — brand impact where it counts, readability where it matters.</p>
+    </div>
+  </div>
+</div>
