@@ -88,8 +88,8 @@ export default function Hero({ ready = true }) {
 
       {/* Content — left-aligned, top-positioned */}
       <div
-        className="absolute inset-0 flex flex-col items-start justify-start px-6 md:px-12 pt-36 md:pt-40"
-        style={{ paddingBottom: '5rem', maxWidth: '1200px' }}
+        className="absolute inset-0 flex flex-col items-center justify-start px-6 md:px-12 pt-36 md:pt-40"
+        style={{ paddingBottom: '5rem', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}
       >
         {/* Headline */}
         <h1 ref={headlineRef} style={{ opacity: 0, lineHeight: 1 }}>
@@ -131,6 +131,8 @@ export default function Hero({ ready = true }) {
             lineHeight: 1.7,
             maxWidth: '68ch',
             marginTop: '2rem',
+            marginLeft: 'auto',
+            marginRight: 'auto',
             opacity: 0,
           }}
         >
@@ -138,7 +140,7 @@ export default function Hero({ ready = true }) {
         </p>
 
         {/* Single CTA */}
-        <div ref={ctaRef} style={{ opacity: 0, marginTop: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+        <div ref={ctaRef} style={{ opacity: 0, marginTop: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <a
             href="/audit"
             className="btn-sage-hero hero-cta"
