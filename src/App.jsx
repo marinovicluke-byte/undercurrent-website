@@ -16,6 +16,7 @@ import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import WaveDivider from './components/WaveDivider'
+import WhoWeServeSection from './components/WhoWeServeSection'
 
 const About = lazy(() => import('./pages/About'))
 const Services = lazy(() => import('./pages/Services'))
@@ -120,6 +121,7 @@ function HomePage() {
 
       {/* Hero handles its own bottom wave into ProofStrip */}
       <Hero ready={loaderDone} />
+      <WhoWeServeSection />
       <ProofStrip />
       <Benefits />
       <WhatWeAutomate />

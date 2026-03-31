@@ -91,6 +91,26 @@ export default function Hero({ ready = true }) {
         className="absolute inset-0 flex flex-col items-center justify-start px-6 md:px-12 pt-36 md:pt-40"
         style={{ paddingBottom: '5rem', maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}
       >
+        {/* SMB badge */}
+        <div style={{
+          display: 'inline-flex', alignItems: 'center', gap: '0.45rem',
+          border: '1px solid rgba(143,175,159,0.3)',
+          borderRadius: 999,
+          padding: '6px 16px',
+          marginBottom: '1.5rem',
+          background: 'rgba(143,175,159,0.08)',
+          backdropFilter: 'blur(6px)',
+        }}>
+          <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#8FAF9F', flexShrink: 0 }} />
+          <span className="font-mono" style={{
+            fontSize: '0.65rem',
+            letterSpacing: '0.1em',
+            color: 'rgba(232,224,208,0.75)',
+          }}>
+            FOR SMBs WITH 1–5 EMPLOYEES
+          </span>
+        </div>
+
         {/* Headline */}
         <h1 ref={headlineRef} style={{ opacity: 0, lineHeight: 1 }}>
           <span
@@ -177,10 +197,10 @@ export default function Hero({ ready = true }) {
       {/* Scroll indicator — desktop only, centred */}
       <style>{`
         .hero-scroll { left: 1.5rem; }
-        .hero-cta { font-size: 0.9rem !important; padding: 0.75rem 1.6rem !important; }
+        .hero-cta { font-size: 0.82rem !important; padding: 0.65rem 1.4rem !important; }
         @media (min-width: 768px) {
           .hero-scroll { left: 50% !important; transform: translateX(-50%); }
-          .hero-cta { font-size: 1rem !important; padding: 1.1rem 3rem !important; }
+          .hero-cta { font-size: 0.88rem !important; padding: 0.85rem 2.2rem !important; }
         }
       `}</style>
       <div
