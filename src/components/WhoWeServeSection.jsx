@@ -60,7 +60,7 @@ function TickerRow({ items, reverse = false, speed = 38 }) {
 
 export default function WhoWeServeSection() {
   return (
-    <section style={{ background: CHARCOAL, padding: '88px 0 96px', overflow: 'hidden', position: 'relative' }}>
+    <section style={{ background: CHARCOAL, padding: '70px 0 77px', overflow: 'hidden', position: 'relative' }}>
       <style>{`
         @keyframes ws-ticker   { from { transform: translateX(0) }    to { transform: translateX(-50%) } }
         @keyframes ws-ticker-r { from { transform: translateX(-50%) } to { transform: translateX(0) }    }

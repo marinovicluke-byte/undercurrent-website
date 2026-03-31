@@ -330,7 +330,7 @@ export default function WhatWeAutomate() {
   }, [])
 
   return (
-    <section style={{ background: 'linear-gradient(160deg, #1C1C1A 0%, #1e2820 45%, #192217 80%, #1a1c1a 100%)', padding: '7.5rem 1.5rem 7.5rem', overflow: 'hidden', position: 'relative' }}>
+    <section style={{ background: 'linear-gradient(160deg, #1C1C1A 0%, #1e2820 45%, #192217 80%, #1a1c1a 100%)', padding: '6rem 1.5rem 6rem', overflow: 'hidden', position: 'relative' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
 
         {/* Headline */}

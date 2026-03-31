@@ -269,7 +269,7 @@ export default function Features() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="features" className="py-16 px-6 md:px-12" style={{ backgroundColor: '#F7F3ED' }}>
+    <section ref={sectionRef} id="features" className="px-6 md:px-12" style={{ backgroundColor: '#F7F3ED', padding: '3.2rem 1.5rem' }}>
       <div className="max-w-7xl mx-auto">
         <div ref={headingRef} className="mb-8">
           <p className="font-dm text-charcoal/40 mb-3" style={{ fontSize: '0.8rem', letterSpacing: '0.18em', fontWeight: 500 }}>

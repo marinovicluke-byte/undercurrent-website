@@ -605,7 +605,7 @@ export default function UserJourneyDarkHorizontal() {
       id="user-journey-dark-horizontal"
       style={{
         backgroundColor: '#1C1C1A',
-        padding: 'clamp(80px, 10vw, 130px) clamp(20px, 5vw, 48px)',
+        padding: 'clamp(64px, 8vw, 104px) clamp(20px, 5vw, 48px)',
         overflow: 'hidden',
         position: 'relative',
       }}

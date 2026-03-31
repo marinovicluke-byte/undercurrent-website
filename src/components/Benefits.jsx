@@ -265,7 +265,7 @@ export default function Benefits() {
   }, [])
 
   return (
-    <section style={{ background: 'linear-gradient(160deg, #111810 0%, #182018 50%, #131813 100%)', padding: '7.5rem 0' }}>
+    <section style={{ background: 'linear-gradient(160deg, #111810 0%, #182018 50%, #131813 100%)', padding: '6rem 0' }}>
       <style>{`
         .story-strip::-webkit-scrollbar { display: none; }
         .story-strip { -ms-overflow-style: none; scrollbar-width: none; }
