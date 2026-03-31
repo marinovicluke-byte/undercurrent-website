@@ -17,7 +17,7 @@ const tiles = [
     title: 'Audit ROI Calculator',
     sub: 'See exactly how many hours and dollars you lose to manual work each week.',
     cta: 'Calculate Now',
-    href: '/calculator',
+    href: '/roi',
     primary: false,
   },
   {
