@@ -76,14 +76,14 @@ export default function WhoWeServeSection() {
             INDUSTRIES WE SERVE
           </span>
           <h2 style={{
-            fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2.2rem, 4vw, 3.4rem)',
-            fontWeight: 300, fontStyle: 'italic', color: '#F7F3ED',
-            lineHeight: 1.1, margin: '0 0 16px', letterSpacing: '-0.02em',
+            fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(2rem, 4.5vw, 4.8rem)',
+            fontWeight: 700, color: '#F7F3ED',
+            lineHeight: 1.05, margin: '0 0 16px', letterSpacing: '-0.03em',
           }}>
             Built for the businesses that keep things running.
           </h2>
           <p style={{
-            fontFamily: 'DM Sans, sans-serif', fontSize: 16, fontWeight: 300,
+            fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(0.95rem, 1.4vw, 1.1rem)', fontWeight: 400,
             lineHeight: 1.65, color: 'rgba(232,224,208,0.5)', maxWidth: 520, margin: '0 auto',
           }}>
             From trades to allied health — we automate the admin that slows you down, so you can focus on the work that actually matters.
