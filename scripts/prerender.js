@@ -15,6 +15,7 @@ import matter from 'gray-matter'
 import { marked } from 'marked'
 import { fileURLToPath } from 'url'
 import { LOCATIONS } from '../src/data/locations.js'
+import { SERVICES } from '../src/data/services.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST = join(__dirname, '..', 'dist')
@@ -370,6 +371,38 @@ const ROUTES = [
     title: 'Terms of Service | UnderCurrent',
     description: 'Terms and conditions for using the UnderCurrent website and AI automation services. Read our service agreement, limitations, and policies.',
   },
+  // Service pages — generated from src/data/services.js
+  ...SERVICES.map(svc => ({
+    path: `/${svc.slug}`,
+    title: svc.metaTitle,
+    description: svc.metaDescription,
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        '@id': `${DOMAIN}/${svc.slug}#service`,
+        name: `${svc.label.charAt(0) + svc.label.slice(1).toLowerCase()} Automation`,
+        description: svc.metaDescription,
+        url: `${DOMAIN}/${svc.slug}`,
+        provider: {
+          '@type': 'Organization',
+          '@id': `${DOMAIN}/#business`,
+          name: 'UnderCurrent',
+          url: DOMAIN,
+          areaServed: { '@type': 'State', name: 'Victoria, AU' },
+        },
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: svc.faqs.map(f => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      },
+    ],
+  })),
   // Location pages — generated from src/data/locations.js
   ...LOCATIONS.map(loc => ({
     path: `/${loc.slug}`,
@@ -519,12 +552,14 @@ function injectMeta(html, route) {
 function generateSitemap(allRoutes) {
   const today = new Date().toISOString().split('T')[0]
   const locationPriorities = Object.fromEntries(LOCATIONS.map(l => [`/${l.slug}`, '0.85']))
+  const servicePriorities  = Object.fromEntries(SERVICES.map(s => [`/${s.slug}`, '0.85']))
   const priorities = {
     '/': '1.0', '/services': '0.9', '/about': '0.8', '/audit': '0.8',
     '/case-study': '0.7', '/resources': '0.7',
     '/process': '0.7', '/contact': '0.7', '/roi': '0.7',
     '/stats': '0.6', '/privacy': '0.3', '/terms': '0.3',
     ...locationPriorities,
+    ...servicePriorities,
   }
 
   const urls = allRoutes

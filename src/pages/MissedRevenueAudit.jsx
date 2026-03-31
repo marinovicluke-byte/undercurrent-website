@@ -239,6 +239,7 @@ export default function MissedRevenueAudit() {
           padding: 7px 13px;
           border-radius: 100px;
           border: 1.5px solid rgba(212,201,176,0.5);
+          cursor: pointer;
           background: transparent;
           font-family: 'DM Sans', sans-serif;
           font-size: 0.80rem;

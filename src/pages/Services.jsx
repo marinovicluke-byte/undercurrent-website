@@ -149,7 +149,7 @@ function ServiceFAQ({ items }) {
           style={{ border: '1px solid rgba(212,201,176,0.5)', backgroundColor: 'rgba(247,243,237,0.5)' }}
         >
           <button
-            className="w-full flex items-center justify-between px-5 py-4 text-left"
+            className="w-full flex items-center justify-between px-5 py-4 text-left cursor-pointer"
             onClick={() => setOpen(open === i ? null : i)}
           >
             <span className="font-dm" style={{ fontSize: '0.9rem', fontWeight: 400, color: '#1C1C1A' }}>{item.q}</span>

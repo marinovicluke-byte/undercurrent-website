@@ -33,7 +33,9 @@ const Article = lazy(() => import('./pages/Article'))
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
 const TermsOfService = lazy(() => import('./pages/TermsOfService'))
 const LocationPage = lazy(() => import('./pages/LocationPage'))
+const ServicePage = lazy(() => import('./pages/ServicePage'))
 import { LOCATIONS } from './data/locations'
+import { SERVICES } from './data/services'
 
 // Brand colors — match exact section backgrounds
 const LIGHT         = '#F7F3ED'
@@ -167,6 +169,9 @@ export default function App() {
         <Route path="/terms" element={<Suspense fallback={<LoadingSpinner />}><TermsOfService /></Suspense>} />
         {LOCATIONS.map(loc => (
           <Route key={loc.slug} path={`/${loc.slug}`} element={<Suspense fallback={<LoadingSpinner />}><LocationPage location={loc} /></Suspense>} />
+        ))}
+        {SERVICES.map(svc => (
+          <Route key={svc.slug} path={`/${svc.slug}`} element={<Suspense fallback={<LoadingSpinner />}><ServicePage service={svc} /></Suspense>} />
         ))}
         <Route path="*" element={<Suspense fallback={<LoadingSpinner />}><NotFound /></Suspense>} />
       </Routes>

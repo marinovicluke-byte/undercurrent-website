@@ -8,6 +8,7 @@ import PageHead from '../components/PageHead'
 import Reveal from '../components/Reveal'
 import Breadcrumb from '../components/Breadcrumb'
 import { CTA_HREF } from '../constants'
+import WhoWeServeSection from '../components/WhoWeServeSection'
 
 const DOMAIN = 'https://www.undercurrentautomations.com'
 const LIGHT     = '#F7F3ED'
@@ -351,7 +352,7 @@ function IndustryCard({ industry, index }) {
             {AnimComp && <AnimComp />}
           </div>
         </div>
-        <div style={{ padding: '24px 28px 28px', flex: 1 }}>
+        <div style={{ padding: '24px 28px 28px', flex: 1, textAlign: 'center' }}>
           <span style={{ display: 'inline-block', fontFamily: 'DM Mono, monospace', fontSize: 10, letterSpacing: '0.1em', color: SAGE, background: 'rgba(143,175,159,0.08)', border: '1px solid rgba(143,175,159,0.18)', padding: '4px 10px', borderRadius: 999, marginBottom: 12 }}>{industry.label}</span>
           <h3 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 22, fontWeight: 500, color: CHARCOAL, lineHeight: 1.2, margin: '0 0 10px' }}>{industry.headline}</h3>
           <p style={{ fontFamily: 'DM Sans', fontSize: 14.5, lineHeight: 1.65, color: 'rgba(28,28,26,0.58)', margin: 0 }}>{industry.copy}</p>
@@ -451,7 +452,7 @@ function ProcessStep({ step, index }) {
             fontFamily: 'DM Mono, monospace', fontSize: 11, color: SAGE, letterSpacing: '0.08em',
           }}>{step.num}</div>
         </div>
-        <div>
+        <div style={{ textAlign: 'center' }}>
           <h3 style={{ fontFamily: 'DM Sans', fontSize: 15.5, fontWeight: 600, color: 'rgba(232,224,208,0.88)', margin: '0 0 8px', lineHeight: 1.3 }}>{step.headline}</h3>
           <p style={{ fontFamily: 'DM Sans', fontSize: 14, lineHeight: 1.65, color: 'rgba(232,224,208,0.42)', margin: 0 }}>{step.copy}</p>
         </div>
@@ -611,7 +612,7 @@ export default function LocationPage({ location }) {
         <Grain opacity={0.04} />
 
         {/* Content */}
-        <div style={{ position: 'relative', zIndex: 3, maxWidth: 820, margin: '0 auto', width: '100%' }}>
+        <div style={{ position: 'relative', zIndex: 3, maxWidth: 820, margin: '0 auto', width: '100%', textAlign: 'center' }}>
           <Reveal>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontFamily: 'DM Mono, monospace', fontSize: 11, letterSpacing: '0.1em', color: 'rgba(143,175,159,0.85)', border: '1px solid rgba(143,175,159,0.25)', padding: '5px 14px', borderRadius: 999, marginBottom: 28 }}>
               <span style={{ width: 6, height: 6, borderRadius: '50%', background: SAGE, boxShadow: `0 0 6px ${SAGE}`, animation: 'uc-blink 2s ease-in-out infinite' }} />
@@ -622,7 +623,7 @@ export default function LocationPage({ location }) {
           <HeroHeadline location={location} />
 
           <Reveal delay={0.2}>
-            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(16px, 2vw, 19px)', fontWeight: 300, lineHeight: 1.65, color: 'rgba(232,224,208,0.7)', maxWidth: 560, margin: '0 0 40px' }}>{location.heroCopy}</p>
+            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(16px, 2vw, 19px)', fontWeight: 300, lineHeight: 1.65, color: 'rgba(232,224,208,0.7)', maxWidth: 560, margin: '0 auto 40px' }}>{location.heroCopy}</p>
           </Reveal>
 
           <Reveal delay={0.28}>
@@ -640,7 +641,7 @@ export default function LocationPage({ location }) {
       <section style={{ background: LIGHT, padding: 'clamp(64px, 8vw, 100px) 24px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <Reveal><SectionLabel>{location.industriesLabel}</SectionLabel></Reveal>
-          <div style={{ maxWidth: 680, marginBottom: 52 }}>
+          <div style={{ maxWidth: 680, margin: '0 auto 52px', textAlign: 'center' }}>
             <Reveal delay={0.05}><h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 500, color: CHARCOAL, margin: '0 0 16px', lineHeight: 1.15 }}>{location.industriesHeadline}</h2></Reveal>
             <Reveal delay={0.1}><p style={{ fontFamily: 'DM Sans', fontSize: 17, lineHeight: 1.65, color: 'rgba(28,28,26,0.56)', margin: 0 }}>{location.industriesCopy}</p></Reveal>
           </div>
@@ -653,21 +654,22 @@ export default function LocationPage({ location }) {
       {/* ── WHAT YOU GET ──────────────────────────────────────────────────── */}
       <section style={{ background: PARCHMENT, padding: 'clamp(64px, 8vw, 100px) 24px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-          <Reveal><SectionLabel>{location.benefitsLabel}</SectionLabel></Reveal>
-          <Reveal delay={0.05}><h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 500, color: CHARCOAL, margin: '0 0 48px', lineHeight: 1.15, maxWidth: 560 }}>{location.benefitsHeadline}</h2></Reveal>
+          <Reveal style={{ textAlign: 'center' }}><SectionLabel>{location.benefitsLabel}</SectionLabel></Reveal>
+          <Reveal delay={0.05} style={{ textAlign: 'center' }}><h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 500, color: CHARCOAL, margin: '0 auto 48px', lineHeight: 1.15, maxWidth: 560 }}>{location.benefitsHeadline}</h2></Reveal>
           <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
             {location.benefits.map((b, i) => <BenefitCard key={b.title} benefit={b} index={i} />)}
           </div>
         </div>
       </section>
 
-      <WaveDivider from={PARCHMENT} to={WARM_DARK} height={80} flip />
+      <WaveDivider from={PARCHMENT} to={CHARCOAL} height={80} flip />
+      <WhoWeServeSection />
 
       {/* ── HOW IT WORKS ──────────────────────────────────────────────────── */}
       <section style={{ background: WARM_DARK, padding: 'clamp(56px, 7vw, 88px) 24px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-          <Reveal><SectionLabel dark>{location.processLabel}</SectionLabel></Reveal>
-          <Reveal delay={0.05}><h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 500, color: '#F7F3ED', margin: '0 0 48px', lineHeight: 1.15 }}>{location.processHeadline}</h2></Reveal>
+          <Reveal style={{ textAlign: 'center' }}><SectionLabel dark>{location.processLabel}</SectionLabel></Reveal>
+          <Reveal delay={0.05} style={{ textAlign: 'center' }}><h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 500, color: '#F7F3ED', margin: '0 0 48px', lineHeight: 1.15 }}>{location.processHeadline}</h2></Reveal>
           <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
             {STEPS.map((step, i) => <ProcessStep key={step.num} step={step} index={i} />)}
           </div>
@@ -687,8 +689,8 @@ export default function LocationPage({ location }) {
       {/* ── WHY UNDERCURRENT ──────────────────────────────────────────────── */}
       <section style={{ background: LIGHT, padding: 'clamp(64px, 8vw, 100px) 24px' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <Reveal><SectionLabel>{location.comparisonLabel}</SectionLabel></Reveal>
-          <div style={{ maxWidth: 640, marginBottom: 48 }}>
+          <Reveal style={{ textAlign: 'center' }}><SectionLabel>{location.comparisonLabel}</SectionLabel></Reveal>
+          <div style={{ maxWidth: 640, margin: '0 auto 48px', textAlign: 'center' }}>
             <Reveal delay={0.05}><h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 500, color: CHARCOAL, margin: '0 0 14px', lineHeight: 1.15 }}>{location.comparisonHeadline}</h2></Reveal>
             <Reveal delay={0.1}><p style={{ fontFamily: 'DM Sans', fontSize: 17, lineHeight: 1.65, color: 'rgba(28,28,26,0.54)', margin: 0 }}>{location.comparisonCopy}</p></Reveal>
           </div>
@@ -703,8 +705,8 @@ export default function LocationPage({ location }) {
       {/* ── FAQ ───────────────────────────────────────────────────────────── */}
       <section style={{ background: PARCHMENT, padding: 'clamp(64px, 8vw, 100px) 24px' }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
-          <Reveal><SectionLabel>{location.faqLabel}</SectionLabel></Reveal>
-          <Reveal delay={0.05}><h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', fontWeight: 500, color: CHARCOAL, margin: '0 0 40px', lineHeight: 1.2 }}>{location.faqHeadline}</h2></Reveal>
+          <Reveal style={{ textAlign: 'center' }}><SectionLabel>{location.faqLabel}</SectionLabel></Reveal>
+          <Reveal delay={0.05} style={{ textAlign: 'center' }}><h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', fontWeight: 500, color: CHARCOAL, margin: '0 0 40px', lineHeight: 1.2 }}>{location.faqHeadline}</h2></Reveal>
           <Reveal delay={0.1}>
             <div>{location.faqs.map((faq, i) => <FAQItem key={i} faq={faq} />)}</div>
           </Reveal>

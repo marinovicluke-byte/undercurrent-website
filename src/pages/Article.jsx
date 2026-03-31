@@ -54,7 +54,7 @@ function AuthorBox() {
           </div>
           <Link to="/about" style={{ textDecoration: 'none' }}>
             <span className="font-dm" style={{ fontSize: '1rem', fontWeight: 500, color: '#F7F3ED' }}>
-              Luke Marinovic
+              Luke — Founder of UnderCurrent Automations
             </span>
           </Link>
           <p className="font-dm" style={{
@@ -64,7 +64,7 @@ function AuthorBox() {
             lineHeight: 1.6,
             marginTop: '0.35rem',
           }}>
-            Founder of UnderCurrent. Builds AI automation systems for small businesses across Australia.
+            Builds AI automation systems for small businesses across Australia.
           </p>
         </div>
       </aside>
@@ -191,7 +191,7 @@ function buildJsonLdSchemas(article, canonical) {
     description: article.description,
     author: {
       '@type': 'Person',
-      name: article.author || 'Luke Marinovic',
+      name: article.author || 'Luke',
       url: `${DOMAIN}/about`,
     },
     publisher: {
@@ -264,7 +264,7 @@ export default function Article() {
     { property: 'og:type', content: 'article' },
     { property: 'og:site_name', content: 'UnderCurrent' },
     { property: 'article:published_time', content: article.date },
-    { property: 'article:author', content: article.author || 'Luke Marinovic' },
+    { property: 'article:author', content: article.author || 'Luke' },
     { property: 'article:section', content: CLUSTER_LABELS[article.cluster] || article.cluster },
     { property: 'article:tag', content: article.keyword },
   ]
