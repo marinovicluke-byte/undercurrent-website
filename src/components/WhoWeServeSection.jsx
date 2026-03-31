@@ -80,13 +80,13 @@ export default function WhoWeServeSection() {
             fontWeight: 700, color: '#F7F3ED',
             lineHeight: 1.05, margin: '0 0 16px', letterSpacing: '-0.03em',
           }}>
-            Built for the businesses that keep things running.
+            Serving Australian Small Businesses
           </h2>
           <p style={{
             fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(0.95rem, 1.4vw, 1.1rem)', fontWeight: 400,
             lineHeight: 1.65, color: 'rgba(232,224,208,0.5)', maxWidth: 520, margin: '0 auto',
           }}>
-            From trades to allied health — we automate the admin that slows you down, so you can focus on the work that actually matters.
+            From trades to allied health, we automate the admin that slows you down, so you can focus on the work that actually matters.
           </p>
         </Reveal>
       </div>
