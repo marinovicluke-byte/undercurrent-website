@@ -14,6 +14,7 @@ import { join, dirname } from 'path'
 import matter from 'gray-matter'
 import { marked } from 'marked'
 import { fileURLToPath } from 'url'
+import { LOCATIONS } from '../src/data/locations.js'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST = join(__dirname, '..', 'dist')
@@ -369,6 +370,51 @@ const ROUTES = [
     title: 'Terms of Service | UnderCurrent',
     description: 'Terms and conditions for using the UnderCurrent website and AI automation services. Read our service agreement, limitations, and policies.',
   },
+  // Location pages — generated from src/data/locations.js
+  ...LOCATIONS.map(loc => ({
+    path: `/${loc.slug}`,
+    title: loc.metaTitle,
+    description: loc.metaDescription,
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        '@id': `${DOMAIN}/${loc.slug}#business`,
+        name: 'UnderCurrent',
+        description: loc.metaDescription,
+        url: `${DOMAIN}/${loc.slug}`,
+        address: { '@type': 'PostalAddress', addressLocality: loc.city, addressRegion: loc.region, addressCountry: 'AU' },
+        areaServed: { '@type': 'State', name: `${loc.city}, ${loc.region}` },
+        serviceType: ['AI Business Automation', 'Workflow Automation', 'Business Process Automation'],
+        email: 'luke@undercurrentautomations.com',
+        sameAs: [
+          'https://www.instagram.com/undercurrent.automations/',
+          'https://www.linkedin.com/company/undercurrent-automations',
+        ],
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: loc.faqs.map(f => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: `How AI Automation Works for ${loc.city} Small Businesses`,
+        description: `Three steps to automate your ${loc.city} business operations with UnderCurrent.`,
+        step: [
+          { '@type': 'HowToStep', name: 'Map', text: 'In a 30-minute call, we go through everything you and your team do repeatedly. We rank it by time saved and show you exactly what can be automated.' },
+          { '@type': 'HowToStep', name: 'Build', text: 'We connect automations directly into the tools you already use. No new software to learn, nothing to change about how you work.' },
+          { '@type': 'HowToStep', name: 'Flow', text: 'Your systems work around the clock — following up leads, looking after clients, keeping your inbox clear. You get your time back.' },
+        ],
+        provider: { '@type': 'Organization', '@id': `${DOMAIN}/#business`, name: 'UnderCurrent' },
+      },
+    ],
+  })),
 ]
 
 function injectMeta(html, route) {
@@ -472,11 +518,13 @@ function injectMeta(html, route) {
 
 function generateSitemap(allRoutes) {
   const today = new Date().toISOString().split('T')[0]
+  const locationPriorities = Object.fromEntries(LOCATIONS.map(l => [`/${l.slug}`, '0.85']))
   const priorities = {
     '/': '1.0', '/services': '0.9', '/about': '0.8', '/audit': '0.8',
     '/case-study': '0.7', '/resources': '0.7',
     '/process': '0.7', '/contact': '0.7', '/roi': '0.7',
     '/stats': '0.6', '/privacy': '0.3', '/terms': '0.3',
+    ...locationPriorities,
   }
 
   const urls = allRoutes
