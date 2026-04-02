@@ -7,7 +7,7 @@ export default function MarkdownRenderer({ html }) {
       />
       <style>{`
         .article-body {
-          max-width: 680px;
+          max-width: 820px;
           margin: 0 auto;
         }
 

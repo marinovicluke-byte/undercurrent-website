@@ -10,35 +10,12 @@ import { getArticleBySlug, getArticlesByCluster, CLUSTER_LABELS } from '../utils
 
 const DOMAIN = 'https://www.undercurrentautomations.com'
 
-function ArticleHero({ slug }) {
-  const imgSrc = `/articles/${slug}/hero.jpg`
-  return (
-    <div style={{
-      width: '100%',
-      maxWidth: '680px',
-      margin: '2rem auto',
-      aspectRatio: '16/9',
-      borderRadius: '1rem',
-      overflow: 'hidden',
-      background: 'linear-gradient(135deg, rgba(143,175,159,0.08) 0%, rgba(28,28,26,0.4) 100%)',
-      border: '1px solid rgba(143,175,159,0.08)',
-    }}>
-      <img
-        src={imgSrc}
-        alt=""
-        loading="eager"
-        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-        onError={e => { e.currentTarget.style.display = 'none' }}
-      />
-    </div>
-  )
-}
 
 function AuthorBox() {
   return (
     <Reveal>
       <aside style={{
-        maxWidth: '680px',
+        maxWidth: '820px',
         margin: '3rem auto 0',
         padding: '1.5rem',
         display: 'flex',
@@ -77,7 +54,7 @@ function RelatedArticles({ cluster, currentSlug }) {
   if (related.length === 0) return null
 
   return (
-    <section style={{ maxWidth: '680px', margin: '4rem auto 0', padding: '0 1.5rem' }}>
+    <section style={{ maxWidth: '820px', margin: '4rem auto 0', padding: '0 1.5rem' }}>
       <Reveal>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
           <div style={{ width: '28px', height: '1px', background: 'rgba(143,175,159,0.3)' }} />
@@ -132,7 +109,7 @@ function CTASection() {
   return (
     <Reveal>
       <section style={{
-        maxWidth: '680px',
+        maxWidth: '820px',
         margin: '4rem auto',
         padding: '2.5rem',
         background: 'linear-gradient(145deg, rgba(143,175,159,0.08) 0%, rgba(28,28,26,0.3) 100%)',
@@ -297,7 +274,7 @@ export default function Article() {
       <article style={{ position: 'relative', zIndex: 10, padding: '2rem 1.5rem 0' }}>
         {/* Header */}
         <Reveal>
-          <header style={{ maxWidth: '680px', margin: '0 auto', textAlign: 'center' }}>
+          <header style={{ maxWidth: '820px', margin: '0 auto', textAlign: 'center' }}>
             {/* Meta pills */}
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
               <span className="font-mono" style={{
@@ -350,8 +327,6 @@ export default function Article() {
             </p>
           </header>
         </Reveal>
-
-        <ArticleHero slug={article.slug} />
 
         {/* Body */}
         <Reveal delay={0.1}>

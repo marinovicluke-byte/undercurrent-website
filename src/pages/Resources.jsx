@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -71,203 +71,7 @@ function OceanCanvas() {
   )
 }
 
-/* ── Topic Clusters ── */
-const TOPICS = [
-  {
-    id: 'automation',
-    label: 'AUTOMATION',
-    pillar: {
-      title: 'The Complete Guide to Small Business Automation',
-      desc: 'Everything you need to know about automating your business — from first steps to full-scale systems. The definitive pillar guide.',
-      isPillar: true,
-    },
-    articles: [
-      { title: 'The Small Business Automation Playbook', desc: 'A step-by-step framework for identifying which parts of your business to automate first.' },
-      { title: 'Why Most Businesses Automate the Wrong Things First', desc: 'The counterintuitive order of operations that gets results fastest.' },
-      { title: 'Automating Onboarding Without Losing the Personal Touch', desc: 'How to welcome new clients with AI while keeping it warm and human.' },
-    ],
-  },
-  {
-    id: 'ai',
-    label: 'AI FOR BUSINESS',
-    pillar: {
-      title: 'AI for Small Business: A Practical Guide',
-      desc: 'Cut through the hype. A grounded guide to what AI can actually do for businesses under 50 people.',
-      isPillar: true,
-    },
-    articles: [
-      { title: 'From Inbox Zero to Inbox Automated', desc: 'How to build a personal AI assistant that handles your email triage.' },
-      { title: '5 Signs Your Follow-Up Is Costing You Clients', desc: 'How slow response times silently erode your pipeline — and what to do about it.' },
-      { title: 'The AI Readiness Checklist', desc: 'A free checklist to assess whether your business is ready for automation.' },
-    ],
-  },
-  {
-    id: 'growth',
-    label: 'BUSINESS GROWTH',
-    pillar: {
-      title: 'Scaling Without Scaling Headcount',
-      desc: 'How to grow revenue and capacity without proportionally growing your team — using systems, not staff.',
-      isPillar: true,
-    },
-    articles: [
-      { title: 'The Hidden Cost of Manual Processes', desc: 'Calculate what repetitive tasks are actually costing your business in lost revenue and burnout.' },
-      { title: 'Building Systems That Run Without You', desc: 'The operator\'s guide to removing yourself from day-to-day execution.' },
-    ],
-  },
-]
-
-const FILTERS = ['ALL', ...TOPICS.map(t => t.label)]
 const publishedArticles = getAllArticles()
-
-function PillarCard({ title, desc, topic, delay }) {
-  return (
-    <Reveal delay={delay} y={30}>
-      <div
-        className="resource-card"
-        style={{
-          background: 'linear-gradient(145deg, rgba(143,175,159,0.1) 0%, rgba(28,28,26,0.3) 100%)',
-          border: '1px solid rgba(143,175,159,0.2)',
-          borderRadius: '1.25rem',
-          overflow: 'hidden',
-          cursor: 'pointer',
-          transition: 'all 0.35s ease',
-          gridColumn: '1 / -1',
-        }}
-        onMouseEnter={e => {
-          e.currentTarget.style.borderColor = 'rgba(143,175,159,0.35)'
-          e.currentTarget.style.transform = 'translateY(-4px)'
-          e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.3)'
-        }}
-        onMouseLeave={e => {
-          e.currentTarget.style.borderColor = 'rgba(143,175,159,0.2)'
-          e.currentTarget.style.transform = 'translateY(0)'
-          e.currentTarget.style.boxShadow = 'none'
-        }}
-      >
-        <div style={{ padding: '2rem 2.5rem', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
-            <span className="font-mono" style={{
-              fontSize: '0.5rem', letterSpacing: '0.16em',
-              color: '#8FAF9F',
-              border: '1px solid rgba(143,175,159,0.3)',
-              padding: '0.2rem 0.6rem',
-              borderRadius: '9999px',
-              background: 'rgba(143,175,159,0.08)',
-            }}>
-              PILLAR GUIDE
-            </span>
-            <span className="font-mono" style={{ fontSize: '0.5rem', letterSpacing: '0.16em', color: 'rgba(143,175,159,0.5)' }}>
-              {topic}
-            </span>
-          </div>
-          <h3 className="font-cormorant" style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.75rem)', fontWeight: 600, color: '#F7F3ED', lineHeight: 1.25 }}>
-            {title}
-          </h3>
-          <p className="font-dm" style={{ fontSize: '0.9rem', fontWeight: 300, color: 'rgba(212,201,176,0.5)', lineHeight: 1.7, maxWidth: '60ch' }}>
-            {desc}
-          </p>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: '0.5rem' }}>
-            <span className="font-dm" style={{ fontSize: '0.8rem', fontWeight: 400, color: '#8FAF9F', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
-              Read the Guide <span>→</span>
-            </span>
-            <span className="font-mono" style={{
-              fontSize: '0.5rem', letterSpacing: '0.14em',
-              color: 'rgba(143,175,159,0.35)',
-            }}>
-              COMING SOON
-            </span>
-          </div>
-        </div>
-      </div>
-    </Reveal>
-  )
-}
-
-function ResourceCard({ title, desc, topic, delay }) {
-  return (
-    <Reveal delay={delay} y={30}>
-      <div
-        className="resource-card"
-        style={{
-          background: 'linear-gradient(145deg, rgba(143,175,159,0.05) 0%, rgba(28,28,26,0.2) 100%)',
-          border: '1px solid rgba(143,175,159,0.1)',
-          borderRadius: '1.25rem',
-          overflow: 'hidden',
-          cursor: 'pointer',
-          transition: 'all 0.35s ease',
-        }}
-        onMouseEnter={e => {
-          e.currentTarget.style.borderColor = 'rgba(143,175,159,0.25)'
-          e.currentTarget.style.transform = 'translateY(-4px)'
-          e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.3)'
-        }}
-        onMouseLeave={e => {
-          e.currentTarget.style.borderColor = 'rgba(143,175,159,0.1)'
-          e.currentTarget.style.transform = 'translateY(0)'
-          e.currentTarget.style.boxShadow = 'none'
-        }}
-      >
-        {/* Image area */}
-        <div style={{
-          width: '100%', height: '180px',
-          background: 'linear-gradient(135deg, rgba(143,175,159,0.06) 0%, rgba(28,28,26,0.4) 100%)',
-          position: 'relative', overflow: 'hidden',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-        }}>
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#8FAF9F" strokeWidth="1" strokeLinecap="round" style={{ opacity: 0.12 }}>
-            <rect x="3" y="3" width="18" height="18" rx="2" />
-            <circle cx="8.5" cy="8.5" r="1.5" />
-            <path d="m21 15-5-5L5 21" />
-          </svg>
-
-          {/* Card wave */}
-          <div aria-hidden="true" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '40px', overflow: 'hidden' }}>
-            <svg style={{ position: 'absolute', bottom: 0, width: '200%', height: '40px', animation: `cardWave 7s ease-in-out infinite` }} viewBox="0 0 1440 40" preserveAspectRatio="none">
-              <path d="M0,20 C360,40 720,0 1080,20 C1260,30 1440,10 1440,20 L1440,40 L0,40 Z" fill="rgba(143,175,159,0.12)" />
-            </svg>
-            <svg style={{ position: 'absolute', bottom: 0, width: '200%', height: '40px', animation: `cardWave 11s ease-in-out infinite reverse`, opacity: 0.5 }} viewBox="0 0 1440 40" preserveAspectRatio="none">
-              <path d="M0,25 C240,10 480,35 720,20 C960,5 1200,30 1440,18 L1440,40 L0,40 Z" fill="rgba(143,175,159,0.08)" />
-            </svg>
-          </div>
-
-          {/* Coming soon overlay */}
-          <div style={{
-            position: 'absolute', inset: 0,
-            background: 'rgba(28,28,26,0.6)',
-            backdropFilter: 'blur(2px)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-          }}>
-            <span className="font-mono" style={{
-              fontSize: '0.55rem', letterSpacing: '0.18em',
-              color: 'rgba(143,175,159,0.5)',
-              border: '1px solid rgba(143,175,159,0.2)',
-              padding: '0.3rem 0.8rem',
-              background: 'rgba(28,28,26,0.5)',
-            }}>
-              COMING SOON
-            </span>
-          </div>
-        </div>
-
-        {/* Card body */}
-        <div style={{ padding: '1.25rem 1.5rem 1.5rem' }}>
-          <p className="font-mono" style={{ fontSize: '0.5rem', letterSpacing: '0.16em', color: 'rgba(143,175,159,0.6)', marginBottom: '0.6rem' }}>
-            {topic}
-          </p>
-          <h3 className="font-cormorant" style={{ fontSize: '1.25rem', fontWeight: 600, color: '#F7F3ED', lineHeight: 1.25, marginBottom: '0.5rem' }}>
-            {title}
-          </h3>
-          <p className="font-dm" style={{ fontSize: '0.82rem', fontWeight: 300, color: 'rgba(212,201,176,0.4)', lineHeight: 1.65, marginBottom: '1rem' }}>
-            {desc}
-          </p>
-          <span className="font-dm" style={{ fontSize: '0.78rem', fontWeight: 400, color: '#8FAF9F', display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
-            Read More <span>→</span>
-          </span>
-        </div>
-      </div>
-    </Reveal>
-  )
-}
 
 function PublishedArticleCard({ article, delay }) {
   return (
@@ -355,7 +159,6 @@ export default function Resources() {
   const videoRef = useRef(null)
   const headlineRef = useRef(null)
   const subRef = useRef(null)
-  const [activeFilter, setActiveFilter] = useState('ALL')
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
@@ -363,9 +166,13 @@ export default function Resources() {
     tl.fromTo(subRef.current, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8 }, 0.6)
   }, [])
 
-  const filteredTopics = activeFilter === 'ALL'
-    ? TOPICS
-    : TOPICS.filter(t => t.label === activeFilter)
+  // Group published articles by cluster
+  const clusterGroups = publishedArticles.reduce((acc, article) => {
+    const key = article.cluster || 'uncategorised'
+    if (!acc[key]) acc[key] = []
+    acc[key].push(article)
+    return acc
+  }, {})
 
   return (
     <div style={{ backgroundColor: '#1C1C1A', minHeight: '100vh', overflowX: 'hidden' }}>
@@ -452,7 +259,7 @@ export default function Resources() {
 
         {/* Section header */}
         <Reveal>
-          <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
+          <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto 3rem' }}>
             <p className="font-mono" style={{ fontSize: '0.65rem', letterSpacing: '0.18em', fontWeight: 500, color: '#8FAF9F', marginBottom: '1rem' }}>
               BROWSE BY TOPIC
             </p>
@@ -463,96 +270,38 @@ export default function Resources() {
               Deep Dives, Organised<br />by What Matters
             </h2>
             <p className="font-dm" style={{ fontSize: '0.95rem', fontWeight: 300, color: 'rgba(212,201,176,0.45)', lineHeight: 1.7 }}>
-              Each topic cluster starts with a comprehensive pillar guide, supported by focused articles that go deeper on specific questions.
+              Guides, playbooks, and lessons from the field, organised by topic.
             </p>
           </div>
         </Reveal>
 
-        {/* Topic filter pills */}
-        <Reveal delay={0.1}>
-          <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
-            {FILTERS.map(f => {
-              const isActive = f === activeFilter
-              return (
-                <button
-                  key={f}
-                  className="font-mono"
-                  onClick={() => setActiveFilter(f)}
-                  style={{
-                    fontSize: '0.6rem', letterSpacing: '0.12em',
-                    padding: '0.45rem 1rem', borderRadius: '9999px',
-                    border: `1px solid ${isActive ? 'rgba(143,175,159,0.35)' : 'rgba(143,175,159,0.15)'}`,
-                    background: isActive ? 'rgba(143,175,159,0.1)' : 'transparent',
-                    color: isActive ? '#8FAF9F' : 'rgba(212,201,176,0.45)',
-                    cursor: 'pointer', transition: 'all 0.3s ease',
-                  }}
-                >
-                  {f}
-                </button>
-              )
-            })}
-          </div>
-        </Reveal>
-
-        {/* Topic cluster sections */}
-        <div style={{ maxWidth: '1100px', margin: '0 auto', paddingBottom: '4rem' }}>
-          {filteredTopics.map((topic, ti) => (
-            <div key={topic.id} style={{ marginBottom: ti < filteredTopics.length - 1 ? '4rem' : 0 }}>
-              {/* Topic heading */}
+        {/* Articles grouped by cluster */}
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          {Object.entries(clusterGroups).map(([cluster, articles], gi) => (
+            <div key={cluster} style={{ marginBottom: gi < Object.keys(clusterGroups).length - 1 ? '4rem' : 0 }}>
               <Reveal delay={0.05}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
                   <div style={{ width: '28px', height: '1px', background: 'rgba(143,175,159,0.3)' }} />
                   <h3 className="font-mono" style={{ fontSize: '0.65rem', letterSpacing: '0.18em', color: '#8FAF9F', fontWeight: 500 }}>
-                    {topic.label}
+                    {CLUSTER_LABELS[cluster]?.toUpperCase() || cluster.toUpperCase()}
                   </h3>
                   <div style={{ flex: 1, height: '1px', background: 'rgba(143,175,159,0.08)' }} />
                   <span className="font-mono" style={{ fontSize: '0.5rem', letterSpacing: '0.14em', color: 'rgba(143,175,159,0.3)' }}>
-                    {topic.articles.length + 1 + publishedArticles.filter(a => a.cluster === topic.id).length} ARTICLES
+                    {articles.length} {articles.length === 1 ? 'ARTICLE' : 'ARTICLES'}
                   </span>
                 </div>
               </Reveal>
-
-              {/* Pillar card (full width) */}
-              <PillarCard
-                title={topic.pillar.title}
-                desc={topic.pillar.desc}
-                topic={topic.label}
-                delay={0.1}
-              />
-
-              {/* Supporting article cards */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" style={{ marginTop: '1.25rem' }}>
-                {topic.articles.map((article, ai) => (
-                  <ResourceCard
-                    key={article.title}
-                    title={article.title}
-                    desc={article.desc}
-                    topic={topic.label}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                {articles.map((article, ai) => (
+                  <PublishedArticleCard
+                    key={article.slug}
+                    article={article}
                     delay={0.05 * (ai + 1)}
                   />
                 ))}
               </div>
-              {/* Published articles from markdown files */}
-              {publishedArticles.filter(a => a.cluster === topic.id).length > 0 && (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" style={{ marginTop: '1.25rem' }}>
-                  {publishedArticles.filter(a => a.cluster === topic.id).map((article, ai) => (
-                    <PublishedArticleCard
-                      key={article.slug}
-                      article={article}
-                      delay={0.05 * (ai + 1)}
-                    />
-                  ))}
-                </div>
-              )}
             </div>
           ))}
-        </div>
-
-        {/* Bottom message */}
-        <div style={{ textAlign: 'center', padding: '0 1.5rem 3rem' }}>
-          <p className="font-dm" style={{ fontSize: '0.85rem', fontWeight: 300, color: 'rgba(212,201,176,0.25)', lineHeight: 1.7 }}>
-            More resources are on the way. We're building out each topic cluster<br />with in-depth guides and actionable frameworks.
-          </p>
         </div>
       </section>
 
