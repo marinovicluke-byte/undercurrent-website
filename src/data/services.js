@@ -587,6 +587,121 @@ export const SERVICES = [
       { label: 'Customer Experience Automation', path: '/customer-experience-automation' },
     ],
   },
+
+  {
+    slug: 'inbound-lead-management-melbourne',
+    id: 'inbound-lead-mgmt',
+    index: '06',
+    label: 'INBOUND LEAD MANAGEMENT',
+
+    heroVariant: 'outfit',
+    heroMockup: true,
+    accentColor: '#8FAF9F',
+
+    metaTitle: 'Inbound Lead Management Melbourne — Stop Losing Paid Enquiries | UnderCurrent',
+    metaDescription: 'Melbourne tradespeople and service businesses: stop losing paid leads. UnderCurrent builds done-for-you inbound lead management systems that capture, qualify and follow up every enquiry until it is booked.',
+
+    heroPill: 'Inbound Lead Management',
+    heroHeadline1: 'Stop losing money on',
+    heroHeadline2: 'wasted leads.',
+    heroCopy: 'If you\'re already paying for ads or getting regular web enquiries, the real problem isn\'t lead generation, it\'s what happens after the enquiry. We build a simple inbound lead management system that captures every enquiry, follows it up automatically, and turns more of your existing leads into booked jobs.',
+
+    demoAnimType: 'lead-booking',
+    demoLabel: 'INBOUND LEAD PIPELINE',
+    demoHeadline: 'Every enquiry captured. Every lead followed up.',
+    demoCopy: 'From first contact to booked job, every inbound lead is captured, qualified and followed up automatically, without anyone slipping through the cracks.',
+
+    deliversLabel: 'WHAT WE SET UP FOR YOU',
+    deliversHeadline: 'The full inbound lead system, built and connected.',
+    whatWeDeliver: [
+      'Lead capture from ads, website forms, and inbound channels',
+      'A simple lead pipeline with clear stages: New, Contacted, Qualified, Quoted, Booked, Lost',
+      'Basic qualification and tagging rules tailored to your services',
+      'Instant email and SMS follow-up so fewer leads go cold',
+      'A short nurture sequence for leads that need more time',
+      'Internal notifications and task reminders for you or your admin',
+      'Simple reporting so you can see what happened to every lead',
+    ],
+
+    industriesLabel: 'WHO WE HELP',
+    industriesHeadline: 'For Melbourne service businesses that can\'t afford to waste enquiries.',
+    industriesCopy: 'You\'re already getting leads. The issue is the handoff between enquiry and booking. If leads land in different inboxes, get followed up from memory, or get missed when you\'re on the job, this system is built for you.',
+    industries: [
+      {
+        label: 'Trades',
+        headline: 'Quote every enquiry. Win more jobs.',
+        copy: 'Plumbers, electricians, builders, roofers. Enquiries hit at 7pm and fall through the cracks by morning. We capture every inbound lead, send an immediate acknowledgement, and trigger a follow-up sequence before your competitors respond.',
+        animType: 'jobflow',
+      },
+      {
+        label: 'Home Services',
+        headline: 'No more leads lost to a slow reply.',
+        copy: 'Cleaners, landscapers, pest control, handyman services. Most customers contact two or three providers. The one who responds first usually wins the job. We make sure that\'s you, every time.',
+        animType: 'jobflow',
+      },
+      {
+        label: 'Specialist Services',
+        headline: 'Every enquiry tracked from first contact to booking.',
+        copy: 'Physios, mechanics, mobile services, specialist contractors. Your schedule fills from inbound demand, but too many enquiries disappear in the follow-up gap. We close that gap with a simple automated system.',
+        animType: 'jobflow',
+      },
+    ],
+
+    processStyle: 'vertical',
+    processLabel: 'HOW IT WORKS',
+    processHeadline: 'Three steps. Then it runs itself.',
+
+    comparisonLabel: 'WHY UNDERCURRENT',
+    comparisonHeadline: 'The smarter alternative to losing paid leads.',
+    comparisonCopy: 'If you\'re already spending to generate leads, here is why the problem is not more leads, it\'s what happens to the ones you already have.',
+    comparisonRows: [
+      { label: 'Captures every enquiry automatically',            uc: true,  manual: false, generic: false, agency: false },
+      { label: 'Follows up leads before they go cold',            uc: true,  manual: false, generic: false, agency: false },
+      { label: 'Shows exactly where leads are dropping off',      uc: true,  manual: false, generic: true,  agency: false },
+      { label: 'Works with tools you already use',                uc: true,  manual: true,  generic: false, agency: false },
+      { label: 'No new software or tech headache',                uc: true,  manual: true,  generic: false, agency: false },
+      { label: 'Done-for-you setup, live within days',            uc: true,  manual: false, generic: false, agency: false },
+    ],
+    comparisonColumns: ['UnderCurrent', 'Doing It Manually'],
+
+    faqLabel: 'COMMON QUESTIONS',
+    faqHeadline: 'Questions people ask before getting started.',
+    faqs: [
+      {
+        q: 'What if I\'m already getting leads but nothing is set up?',
+        a: 'That\'s exactly who this is built for. Most businesses have enquiries coming in from multiple places, web forms, Google Ads, Facebook, direct calls, but no single view of them. We connect everything into one simple pipeline so nothing gets missed.',
+      },
+      {
+        q: 'What tools does this connect to?',
+        a: 'We work with whatever you already use. Google, Meta, website contact forms, email, Jobber, ServiceM8, and others. If you don\'t have a CRM yet, we\'ll help you choose a lightweight one that fits your business and won\'t add overhead.',
+      },
+      {
+        q: 'How quickly does follow-up go out after an enquiry?',
+        a: 'Within minutes of the enquiry coming in. The system sends an immediate acknowledgement to the lead and notifies you or your admin so someone can action it. Speed of response is one of the biggest factors in winning a job.',
+      },
+      {
+        q: 'Does my team need to learn new software?',
+        a: 'No. We build around what you already use and keep the pipeline view as simple as possible. Most clients manage their leads from a single shared screen or even their phone. The system does the heavy lifting, your team just takes action.',
+      },
+      {
+        q: 'How long before it\'s live?',
+        a: 'Most inbound lead systems go live within 7 to 10 days of our first call. The first session is discovery, we go through your current lead flow, sources, and follow-up process. The build follows from there.',
+      },
+      {
+        q: 'What if I want to review things before the system sends anything?',
+        a: 'We can configure it either way. Some clients prefer a notification-only setup where the system captures and organises leads but a human sends every message. Others want full automation from day one. We match the level of automation to your comfort.',
+      },
+    ],
+
+    ctaHeadline: 'Find out how many leads you\'re actually wasting.',
+    ctaCopy: 'If even a handful of enquiries slip through each month, that\'s real revenue you\'ve already paid to generate. On the call, we\'ll review your current lead flow, highlight the biggest leaks, and outline how this system could work for your business. No pressure, no jargon, just clarity and options.',
+
+    internalLinks: [
+      { label: 'AI Automation Melbourne', path: '/ai-automation-melbourne' },
+      { label: 'Sales Automation', path: '/sales-automation' },
+      { label: 'Customer Experience Automation', path: '/customer-experience-automation' },
+    ],
+  },
 ]
 
 export function getService(slug) {

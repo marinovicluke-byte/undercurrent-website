@@ -9,6 +9,8 @@ import Reveal from '../components/Reveal'
 import Breadcrumb from '../components/Breadcrumb'
 import { CTA_HREF } from '../constants'
 import WhoWeServeSection from '../components/WhoWeServeSection'
+import HowItWorksVertical from '../components/HowItWorksVertical'
+import InteractiveWaves from '../components/InteractiveWaves'
 
 const DOMAIN   = 'https://www.undercurrentautomations.com'
 const LIGHT     = '#F7F3ED'
@@ -644,12 +646,88 @@ function FinanceFlowDemo() {
   )
 }
 
+// ── Lead Booking Demo: enquiry-to-booked visual flow for tradies ──────────────
+function LeadBookingDemo() {
+  const [active, setActive] = useState(0)
+  const containerRef = useRef(null)
+  const visRef = useRef(false)
+
+  const stages = [
+    { label: 'Enquiry received',    sub: 'Google Ads — website form',      time: '7:04pm' },
+    { label: 'Auto-reply sent',     sub: 'Instant acknowledgement',        time: '7:04pm' },
+    { label: 'Lead qualified',      sub: 'Service, suburb, urgency tagged', time: '7:05pm' },
+    { label: 'Follow-up sent',      sub: 'Next morning if no reply',       time: 'Day 2' },
+    { label: 'Quote delivered',     sub: 'Email and SMS',                  time: 'Day 2' },
+    { label: 'Job booked',          sub: 'Confirmed in your calendar',     time: 'Day 3' },
+  ]
+
+  useEffect(() => {
+    const obs = new IntersectionObserver(([e]) => { visRef.current = e.isIntersecting }, { threshold: 0.1 })
+    if (containerRef.current) obs.observe(containerRef.current)
+    return () => obs.disconnect()
+  }, [])
+
+  useEffect(() => {
+    let t
+    const tick = () => {
+      if (visRef.current) setActive(a => (a + 1) % stages.length)
+      t = setTimeout(tick, 1800)
+    }
+    t = setTimeout(tick, 1800)
+    return () => clearTimeout(t)
+  }, [])
+
+  return (
+    <div ref={containerRef} style={{ width: '100%', padding: '0 0 8px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+        {stages.map((stage, i) => {
+          const isPast    = i < active
+          const isCurrent = i === active
+          const isFuture  = i > active
+          return (
+            <div key={stage.label} style={{ display: 'flex', alignItems: 'stretch', gap: 0 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: 32, flexShrink: 0 }}>
+                <div style={{ width: 1, flexBasis: i === 0 ? 20 : 0, flexGrow: i === 0 ? 0 : 1, background: isPast ? 'rgba(143,175,159,0.5)' : 'rgba(143,175,159,0.12)', transition: 'background 0.5s', minHeight: i === 0 ? 0 : undefined }} />
+                <div style={{ width: isCurrent ? 14 : 8, height: isCurrent ? 14 : 8, borderRadius: '50%', flexShrink: 0, background: isCurrent ? SAGE : isPast ? 'rgba(143,175,159,0.4)' : 'rgba(143,175,159,0.1)', boxShadow: isCurrent ? `0 0 0 5px rgba(143,175,159,0.18), 0 0 12px ${SAGE}` : 'none', border: isCurrent ? `1.5px solid ${SAGE}` : isPast ? '1px solid rgba(143,175,159,0.4)' : '1px solid rgba(143,175,159,0.15)', transition: 'all 0.45s', zIndex: 2 }} />
+                {i < stages.length - 1 && (
+                  <div style={{ width: 1, flex: 1, minHeight: 24, background: isPast ? 'rgba(143,175,159,0.5)' : 'rgba(143,175,159,0.12)', transition: 'background 0.5s' }} />
+                )}
+              </div>
+              <div style={{ padding: '10px 0 10px 14px', opacity: isFuture ? 0.28 : isCurrent ? 1 : 0.55, transition: 'opacity 0.45s', flex: 1 }}>
+                <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 14, fontWeight: isCurrent ? 600 : 400, color: isCurrent ? SAGE : 'rgba(232,224,208,0.85)', lineHeight: 1.3, transition: 'color 0.45s' }}>{stage.label}</div>
+                <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 11.5, color: isCurrent ? 'rgba(143,175,159,0.65)' : 'rgba(232,224,208,0.3)', marginTop: 3, transition: 'color 0.45s' }}>{stage.sub}</div>
+              </div>
+              <div style={{ alignSelf: 'center', paddingLeft: 8, flexShrink: 0 }}>
+                {isCurrent && (
+                  <div style={{ padding: '3px 10px', borderRadius: 999, background: 'rgba(143,175,159,0.12)', border: '1px solid rgba(143,175,159,0.28)', fontFamily: 'DM Mono, monospace', fontSize: 9.5, letterSpacing: '0.06em', color: SAGE, whiteSpace: 'nowrap' }}>
+                    {stage.time}
+                  </div>
+                )}
+                {isPast && (
+                  <div style={{ padding: '3px 10px', borderRadius: 999, background: 'rgba(143,175,159,0.07)', border: '1px solid rgba(143,175,159,0.12)', fontFamily: 'DM Mono, monospace', fontSize: 9.5, letterSpacing: '0.06em', color: 'rgba(143,175,159,0.45)', whiteSpace: 'nowrap' }}>
+                    DONE
+                  </div>
+                )}
+              </div>
+            </div>
+          )
+        })}
+      </div>
+      <div style={{ marginTop: 20, display: 'flex', alignItems: 'center', gap: 8 }}>
+        <span style={{ width: 6, height: 6, borderRadius: '50%', background: SAGE, boxShadow: `0 0 6px ${SAGE}`, flexShrink: 0, animation: 'sp-blink 2s ease-in-out infinite' }} />
+        <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 10, letterSpacing: '0.1em', color: 'rgba(143,175,159,0.55)' }}>EVERY ENQUIRY — AUTOMATICALLY</span>
+      </div>
+    </div>
+  )
+}
+
 const DEMO_ANIM_MAP = {
   'customer-journey': CustomerJourneyDemo,
   'sales-pipeline':   SalesPipelineDemo,
   'content-flow':     ContentFlowDemo,
   'inbox-triage':     InboxTriageDemo,
   'finance-flow':     FinanceFlowDemo,
+  'lead-booking':     LeadBookingDemo,
 }
 
 // ═════════════════════════════════════════════════════════════════════════════
@@ -737,7 +815,36 @@ function LeadGenAnim() {
   )
 }
 
-const CARD_ANIM_MAP = { pipeline: PipelineAnim, terminal: TerminalAnim, leadgen: LeadGenAnim }
+function JobFlowAnim() {
+  const [activeStage, setActiveStage] = useState(0)
+  const [booked, setBooked] = useState(3)
+  const stages = [
+    { label: 'New',       count: 4 },
+    { label: 'Contacted', count: 2 },
+    { label: 'Quoted',    count: 2 },
+    { label: 'Booked',    count: booked, highlight: true },
+  ]
+  useEffect(() => {
+    const t1 = setInterval(() => setActiveStage(s => (s + 1) % 4), 1300)
+    const t2 = setInterval(() => setBooked(b => b < 9 ? b + 1 : 3), 2200)
+    return () => { clearInterval(t1); clearInterval(t2) }
+  }, [])
+  return (
+    <div style={{ padding: '20px', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 12 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 6 }}>
+        {stages.map(({ label, count, highlight }, i) => (
+          <div key={label} style={{ textAlign: 'center', padding: '10px 4px', borderRadius: 8, background: i === activeStage ? 'rgba(143,175,159,0.1)' : 'rgba(143,175,159,0.04)', border: `1px solid ${i === activeStage ? 'rgba(143,175,159,0.22)' : 'rgba(143,175,159,0.07)'}`, transition: 'all 0.4s' }}>
+            <div style={{ fontFamily: 'DM Sans', fontSize: 22, fontWeight: 700, color: highlight ? SAGE : (i === activeStage ? 'rgba(232,224,208,0.85)' : 'rgba(232,224,208,0.22)'), transition: 'color 0.4s, font-size 0.3s' }}>{count}</div>
+            <div style={{ fontFamily: 'DM Sans', fontSize: 9, color: 'rgba(232,224,208,0.3)', marginTop: 3, letterSpacing: '0.03em', textTransform: 'uppercase' }}>{label}</div>
+          </div>
+        ))}
+      </div>
+      <div style={{ fontFamily: 'DM Mono', fontSize: 10, color: 'rgba(143,175,159,0.4)', letterSpacing: '0.08em', textAlign: 'center' }}>JOBS WON THIS MONTH</div>
+    </div>
+  )
+}
+
+const CARD_ANIM_MAP = { pipeline: PipelineAnim, terminal: TerminalAnim, leadgen: LeadGenAnim, jobflow: JobFlowAnim }
 
 // ─── Industry card ────────────────────────────────────────────────────────────
 function IndustryCard({ industry, index }) {
@@ -848,7 +955,7 @@ function ComparisonTable({ service }) {
           {service.comparisonRows.map((row, ri) => (
             <tr key={ri}>
               <td style={{ padding: '14px 0', borderTop: '1px solid rgba(212,201,176,0.35)', fontFamily: 'DM Sans', fontSize: 14, color: 'rgba(28,28,26,0.68)' }}>{row.label}</td>
-              {[row.uc, row.manual, row.generic, row.agency].map((val, ci) => (
+              {[row.uc, row.manual, row.generic, row.agency].slice(0, service.comparisonColumns.length).map((val, ci) => (
                 <td key={ci} style={{ borderTop: '1px solid rgba(212,201,176,0.35)', textAlign: 'center', padding: '14px 8px', background: ci === 0 ? 'rgba(143,175,159,0.05)' : 'transparent' }}>
                   {val
                     ? <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ display: 'inline-block' }}><circle cx="10" cy="10" r="9" stroke={SAGE} strokeWidth="1.2" /><path d="M6 10l3 3 5-5" stroke={SAGE} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -896,11 +1003,13 @@ function HeroHeadline({ service }) {
     default:   { fontFamily: 'DM Sans, sans-serif',         fontWeight: 700, fontStyle: 'normal',  color: '#F7F3ED' },
     editorial: { fontFamily: 'Cormorant Garamond, serif',   fontWeight: 300, fontStyle: 'italic',  color: SAGE },
     mono:      { fontFamily: 'DM Mono, monospace',          fontWeight: 400, fontStyle: 'normal',  color: '#F7F3ED', letterSpacing: '-0.01em' },
+    outfit:    { fontFamily: 'Outfit, sans-serif',          fontWeight: 800, fontStyle: 'normal',  color: '#F7F3ED' },
   }
   const line2Style = {
     default:   { fontFamily: 'Cormorant Garamond, serif',   fontWeight: 300, fontStyle: 'italic',  color: SAGE },
     editorial: { fontFamily: 'DM Sans, sans-serif',         fontWeight: 700, fontStyle: 'normal',  color: '#F7F3ED' },
     mono:      { fontFamily: 'Cormorant Garamond, serif',   fontWeight: 300, fontStyle: 'italic',  color: SAGE },
+    outfit:    { fontFamily: 'Outfit, sans-serif',          fontWeight: 800, fontStyle: 'normal',  background: 'linear-gradient(135deg, #8FAF9F 0%, #b8d4c8 50%, #8FAF9F 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' },
   }
   const baseSize = { fontSize: 'clamp(3rem, 8vw, 7.5rem)', letterSpacing: '-0.03em', lineHeight: 0.97, display: 'block', margin: '0 0 0.06em' }
   return (
@@ -978,7 +1087,16 @@ export default function ServicePage({ service }) {
       <Navbar ready />
 
       {/* ── HERO — video background ────────────────────────────────────────── */}
-      <section style={{ position: 'relative', overflow: 'hidden', minHeight: '88vh', background: CHARCOAL, display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '140px 24px 80px' }}>
+      <section style={{
+        position: 'relative',
+        overflow: 'hidden',
+        minHeight: service.heroMockup ? '112vh' : '88vh',
+        background: CHARCOAL,
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: service.heroMockup ? 'flex-start' : 'center',
+        padding: service.heroMockup ? '120px 24px 0' : '140px 24px 80px',
+      }}>
         <video
           preload="auto" autoPlay muted loop playsInline aria-hidden="true"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', pointerEvents: 'none', zIndex: 0 }}
@@ -995,7 +1113,9 @@ export default function ServicePage({ service }) {
           ].join(', '),
         }} />
         <Grain opacity={0.04} />
-        <div style={{ position: 'relative', zIndex: 3, maxWidth: 820, margin: '0 auto', width: '100%', textAlign: 'center' }}>
+
+        {/* Text content */}
+        <div style={{ position: 'relative', zIndex: 3, maxWidth: 820, margin: '0 auto', width: '100%', textAlign: 'center', paddingBottom: service.heroMockup ? '56px' : 0 }}>
           <Reveal>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontFamily: 'DM Mono, monospace', fontSize: 11, letterSpacing: '0.1em', color: 'rgba(143,175,159,0.85)', border: '1px solid rgba(143,175,159,0.25)', padding: '5px 14px', borderRadius: 999, marginBottom: 28 }}>
               <span style={{ width: 6, height: 6, borderRadius: '50%', background: SAGE, boxShadow: `0 0 6px ${SAGE}`, animation: 'sp-blink 2s ease-in-out infinite' }} />
@@ -1016,10 +1136,47 @@ export default function ServicePage({ service }) {
               onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 0 32px rgba(143,175,159,0.35)'; e.currentTarget.style.transform = 'scale(1.03) translateY(-1px)' }}
               onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 0 18px rgba(143,175,159,0.15), inset 0 1px 0 rgba(255,255,255,0.06)'; e.currentTarget.style.transform = 'none' }}
             >
-              Book a Free Workflow Audit
+              Book a Quick Call
             </a>
           </Reveal>
         </div>
+
+        {/* Wide mockup panel — pops out of section bottom */}
+        {service.heroMockup && (
+          <Reveal delay={0.4} style={{ position: 'relative', zIndex: 3, width: '92%', maxWidth: 1180, margin: '0 auto' }}>
+            {/* Glow ring */}
+            <div style={{ position: 'absolute', inset: -1, borderRadius: '16px 16px 0 0', background: 'linear-gradient(180deg, rgba(143,175,159,0.18) 0%, transparent 50%)', pointerEvents: 'none' }} />
+            {/* Panel */}
+            <div style={{
+              position: 'relative',
+              borderRadius: '16px 16px 0 0',
+              border: '1px solid rgba(143,175,159,0.14)',
+              borderBottom: 'none',
+              background: 'rgba(26,30,28,0.95)',
+              overflow: 'hidden',
+              aspectRatio: '16 / 9',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+              {/* Placeholder grid */}
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14, opacity: 0.28 }}>
+                <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+                  <rect x="6" y="11" width="40" height="30" rx="4" stroke="#8FAF9F" strokeWidth="1.5" />
+                  <path d="M6 20h40" stroke="#8FAF9F" strokeWidth="1" />
+                  <circle cx="13" cy="15.5" r="1.8" fill="#8FAF9F" />
+                  <circle cx="19" cy="15.5" r="1.8" fill="#8FAF9F" />
+                  <circle cx="25" cy="15.5" r="1.8" fill="#8FAF9F" />
+                </svg>
+                <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 11, letterSpacing: '0.12em', color: '#8FAF9F' }}>
+                  SCREENSHOT COMING SOON
+                </span>
+              </div>
+              {/* Bottom fade into next section */}
+              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '45%', background: 'linear-gradient(to top, #1C1C1A 0%, transparent 100%)', pointerEvents: 'none' }} />
+            </div>
+          </Reveal>
+        )}
       </section>
 
       {/* ── LARGE DEMO ANIMATION ────────────────────────────────────────────── */}
@@ -1123,19 +1280,24 @@ export default function ServicePage({ service }) {
       <WaveDivider from={CHARCOAL} to={CHARCOAL} height={0} />
 
       {/* ── HOW IT WORKS ────────────────────────────────────────────────────── */}
-      <section style={{ background: CHARCOAL, padding: '80px 24px 96px' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-          <Reveal style={{ textAlign: 'center' }}>
-            <SectionLabel dark>{service.processLabel}</SectionLabel>
-            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2.2rem, 4vw, 3.4rem)', fontWeight: 300, fontStyle: 'italic', color: '#F7F3ED', lineHeight: 1.1, margin: '0 0 56px', letterSpacing: '-0.02em' }}>
-              {service.processHeadline}
-            </h2>
-          </Reveal>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 32 }}>
-            {STEPS.map((step, i) => <ProcessStep key={step.num} step={step} index={i} />)}
-          </div>
-        </div>
-      </section>
+      {service.processStyle === 'vertical'
+        ? <HowItWorksVertical label={service.processLabel} headline={service.processHeadline} />
+        : (
+          <section style={{ background: CHARCOAL, padding: '80px 24px 96px' }}>
+            <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+              <Reveal style={{ textAlign: 'center' }}>
+                <SectionLabel dark>{service.processLabel}</SectionLabel>
+                <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2.2rem, 4vw, 3.4rem)', fontWeight: 300, fontStyle: 'italic', color: '#F7F3ED', lineHeight: 1.1, margin: '0 0 56px', letterSpacing: '-0.02em' }}>
+                  {service.processHeadline}
+                </h2>
+              </Reveal>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 32 }}>
+                {STEPS.map((step, i) => <ProcessStep key={step.num} step={step} index={i} />)}
+              </div>
+            </div>
+          </section>
+        )
+      }
 
       <WaveDivider from={CHARCOAL} to={LIGHT} height={60} />
 

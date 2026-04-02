@@ -269,7 +269,7 @@ export default function LandingPage() {
                 letterSpacing: '-0.03em',
               }}
             >
-              Get 12 Hours Back
+              Stop Losing Leads,
             </span>
             <span
               className="font-cormorant"
@@ -283,7 +283,7 @@ export default function LandingPage() {
                 lineHeight: 1.1,
               }}
             >
-              Every Week.
+              Chasing Invoices, and Running Your Business at Midnight.
             </span>
           </h1>
 
@@ -302,7 +302,9 @@ export default function LandingPage() {
               marginRight: 'auto',
             }}
           >
-            We build AI systems that automatically handle your follow-ups, invoices, and client communications. Inside your existing tools. Most clients go live within 14 days.
+            UnderCurrent Automations builds custom AI systems for Australian trade and service businesses with 1 to 50 staff.
+            <br /><br />
+            We automate your lead follow-ups, quoting, and scheduling so you can grow from a solo operator to a full team, without the admin burying you.
           </p>
 
           {/* Bullets */}
@@ -422,7 +424,7 @@ export default function LandingPage() {
               className="font-cormorant"
               style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 600, color: '#1C1C1A', lineHeight: 1.15, maxWidth: '700px', margin: '0 auto' }}
             >
-              You're the most expensive person in your business doing the cheapest tasks.
+              Australian Service Business Owners Are Bleeding Hours to Admin Every Week. Automation Stops That.
             </h2>
           </Reveal>
           <Reveal delay={140} style={{ textAlign: 'center', marginBottom: '4rem' }}>
@@ -430,7 +432,7 @@ export default function LandingPage() {
               className="font-dm"
               style={{ fontSize: '1.05rem', fontWeight: 300, color: 'rgba(28,28,26,0.55)', maxWidth: '560px', margin: '0 auto', lineHeight: 1.7 }}
             >
-              If you're manually chasing invoices, following up leads, or writing the same email for the tenth time — you're stuck working in your business instead of on it.
+              Most service business owners spend the better part of their day on email, quoting, scheduling, and follow-up work that pays nothing and grows nothing. Custom AI automation handles it so your hours go back to billable work and building your business.
             </p>
           </Reveal>
 

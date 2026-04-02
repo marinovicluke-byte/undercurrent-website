@@ -18,6 +18,7 @@ export default {
         cormorant: ['"Cormorant Garamond"', 'serif'],
         dm: ['"DM Sans"', 'sans-serif'],
         mono: ['"DM Mono"', 'monospace'],
+        outfit: ['"Outfit"', 'sans-serif'],
       },
       borderRadius: {
         '4xl': '2rem',
