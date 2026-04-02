@@ -45,29 +45,22 @@ export default function Footer() {
   const location = useLocation()
   const services = [
     { label: 'All Services', href: '/services' },
-    { label: 'Onboarding Automation', href: '/services#onboarding' },
-    { label: 'Customer Experience', href: '/services#customer-experience' },
-    { label: 'Sales Automation', href: '/services#sales' },
-    { label: 'Content Design', href: '/services#content-design' },
-    { label: 'Personal Assistant', href: '/services#personal-assistant' },
+    { label: 'Sales Automation', href: '/sales-automation' },
+    { label: 'Customer Experience', href: '/customer-experience-automation' },
+    { label: 'Content Automation', href: '/content-automation' },
+    { label: 'Personal Assistant', href: '/personal-system-automation' },
+    { label: 'Finance Automation', href: '/finance-automation' },
   ]
-  const tools = [
-    { label: 'Business Audit', href: '/audit' },
-    { label: 'ROI Calculator', href: '/roi' },
-    { label: 'How It Works', href: '/process' },
+  const locations = [
+    { label: 'AI Automation Melbourne', href: '/ai-automation-melbourne' },
   ]
   const company = [
-    { label: 'About UnderCurrent', href: '/about' },
+    { label: 'About Us', href: '/about' },
     { label: 'Case Studies', href: '/case-study' },
     { label: 'Resources', href: '/resources' },
+    { label: 'ROI Calculator', href: '/roi' },
+    { label: 'Our Process', href: '/process' },
     { label: 'Contact', href: '/contact' },
-  ]
-  const explore = [
-    { label: 'Home', href: '/' },
-    { label: 'Our Process', href: '/#protocol' },
-    { label: 'Pricing', href: '/#pricing' },
-    { label: 'FAQ', href: '/#faq' },
-    { label: 'Book a Call', href: '/contact' },
   ]
   const legal = [
     { label: 'Privacy Policy', href: '/privacy' },
@@ -183,31 +176,92 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ── Footer links — 3-column with dividers ── */}
+      {/* ── Footer links — semantic columns ── */}
       <div style={{ position: 'relative', zIndex: 10, borderTop: '1px solid rgba(212,201,176,0.08)' }}>
         <div className="max-w-7xl mx-auto" style={{ paddingBottom: '1.5rem' }}>
 
-          {/* Responsive: stack on mobile, 3 cols on desktop */}
-          <div className="flex flex-col md:flex-row">
-
-            {/* ── Column 1: Logo + nav links + socials ── */}
-            <div
-              className="flex-1 order-3 md:order-1 border-b md:border-b-0 md:border-r"
-              style={{ padding: '2.5rem 1.5rem', borderColor: 'rgba(212,201,176,0.08)' }}
-            >
+          {/* Logo row */}
+          <div style={{ padding: '2.5rem 1.5rem 0', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.35rem' }}>
                 <img src="/LOGO.png" alt="UnderCurrent logo" style={{ height: '24px', width: '24px', objectFit: 'contain', opacity: 0.85 }} />
                 <span className="font-cormorant" style={{ fontSize: '1.2rem', fontWeight: 600, color: '#F7F3ED', lineHeight: 1 }}>
                   UnderCurrent
                 </span>
               </div>
-              <p className="font-dm" style={{ fontSize: '0.65rem', letterSpacing: '0.1em', fontWeight: 300, color: 'rgba(212,201,176,0.35)', marginBottom: '2rem', paddingLeft: '36px' }}>
+              <p className="font-dm" style={{ fontSize: '0.65rem', letterSpacing: '0.1em', fontWeight: 300, color: 'rgba(212,201,176,0.35)', paddingLeft: '36px' }}>
                 AI Business Automation
               </p>
+            </div>
+            <div style={{ display: 'flex', gap: '0.75rem' }}>
+              {[
+                { href: 'https://www.instagram.com/undercurrent.automations/', Icon: Instagram, label: 'Instagram' },
+                { href: 'https://www.facebook.com/profile.php?id=61578553167947', Icon: Facebook, label: 'Facebook' },
+                { href: 'https://www.linkedin.com/company/undercurrent-automations', Icon: Linkedin, label: 'LinkedIn' },
+              ].map(({ href, Icon, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  style={{ color: 'rgba(212,201,176,0.35)', transition: 'color 0.2s' }}
+                  onMouseEnter={e => { e.currentTarget.style.color = '#8FAF9F' }}
+                  onMouseLeave={e => { e.currentTarget.style.color = 'rgba(212,201,176,0.35)' }}
+                >
+                  <Icon size={16} />
+                </a>
+              ))}
+            </div>
+          </div>
 
-              <div className="grid grid-cols-2 gap-x-6 gap-y-3" style={{ marginBottom: '2rem' }}>
-                {[...services, ...tools, ...company, ...explore, ...legal].map(s => {
-                  const isSelf = s.href === location.pathname || (s.href === '/' && location.pathname === '/')
+          {/* Semantic link columns */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8" style={{ padding: '2rem 1.5rem 2.5rem' }}>
+
+            {/* ── Services ── */}
+            <div>
+              <p className="font-mono" style={{ fontSize: '0.6rem', letterSpacing: '0.16em', color: '#8FAF9F', marginBottom: '1rem' }}>SERVICES</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+                {services.map(s => {
+                  const isSelf = s.href === location.pathname
+                  return isSelf ? (
+                    <span key={s.label} className="font-dm" style={{ fontWeight: 300, fontSize: '0.82rem', color: 'rgba(212,201,176,0.45)', cursor: 'default' }}>
+                      {s.label}
+                    </span>
+                  ) : (
+                    <a key={s.label} href={s.href} className="font-dm nav-link" style={{ fontWeight: 300, fontSize: '0.82rem', color: 'rgba(212,201,176,0.45)' }}>
+                      {s.label}
+                    </a>
+                  )
+                })}
+              </div>
+            </div>
+
+            {/* ── Company ── */}
+            <div>
+              <p className="font-mono" style={{ fontSize: '0.6rem', letterSpacing: '0.16em', color: '#8FAF9F', marginBottom: '1rem' }}>COMPANY</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+                {company.map(s => {
+                  const isSelf = s.href === location.pathname
+                  return isSelf ? (
+                    <span key={s.label} className="font-dm" style={{ fontWeight: 300, fontSize: '0.82rem', color: 'rgba(212,201,176,0.45)', cursor: 'default' }}>
+                      {s.label}
+                    </span>
+                  ) : (
+                    <a key={s.label} href={s.href} className="font-dm nav-link" style={{ fontWeight: 300, fontSize: '0.82rem', color: 'rgba(212,201,176,0.45)' }}>
+                      {s.label}
+                    </a>
+                  )
+                })}
+              </div>
+            </div>
+
+            {/* ── Locations ── */}
+            <div>
+              <p className="font-mono" style={{ fontSize: '0.6rem', letterSpacing: '0.16em', color: '#8FAF9F', marginBottom: '1rem' }}>LOCATIONS</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '2rem' }}>
+                {locations.map(s => {
+                  const isSelf = s.href === location.pathname
                   return isSelf ? (
                     <span key={s.label} className="font-dm" style={{ fontWeight: 300, fontSize: '0.82rem', color: 'rgba(212,201,176,0.45)', cursor: 'default' }}>
                       {s.label}
@@ -220,46 +274,22 @@ export default function Footer() {
                 })}
               </div>
 
-              <div style={{ display: 'flex', gap: '0.75rem' }}>
-                {[
-                  { href: 'https://www.instagram.com/undercurrent.automations/', Icon: Instagram, label: 'Instagram' },
-                  { href: 'https://www.facebook.com/profile.php?id=61578553167947', Icon: Facebook, label: 'Facebook' },
-                  { href: 'https://www.linkedin.com/company/undercurrent-automations', Icon: Linkedin, label: 'LinkedIn' },
-                ].map(({ href, Icon, label }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={label}
-                    style={{ color: 'rgba(212,201,176,0.35)', transition: 'color 0.2s' }}
-                    onMouseEnter={e => { e.currentTarget.style.color = '#8FAF9F' }}
-                    onMouseLeave={e => { e.currentTarget.style.color = 'rgba(212,201,176,0.35)' }}
-                  >
-                    <Icon size={16} />
+              <p className="font-mono" style={{ fontSize: '0.6rem', letterSpacing: '0.16em', color: '#8FAF9F', marginBottom: '1rem' }}>LEGAL</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+                {legal.map(s => (
+                  <a key={s.label} href={s.href} className="font-dm nav-link" style={{ fontWeight: 300, fontSize: '0.82rem', color: 'rgba(212,201,176,0.4)' }}>
+                    {s.label}
                   </a>
                 ))}
               </div>
             </div>
 
-            {/* ── Column 2: Newsletter signup ── */}
-            <div
-              className="flex-1 order-1 md:order-2 border-b md:border-b-0 md:border-r flex flex-col items-center text-center"
-              style={{ padding: '2.5rem 1.5rem', borderColor: 'rgba(212,201,176,0.08)' }}
-            >
-              <p className="font-mono" style={{ fontSize: '0.6rem', letterSpacing: '0.2em', color: '#8FAF9F', marginBottom: '1rem' }}>
-                STAY UPDATED
-              </p>
-              <h3 className="font-cormorant" style={{ fontSize: '1.6rem', fontWeight: 400, color: '#F7F3ED', marginBottom: '0.6rem', lineHeight: 1.2 }}>
-                Get Automation Insights
-              </h3>
-              <p className="font-dm" style={{ fontSize: '0.8rem', color: 'rgba(212,201,176,0.45)', lineHeight: 1.65, marginBottom: '1.75rem', maxWidth: '280px' }}>
-                Tips, case studies and industry news for small business owners.
-              </p>
-
+            {/* ── Stay Updated + Contact ── */}
+            <div>
+              <p className="font-mono" style={{ fontSize: '0.6rem', letterSpacing: '0.2em', color: '#8FAF9F', marginBottom: '1rem' }}>STAY UPDATED</p>
               <form
                 onSubmit={e => e.preventDefault()}
-                style={{ width: '100%', maxWidth: '320px', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}
+                style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '2rem' }}
               >
                 <input
                   type="email"
@@ -298,43 +328,14 @@ export default function Footer() {
                   </button>
                 </div>
               </form>
-            </div>
 
-            {/* ── Column 3: Contact + legal ── */}
-            <div
-              className="flex-1 order-2 md:order-3"
-              style={{ padding: '2.5rem 1.5rem' }}
-            >
-              <a
-                href="/contact"
-                className="font-dm"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.875rem', fontWeight: 500, color: '#F7F3ED', textDecoration: 'none', marginBottom: '2rem' }}
-                onMouseEnter={e => { e.currentTarget.style.color = '#8FAF9F' }}
-                onMouseLeave={e => { e.currentTarget.style.color = '#F7F3ED' }}
-              >
-                Send Us a Message <span>→</span>
-              </a>
-
-              <div style={{ marginBottom: '2rem' }}>
-                <p className="font-mono mb-3" style={{ fontSize: '0.6rem', letterSpacing: '0.16em', color: '#8FAF9F' }}>CONTACT</p>
-                <p className="font-dm" style={{ fontSize: '0.82rem', color: 'rgba(212,201,176,0.5)', fontWeight: 300, lineHeight: 1.8 }}>
-                  luke@undercurrentautomations.com
-                </p>
-                <p className="font-dm" style={{ fontSize: '0.82rem', color: 'rgba(212,201,176,0.5)', fontWeight: 300, lineHeight: 1.8 }}>
-                  Melbourne, Australia
-                </p>
-              </div>
-
-              <div>
-                <p className="font-mono mb-3" style={{ fontSize: '0.6rem', letterSpacing: '0.16em', color: '#8FAF9F' }}>LEGAL</p>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-                  {legal.map(s => (
-                    <a key={s.label} href={s.href} className="font-dm nav-link" style={{ fontWeight: 300, fontSize: '0.82rem', color: 'rgba(212,201,176,0.4)' }}>
-                      {s.label}
-                    </a>
-                  ))}
-                </div>
-              </div>
+              <p className="font-mono" style={{ fontSize: '0.6rem', letterSpacing: '0.16em', color: '#8FAF9F', marginBottom: '1rem' }}>CONTACT</p>
+              <p className="font-dm" style={{ fontSize: '0.82rem', color: 'rgba(212,201,176,0.5)', fontWeight: 300, lineHeight: 1.8 }}>
+                luke@undercurrentautomations.com
+              </p>
+              <p className="font-dm" style={{ fontSize: '0.82rem', color: 'rgba(212,201,176,0.5)', fontWeight: 300, lineHeight: 1.8 }}>
+                Melbourne, Australia
+              </p>
             </div>
           </div>
 
