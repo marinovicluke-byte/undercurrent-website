@@ -33,12 +33,6 @@ export default function IndustryScroller() {
             </span>
           ))}
         </div>
-        <style>{`
-          @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-        `}</style>
       </div>
     </section>
   )
