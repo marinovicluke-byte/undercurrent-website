@@ -1,0 +1,58 @@
+/* app/globals.css */
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-white: #FAFAF8;
+  --color-charcoal: #1C1C1A;
+  --color-blue: #6A8DAD;
+  --color-blue-dark: #4A6D8D;
+  --color-muted: #6B7280;
+  --color-border: #E5E7EB;
+  --color-surface: #F3F4F6;
+
+  /* Fonts */
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-satoshi);
+
+  /* Spacing */
+  --spacing-section: 6rem;
+  --spacing-section-sm: 4rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-charcoal);
+  background-color: var(--color-white);
+}
+
+h1, h2 {
+  font-family: var(--font-display);
+}
+
+.fade-hidden {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.fade-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-hidden {
+    opacity: 1;
+    transform: none;
+  }
+  .fade-visible {
+    transition: none;
+  }
+}
