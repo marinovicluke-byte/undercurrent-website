@@ -17,9 +17,8 @@ export default function Hero({ ready = true }) {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ delay: 0.05 })
 
-      tl.fromTo(headlineRef.current,
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.65, ease: 'power3.out' },
+      tl.from(headlineRef.current,
+        { y: 20, duration: 0.5, ease: 'power3.out' },
         '-=0.3'
       )
       .fromTo(bodyRef.current,
@@ -50,12 +49,13 @@ export default function Hero({ ready = true }) {
       {/* Video background */}
       <video
         ref={videoRef}
-        preload="auto"
+        preload="none"
         autoPlay
         muted
         loop
         playsInline
         aria-hidden="true"
+        poster=""
         style={{
           position: 'absolute',
           inset: 0,
@@ -94,8 +94,8 @@ export default function Hero({ ready = true }) {
         {/* Spacer — preserves gap between navbar and headline */}
         <div style={{ height: '1.5rem' }} />
 
-        {/* Headline */}
-        <h1 ref={headlineRef} style={{ opacity: 0, lineHeight: 1 }}>
+        {/* Headline — visible by default so LCP isn't blocked by JS */}
+        <h1 ref={headlineRef} style={{ lineHeight: 1 }}>
           <span
             className="block font-dm"
             style={{
