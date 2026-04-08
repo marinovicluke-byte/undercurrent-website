@@ -48,7 +48,7 @@ marked.use({
 })
 
 const ARTICLES_DIR = join(__dirname, '..', 'src', 'content', 'articles')
-const CLUSTER_LABELS = { automation: 'Automation', ai: 'AI for Business', growth: 'Business Growth' }
+const CLUSTER_LABELS = { 'leads-sales': 'Leads & Sales', 'time-admin': 'Time & Admin', 'getting-started': 'Getting Started', 'industry-guides': 'Industry Guides' }
 
 function stripHtml(html) {
   return html.replace(/<[^>]+>/g, '').trim()
@@ -89,7 +89,7 @@ function loadArticles() {
 }
 
 function buildArticleSchemas(frontmatter, html, faqItems, howToSteps) {
-  const canonical = `${DOMAIN}/resources/${frontmatter.slug}`
+  const canonical = `${DOMAIN}/blog/${frontmatter.slug}`
   const wordCount = html ? stripHtml(html).split(/\s+/).length : undefined
 
   const schemas = [
@@ -123,7 +123,7 @@ function buildArticleSchemas(frontmatter, html, faqItems, howToSteps) {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: DOMAIN },
-        { '@type': 'ListItem', position: 2, name: 'Resources', item: `${DOMAIN}/resources` },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: `${DOMAIN}/blog` },
         { '@type': 'ListItem', position: 3, name: frontmatter.title, item: canonical },
       ],
     },
@@ -161,7 +161,7 @@ function buildArticleSchemas(frontmatter, html, faqItems, howToSteps) {
 
 function generateArticleRoutes(articles) {
   return articles.map(({ frontmatter, html, faqItems, howToSteps }) => ({
-    path: `/resources/${frontmatter.slug}`,
+    path: `/blog/${frontmatter.slug}`,
     title: `${frontmatter.title} | UnderCurrent`,
     description: frontmatter.description,
     jsonLd: buildArticleSchemas(frontmatter, html, faqItems, howToSteps),
@@ -187,7 +187,7 @@ function escXml(s) {
 function generateRssFeed(articles) {
   const now = new Date().toUTCString()
   const items = articles.map(({ frontmatter, html }) => {
-    const link = `${DOMAIN}/resources/${frontmatter.slug}`
+    const link = `${DOMAIN}/blog/${frontmatter.slug}`
     const pubDate = new Date(frontmatter.date + 'T00:00:00Z').toUTCString()
     return `    <item>
       <title>${escXml(frontmatter.title)}</title>
@@ -204,7 +204,7 @@ function generateRssFeed(articles) {
   <channel>
     <title>UnderCurrent - AI &amp; Automation Guides</title>
     <description>Guides, playbooks, and lessons from the field. AI automation for Australian small businesses.</description>
-    <link>${DOMAIN}/resources</link>
+    <link>${DOMAIN}/blog</link>
     <atom:link href="${DOMAIN}/feed.xml" rel="self" type="application/rss+xml" />
     <language>en-AU</language>
     <lastBuildDate>${now}</lastBuildDate>
@@ -349,15 +349,15 @@ const ROUTES = [
     },
   },
   {
-    path: '/resources',
-    title: 'Resources - AI & Automation Guides | UnderCurrent',
+    path: '/blog',
+    title: 'Blog - AI & Automation Guides | UnderCurrent',
     description: 'Guides, playbooks, and lessons from the field. Everything we\'ve learned building AI automation for small businesses, packaged for you.',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
-      name: 'UnderCurrent Resources',
+      name: 'UnderCurrent Blog',
       description: 'Guides, playbooks, and lessons from the field. AI automation knowledge for Australian small businesses.',
-      url: `${DOMAIN}/resources`,
+      url: `${DOMAIN}/blog`,
       provider: { '@type': 'Organization', '@id': `${DOMAIN}/#business`, name: 'UnderCurrent' },
     },
   },
@@ -555,7 +555,7 @@ function generateSitemap(allRoutes) {
   const servicePriorities  = Object.fromEntries(SERVICES.map(s => [`/${s.slug}`, '0.85']))
   const priorities = {
     '/': '1.0', '/services': '0.9', '/about': '0.8', '/audit': '0.8',
-    '/case-study': '0.7', '/resources': '0.7',
+    '/case-study': '0.7', '/blog': '0.7',
     '/process': '0.7', '/contact': '0.7', '/roi': '0.7',
     '/stats': '0.6', '/privacy': '0.3', '/terms': '0.3',
     ...locationPriorities,
@@ -566,7 +566,7 @@ function generateSitemap(allRoutes) {
     .filter(r => r.path !== '/lp')
     .map(r => {
       const loc = `${DOMAIN}${r.path === '/' ? '/' : r.path}`
-      const priority = priorities[r.path] || (r.path.startsWith('/resources/') ? '0.7' : '0.5')
+      const priority = priorities[r.path] || (r.path.startsWith('/blog/') ? '0.7' : '0.5')
       return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today}</lastmod>\n    <priority>${priority}</priority>\n  </url>`
     })
     .join('\n')
@@ -578,7 +578,7 @@ function generateSitemap(allRoutes) {
 
 function generateLlmsTxt(articles) {
   const articleLines = articles.map(({ frontmatter }) =>
-    `- [${frontmatter.title}](${DOMAIN}/resources/${frontmatter.slug}): ${frontmatter.description}`
+    `- [${frontmatter.title}](${DOMAIN}/blog/${frontmatter.slug}): ${frontmatter.description}`
   ).join('\n')
 
   const llms = `# UnderCurrent Automations
@@ -602,7 +602,7 @@ UnderCurrent maps small business workflows and builds custom AI-powered systems 
 - [How It Works](${DOMAIN}/process): Our three-step process, Map, Build, Flow
 - [About](${DOMAIN}/about): About UnderCurrent and founder Luke
 - [Case Studies](${DOMAIN}/case-study): Real results from AI automation clients
-- [Resources](${DOMAIN}/resources): Guides, playbooks, and lessons from the field
+- [Blog](${DOMAIN}/blog): Guides, playbooks, and lessons from the field
 - [ROI Calculator](${DOMAIN}/roi): Free tool to estimate automation savings
 - [Free Business Audit](${DOMAIN}/audit): AI-powered audit of your business operations
 - [Contact](${DOMAIN}/contact): Get in touch
@@ -632,7 +632,7 @@ function generateLlmsFullTxt(articles) {
     const plainText = stripHtml(html).substring(0, 500)
     return `### ${frontmatter.title}
 
-- URL: ${DOMAIN}/resources/${frontmatter.slug}
+- URL: ${DOMAIN}/blog/${frontmatter.slug}
 - Published: ${frontmatter.date}
 - Author: ${frontmatter.author || 'Luke'}
 - Category: ${CLUSTER_LABELS[frontmatter.cluster] || frontmatter.cluster}
@@ -721,7 +721,7 @@ function run() {
   // Build a lookup of article HTML by path for injection
   const articleHtmlByPath = {}
   articles.forEach(({ frontmatter, html }) => {
-    articleHtmlByPath[`/resources/${frontmatter.slug}`] = html
+    articleHtmlByPath[`/blog/${frontmatter.slug}`] = html
   })
 
   // Combine static routes with article routes

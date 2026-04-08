@@ -120,12 +120,14 @@ export default function Navbar({ ready = true, isSubPage = false }) {
         { label: 'Services', href: '/services' },
         { label: 'Business Audit', href: '/audit' },
         { label: 'About', href: '/about' },
+        { label: 'Blog', href: '/blog' },
       ]
     : [
         { label: 'Home', href: '/' },
         { label: 'Services', href: '/services' },
         { label: 'Business Audit', href: '/audit' },
         { label: 'About', href: '/about' },
+        { label: 'Blog', href: '/blog' },
       ]
 
   return (

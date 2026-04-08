@@ -57,7 +57,7 @@ export default function Footer() {
   const company = [
     { label: 'About Us', href: '/about' },
     { label: 'Case Studies', href: '/case-study' },
-    { label: 'Resources', href: '/resources' },
+    { label: 'Blog', href: '/blog' },
     { label: 'ROI Calculator', href: '/roi' },
     { label: 'Our Process', href: '/process' },
     { label: 'Contact', href: '/contact' },

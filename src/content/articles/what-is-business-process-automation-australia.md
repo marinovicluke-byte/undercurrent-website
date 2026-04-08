@@ -3,7 +3,7 @@ title: "What Is Business Process Automation Australia 2026: The Small Business O
 description: "Business process automation means using software to handle repetitive tasks without manual input. Here's what that actually looks like for Australian small businesses."
 date: "2026-01-10"
 slug: "what-is-business-process-automation-australia"
-cluster: "automation"
+cluster: "getting-started"
 keyword: "what is business process automation"
 author: "Luke"
 level: "beginner"

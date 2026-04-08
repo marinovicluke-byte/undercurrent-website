@@ -3,7 +3,7 @@ title: "Best Marketing Automation Software Australia 2026: 9 Tools That Actually
 description: "Compare the 9 best marketing automation tools for Australian SMEs in 2026. Real pricing, local integrations, and which pain points each platform solves."
 date: "2026-01-09"
 slug: "best-marketing-automation-software-australia-2026"
-cluster: "automation"
+cluster: "leads-sales"
 keyword: "best marketing automation software australia 2026"
 author: "Luke"
 level: "beginner"
@@ -207,7 +207,7 @@ We build marketing automation systems for Australian SMEs every week. Most proje
 
 But if you do want to build it yourself: start with the simplest possible workflow. One trigger, one action, one email. Get that working. Then add the next piece. Complexity kills momentum. Simple systems that work beat complex systems that don't.
 
-You can find more step-by-step guides in our [resources section](/resources), including tutorials on setting up your first automation workflows with each of the platforms we've covered here.
+You can find more step-by-step guides in our [resources section](/blog), including tutorials on setting up your first automation workflows with each of the platforms we've covered here.
 
 ## Which Marketing Automation Tools Integrate with Australian Systems?
 

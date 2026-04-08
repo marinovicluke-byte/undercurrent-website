@@ -165,8 +165,8 @@ export default function App() {
         <Route path="/contact" element={<Suspense fallback={<LoadingSpinner />}><ContactPage /></Suspense>} />
         <Route path="/missed-revenue" element={<Suspense fallback={<LoadingSpinner />}><MissedRevenueAudit /></Suspense>} />
         <Route path="/case-study" element={<Suspense fallback={<LoadingSpinner />}><CaseStudies /></Suspense>} />
-        <Route path="/resources" element={<Suspense fallback={<LoadingSpinner />}><Resources /></Suspense>} />
-        <Route path="/resources/:slug" element={<Suspense fallback={<LoadingSpinner />}><Article /></Suspense>} />
+        <Route path="/blog" element={<Suspense fallback={<LoadingSpinner />}><Resources /></Suspense>} />
+        <Route path="/blog/:slug" element={<Suspense fallback={<LoadingSpinner />}><Article /></Suspense>} />
         <Route path="/privacy" element={<Suspense fallback={<LoadingSpinner />}><PrivacyPolicy /></Suspense>} />
         <Route path="/terms" element={<Suspense fallback={<LoadingSpinner />}><TermsOfService /></Suspense>} />
         {LOCATIONS.map(loc => (

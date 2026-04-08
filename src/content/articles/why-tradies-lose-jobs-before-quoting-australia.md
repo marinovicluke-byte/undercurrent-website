@@ -3,7 +3,7 @@ title: "Why Tradies Lose Jobs Before Quoting Australia 2026: The Lead Response T
 description: "Most Australian tradies lose 50-70% of enquiries simply by responding too slowly. Learn why the first business to respond wins the job and how to fix it."
 date: "2026-03-31"
 slug: "why-tradies-lose-jobs-before-quoting-australia"
-cluster: "automation"
+cluster: "leads-sales"
 keyword: "why tradies lose jobs before quoting australia"
 author: "Luke"
 level: "beginner"
@@ -136,7 +136,7 @@ If you're losing enquiries before you get a chance to quote, here's the fastest 
 
 If you want to skip the DIY phase and just have it set up properly, book a [free business audit](/audit) with us. We'll show you exactly where you're losing enquiries and how to plug the leak. No charge for the audit. If it makes sense to automate it, we'll give you a fixed price quote. If it doesn't, we'll tell you that too.
 
-You can also check out our [automation guides and resources](/resources) to learn more about setting up lead response systems yourself.
+You can also check out our [automation guides and resources](/blog) to learn more about setting up lead response systems yourself.
 
 The tradies who move fast on this are the ones who capitalise. The ones who wait are still wondering why they're not getting enough work.
 

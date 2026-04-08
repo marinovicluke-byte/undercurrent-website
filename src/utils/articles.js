@@ -116,7 +116,8 @@ export function getArticlesByCluster(cluster) {
 }
 
 export const CLUSTER_LABELS = {
-  automation: 'Automation',
-  ai: 'AI for Business',
-  growth: 'Business Growth',
+  'leads-sales': 'Leads & Sales',
+  'time-admin': 'Time & Admin',
+  'getting-started': 'Getting Started',
+  'industry-guides': 'Industry Guides',
 }

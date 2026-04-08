@@ -76,7 +76,7 @@ const publishedArticles = getAllArticles()
 function PublishedArticleCard({ article, delay }) {
   return (
     <Reveal delay={delay} y={30}>
-      <Link to={`/resources/${article.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
+      <Link to={`/blog/${article.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
         <div
           className="resource-card"
           style={{
@@ -177,15 +177,15 @@ export default function Resources() {
   return (
     <div style={{ backgroundColor: '#1C1C1A', minHeight: '100vh', overflowX: 'hidden' }}>
       <PageHead
-        title="Resources - AI & Automation Guides | UnderCurrent"
+        title="Blog - AI & Automation Guides | UnderCurrent"
         description="Guides, playbooks, and lessons from the field. Everything we've learned building AI automation for small businesses, organised by topic."
-        canonical="https://www.undercurrentautomations.com/resources"
+        canonical="https://www.undercurrentautomations.com/blog"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'CollectionPage',
-          name: 'UnderCurrent Resources',
+          name: 'UnderCurrent Blog',
           description: 'Guides, playbooks, and lessons from the field. AI automation knowledge for Australian small businesses.',
-          url: 'https://www.undercurrentautomations.com/resources',
+          url: 'https://www.undercurrentautomations.com/blog',
           provider: {
             '@type': 'Organization',
             '@id': 'https://www.undercurrentautomations.com/#business',
@@ -214,7 +214,7 @@ export default function Resources() {
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
         </video>
-        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Resources' }]} />
+        <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Blog' }]} />
         <div aria-hidden="true" style={{
           position: 'absolute', inset: 0, pointerEvents: 'none',
           background: [

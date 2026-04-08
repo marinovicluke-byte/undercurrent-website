@@ -3,7 +3,7 @@ title: "Hidden Cost Manual Trade Business Australia 2026: What Running Without A
 description: "Calculate the real dollar cost of running your trade business manually in Australia. Fair Work data + ABS hours + Xero insights = the number you need to see."
 date: "2026-03-31"
 slug: "hidden-cost-manual-trade-business-australia"
-cluster: "automation"
+cluster: "time-admin"
 keyword: "hidden cost manual trade business australia"
 author: "Luke"
 level: "intermediate"

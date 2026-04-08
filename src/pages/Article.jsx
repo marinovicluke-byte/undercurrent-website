@@ -67,7 +67,7 @@ function RelatedArticles({ cluster, currentSlug }) {
       <div style={{ display: 'grid', gap: '1.25rem', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
         {related.map((article, i) => (
           <Reveal key={article.slug} delay={0.05 * (i + 1)} y={30}>
-            <Link to={`/resources/${article.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
+            <Link to={`/blog/${article.slug}`} style={{ textDecoration: 'none', display: 'block' }}>
               <div style={{
                 background: 'linear-gradient(145deg, rgba(143,175,159,0.05) 0%, rgba(28,28,26,0.2) 100%)',
                 border: '1px solid rgba(143,175,159,0.1)',
@@ -191,7 +191,7 @@ function buildJsonLdSchemas(article, canonical) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: DOMAIN },
-      { '@type': 'ListItem', position: 2, name: 'Resources', item: `${DOMAIN}/resources` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${DOMAIN}/blog` },
       { '@type': 'ListItem', position: 3, name: article.title, item: canonical },
     ],
   }
@@ -232,9 +232,9 @@ export default function Article() {
   const { slug } = useParams()
   const article = getArticleBySlug(slug)
 
-  if (!article) return <Navigate to="/resources" replace />
+  if (!article) return <Navigate to="/blog" replace />
 
-  const canonical = `${DOMAIN}/resources/${article.slug}`
+  const canonical = `${DOMAIN}/blog/${article.slug}`
   const jsonLdSchemas = buildJsonLdSchemas(article, canonical)
 
   const extraMeta = [
@@ -260,7 +260,7 @@ export default function Article() {
       <Navbar ready isSubPage />
       <Breadcrumb items={[
         { label: 'Home', href: '/' },
-        { label: 'Resources', href: '/resources' },
+        { label: 'Blog', href: '/blog' },
         { label: article.title },
       ]} />
 

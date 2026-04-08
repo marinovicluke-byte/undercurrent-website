@@ -3,7 +3,7 @@ title: "How Much Time Tradies Spend on Admin Australia 2026: The Real Cost of Pa
 description: "Australian tradies lose 8-12 hours per week to admin tasks. We break down the real hourly cost using ABS, ASBFEO, and Xero data , and show what automation recovers."
 date: "2026-03-31"
 slug: "how-much-time-tradies-spend-on-admin-australia"
-cluster: "automation"
+cluster: "time-admin"
 keyword: "how much time tradies spend on admin australia"
 author: "Luke"
 level: "beginner"
@@ -136,7 +136,7 @@ You became a tradie to work with your hands, solve problems, and build things. N
 
 The good news is that fixing this isn't complicated. It just requires a decision to stop accepting that admin is "part of the job" and start treating it like the solvable problem it is.
 
-You can learn more about [how we work](/process) or check out our [guides and tools](/resources) to start fixing your admin problem today.
+You can learn more about [how we work](/process) or check out our [guides and tools](/blog) to start fixing your admin problem today.
 
 If you're ready to get your time back, [contact us](/contact) and we'll show you exactly where your hours are going and how to recover them.
 
