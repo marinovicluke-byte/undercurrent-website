@@ -3,7 +3,7 @@ title: "Marketing Automation Small Business Australia 2026: Your Practical Getti
 description: "Marketing automation for Australian small businesses explained. Learn what it is, how much it costs, and which tasks to automate first to save time and grow revenue."
 date: "2026-03-31"
 slug: "marketing-automation-small-business-australia"
-cluster: "automation"
+cluster: "leads-sales"
 keyword: "marketing automation small business australia"
 author: "Luke"
 level: "beginner"
