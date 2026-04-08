@@ -1,8 +1,7 @@
-import { useState, lazy, Suspense } from 'react'
+import { lazy, Suspense } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import { SpeedInsights } from '@vercel/speed-insights/react'
 import { Analytics } from '@vercel/analytics/react'
-import Loader from './components/Loader'
 import ScrollProgressBar from './components/ScrollProgressBar'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -111,16 +110,13 @@ function NotFound() {
 }
 
 function HomePage() {
-  const [loaderDone, setLoaderDone] = useState(false)
-
   return (
     <div style={{ backgroundColor: LIGHT, overflowX: 'hidden' }}>
-      <Loader onComplete={() => setLoaderDone(true)} />
       <ScrollProgressBar />
-      <Navbar ready={loaderDone} />
+      <Navbar ready />
 
       {/* Hero handles its own bottom wave into ProofStrip */}
-      <Hero ready={loaderDone} />
+      <Hero ready />
       <WhoWeServeSection />
       <ProofStrip />
       <Benefits />
