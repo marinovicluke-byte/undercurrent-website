@@ -19,9 +19,9 @@ ${SERVICES.map(s => `- [${s.label}](${BASE}/${s.slug}): ${s.metaDescription}`).j
 
 ${LOCATIONS.map(l => `- [${l.city}, ${l.region}](${BASE}/${l.slug}): ${l.metaDescription}`).join('\n')}
 
-## Resources
+## Blog
 
-${articles.map(a => `- [${a.title}](${BASE}/resources/${a.slug})`).join('\n')}
+${articles.map(a => `- [${a.title}](${BASE}/blog/${a.slug})`).join('\n')}
 `
 
   return new Response(content, {

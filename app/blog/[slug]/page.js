@@ -1,4 +1,4 @@
-// app/resources/[slug]/page.js
+// app/blog/[slug]/page.js
 import { notFound } from 'next/navigation'
 import { getAllArticles, getArticleBySlug } from '@/lib/articles'
 import JsonLd from '@/components/ui/JsonLd'
@@ -47,7 +47,7 @@ export default async function ArticlePage({ params }) {
       name: 'UnderCurrent Automations',
       url: 'https://undercurrentautomations.com.au',
     },
-    url: `https://undercurrentautomations.com.au/resources/${slug}`,
+    url: `https://undercurrentautomations.com.au/blog/${slug}`,
   }
 
   return (
@@ -56,7 +56,7 @@ export default async function ArticlePage({ params }) {
       <div className="mx-auto max-w-3xl px-6">
         <Breadcrumb items={[
           { label: 'Home', href: '/' },
-          { label: 'Resources', href: '/resources' },
+          { label: 'Blog', href: '/blog' },
           { label: article.frontmatter.title },
         ]} />
 

@@ -3,7 +3,7 @@ title: "Why Tradies Don't Get Google Reviews Australia 2026: The Data Behind the
 description: "Australian tradies are losing local search rankings and customers because they don't ask for reviews. Here's the data on what it costs — and how to fix it."
 date: "2026-03-31"
 slug: "why-tradies-dont-get-google-reviews-australia"
-cluster: "automation"
+cluster: "leads-sales"
 keyword: "why tradies don't get google reviews australia"
 author: "Luke"
 level: "beginner"
@@ -184,7 +184,7 @@ And here's the thing: once you have 40-50 reviews, you've built a moat. A compet
 
 The fix isn't complicated. Ask every customer for a review within 24 hours of finishing the job. Automate it so you don't have to remember. And watch your local search ranking climb while your competitors stay stuck on page two.
 
-You can start with our [free business audit](/audit) to see where you're losing time and how automation can help. We'll show you exactly [how we work](/process) to build systems that run in the background without you having to think about them. Or check out our [guides and tools](/resources) for more on local SEO and review automation for Australian trade businesses.
+You can start with our [free business audit](/audit) to see where you're losing time and how automation can help. We'll show you exactly [how we work](/process) to build systems that run in the background without you having to think about them. Or check out our [guides and tools](/blog) for more on local SEO and review automation for Australian trade businesses.
 
 If you're ready to stop losing jobs to competitors with more reviews, [contact us](/contact) and we'll build the system for you. Learn more [about UnderCurrent](/about) and how we've helped tradies across Melbourne, Sydney, and Brisbane turn review requests into a reliable, automated process.
 

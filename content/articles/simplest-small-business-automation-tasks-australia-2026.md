@@ -3,7 +3,7 @@ title: "What Is the Simplest Task a Small Business Can Automate Right Now Using 
 description: "Five concrete automation wins small business owners in Australia can implement in under 30 minutes using free no-code tools. No technical skills required."
 date: "2026-01-20"
 slug: "simplest-small-business-automation-tasks-australia-2026"
-cluster: "automation"
+cluster: "time-admin"
 keyword: "What is the simplest task a small business can automate right now using a no-code tool?"
 author: "Luke"
 level: "beginner"

@@ -3,7 +3,7 @@ title: "eInvoicing for Small Business Australia 2026: Your Step-by-Step Setup Gu
 description: "Step-by-step guide for Australian small businesses to set up eInvoicing, meet ATO requirements, and get paid 40% faster with automated invoicing."
 date: "2026-03-31"
 slug: "einvoicing-small-business-australia-guide"
-cluster: "automation"
+cluster: "industry-guides"
 keyword: "getting started with eInvoicing for small business"
 author: "Luke"
 level: "beginner"
@@ -214,7 +214,7 @@ Most small businesses do steps 1-2 manually, step 3 via email, step 4 inconsiste
 
 Automating the whole stack means you spend zero time on invoicing and collections. The system handles it. You just check the dashboard to see what's been paid and what's outstanding.
 
-We build these workflows for clients all the time. eInvoicing is usually the starting point because it's the easiest win. Then we layer on the rest. You can read more about [how we work](/process) or check out our [guides and tools](/resources) for DIY automation ideas.
+We build these workflows for clients all the time. eInvoicing is usually the starting point because it's the easiest win. Then we layer on the rest. You can read more about [how we work](/process) or check out our [guides and tools](/blog) for DIY automation ideas.
 
 If you're a tradie in Geelong or a consultant in Melbourne, this kind of automation is the difference between spending 5 hours a week on invoicing and spending 5 minutes. That's 20 hours a month back in your calendar. What would you do with an extra 20 hours?
 

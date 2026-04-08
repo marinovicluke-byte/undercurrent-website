@@ -1,21 +1,21 @@
-// app/resources/page.js
+// app/blog/page.js
 import Link from 'next/link'
 import FadeIn from '@/components/ui/FadeIn'
 import { getAllArticles } from '@/lib/articles'
 
 export const metadata = {
-  title: 'Resources',
+  title: 'Blog',
   description: 'Guides, insights, and automation ideas for Australian small businesses.',
 }
 
-export default function ResourcesPage() {
+export default function BlogPage() {
   const articles = getAllArticles()
 
   return (
     <div className="bg-white pt-24 pb-section">
       <div className="mx-auto max-w-7xl px-6">
         <FadeIn>
-          <h1 className="font-display text-5xl font-bold text-charcoal">Resources</h1>
+          <h1 className="font-display text-5xl font-bold text-charcoal">Blog</h1>
           <p className="mt-4 text-muted max-w-xl">
             Guides and insights for Australian small businesses looking to automate smarter.
           </p>
@@ -24,7 +24,7 @@ export default function ResourcesPage() {
           {articles.map((article, i) => (
             <FadeIn key={article.slug} delay={i * 50}>
               <Link
-                href={`/resources/${article.slug}`}
+                href={`/blog/${article.slug}`}
                 className="block rounded-xl border border-border bg-white p-6 hover:border-blue transition-colors group"
               >
                 {article.category && (

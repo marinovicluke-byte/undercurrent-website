@@ -8,8 +8,8 @@ export async function GET() {
   const items = articles.map(a => `
     <item>
       <title><![CDATA[${a.title}]]></title>
-      <link>${BASE}/resources/${a.slug}</link>
-      <guid>${BASE}/resources/${a.slug}</guid>
+      <link>${BASE}/blog/${a.slug}</link>
+      <guid>${BASE}/blog/${a.slug}</guid>
       <pubDate>${new Date(a.date).toUTCString()}</pubDate>
       ${a.description ? `<description><![CDATA[${a.description}]]></description>` : ''}
     </item>`).join('')

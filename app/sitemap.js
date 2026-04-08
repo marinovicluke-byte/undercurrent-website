@@ -7,7 +7,7 @@ const BASE = 'https://undercurrentautomations.com.au'
 export default function sitemap() {
   const staticPages = [
     '', '/about', '/services', '/process', '/contact',
-    '/audit', '/roi', '/missed-revenue', '/resources',
+    '/audit', '/roi', '/missed-revenue', '/blog',
     '/case-study', '/privacy', '/terms',
   ].map(path => ({
     url: `${BASE}${path}`,
@@ -31,7 +31,7 @@ export default function sitemap() {
   }))
 
   const articles = getAllArticles().map(a => ({
-    url: `${BASE}/resources/${a.slug}`,
+    url: `${BASE}/blog/${a.slug}`,
     lastModified: new Date(a.date),
     changeFrequency: 'weekly',
     priority: 0.6,
