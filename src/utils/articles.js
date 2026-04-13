@@ -101,12 +101,28 @@ export function getAllArticles() {
   return articles.map(({ _body, ...meta }) => meta)
 }
 
+function processBodyHtml(html) {
+  // Strip leading h1 — already rendered as styled h1 in the article page header
+  let result = html.replace(/^\s*<h1[^>]*>[\s\S]*?<\/h1>\s*\n?/i, '')
+
+  // Hoist Quick Answer blockquote to top — best for AI/featured-snippet targeting
+  const qaMatch = result.match(/(<blockquote>(?:(?!<\/blockquote>)[\s\S])*?Quick\s*Answer[\s\S]*?<\/blockquote>)/i)
+  if (qaMatch) {
+    const trimmed = result.trimStart()
+    if (!trimmed.startsWith('<blockquote>')) {
+      result = result.replace(qaMatch[0], '').trimStart()
+      result = qaMatch[0] + '\n' + result
+    }
+  }
+
+  return result
+}
+
 export function getArticleBySlug(slug) {
   const article = articles.find(a => a.slug === slug)
   if (!article) return null
   const { _body, ...meta } = article
-  // Strip the leading H1 — it duplicates the title rendered in the article header
-  const html = marked.parse(_body).replace(/^<h1[^>]*>[\s\S]*?<\/h1>\n?/, '')
+  const html = processBodyHtml(marked.parse(_body))
   const faqItems = extractFaqFromHtml(html)
   const howToSteps = extractHowToSteps(html)
   return { ...meta, html, faqItems, howToSteps }
