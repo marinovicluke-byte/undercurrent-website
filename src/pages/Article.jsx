@@ -286,7 +286,9 @@ export default function Article() {
 
   const canonical = `${DOMAIN}/blog/${article.slug}`
   const jsonLdSchemas = buildJsonLdSchemas(article, canonical)
-  const heroImage = article.image || null
+  // Use explicit `image:` frontmatter if set, otherwise try the convention
+  // path that n8n commits to: public/articles/[slug]/hero.jpg
+  const heroImage = article.image || `/articles/${article.slug}/hero.jpg`
 
   const extraMeta = [
     { property: 'og:type', content: 'article' },
@@ -413,29 +415,32 @@ export default function Article() {
             <div style={{ borderTop: '1px solid rgba(143,175,159,0.15)', margin: '1.5rem 0 2rem' }} />
           </Reveal>
 
-          {/* Hero image — shown when `image` frontmatter field is set */}
-          {heroImage && (
-            <Reveal delay={0.05}>
-              <figure style={{ margin: '0 0 2.5rem' }}>
-                <img
-                  src={heroImage}
-                  alt={article.title}
-                  loading="eager"
-                  itemProp="image"
-                  style={{
-                    width: '100%',
-                    borderRadius: '0.75rem',
-                    display: 'block',
-                    aspectRatio: '16 / 9',
-                    objectFit: 'cover',
-                  }}
-                />
-              </figure>
-            </Reveal>
-          )}
+          {/* Hero image — auto-loads from /articles/[slug]/hero.jpg (committed by n8n).
+              Silently hidden if the image hasn't been generated yet. */}
+          <Reveal delay={0.05}>
+            <figure
+              style={{ margin: '0 0 2.5rem' }}
+              ref={el => { if (el) el._figureEl = el }}
+            >
+              <img
+                src={heroImage}
+                alt={article.title}
+                loading="eager"
+                itemProp="image"
+                onError={e => { e.currentTarget.closest('figure').style.display = 'none' }}
+                style={{
+                  width: '100%',
+                  borderRadius: '0.75rem',
+                  display: 'block',
+                  aspectRatio: '16 / 9',
+                  objectFit: 'cover',
+                }}
+              />
+            </figure>
+          </Reveal>
 
           {/* Article body */}
-          <Reveal delay={heroImage ? 0.1 : 0.05}>
+          <Reveal delay={0.1}>
             <div itemProp="articleBody">
               <MarkdownRenderer html={article.html} />
             </div>
