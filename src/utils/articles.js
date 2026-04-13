@@ -81,6 +81,8 @@ function parseFrontmatter(raw) {
     }
     // Parse numbers
     if (/^\d+$/.test(val)) val = Number(val)
+    if (val === 'true') val = true
+    if (val === 'false') val = false
     frontmatter[key] = val
   })
 
