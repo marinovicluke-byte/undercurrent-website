@@ -1,8 +1,16 @@
 import { marked } from 'marked'
 
+// Current article slug — set before each parse so the image renderer can resolve relative paths
+let _currentSlug = ''
+
 // Configure marked to generate heading IDs and handle external links
 marked.use({
   renderer: {
+    image({ href, title, text }) {
+      const resolvedHref = href && href.startsWith('./') ? `/articles/${_currentSlug}/${href.slice(2)}` : href
+      const titleAttr = title ? ` title="${title}"` : ''
+      return `<img src="${resolvedHref}" alt="${text}"${titleAttr} />`
+    },
     heading({ tokens, depth }) {
       const text = tokens.map(t => t.raw || t.text || '').join('')
       const id = text.toLowerCase().replace(/[^\w]+/g, '-').replace(/(^-|-$)/g, '')
@@ -124,6 +132,7 @@ export function getArticleBySlug(slug) {
   const article = articles.find(a => a.slug === slug)
   if (!article) return null
   const { _body, ...meta } = article
+  _currentSlug = slug
   const html = processBodyHtml(marked.parse(_body))
   const faqItems = extractFaqFromHtml(html)
   const howToSteps = extractHowToSteps(html)
