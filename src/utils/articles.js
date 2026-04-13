@@ -122,7 +122,14 @@ export function getArticleBySlug(slug) {
   const article = articles.find(a => a.slug === slug)
   if (!article) return null
   const { _body, ...meta } = article
-  const html = processBodyHtml(marked.parse(_body))
+  // Rewrite relative body image paths (./body-1.jpg) to absolute public paths
+  const slugRenderer = new marked.Renderer()
+  slugRenderer.image = ({ href, title, text }) => {
+    const resolvedHref = href && href.startsWith('./') ? `/articles/${slug}/${href.slice(2)}` : href
+    const titleAttr = title ? ` title="${title}"` : ''
+    return `<img src="${resolvedHref}" alt="${text}"${titleAttr} loading="lazy" />`
+  }
+  const html = processBodyHtml(marked.parse(_body, { renderer: slugRenderer }))
   const faqItems = extractFaqFromHtml(html)
   const howToSteps = extractHowToSteps(html)
   return { ...meta, html, faqItems, howToSteps }
