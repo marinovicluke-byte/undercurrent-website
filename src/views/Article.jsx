@@ -181,7 +181,14 @@ function buildJsonLdSchemas(article, canonical) {
     dateModified: article.date,
     keywords: article.keyword,
     mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
-    image: `${DOMAIN}/articles/${article.slug}/hero.jpg`,
+    image: (() => {
+      const imgs = [`${DOMAIN}/articles/${article.slug}/hero.jpg`]
+      if (article.hasBodyImages) {
+        imgs.push(`${DOMAIN}/articles/${article.slug}/body-1.jpg`)
+        imgs.push(`${DOMAIN}/articles/${article.slug}/body-2.jpg`)
+      }
+      return imgs
+    })(),
     wordCount: article.html ? article.html.replace(/<[^>]+>/g, '').trim().split(/\s+/).length : undefined,
   }
 
