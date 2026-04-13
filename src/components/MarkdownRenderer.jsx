@@ -11,6 +11,17 @@ export default function MarkdownRenderer({ html }) {
           margin: 0 auto;
         }
 
+        .article-body h1 {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 2rem;
+          font-weight: 600;
+          color: #F7F3ED;
+          line-height: 1.2;
+          margin-top: 3rem;
+          margin-bottom: 1rem;
+          letter-spacing: -0.01em;
+        }
+
         .article-body h2 {
           font-family: 'Cormorant Garamond', serif;
           font-size: 1.75rem;

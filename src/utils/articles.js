@@ -105,7 +105,8 @@ export function getArticleBySlug(slug) {
   const article = articles.find(a => a.slug === slug)
   if (!article) return null
   const { _body, ...meta } = article
-  const html = marked.parse(_body)
+  // Strip the leading H1 — it duplicates the title rendered in the article header
+  const html = marked.parse(_body).replace(/^<h1[^>]*>[\s\S]*?<\/h1>\n?/, '')
   const faqItems = extractFaqFromHtml(html)
   const howToSteps = extractHowToSteps(html)
   return { ...meta, html, faqItems, howToSteps }
