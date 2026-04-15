@@ -1,16 +1,16 @@
 ---
-title: "How Much Time Tradies Spend on Admin Australia 2025: Real Cost Breakdown"
+title: "How Much Time Tradies Spend on Admin Australia 2026: Real Cost Breakdown"
 description: "Australian tradies spend 8-15 hours weekly on admin. We break down the real cost using ABS data, Fair Work rates, and Xero insights—plus what automation recovers."
-date: "2025-05-15"
+date: "2026-04-02"
 slug: "how-much-time-tradies-spend-on-admin-australia"
 cluster: "automation"
 keyword: "how much time tradies spend on admin australia"
-author: "Luke Paterson"
+author: "Luke"
 level: "beginner"
 readingTime: 9
 summary: "Research-led breakdown of admin time Australian tradies lose each week, calculated costs using real hourly rates, and what automation systems recover."
 ---
-# How Much Time Tradies Spend on Admin Australia 2025: Real Cost Breakdown
+# How Much Time Tradies Spend on Admin Australia 2026: Real Cost Breakdown
 
 Australian tradies spend between 8 and 15 hours per week on administrative tasks, according to data from the Australian Bureau of Statistics and Xero Small Business Insights. For a solo sparky billing out at $110/hour, that's $880 to $1,650 in lost billable time every single week. Most of this admin happens after hours,Sunday nights doing invoices, early mornings chasing quotes, lunch breaks reconciling receipts.
 
@@ -66,7 +66,7 @@ Jake the electrician sends 10 quotes a week. Each takes 20-25 minutes: measure t
 
 The real cost isn't the hours. It's the billable income you're not earning.
 
-Fair Work Commission awards set minimum rates, but most established tradies bill higher. Here's the 2024-2025 market rate data from ServiceSeeking.com.au, Hipages, and Master Plumbers Association benchmarking:
+Fair Work Commission awards set minimum rates, but most established tradies bill higher. Here's the 2024-2026 market rate data from ServiceSeeking.com.au, Hipages, and Master Plumbers Association benchmarking:
 
 | Trade | Average Billable Rate (per hour) | Admin Time (weekly) | Weekly Cost | Annual Cost |
 |-------|----------------------------------|---------------------|-------------|-------------|
