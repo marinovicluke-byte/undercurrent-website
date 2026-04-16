@@ -111,7 +111,7 @@ Use project management tools like Asana, Monday, or ClickUp to automate task ass
 
 **Reporting and reconciliation** is low-urgency but high-impact for visibility. If you're spending an hour every month pulling numbers from Xero into a spreadsheet to see profit and loss, automate it. Connect Xero to Google Sheets or Data Studio and build a live dashboard that updates every day.
 
-This doesn't save a huge amount of time, but it gives you real-time visibility into cash flow and margins, which helps you make faster decisions. For payback periods, typical SMB automation projects show invoice processing takes 3-6 months to recoup costs with £520-£1,480 monthly savings, while internal reporting takes 3-6 months with £270-£750 monthly savings (UK SMB automation ROI data, 2025).
+This doesn't save a huge amount of time, but it gives you real-time visibility into cash flow and margins, which helps you make faster decisions. For payback periods, typical SMB automation projects show invoice processing takes 3-6 months to recoup costs with $700-$2,000 monthly savings, while internal reporting takes 3-6 months with $350-$1,000 monthly savings (based on Australian SMB automation benchmarks).
 
 You can also read more about [automating business processes in Australia](/blog/automating-business-processes-australia-sme-guide) for a broader overview.
 
