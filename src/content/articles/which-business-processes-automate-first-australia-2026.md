@@ -18,13 +18,13 @@ summary: "Automate customer-facing processes first (lead capture, follow-up, inv
 
 You've got a business to run and a list of admin tasks as long as your arm. Every software vendor promises to "transform your workflow" or "revolutionise your operations." But here's the truth: **automation is not about replacing humans with robots or chasing every shiny tool**. It's about getting your time back so you can do the work that actually pays the bills.
 
-**Business process automation (BPA) is the use of software to execute recurring tasks or processes where manual effort can be replaced.** In Australia, BPA adoption among SMBs grew 34% between 2024 and 2026, driven primarily by cloud accounting integrations and AI-powered customer service tools (Systree, 2026). The challenge isn't whether to automate. It's knowing where to start.
+**Business process automation (BPA) is the use of software to execute recurring tasks or processes where manual effort can be replaced.** In Australia, BPA adoption among SMBs has accelerated since 2024, driven primarily by cloud accounting integrations and AI-powered customer service tools. [Xero Small Business Insights](https://www.xero.com/au/resources/small-business-insights/) reports that 72% of Australian small businesses now use at least one cloud-based automation tool. The challenge isn't whether to automate. It's knowing where to start.
 
 At UnderCurrent, we run automation audits for Australian service businesses every week. The pattern is always the same: owners drowning in admin, unsure which fires to put out first. This article gives you a practical framework to identify your highest-impact automation opportunities based on real bottlenecks, not vendor hype.
 
 ## Why Most Businesses Automate the Wrong Things First
 
-70% of Australian businesses believe automation will significantly boost operational efficiency and productivity (Systree, 2026). But half of them waste their first automation budget on low-impact tools that sound impressive but don't move the needle.
+The [Australian Small Business and Family Enterprise Ombudsman](https://www.asbfeo.gov.au/) reports that operational efficiency is the top priority for Australian SMBs entering 2026, with most owners identifying manual admin as their biggest constraint. But half of them waste their first automation budget on low-impact tools that sound impressive but don't move the needle.
 
 The most common mistake is automating what's easy, not what's painful. A business will spend $200/month on social media scheduling before fixing the fact that they lose 3 leads a week from slow follow-up. Or they'll automate report generation when the real problem is manual invoicing eating 6 hours every Sunday night.
 
@@ -59,7 +59,7 @@ Customer-facing processes are where you lose the most money from manual work. A 
 
 ### How Fast Should You Follow Up New Leads?
 
-**Lead capture and instant follow-up** is the highest-impact automation you can build. 78% of buyers choose the business that responds first, not the one with the best quote (Salesforce, 2024). If someone fills out your contact form at 7pm and you email them at 9am the next day, you're already too late.
+**Lead capture and instant follow-up** is the highest-impact automation you can build. 78% of buyers choose the business that responds first, not the one with the best quote, according to the [Salesforce State of the Connected Customer report](https://www.salesforce.com/au/resources/research-reports/state-of-the-connected-customer/). If someone fills out your contact form at 7pm and you email them at 9am the next day, you're already too late.
 
 An electrical contractor in Dandenong running a team of 5 was quoting jobs from the van on paper. After moving to Tradify with automated follow-up emails, their quote acceptance rate went from around 30% to 48% in three months. The automation was simple: when a lead came in via Google Business Profile or the website, the system sent a confirmation email within 2 minutes and added the lead to the job board. No typing, no forgetting, no delays.
 
@@ -97,7 +97,7 @@ Once your customer-facing workflows are sorted, move to internal admin. These ta
 
 **Data entry and record-keeping** is the biggest time sink for small businesses. If you're manually typing job details into three different systems, your CRM, your accounting software, and your job board, you're doing the same work three times.
 
-40% of Australian SMEs are expected to implement robotic process automation (RPA) by 2026, targeting mundane tasks like data entry and appointment scheduling to increase efficiency (Systree, 2026). The simplest version is connecting your tools so data flows automatically. When you create a new customer in your CRM, the system adds them to Xero and your email list without you touching a keyboard.
+Adoption of process automation tools among Australian SMEs continues to climb, with the [ABS Business Characteristics Survey](https://www.abs.gov.au/statistics/industry/technology-and-innovation/business-use-information-technology) showing steady increases in businesses using automated data processing and cloud-connected workflows. The simplest version is connecting your tools so data flows automatically. When you create a new customer in your CRM, the system adds them to Xero and your email list without you touching a keyboard.
 
 We typically see businesses cut data entry time by 60-80% after automating their core workflows. A landscaping business in Geelong was spending 4 hours a week copying job details from Google Sheets into ServiceM8. We connected the two with Make, and that 4 hours dropped to zero.
 
@@ -166,7 +166,7 @@ Customer-facing automations (lead follow-up, quoting, invoicing) typically pay f
 Yes, but it's harder. You can automate tasks like email follow-up, appointment reminders, and social media posting using just Zapier and your existing email or calendar. But for end-to-end automation, you need a central system to manage customer data. Tools like HubSpot (for agencies) or ServiceM8 (for trades) start around $50/month. See our guide on [what is business process automation](/blog/what-is-business-process-automation-australia) for more context.
 
 **What tools do Australian SMBs use for automation in 2026?**
-The most common stack is Xero or MYOB for accounting, Zapier or Make for connecting tools, and either a CRM (HubSpot, Pipedrive) or job management software (ServiceM8, Tradify, Fergus) depending on your industry. 85% of Australian SMBs are experimenting with AI-powered automation tools as of 2026 (Salesforce, 2026). For marketing, check out our list of the [best marketing automation software in Australia for 2026](/blog/best-marketing-automation-software-australia-2026).
+The most common stack is Xero or MYOB for accounting, Zapier or Make for connecting tools, and either a CRM (HubSpot, Pipedrive) or job management software (ServiceM8, Tradify, Fergus) depending on your industry. Australian SMBs are increasingly adopting AI-powered automation, with [MYOB Business Monitor](https://www.myob.com/au/blog/myob-business-monitor/) reporting that the majority of small business owners now use or plan to use AI-assisted software in their operations. For marketing, check out our list of the [best marketing automation software in Australia for 2026](/blog/best-marketing-automation-software-australia-2026).
 
 **Should I hire someone to build automations or do it myself?**
 Start with DIY for simple automations like email follow-up or appointment reminders using Zapier templates. For complex workflows (multi-step quoting, CRM-to-accounting sync, custom dashboards), hire a specialist. At UnderCurrent, we build automations for Australian service businesses and train teams to maintain them. Most businesses spend $1,500-$5,000 on their first automation project and recover that cost within 3-6 months. You can [get in touch](/contact) or request a [free automation audit](/audit) to see where you're leaking time.
