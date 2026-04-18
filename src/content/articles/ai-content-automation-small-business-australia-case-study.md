@@ -1,6 +1,6 @@
 ---
 title: "30 Minutes a Week: Content Marketing for Melbourne SMBs"
-description: "How a Melbourne automation firm cut content time from 18 hours to 30 minutes per week using AI content automation — a self-dogfooding case study with real metrics."
+description: "How a Melbourne automation firm cut content time from 18 hours to 30 minutes per week using AI content automation, with real metrics from our own business."
 date: "2026-04-18"
 slug: "ai-content-automation-small-business-australia-case-study"
 cluster: "growth"
@@ -12,7 +12,7 @@ summary: "A Melbourne automation business automated its own content marketing, c
 ---
 # 30 Minutes a Week: AI Content Automation for Melbourne Small Businesses
 
-> **Quick Answer:** A Melbourne automation firm automated its own content pipeline using Claude Sonnet, Perplexity Sonar, and a 19-point scoring framework. The system writes 3 SEO articles per week, cutting content time from 12-18 hours to 30 minutes of review. Annual content cost dropped from $62,400-$93,600 to ~$2,400 in API calls and hosting. The system went live in 2 weeks and has published 17 articles in the first month with an average quality score of 16.2/19.
+> **Quick Answer:** A Melbourne automation firm automated its own content pipeline using Claude Sonnet, Perplexity Sonar, and a 19-point scoring framework. The system writes 3 SEO articles per week, cutting content time from 12-18 hours to 30 minutes of review. Annual content cost dropped from $62,400-$93,600 to a small API and hosting bill. The system went live in 2 weeks and has published 17 articles in the first month with an average quality score of 16.2/19.
 
 ![AI content automation workflow for Melbourne small business marketing efficiency](./body-1.jpg)
 
@@ -73,7 +73,7 @@ The system went from first deploy to consistent 3x/week output in 2 weeks. In th
 | Time per article | 4-6 hours | 0 (fully automated) | 4-6 hours × 3 articles × 52 weeks = 624-936 hours/year saved |
 | Weekly content time | 12-18 hours | 30 minutes review | 11.5-17.5 hours × 52 weeks = 598-910 hours/year saved |
 | Articles per week | 1-2 (inconsistent) | 3 (Mon/Wed/Fri, consistent) | 156 articles/year vs. 52-104 articles/year |
-| Annual content cost (at $100/hr) | $62,400-$93,600 | ~$2,400 (API + hosting) | $60,000-$91,200/year saved |
+| Annual content cost (at $100/hr) | $62,400-$93,600 | API + hosting only | $62,000+/year saved |
 
 The system now runs unattended. Every Monday, Wednesday, and Friday at 10am, a new article publishes. The only human input is a 30-minute weekly review to check the Telegram scorecards and verify citations.
 
@@ -89,7 +89,7 @@ Without the 19-point scorer, AI output is generic and misses local context. With
 
 For a digital marketing agency with 5-10 clients, this system could handle all client blog content. For a trades business publishing local SEO content to rank in suburbs, it could publish 12 articles per month while the owner is on the tools.
 
-The cost structure flips from labour-based to compute-based. Instead of paying $150 per article for a freelancer, or $62,000+ per year in opportunity cost, you're paying $2,400 per year in API calls and hosting. That's a 96% cost reduction.
+Instead of paying $150 per article for a freelancer, or $62,000+ per year in opportunity cost, you're paying per-call API fees (~$0.15 per article) plus hosting. The cost structure flips from labour-based to compute-based.
 
 According to the same [Scale Suite survey](https://scalesuite.com.au/news/ai-adoption-australia-2025), 37-68% of Australian businesses have adopted AI in some form by 2026. But adoption and effective use are different things. Most businesses are using ChatGPT for one-off tasks. The businesses that pull ahead are the ones building deterministic workflows that run unattended.
 
@@ -97,7 +97,7 @@ The second-order effect is consistency. Publishing 3 times per week on a fixed s
 
 This isn't a set-and-forget system. The scorer needs tuning every 4-6 weeks as Google's algorithm shifts. The keyword clusters need refreshing quarterly. But the core workflow , research, write, score, rewrite, publish , doesn't change.
 
-If you're spending more than 10 hours per week writing content for your business, you're a candidate for this type of automation. The tools are accessible ([AI automation Melbourne](/ai-automation-melbourne) covers the local options), and the total build cost for a similar system is under $5,000 if you're building it yourself or engaging a firm like [UnderCurrent Automations](/services) to scope it.
+If you're spending more than 10 hours per week writing content for your business, you're a candidate for this type of automation. The tools are accessible ([AI automation Melbourne](/ai-automation-melbourne) covers the local options), and [UnderCurrent Automations](/services) can scope a similar build for your business.
 
 For context, a [2025 Ai Group report](https://www.aigroup.com.au/) found that Australian SMBs adopting automation saw an average productivity gain of 18-22%. That tracks with our internal data: we got 12-18 hours per week back, which is roughly a 15-20% productivity lift on total work hours.
 
@@ -123,7 +123,7 @@ Yes, but only if the AI output passes through a deterministic quality gate befor
 
 ### How much does it cost to automate content marketing for an Australian small business?
 
-The pipeline we built costs ~$2,400 per year to run, which includes API calls (Claude Sonnet, Perplexity Sonar, Serper, Kie.ai) and Hetzner cron hosting. That's $200 per month or roughly $0.15 per article at 3 articles per week. Build cost depends on whether you're hiring a developer or building it yourself. A comparable system scoped and built by a firm like [UnderCurrent Automations](/about) runs under $5,000 for the initial setup. Replacement cost for a freelance writer at $150 per article is $600-900 per week, or $31,200-$46,800 per year. The ROI breaks even in under 2 months. Ongoing maintenance is 30 minutes per week reviewing scorecards and tuning the keyword clusters quarterly.
+The pipeline runs on API calls (Claude Sonnet, Perplexity Sonar, Serper, Kie.ai) plus Hetzner cron hosting, at roughly $0.15 per article at 3 articles per week. Build cost depends on scope and whether you're hiring a developer or building it yourself. [UnderCurrent Automations](/about) can scope a comparable system. Replacement cost for a freelance writer at $150 per article is $600-900 per week, or $31,200-$46,800 per year. ROI breaks even quickly against the labour savings. Ongoing maintenance is 30 minutes per week reviewing scorecards and tuning the keyword clusters quarterly.
 
 ### What tools do you need to build an automated content pipeline end-to-end?
 
