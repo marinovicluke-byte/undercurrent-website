@@ -1,0 +1,29 @@
+# Lab Notes — What Not To Try
+
+## Vercel / Deploy
+- **Vercel build fails with "No Output Directory named dist"** — Vercel project is still configured for Vite. Fix: Vercel dashboard → Settings → Framework Preset → Next.js. Do NOT change until ready to deploy redesign.
+- **Workspace root lockfile warning — NOT cosmetic under Next.js 16 Turbopack.** Old note said "cosmetic only", wrong. Under Next 16 Turbopack, the auto-detected root becomes the module resolution root. When the parent `/Website/` had a stray `package.json` + `package-lock.json`, Turbopack picked the parent as workspace root and could not resolve `tailwindcss` (installed in `undercurrent/node_modules` only). Every CSS file errored on every request, flooding stderr, OOMing the Node process, crashing the laptop twice on 2026-04-19. Fix: (1) pin `turbopack.root` to `__dirname` in `next.config.mjs` (done), (2) renamed parent `package.json` and `package-lock.json` to `.bak` so only the real `undercurrent/package-lock.json` remains.
+
+## Next.js Migration
+- **`src/pages/` renamed to `src/views/`** — done on redesign branch to prevent Next.js from treating old Vite SPA pages as Pages Router routes. The entire `src/` directory is legacy Vite code kept for reference.
+- **Legacy files coexist on redesign branch** — src/, dist/, vite.config.js, index.html, tailwind.config.js are all from the old Vite SPA. Do not modify or delete them, they're reference material for the migration.
+- **Tailwind v4 uses @theme in globals.css** — the tailwind.config.js in root is the OLD Vite config. The actual design tokens for the redesign are in app/globals.css under `@theme {}`. Do not edit tailwind.config.js thinking it controls the redesign.
+
+## CSS / Inline Styles
+
+- **`clamp()` inside a CSS custom property fails silently in React inline style shorthands.** Using `--page-pad: clamp(42px, 6.8vw, 180px)` then `padding: '120px var(--page-pad)'` rendered at 0px left padding — no error, just silent fallback. Fix: put a simple px value in the variable (`--page-pad: 88px`) and handle responsiveness via `@media` override on `:root`. Potential lesson for other projects.
+
+## Content
+- (none yet)
+
+## Service pages
+- **2026-04-19 V5a rollout.** Replaced 954-line client `ServicePage.js` with a server-rendered layout driven by `lib/data/services.js`. Added 4 new fields per service (`bluf`, `pipelineStages`, `integrations`, `pricingTiers`). Shared SEO constants moved to `lib/data/seo.js` (permanent) so the preview file could be deleted.
+- **2026-04-19 Acronym handling in slug-derived display names.** Added 4 new service pages (front-end-experience, surface-discovery, ai-strategy-training, custom-integrations). Slug `ai-strategy-training` derived to "Ai Strategy Training" / "Ai strategy training" across h1, BLUF strong tag, QA questions, TOC labels and JSON-LD Service name. Fix: added optional `displayName` field to the service entry. When set, `serviceDisplayName()`, `serviceTitleCase()`, `buildToc()` and the `displayLc` fallback all use that string verbatim instead of slug-derived + `.toLowerCase()`. Preserves "AI" capitalization and the `&` in "AI Strategy & Training" consistently. Potential lesson: whenever a slug contains an acronym (AI, API, SEO, CRM, ROI), set `displayName` explicitly rather than relying on the slug-to-title helper.
+- **2026-04-19 services-v2.js stale entry 04.** The hub card at `app/services/page.js` had card 04 as "Surface & Discovery" (SEO/AEO/GEO) but `lib/data/services-v2.js` entry 04 was still "Discovery — we map before we build." with slug `discovery`. Synced services-v2.js entry 04 to match the hub (name, tagline, slug → `surface-discovery`). The /services Discovery hero block (scoping session) is a separate component linking to /contact and is not in services-v2.js.
+- **2026-04-19 Next 15 dev first-hit 404 after adding a SERVICES entry.** `app/[slug]/page.js` uses `dynamicParams = false`. After appending to the SERVICES array, the first curl on the new slug returned 404; a second curl 2-3 seconds later returned 200. Turbopack needed the HMR pass to regenerate `generateStaticParams()`. No action needed in prod (static build), but worth knowing during dev: if a new slug 404s, wait and retry before debugging.
+- **Turbopack + deleted imports → stale render.** After removing `WIKI_REFS` from `ServicePage.js` imports and usage, the dev server continued serving the old HTML with `/wiki/` links still present. `touch` didn't help. Full `.next` wipe + restart was the only fix. Potential lesson: when Turbopack output doesn't match source, don't keep debugging the source — blow away `.next/` and restart before anything else.
+- **Turbopack mid-session 500 flood — `SyntaxError: Unexpected non-whitespace character after JSON at position 955`.** Every route returned 500 after a small JSX edit (removing a `<nav>`). No stack pointing at project code, only `at JSON.parse (<anonymous>)`. Build manifest ENOENT warnings in the log. `.next` wipe alone didn't clear it — had to also delete `node_modules/.cache` and restart. Suspect Turbopack flight manifest corruption. Potential lesson for Next 16 Turbopack: when the error points at JSON.parse with no project frames, wipe both `.next` and `node_modules/.cache` in one shot.
+- **Wiki routes don't exist on-site.** `WIKI_REFS` defined in `lib/data/seo.js` but deliberately not rendered in the Further Reading section because `/wiki/ai-search` and `/wiki/seo` return 404. Reinstate if those routes are ever built.
+
+## Performance
+- (none yet)
