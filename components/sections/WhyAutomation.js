@@ -49,6 +49,18 @@ function WhyCards() {
           alignItems: 'stretch',
         }}
       >
+      <style>{`
+        @media (max-width: 780px) {
+          .uc-why-cards {
+            grid-template-columns: 1fr !important;
+            gap: 18px !important;
+          }
+          .uc-why-cards > article {
+            min-height: 0 !important;
+            padding: 26px 24px !important;
+          }
+        }
+      `}</style>
         {WHY_PILLARS.map((p, i) => {
           const a = WHY_ACCENT[p.tag]
           return (
