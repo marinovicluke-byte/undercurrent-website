@@ -23,11 +23,12 @@ export default function Hero({
   headline = 'The AI automation agency for Australian small businesses',
   subtext,
   showSubtext = false,
-  ctaLabel = "Let's chat",
+  ctaLabel = "Let's talk",
   ctaHref = '/contact',
 }) {
   return (
     <section
+      className="uc-hero"
       style={{
         position: 'relative',
         display: 'flex',
@@ -66,6 +67,20 @@ export default function Hero({
       <style>{`
         @media (prefers-reduced-motion: reduce) {
           .uc-hero-video { display: none; }
+        }
+        @media (max-width: 780px) {
+          .uc-hero {
+            min-height: auto !important;
+            padding-top: 48px !important;
+            padding-bottom: 40px !important;
+          }
+          .uc-hero h1 {
+            font-size: clamp(34px, 9vw, 48px) !important;
+            line-height: 1.05 !important;
+          }
+          .uc-hero .uc-hero-cta {
+            margin-top: 24px !important;
+          }
         }
       `}</style>
 
@@ -115,7 +130,7 @@ export default function Hero({
             </p>
           )}
 
-          <div style={{ marginTop: 32 }}>
+          <div className="uc-hero-cta" style={{ marginTop: 32 }}>
             <PillCTA label={ctaLabel} href={ctaHref} large />
           </div>
         </div>

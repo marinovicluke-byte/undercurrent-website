@@ -13,13 +13,6 @@ const NAV_LINKS = [
   { label: 'Blog', href: '/blog' },
 ]
 
-const MOBILE_SECONDARY = [
-  { label: 'Case studies', href: '/case-studies' },
-  { label: 'Process', href: '/process' },
-  { label: 'ROI calculator', href: '/roi' },
-  { label: 'Missed revenue tool', href: '/missed-revenue' },
-]
-
 export default function Header({ ctaLabel = "Let's talk" }) {
   const pathname = usePathname()
   const [hoveredIdx, setHoveredIdx] = useState(null)
@@ -64,6 +57,7 @@ export default function Header({ ctaLabel = "Let's talk" }) {
         }}
       >
         <div
+          className="uc-nav-row"
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr auto 1fr',
@@ -76,6 +70,7 @@ export default function Header({ ctaLabel = "Let's talk" }) {
           <Link
             href="/"
             aria-label="UnderCurrent Automations — home"
+            className="uc-nav-logo"
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -157,8 +152,10 @@ export default function Header({ ctaLabel = "Let's talk" }) {
                 appearance: 'none',
                 background: 'var(--charcoal)',
                 border: '1px solid var(--text-faint)',
-                borderRadius: 10,
-                padding: 10,
+                borderRadius: 12,
+                width: 48,
+                height: 48,
+                padding: 0,
                 cursor: 'pointer',
                 color: 'var(--off-white)',
                 alignItems: 'center',
@@ -167,7 +164,7 @@ export default function Header({ ctaLabel = "Let's talk" }) {
                 transition: 'transform 140ms cubic-bezier(.2,.7,.3,1), box-shadow 140ms cubic-bezier(.2,.7,.3,1)',
               }}
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M4 7 H20" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
                 <path d="M4 12 H20" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
                 <path d="M4 17 H20" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
@@ -187,9 +184,15 @@ export default function Header({ ctaLabel = "Let's talk" }) {
 
       <style>{`
         @media (max-width: 900px) {
+          .uc-nav-row {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+          }
           .uc-nav-desktop { display: none !important; }
           .uc-nav-cta-desktop { display: none !important; }
           .uc-nav-hamburger { display: inline-flex !important; }
+          .uc-nav-logo img { width: 200px !important; height: auto !important; }
         }
         .uc-nav-hamburger:hover {
           transform: translate(-2px, -2px);
@@ -272,7 +275,7 @@ function MobileMenu({ pathname, ctaLabel, onClose }) {
       <nav
         aria-label="Primary"
         style={{
-          padding: '40px var(--page-pad) 24px',
+          padding: '24px var(--page-pad) 16px',
           display: 'flex',
           flexDirection: 'column',
         }}
@@ -283,7 +286,7 @@ function MobileMenu({ pathname, ctaLabel, onClose }) {
             href={link.href}
             onClick={onClose}
             style={{
-              padding: '18px 0',
+              padding: '22px 0',
               borderBottom: '1px solid var(--text-faint)',
               textDecoration: 'none',
               display: 'flex',
@@ -291,82 +294,46 @@ function MobileMenu({ pathname, ctaLabel, onClose }) {
               justifyContent: 'space-between',
               fontFamily: 'var(--font-display)',
               fontWeight: 500,
-              fontSize: 'clamp(28px, 6vw, 40px)',
-              letterSpacing: '-0.025em',
+              fontSize: 'clamp(40px, 10vw, 64px)',
+              lineHeight: 1.05,
+              letterSpacing: '-0.035em',
               color: isActive(link.href) ? 'var(--blue-light)' : 'var(--off-white)',
             }}
           >
             <span>{link.label}</span>
-            <span aria-hidden style={{ fontSize: 20, opacity: 0.5 }}>→</span>
+            <span aria-hidden style={{ fontSize: 24, opacity: 0.5 }}>→</span>
           </Link>
         ))}
       </nav>
 
-      {/* Secondary links — smaller, grouped */}
-      <nav
-        aria-label="Secondary"
-        style={{
-          padding: '8px var(--page-pad) 32px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 2,
-        }}
-      >
-        <span
-          style={{
-            fontFamily: 'var(--font-display)',
-            fontWeight: 500,
-            fontSize: 11,
-            letterSpacing: '0.14em',
-            textTransform: 'uppercase',
-            color: 'var(--text-muted)',
-            marginBottom: 12,
-          }}
-        >
-          More
-        </span>
-        {MOBILE_SECONDARY.map(link => (
-          <Link
-            key={link.href}
-            href={link.href}
-            onClick={onClose}
-            style={{
-              padding: '12px 0',
-              textDecoration: 'none',
-              fontFamily: 'var(--font-body)',
-              fontSize: 16,
-              color: isActive(link.href) ? 'var(--blue-light)' : 'var(--text-secondary)',
-            }}
-          >
-            {link.label}
-          </Link>
-        ))}
-      </nav>
-
-      {/* Bottom CTA */}
+      {/* CTA (sits right under nav links) */}
       <div
         style={{
-          marginTop: 'auto',
-          padding: '24px var(--page-pad) 40px',
-          borderTop: '1px solid var(--text-faint)',
+          padding: '28px var(--page-pad) 24px',
           display: 'flex',
           flexDirection: 'column',
-          gap: 14,
+          gap: 12,
         }}
       >
-        <div onClick={onClose}>
+        <div className="uc-menu-cta" onClick={onClose}>
           <PillCTA label={ctaLabel} href="/contact" large />
         </div>
-        <p
-          style={{
-            margin: 0,
-            fontFamily: 'var(--font-body)',
-            fontSize: 12,
-            color: 'var(--text-muted)',
-          }}
-        >
-          Melbourne, Australia · Reply within 1 business day
-        </p>
+        <style>{`
+          .uc-menu-cta > a,
+          .uc-menu-cta > button {
+            display: flex !important;
+            width: 100% !important;
+            justify-content: center !important;
+            padding: 22px 28px !important;
+            font-size: 20px !important;
+            border-radius: 999px !important;
+          }
+          .uc-menu-cta > a svg,
+          .uc-menu-cta > button svg {
+            width: 22px !important;
+            height: 22px !important;
+          }
+        `}</style>
       </div>
     </div>
   )

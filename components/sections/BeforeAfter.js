@@ -409,7 +409,7 @@ export default function BeforeAfter() {
             maxWidth: 560,
           }}
         >
-          Want to know which pillar would pay back first for your business? We\u2019ll do
+          Want to know which pillar would pay back first for your business? We&rsquo;ll do
           the audit.
         </div>
         <PillCTA label="Book a free audit" href="/audit" tone="blue" />

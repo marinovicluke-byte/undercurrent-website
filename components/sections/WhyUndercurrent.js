@@ -6,7 +6,7 @@ export default function WhyUndercurrent({
   eyebrowNumber = '01',
   headline,
   body = 'UnderCurrent works as a long-term partner alongside you. We build the first wave of automations, tune them as the business shifts, and design the next ones when new priorities land. You own every workflow. The retainer earns its place on measurable returns.',
-  ctaLabel = "Let's chat",
+  ctaLabel = "Let's talk",
   ctaHref = '/contact',
 }) {
   return (

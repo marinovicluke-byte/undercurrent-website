@@ -14,59 +14,6 @@ const AC_ORANGE = { rgb: '224, 122, 85',  light: '236, 158, 128' }
 
 const EyebrowPill = SectionEyebrow
 
-// ─── Photo placeholder ────────────────────────────────────────────────────────
-function PhotoPlaceholder({ ratio = '4/5', ac = AC_BLUE, label = 'placeholder' }) {
-  return (
-    <div
-      style={{
-        position: 'relative',
-        aspectRatio: ratio,
-        width: '100%',
-        background: 'var(--charcoal)',
-        border: '1px solid var(--text-faint)',
-        borderRadius: 14,
-        boxShadow: `6px 6px 0 0 rgb(${ac.rgb})`,
-        overflow: 'hidden',
-      }}
-    >
-      <svg
-        viewBox="0 0 320 400"
-        preserveAspectRatio="xMidYMax meet"
-        style={{ position: 'absolute', bottom: 0, left: 0, right: 0, width: '100%', height: '84%' }}
-      >
-        <defs>
-          <linearGradient id={`sil-${label}`} x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%"   stopColor={`rgba(${ac.light}, 0.40)`} />
-            <stop offset="100%" stopColor="rgba(12,12,10,0.96)" />
-          </linearGradient>
-        </defs>
-        <path
-          d="M160 48 c28 0 48 22 48 52 c0 22-11 40-24 48 c38 14 60 44 66 84 c2 22 4 40 4 68 H66 c0-28 2-46 4-68 c6-40 28-70 66-84 c-13-8-24-26-24-48 c0-30 20-52 48-52 Z"
-          fill={`url(#sil-${label})`}
-        />
-      </svg>
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          display: 'flex',
-          alignItems: 'flex-end',
-          justifyContent: 'space-between',
-          padding: 20,
-          pointerEvents: 'none',
-        }}
-      >
-        <span style={{ fontFamily: 'var(--font-display)', fontSize: 10, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
-          Photo · {ratio}
-        </span>
-        <span style={{ fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 11, color: 'var(--text-faint)' }}>
-          {label}
-        </span>
-      </div>
-    </div>
-  )
-}
-
 // ═══════════════════════════════════════════════════════════════════════════════
 // SECTION 01 — About UnderCurrent
 // LeftClick layout: full-width headline → 2-col body/image below
@@ -111,17 +58,8 @@ function AboutUndercurrent() {
           through AI automation.
         </h1>
 
-        {/* 2-col: body left + image right */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.1fr)',
-            gap: 80,
-            alignItems: 'start',
-          }}
-          className="uc-why-grid-wrap"
-        >
-          {/* Left: body + pillars + CTA */}
+        {/* Body + pillars + CTA */}
+        <div style={{ maxWidth: 760 }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
             <p
               style={{
@@ -175,9 +113,6 @@ function AboutUndercurrent() {
               <PillCTA label="See what we build" href="/services" tone="blue" />
             </div>
           </div>
-
-          {/* Right: image */}
-          <PhotoPlaceholder ratio="4/5" ac={AC_BLUE} label="undercurrent" />
         </div>
       </div>
     </section>
@@ -221,17 +156,8 @@ function AboutMe() {
           <span className="uc-glow-word uc-glow-word--blue">time back</span>.
         </h2>
 
-        {/* 2-col: text left + image right */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'minmax(0, 1.1fr) minmax(0, 0.9fr)',
-            gap: 80,
-            alignItems: 'start',
-          }}
-          className="uc-why-grid-wrap"
-        >
-          {/* Left: text */}
+        {/* Text + credentials + CTA */}
+        <div style={{ maxWidth: 760 }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
             <p
               style={{
@@ -299,9 +225,6 @@ function AboutMe() {
               <PillCTA label="Let's talk" href="/contact" tone="sage" />
             </div>
           </div>
-
-          {/* Right: portrait */}
-          <PhotoPlaceholder ratio="3/4" ac={AC_SAGE} label="luke" />
         </div>
       </div>
     </section>
@@ -389,12 +312,45 @@ function OurJourney() {
 
         {/* Timeline */}
         <div
+          className="uc-timeline-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: '200px 1px 1fr',
             gap: '0 48px',
           }}
         >
+        <style>{`
+          @media (max-width: 780px) {
+            .uc-timeline-grid {
+              grid-template-columns: 28px 1fr !important;
+              gap: 0 20px !important;
+            }
+            .uc-timeline-grid .uc-tl-year {
+              grid-column: 2 !important;
+              text-align: left !important;
+              padding-bottom: 10px !important;
+            }
+            .uc-timeline-grid .uc-tl-year span {
+              font-size: 22px !important;
+            }
+            .uc-timeline-grid .uc-tl-line {
+              grid-column: 1 !important;
+              grid-row: span 2 !important;
+              align-self: stretch !important;
+              margin-top: 8px !important;
+            }
+            .uc-timeline-grid .uc-tl-content {
+              grid-column: 2 !important;
+              padding-bottom: 48px !important;
+            }
+            .uc-timeline-grid .uc-tl-content h3 {
+              font-size: 20px !important;
+            }
+            .uc-timeline-grid .uc-tl-content p {
+              font-size: 15px !important;
+            }
+          }
+        `}</style>
           {MILESTONES.map((m, i) => {
             const isLast = i === MILESTONES.length - 1
             return (
@@ -402,6 +358,7 @@ function OurJourney() {
                 {/* Year — left column */}
                 <div
                   key={`year-${i}`}
+                  className="uc-tl-year"
                   style={{
                     paddingTop: 6,
                     paddingBottom: isLast ? 0 : 72,
@@ -426,6 +383,7 @@ function OurJourney() {
                 {/* Line + dot — centre column */}
                 <div
                   key={`line-${i}`}
+                  className="uc-tl-line"
                   style={{
                     position: 'relative',
                     display: 'flex',
@@ -470,6 +428,7 @@ function OurJourney() {
                 {/* Content — right column */}
                 <div
                   key={`content-${i}`}
+                  className="uc-tl-content"
                   style={{
                     paddingTop: 2,
                     paddingBottom: isLast ? 0 : 72,

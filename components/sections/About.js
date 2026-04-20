@@ -134,7 +134,7 @@ export default function About() {
               flexWrap: 'wrap',
             }}
           >
-            <PillCTA label="Let's chat" href="/contact" tone="blue" />
+            <PillCTA label="Let's talk" href="/contact" tone="blue" />
             <Link
               href="/about"
               style={{
