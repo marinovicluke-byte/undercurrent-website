@@ -3,6 +3,8 @@
 // Layout matches the V5a exploration (boxed Q&A, high contrast, sticky TOC).
 
 import Link from 'next/link'
+import SectionEyebrow from '@/components/ui/SectionEyebrow'
+import PillCTA from '@/components/ui/PillCTA'
 import { DOMAIN, PROVIDER, AREAS_SERVED, LOCATIONS } from '@/lib/data/seo'
 
 // Default "last reviewed" date for service pages, ISO 8601.
@@ -147,12 +149,10 @@ function buildToc(service) {
 const S = {
   heroBand:    { background: 'var(--bg-deep)' },
   contentBand: { background: 'var(--charcoal)' },
-  card:        { background: 'rgba(255,255,255,0.035)', border: '1px solid rgba(250,249,245,0.12)', borderRadius: 14, padding: 32 },
-  subcard:     { background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(250,249,245,0.1)', borderRadius: 10, padding: 20 },
-  chip:        { display: 'inline-block', padding: '5px 10px', border: '1px solid rgba(250,249,245,0.14)', background: 'rgba(255,255,255,0.025)', fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--text-primary)', borderRadius: 6 },
+  card:        { background: 'var(--charcoal)', border: '1px solid var(--text-faint)', borderRadius: 14, padding: 32 },
+  subcard:     { background: 'rgba(255,255,255,0.02)', border: '1px solid var(--text-faint)', borderRadius: 10, padding: 20 },
+  chip:        { display: 'inline-block', padding: '5px 10px', border: '1px solid rgba(250,249,245,0.14)', background: 'rgba(255,255,255,0.025)', fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 12, color: 'var(--text-primary)', borderRadius: 999 },
   eyebrowNum:  { fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--text-muted)', fontVariantNumeric: 'tabular-nums' },
-  eyebrowRule: { width: 24, height: 1, background: 'var(--text-faint)', display: 'inline-block' },
-  eyebrowLbl:  { fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.14em', color: 'var(--text-secondary)' },
   h1:          { margin: 0, fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 'clamp(36px, 4vw, 54px)', lineHeight: 1.08, letterSpacing: '-0.025em', color: 'var(--off-white)' },
   h2:          { margin: 0, fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 'clamp(22px, 2.3vw, 28px)', lineHeight: 1.22, letterSpacing: '-0.015em', color: 'var(--off-white)' },
   h3:          { margin: 0, fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 16, lineHeight: 1.35, color: 'var(--off-white)' },
@@ -160,8 +160,7 @@ const S = {
   body:        { margin: 0, fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.75, color: 'var(--text-primary)', fontWeight: 400 },
   small:       { margin: 0, fontFamily: 'var(--font-body)', fontSize: 13.5, lineHeight: 1.65, color: 'var(--text-secondary)' },
   strong:      { color: 'var(--off-white)', fontWeight: 500 },
-  btnPrimary:  { display: 'inline-flex', alignItems: 'center', gap: 8, padding: '12px 20px', background: 'var(--off-white)', color: 'var(--charcoal-deep)', fontFamily: 'var(--font-display)', fontSize: 13, fontWeight: 500, borderRadius: 6, textDecoration: 'none' },
-  btnGhost:    { display: 'inline-flex', alignItems: 'center', gap: 8, padding: '12px 20px', border: '1px solid rgba(250,249,245,0.2)', color: 'var(--off-white)', fontFamily: 'var(--font-display)', fontSize: 13, fontWeight: 500, borderRadius: 6, textDecoration: 'none' },
+  label:       { fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)' },
 }
 
 const ROW_KEYS = ['uc', 'manual', 'generic', 'agency']
@@ -194,10 +193,8 @@ export default function ServicePage({ service }) {
 
           <div style={{ display: 'grid', gap: 72, gridTemplateColumns: 'minmax(0, 1.25fr) minmax(0, 1fr)', padding: '60px 0 96px' }} className="uc-hero-grid">
             <div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 28 }}>
-                <span style={S.eyebrowNum}>{service.index}</span>
-                <span style={S.eyebrowRule} />
-                <span style={S.eyebrowLbl}>Service · {displaySc}</span>
+              <div style={{ marginBottom: 28 }}>
+                <SectionEyebrow n={service.index} label={`Service · ${displaySc}`} />
               </div>
               <h1 style={{ ...S.h1, maxWidth: 720, marginBottom: 28 }}>
                 {displaySc} {location},{' '}
@@ -212,16 +209,18 @@ export default function ServicePage({ service }) {
                 <span style={{ ...S.chip, color: 'var(--sage)', borderColor: 'rgba(143,175,159,0.35)' }}>Live in ~14 days</span>
                 <span style={S.chip}>By {PROVIDER.name}</span>
               </div>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-                <Link href="/contact" style={S.btnPrimary}>Book a scoping call →</Link>
-                <Link href="/audit" style={S.btnGhost}>Free workflow audit</Link>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center' }}>
+                <PillCTA label="Book a scoping call" href="/contact" tone="blue" />
+                <Link href="/audit" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '12px 22px', borderRadius: 999, border: '1px solid var(--text-faint)', background: 'transparent', color: 'var(--off-white)', textDecoration: 'none', fontFamily: 'var(--font-display)', fontSize: 14, fontWeight: 500, letterSpacing: '-0.01em' }}>
+                  Free workflow audit <span aria-hidden style={{ fontSize: 13 }}>→</span>
+                </Link>
               </div>
             </div>
 
-            <aside style={{ ...S.card, padding: 0 }}>
-              <div style={{ padding: '16px 24px', borderBottom: '1px solid rgba(250,249,245,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Pipeline flow</span>
-                <span style={{ width: 8, height: 8, borderRadius: 4, background: 'var(--sage)', boxShadow: '0 0 10px rgba(143,175,159,0.6)' }} />
+            <aside style={{ ...S.card, padding: 0, boxShadow: '6px 6px 0 0 var(--sage)' }}>
+              <div style={{ padding: '16px 24px', borderBottom: '1px solid var(--text-faint)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <span style={S.label}>Pipeline flow</span>
+                <span style={{ width: 8, height: 8, borderRadius: 4, background: 'var(--sage)' }} />
               </div>
               <ol style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                 {service.pipelineStages.map((st, i) => (
@@ -245,8 +244,8 @@ export default function ServicePage({ service }) {
         <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gap: 64, gridTemplateColumns: '220px minmax(0, 1fr)' }} className="uc-body-grid">
 
           <aside style={{ alignSelf: 'start', position: 'sticky', top: '38vh' }}>
-            <div style={{ paddingBottom: 14, marginBottom: 18, borderBottom: '1px solid rgba(250,249,245,0.12)' }}>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>On this page</span>
+            <div style={{ paddingBottom: 14, marginBottom: 18, borderBottom: '1px solid var(--text-faint)' }}>
+              <span style={S.label}>On this page</span>
             </div>
             <nav aria-label="Table of contents" style={{ display: 'flex', flexDirection: 'column', gap: 11 }}>
               {toc.map((t, i) => (
@@ -264,12 +263,12 @@ export default function ServicePage({ service }) {
                 <strong style={S.strong}>{displaySc}</strong>{' '}{blufAfterTerm(service.bluf, displaySc)}
               </p>
               <p style={{ ...S.body, marginTop: 14 }}>
-                It is not a single tool you buy; it is the orchestration layer on top of the tools you already pay for, tuned to how <strong style={S.strong}>{service.heroPill}</strong> actually runs in your business.
+                It is not a single tool you buy; it is the orchestration layer on top of the tools you already pay for, tuned to how <strong style={S.strong}>{service.heroPill}</strong> runs in your business day to day.
               </p>
             </QACard>
 
             <QACard id="included" n="02" q="What does the build include?">
-              <p style={S.body}>{service.deliversHeadline} {service.whatWeDeliver.length} deliverables by default, each tuned to how your business actually operates.</p>
+              <p style={S.body}>{service.deliversHeadline} {service.whatWeDeliver.length} deliverables by default, each tuned to how your business already operates.</p>
               <ol style={{ listStyle: 'none', padding: 0, margin: '24px 0 0', display: 'grid', gap: 10 }}>
                 {service.whatWeDeliver.map((item, i) => (
                   <li key={i} style={{ ...S.subcard, display: 'grid', gridTemplateColumns: '28px 1fr', gap: 14, padding: '14px 18px' }}>
@@ -285,7 +284,7 @@ export default function ServicePage({ service }) {
               <div style={{ display: 'grid', gap: 12, marginTop: 20 }}>
                 {service.industries.map((ind, i) => (
                   <div key={i} style={S.subcard}>
-                    <p style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--blue)', margin: 0, marginBottom: 8 }}>{ind.label}</p>
+                    <p style={{ ...S.label, color: 'var(--blue-light)', margin: 0, marginBottom: 8 }}>{ind.label}</p>
                     <p style={{ ...S.h3, marginBottom: 8 }}>{ind.headline}</p>
                     <p style={S.small}>{ind.copy}</p>
                   </div>
@@ -315,10 +314,10 @@ export default function ServicePage({ service }) {
               <div style={{ ...S.subcard, padding: 0, overflowX: 'auto', marginTop: 20 }}>
                 <table style={{ width: '100%', minWidth: 600, borderCollapse: 'collapse' }}>
                   <thead>
-                    <tr style={{ background: 'rgba(255,255,255,0.03)', borderBottom: '1px solid rgba(250,249,245,0.12)' }}>
-                      <th style={{ textAlign: 'left', padding: 14, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>Capability</th>
+                    <tr style={{ background: 'rgba(255,255,255,0.03)', borderBottom: '1px solid var(--text-faint)' }}>
+                      <th style={{ textAlign: 'left', padding: 14, ...S.label }}>Capability</th>
                       {service.comparisonColumns.map((c, i) => (
-                        <th key={i} style={{ padding: 14, textAlign: 'center', fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: i === 0 ? 'var(--blue-light)' : 'var(--text-muted)' }}>{c}</th>
+                        <th key={i} style={{ padding: 14, textAlign: 'center', ...S.label, color: i === 0 ? 'var(--blue-light)' : 'var(--text-muted)' }}>{c}</th>
                       ))}
                     </tr>
                   </thead>
@@ -339,13 +338,13 @@ export default function ServicePage({ service }) {
             </QACard>
 
             <QACard id="pricing" n="07" q="What does it cost?">
-              <p style={S.body}>Project-priced, not per-seat. No ongoing software licence fees — we build on the stack you already pay for.</p>
+              <p style={S.body}>Project-priced, not per-seat. No ongoing software licence fees, because we build on the stack you already pay for.</p>
               <div style={{ display: 'grid', gap: 12, marginTop: 20, gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))' }}>
                 {service.pricingTiers.map((t) => (
                   <div key={t.name} style={S.subcard}>
-                    <p style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--sage)', margin: 0, marginBottom: 6 }}>{t.priceFrom}</p>
+                    <p style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--sage-light)', margin: 0, marginBottom: 6 }}>{t.priceFrom}</p>
                     <p style={{ ...S.h3, marginBottom: 4 }}>{t.name}</p>
-                    <p style={{ ...S.small, color: 'var(--text-muted)', fontSize: 11, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 10 }}>{t.tag}</p>
+                    <p style={{ ...S.label, fontSize: 11, letterSpacing: '0.08em', marginBottom: 10 }}>{t.tag}</p>
                     <p style={S.small}>{t.desc}</p>
                   </div>
                 ))}
@@ -354,7 +353,7 @@ export default function ServicePage({ service }) {
 
             <QACard id="timeline" n="08" q="How long does it take?">
               <p style={S.body}>Most builds go live within <strong style={S.strong}>7 to 14 days</strong> of the first scoping call. Week one is discovery; week two is build and rollout. Measurable results are visible within 2 to 3 weeks of going live.</p>
-              <p style={{ ...S.body, marginTop: 14 }}>Full, multi-channel systems run <strong style={S.strong}>3 to 4 weeks</strong> end-to-end. We give you a firm timeline before committing — no scope creep.</p>
+              <p style={{ ...S.body, marginTop: 14 }}>Full, multi-channel systems run <strong style={S.strong}>3 to 4 weeks</strong> end-to-end. We give you a firm timeline before committing, with no scope creep.</p>
             </QACard>
 
             <QACard id="where" n="09" q="Where does UnderCurrent operate?">
@@ -377,16 +376,14 @@ export default function ServicePage({ service }) {
 
             {/* Author */}
             <section style={{ ...S.card, padding: 28 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 14 }}>
-                <span style={S.eyebrowNum}>11</span>
-                <span style={S.eyebrowRule} />
-                <span style={S.eyebrowLbl}>Written by</span>
+              <div style={{ marginBottom: 14 }}>
+                <SectionEyebrow n="11" label="Written by" />
               </div>
               <p style={{ ...S.h3, fontSize: 18, marginBottom: 6 }}>{PROVIDER.founder.name}</p>
               <p style={{ ...S.small, marginBottom: 14 }}>Founder of {PROVIDER.name}. Builds sales, content, finance and operations automation for Australian small businesses.</p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center' }}>
-                <Link href="/about" style={S.chip}>About Luke →</Link>
-                <time dateTime={dateModified} style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'center' }}>
+                <Link href="/about" style={{ ...S.chip, textDecoration: 'none' }}>About Luke →</Link>
+                <time dateTime={dateModified} style={{ ...S.label, fontSize: 11, letterSpacing: '0.12em' }}>
                   Last reviewed {reviewedLbl}
                 </time>
               </div>
@@ -394,17 +391,15 @@ export default function ServicePage({ service }) {
 
             {/* Further reading: service cross-links */}
             <section style={S.card}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 20 }}>
-                <span style={S.eyebrowNum}>12</span>
-                <span style={S.eyebrowRule} />
-                <span style={S.eyebrowLbl}>Further reading</span>
+              <div style={{ marginBottom: 20 }}>
+                <SectionEyebrow n="12" label="Further reading" />
               </div>
               <p style={{ ...S.h2, fontSize: 20, marginBottom: 20 }}>Related services and source material.</p>
               <div style={{ borderTop: '1px solid rgba(250,249,245,0.1)' }}>
                 {service.internalLinks.map(l => ({ label: l.label, href: l.path, kind: 'Service' })).map((r, i) => (
-                  <Link key={i} href={r.href} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20, padding: '14px 0', borderBottom: '1px solid rgba(250,249,245,0.08)', textDecoration: 'none' }}>
+                  <Link key={i} href={r.href} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20, padding: '14px 0', borderBottom: '1px solid var(--text-faint)', textDecoration: 'none' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 16, minWidth: 0 }}>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--sage)', width: 64, flexShrink: 0 }}>{r.kind}</span>
+                      <span style={{ ...S.label, color: 'var(--sage-light)', width: 64, flexShrink: 0 }}>{r.kind}</span>
                       <span style={{ ...S.body, fontSize: 14, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{r.label}</span>
                     </div>
                     <span style={{ fontSize: 13, color: 'var(--text-muted)', flexShrink: 0 }}>→</span>
@@ -414,12 +409,14 @@ export default function ServicePage({ service }) {
             </section>
 
             {/* Final CTA */}
-            <section style={{ ...S.card, padding: 40, background: 'linear-gradient(135deg, rgba(138,174,200,0.08), rgba(143,175,159,0.05))', borderColor: 'rgba(138,174,200,0.25)' }}>
+            <section style={{ ...S.card, padding: 40, boxShadow: '6px 6px 0 0 var(--blue)' }}>
               <p style={{ ...S.h2, maxWidth: 560, marginBottom: 12 }}>{service.ctaHeadline}</p>
               <p style={{ ...S.body, maxWidth: 560, marginBottom: 24 }}>{service.ctaCopy}</p>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-                <Link href="/contact" style={S.btnPrimary}>Book a scoping call →</Link>
-                <Link href="/audit" style={S.btnGhost}>Free workflow audit</Link>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center' }}>
+                <PillCTA label="Book a scoping call" href="/contact" tone="blue" />
+                <Link href="/audit" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '12px 22px', borderRadius: 999, border: '1px solid var(--text-faint)', background: 'transparent', color: 'var(--off-white)', textDecoration: 'none', fontFamily: 'var(--font-display)', fontSize: 14, fontWeight: 500, letterSpacing: '-0.01em' }}>
+                  Free workflow audit <span aria-hidden style={{ fontSize: 13 }}>→</span>
+                </Link>
               </div>
             </section>
           </article>
@@ -471,6 +468,6 @@ function StepCard({ n, title, body }) {
 }
 
 function Check({ on, highlight }) {
-  if (!on) return <span style={{ color: 'var(--text-faint)' }}>—</span>
+  if (!on) return <span style={{ color: 'var(--text-faint)' }}>·</span>
   return <span style={{ color: highlight ? 'var(--sage)' : 'var(--text-muted)' }}>✓</span>
 }

@@ -28,7 +28,7 @@ function HealthPill({ label, selected, onClick }) {
         border: selected ? '1px solid #8FAF9F' : '1px solid rgba(255,255,255,0.18)',
         background: selected ? 'rgba(143,175,159,0.15)' : 'transparent',
         color: selected ? '#8FAF9F' : 'rgba(255,255,255,0.38)',
-        fontFamily: 'DM Mono, monospace',
+        fontFamily: 'var(--font-mono)',
         fontSize: '0.72rem',
         letterSpacing: '0.06em',
         cursor: 'pointer',
@@ -46,8 +46,8 @@ function AuditSlider({ label, value, onChange, max = 40, step = 0.5, unit = 'hrs
   return (
     <div style={{ marginBottom: '4px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '6px' }}>
-        <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.82rem', color: 'rgba(247,243,237,0.65)' }}>{label}</span>
-        <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.72rem', color: '#8FAF9F', minWidth: '52px', textAlign: 'right' }}>
+        <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.82rem', color: 'rgba(247,243,237,0.65)' }}>{label}</span>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: '#8FAF9F', minWidth: '52px', textAlign: 'right' }}>
           {value > 0 ? `${value} ${unit}` : '—'}
         </span>
       </div>
@@ -75,7 +75,7 @@ function NumberInputDark({ label, value, onChange, prefix = '$', placeholder = '
     }}>
       <label style={{
         display: 'block',
-        fontFamily: 'DM Mono, monospace',
+        fontFamily: 'var(--font-mono)',
         fontSize: '0.65rem',
         letterSpacing: '0.12em',
         color: 'rgba(143,175,159,0.7)',
@@ -86,7 +86,7 @@ function NumberInputDark({ label, value, onChange, prefix = '$', placeholder = '
       </label>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: '3px' }}>
         <span style={{
-          fontFamily: 'DM Sans, sans-serif',
+          fontFamily: 'var(--font-body)',
           fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)',
           fontWeight: 700,
           color: '#8FAF9F',
@@ -103,7 +103,7 @@ function NumberInputDark({ label, value, onChange, prefix = '$', placeholder = '
             background: 'transparent',
             border: 'none',
             outline: 'none',
-            fontFamily: 'DM Sans, sans-serif',
+            fontFamily: 'var(--font-body)',
             fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)',
             fontWeight: 700,
             color: '#F7F3ED',
@@ -141,7 +141,7 @@ function PillarSection({ pillar, state, onChange }) {
       {/* Header row */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
         <h3 style={{
-          fontFamily: 'DM Sans, sans-serif',
+          fontFamily: 'var(--font-body)',
           fontSize: '0.95rem',
           fontWeight: 600,
           color: '#F7F3ED',
@@ -171,7 +171,7 @@ function PillarSection({ pillar, state, onChange }) {
       {gapStatus && (
         <div style={{ marginTop: '6px', marginBottom: '8px' }}>
           <span style={{
-            fontFamily: 'DM Mono, monospace',
+            fontFamily: 'var(--font-mono)',
             fontSize: '0.65rem',
             letterSpacing: '0.1em',
             padding: '2px 8px',
@@ -197,7 +197,7 @@ function PillarSection({ pillar, state, onChange }) {
           border: 'none',
           padding: '4px 0',
           cursor: 'pointer',
-          fontFamily: 'DM Mono, monospace',
+          fontFamily: 'var(--font-mono)',
           fontSize: '0.68rem',
           letterSpacing: '0.08em',
           color: 'rgba(143,175,159,0.6)',
@@ -317,7 +317,7 @@ function ReportModal({ isOpen, onClose, payload, pillarsState, industry, customI
     borderRadius: '10px',
     border: `1.5px solid ${hasErr ? 'rgba(220,80,60,0.6)' : 'rgba(143,175,159,0.2)'}`,
     background: 'rgba(255,255,255,0.05)',
-    fontFamily: 'DM Sans, sans-serif',
+    fontFamily: 'var(--font-body)',
     fontSize: '0.9rem',
     color: '#F7F3ED',
     outline: 'none',
@@ -327,7 +327,7 @@ function ReportModal({ isOpen, onClose, payload, pillarsState, industry, customI
 
   const labelStyle = {
     display: 'block',
-    fontFamily: 'DM Mono, monospace',
+    fontFamily: 'var(--font-mono)',
     fontSize: '0.62rem',
     letterSpacing: '0.12em',
     textTransform: 'uppercase',
@@ -342,12 +342,11 @@ function ReportModal({ isOpen, onClose, payload, pillarsState, industry, customI
         position: 'fixed',
         inset: 0,
         zIndex: 9999,
-        background: 'rgba(0,0,0,0.82)',
+        background: 'rgba(0,0,0,0.78)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         padding: '24px',
-        backdropFilter: 'blur(4px)',
       }}
     >
       <div style={{
@@ -382,10 +381,10 @@ function ReportModal({ isOpen, onClose, payload, pillarsState, industry, customI
         </button>
 
         <>
-          <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.62rem', letterSpacing: '0.18em', color: 'rgba(143,175,159,0.7)', margin: '0 0 6px', textTransform: 'uppercase' }}>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', letterSpacing: '0.18em', color: 'rgba(143,175,159,0.7)', margin: '0 0 6px', textTransform: 'uppercase' }}>
             Get your full report
           </p>
-          <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(1.2rem, 2.5vw, 1.7rem)', fontWeight: 700, letterSpacing: '-0.02em', color: '#F7F3ED', margin: '0 0 24px', lineHeight: 1.2 }}>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(1.2rem, 2.5vw, 1.7rem)', fontWeight: 700, letterSpacing: '-0.02em', color: '#F7F3ED', margin: '0 0 24px', lineHeight: 1.2 }}>
             We&apos;ll send your personalised breakdown straight to your inbox.
           </p>
 
@@ -409,7 +408,7 @@ function ReportModal({ isOpen, onClose, payload, pillarsState, industry, customI
                   onBlur={e => { e.target.style.borderColor = errors[field] ? 'rgba(220,80,60,0.6)' : 'rgba(143,175,159,0.2)' }}
                 />
                 {errors[field] && (
-                  <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.74rem', color: 'rgba(220,80,60,0.9)', margin: '4px 0 0' }}>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.74rem', color: 'rgba(220,80,60,0.9)', margin: '4px 0 0' }}>
                     {errors[field]}
                   </p>
                 )}
@@ -417,7 +416,7 @@ function ReportModal({ isOpen, onClose, payload, pillarsState, industry, customI
             ))}
 
             {status === 'error' && (
-              <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.82rem', color: 'rgba(220,80,60,0.9)', margin: '0' }}>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.82rem', color: 'rgba(220,80,60,0.9)', margin: '0' }}>
                 Something went wrong, please try again.
               </p>
             )}
@@ -432,7 +431,7 @@ function ReportModal({ isOpen, onClose, payload, pillarsState, industry, customI
                 border: '1.5px solid #8FAF9F',
                 background: status === 'loading' ? 'rgba(143,175,159,0.1)' : 'rgba(143,175,159,0.12)',
                 color: '#8FAF9F',
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--font-body)',
                 fontSize: '0.9rem',
                 fontWeight: 600,
                 letterSpacing: '0.02em',
@@ -474,7 +473,7 @@ function GapTable({ pillars, leadBleedMonthly }) {
   return (
     <div style={{ marginTop: '16px' }}>
       <p style={{
-        fontFamily: 'DM Mono, monospace',
+        fontFamily: 'var(--font-mono)',
         fontSize: '0.62rem',
         letterSpacing: '0.14em',
         textTransform: 'uppercase',
@@ -488,7 +487,7 @@ function GapTable({ pillars, leadBleedMonthly }) {
           <tr>
             {['Area', 'Self', 'Calc', 'Status'].map(h => (
               <th key={h} style={{
-                fontFamily: 'DM Mono, monospace',
+                fontFamily: 'var(--font-mono)',
                 fontSize: '0.72rem',
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
@@ -506,26 +505,26 @@ function GapTable({ pillars, leadBleedMonthly }) {
         <tbody>
           {rows.map((row, i) => (
             <tr key={i}>
-              <td style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.78rem', color: 'rgba(247,243,237,0.65)', padding: '7px 8px 7px 0', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
+              <td style={{ fontFamily: 'var(--font-body)', fontSize: '0.78rem', color: 'rgba(247,243,237,0.65)', padding: '7px 8px 7px 0', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
                 {row.label}
               </td>
-              <td style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.7rem', color: row.selfRated ? ratingColor(row.selfRated) : 'rgba(247,243,237,0.25)', padding: '7px 8px 7px 0', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
+              <td style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: row.selfRated ? ratingColor(row.selfRated) : 'rgba(247,243,237,0.25)', padding: '7px 8px 7px 0', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
                 {row.selfRated || '—'}
               </td>
-              <td style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.7rem', color: ratingColor(row.calced), padding: '7px 8px 7px 0', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
+              <td style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: ratingColor(row.calced), padding: '7px 8px 7px 0', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
                 {row.calced}
               </td>
-              <td style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.65rem', color: row.gap === 'Blind spot' ? 'rgba(220,100,80,0.8)' : row.gap === 'Under-estimated' ? 'rgba(210,160,60,0.8)' : '#8FAF9F', padding: '7px 0', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
+              <td style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: row.gap === 'Blind spot' ? 'rgba(220,100,80,0.8)' : row.gap === 'Under-estimated' ? 'rgba(210,160,60,0.8)' : '#8FAF9F', padding: '7px 0', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
                 {row.gap || '—'}
               </td>
             </tr>
           ))}
           {leadBleedMonthly > 0 && (
             <tr>
-              <td colSpan={3} style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.78rem', color: 'rgba(247,243,237,0.65)', padding: '7px 8px 7px 0' }}>
+              <td colSpan={3} style={{ fontFamily: 'var(--font-body)', fontSize: '0.78rem', color: 'rgba(247,243,237,0.65)', padding: '7px 8px 7px 0' }}>
                 Lead bleed (slow response)
               </td>
-              <td style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.7rem', color: 'rgba(220,100,80,0.8)', padding: '7px 0' }}>
+              <td style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'rgba(220,100,80,0.8)', padding: '7px 0' }}>
                 {fmt(leadBleedMonthly)}/mo
               </td>
             </tr>
@@ -593,7 +592,7 @@ export default function BusinessAuditV2() {
   // ─── Shared styles ─────────────────────────────────────────────────────────
   const sectionDividerStyle = { borderBottom: '1px solid rgba(143,175,159,0.1)', paddingBottom: '28px', marginBottom: '28px' }
   const sectionHeadStyle = {
-    fontFamily: 'DM Sans, sans-serif',
+    fontFamily: 'var(--font-body)',
     fontSize: '0.72rem',
     fontWeight: 600,
     letterSpacing: '0.12em',
@@ -607,7 +606,7 @@ export default function BusinessAuditV2() {
     border: '1px solid rgba(255,255,255,0.08)',
     borderRadius: '10px',
     outline: 'none',
-    fontFamily: 'DM Sans, sans-serif',
+    fontFamily: 'var(--font-body)',
     fontSize: '0.88rem',
     color: '#F7F3ED',
     cursor: 'pointer',
@@ -670,7 +669,7 @@ export default function BusinessAuditV2() {
           border: 1px solid #8FAF9F;
           background: transparent;
           color: #F7F3ED;
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--font-body);
           font-size: 0.875rem;
           font-weight: 500;
           letter-spacing: 0.05em;
@@ -727,7 +726,7 @@ export default function BusinessAuditV2() {
           }} />
 
           <p style={{
-            fontFamily: 'DM Mono, monospace',
+            fontFamily: 'var(--font-mono)',
             fontSize: '0.68rem',
             letterSpacing: '0.22em',
             color: 'rgba(143,175,159,0.65)',
@@ -787,7 +786,7 @@ export default function BusinessAuditV2() {
             animation: 'audit-bounce 2s ease-in-out infinite',
           }}>
             <span style={{
-              fontFamily: 'DM Mono, monospace',
+              fontFamily: 'var(--font-mono)',
               fontSize: '0.72rem',
               letterSpacing: '0.2em',
               color: '#8FAF9F',
@@ -821,7 +820,7 @@ export default function BusinessAuditV2() {
               <div style={{ marginBottom: '12px' }}>
                 <label style={{
                   display: 'block',
-                  fontFamily: 'DM Mono, monospace',
+                  fontFamily: 'var(--font-mono)',
                   fontSize: '0.62rem',
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
@@ -854,7 +853,7 @@ export default function BusinessAuditV2() {
                       border: '1px solid rgba(255,255,255,0.08)',
                       borderRadius: '10px',
                       outline: 'none',
-                      fontFamily: 'DM Sans, sans-serif',
+                      fontFamily: 'var(--font-body)',
                       fontSize: '0.88rem',
                       color: '#F7F3ED',
                       padding: '10px 12px',
@@ -879,7 +878,7 @@ export default function BusinessAuditV2() {
               <div>
                 <label style={{
                   display: 'block',
-                  fontFamily: 'DM Mono, monospace',
+                  fontFamily: 'var(--font-mono)',
                   fontSize: '0.62rem',
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
@@ -903,7 +902,7 @@ export default function BusinessAuditV2() {
                           border: active ? '1px solid #8FAF9F' : '1px solid rgba(255,255,255,0.15)',
                           background: active ? 'rgba(143,175,159,0.15)' : 'transparent',
                           color: active ? '#8FAF9F' : 'rgba(247,243,237,0.45)',
-                          fontFamily: 'DM Mono, monospace',
+                          fontFamily: 'var(--font-mono)',
                           fontSize: '0.72rem',
                           letterSpacing: '0.04em',
                           cursor: 'pointer',
@@ -921,7 +920,7 @@ export default function BusinessAuditV2() {
 
             {/* How it works — 3-step guide */}
             <div style={{ marginBottom: '28px', padding: '20px 22px', borderRadius: '14px', background: 'rgba(143,175,159,0.05)', border: '1px solid rgba(143,175,159,0.12)' }}>
-              <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.62rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(143,175,159,0.65)', margin: '0 0 14px' }}>
+              <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(143,175,159,0.65)', margin: '0 0 14px' }}>
                 How it works
               </p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -931,10 +930,10 @@ export default function BusinessAuditV2() {
                   { n: '3', text: "Watch your numbers update live, your estimated monthly loss appears on the right." },
                 ].map(step => (
                   <div key={step.n} style={{ display: 'flex', gap: '14px', alignItems: 'flex-start' }}>
-                    <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.72rem', color: '#8FAF9F', background: 'rgba(143,175,159,0.12)', border: '1px solid rgba(143,175,159,0.2)', borderRadius: '50%', width: '22px', height: '22px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '1px' }}>
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: '#8FAF9F', background: 'rgba(143,175,159,0.12)', border: '1px solid rgba(143,175,159,0.2)', borderRadius: '50%', width: '22px', height: '22px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: '1px' }}>
                       {step.n}
                     </span>
-                    <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.84rem', color: 'rgba(247,243,237,0.6)', margin: 0, lineHeight: 1.55 }}>
+                    <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.84rem', color: 'rgba(247,243,237,0.6)', margin: 0, lineHeight: 1.55 }}>
                       {step.text}
                     </p>
                   </div>
@@ -965,7 +964,7 @@ export default function BusinessAuditV2() {
           }}>
 
             <h3 style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--font-body)',
               fontSize: '0.72rem',
               fontWeight: 600,
               letterSpacing: '0.12em',
@@ -976,7 +975,7 @@ export default function BusinessAuditV2() {
               Estimated loss
             </h3>
             <p style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--font-body)',
               fontSize: '0.82rem',
               color: 'rgba(247,243,237,0.35)',
               margin: '0 0 20px',
@@ -995,7 +994,7 @@ export default function BusinessAuditV2() {
               transition: 'all 0.3s ease',
             }}>
               <p style={{
-                fontFamily: 'DM Mono, monospace',
+                fontFamily: 'var(--font-mono)',
                 fontSize: '0.72rem',
                 letterSpacing: '0.16em',
                 textTransform: 'uppercase',
@@ -1005,7 +1004,7 @@ export default function BusinessAuditV2() {
                 Estimated monthly loss
               </p>
               <p style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--font-body)',
                 fontSize: 'clamp(2.4rem, 5vw, 3.6rem)',
                 fontWeight: 700,
                 letterSpacing: '-0.03em',
@@ -1016,7 +1015,7 @@ export default function BusinessAuditV2() {
                 {hasResults ? fmt(totalMonthly) : '$0'}
               </p>
               <p style={{
-                fontFamily: 'DM Sans, sans-serif',
+                fontFamily: 'var(--font-body)',
                 fontSize: '0.82rem',
                 color: 'rgba(247,243,237,0.55)',
                 margin: 0,
@@ -1034,13 +1033,13 @@ export default function BusinessAuditV2() {
                 background: 'rgba(255,255,255,0.03)',
                 border: '1px solid rgba(255,255,255,0.07)',
               }}>
-                <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(143,175,159,0.5)', margin: '0 0 8px' }}>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(143,175,159,0.5)', margin: '0 0 8px' }}>
                   Time cost
                 </p>
-                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 700, color: '#8FAF9F', margin: '0 0 2px', letterSpacing: '-0.02em' }}>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 700, color: '#8FAF9F', margin: '0 0 2px', letterSpacing: '-0.02em' }}>
                   {fmt(timeCostMonthly)}
                 </p>
-                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', color: 'rgba(247,243,237,0.5)', margin: 0 }}>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', color: 'rgba(247,243,237,0.5)', margin: 0 }}>
                   per month
                 </p>
               </div>
@@ -1051,13 +1050,13 @@ export default function BusinessAuditV2() {
                 background: 'rgba(255,255,255,0.03)',
                 border: '1px solid rgba(255,255,255,0.07)',
               }}>
-                <p style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(143,175,159,0.5)', margin: '0 0 8px' }}>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(143,175,159,0.5)', margin: '0 0 8px' }}>
                   Lead bleed
                 </p>
-                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 700, color: leadBleedMonthly > 0 ? 'rgba(220,100,80,0.85)' : 'rgba(247,243,237,0.18)', margin: '0 0 2px', letterSpacing: '-0.02em' }}>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 700, color: leadBleedMonthly > 0 ? 'rgba(220,100,80,0.85)' : 'rgba(247,243,237,0.18)', margin: '0 0 2px', letterSpacing: '-0.02em' }}>
                   {leadBleedMonthly > 0 ? fmt(leadBleedMonthly) : '—'}
                 </p>
-                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', color: 'rgba(247,243,237,0.5)', margin: 0 }}>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', color: 'rgba(247,243,237,0.5)', margin: 0 }}>
                   per month
                 </p>
               </div>
@@ -1079,7 +1078,7 @@ export default function BusinessAuditV2() {
                     border: '1.5px solid #8FAF9F',
                     background: 'rgba(143,175,159,0.1)',
                     color: '#8FAF9F',
-                    fontFamily: 'DM Sans, sans-serif',
+                    fontFamily: 'var(--font-body)',
                     fontSize: '0.95rem',
                     fontWeight: 600,
                     letterSpacing: '0.02em',
@@ -1095,7 +1094,7 @@ export default function BusinessAuditV2() {
                 >
                   Get your full report →
                 </button>
-                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.75rem', color: 'rgba(247,243,237,0.5)', margin: '10px 0 0', textAlign: 'center', lineHeight: 1.5 }}>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', color: 'rgba(247,243,237,0.5)', margin: '10px 0 0', textAlign: 'center', lineHeight: 1.5 }}>
                   We&apos;ll send a personalised breakdown straight to your inbox.
                 </p>
               </div>

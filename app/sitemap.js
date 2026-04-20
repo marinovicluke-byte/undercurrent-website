@@ -1,14 +1,17 @@
 import { LOCATIONS } from '@/lib/data/locations'
 import { SERVICES } from '@/lib/data/services'
 import { getAllArticles } from '@/lib/articles'
+import { getAllCaseStudies } from '@/lib/caseStudies'
+import { CLUSTER_ORDER } from '@/lib/clusters'
 
-const BASE = 'https://undercurrentautomations.com.au'
+const BASE = 'https://undercurrentautomations.com'
 
 export default function sitemap() {
   const staticPages = [
     '', '/about', '/services', '/process', '/contact',
-    '/audit', '/roi', '/missed-revenue', '/blog',
-    '/case-study', '/privacy', '/terms',
+    '/audit', '/roi', '/missed-revenue',
+    '/blog', '/case-studies',
+    '/privacy', '/terms',
   ].map(path => ({
     url: `${BASE}${path}`,
     lastModified: new Date(),
@@ -30,12 +33,34 @@ export default function sitemap() {
     priority: 0.8,
   }))
 
+  // Topic cluster pillar pages — high SEO priority (topical authority hubs)
+  const clusterPages = CLUSTER_ORDER.map(slug => ({
+    url: `${BASE}/blog/cluster/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  }))
+
   const articles = getAllArticles().map(a => ({
     url: `${BASE}/blog/${a.slug}`,
-    lastModified: new Date(a.date),
+    lastModified: new Date(a.dateModified || a.date),
     changeFrequency: 'weekly',
     priority: 0.6,
   }))
 
-  return [...staticPages, ...locationPages, ...servicePages, ...articles]
+  const caseStudies = getAllCaseStudies().map(c => ({
+    url: `${BASE}/case-studies/${c.slug}`,
+    lastModified: new Date(c.dateModified || c.date),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }))
+
+  return [
+    ...staticPages,
+    ...locationPages,
+    ...servicePages,
+    ...clusterPages,
+    ...articles,
+    ...caseStudies,
+  ]
 }

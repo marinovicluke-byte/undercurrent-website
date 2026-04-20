@@ -1,51 +1,134 @@
-// components/sections/Process.js
-import FadeIn from '@/components/ui/FadeIn'
+import SectionShell from '@/components/ui/SectionShell'
 
-const STEPS = [
+const STAGES = [
   {
-    number: '01',
-    title: 'Discovery call',
-    description: 'We map your current workflow, find where time is leaking, and scope what to automate first.',
+    n: 1,
+    title: 'Funnel map audit',
+    body:
+      'A free 30-minute session where we audit your funnel, identify bottlenecks, and map the highest-value automations.',
   },
   {
-    number: '02',
-    title: 'Build',
-    description: 'We build the automation end-to-end in 3–5 days. You see it working before we hand it over.',
+    n: 2,
+    title: 'Proposal',
+    body:
+      'Scope, timeline, and fixed price up front. No surprises, no hourly billing. You know what you\u2019re getting.',
   },
   {
-    number: '03',
-    title: 'Handover',
-    description: 'We walk you through it, give you full access, and make sure your team can use it confidently.',
+    n: 3,
+    title: 'Project',
+    body:
+      'Our team builds, tests, and deploys your systems. You get weekly updates and a working product at handover.',
   },
   {
-    number: '04',
-    title: 'Optimise',
-    description: 'On retainer, we keep improving — adding new automations as your business changes.',
+    n: 4,
+    title: 'Ongoing management',
+    body:
+      'Optional retainer for monitoring, optimisation, and iteration. Most clients see compounding returns over time.',
   },
 ]
 
+
 export default function Process() {
   return (
-    <section className="bg-white py-section">
-      <div className="mx-auto max-w-7xl px-6">
-        <FadeIn>
-          <h2 className="font-display text-4xl font-bold text-charcoal">How it works</h2>
-          <p className="mt-4 text-muted max-w-xl">
-            From first call to working automation in under a week.
-          </p>
-        </FadeIn>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {STEPS.map((step, i) => (
-            <FadeIn key={step.number} delay={i * 100}>
-              <div>
-                <p className="font-display text-5xl font-bold text-border">{step.number}</p>
-                <h3 className="mt-4 font-display text-xl font-bold text-charcoal">{step.title}</h3>
-                <p className="mt-3 text-sm text-muted leading-relaxed">{step.description}</p>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
+    <SectionShell n="06" label="How we work" anchor="process" bg="panel">
+      <h2
+        style={{
+          margin: 0,
+          fontFamily: 'var(--font-display)',
+          fontWeight: 500,
+          fontSize: 'clamp(44px, 5.4vw, 84px)',
+          lineHeight: 1.0,
+          letterSpacing: '-0.035em',
+          color: 'var(--off-white)',
+          textWrap: 'balance',
+          maxWidth: 1100,
+        }}
+      >
+        From first call to <span className="uc-glow-word uc-glow-word--sage">launch</span>.
+      </h2>
+
+      <p
+        style={{
+          margin: '24px 0 0',
+          maxWidth: 640,
+          fontFamily: 'var(--font-body)',
+          fontSize: 17,
+          lineHeight: 1.6,
+          color: 'var(--text-secondary)',
+        }}
+      >
+        Four stages, no surprises. Fixed scope, weekly check-ins, and a working system at
+        handover. Most builds go live in 14 days.
+      </p>
+
+      <div
+        className="uc-stack-4col"
+        style={{
+          marginTop: 56,
+          display: 'grid',
+          gridTemplateColumns: 'repeat(4, 1fr)',
+          gap: 16,
+        }}
+      >
+        {STAGES.map(s => (
+          <article
+            key={s.n}
+            style={{
+              padding: '26px 26px 28px',
+              borderRadius: 14,
+              background: 'var(--charcoal)',
+              border: '1px solid var(--text-faint)',
+              boxShadow: '4px 4px 0 0 var(--text-faint)',
+              display: 'flex',
+              flexDirection: 'column',
+              minHeight: 280,
+            }}
+          >
+            <span
+              style={{
+                width: 28,
+                height: 28,
+                borderRadius: '50%',
+                background: 'var(--off-white)',
+                color: 'var(--charcoal-deep)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontFamily: 'var(--font-mono)',
+                fontSize: 12,
+                fontWeight: 600,
+                fontVariantNumeric: 'tabular-nums',
+                flexShrink: 0,
+              }}
+            >
+              {s.n}
+            </span>
+            <h3
+              style={{
+                margin: '22px 0 10px',
+                fontFamily: 'var(--font-display)',
+                fontWeight: 500,
+                fontSize: 20,
+                letterSpacing: '-0.015em',
+                color: 'var(--off-white)',
+              }}
+            >
+              {s.title}
+            </h3>
+            <p
+              style={{
+                margin: 0,
+                fontFamily: 'var(--font-body)',
+                fontSize: 14,
+                color: 'var(--text-secondary)',
+                lineHeight: 1.55,
+              }}
+            >
+              {s.body}
+            </p>
+          </article>
+        ))}
       </div>
-    </section>
+    </SectionShell>
   )
 }

@@ -1,9 +1,16 @@
+import DOMPurify from 'dompurify'
+
 export default function MarkdownRenderer({ html }) {
+  const clean = DOMPurify.sanitize(html, {
+    ADD_TAGS: ['iframe'],
+    ADD_ATTR: ['target', 'rel', 'loading'],
+  })
+
   return (
     <>
       <div
         className="article-body"
-        dangerouslySetInnerHTML={{ __html: html }}
+        dangerouslySetInnerHTML={{ __html: clean }}
       />
       <style>{`
         .article-body {

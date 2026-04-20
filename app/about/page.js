@@ -1,222 +1,579 @@
-import FadeIn from '@/components/ui/FadeIn'
-import Link from 'next/link'
+import PillCTA from '@/components/ui/PillCTA'
+import SectionEyebrow from '@/components/ui/SectionEyebrow'
 
 export const metadata = {
-  title: 'About',
-  description: 'Meet the team behind UnderCurrent. Learn how we started, what drives our approach to business automation, and why small business owners trust us to redesign their workflows.',
+  title: 'About — UnderCurrent Automations',
+  description:
+    'What UnderCurrent is, who built it, and where we\'re going — the full story.',
 }
 
-const values = [
-  {
-    num: '01',
-    title: 'Systems thinking',
-    body: 'We see the whole picture before we touch a single tool. Every workflow is mapped end-to-end, where work enters, where it stalls, where it leaves. Only then do we build.',
-  },
-  {
-    num: '02',
-    title: 'Silent precision',
-    body: "Great automation is invisible. You shouldn't feel a system running, you should just notice that things are getting done without you having to do them.",
-  },
-  {
-    num: '03',
-    title: 'Small teams, big leverage',
-    body: "We work exclusively with small businesses because that's where automation has the most impact. One person doing the work of five is transformative at this scale.",
-  },
-  {
-    num: '04',
-    title: 'No black boxes',
-    body: 'Every system we build is documented, handed over, and explained in plain language. We build confidence, not dependency.',
-  },
-]
+// ─── Shared tokens ────────────────────────────────────────────────────────────
+const AC_BLUE   = { rgb: '106, 141, 173', light: '138, 174, 200' }
+const AC_SAGE   = { rgb: '143, 175, 159', light: '168, 196, 184' }
+const AC_ORANGE = { rgb: '224, 122, 85',  light: '236, 158, 128' }
 
-const timeline = [
-  { year: '2026', event: 'Founded in Melbourne. Started with what we knew best, consulting for small businesses that were drowning in busywork and missing the bigger picture.' },
-  { year: 'NOW', event: 'Focused entirely on AI-powered automation. Helping small businesses reclaim time, remove friction, and build systems that actually run.', isCurrent: true },
-]
+const EyebrowPill = SectionEyebrow
 
-export default function AboutPage() {
+// ─── Photo placeholder ────────────────────────────────────────────────────────
+function PhotoPlaceholder({ ratio = '4/5', ac = AC_BLUE, label = 'placeholder' }) {
   return (
-    <div className="bg-white pt-24 pb-section overflow-x-hidden">
+    <div
+      style={{
+        position: 'relative',
+        aspectRatio: ratio,
+        width: '100%',
+        background: 'var(--charcoal)',
+        border: '1px solid var(--text-faint)',
+        borderRadius: 14,
+        boxShadow: `6px 6px 0 0 rgb(${ac.rgb})`,
+        overflow: 'hidden',
+      }}
+    >
+      <svg
+        viewBox="0 0 320 400"
+        preserveAspectRatio="xMidYMax meet"
+        style={{ position: 'absolute', bottom: 0, left: 0, right: 0, width: '100%', height: '84%' }}
+      >
+        <defs>
+          <linearGradient id={`sil-${label}`} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"   stopColor={`rgba(${ac.light}, 0.40)`} />
+            <stop offset="100%" stopColor="rgba(12,12,10,0.96)" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M160 48 c28 0 48 22 48 52 c0 22-11 40-24 48 c38 14 60 44 66 84 c2 22 4 40 4 68 H66 c0-28 2-46 4-68 c6-40 28-70 66-84 c-13-8-24-26-24-48 c0-30 20-52 48-52 Z"
+          fill={`url(#sil-${label})`}
+        />
+      </svg>
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          display: 'flex',
+          alignItems: 'flex-end',
+          justifyContent: 'space-between',
+          padding: 20,
+          pointerEvents: 'none',
+        }}
+      >
+        <span style={{ fontFamily: 'var(--font-display)', fontSize: 10, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)' }}>
+          Photo · {ratio}
+        </span>
+        <span style={{ fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 11, color: 'var(--text-faint)' }}>
+          {label}
+        </span>
+      </div>
+    </div>
+  )
+}
 
-      {/* Hero */}
-      <section className="mx-auto max-w-7xl px-6 pb-24">
-        <FadeIn>
-          <p className="text-xs font-mono tracking-widest text-muted mb-4">ABOUT UNDERCURRENT</p>
-          <h1 className="font-display text-5xl md:text-7xl font-bold text-charcoal leading-none">
-            An AI Automation Studio<br />
-            <span className="text-blue">Built on Flow.</span>
-          </h1>
-          <p className="mt-8 text-lg text-muted max-w-prose font-light leading-relaxed">
-            UnderCurrent is a Melbourne-based automation studio. We work with small business owners who are good at what they do, and tired of everything else that comes with it.
-          </p>
-        </FadeIn>
-      </section>
+// ═══════════════════════════════════════════════════════════════════════════════
+// SECTION 01 — About UnderCurrent
+// LeftClick layout: full-width headline → 2-col body/image below
+// ═══════════════════════════════════════════════════════════════════════════════
+function AboutUndercurrent() {
+  const pillars = [
+    { ac: AC_ORANGE, label: 'Get found online', text: 'AI search, SEO, and content automation that put your business in front of the people already looking. Google, ChatGPT, Perplexity, all of it.' },
+    { ac: AC_SAGE,   label: 'Turn traffic into revenue', text: 'Lead capture and sales automation that turns traffic into booked calls and paid invoices. Every lead chased, every follow-up sent.' },
+    { ac: AC_BLUE,   label: 'Build AI capability', text: 'AI training and strategy consulting for teams that want to build it themselves. Real workflows, not workshop theatre.' },
+  ]
 
-      {/* Mission */}
-      <section className="bg-surface py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16 items-start">
-            <FadeIn className="md:col-span-4">
-              <p className="text-xs font-mono tracking-widest text-blue mb-6">OUR MISSION</p>
-              <p className="text-xs font-mono tracking-wider text-muted mb-6">EST. 2026 · MELBOURNE</p>
-              <div className="grid grid-cols-2 gap-5 mt-4">
-                {[
-                  { num: '12+', label: 'tools we work with' },
-                  { num: '100%', label: 'custom-built systems' },
-                  { num: '1 team', label: 'dedicated to your ops' },
-                  { num: '0 lock-in', label: 'no lock-in contracts' },
-                ].map((s, i) => (
-                  <div key={i} className="py-4 border-t border-border">
-                    <div className="font-display text-3xl font-bold text-charcoal leading-none">{s.num}</div>
-                    <div className="text-xs text-muted mt-1 leading-snug">{s.label}</div>
-                  </div>
-                ))}
-              </div>
-            </FadeIn>
-            <FadeIn delay={150} className="md:col-span-8">
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-charcoal leading-tight mb-8">
-                Small businesses deserve smart systems.
-              </h2>
-              <div className="space-y-5 border-t border-border pt-8">
-                <p className="text-lg font-light leading-relaxed text-muted">
-                  Big companies have entire teams for admin, ops, content, and outreach. Small businesses don&apos;t. But that shouldn&apos;t mean doing it all yourself.
-                </p>
-                <p className="text-lg font-light leading-relaxed text-muted">
-                  We build the systems that run in the background, so you can stay focused on the front.
-                </p>
-              </div>
-            </FadeIn>
-          </div>
+  return (
+    <section
+      style={{
+        padding: '120px var(--page-pad)',
+        background: 'var(--bg-deep)',
+        borderTop: '1px solid var(--text-faint)',
+      }}
+    >
+      <div style={{ maxWidth: 1280, margin: 0 }}>
+
+        {/* Eyebrow */}
+        <div style={{ marginBottom: 40 }}>
+          <EyebrowPill n="01" label="About UnderCurrent" />
         </div>
-      </section>
 
-      {/* Founder */}
-      <section className="bg-charcoal py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <FadeIn className="md:col-span-5">
-              <div className="rounded-3xl bg-gradient-to-br from-charcoal to-blue/30 border border-white/10 p-10 text-center aspect-[4/5] flex items-center justify-center">
-                <p className="font-display text-3xl font-light italic text-white/60 leading-snug">
-                  &ldquo;The undercurrent is what moves everything forward.&rdquo;
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={150} className="md:col-span-7">
-              <p className="text-xs font-mono tracking-widest text-blue/70 mb-6">FOUNDER · LUKE, MELBOURNE</p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-white leading-tight mb-8">
-                UnderCurrent is the studio I wished I had in every job before this.
-              </h2>
-              <div className="space-y-5">
-                <p className="text-base font-light leading-relaxed text-white/60">
-                  I spent years inside small business and corporate teams, finance, sales, operations. In every environment, I watched the same thing happen: smart, capable people losing most of their day to tasks that didn&apos;t need a person.
-                </p>
-                <p className="text-base font-light leading-relaxed text-white/60">
-                  I built UnderCurrent to fix that. Not with generic software. Not with templates. With systems that are actually designed around how your business works, and then handed over to run without you.
-                </p>
-                <p className="text-base font-light leading-relaxed text-white/60">
-                  The undercurrent is what moves everything forward. It runs all day, all night, and you barely notice it&apos;s there.
-                </p>
-              </div>
-              <div className="flex gap-4 mt-10">
-                <Link href="/services" className="inline-block rounded-md px-6 py-3 text-sm font-medium border border-blue text-blue hover:bg-blue hover:text-white transition-colors">
-                  See what we build
-                </Link>
-                <Link href="/contact" className="inline-block rounded-md px-6 py-3 text-sm font-medium border border-white/20 text-white/70 hover:border-white/40 transition-colors">
-                  Get in touch
-                </Link>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+        {/* Full-width giant headline */}
+        <h1
+          style={{
+            margin: '0 0 72px',
+            fontFamily: 'var(--font-display)',
+            fontWeight: 500,
+            fontSize: 'clamp(36px, 4.8vw, 64px)',
+            lineHeight: 0.98,
+            letterSpacing: '-0.045em',
+            color: 'var(--off-white)',
+            textWrap: 'balance',
+          }}
+        >
+          Helping Australian small businesses{' '}
+          <span className="uc-glow-word uc-glow-word--sage">grow revenue</span>{' '}
+          through AI automation.
+        </h1>
 
-      {/* Timeline */}
-      <section className="bg-white py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <FadeIn>
-            <p className="text-xs font-mono tracking-widest text-blue mb-3">OUR STORY</p>
-            <h2 className="font-display text-5xl md:text-6xl font-bold text-charcoal leading-none mb-16">
-              How we got here.
-            </h2>
-          </FadeIn>
-          <div className="relative border-l border-border ml-4 pl-8 space-y-12">
-            {timeline.map((item, i) => (
-              <FadeIn key={item.year} delay={i * 100}>
-                <div className="relative">
+        {/* 2-col: body left + image right */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.1fr)',
+            gap: 80,
+            alignItems: 'start',
+          }}
+          className="uc-why-grid-wrap"
+        >
+          {/* Left: body + pillars + CTA */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
+            <p
+              style={{
+                margin: 0,
+                fontFamily: 'var(--font-body)',
+                fontSize: 20,
+                lineHeight: 1.6,
+                color: 'var(--text-secondary)',
+              }}
+            >
+              UnderCurrent Automations is an AI automation agency in Melbourne, Australia.
+              We work with Australian small businesses in trades, business services,
+              consultants, and allied health practitioners.
+            </p>
+
+            {/* Pillars */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+              {pillars.map((p, i) => (
+                <div
+                  key={i}
+                  style={{
+                    display: 'flex',
+                    gap: 18,
+                    padding: '20px 0',
+                    borderBottom: i < pillars.length - 1 ? '1px solid var(--text-faint)' : 'none',
+                    alignItems: 'flex-start',
+                  }}
+                >
                   <div
-                    className="absolute -left-10 top-1 rounded-full border-2"
                     style={{
-                      width: item.isCurrent ? 14 : 10,
-                      height: item.isCurrent ? 14 : 10,
-                      backgroundColor: item.isCurrent ? '#8FAF9F' : '#D4C9B0',
-                      borderColor: item.isCurrent ? '#8FAF9F' : '#D4C9B0',
+                      width: 3,
+                      minHeight: 48,
+                      background: `rgb(${p.ac.rgb})`,
+                      flexShrink: 0,
+                      marginTop: 2,
                     }}
                   />
-                  <span className="text-xs font-mono tracking-widest block mb-2" style={{ color: item.isCurrent ? '#8FAF9F' : 'rgba(28,28,26,0.3)' }}>
-                    {item.year}
-                  </span>
-                  <p className="text-base font-light leading-relaxed text-muted max-w-lg" style={{ fontWeight: item.isCurrent ? 400 : 300 }}>
-                    {item.event}
-                  </p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="bg-surface py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <FadeIn>
-            <p className="text-xs font-mono tracking-widest text-blue mb-3">HOW WE THINK</p>
-            <h2 className="font-display text-5xl md:text-6xl font-bold text-charcoal leading-none mb-14">
-              Four principles.<br />Everything follows.
-            </h2>
-          </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
-            {values.map((v, i) => (
-              <FadeIn key={v.num} delay={i * 80}>
-                <div className="bg-surface p-10 group hover:bg-white transition-colors">
-                  <div className="flex items-start gap-6">
-                    <span className="text-xs font-mono tracking-wider text-blue/60 mt-1 flex-shrink-0">{v.num}</span>
-                    <div>
-                      <h3 className="font-display text-2xl font-bold text-charcoal mb-3">{v.title}</h3>
-                      <p className="text-sm font-light leading-relaxed text-muted">{v.body}</p>
-                    </div>
+                  <div>
+                    <h3 style={{ margin: '0 0 6px', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 11, color: `rgb(${p.ac.light})`, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+                      {p.label}
+                    </h3>
+                    <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.6, color: 'var(--text-secondary)' }}>
+                      {p.text}
+                    </p>
                   </div>
                 </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-surface py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <FadeIn>
-            <div className="max-w-2xl">
-              <p className="text-xs font-mono tracking-widest text-muted mb-3">WORK WITH US</p>
-              <h2 className="font-display text-4xl md:text-5xl font-bold italic text-charcoal leading-tight mb-6">
-                Ready to build your undercurrent?
-              </h2>
-              <p className="text-lg font-light leading-relaxed text-muted mb-10 max-w-prose">
-                Book a 30-minute call. We&apos;ll map your biggest time drains and show you exactly what can be automated.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link href="/contact" className="inline-block rounded-md bg-charcoal text-white px-8 py-3 text-sm font-medium hover:bg-blue transition-colors">
-                  Book a Discovery Call
-                </Link>
-                <Link href="/services" className="inline-block rounded-md border border-charcoal text-charcoal px-8 py-3 text-sm font-medium hover:bg-surface transition-colors">
-                  Explore our services
-                </Link>
-              </div>
+              ))}
             </div>
-          </FadeIn>
-        </div>
-      </section>
 
-    </div>
+            <div style={{ marginTop: 8 }}>
+              <PillCTA label="See what we build" href="/services" tone="blue" />
+            </div>
+          </div>
+
+          {/* Right: image */}
+          <PhotoPlaceholder ratio="4/5" ac={AC_BLUE} label="undercurrent" />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// SECTION 02 — About Me (Luke)
+// Same LeftClick layout, flipped (image left, text right)
+// ═══════════════════════════════════════════════════════════════════════════════
+function AboutMe() {
+  return (
+    <section
+      style={{
+        padding: '120px var(--page-pad)',
+        background: '#26241F',
+        borderTop: '1px solid var(--text-faint)',
+      }}
+    >
+      <div style={{ maxWidth: 1280, margin: 0 }}>
+
+        {/* Eyebrow */}
+        <div style={{ marginBottom: 40 }}>
+          <EyebrowPill n="02" label="About me" />
+        </div>
+
+        {/* Full-width headline */}
+        <h2
+          style={{
+            margin: '0 0 72px',
+            fontFamily: 'var(--font-display)',
+            fontWeight: 500,
+            fontSize: 'clamp(36px, 4.8vw, 64px)',
+            lineHeight: 0.98,
+            letterSpacing: '-0.045em',
+            color: 'var(--off-white)',
+            textWrap: 'balance',
+          }}
+        >
+          I build AI systems that give small businesses their{' '}
+          <span className="uc-glow-word uc-glow-word--blue">time back</span>.
+        </h2>
+
+        {/* 2-col: text left + image right */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'minmax(0, 1.1fr) minmax(0, 0.9fr)',
+            gap: 80,
+            alignItems: 'start',
+          }}
+          className="uc-why-grid-wrap"
+        >
+          {/* Left: text */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
+            <p
+              style={{
+                margin: 0,
+                fontFamily: 'var(--font-body)',
+                fontSize: 20,
+                lineHeight: 1.6,
+                color: 'var(--text-secondary)',
+              }}
+            >
+              I&apos;m Luke Marinovic, an AI automation consultant based in Melbourne, Australia.
+              I founded UnderCurrent Automations in 2026 after watching too many teams grind
+              through work the way they&apos;d always done it, because no one had stopped to ask
+              if they still had to. The answer, most of the time, is no.
+            </p>
+
+            <p
+              style={{
+                margin: 0,
+                fontFamily: 'var(--font-body)',
+                fontSize: 17,
+                lineHeight: 1.65,
+                color: 'var(--text-muted)',
+              }}
+            >
+              Automate the repetitive, and what&apos;s left is the work that moves things
+              forward. Revenue. Creativity. Time with the people you like. That&apos;s the whole idea.
+            </p>
+
+            {/* Credentials */}
+            <div
+              style={{
+                display: 'flex',
+                gap: 0,
+                paddingTop: 28,
+                marginTop: 8,
+                borderTop: '1px solid var(--text-faint)',
+              }}
+            >
+              {[
+                { label: 'Based in',  value: 'Melbourne, AU' },
+                { label: 'Focus',     value: 'AI automation' },
+                { label: 'Founded',   value: '2026' },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  style={{
+                    flex: 1,
+                    paddingLeft:  i > 0 ? 24 : 0,
+                    paddingRight: i < 2 ? 24 : 0,
+                    borderLeft: i > 0 ? '1px solid var(--text-faint)' : 'none',
+                  }}
+                >
+                  <div style={{ fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 11, color: 'var(--text-muted)', letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: 6 }}>
+                    {item.label}
+                  </div>
+                  <div style={{ fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 15, color: 'var(--off-white)', letterSpacing: '-0.01em' }}>
+                    {item.value}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ marginTop: 8, display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center' }}>
+              <PillCTA label="Let's talk" href="/contact" tone="sage" />
+            </div>
+          </div>
+
+          {/* Right: portrait */}
+          <PhotoPlaceholder ratio="3/4" ac={AC_SAGE} label="luke" />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// SECTION 03 — Our Journey
+// Vertical timeline going downward
+// ═══════════════════════════════════════════════════════════════════════════════
+const MILESTONES = [
+  {
+    year: 'Feb 2026',
+    ac: AC_ORANGE,
+    title: 'Founded in Melbourne',
+    body: 'UnderCurrent Automations went live in February 2026. Built in Melbourne around a specific bet: that the right automation could give a small business owner back a working day every week.',
+  },
+  {
+    year: 'Mar 2026',
+    ac: AC_SAGE,
+    title: 'First clients served',
+    body: 'First paying clients came in. Workflows ran in production for the first time. Work that used to eat a morning started running before the kettle boiled. The thesis held.',
+  },
+  {
+    year: 'Apr 2026',
+    ac: AC_BLUE,
+    title: 'First product shipped',
+    body: 'April 2026: the SEO and AI search ranking engine went live, keeping client sites visible on Google, ChatGPT, and Perplexity. The rest of the automation stack for trades, business services, consultants, and allied health practitioners is in active build.',
+    isCurrent: true,
+  },
+  {
+    year: 'Next',
+    ac: AC_ORANGE,
+    title: 'Scaling across Australia',
+    body: 'More clients across more industries. The goal is simple: make any Australian small business that wants a working automation system able to get one in days, not months.',
+    isFuture: true,
+  },
+]
+
+function OurJourney() {
+  return (
+    <section
+      style={{
+        padding: '120px var(--page-pad)',
+        background: 'var(--bg-deep)',
+        borderTop: '1px solid var(--text-faint)',
+      }}
+    >
+      <div style={{ maxWidth: 1280, margin: 0 }}>
+
+        {/* Eyebrow */}
+        <div style={{ marginBottom: 40 }}>
+          <EyebrowPill n="03" label="Our journey" />
+        </div>
+
+        {/* Headline */}
+        <h2
+          style={{
+            margin: '0 0 24px',
+            fontFamily: 'var(--font-display)',
+            fontWeight: 500,
+            fontSize: 'clamp(36px, 4.8vw, 64px)',
+            lineHeight: 0.98,
+            letterSpacing: '-0.045em',
+            color: 'var(--off-white)',
+            textWrap: 'balance',
+          }}
+        >
+          Where we&apos;ve been.{' '}
+          <span className="uc-glow-word uc-glow-word--sage">Where we&apos;re going.</span>
+        </h2>
+
+        <p
+          style={{
+            margin: '0 0 80px',
+            fontFamily: 'var(--font-body)',
+            fontSize: 17,
+            lineHeight: 1.6,
+            color: 'var(--text-muted)',
+            maxWidth: 560,
+          }}
+        >
+          An honest account of how we got here, what it took, and what comes next.
+        </p>
+
+        {/* Timeline */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '200px 1px 1fr',
+            gap: '0 48px',
+          }}
+        >
+          {MILESTONES.map((m, i) => {
+            const isLast = i === MILESTONES.length - 1
+            return (
+              <>
+                {/* Year — left column */}
+                <div
+                  key={`year-${i}`}
+                  style={{
+                    paddingTop: 6,
+                    paddingBottom: isLast ? 0 : 72,
+                    textAlign: 'right',
+                  }}
+                >
+                  <span
+                    style={{
+                      fontFamily: 'var(--font-display)',
+                      fontWeight: 600,
+                      fontSize: m.isFuture ? 28 : 40,
+                      lineHeight: 1,
+                      letterSpacing: '-0.04em',
+                      color: m.isFuture ? 'var(--text-faint)' : `rgb(${m.ac.rgb})`,
+                      fontStyle: m.isFuture ? 'italic' : 'normal',
+                    }}
+                  >
+                    {m.year}
+                  </span>
+                </div>
+
+                {/* Line + dot — centre column */}
+                <div
+                  key={`line-${i}`}
+                  style={{
+                    position: 'relative',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                  }}
+                >
+                  {/* Dot */}
+                  <div
+                    style={{
+                      width: m.isCurrent ? 14 : 10,
+                      height: m.isCurrent ? 14 : 10,
+                      borderRadius: '50%',
+                      background: m.isFuture
+                        ? 'transparent'
+                        : `rgb(${m.ac.rgb})`,
+                      border: m.isFuture
+                        ? `2px dashed rgba(${m.ac.rgb}, 0.35)`
+                        : m.isCurrent
+                          ? `2px solid rgba(${m.ac.light}, 0.5)`
+                          : 'none',
+                      flexShrink: 0,
+                      marginTop: 8,
+                      zIndex: 1,
+                    }}
+                  />
+                  {/* Vertical line down */}
+                  {!isLast && (
+                    <div
+                      style={{
+                        flex: 1,
+                        width: 1,
+                        marginTop: 6,
+                        background: m.isFuture
+                          ? `linear-gradient(180deg, rgba(${m.ac.rgb}, 0.18) 0%, transparent 100%)`
+                          : `linear-gradient(180deg, rgba(${m.ac.rgb}, 0.35) 0%, rgba(${MILESTONES[i+1].ac.rgb}, 0.20) 100%)`,
+                      }}
+                    />
+                  )}
+                </div>
+
+                {/* Content — right column */}
+                <div
+                  key={`content-${i}`}
+                  style={{
+                    paddingTop: 2,
+                    paddingBottom: isLast ? 0 : 72,
+                    opacity: m.isFuture ? 0.55 : 1,
+                  }}
+                >
+                  {m.isCurrent && (
+                    <div
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: 6,
+                        padding: '3px 10px 3px 8px',
+                        borderRadius: 999,
+                        background: `rgba(${m.ac.rgb}, 0.12)`,
+                        border: `1px solid rgba(${m.ac.rgb}, 0.28)`,
+                        marginBottom: 12,
+                      }}
+                    >
+                      <div style={{ width: 6, height: 6, borderRadius: '50%', background: `rgb(${m.ac.rgb})` }} />
+                      <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 11, color: `rgb(${m.ac.light})`, letterSpacing: '0.14em', textTransform: 'uppercase' }}>
+                        Now
+                      </span>
+                    </div>
+                  )}
+
+                  <h3
+                    style={{
+                      margin: '0 0 14px',
+                      fontFamily: 'var(--font-display)',
+                      fontWeight: 500,
+                      fontSize: 'clamp(22px, 2.4vw, 32px)',
+                      letterSpacing: '-0.025em',
+                      color: m.isFuture ? 'var(--text-muted)' : 'var(--off-white)',
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    {m.title}
+                  </h3>
+
+                  <p
+                    style={{
+                      margin: 0,
+                      fontFamily: 'var(--font-body)',
+                      fontSize: 16,
+                      lineHeight: 1.65,
+                      color: 'var(--text-secondary)',
+                      maxWidth: 600,
+                    }}
+                  >
+                    {m.body}
+                  </p>
+                </div>
+              </>
+            )
+          })}
+        </div>
+
+        {/* Bottom CTA */}
+        <div
+          style={{
+            marginTop: 80,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            padding: '28px 36px',
+            borderRadius: 14,
+            background: 'var(--charcoal)',
+            border: '1px solid var(--text-faint)',
+            boxShadow: '6px 6px 0 0 var(--blue)',
+            gap: 32,
+          }}
+        >
+          <p
+            style={{
+              margin: 0,
+              fontFamily: 'var(--font-display)',
+              fontWeight: 500,
+              fontSize: 'clamp(16px, 1.8vw, 22px)',
+              letterSpacing: '-0.02em',
+              color: 'var(--off-white)',
+              lineHeight: 1.35,
+              textWrap: 'balance',
+              maxWidth: 560,
+            }}
+          >
+            Want to be part of what&apos;s next? Let&apos;s talk.
+          </p>
+          <PillCTA label="Get in touch" href="/contact" tone="blue" />
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// Page
+// ═══════════════════════════════════════════════════════════════════════════════
+export default function AboutPage() {
+  return (
+    <>
+      <AboutUndercurrent />
+      <AboutMe />
+      <OurJourney />
+    </>
   )
 }

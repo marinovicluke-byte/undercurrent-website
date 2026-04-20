@@ -4,6 +4,8 @@ import { SERVICES } from '@/lib/data/services'
 import LocationPage from '@/components/pages/LocationPage'
 import ServicePage from '@/components/pages/ServicePage'
 
+const DOMAIN = 'https://undercurrentautomations.com'
+
 export const dynamicParams = false
 
 export function generateStaticParams() {
@@ -24,20 +26,27 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { slug } = await params
+  const OG_IMAGE = `${DOMAIN}/brand/og-card.png`
   const location = LOCATIONS.find(l => l.slug === slug)
   if (location) {
+    const url = `${DOMAIN}/${slug}`
     return {
       title: location.metaTitle,
       description: location.metaDescription,
-      openGraph: { title: location.metaTitle, description: location.metaDescription },
+      alternates: { canonical: url },
+      openGraph: { title: location.metaTitle, description: location.metaDescription, url, type: 'website', images: [OG_IMAGE] },
+      twitter:  { card: 'summary_large_image', title: location.metaTitle, description: location.metaDescription, images: [OG_IMAGE] },
     }
   }
   const service = SERVICES.find(s => s.slug === slug)
   if (service) {
+    const url = `${DOMAIN}/${slug}`
     return {
       title: service.metaTitle,
       description: service.metaDescription,
-      openGraph: { title: service.metaTitle, description: service.metaDescription },
+      alternates: { canonical: url },
+      openGraph: { title: service.metaTitle, description: service.metaDescription, url, type: 'website', images: [OG_IMAGE] },
+      twitter:  { card: 'summary_large_image', title: service.metaTitle, description: service.metaDescription, images: [OG_IMAGE] },
     }
   }
   return {}

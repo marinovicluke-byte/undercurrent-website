@@ -1,4 +1,4 @@
-import BusinessAuditV2 from '@/components/audit/BusinessAuditV2'
+import BusinessAuditRedesign from '@/app/audit/_redesign/BusinessAuditRedesign'
 
 export const metadata = {
   title: 'Free Business Automation Audit',
@@ -6,5 +6,5 @@ export const metadata = {
 }
 
 export default function AuditPage() {
-  return <BusinessAuditV2 />
+  return <BusinessAuditRedesign />
 }

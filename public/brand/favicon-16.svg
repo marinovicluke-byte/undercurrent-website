@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" role="img" aria-label="UnderCurrent">
+  <rect width="16" height="16" fill="#1C1C1A"></rect>
+  <g fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 0) scale(0.16667)">
+    <path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35" stroke="#8AAEC8"></path>
+    <path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48" stroke="#6A8DAD"></path>
+    <path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61" stroke="#6B8A7A"></path>
+  </g>
+</svg>

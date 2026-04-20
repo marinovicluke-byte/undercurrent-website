@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Terms and conditions for using the UnderCurrent website and AI automation services. Read our service agreement, limitations, and policies.',
 }
 
-const DOMAIN = 'https://undercurrentautomations.com.au'
+const DOMAIN = 'https://undercurrentautomations.com'
 const EMAIL = 'luke@undercurrentautomations.com'
 const LAST_UPDATED = '23 March 2026'
 
@@ -20,8 +20,8 @@ export default function TermsPage() {
 
       <div className="mx-auto max-w-2xl px-6">
         <div className="flex justify-center mb-6">
-          <div className="border border-blue/25 px-4 py-1">
-            <p className="text-xs font-mono tracking-widest text-blue">LEGAL</p>
+          <div className="border border-orange/25 px-4 py-1">
+            <p className="text-xs font-mono tracking-widest text-orange">LEGAL</p>
           </div>
         </div>
 
@@ -143,7 +143,7 @@ export default function TermsPage() {
           <p className={pClass}>
             <strong className="text-white/80">UnderCurrent</strong><br />
             Melbourne, Australia<br />
-            <a href={`mailto:${EMAIL}`} className="text-blue/70 hover:text-blue transition-colors">{EMAIL}</a>
+            <a href={`mailto:${EMAIL}`} className="text-orange/70 hover:text-orange transition-colors">{EMAIL}</a>
           </p>
         </div>
       </div>
@@ -151,11 +151,11 @@ export default function TermsPage() {
       {/* Related links */}
       <div className="mx-auto max-w-2xl px-6 mt-4 pb-8">
         <div className="flex flex-wrap gap-3">
-          <Link href="/privacy" className="flex-1 min-w-[180px] rounded-xl border border-white/10 p-4 hover:border-white/25 transition-colors">
+          <Link href="/privacy" className="flex-1 min-w-[180px]  border border-white/10 p-4 hover:border-white/25 transition-colors">
             <p className="text-sm font-medium text-white mb-1">Privacy Policy</p>
             <p className="text-xs font-light text-white/40">Learn how we handle your data.</p>
           </Link>
-          <Link href="/contact" className="flex-1 min-w-[180px] rounded-xl border border-white/10 p-4 hover:border-white/25 transition-colors">
+          <Link href="/contact" className="flex-1 min-w-[180px]  border border-white/10 p-4 hover:border-white/25 transition-colors">
             <p className="text-sm font-medium text-white mb-1">Contact Us</p>
             <p className="text-xs font-light text-white/40">Have questions? Reach out to our team.</p>
           </Link>

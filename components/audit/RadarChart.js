@@ -72,7 +72,7 @@ export default function RadarChart({ pillars, size = 300 }) {
           dominantBaseline="middle"
           fill="rgba(247,243,237,0.5)"
           fontSize="9"
-          fontFamily="DM Mono, monospace"
+          fontFamily="var(--font-mono)"
           letterSpacing="0.04em"
         >
           {LABELS[i]}

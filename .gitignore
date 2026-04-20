@@ -5,3 +5,17 @@ node_modules/
 .next/
 dist/
 .DS_Store
+
+# Editor / tooling
+.vscode/
+.claude/
+.superpowers/
+
+# Local Vercel link (contains project + org IDs)
+.vercel/
+
+# Backup files
+*.bak
+
+# Public preview artefact, not for production
+public/favicon-preview.html

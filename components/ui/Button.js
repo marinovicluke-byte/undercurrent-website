@@ -8,11 +8,13 @@ export default function Button({
   className = '',
   ...props
 }) {
-  const base = 'inline-block rounded-md px-6 py-3 text-sm font-body font-medium transition-colors'
+  const base = 'inline-block px-6 py-3 text-sm font-body font-medium border-2'
   const variants = {
-    primary: 'bg-charcoal text-white hover:bg-blue',
-    secondary: 'border border-charcoal text-charcoal hover:bg-surface',
-    ghost: 'text-charcoal hover:text-blue',
+    primary: 'bg-charcoal text-white border-charcoal btn-pop',
+    secondary: 'bg-white text-charcoal border-white btn-pop',
+    outline: 'bg-transparent text-charcoal border-charcoal btn-pop-outline',
+    ghost: 'border-transparent text-charcoal hover:text-orange',
+    'ghost-light': 'border-white/20 text-white/70 hover:text-white hover:border-white/40',
   }
   const cls = `${base} ${variants[variant]} ${className}`
 

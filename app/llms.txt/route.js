@@ -2,7 +2,7 @@ import { SERVICES } from '@/lib/data/services'
 import { LOCATIONS } from '@/lib/data/locations'
 import { getAllArticles } from '@/lib/articles'
 
-const BASE = 'https://undercurrentautomations.com.au'
+const BASE = 'https://undercurrentautomations.com'
 
 export async function GET() {
   const articles = getAllArticles()

@@ -41,18 +41,18 @@ const SERVICES = [
     href: '/sales-automation',
   },
   {
-    num: '03', name: 'Frontend Experiences', accent: SAGE, ar: SAGE_RGB,
+    num: '03', name: 'Website Experience Design', accent: SAGE, ar: SAGE_RGB,
     tagline: 'The face of your business, built to convert.',
     desc: 'Websites, portals, booking systems, and dashboards. Built for performance, built for trust.',
     bullets: ['Marketing sites', 'Interactive demos', 'Booking & client portals'],
-    href: '/front-end-experience',
+    href: '/website-design',
   },
   {
-    num: '04', name: 'Surface & Discovery', accent: BLUE, ar: BLUE_RGB,
+    num: '04', name: 'SEO & AI Visibility', accent: BLUE, ar: BLUE_RGB,
     tagline: 'Rank everywhere your buyers are looking.',
     desc: 'Classic SEO plus AEO and GEO — earning rankings in Google and citations in ChatGPT and Claude.',
     bullets: ['Classic SEO foundations', 'Answer-engine presence (AEO)', 'Generative search (GEO)'],
-    href: '/surface-discovery',
+    href: '/seo-ai-visibility',
   },
   {
     num: '05', name: 'AI Strategy & Training', accent: ORANGE, ar: ORANGE_RGB,
@@ -100,10 +100,10 @@ export default function ServicesPage() {
             border-color 280ms ease;
         }
         .c7-card:hover {
-          transform: translateX(-4px) translateY(-5px);
-          background: rgba(var(--ca), 0.07) !important;
-          box-shadow: 5px 5px 0 rgba(var(--ca), 0.2);
-          border-color: rgba(var(--ca), 0.28) !important;
+          transform: translate(-3px, -3px);
+          background: rgba(var(--ca), 0.05) !important;
+          box-shadow: 6px 6px 0 0 rgb(var(--ca));
+          border-color: rgba(var(--ca), 0.32) !important;
           border-left-color: rgb(var(--ca)) !important;
         }
         .c7-cta {
@@ -126,8 +126,9 @@ export default function ServicesPage() {
           transition: background 250ms ease, box-shadow 250ms ease;
         }
         .c7-disc:hover {
-          background: rgba(${ORANGE_RGB}, 0.11) !important;
-          box-shadow: 5px 5px 0 rgba(${ORANGE_RGB}, 0.18);
+          transform: translate(-3px, -3px);
+          background: rgba(${ORANGE_RGB}, 0.08) !important;
+          box-shadow: 6px 6px 0 0 ${ORANGE};
         }
         @media (max-width: 900px) {
           .c7-grid { grid-template-columns: 1fr !important; }
@@ -139,7 +140,7 @@ export default function ServicesPage() {
       {/* ── SECTION 1: HEADER — deep black ──────────────── */}
       <header style={{ maxWidth: 1280, margin: '0 auto', padding: '100px var(--page-pad)' }}>
         <p style={{
-          fontFamily: 'var(--font-mono)', fontSize: 11,
+          fontFamily: 'var(--font-display)', fontSize: 11, fontWeight: 500,
           letterSpacing: '0.14em', color: MUTED,
           textTransform: 'uppercase', margin: '0 0 36px',
         }}>
@@ -187,7 +188,7 @@ export default function ServicesPage() {
             >
               <div>
                 <span style={{
-                  fontFamily: 'var(--font-mono)', fontSize: 10,
+                  fontFamily: 'var(--font-display)', fontSize: 10, fontWeight: 600,
                   letterSpacing: '0.14em', color: ORANGE,
                   border: `1px solid rgba(${ORANGE_RGB}, 0.35)`,
                   padding: '4px 12px', display: 'inline-block', marginBottom: 24,
@@ -224,8 +225,8 @@ export default function ServicesPage() {
                   Every engagement starts here. A 90-minute session with a full written report and prioritised automation roadmap.
                 </p>
                 <span style={{
-                  fontFamily: 'var(--font-mono)', fontSize: 11,
-                  color: ORANGE, letterSpacing: '0.12em',
+                  fontFamily: 'var(--font-display)', fontSize: 12, fontWeight: 600,
+                  color: ORANGE, letterSpacing: '0.08em',
                 }}>
                   BOOK A SESSION →
                 </span>
@@ -262,9 +263,9 @@ export default function ServicesPage() {
                   >
                     {s.num}
                   </span>
-                  <span className="c7-cta" style={{ opacity: 0.28 }}>
+                  <span className="c7-cta" style={{ opacity: 0.32 }}>
                     <span style={{
-                      fontFamily: 'var(--font-mono)', fontSize: 10,
+                      fontFamily: 'var(--font-display)', fontSize: 11, fontWeight: 600,
                       color: `rgb(${s.ar})`, letterSpacing: '0.1em',
                     }}>
                       EXPLORE →
@@ -342,7 +343,7 @@ export default function ServicesPage() {
         >
           <div>
             <p style={{
-              fontFamily: 'var(--font-mono)', fontSize: 11,
+              fontFamily: 'var(--font-display)', fontSize: 11, fontWeight: 500,
               letterSpacing: '0.14em', color: MUTED,
               textTransform: 'uppercase', margin: '0 0 12px',
             }}>

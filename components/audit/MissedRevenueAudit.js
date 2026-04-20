@@ -157,7 +157,7 @@ export default function MissedRevenueAudit() {
     }
   }
 
-  const monoLabel = { fontFamily: 'DM Mono, monospace', fontSize: '0.66rem', letterSpacing: '0.18em', textTransform: 'uppercase' }
+  const monoLabel = { fontFamily: 'var(--font-mono)', fontSize: '0.66rem', letterSpacing: '0.18em', textTransform: 'uppercase' }
   const card = (extra = {}) => ({
     borderRadius: '20px', padding: '18px 20px',
     background: 'rgba(255,255,255,0.04)',
@@ -174,7 +174,7 @@ export default function MissedRevenueAudit() {
           border: 1.5px solid rgba(212,201,176,0.6);
           border-radius: 12px;
           padding: 13px 15px;
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--font-body);
           font-size: 0.93rem;
           color: #1C1C1A;
           outline: none;
@@ -197,7 +197,7 @@ export default function MissedRevenueAudit() {
           border: 1.5px solid rgba(255,255,255,0.11);
           border-radius: 12px;
           padding: 13px 15px;
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--font-body);
           font-size: 0.93rem;
           color: #E8E0D0;
           outline: none;
@@ -216,7 +216,7 @@ export default function MissedRevenueAudit() {
           border: 1.5px solid rgba(212,201,176,0.5);
           cursor: pointer;
           background: transparent;
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--font-body);
           font-size: 0.80rem;
           color: rgba(28,28,26,0.6);
           transition: all 0.16s ease;
@@ -256,7 +256,7 @@ export default function MissedRevenueAudit() {
           border: 1px solid #8FAF9F;
           background: transparent;
           color: #1C1C1A;
-          font-family: 'DM Sans', sans-serif;
+          font-family: var(--font-body);
           font-size: 0.9rem;
           font-weight: 500;
           letter-spacing: 0.05em;
@@ -294,17 +294,17 @@ export default function MissedRevenueAudit() {
               Free Audit — 60 Seconds
             </p>
             <h1 style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--font-body)',
               fontSize: 'clamp(2.5rem, 6.5vw, 4.4rem)',
               fontWeight: 700, color: '#F7F3ED',
               lineHeight: 1.08, letterSpacing: '-0.03em',
               margin: '0 0 14px',
             }}>
               Find your{' '}
-              <span style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 300, fontStyle: 'italic', color: 'rgba(143,175,159,0.9)' }}>revenue leak.</span>
+              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 300, fontStyle: 'italic', color: 'rgba(143,175,159,0.9)' }}>revenue leak.</span>
             </h1>
             <p style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'var(--font-body)',
               fontSize: 'clamp(0.95rem, 1.5vw, 1.08rem)',
               fontWeight: 300, color: 'rgba(232,224,208,0.58)',
               lineHeight: 1.75, maxWidth: '42ch', margin: '0 auto',
@@ -329,7 +329,7 @@ export default function MissedRevenueAudit() {
               }}>
                 <div style={{ marginBottom: '32px' }}>
                   <p style={{ ...monoLabel, color: '#8FAF9F', marginBottom: '8px' }}>Revenue Audit</p>
-                  <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(1.7rem, 3.2vw, 2.3rem)', fontWeight: 600, color: '#1C1C1A', margin: 0 }}>
+                  <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.7rem, 3.2vw, 2.3rem)', fontWeight: 600, color: '#1C1C1A', margin: 0 }}>
                     Tell us about your business
                   </h2>
                 </div>
@@ -380,7 +380,7 @@ export default function MissedRevenueAudit() {
                     width: '100%', padding: '15px 24px', borderRadius: '14px', border: 'none',
                     background: canAudit ? 'linear-gradient(135deg, #3a4d3e 0%, #1C1C1A 100%)' : 'rgba(28,28,26,0.10)',
                     color: canAudit ? '#E8E0D0' : 'rgba(28,28,26,0.3)',
-                    fontFamily: 'DM Sans, sans-serif', fontSize: '1rem', fontWeight: 600,
+                    fontFamily: 'var(--font-body)', fontSize: '1rem', fontWeight: 600,
                     cursor: canAudit ? 'pointer' : 'not-allowed',
                     display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
                     transition: 'background 0.2s', letterSpacing: '-0.01em',
@@ -391,7 +391,7 @@ export default function MissedRevenueAudit() {
                   Reveal My Revenue Leak <ArrowRight size={17} />
                 </button>
                 {!canAudit && (
-                  <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.76rem', color: 'rgba(28,28,26,0.3)', textAlign: 'center', marginTop: '10px' }}>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.76rem', color: 'rgba(28,28,26,0.3)', textAlign: 'center', marginTop: '10px' }}>
                     Enter your URL, average job value, and monthly leads to continue
                   </p>
                 )}
@@ -411,10 +411,10 @@ export default function MissedRevenueAudit() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                   {SCAN_LINES.map((line, i) => (
                     <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', opacity: i <= scanLine ? 1 : 0.12, transition: 'opacity 0.3s ease' }}>
-                      <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.72rem', width: '12px', color: i < scanLine ? '#8FAF9F' : i === scanLine ? '#E8E0D0' : 'rgba(232,224,208,0.3)', flexShrink: 0 }}>
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', width: '12px', color: i < scanLine ? '#8FAF9F' : i === scanLine ? '#E8E0D0' : 'rgba(232,224,208,0.3)', flexShrink: 0 }}>
                         {i < scanLine ? '✓' : i === scanLine ? '›' : '·'}
                       </span>
-                      <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.82rem', color: i < scanLine ? 'rgba(143,175,159,0.75)' : i === scanLine ? '#E8E0D0' : 'rgba(232,224,208,0.18)' }}>
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.82rem', color: i < scanLine ? 'rgba(143,175,159,0.75)' : i === scanLine ? '#E8E0D0' : 'rgba(232,224,208,0.18)' }}>
                         {line}{i === scanLine && <span className="scan-cur" />}
                       </span>
                     </div>
@@ -437,7 +437,7 @@ export default function MissedRevenueAudit() {
                       <p style={{ ...monoLabel, color: 'rgba(143,175,159,0.5)', marginBottom: '6px', wordBreak: 'break-all' }}>
                         Audit — {results.url.replace(/^https?:\/\//, '')}
                       </p>
-                      <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(1.5rem, 3vw, 2.1rem)', fontWeight: 600, color: '#E8E0D0', margin: 0 }}>
+                      <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.5rem, 3vw, 2.1rem)', fontWeight: 600, color: '#E8E0D0', margin: 0 }}>
                         Your Diagnostic Report
                       </h2>
                     </div>
@@ -447,8 +447,8 @@ export default function MissedRevenueAudit() {
                       background: `${results.grade.color}14`,
                       display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
                     }}>
-                      <span style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '2rem', fontWeight: 700, lineHeight: 1, color: results.grade.color }}>{results.grade.grade}</span>
-                      <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.48rem', letterSpacing: '0.07em', color: results.grade.color, opacity: 0.8, marginTop: '1px' }}>{results.grade.label.toUpperCase()}</span>
+                      <span style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', fontWeight: 700, lineHeight: 1, color: results.grade.color }}>{results.grade.grade}</span>
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.48rem', letterSpacing: '0.07em', color: results.grade.color, opacity: 0.8, marginTop: '1px' }}>{results.grade.label.toUpperCase()}</span>
                     </div>
                   </div>
 
@@ -466,7 +466,7 @@ export default function MissedRevenueAudit() {
                           {s.icon}
                           <span style={{ ...monoLabel, fontSize: '0.60rem', color: 'rgba(232,224,208,0.38)' }}>{s.label}</span>
                         </div>
-                        <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(1.35rem, 2.6vw, 1.85rem)', fontWeight: 700, lineHeight: 1, letterSpacing: '-0.02em', color: s.highlight ? results.grade.color : '#E8E0D0' }}>
+                        <div style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.35rem, 2.6vw, 1.85rem)', fontWeight: 700, lineHeight: 1, letterSpacing: '-0.02em', color: s.highlight ? results.grade.color : '#E8E0D0' }}>
                           {s.display ? s.display : <AnimatedNumber value={s.value} prefix="$" />}
                         </div>
                       </div>
@@ -475,7 +475,7 @@ export default function MissedRevenueAudit() {
 
                   {/* Research insight */}
                   <div style={{ padding: '15px 18px', borderRadius: '12px', background: 'rgba(143,175,159,0.05)', border: '1px solid rgba(143,175,159,0.14)', marginBottom: '14px' }}>
-                    <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.83rem', color: 'rgba(232,224,208,0.6)', margin: 0, lineHeight: 1.65 }}>
+                    <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.83rem', color: 'rgba(232,224,208,0.6)', margin: 0, lineHeight: 1.65 }}>
                       <span style={{ color: '#8FAF9F', fontWeight: 600 }}>78% of buyers</span> choose the first business to respond.
                       At a <span style={{ color: '#E8E0D0' }}>{results.responseLabel}</span> response time, you&apos;re losing an estimated{' '}
                       <span style={{ color: results.grade.color, fontWeight: 600 }}>{Math.round(results.lossRate * 100)}%</span> of inbound leads.
@@ -491,11 +491,11 @@ export default function MissedRevenueAudit() {
                   <div style={{ ...card(), display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <Clock size={13} color="rgba(232,224,208,0.35)" />
-                      <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.82rem', color: 'rgba(232,224,208,0.5)' }}>
+                      <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.82rem', color: 'rgba(232,224,208,0.5)' }}>
                         Admin overhead — {results.adminLabel} × $65/hr
                       </span>
                     </div>
-                    <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.80rem', color: 'rgba(232,224,208,0.65)' }}>
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.80rem', color: 'rgba(232,224,208,0.65)' }}>
                       −${results.annualAdminCost.toLocaleString('en-AU')}/yr
                     </span>
                   </div>
@@ -508,10 +508,10 @@ export default function MissedRevenueAudit() {
                   marginBottom: '14px', textAlign: 'center',
                 }}>
                   <p style={{ ...monoLabel, color: 'rgba(232,224,208,0.35)', marginBottom: '8px' }}>Total Annual Revenue Leak</p>
-                  <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(3rem, 8vw, 5.2rem)', fontWeight: 700, lineHeight: 1, letterSpacing: '-0.03em', color: results.grade.color }}>
+                  <div style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(3rem, 8vw, 5.2rem)', fontWeight: 700, lineHeight: 1, letterSpacing: '-0.03em', color: results.grade.color }}>
                     <AnimatedNumber value={results.totalAnnualLeak} prefix="$" />
                   </div>
-                  <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.83rem', color: 'rgba(232,224,208,0.38)', marginTop: '8px' }}>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.83rem', color: 'rgba(232,224,208,0.38)', marginTop: '8px' }}>
                     Based on {results.ml} leads/month × ${Number(results.jv).toLocaleString('en-AU')} average job value
                   </p>
                 </div>
@@ -520,10 +520,10 @@ export default function MissedRevenueAudit() {
                 {!submitted ? (
                   <div style={{ backgroundColor: '#FDFAF6', border: '1px solid rgba(212,201,176,0.65)', borderRadius: '24px', padding: 'clamp(24px, 4vw, 40px)', boxShadow: '0 4px 32px rgba(28,28,26,0.07)' }}>
                     <p style={{ ...monoLabel, color: '#8FAF9F', marginBottom: '6px' }}>Free Diagnostic Report</p>
-                    <h3 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 600, color: '#1C1C1A', margin: '0 0 8px' }}>
+                    <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', fontWeight: 600, color: '#1C1C1A', margin: '0 0 8px' }}>
                       Get your full written report
                     </h3>
-                    <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.83rem', color: 'rgba(28,28,26,0.5)', margin: '0 0 22px', lineHeight: 1.65 }}>
+                    <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.83rem', color: 'rgba(28,28,26,0.5)', margin: '0 0 22px', lineHeight: 1.65 }}>
                       We&apos;ll send you a breakdown of exactly where the leak is and a clear plan to fix it — free, no obligation.
                     </p>
                     <form onSubmit={handleEmailSubmit}>
@@ -537,7 +537,7 @@ export default function MissedRevenueAudit() {
                         style={{
                           width: '100%', padding: '14px 24px', borderRadius: '12px', border: 'none',
                           background: 'linear-gradient(135deg, #8FAF9F 0%, #6B7C4A 100%)',
-                          color: '#fff', fontFamily: 'DM Sans, sans-serif', fontSize: '0.95rem', fontWeight: 600,
+                          color: '#fff', fontFamily: 'var(--font-body)', fontSize: '0.95rem', fontWeight: 600,
                           cursor: (submitting || !name || !email) ? 'not-allowed' : 'pointer',
                           opacity: (submitting || !name || !email) ? 0.62 : 1,
                           display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
@@ -548,7 +548,7 @@ export default function MissedRevenueAudit() {
                         {!submitting && <ArrowRight size={15} />}
                       </button>
                     </form>
-                    <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.72rem', color: 'rgba(28,28,26,0.28)', textAlign: 'center', marginTop: '10px' }}>
+                    <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', color: 'rgba(28,28,26,0.28)', textAlign: 'center', marginTop: '10px' }}>
                       No spam. One email with your report + optional follow-up call.
                     </p>
                   </div>
@@ -557,10 +557,10 @@ export default function MissedRevenueAudit() {
                     <div style={{ width: '46px', height: '46px', borderRadius: '50%', background: 'rgba(143,175,159,0.13)', border: '1px solid rgba(143,175,159,0.28)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
                       <Zap size={18} color="#8FAF9F" />
                     </div>
-                    <h3 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.65rem', fontWeight: 600, color: '#1C1C1A', margin: '0 0 8px' }}>
+                    <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.65rem', fontWeight: 600, color: '#1C1C1A', margin: '0 0 8px' }}>
                       Report on its way, {name}.
                     </h3>
-                    <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '0.86rem', color: 'rgba(28,28,26,0.52)', margin: '0 0 22px', lineHeight: 1.65 }}>
+                    <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.86rem', color: 'rgba(28,28,26,0.52)', margin: '0 0 22px', lineHeight: 1.65 }}>
                       Check your inbox. While you wait — want to walk through the numbers together?
                     </p>
                     <a href={CTA_HREF} target="_blank" rel="noopener noreferrer" className="btn-sage" style={{ fontSize: '0.9rem' }}>

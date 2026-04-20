@@ -5,7 +5,7 @@ import JsonLd from '@/components/ui/JsonLd'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 
 const CTA_HREF  = 'https://cal.com/luke-marinovic-aqeosc/30min'
-const DOMAIN    = 'https://undercurrentautomations.com.au'
+const DOMAIN    = 'https://undercurrentautomations.com'
 const LIGHT     = '#F7F3ED'
 const PARCHMENT = '#E8E0D0'
 const CHARCOAL  = '#1C1C1A'
@@ -95,11 +95,11 @@ function PipelineAnim() {
         return (
           <div key={stage} style={{ display: 'flex', alignItems: 'center', gap: 10, transition: 'opacity 0.4s', opacity: isPast ? 0.3 : isCurrent ? 1 : 0.18 }}>
             <div style={{ width: 7, height: 7, borderRadius: '50%', flexShrink: 0, background: isCurrent ? SAGE : isPast ? 'rgba(143,175,159,0.35)' : 'rgba(212,201,176,0.15)', boxShadow: isCurrent ? `0 0 7px ${SAGE}` : 'none', transition: 'all 0.4s' }} />
-            <span style={{ fontFamily: 'DM Mono, monospace', fontSize: 11, color: isCurrent ? SAGE : 'rgba(232,224,208,0.5)', letterSpacing: '0.04em', transition: 'color 0.4s' }}>{stage}</span>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: isCurrent ? SAGE : 'rgba(232,224,208,0.5)', letterSpacing: '0.04em', transition: 'color 0.4s' }}>{stage}</span>
           </div>
         )
       })}
-      <div style={{ marginTop: 6, fontFamily: 'DM Mono', fontSize: 10, color: 'rgba(143,175,159,0.4)', letterSpacing: '0.08em' }}>RUNNING CONTINUOUSLY</div>
+      <div style={{ marginTop: 6, fontFamily: 'var(--font-mono)', fontSize: 10, color: 'rgba(143,175,159,0.4)', letterSpacing: '0.08em' }}>RUNNING CONTINUOUSLY</div>
     </div>
   )
 }
@@ -126,7 +126,7 @@ function TerminalAnim() {
     <div style={{ padding: '20px', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
       <div style={{ background: 'rgba(0,0,0,0.25)', borderRadius: 8, padding: '14px 16px', border: '1px solid rgba(143,175,159,0.12)' }}>
         {sequences[seq].slice(0, visible).map((line, i) => (
-          <div key={i} style={{ fontFamily: 'DM Mono, monospace', fontSize: 10.5, lineHeight: 1.75, color: i === visible - 1 ? SAGE : 'rgba(232,224,208,0.4)', transition: 'color 0.3s' }}>{line}</div>
+          <div key={i} style={{ fontFamily: 'var(--font-mono)', fontSize: 10.5, lineHeight: 1.75, color: i === visible - 1 ? SAGE : 'rgba(232,224,208,0.4)', transition: 'color 0.3s' }}>{line}</div>
         ))}
         <span style={{ display: 'inline-block', width: 7, height: 13, background: SAGE, opacity: 0.7, animation: 'uc-blink 1s step-end infinite', verticalAlign: 'text-bottom', marginLeft: 2 }} />
       </div>
@@ -150,8 +150,8 @@ function LeadGenAnim() {
     <div style={{ padding: '20px', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 10 }}>
       {flow.map(({ label, value }, i) => (
         <div key={label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '9px 12px', borderRadius: 7, background: i === step ? 'rgba(143,175,159,0.12)' : 'rgba(143,175,159,0.04)', border: `1px solid ${i === step ? 'rgba(143,175,159,0.25)' : 'rgba(143,175,159,0.08)'}`, transition: 'all 0.4s' }}>
-          <span style={{ fontFamily: 'DM Sans', fontSize: 12, color: i === step ? 'rgba(232,224,208,0.85)' : 'rgba(232,224,208,0.4)' }}>{label}</span>
-          <span style={{ fontFamily: 'DM Mono', fontSize: 12, color: i === step ? SAGE : 'rgba(143,175,159,0.3)', transition: 'color 0.4s' }}>{value}</span>
+          <span style={{ fontFamily: 'var(--font-body)', fontSize: 12, color: i === step ? 'rgba(232,224,208,0.85)' : 'rgba(232,224,208,0.4)' }}>{label}</span>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: i === step ? SAGE : 'rgba(143,175,159,0.3)', transition: 'color 0.4s' }}>{value}</span>
         </div>
       ))}
     </div>
@@ -193,7 +193,7 @@ function NetworkAnim() {
           <g key={i}>
             <circle cx={n.x} cy={n.y} r={n.r * 1.6} fill={`rgba(143,175,159,${pulse * 0.07})`} />
             <circle cx={n.x} cy={n.y} r={n.r} fill="rgba(28,28,26,0.9)" stroke={`rgba(143,175,159,${pulse * 0.6})`} strokeWidth={0.8} />
-            <text x={n.x} y={n.y + 0.4} textAnchor="middle" dominantBaseline="middle" fill={`rgba(232,224,208,${0.45 + pulse * 0.3})`} fontSize={n.r * 0.65} fontFamily="DM Sans">{n.label}</text>
+            <text x={n.x} y={n.y + 0.4} textAnchor="middle" dominantBaseline="middle" fill={`rgba(232,224,208,${0.45 + pulse * 0.3})`} fontSize={n.r * 0.65} fontFamily="var(--font-body)">{n.label}</text>
           </g>
         )
       })}
@@ -224,7 +224,7 @@ function RetainerAnim() {
             <circle cx="7.5" cy="7.5" r="6.5" stroke={SAGE} strokeWidth="0.9" />
             <path d="M4 7.5l2.5 2.5L11 5" stroke={SAGE} strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          <span style={{ fontFamily: 'DM Sans', fontSize: 12.5, color: 'rgba(232,224,208,0.7)' }}>{item}</span>
+          <span style={{ fontFamily: 'var(--font-body)', fontSize: 12.5, color: 'rgba(232,224,208,0.7)' }}>{item}</span>
         </div>
       ))}
     </div>
@@ -243,7 +243,7 @@ function IntegrationsAnim() {
   return (
     <svg viewBox="0 0 220 220" style={{ width: '100%', maxWidth: 190, height: 190, display: 'block', margin: '0 auto' }}>
       <circle cx={cx} cy={cy} r={22} fill="rgba(28,28,26,0.9)" stroke="rgba(143,175,159,0.35)" strokeWidth={1} />
-      <text x={cx} y={cy + 0.5} textAnchor="middle" dominantBaseline="middle" fill={SAGE} fontSize="9" fontFamily="DM Mono" letterSpacing="0.05em">YOU</text>
+      <text x={cx} y={cy + 0.5} textAnchor="middle" dominantBaseline="middle" fill={SAGE} fontSize="9" fontFamily="var(--font-mono)" letterSpacing="0.05em">YOU</text>
       {tools.map((tool, i) => {
         const angle = (i / tools.length) * Math.PI * 2 + phase * 0.3
         const tx = cx + r * Math.cos(angle)
@@ -253,7 +253,7 @@ function IntegrationsAnim() {
           <g key={tool}>
             <line x1={cx} y1={cy} x2={tx} y2={ty} stroke={`rgba(143,175,159,${pulse})`} strokeWidth={0.7} strokeDasharray="2 3" />
             <circle cx={tx} cy={ty} r={18} fill="rgba(28,28,26,0.85)" stroke={`rgba(143,175,159,${0.18 + pulse * 0.3})`} strokeWidth={0.8} />
-            <text x={tx} y={ty + 0.5} textAnchor="middle" dominantBaseline="middle" fill={`rgba(232,224,208,${0.38 + pulse * 0.4})`} fontSize="8" fontFamily="DM Sans">{tool}</text>
+            <text x={tx} y={ty + 0.5} textAnchor="middle" dominantBaseline="middle" fill={`rgba(232,224,208,${0.38 + pulse * 0.4})`} fontSize="8" fontFamily="var(--font-body)">{tool}</text>
           </g>
         )
       })}
@@ -278,11 +278,11 @@ function ResultsAnim() {
       {targets.map(({ label, value, sub }, i) => (
         <div key={label} style={{ display: 'flex', alignItems: 'center', gap: 14, opacity: i === tick ? 1 : 0.25, transition: 'opacity 0.5s' }}>
           <div style={{ minWidth: 58 }}>
-            <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 28, fontWeight: 700, color: SAGE, lineHeight: 1, display: 'block' }}>{value}</span>
+            <span style={{ fontFamily: 'var(--font-body)', fontSize: 28, fontWeight: 700, color: SAGE, lineHeight: 1, display: 'block' }}>{value}</span>
           </div>
           <div>
-            <div style={{ fontFamily: 'DM Sans', fontSize: 12.5, color: 'rgba(232,224,208,0.8)', fontWeight: 500 }}>{label}</div>
-            <div style={{ fontFamily: 'DM Sans', fontSize: 11, color: 'rgba(232,224,208,0.3)' }}>{sub}</div>
+            <div style={{ fontFamily: 'var(--font-body)', fontSize: 12.5, color: 'rgba(232,224,208,0.8)', fontWeight: 500 }}>{label}</div>
+            <div style={{ fontFamily: 'var(--font-body)', fontSize: 11, color: 'rgba(232,224,208,0.3)' }}>{sub}</div>
           </div>
         </div>
       ))}
@@ -318,9 +318,9 @@ function IndustryCard({ industry }) {
           </div>
         </div>
         <div style={{ padding: '24px 28px 28px', flex: 1, textAlign: 'center' }}>
-          <span style={{ display: 'inline-block', fontFamily: 'DM Mono, monospace', fontSize: 10, letterSpacing: '0.1em', color: SAGE, background: 'rgba(143,175,159,0.08)', border: '1px solid rgba(143,175,159,0.18)', padding: '4px 10px', borderRadius: 999, marginBottom: 12 }}>{industry.label}</span>
-          <h3 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 22, fontWeight: 500, color: CHARCOAL, lineHeight: 1.2, margin: '0 0 10px' }}>{industry.headline}</h3>
-          <p style={{ fontFamily: 'DM Sans', fontSize: 14.5, lineHeight: 1.65, color: 'rgba(28,28,26,0.58)', margin: 0 }}>{industry.copy}</p>
+          <span style={{ display: 'inline-block', fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.1em', color: SAGE, background: 'rgba(143,175,159,0.08)', border: '1px solid rgba(143,175,159,0.18)', padding: '4px 10px', borderRadius: 999, marginBottom: 12 }}>{industry.label}</span>
+          <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 22, fontWeight: 500, color: CHARCOAL, lineHeight: 1.2, margin: '0 0 10px' }}>{industry.headline}</h3>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, lineHeight: 1.65, color: 'rgba(28,28,26,0.58)', margin: 0 }}>{industry.copy}</p>
         </div>
       </div>
     </div>
@@ -344,8 +344,8 @@ function BenefitCard({ benefit }) {
           </div>
         </div>
         <div style={{ padding: '22px 24px 26px', flex: 1 }}>
-          <h3 style={{ fontFamily: 'DM Sans', fontSize: 16, fontWeight: 600, color: CHARCOAL, margin: '0 0 8px', lineHeight: 1.3 }}>{benefit.title}</h3>
-          <p style={{ fontFamily: 'DM Sans', fontSize: 14, lineHeight: 1.65, color: 'rgba(28,28,26,0.56)', margin: 0 }}>{benefit.copy}</p>
+          <h3 style={{ fontFamily: 'var(--font-body)', fontSize: 16, fontWeight: 600, color: CHARCOAL, margin: '0 0 8px', lineHeight: 1.3 }}>{benefit.title}</h3>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, lineHeight: 1.65, color: 'rgba(28,28,26,0.56)', margin: 0 }}>{benefit.copy}</p>
         </div>
       </div>
     </div>
@@ -399,14 +399,14 @@ function ProcessStep({ step }) {
             <Grain opacity={0.03} />
             <div style={{ position: 'relative', zIndex: 3, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
               {step.icon}
-              <span style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 32, fontWeight: 300, fontStyle: 'italic', color: SAGE, lineHeight: 1 }}>{step.label}</span>
+              <span style={{ fontFamily: 'var(--font-display)', fontSize: 32, fontWeight: 300, fontStyle: 'italic', color: SAGE, lineHeight: 1 }}>{step.label}</span>
             </div>
           </div>
-          <div style={{ position: 'absolute', top: -10, left: 16, zIndex: 4, background: 'rgba(28,28,26,0.92)', border: '1px solid rgba(143,175,159,0.28)', borderRadius: 999, padding: '3px 12px', fontFamily: 'DM Mono, monospace', fontSize: 11, color: SAGE, letterSpacing: '0.08em' }}>{step.num}</div>
+          <div style={{ position: 'absolute', top: -10, left: 16, zIndex: 4, background: 'rgba(28,28,26,0.92)', border: '1px solid rgba(143,175,159,0.28)', borderRadius: 999, padding: '3px 12px', fontFamily: 'var(--font-mono)', fontSize: 11, color: SAGE, letterSpacing: '0.08em' }}>{step.num}</div>
         </div>
         <div style={{ textAlign: 'center' }}>
-          <h3 style={{ fontFamily: 'DM Sans', fontSize: 15.5, fontWeight: 600, color: 'rgba(232,224,208,0.88)', margin: '0 0 8px', lineHeight: 1.3 }}>{step.headline}</h3>
-          <p style={{ fontFamily: 'DM Sans', fontSize: 14, lineHeight: 1.65, color: 'rgba(232,224,208,0.42)', margin: 0 }}>{step.copy}</p>
+          <h3 style={{ fontFamily: 'var(--font-body)', fontSize: 15.5, fontWeight: 600, color: 'rgba(232,224,208,0.88)', margin: '0 0 8px', lineHeight: 1.3 }}>{step.headline}</h3>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, lineHeight: 1.65, color: 'rgba(232,224,208,0.42)', margin: 0 }}>{step.copy}</p>
         </div>
       </div>
     </div>
@@ -422,7 +422,7 @@ function ComparisonTable({ location }) {
           <tr>
             <th style={{ padding: '0 0 20px', width: '34%' }} />
             {location.comparisonColumns.map((col, i) => (
-              <th key={col} style={{ padding: '0 8px 20px', textAlign: 'center', fontFamily: 'DM Sans', fontSize: i === 0 ? 14 : 13, fontWeight: i === 0 ? 600 : 400, color: i === 0 ? CHARCOAL : 'rgba(28,28,26,0.38)' }}>
+              <th key={col} style={{ padding: '0 8px 20px', textAlign: 'center', fontFamily: 'var(--font-body)', fontSize: i === 0 ? 14 : 13, fontWeight: i === 0 ? 600 : 400, color: i === 0 ? CHARCOAL : 'rgba(28,28,26,0.38)' }}>
                 {i === 0
                   ? <span style={{ display: 'inline-block', background: CHARCOAL, color: LIGHT, padding: '6px 16px', borderRadius: 999, fontSize: 13 }}>{col}</span>
                   : col}
@@ -433,7 +433,7 @@ function ComparisonTable({ location }) {
         <tbody>
           {location.comparisonRows.map((row, ri) => (
             <tr key={ri}>
-              <td style={{ padding: '14px 0', borderTop: '1px solid rgba(212,201,176,0.35)', fontFamily: 'DM Sans', fontSize: 14, color: 'rgba(28,28,26,0.68)' }}>{row.label}</td>
+              <td style={{ padding: '14px 0', borderTop: '1px solid rgba(212,201,176,0.35)', fontFamily: 'var(--font-body)', fontSize: 14, color: 'rgba(28,28,26,0.68)' }}>{row.label}</td>
               {[row.uc, row.manual, row.generic, row.agency].map((val, ci) => (
                 <td key={ci} style={{ borderTop: '1px solid rgba(212,201,176,0.35)', textAlign: 'center', padding: '14px 8px', background: ci === 0 ? 'rgba(143,175,159,0.05)' : 'transparent' }}>
                   {val
@@ -456,13 +456,13 @@ function FAQItem({ faq }) {
   return (
     <div style={{ borderBottom: '1px solid rgba(212,201,176,0.4)' }}>
       <button onClick={() => setOpen(o => !o)} aria-expanded={open} style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 0', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', gap: 16 }}>
-        <span style={{ fontFamily: 'DM Sans', fontSize: 16, fontWeight: 500, color: CHARCOAL, lineHeight: 1.4 }}>{faq.q}</span>
+        <span style={{ fontFamily: 'var(--font-body)', fontSize: 16, fontWeight: 500, color: CHARCOAL, lineHeight: 1.4 }}>{faq.q}</span>
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ flexShrink: 0, transition: 'transform 0.3s', transform: open ? 'rotate(45deg)' : 'none' }}>
           <path d="M10 4v12M4 10h12" stroke={SAGE} strokeWidth="1.5" strokeLinecap="round" />
         </svg>
       </button>
       <div style={{ overflow: 'hidden', maxHeight: open ? 300 : 0, transition: 'max-height 0.35s ease' }}>
-        <p style={{ fontFamily: 'DM Sans', fontSize: 15, lineHeight: 1.7, color: 'rgba(28,28,26,0.6)', margin: '0 0 20px', paddingRight: 36 }}>{faq.a}</p>
+        <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.7, color: 'rgba(28,28,26,0.6)', margin: '0 0 20px', paddingRight: 36 }}>{faq.a}</p>
       </div>
     </div>
   )
@@ -471,7 +471,7 @@ function FAQItem({ faq }) {
 // ─── Section label ────────────────────────────────────────────────────────────
 function SectionLabel({ children, dark = false }) {
   return (
-    <span style={{ display: 'inline-block', fontFamily: 'DM Mono, monospace', fontSize: 10, letterSpacing: '0.12em', color: dark ? 'rgba(143,175,159,0.75)' : 'rgba(28,28,26,0.42)', border: `1px solid ${dark ? 'rgba(143,175,159,0.22)' : 'rgba(28,28,26,0.14)'}`, padding: '5px 14px', borderRadius: 999, marginBottom: 18 }}>{children}</span>
+    <span style={{ display: 'inline-block', fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: dark ? 'rgba(143,175,159,0.75)' : 'rgba(28,28,26,0.42)', border: `1px solid ${dark ? 'rgba(143,175,159,0.22)' : 'rgba(28,28,26,0.14)'}`, padding: '5px 14px', borderRadius: 999, marginBottom: 18 }}>{children}</span>
   )
 }
 
@@ -479,14 +479,14 @@ function SectionLabel({ children, dark = false }) {
 function HeroHeadline({ location }) {
   const v = location.heroVariant || 'default'
   const line1Style = {
-    default:   { fontFamily: 'DM Sans, sans-serif',       fontWeight: 700, fontStyle: 'normal', color: '#F7F3ED' },
-    editorial: { fontFamily: 'Cormorant Garamond, serif', fontWeight: 300, fontStyle: 'italic', color: SAGE },
-    mono:      { fontFamily: 'DM Mono, monospace',        fontWeight: 400, fontStyle: 'normal', color: '#F7F3ED', letterSpacing: '-0.01em' },
+    default:   { fontFamily: 'var(--font-body)',       fontWeight: 700, fontStyle: 'normal', color: '#F7F3ED' },
+    editorial: { fontFamily: 'var(--font-display)', fontWeight: 300, fontStyle: 'italic', color: SAGE },
+    mono:      { fontFamily: 'var(--font-mono)',        fontWeight: 400, fontStyle: 'normal', color: '#F7F3ED', letterSpacing: '-0.01em' },
   }
   const line2Style = {
-    default:   { fontFamily: 'Cormorant Garamond, serif', fontWeight: 300, fontStyle: 'italic', color: SAGE },
-    editorial: { fontFamily: 'DM Sans, sans-serif',       fontWeight: 700, fontStyle: 'normal', color: '#F7F3ED' },
-    mono:      { fontFamily: 'Cormorant Garamond, serif', fontWeight: 300, fontStyle: 'italic', color: SAGE },
+    default:   { fontFamily: 'var(--font-display)', fontWeight: 300, fontStyle: 'italic', color: SAGE },
+    editorial: { fontFamily: 'var(--font-body)',       fontWeight: 700, fontStyle: 'normal', color: '#F7F3ED' },
+    mono:      { fontFamily: 'var(--font-display)', fontWeight: 300, fontStyle: 'italic', color: SAGE },
   }
   const baseSize = { fontSize: 'clamp(3rem, 8vw, 7.5rem)', letterSpacing: '-0.03em', lineHeight: 0.97, display: 'block', margin: '0 0 0.06em' }
   return (
@@ -550,20 +550,20 @@ export default function LocationPage({ location }) {
         <Grain opacity={0.04} />
 
         <div style={{ position: 'relative', zIndex: 3, maxWidth: 820, margin: '0 auto', width: '100%', textAlign: 'center' }}>
-          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontFamily: 'DM Mono, monospace', fontSize: 11, letterSpacing: '0.1em', color: 'rgba(143,175,159,0.85)', border: '1px solid rgba(143,175,159,0.25)', padding: '5px 14px', borderRadius: 999, marginBottom: 28 }}>
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontFamily: 'var(--font-mono)', fontSize: 11, letterSpacing: '0.1em', color: 'rgba(143,175,159,0.85)', border: '1px solid rgba(143,175,159,0.25)', padding: '5px 14px', borderRadius: 999, marginBottom: 28 }}>
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: SAGE, boxShadow: `0 0 6px ${SAGE}`, animation: 'uc-blink 2s ease-in-out infinite' }} />
             {location.heroPill}
           </span>
 
           <HeroHeadline location={location} />
 
-          <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 'clamp(16px, 2vw, 19px)', fontWeight: 300, lineHeight: 1.65, color: 'rgba(232,224,208,0.7)', maxWidth: 560, margin: '0 auto 40px' }}>{location.heroCopy}</p>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(16px, 2vw, 19px)', fontWeight: 300, lineHeight: 1.65, color: 'rgba(232,224,208,0.7)', maxWidth: 560, margin: '0 auto 40px' }}>{location.heroCopy}</p>
 
-          <a href={CTA_HREF} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', fontFamily: 'DM Sans, sans-serif', fontSize: 14, fontWeight: 500, letterSpacing: '0.05em', color: '#F7F3ED', textDecoration: 'none', padding: '14px 32px', borderRadius: 9999, border: '1.5px solid rgba(143,175,159,0.75)', background: 'rgba(143,175,159,0.15)', backdropFilter: 'blur(6px)', boxShadow: '0 0 18px rgba(143,175,159,0.15), inset 0 1px 0 rgba(255,255,255,0.06)', transition: 'box-shadow 0.25s, transform 0.2s' }}
-            onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 0 32px rgba(143,175,159,0.35)'; e.currentTarget.style.transform = 'scale(1.03) translateY(-1px)' }}
-            onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 0 18px rgba(143,175,159,0.15), inset 0 1px 0 rgba(255,255,255,0.06)'; e.currentTarget.style.transform = 'none' }}
+          <a href={CTA_HREF} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, fontFamily: 'var(--font-display)', fontSize: 15, fontWeight: 600, letterSpacing: '-0.01em', color: 'var(--charcoal-deep)', textDecoration: 'none', padding: '14px 26px', borderRadius: 9999, border: '1px solid var(--charcoal-deep)', background: 'var(--off-white)', boxShadow: '4px 4px 0 0 var(--sage)', transition: 'transform 140ms cubic-bezier(.2,.7,.3,1), box-shadow 140ms cubic-bezier(.2,.7,.3,1)' }}
+            onMouseEnter={e => { e.currentTarget.style.boxShadow = '7px 7px 0 0 var(--sage)'; e.currentTarget.style.transform = 'translate(-3px, -3px)' }}
+            onMouseLeave={e => { e.currentTarget.style.boxShadow = '4px 4px 0 0 var(--sage)'; e.currentTarget.style.transform = 'none' }}
           >
-            Book a Free Workflow Audit
+            Book a Free Workflow Audit <span aria-hidden style={{ fontSize: 14 }}>→</span>
           </a>
         </div>
       </section>
@@ -573,8 +573,8 @@ export default function LocationPage({ location }) {
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <SectionLabel>{location.industriesLabel}</SectionLabel>
           <div style={{ maxWidth: 680, margin: '0 auto 52px', textAlign: 'center' }}>
-            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 500, color: CHARCOAL, margin: '0 0 16px', lineHeight: 1.15 }}>{location.industriesHeadline}</h2>
-            <p style={{ fontFamily: 'DM Sans', fontSize: 17, lineHeight: 1.65, color: 'rgba(28,28,26,0.56)', margin: 0 }}>{location.industriesCopy}</p>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 500, color: CHARCOAL, margin: '0 0 16px', lineHeight: 1.15 }}>{location.industriesHeadline}</h2>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, lineHeight: 1.65, color: 'rgba(28,28,26,0.56)', margin: 0 }}>{location.industriesCopy}</p>
           </div>
           <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
             {location.industries.map((ind) => <IndustryCard key={ind.label} industry={ind} />)}
@@ -586,7 +586,7 @@ export default function LocationPage({ location }) {
       <section style={{ background: PARCHMENT, padding: 'clamp(64px, 8vw, 100px) 24px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <div style={{ textAlign: 'center' }}><SectionLabel>{location.benefitsLabel}</SectionLabel></div>
-          <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 500, color: CHARCOAL, margin: '0 auto 48px', lineHeight: 1.15, maxWidth: 560, textAlign: 'center' }}>{location.benefitsHeadline}</h2>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 500, color: CHARCOAL, margin: '0 auto 48px', lineHeight: 1.15, maxWidth: 560, textAlign: 'center' }}>{location.benefitsHeadline}</h2>
           <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
             {location.benefits.map((b) => <BenefitCard key={b.title} benefit={b} />)}
           </div>
@@ -597,16 +597,16 @@ export default function LocationPage({ location }) {
       <section style={{ background: WARM_DARK, padding: 'clamp(56px, 7vw, 88px) 24px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <div style={{ textAlign: 'center' }}><SectionLabel dark>{location.processLabel}</SectionLabel></div>
-          <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 500, color: '#F7F3ED', margin: '0 0 48px', lineHeight: 1.15, textAlign: 'center' }}>{location.processHeadline}</h2>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 500, color: '#F7F3ED', margin: '0 0 48px', lineHeight: 1.15, textAlign: 'center' }}>{location.processHeadline}</h2>
           <div style={{ display: 'flex', gap: 32, flexWrap: 'wrap' }}>
             {STEPS.map((step) => <ProcessStep key={step.num} step={step} />)}
           </div>
           <div style={{ marginTop: 48 }}>
-            <a href={CTA_HREF} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', fontFamily: 'DM Sans, sans-serif', fontSize: 13.5, fontWeight: 500, letterSpacing: '0.05em', color: '#F7F3ED', textDecoration: 'none', padding: '13px 28px', borderRadius: 9999, border: '1.5px solid rgba(143,175,159,0.55)', background: 'rgba(143,175,159,0.1)', backdropFilter: 'blur(6px)', transition: 'all 0.25s' }}
-              onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 0 24px rgba(143,175,159,0.28)'; e.currentTarget.style.transform = 'scale(1.03)' }}
-              onMouseLeave={e => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'none' }}
+            <a href={CTA_HREF} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, fontFamily: 'var(--font-display)', fontSize: 14, fontWeight: 600, letterSpacing: '-0.01em', color: 'var(--charcoal-deep)', textDecoration: 'none', padding: '13px 24px', borderRadius: 9999, border: '1px solid var(--charcoal-deep)', background: 'var(--off-white)', boxShadow: '4px 4px 0 0 var(--sage)', transition: 'transform 140ms cubic-bezier(.2,.7,.3,1), box-shadow 140ms cubic-bezier(.2,.7,.3,1)' }}
+              onMouseEnter={e => { e.currentTarget.style.boxShadow = '7px 7px 0 0 var(--sage)'; e.currentTarget.style.transform = 'translate(-3px, -3px)' }}
+              onMouseLeave={e => { e.currentTarget.style.boxShadow = '4px 4px 0 0 var(--sage)'; e.currentTarget.style.transform = 'none' }}
             >
-              Start with a free audit
+              Start with a free audit <span aria-hidden style={{ fontSize: 13 }}>→</span>
             </a>
           </div>
         </div>
@@ -617,8 +617,8 @@ export default function LocationPage({ location }) {
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
           <div style={{ textAlign: 'center' }}><SectionLabel>{location.comparisonLabel}</SectionLabel></div>
           <div style={{ maxWidth: 640, margin: '0 auto 48px', textAlign: 'center' }}>
-            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 500, color: CHARCOAL, margin: '0 0 14px', lineHeight: 1.15 }}>{location.comparisonHeadline}</h2>
-            <p style={{ fontFamily: 'DM Sans', fontSize: 17, lineHeight: 1.65, color: 'rgba(28,28,26,0.54)', margin: 0 }}>{location.comparisonCopy}</p>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 500, color: CHARCOAL, margin: '0 0 14px', lineHeight: 1.15 }}>{location.comparisonHeadline}</h2>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, lineHeight: 1.65, color: 'rgba(28,28,26,0.54)', margin: 0 }}>{location.comparisonCopy}</p>
           </div>
           <div style={{ background: PARCHMENT, borderRadius: '1.5rem', padding: 'clamp(24px, 4vw, 40px)', border: '1px solid rgba(212,201,176,0.4)' }}>
             <ComparisonTable location={location} />
@@ -630,7 +630,7 @@ export default function LocationPage({ location }) {
       <section style={{ background: PARCHMENT, padding: 'clamp(64px, 8vw, 100px) 24px' }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
           <div style={{ textAlign: 'center' }}><SectionLabel>{location.faqLabel}</SectionLabel></div>
-          <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', fontWeight: 500, color: CHARCOAL, margin: '0 0 40px', lineHeight: 1.2, textAlign: 'center' }}>{location.faqHeadline}</h2>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.8rem, 3.5vw, 2.6rem)', fontWeight: 500, color: CHARCOAL, margin: '0 0 40px', lineHeight: 1.2, textAlign: 'center' }}>{location.faqHeadline}</h2>
           <div>{location.faqs.map((faq, i) => <FAQItem key={i} faq={faq} />)}</div>
         </div>
       </section>
@@ -639,11 +639,11 @@ export default function LocationPage({ location }) {
       <div style={{ background: CHARCOAL }}>
         <section style={{ padding: 'clamp(72px, 9vw, 112px) 24px', textAlign: 'center' }}>
           <div style={{ maxWidth: 640, margin: '0 auto' }}>
-            <h2 style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 'clamp(2rem, 4.5vw, 3.2rem)', fontWeight: 400, lineHeight: 1.15, margin: '0 0 20px', color: '#F7F3ED' }}>{location.ctaHeadline}</h2>
-            <p style={{ fontFamily: 'DM Sans', fontSize: 17, lineHeight: 1.65, fontWeight: 300, color: 'rgba(232,224,208,0.58)', margin: '0 0 36px' }}>{location.ctaCopy}</p>
-            <a href={CTA_HREF} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', fontFamily: 'DM Sans', fontSize: 14, fontWeight: 500, letterSpacing: '0.05em', color: '#F7F3ED', textDecoration: 'none', padding: '14px 36px', borderRadius: 9999, border: '1.5px solid rgba(143,175,159,0.75)', background: 'rgba(143,175,159,0.15)', backdropFilter: 'blur(6px)', boxShadow: '0 0 18px rgba(143,175,159,0.15)', transition: 'all 0.25s' }}
-              onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 0 32px rgba(143,175,159,0.35)'; e.currentTarget.style.transform = 'scale(1.04) translateY(-1px)' }}
-              onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 0 18px rgba(143,175,159,0.15)'; e.currentTarget.style.transform = 'none' }}
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 4.5vw, 3.2rem)', fontWeight: 400, lineHeight: 1.15, margin: '0 0 20px', color: '#F7F3ED' }}>{location.ctaHeadline}</h2>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: 17, lineHeight: 1.65, fontWeight: 300, color: 'rgba(232,224,208,0.58)', margin: '0 0 36px' }}>{location.ctaCopy}</p>
+            <a href={CTA_HREF} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, fontFamily: 'var(--font-display)', fontSize: 15, fontWeight: 600, letterSpacing: '-0.01em', color: 'var(--charcoal-deep)', textDecoration: 'none', padding: '14px 28px', borderRadius: 9999, border: '1px solid var(--charcoal-deep)', background: 'var(--off-white)', boxShadow: '5px 5px 0 0 var(--sage)', transition: 'transform 140ms cubic-bezier(.2,.7,.3,1), box-shadow 140ms cubic-bezier(.2,.7,.3,1)' }}
+              onMouseEnter={e => { e.currentTarget.style.boxShadow = '8px 8px 0 0 var(--sage)'; e.currentTarget.style.transform = 'translate(-3px, -3px)' }}
+              onMouseLeave={e => { e.currentTarget.style.boxShadow = '5px 5px 0 0 var(--sage)'; e.currentTarget.style.transform = 'none' }}
             >
               Book Your Free Workflow Review
             </a>
@@ -653,7 +653,7 @@ export default function LocationPage({ location }) {
         <nav aria-label="Service pages" style={{ padding: '28px 24px 24px', borderTop: '1px solid rgba(212,201,176,0.07)' }}>
           <div style={{ maxWidth: 900, margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: '10px 24px', justifyContent: 'center' }}>
             {location.internalLinks.map(({ label, path }) => (
-              <Link key={label} href={path} style={{ fontFamily: 'DM Sans', fontSize: 13, color: 'rgba(232,224,208,0.35)', textDecoration: 'none', transition: 'color 0.2s' }}
+              <Link key={label} href={path} style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'rgba(232,224,208,0.35)', textDecoration: 'none', transition: 'color 0.2s' }}
                 onMouseEnter={e => { e.currentTarget.style.color = 'rgba(143,175,159,0.75)' }}
                 onMouseLeave={e => { e.currentTarget.style.color = 'rgba(232,224,208,0.35)' }}
               >{label}</Link>
