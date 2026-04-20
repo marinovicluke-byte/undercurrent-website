@@ -34,6 +34,6 @@ export default function robots() {
         disallow: ['/api/'],
       })),
     ],
-    sitemap: 'https://undercurrentautomations.com/sitemap.xml',
+    sitemap: 'https://www.undercurrentautomations.com/sitemap.xml',
   }
 }

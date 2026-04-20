@@ -8,50 +8,62 @@ const nextConfig = {
   turbopack: {
     root: __dirname,
   },
+  // Disable the automatic trailing-slash 308 so proxy.js can single-hop /resources/ → /blog.
+  // Routes still render for both /foo and /foo/ variants; canonical <link> tags and the sitemap
+  // keep the no-slash form as the indexed URL, so duplicate-content risk stays bounded.
+  skipTrailingSlashRedirect: true,
   async redirects() {
     return [
-      { source: '/resources', destination: '/blog', permanent: true },
-      { source: '/resources/:slug', destination: '/blog/:slug', permanent: true },
-      { source: '/articles', destination: '/blog', permanent: true },
-      { source: '/articles/:slug', destination: '/blog/:slug', permanent: true },
+      // '/resources/' (trailing slash) is handled in middleware.js — see comment there.
+      { source: '/resources', destination: '/blog', statusCode: 301 },
+      { source: '/resources/:slug', destination: '/blog/:slug', statusCode: 301 },
+      { source: '/articles', destination: '/blog', statusCode: 301 },
+      { source: '/articles/:slug', destination: '/blog/:slug', statusCode: 301 },
       // Case studies: singular → plural. Preserves link equity from old /case-study placeholder route.
-      { source: '/case-study', destination: '/case-studies', permanent: true },
-      { source: '/case-study/:slug', destination: '/case-studies/:slug', permanent: true },
+      // Specific legacy URL first: the -case-study suffix would otherwise pass through the
+      // generic rule below and land on a non-existent /case-studies/<slug>-case-study 404.
+      {
+        source: '/case-study/ai-content-automation-small-business-australia-case-study',
+        destination: '/case-studies/ai-content-automation-small-business-australia',
+        statusCode: 301,
+      },
+      { source: '/case-study', destination: '/case-studies', statusCode: 301 },
+      { source: '/case-study/:slug', destination: '/case-studies/:slug', statusCode: 301 },
 
       // Legacy article URLs from the live site: case-study-suffixed URL now lives under /case-studies
       {
         source: '/blog/ai-content-automation-small-business-australia-case-study',
         destination: '/case-studies/ai-content-automation-small-business-australia',
-        permanent: true,
+        statusCode: 301,
       },
 
       // Duplicate / variant article URLs consolidated to the canonical version
       {
         source: '/blog/getting-started-einvoicing-small-business-australia-guide',
         destination: '/blog/einvoicing-small-business-australia-guide',
-        permanent: true,
+        statusCode: 301,
       },
       {
         source: '/blog/getting-started-with-einvoicing-small-business-australia',
         destination: '/blog/einvoicing-small-business-australia-guide',
-        permanent: true,
+        statusCode: 301,
       },
       {
         source: '/blog/marketing-automation-small-business-australia',
         destination: '/blog/best-marketing-automation-software-australia-2026',
-        permanent: true,
+        statusCode: 301,
       },
       {
         source: '/blog/which-business-processes-automate-first-australia-2026',
         destination: '/blog/simplest-small-business-automation-tasks-australia-2026',
-        permanent: true,
+        statusCode: 301,
       },
 
       // Service slug rename (2026-04-20): website-experience-design → website-design
       {
         source: '/website-experience-design',
         destination: '/website-design',
-        permanent: true,
+        statusCode: 301,
       },
     ]
   },

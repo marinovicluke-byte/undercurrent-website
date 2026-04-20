@@ -36,3 +36,4 @@ dist-ssr/
 
 # Public preview artefact, not for production
 public/favicon-preview.html
+docs/favicon-preview.html

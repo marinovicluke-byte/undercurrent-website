@@ -4,7 +4,7 @@ import { getAllArticles } from '@/lib/articles'
 import { getAllCaseStudies } from '@/lib/caseStudies'
 import { CLUSTER_ORDER } from '@/lib/clusters'
 
-const BASE = 'https://undercurrentautomations.com'
+const BASE = 'https://www.undercurrentautomations.com'
 
 export default function sitemap() {
   const staticPages = [
