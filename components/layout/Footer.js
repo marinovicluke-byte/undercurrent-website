@@ -15,8 +15,6 @@ const COMPANY = [
 
 const TOOLS = [
   { label: 'Free audit', href: '/audit' },
-  { label: 'ROI calculator', href: '/roi' },
-  { label: 'Missed revenue tool', href: '/missed-revenue' },
 ]
 
 const LEGAL = [
@@ -275,26 +273,8 @@ export default function Footer() {
             </dd>
           </dl>
 
-          <div style={{ display: 'flex', gap: 8 }} aria-label="Social">
-            <SocialIcon href="#" label="Instagram">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-                <rect x="3" y="3" width="18" height="18" rx="5" />
-                <circle cx="12" cy="12" r="4" />
-                <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" />
-              </svg>
-            </SocialIcon>
-            <SocialIcon href="#" label="LinkedIn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-                <rect x="3" y="3" width="18" height="18" rx="2" />
-                <path d="M8 10 L8 16 M8 7 L8 7.01 M12 16 L12 10 M12 13 C 12 10 16 10 16 13 L 16 16" />
-              </svg>
-            </SocialIcon>
-            <SocialIcon href="#" label="X">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
-                <path d="M4 4 L20 20 M20 4 L4 20" />
-              </svg>
-            </SocialIcon>
-          </div>
+          {/* Social tiles hidden until real URLs are wired. Re-enable by passing
+              real Instagram/LinkedIn/X URLs to the SocialIcon href props. */}
         </div>
 
         {/* Nav columns */}
