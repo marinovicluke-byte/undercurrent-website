@@ -1,8 +1,8 @@
 # UnderCurrent Website — Agent Instructions
 
-## HARD RULE: DO NOT PUSH TO PRODUCTION
+## Deploy rule
 
-The `redesign` branch is a design preview only. NEVER merge to `main` or deploy to production without Luke explicitly saying "push it live", "merge to main", or "deploy to production". All work stays on `redesign`.
+Production is Next.js 15 on `main` (cutover 2026-04-20). Do not push to `main` without Luke explicitly saying "push it live", "merge to main", or "deploy to production". Preview deploys on feature branches are fine — they're private URLs on Vercel behind auth. Treat `git push origin main` as the one-way door: confirm before pulling the trigger.
 
 ## Routing
 
@@ -24,7 +24,7 @@ The `redesign` branch is a design preview only. NEVER merge to `main` or deploy 
 - **Domain:** undercurrentautomations.com (NOT .com.au)
 - **Stack:** Next.js 15 (App Router), React 19, Tailwind v4
 - **Dev server:** `npm run dev` → http://localhost:3001
-- **Branch:** `redesign` (all work here)
+- **Branch:** `main` is production. New work starts from `main` on a feature branch (e.g. `mobile-polish`, `location-v2`), opens a PR → merges back. `redesign` is preserved read-only as the pre-cutover rollback target until 2026-05-04.
 - **Repo:** `marinovicluke-byte/undercurrent-website`
 - **Vercel project:** `undercurrent-website` (team: marinovicluke-bytes-projects)
 
