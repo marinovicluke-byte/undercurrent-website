@@ -9,7 +9,7 @@ const BASE = 'https://undercurrentautomations.com'
 export default function sitemap() {
   const staticPages = [
     '', '/about', '/services', '/process', '/contact',
-    '/audit', '/roi', '/missed-revenue',
+    '/audit',
     '/blog', '/case-studies',
     '/privacy', '/terms',
   ].map(path => ({

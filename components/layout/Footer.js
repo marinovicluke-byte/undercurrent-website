@@ -273,8 +273,31 @@ export default function Footer() {
             </dd>
           </dl>
 
-          {/* Social tiles hidden until real URLs are wired. Re-enable by passing
-              real Instagram/LinkedIn/X URLs to the SocialIcon href props. */}
+          <div style={{ display: 'flex', gap: 8 }} aria-label="Social">
+            <SocialIcon href="https://www.instagram.com/undercurrent.automations/" label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" />
+              </svg>
+            </SocialIcon>
+            <SocialIcon href="https://www.linkedin.com/company/undercurrent-automations/" label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M8 10 L8 16 M8 7 L8 7.01 M12 16 L12 10 M12 13 C 12 10 16 10 16 13 L 16 16" />
+              </svg>
+            </SocialIcon>
+            <SocialIcon href="https://x.com/UC_Automations" label="X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                <path d="M4 4 L20 20 M20 4 L4 20" />
+              </svg>
+            </SocialIcon>
+            <SocialIcon href="https://www.facebook.com/profile.php?id=61578553167947" label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                <path d="M14 8 L14 5 C 14 3.5, 15 3, 16.5 3 L 18 3 L 18 7 L 16.5 7 C 15.8 7, 15.5 7.3, 15.5 8 L 15.5 10 L 18 10 L 17.5 13.5 L 15.5 13.5 L 15.5 21 L 12 21 L 12 13.5 L 10 13.5 L 10 10 L 12 10 L 12 8 Z" />
+              </svg>
+            </SocialIcon>
+          </div>
         </div>
 
         {/* Nav columns */}
