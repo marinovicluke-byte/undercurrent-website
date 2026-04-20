@@ -1,7 +1,15 @@
 # Lab Notes — What Not To Try
 
+## Cutover
+
+- **2026-04-20 — Production cutover, Vite → Next.js 15 completed.** Flipped Vercel Framework Preset from Vite to Next.js via REST API (`PATCH /v10/projects/{id}` with `{"framework":"nextjs"}`), then merged `redesign` into `main` and pushed. Prod deploy `https://undercurrent-website-lf9t3naxm-...` went live in 24s against `www.undercurrentautomations.com`. Merge commit `1b8064b`, cutover commit `71ab75b`, post-merge footer fix `6095363`. The HARD RULE "don't push to main" in `CLAUDE.md` is now stale and should be updated.
+- **Merge conflicts hit `.gitignore`, `vercel.json`, `src/utils/articles.js`, `src/views/Article.jsx`.** `.gitignore` unified, both sides' patterns kept. `vercel.json` taken from `redesign` (Vite rewrites+redirects superseded by `next.config.mjs`, leaving them would break Next.js routing). `src/` files taken from `main` (legacy dead code, keeps diff minimal). Before merging again, run `git pull origin main --ff-only` first — local `main` was 40 commits behind which caused a failed first attempt.
+- **Preview deploy fired from the `redesign` push BEFORE the preset flip → Error status.** Mechanical race, no code fault. `vercel redeploy` on the same deployment ID after the preset flip passed clean in 29s. Future rule: flip preset BEFORE the push that triggers the auto-preview, not after.
+- **Preexisting `.env` leak — did NOT get caught by the cutover.** `.env` has been tracked in git since commit `f15df88` (2026-03-31) and contains `VITE_N8N_AUDIT_WEBHOOK_URL`. `.gitignore` only prevents new additions — already-tracked files stay tracked. Fix: rotate the n8n webhook, then `git rm --cached .env` and commit. The value still lives in git history, so rotation is mandatory.
+
 ## Vercel / Deploy
-- **Vercel build fails with "No Output Directory named dist"** — Vercel project is still configured for Vite. Fix: Vercel dashboard → Settings → Framework Preset → Next.js. Do NOT change until ready to deploy redesign.
+
+- **Vercel build fails with "No Output Directory named dist"** — Vercel project is still configured for Vite. Fix: Vercel dashboard → Settings → Framework Preset → Next.js. Do NOT change until ready to deploy redesign. (Resolved 2026-04-20, see Cutover section.)
 - **Workspace root lockfile warning — NOT cosmetic under Next.js 16 Turbopack.** Old note said "cosmetic only", wrong. Under Next 16 Turbopack, the auto-detected root becomes the module resolution root. When the parent `/Website/` had a stray `package.json` + `package-lock.json`, Turbopack picked the parent as workspace root and could not resolve `tailwindcss` (installed in `undercurrent/node_modules` only). Every CSS file errored on every request, flooding stderr, OOMing the Node process, crashing the laptop twice on 2026-04-19. Fix: (1) pin `turbopack.root` to `__dirname` in `next.config.mjs` (done), (2) renamed parent `package.json` and `package-lock.json` to `.bak` so only the real `undercurrent/package-lock.json` remains.
 
 ## Next.js Migration
