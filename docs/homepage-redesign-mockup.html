@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UnderCurrent — homepage redesign mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --charcoal: #1C1C1A;
+    --charcoal-deep: #121210;
+    --off-white: #FAF9F5;
+    --blue: #6A8DAD;
+    --blue-light: #8AAEC8;
+    --sage: #8FAF9F;
+    --sage-light: #A8C4B8;
+    --orange: #E07A55;
+    --orange-light: #E8967A;
+    --text-primary: rgba(250, 249, 245, 0.88);
+    --text-secondary: rgba(250, 249, 245, 0.65);
+    --text-muted: rgba(250, 249, 245, 0.42);
+    --text-faint: rgba(250, 249, 245, 0.18);
+    --page-pad: 30px;
+    --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'SF Mono', 'Cascadia Code', ui-monospace, Menlo, monospace;
+  }
+  @media (min-width: 768px) { :root { --page-pad: 88px; } }
+
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--charcoal-deep);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  * { box-sizing: border-box; }
+
+  /* ─── inspector toggle (top-right) ─── */
+  .inspector-toggle {
+    position: fixed; top: 16px; right: 16px; z-index: 100;
+    padding: 10px 16px; background: var(--off-white); color: var(--charcoal-deep);
+    border: none; cursor: pointer;
+    font-family: var(--font-display); font-weight: 600; font-size: 13px;
+    letter-spacing: -0.01em;
+    box-shadow: 4px 4px 0 0 var(--blue);
+    transition: transform 120ms ease;
+  }
+  .inspector-toggle:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 0 var(--blue); }
+  body.show-notes .note { display: block; }
+  .note { display: none; position: relative; background: rgba(224,122,85,0.08); border-left: 3px solid var(--orange); padding: 14px 20px; margin: 0 var(--page-pad); font-size: 13px; line-height: 1.55; color: var(--off-white); font-family: var(--font-display); }
+  .note b { color: var(--orange-light); font-weight: 600; }
+  .note .was { color: var(--text-muted); text-decoration: line-through; }
+
+  /* ─── top banner ─── */
+  .banner {
+    background: var(--charcoal);
+    border-bottom: 1px solid var(--text-faint);
+    padding: 10px var(--page-pad);
+    display: flex; align-items: center; justify-content: space-between;
+    font-family: var(--font-display); font-size: 12px; color: var(--text-muted);
+    letter-spacing: 0.02em;
+  }
+  .banner b { color: var(--off-white); font-weight: 600; }
+
+  /* ─── hero ─── */
+  .hero {
+    position: relative;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    min-height: calc(100vh - 120px);
+    padding: 0 var(--page-pad) clamp(80px, 14vh, 160px);
+    overflow: hidden;
+    background: var(--charcoal-deep);
+    border-bottom: 1px solid var(--text-faint);
+  }
+  .hero video {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; opacity: 0.22; z-index: 0; pointer-events: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero video { display: none; }
+    .hero { background: radial-gradient(120% 80% at 70% 90%, rgba(106,141,173,0.16) 0%, transparent 60%), var(--charcoal-deep); }
+  }
+  /* NO radial section-glow overlay. Video alone provides motion. */
+  .hero__inner { position: relative; z-index: 2; max-width: 1600px; }
+  .hero h1 {
+    margin: 0;
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(42px, 8vw, 96px);
+    line-height: 1.04; letter-spacing: -0.035em;
+    color: var(--off-white); text-wrap: balance;
+  }
+  /* SOLID accent color, no glow, no gradient, no blur */
+  .hero .k { color: var(--blue-light); }
+  .hero .sub {
+    margin-top: 28px; max-width: 540px;
+    font-size: 17px; color: var(--text-secondary);
+  }
+  .hero__cta { margin-top: 36px; }
+
+  /* ─── pop button — hard offset shadow, the "teeth" ─── */
+  .cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 26px;
+    background: var(--off-white); color: var(--charcoal-deep);
+    font-family: var(--font-display); font-weight: 600; font-size: 15px;
+    text-decoration: none; letter-spacing: -0.01em;
+    border: 1px solid var(--charcoal-deep);
+    border-radius: 999px;
+    box-shadow: 4px 4px 0 0 var(--blue);
+    transition: transform 140ms cubic-bezier(.2,.7,.3,1), box-shadow 140ms cubic-bezier(.2,.7,.3,1);
+  }
+  .cta:hover { transform: translate(-3px, -3px); box-shadow: 7px 7px 0 0 var(--blue); }
+  .cta--large { padding: 18px 32px; font-size: 16px; }
+  .cta--ghost {
+    background: transparent; color: var(--off-white);
+    border: 1px solid var(--text-faint);
+    box-shadow: none;
+  }
+  .cta--ghost:hover { border-color: var(--off-white); transform: none; }
+
+  /* ─── marquee ─── */
+  .marquee {
+    border-top: 1px solid var(--text-faint);
+    border-bottom: 1px solid var(--text-faint);
+    background: var(--charcoal);
+    display: flex; align-items: center; overflow: hidden;
+  }
+  .marquee__label {
+    flex-shrink: 0; padding: 30px 28px 30px var(--page-pad);
+    font-family: var(--font-display); font-weight: 500; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted);
+    white-space: nowrap;
+  }
+  .marquee__track {
+    flex: 1; overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 82%, transparent);
+            mask-image: linear-gradient(90deg, transparent, black 10%, black 82%, transparent);
+  }
+  .marquee__row {
+    display: flex; gap: 48px; align-items: center; white-space: nowrap;
+    animation: scroll 55s linear infinite;
+    width: max-content; padding: 30px 0;
+  }
+  .marquee__row span {
+    font-family: var(--font-display); font-weight: 300; font-size: 20px;
+    letter-spacing: -0.01em; color: var(--text-secondary);
+  }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .marquee__row { animation: none; } }
+
+  /* ─── generic section shell ─── */
+  .section {
+    position: relative;
+    padding: 110px var(--page-pad);
+    background: var(--charcoal-deep);
+    border-bottom: 1px solid var(--text-faint);
+  }
+  .section--panel { background: var(--charcoal); }
+  .section__eyebrow {
+    display: inline-flex; align-items: center; gap: 14px;
+    font-family: var(--font-display); font-weight: 500; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-muted);
+    margin-bottom: 28px;
+  }
+  .section__eyebrow .n {
+    font-family: var(--font-mono); font-size: 11px; color: var(--off-white);
+    padding: 3px 8px; border: 1px solid var(--text-faint);
+  }
+  .section h2 {
+    margin: 0;
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(40px, 5.4vw, 76px); line-height: 1.0;
+    letter-spacing: -0.035em; color: var(--off-white);
+    text-wrap: balance; max-width: 1100px;
+  }
+  .section h2 .k { color: var(--sage-light); }
+  .section h2 .k--blue { color: var(--blue-light); }
+  .section h2 .k--orange { color: var(--orange-light); }
+  .section__lede {
+    margin-top: 24px; max-width: 640px;
+    font-size: 17px; color: var(--text-secondary); line-height: 1.6;
+  }
+
+  /* ─── 3-stat row (WhyAutomation reform) ─── */
+  .stats {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    margin-top: 56px;
+  }
+  .stats__card {
+    position: relative; background: var(--charcoal);
+    border: 1px solid var(--text-faint);
+    border-radius: 14px;
+    padding: 32px 32px 30px;
+    display: flex; flex-direction: column;
+    min-height: 300px;
+  }
+  .stats__card--blue { box-shadow: 6px 6px 0 0 var(--blue); }
+  .stats__card--sage { box-shadow: 6px 6px 0 0 var(--sage); }
+  .stats__card--orange { box-shadow: 6px 6px 0 0 var(--orange); }
+  .stats__card header {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 28px;
+    font-family: var(--font-display); font-weight: 500; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.12em; color: var(--off-white);
+  }
+  .stats__card header .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+  }
+  .stats__card--blue header .dot { background: var(--blue-light); }
+  .stats__card--sage header .dot { background: var(--sage-light); }
+  .stats__card--orange header .dot { background: var(--orange-light); }
+  .stats__card .stat {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 64px; line-height: 1; letter-spacing: -0.03em;
+    color: var(--off-white);
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 20px;
+  }
+  .stats__card .stat sup { font-size: 0.48em; color: var(--text-muted); font-weight: 500; margin-left: 3px; top: -0.4em; }
+  .stats__card h3 {
+    margin: 0 0 14px;
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 22px; line-height: 1.22; letter-spacing: -0.02em;
+    color: var(--off-white); max-width: 300px;
+  }
+  .stats__card p {
+    margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.55;
+    max-width: 300px;
+  }
+
+  /* ─── service row (ServicesOverview reform sample) ─── */
+  .svc {
+    display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px;
+    margin-top: 56px; align-items: start;
+  }
+  .svc__card {
+    position: relative;
+    background: var(--charcoal); border: 1px solid var(--text-faint);
+    border-radius: 14px; padding: 36px 40px 34px;
+    box-shadow: 6px 6px 0 0 var(--blue);
+  }
+  .svc__card h3 {
+    margin: 0;
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(32px, 3.4vw, 44px); line-height: 1.0; letter-spacing: -0.03em;
+    color: var(--off-white);
+  }
+  .svc__card h3 .k { color: var(--blue-light); }
+  .svc__card p {
+    margin: 18px 0 0; font-size: 15px; color: var(--text-secondary);
+    line-height: 1.55; max-width: 540px;
+  }
+  .svc__card ul { list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .svc__card li { display: flex; align-items: center; gap: 14px; font-size: 14px; color: var(--off-white); }
+  .svc__card li span.tick { width: 10px; height: 10px; background: var(--blue-light); flex-shrink: 0; }
+  .svc__card a.more {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 26px;
+    font-family: var(--font-display); font-weight: 500; font-size: 14px;
+    color: var(--blue-light); text-decoration: none;
+    border-bottom: 1px solid rgba(106,141,173,0.5);
+    padding-bottom: 3px;
+  }
+
+  /* ─── before/after (glass removed) ─── */
+  .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 56px; position: relative; }
+  .ba__panel {
+    position: relative; padding: 30px 32px 28px;
+    border-radius: 14px;
+    background: var(--charcoal);
+    border: 1px solid var(--text-faint);
+    /* NO backdrop-filter, NO inner glow, NO radial gradient */
+  }
+  .ba__panel--before { box-shadow: 5px 5px 0 0 var(--orange); }
+  .ba__panel--after  { box-shadow: 5px 5px 0 0 var(--sage); }
+  .ba__panel header {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-display); font-weight: 600; font-size: 11px;
+    text-transform: uppercase; letter-spacing: 0.14em; color: var(--off-white);
+  }
+  .ba__panel header .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .ba__panel--before header .dot { background: var(--orange); }
+  .ba__panel--after header .dot { background: var(--sage); }
+  .ba__panel header .sub { font-size: 10px; color: var(--text-muted); letter-spacing: 0.1em; }
+  .ba__panel h4 {
+    margin: 16px 0 20px;
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(20px, 1.8vw, 26px); line-height: 1.18;
+    letter-spacing: -0.018em; color: var(--off-white);
+  }
+  .ba__panel ul { list-style: none; margin: 0; padding: 0; }
+  .ba__panel li {
+    display: grid; grid-template-columns: 110px 1fr; gap: 18px;
+    padding: 12px 0; border-top: 1px solid rgba(255,255,255,0.06);
+    align-items: baseline;
+  }
+  .ba__panel .metric {
+    font-family: var(--font-mono); font-weight: 500; font-size: 16px;
+    letter-spacing: -0.01em; font-variant-numeric: tabular-nums;
+  }
+  .ba__panel--before .metric { color: var(--orange-light); }
+  .ba__panel--after  .metric { color: var(--sage-light); }
+  .ba__panel .label { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
+  .ba__panel .tag {
+    margin-top: 22px; padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-family: var(--font-display); font-weight: 600; font-size: 11px;
+    letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.5;
+  }
+  .ba__panel--before .tag { color: var(--orange-light); }
+  .ba__panel--after  .tag { color: var(--sage-light); }
+
+  /* ─── process grid ─── */
+  .process {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+    margin-top: 56px;
+  }
+  .process__step {
+    padding: 26px 26px 28px;
+    background: var(--charcoal); border: 1px solid var(--text-faint);
+    border-radius: 14px;
+    box-shadow: 4px 4px 0 0 var(--text-faint);
+  }
+  .process__step .n {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--off-white); color: var(--charcoal-deep);
+    font-family: var(--font-mono); font-size: 12px; font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  .process__step h3 {
+    margin: 22px 0 10px;
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 20px; letter-spacing: -0.015em; color: var(--off-white);
+  }
+  .process__step p {
+    margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.55;
+  }
+
+  /* ─── closing CTA ─── */
+  .closing {
+    position: relative; overflow: hidden;
+    padding: 140px var(--page-pad);
+    background: var(--charcoal-deep);
+    border-top: 1px solid var(--text-faint);
+    text-align: center;
+  }
+  /* one radial glow per page — kept here as the "arrival" moment */
+  .closing::before {
+    content: '';
+    position: absolute; left: 50%; bottom: -30%;
+    transform: translateX(-50%);
+    width: 60%; height: 90%; pointer-events: none;
+    background: radial-gradient(circle at 50% 70%, rgba(138,174,200,0.30) 0%, rgba(106,141,173,0.12) 30%, transparent 65%);
+    filter: blur(40px);
+    z-index: 1;
+  }
+  .closing__inner { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; }
+
+  /* ─── about ─── */
+  .about h2 { max-width: 1100px; }
+  .about__grid {
+    display: grid; grid-template-columns: 1.15fr 1fr; gap: 72px;
+    margin-top: 56px; align-items: start;
+  }
+  .about__prose p { margin: 0 0 18px; font-size: 17px; color: var(--text-secondary); line-height: 1.6; max-width: 520px; }
+  .about__prose p:last-child { margin-bottom: 0; }
+  .about__ctas { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+  .about__signcard {
+    padding: 36px 40px;
+    background: var(--charcoal);
+    border: 1px solid var(--text-faint);
+    border-radius: 14px;
+    box-shadow: 6px 6px 0 0 var(--blue);
+  }
+  .about__signcard .name {
+    font-family: var(--font-display); font-weight: 500; font-size: 32px;
+    letter-spacing: -0.025em; color: var(--off-white); line-height: 1;
+  }
+  .about__signcard .role {
+    margin-top: 14px;
+    font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.12em;
+  }
+  .about__signcard hr {
+    border: none; height: 1px; background: var(--text-faint);
+    margin: 24px 0;
+  }
+  .about__signcard .meta {
+    display: grid; grid-template-columns: 110px 1fr; gap: 12px;
+    font-size: 13px; line-height: 1.6;
+  }
+  .about__signcard .meta dt { color: var(--text-muted); font-family: var(--font-display); font-weight: 500; }
+  .about__signcard .meta dd { margin: 0; color: var(--off-white); }
+  @media (max-width: 900px) { .about__grid { grid-template-columns: 1fr; } }
+
+  /* ─── why undercurrent (statement section) ─── */
+  .why__statement {
+    display: flex; flex-direction: column; gap: 28px;
+    max-width: 1280px;
+  }
+  .why__statement h2 { max-width: 880px; }
+  .why__statement p { max-width: 680px; margin: 0; font-size: 17px; line-height: 1.55; color: var(--text-secondary); }
+
+  /* ─── FAQ accordion ─── */
+  .faq__list {
+    margin-top: 48px; max-width: 900px;
+    border: 1px solid var(--text-faint);
+    border-radius: 14px;
+    background: var(--charcoal);
+    box-shadow: 6px 6px 0 0 var(--sage);
+    overflow: hidden;
+  }
+  .faq__item + .faq__item { border-top: 1px solid var(--text-faint); }
+  .faq__item > summary {
+    list-style: none; cursor: pointer;
+    display: flex; align-items: center; gap: 18px;
+    padding: 22px 26px;
+  }
+  .faq__item > summary::-webkit-details-marker { display: none; }
+  .faq__item > summary::marker { display: none; }
+  .faq__item > summary:hover { background: rgba(255,255,255,0.02); }
+  .faq__item[open] > summary { background: rgba(143,175,159,0.06); }
+  .faq__q {
+    flex: 1; margin: 0;
+    font-family: var(--font-display); font-weight: 500; font-size: 18px;
+    letter-spacing: -0.015em; color: var(--off-white); line-height: 1.35;
+  }
+  .faq__icon {
+    width: 22px; height: 22px; flex-shrink: 0;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--sage-light); font-family: var(--font-display); font-weight: 300;
+    font-size: 22px; line-height: 1;
+    transition: transform 200ms ease;
+  }
+  .faq__item[open] .faq__icon { transform: rotate(45deg); }
+  .faq__a {
+    margin: 0; padding: 0 26px 24px;
+    font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+    color: var(--text-secondary); max-width: 760px;
+  }
+  .closing h2 {
+    margin: 0;
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(40px, 5vw, 88px); line-height: 1.05;
+    letter-spacing: -0.03em; color: var(--off-white);
+  }
+  .closing p {
+    margin: 20px auto 36px; max-width: 560px;
+    font-size: 17px; color: var(--text-secondary);
+  }
+
+  /* ─── responsive ─── */
+  @media (max-width: 900px) {
+    .stats { grid-template-columns: 1fr; }
+    .svc { grid-template-columns: 1fr; gap: 32px; }
+    .ba { grid-template-columns: 1fr; }
+    .process { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<button class="inspector-toggle" onclick="document.body.classList.toggle('show-notes')">Toggle design notes</button>
+
+<div class="banner">
+  <div><b>UnderCurrent homepage — redesign mockup v1</b> &middot; compare against <code>localhost:3000</code></div>
+  <div>one coherent direction &middot; keeps marquee, big type, keyword placement</div>
+</div>
+
+<div class="note"><b>Principle:</b> Dark editorial base is kept. Six AI-fingerprint details removed: <span class="was">radial section-glows, gradient text on headings, soft accent-blur shadows, backdrop-filter glass, SF Mono as decoration, saturated multi-word glows</span>. Replaced by a single idea: <b>hard offset accent shadow</b> on every card. Same palette, same type, same copy — different posture.</div>
+
+<!-- HERO -->
+<section class="hero">
+  <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="../public/hero-home-bg.webm" type="video/webm" />
+    <source src="../public/hero-home-bg.mp4" type="video/mp4" />
+  </video>
+  <div class="hero__inner">
+    <h1>The AI <span class="k">automation agency</span> for Australian small businesses</h1>
+    <p class="sub">Automations that find leads, close deals, and surface you in AI search. Built in 14 days. You own every workflow.</p>
+    <div class="hero__cta">
+      <a class="cta cta--large" href="#">Let's chat →</a>
+    </div>
+  </div>
+</section>
+
+<div class="note"><b>Hero change:</b> glow words reduced from 5 (<span class="was">automation, agency, australian, small, businesses</span>) to 1 phrase (<b>automation agency</b>) — and the remaining accent is a solid color, not a blur-glow. The H1 still contains every SEO/AIO keyword, only the visual emphasis is calmed. <b>Background:</b> video kept, opacity dropped from 0.3 to 0.22 so type wins. <b>CTA:</b> pop-out hard shadow (4px→7px offset on hover) replaces default rounded pill. This is the "teeth" your <code>.impeccable.md</code> describes.</div>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee__label">We build with</div>
+  <div class="marquee__track">
+    <div class="marquee__row">
+      <span>ChatGPT</span><span>Claude</span><span>n8n</span><span>Gmail</span><span>Slack</span><span>Notion</span>
+      <span>LinkedIn</span><span>Instagram</span><span>WhatsApp</span><span>HubSpot</span><span>Stripe</span><span>Zapier</span>
+      <span>ChatGPT</span><span>Claude</span><span>n8n</span><span>Gmail</span><span>Slack</span><span>Notion</span>
+      <span>LinkedIn</span><span>Instagram</span><span>WhatsApp</span><span>HubSpot</span><span>Stripe</span><span>Zapier</span>
+    </div>
+  </div>
+</div>
+
+<div class="note"><b>Marquee kept.</b> Only change: label copy shifted from "Who we integrate with:" to "We build with" — avoids implying a partner/API certification relationship you don't have with OpenAI or Anthropic. Motion respects <code>prefers-reduced-motion</code>.</div>
+
+<!-- WHY UNDERCURRENT -->
+<section class="section">
+  <div class="section__eyebrow"><span class="n">01</span> Why UnderCurrent</div>
+  <div class="why__statement">
+    <h2>Your business grows. <span class="k--blue">So do the systems.</span></h2>
+    <p>UnderCurrent works as a long-term partner alongside you. We build the first wave of automations, tune them as the business shifts, and design the next ones when new priorities land. You own every workflow. The retainer earns its place on measurable returns.</p>
+    <div><a class="cta" href="#">Let's chat →</a></div>
+  </div>
+</section>
+
+<div class="note"><b>WhyUndercurrent change:</b> <span class="was">Radial <code>SectionGlow</code> overlay (bottom-right corner)</span> → removed. Section is pure statement + type hierarchy. The single blue keyword ("So do the systems.") carries the accent. Pop-out CTA provides the only visual flourish. This is the clearest example of <i>"sections earn attention through type and shadow, not ambient glow."</i></div>
+
+<!-- WHY AUTOMATION -->
+<section class="section section--panel">
+  <div class="section__eyebrow"><span class="n">02</span> The case</div>
+  <h2>The case for automation, in <span class="k">three numbers</span>.</h2>
+  <p class="section__lede">Three stats every Australian small-business owner should read before the next hire. All conservative.</p>
+  <div class="stats">
+    <article class="stats__card stats__card--orange">
+      <header><span class="dot"></span> Revenue</header>
+      <div class="stat">+34<sup>%</sup></div>
+      <h3>Businesses that automate outgrow the ones that don't.</h3>
+      <p>Companies running real automations see 34% higher revenue growth than the ones still handling it by hand.</p>
+    </article>
+    <article class="stats__card stats__card--sage">
+      <header><span class="dot"></span> Time</header>
+      <div class="stat">10<sup>h</sup></div>
+      <h3>Ten hours a week, every week, back in the founder's calendar.</h3>
+      <p>Across sales, ops, and marketing, mature automations return 6 to 16 hours a week. Ten is the conservative floor.</p>
+    </article>
+    <article class="stats__card stats__card--blue">
+      <header><span class="dot"></span> Uptime</header>
+      <div class="stat">24<sup>/7</sup></div>
+      <h3>Your operations don't clock off when you do.</h3>
+      <p>Workflows qualify leads, send invoices, and chase follow-ups while you sleep. Weekends and holidays included.</p>
+    </article>
+  </div>
+</section>
+
+<div class="note"><b>WhyAutomation change:</b> three stat cards kept. <span class="was">Soft radial accent shadow <code>0 12px 40px -22px rgba(accent, 0.45)</code></span> → hard offset shadow <code>6px 6px 0 0 var(--accent)</code>. <span class="was">Cards overlap by -16px with z-stack</span> → clean gap. <span class="was">Light top-border accent rule</span> → removed (the shadow does the work). <span class="was">SF Mono "01/02/03" index + decorative dash</span> → removed. <span class="was">Gradient-ish colored stats</span> → solid off-white numerals, let the shadow carry the color. Result: the stats read first, the accent frames them.</div>
+
+<!-- SERVICES SAMPLE -->
+<section class="section">
+  <div class="section__eyebrow"><span class="n">03</span> Our services</div>
+  <h2>What we <span class="k--blue">specialise</span> in.</h2>
+  <p class="section__lede">Custom automation systems that give you 15+ hours a week back. No off-the-shelf shortcuts. No lock-in.</p>
+  <div class="svc">
+    <div>
+      <p style="font-family:var(--font-display); font-size: 13px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.12em; margin: 0 0 20px;">Service 01 of 06</p>
+      <p style="margin: 0; font-size: 16px; color: var(--text-secondary); line-height: 1.6; max-width: 440px;">Scroll-linked detail: each service card activates as you pass it. Dots below show progress — smaller when inactive so the row doesn't fight the card.</p>
+      <div style="margin-top: 32px; display: flex; gap: 8px; align-items: center;">
+        <span style="width: 36px; height: 3px; background: var(--blue-light);"></span>
+        <span style="width: 20px; height: 3px; background: rgba(255,255,255,0.18);"></span>
+        <span style="width: 20px; height: 3px; background: rgba(255,255,255,0.18);"></span>
+        <span style="width: 20px; height: 3px; background: rgba(255,255,255,0.18);"></span>
+        <span style="width: 20px; height: 3px; background: rgba(255,255,255,0.18);"></span>
+        <span style="width: 20px; height: 3px; background: rgba(255,255,255,0.18);"></span>
+      </div>
+    </div>
+    <article class="svc__card">
+      <h3>Lead <span class="k">Generation</span></h3>
+      <p>Lead generation automation that finds prospects, writes personalised outreach, and keeps following up until someone replies.</p>
+      <ul>
+        <li><span class="tick"></span><span>AI cold email at scale</span></li>
+        <li><span class="tick"></span><span>Lead capture and qualification</span></li>
+        <li><span class="tick"></span><span>Automated follow-up sequences</span></li>
+      </ul>
+      <a class="more" href="#">Learn more →</a>
+    </article>
+  </div>
+</section>
+
+<div class="note"><b>Services change:</b> the big one is the accent word. <span class="was"><code>linear-gradient(180deg, light → base)</code> with <code>WebkitBackgroundClip: 'text'</code></span> → solid <code>var(--blue-light)</code>. Gradient text on headings is the #1 AI-slop tell and it's used on every service title. A solid accent reads cleaner and still picks up the keyword. <b>Dot row:</b> inactive dots shrunk from 34px to 20px and faded so the active state actually stands out. <b>Card border:</b> when inactive, opacity 0.35 → kept; when active, the pop-shadow shows instead of <span class="was">inner radial gradient + 4px outer halo + 60px blur shadow (three stacked effects)</span>.</div>
+
+<!-- ABOUT -->
+<section class="section section--panel about">
+  <div class="section__eyebrow"><span class="n">04</span> About us</div>
+  <h2>Founded in Melbourne, <span class="k--blue">2026</span>.</h2>
+  <div class="about__grid">
+    <div class="about__prose">
+      <p>I started UnderCurrent Automations, a Melbourne AI automation agency, after watching too many Australian small businesses grind through work the way they'd always done it, because no one had stopped to ask if they still had to. The answer, most of the time, is no. Automate the repetitive, and what's left is the work that moves things forward: revenue, creativity, time with the people you like.</p>
+      <p>Today we run lead generation, sales automation, and business process automation for Australian tradies, consultants, allied health practices, and business services. Most builds go live in 14 days.</p>
+      <div class="about__ctas">
+        <a class="cta" href="#">Let's chat →</a>
+        <a class="cta cta--ghost" href="#">Read more →</a>
+      </div>
+    </div>
+    <aside class="about__signcard">
+      <div class="name">Luke Marinovic</div>
+      <div class="role">Founder, UnderCurrent Automations</div>
+      <hr />
+      <dl class="meta">
+        <dt>Based</dt><dd>Melbourne, VIC</dd>
+        <dt>Founded</dt><dd>February 2026</dd>
+        <dt>Focus</dt><dd>Australian SMBs</dd>
+        <dt>Stack</dt><dd>n8n · Modal · Next.js · Claude · GPT</dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<div class="note"><b>About change:</b> heading copy <span class="was">"Serving Australian small businesses since 2026"</span> → <b>"Founded in Melbourne, 2026"</b>. Factually cleaner, no "since 2026" stated in 2026. <span class="was">Gradient-silhouette portrait card with "Portrait · placeholder" dashed badge</span> → <b>signature card</b>: name, role, and a tight metadata list (Based / Founded / Focus / Stack). This is a P0 trust-fix that doesn't need a photo to ship; when Luke has a real portrait, the card becomes a photo + signature block without changing layout. The pop-shadow keeps it visually aligned with the rest of the page.</div>
+
+<!-- BEFORE / AFTER -->
+<section class="section section--panel">
+  <div class="section__eyebrow"><span class="n">05</span> The shift</div>
+  <h2>The difference between a busy week and a <span class="k">compounding</span> one.</h2>
+  <p class="section__lede">Most Australian small businesses lose five to fifteen hours a week to manual work. Automation reclaims it across five pillars.</p>
+  <div class="ba">
+    <article class="ba__panel ba__panel--before">
+      <header><span class="dot"></span> Before <span class="sub">· Manual, today</span></header>
+      <h4>Chasing cold lists, guessing who's ready.</h4>
+      <ul>
+        <li><span class="metric">6 hrs/wk</span><span class="label">scraping LinkedIn for contacts</span></li>
+        <li><span class="metric">40%</span><span class="label">of replies go to unqualified leads</span></li>
+        <li><span class="metric">3 days</span><span class="label">avg. response to a warm inbound</span></li>
+        <li><span class="metric">1 tool</span><span class="label">CRM, spreadsheets, inbox out of sync</span></li>
+      </ul>
+      <div class="tag">A founder's half-day every week, gone.</div>
+    </article>
+    <article class="ba__panel ba__panel--after">
+      <header><span class="dot"></span> After <span class="sub">· Automated, with us</span></header>
+      <h4>Qualified pipeline arrives while you sleep.</h4>
+      <ul>
+        <li><span class="metric">12 min/wk</span><span class="label">reviewing a pre-scored shortlist</span></li>
+        <li><span class="metric">94%</span><span class="label">match rate on ICP before outreach</span></li>
+        <li><span class="metric">8 min</span><span class="label">median response to inbound</span></li>
+        <li><span class="metric">One view</span><span class="label">CRM, enrichment, inbox, calendar</span></li>
+      </ul>
+      <div class="tag">Five hours back. Every week. Forever.</div>
+    </article>
+  </div>
+</section>
+
+<div class="note"><b>BeforeAfter change (biggest):</b> this is where the most AI-feel lived. Removed: <span class="was"><code>backdrop-filter: blur(10px)</code>, <code>background: linear-gradient(180deg, rgba(accent, 0.08), rgba(12,12,10, 0.5))</code>, absolute-positioned radial-gradient <code>rgba(light, 0.18)</code>, inset-top-white-highlight border, and 54px circular arrow medallion with nested blur</span>. Replaced by flat tinted surface + hard offset shadow. The panels now read as <i>documents</i>, not as <i>glass slabs floating over an abstract gradient</i>. Content legibility goes up, "AI SaaS landing page" feel goes way down. The metric column still lets Before/After read in parallel without the central arrow ornament.</div>
+
+<!-- PROCESS -->
+<section class="section">
+  <div class="section__eyebrow"><span class="n">06</span> How we work</div>
+  <h2>From first call to <span class="k">launch</span>.</h2>
+  <p class="section__lede">Four stages, no surprises. Fixed scope, weekly check-ins, and a working system at handover. Most builds go live in 14 days.</p>
+  <div class="process">
+    <article class="process__step"><span class="n">1</span><h3>Funnel map audit</h3><p>A free 30-minute session where we audit your funnel, identify bottlenecks, and map the highest-value automations.</p></article>
+    <article class="process__step"><span class="n">2</span><h3>Proposal</h3><p>Scope, timeline, and fixed price up front. No surprises, no hourly billing. You know what you're getting.</p></article>
+    <article class="process__step"><span class="n">3</span><h3>Project</h3><p>Our team builds, tests, and deploys your systems. You get weekly updates and a working product at handover.</p></article>
+    <article class="process__step"><span class="n">4</span><h3>Ongoing management</h3><p>Optional retainer for monitoring, optimisation, and iteration. Most clients see compounding returns over time.</p></article>
+  </div>
+</section>
+
+<div class="note"><b>Process change:</b> four cards, step-numbers inverted from <span class="was">white-on-translucent-surface</span> to <b>solid off-white disc with charcoal numeral</b> — reads as a proper ordinal stamp, not a decorative badge. Small hard offset shadow (4px, faint white) gives the grid subtle depth without color noise. This section was already closest to working; only minor tightening.</div>
+
+<!-- FAQ -->
+<section class="section section--panel">
+  <div class="section__eyebrow"><span class="n">07</span> Common questions</div>
+  <h2>We've heard every <span class="k">objection</span>. Here's the truth.</h2>
+  <p class="section__lede">Honest answers to the questions we get asked most, before anyone writes a cheque.</p>
+  <div class="faq__list">
+    <details class="faq__item" open>
+      <summary><h3 class="faq__q">Will this actually work for my type of business?</h3><span class="faq__icon" aria-hidden="true">+</span></summary>
+      <p class="faq__a">We work with any service-based business, tradies, consultants, coaches, agencies, healthcare practices. If you have repetitive tasks and customers, we can automate it. The audit tells you exactly how much.</p>
+    </details>
+    <details class="faq__item">
+      <summary><h3 class="faq__q">I'm not tech-savvy, will I be able to manage this?</h3><span class="faq__icon" aria-hidden="true">+</span></summary>
+      <p class="faq__a">You don't manage anything. We build it, we maintain it, we fix it when something changes. You just receive the results. Most clients never need to open a settings panel.</p>
+    </details>
+    <details class="faq__item">
+      <summary><h3 class="faq__q">What if it doesn't save me as much time as you say?</h3><span class="faq__icon" aria-hidden="true">+</span></summary>
+      <p class="faq__a">We don't guess. In the audit, we show you the exact hours and tasks we'll automate before we build anything. You see the numbers first. If they don't impress you, walk away, no charge.</p>
+    </details>
+    <details class="faq__item">
+      <summary><h3 class="faq__q">How does this work with our existing tools?</h3><span class="faq__icon" aria-hidden="true">+</span></summary>
+      <p class="faq__a">We connect to the software you already use, Gmail, HubSpot, Notion, Slack, Xero, whatever you have. Nothing changes about how your team works. We add automation underneath, so the results happen without you having to think about it.</p>
+    </details>
+    <details class="faq__item">
+      <summary><h3 class="faq__q">What does it actually cost?</h3><span class="faq__icon" aria-hidden="true">+</span></summary>
+      <p class="faq__a">We price based on what we save you. If automation saves your business $20,000 a year, we take a small share, you keep the rest. Most clients see their full investment back within six months. We show you the numbers in the free audit before you spend anything.</p>
+    </details>
+    <details class="faq__item">
+      <summary><h3 class="faq__q">How long until we see results?</h3><span class="faq__icon" aria-hidden="true">+</span></summary>
+      <p class="faq__a">Most clients notice a difference in the first two weeks. The full system is live in 30 days. We move fast because we've done this before. The free audit maps out exactly what gets automated and when.</p>
+    </details>
+    <details class="faq__item">
+      <summary><h3 class="faq__q">Do we own the automations, or are we locked in?</h3><span class="faq__icon" aria-hidden="true">+</span></summary>
+      <p class="faq__a">You own everything we build. If you ever want to take it in-house or move on, the automations stay with you. We're not a subscription you can't escape, we're here to build something that works for your business long term.</p>
+    </details>
+  </div>
+</section>
+
+<div class="note"><b>FAQ change:</b> the accordion pattern itself works well — kept. Wrapped the whole stack in one pop-shadow card (sage) so it reads as a unified object, not a list floating on the panel. Expand icon color softened to sage-light. First item open by default for scroll-arrival context.</div>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="closing__inner">
+    <h2>Ready to get your <span style="color: var(--sage-light);">afternoons</span> back?</h2>
+    <p>Book a 20-minute call. No slides, no pitch — just a look at where automation pays back first.</p>
+    <a class="cta cta--large" href="#">Let's talk →</a>
+  </div>
+</section>
+
+<div class="note"><b>Closing change:</b> radial glow <b>kept</b> — on the original homepage it's one of five radial glows, which is why the page reads as "glow everywhere." Here the other four are gone, so this one becomes <i>the</i> glow — an earned arrival moment rather than ambient noise. One per page is the right amount.</div>
+
+<!-- FOOTER NOTE -->
+<div style="padding: 40px var(--page-pad); background: var(--charcoal); border-top: 1px solid var(--text-faint); color: var(--text-muted); font-size: 13px; font-family: var(--font-display);">
+  <div style="max-width: 900px;">
+    <b style="color: var(--off-white);">Design principles applied</b><br>
+    1. <b>One idea per section, one accent per idea.</b> Blue for Revenue/Why, Sage for Time/Shift/After, Orange for Before/Warning only.<br>
+    2. <b>Hard offset shadow replaces soft accent blur.</b> Same visual weight, opposite posture.<br>
+    3. <b>Solid accent color replaces gradient text.</b> Removes the #1 AI-slop fingerprint.<br>
+    4. <b>One radial glow per page</b>, saved for the closing arrival. Other sections earn attention through type and shadow only.<br>
+    5. <b>SF Mono confined to stat numerals and section numbers.</b> Not used as a decorative "technical" voice.<br>
+    6. <b>Glow words reduced to 1 per heading.</b> H1/H2 text still contains every SEO/AIO keyword; visual emphasis is single, not scattered.<br>
+    <br>
+    <b style="color: var(--off-white);">What stayed identical</b><br>
+    Palette, fonts, copy, section order, section numbering, marquee, video hero, 14px card radius (memory-confirmed UC pattern), eyebrow/label treatment, all JSON-LD and SEO keyword placement.
+  </div>
+</div>
+
+</body>
+</html>

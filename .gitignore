@@ -7,20 +7,32 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-.next
+# Dependencies / build output
+node_modules/
+.next/
+dist/
+dist-ssr/
+
+# Environment
+.env
+.env.local
+.env*.local
 *.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# OS / misc
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-.worktrees
+
+# Editor / tooling
+.vscode/
+.idea/
+.claude/
+.superpowers/
+
+# Local Vercel link (contains project + org IDs)
+.vercel/
+
+# Backup files
+*.bak
+
+# Public preview artefact, not for production
+public/favicon-preview.html

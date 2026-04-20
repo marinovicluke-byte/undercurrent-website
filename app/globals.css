@@ -1,0 +1,259 @@
+/* app/globals.css */
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-charcoal: #1C1C1A;
+  --color-charcoal-deep: #121210;
+  --color-charcoal-light: #2E2E2B;
+  --color-charcoal-hover: #3A3A37;
+  --color-off-white: #FAF9F5;
+  --color-parchment: #ECEAE5;
+  --color-warm-sand: #D4C9B0;
+
+  --color-blue: #6A8DAD;
+  --color-blue-light: #8AAEC8;
+  --color-sage: #8FAF9F;
+  --color-sage-light: #A8C4B8;
+  --color-sage-dark: #6B8A7A;
+  --color-olive: #6B7C4A;
+  --color-orange: #E07A55;
+  --color-orange-light: #E8967A;
+  --color-negative: #D4564A;
+
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-satoshi);
+  --font-mono: 'SF Mono', 'Cascadia Code', ui-monospace, Menlo, monospace;
+}
+
+:root {
+  --charcoal: #1C1C1A;
+  --charcoal-deep: #121210;
+  --charcoal-light: #2E2E2B;
+  --charcoal-hover: #3A3A37;
+  --off-white: #FAF9F5;
+  --parchment: #ECEAE5;
+  --warm-sand: #D4C9B0;
+
+  --blue: #6A8DAD;
+  --blue-light: #8AAEC8;
+  --sage: #8FAF9F;
+  --sage-light: #A8C4B8;
+  --sage-dark: #6B8A7A;
+  --olive: #6B7C4A;
+  --orange: #E07A55;
+  --orange-light: #E8967A;
+  --negative: #D4564A;
+
+  --bg-deep:  #121210;
+  --bg-main:  #262624;
+  --bg-card:  #2E2E2B;
+
+  --accent:   #6A8DAD;
+  --positive: #8FAF9F;
+  --warning:  #E07A55;
+
+  --page-pad: 30px;
+
+  --text-primary:   rgba(250, 249, 245, 0.88);
+  --text-secondary: rgba(250, 249, 245, 0.65);
+  --text-muted:     rgba(250, 249, 245, 0.42);
+  --text-faint:     rgba(250, 249, 245, 0.22);
+
+  --tint-positive: rgba(143, 175, 159, 0.12);
+  --tint-warning:  rgba(224, 122, 85, 0.12);
+  --tint-negative: rgba(212, 86, 74, 0.12);
+  --tint-neutral:  rgba(250, 249, 245, 0.06);
+}
+
+@media (min-width: 768px) {
+  :root { --page-pad: 88px; }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+body[data-bg="charcoal"] { background: #1A1A18; }
+
+* { box-sizing: border-box; }
+
+button { font-family: inherit; }
+
+::selection {
+  background: rgba(106,141,173,0.35);
+  color: var(--off-white);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+}
+
+.label {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.logo-subtitle {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-secondary);
+}
+
+.nav-section-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+/* Retained for ClosingCTA only — no other section should use it */
+@keyframes uc-glow-pulse {
+  0%, 100% { opacity: 0.8;  transform: translate(0, 0) scale(1); }
+  50%      { opacity: 1;    transform: translate(0, 0) scale(1.02); }
+}
+
+@keyframes uc-wave {
+  0%   { opacity: 0;    transform: translate(-50%, -50%) scale(0.2); }
+  12%  { opacity: 0.35; }
+  60%  { opacity: 0.12; }
+  100% { opacity: 0;    transform: translate(-50%, -50%) scale(2.4); }
+}
+
+@keyframes uc-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes uc-text-glow {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@keyframes ba-fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* v2: solid accent color. Was animated gradient text. */
+.uc-glow-word,
+.uc-glow-word--blue {
+  color: var(--blue-light);
+  display: inline;
+}
+
+.uc-glow-word--sage {
+  color: var(--sage-light);
+  display: inline;
+}
+
+.uc-glow-word--orange {
+  color: var(--orange-light);
+  display: inline;
+}
+
+/* Hard offset accent shadows — the "teeth" */
+.uc-pop-blue   { box-shadow: 6px 6px 0 0 var(--blue); }
+.uc-pop-sage   { box-shadow: 6px 6px 0 0 var(--sage); }
+.uc-pop-orange { box-shadow: 6px 6px 0 0 var(--orange); }
+.uc-pop-faint  { box-shadow: 4px 4px 0 0 var(--text-faint); }
+.uc-pop-blue--sm   { box-shadow: 4px 4px 0 0 var(--blue); }
+.uc-pop-sage--sm   { box-shadow: 4px 4px 0 0 var(--sage); }
+.uc-pop-orange--sm { box-shadow: 4px 4px 0 0 var(--orange); }
+/* Hover variants bump the shadow and translate the card */
+.uc-pop-hover-blue:hover,
+.uc-pop-hover-sage:hover,
+.uc-pop-hover-orange:hover {
+  transform: translate(-2px, -2px);
+  transition: transform 160ms cubic-bezier(.2,.7,.3,1), box-shadow 160ms cubic-bezier(.2,.7,.3,1);
+}
+.uc-pop-hover-blue:hover   { box-shadow: 8px 8px 0 0 var(--blue); }
+.uc-pop-hover-sage:hover   { box-shadow: 8px 8px 0 0 var(--sage); }
+.uc-pop-hover-orange:hover { box-shadow: 8px 8px 0 0 var(--orange); }
+
+.fade-hidden {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.fade-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; }
+  .fade-hidden { opacity: 1; transform: none; }
+  .fade-visible { transition: none; }
+}
+
+@media (max-width: 900px) {
+  .uc-why-grid-wrap,
+  .uc-stack-2col {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+
+  .uc-stack-4col {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .uc-why-cards {
+    flex-direction: column !important;
+  }
+  .uc-why-cards > article {
+    margin-left: 0 !important;
+  }
+
+  .uc-services-sticky {
+    position: static !important;
+    top: auto !important;
+    align-self: auto !important;
+    padding-right: 0 !important;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .uc-stack-4col {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}

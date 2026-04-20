@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UC Section Eyebrow — 10 Variations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --charcoal: #1C1C1A;
+    --charcoal-deep: #121210;
+    --charcoal-light: #2E2E2B;
+    --off-white: #FAF9F5;
+    --parchment: #ECEAE5;
+    --warm-sand: #D4C9B0;
+    --blue: #6A8DAD;
+    --blue-light: #8AAEC8;
+    --sage: #8FAF9F;
+    --sage-light: #A8C4B8;
+    --olive: #6B7C4A;
+    --orange: #E07A55;
+    --text-primary:   rgba(250, 249, 245, 0.88);
+    --text-secondary: rgba(250, 249, 245, 0.65);
+    --text-muted:     rgba(250, 249, 245, 0.42);
+    --text-faint:     rgba(250, 249, 245, 0.22);
+    --font-display: 'Space Grotesk', ui-sans-serif, system-ui;
+    --font-body: 'Satoshi', ui-sans-serif, system-ui;
+    --font-mono: 'SF Mono', 'Cascadia Code', ui-monospace, Menlo, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--charcoal-deep);
+    color: var(--off-white);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    padding: 64px 48px 120px;
+  }
+
+  .page-header {
+    max-width: 1440px;
+    margin: 0 auto 48px;
+  }
+  .page-title {
+    font-family: var(--font-display);
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    margin: 0 0 12px;
+  }
+  .page-sub {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 640px;
+    line-height: 1.55;
+  }
+
+  .grid {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+
+  .card {
+    background: var(--charcoal);
+    border: 1px solid var(--text-faint);
+    border-radius: 16px;
+    padding: 28px 28px 32px;
+    position: relative;
+  }
+  .card-index {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .card-name {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin: 6px 0 4px;
+  }
+  .card-note {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0 0 24px;
+  }
+  .pill-stage {
+    padding: 32px 24px;
+    background: var(--charcoal-deep);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    align-items: flex-start;
+  }
+  .label { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.01em; }
+  .mono { font-family: var(--font-mono); }
+
+  /* ---------- V1 — Baseline (for reference) ---------- */
+  .v1 {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 6px 18px 6px 6px;
+    border-radius: 999px;
+    background: rgba(28,28,26,0.6);
+    border: 1px solid var(--text-faint);
+    backdrop-filter: blur(10px);
+  }
+  .v1 .num {
+    width: 28px; height: 28px; border-radius: 999px;
+    background: var(--off-white); color: var(--charcoal-deep);
+    font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .v1 .lbl {
+    font-family: var(--font-display); font-size: 13px; font-weight: 500;
+    letter-spacing: -0.01em; color: var(--text-secondary);
+  }
+
+  /* ---------- V2 — Terminal / Data console ---------- */
+  .v2 {
+    display: inline-flex; align-items: stretch;
+    border: 1px solid rgba(138,174,200,0.35);
+    background: rgba(106,141,173,0.06);
+    font-family: var(--font-mono);
+    font-size: 12px;
+  }
+  .v2 .num {
+    padding: 8px 12px;
+    background: rgba(106,141,173,0.18);
+    color: var(--blue-light);
+    border-right: 1px solid rgba(138,174,200,0.35);
+    letter-spacing: 0.12em;
+  }
+  .v2 .lbl {
+    padding: 8px 14px;
+    color: var(--off-white);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  /* ---------- V3 — Split accent (sage block + charcoal body) ---------- */
+  .v3 {
+    display: inline-flex; align-items: stretch;
+    border-radius: 4px; overflow: hidden;
+    box-shadow: 0 8px 28px -18px rgba(143,175,159,0.5);
+  }
+  .v3 .num {
+    background: var(--sage);
+    color: var(--charcoal-deep);
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 15px;
+    padding: 10px 14px;
+    letter-spacing: -0.01em;
+  }
+  .v3 .lbl {
+    background: var(--charcoal);
+    color: var(--off-white);
+    padding: 10px 18px;
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 13px; letter-spacing: -0.005em;
+    border: 1px solid var(--charcoal-light);
+    border-left: none;
+  }
+
+  /* ---------- V4 — Corner bracket / blueprint (animated) ---------- */
+  .v4 {
+    display: inline-flex; align-items: center; gap: 14px;
+    padding: 10px 16px;
+    position: relative;
+    font-family: var(--font-mono);
+  }
+  .v4::before, .v4::after {
+    content: ''; position: absolute;
+    width: 10px; height: 10px;
+    border: 1px solid var(--off-white);
+    animation: v4-bracket 3.6s ease-in-out infinite;
+  }
+  .v4::before { top: 0; left: 0; border-right: none; border-bottom: none; }
+  .v4::after  { bottom: 0; right: 0; border-left: none; border-top: none; animation-delay: 1.8s; }
+  @keyframes v4-bracket {
+    0%, 100% { border-color: rgba(250,249,245,0.55); }
+    50%      { border-color: rgba(138,174,200,1); }
+  }
+  .v4 .num {
+    color: var(--blue-light);
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+  .v4 .bar {
+    width: 36px; height: 1px;
+    background: var(--text-faint);
+    position: relative; overflow: hidden;
+  }
+  .v4 .bar::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent 0%, var(--blue-light) 50%, transparent 100%);
+    transform: translateX(-100%);
+    animation: v4-sweep 3.6s ease-in-out infinite;
+  }
+  @keyframes v4-sweep {
+    0%, 20%   { transform: translateX(-100%); }
+    55%, 100% { transform: translateX(100%); }
+  }
+  .v4 .lbl {
+    color: var(--off-white);
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  }
+
+  /* ---------- V5 — Telemetry / sensor ---------- */
+  .v5 {
+    display: inline-flex; align-items: center; gap: 12px;
+  }
+  .v5 .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--blue-light);
+    box-shadow: 0 0 12px rgba(138,174,200,0.8), 0 0 0 3px rgba(138,174,200,0.12);
+    animation: v5-pulse 2.2s ease-in-out infinite;
+  }
+  @keyframes v5-pulse {
+    0%, 100% { box-shadow: 0 0 12px rgba(138,174,200,0.8), 0 0 0 3px rgba(138,174,200,0.12); }
+    50%      { box-shadow: 0 0 20px rgba(138,174,200,1),   0 0 0 6px rgba(138,174,200,0.05); }
+  }
+  .v5 .num {
+    font-family: var(--font-mono); font-size: 12px; color: var(--blue-light);
+    letter-spacing: 0.14em;
+  }
+  .v5 .rule { flex: 0 0 36px; height: 1px; background: var(--text-faint); }
+  .v5 .lbl {
+    font-family: var(--font-display); font-size: 13px; font-weight: 500;
+    color: var(--off-white); letter-spacing: -0.005em;
+  }
+
+  /* ---------- V6 — Stacked stamp ---------- */
+  .v6 {
+    display: inline-flex; flex-direction: column; align-items: flex-start;
+    padding: 10px 16px 12px;
+    border: 1px solid var(--text-faint);
+    background: var(--charcoal);
+    border-radius: 6px;
+    min-width: 160px;
+    position: relative;
+  }
+  .v6::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 36px; height: 2px; background: var(--blue);
+  }
+  .v6 .num {
+    font-family: var(--font-display); font-size: 20px; font-weight: 600;
+    color: var(--off-white); letter-spacing: -0.02em; line-height: 1;
+    margin-bottom: 4px;
+  }
+  .v6 .lbl {
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--text-muted); letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  /* ---------- V7 — Inverted hero chip (bold) ---------- */
+  .v7 {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 4px 16px 4px 4px;
+    border-radius: 999px;
+    background: var(--off-white);
+    color: var(--charcoal-deep);
+    box-shadow: 0 10px 30px -14px rgba(250,249,245,0.25);
+  }
+  .v7 .num {
+    width: 28px; height: 28px; border-radius: 999px;
+    background: var(--charcoal-deep); color: var(--off-white);
+    font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .v7 .lbl {
+    font-family: var(--font-display); font-size: 13px; font-weight: 600;
+    color: var(--charcoal-deep); letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+
+  /* ---------- V8 — Double-layer + underline ---------- */
+  .v8 {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 4px 4px 4px 4px;
+    border-radius: 999px;
+    background: rgba(138,174,200,0.08);
+    border: 1px solid rgba(138,174,200,0.25);
+  }
+  .v8 .num {
+    width: 30px; height: 30px; border-radius: 999px;
+    background: var(--off-white); color: var(--charcoal-deep);
+    font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+    display: inline-flex; align-items: center; justify-content: center;
+    box-shadow: inset 0 0 0 2px rgba(106,141,173,0.4);
+  }
+  .v8 .lbl {
+    padding-right: 16px;
+    font-family: var(--font-display); font-size: 13px; font-weight: 500;
+    background-image: linear-gradient(90deg, var(--blue-light), var(--sage-light));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    letter-spacing: -0.005em;
+  }
+
+  /* ---------- V9 — Progress notation ---------- */
+  .v9 {
+    display: inline-flex; align-items: center; gap: 14px;
+    padding: 10px 18px;
+    border: 1px solid var(--text-faint);
+    border-radius: 2px;
+  }
+  .v9 .progress {
+    font-family: var(--font-mono); font-size: 12px;
+    color: var(--text-secondary); letter-spacing: 0.12em;
+  }
+  .v9 .progress .current {
+    color: var(--blue-light); font-weight: 600;
+  }
+  .v9 .bar { width: 18px; height: 1px; background: var(--text-faint); }
+  .v9 .lbl {
+    font-family: var(--font-display); font-size: 12px; font-weight: 500;
+    color: var(--off-white); letter-spacing: 0.14em; text-transform: uppercase;
+  }
+
+  /* ---------- V10 — Rounded tab ---------- */
+  .v10 {
+    display: inline-flex; align-items: stretch;
+    filter: drop-shadow(0 12px 24px rgba(0,0,0,0.5));
+  }
+  .v10 .num {
+    background: var(--off-white);
+    color: var(--charcoal-deep);
+    font-family: var(--font-display); font-weight: 700; font-size: 14px;
+    padding: 11px 20px 11px 18px;
+    border-radius: 999px 8px 8px 999px;
+    letter-spacing: -0.01em;
+    position: relative; z-index: 2;
+  }
+  .v10 .lbl {
+    margin-left: -6px;
+    background: var(--charcoal);
+    color: var(--off-white);
+    padding: 11px 22px 11px 22px;
+    font-family: var(--font-display); font-weight: 500; font-size: 13px;
+    letter-spacing: -0.005em;
+    border: 1px solid var(--charcoal-light);
+    border-radius: 8px 999px 999px 8px;
+    position: relative; z-index: 1;
+  }
+</style>
+</head>
+<body>
+  <header class="page-header">
+    <h1 class="page-title">Section eyebrow — 10 variations</h1>
+    <p class="page-sub">Each variation shown twice with different section numbers/labels so you can see how it scales. Pick one (or remix two), and I'll universalise it across all sections.</p>
+  </header>
+
+  <div class="grid">
+
+    <!-- V1 -->
+    <article class="card">
+      <span class="card-index">V1 — Current / baseline</span>
+      <h2 class="card-name">Glass pill</h2>
+      <p class="card-note">What's on the site today. Included for comparison against the LeftClick reference.</p>
+      <div class="pill-stage">
+        <span class="v1"><span class="num">01</span><span class="lbl">Why UnderCurrent</span></span>
+        <span class="v1"><span class="num">03</span><span class="lbl">What we specialise in</span></span>
+      </div>
+    </article>
+
+    <!-- V2 -->
+    <article class="card">
+      <span class="card-index">V2</span>
+      <h2 class="card-name">Terminal console</h2>
+      <p class="card-note">Mono type, blue-tinted data panel. Reads like a CLI readout. High-signal, technical.</p>
+      <div class="pill-stage">
+        <span class="v2"><span class="num">[01]</span><span class="lbl">WHY UNDERCURRENT</span></span>
+        <span class="v2"><span class="num">[03]</span><span class="lbl">WHAT WE SPECIALISE IN</span></span>
+      </div>
+    </article>
+
+    <!-- V3 -->
+    <article class="card">
+      <span class="card-index">V3</span>
+      <h2 class="card-name">Split accent block</h2>
+      <p class="card-note">Sage-filled number block, charcoal body. Two-tone, confident, avoids feeling small.</p>
+      <div class="pill-stage">
+        <span class="v3"><span class="num">01</span><span class="lbl">Why UnderCurrent</span></span>
+        <span class="v3"><span class="num">03</span><span class="lbl">What we specialise in</span></span>
+      </div>
+    </article>
+
+    <!-- V4 -->
+    <article class="card">
+      <span class="card-index">V4</span>
+      <h2 class="card-name">Blueprint brackets</h2>
+      <p class="card-note">No pill. Corner L-shapes frame a mono number + uppercase label. Architecture / engineering feel.</p>
+      <div class="pill-stage">
+        <span class="v4"><span class="num">01</span><span class="bar"></span><span class="lbl">WHY UNDERCURRENT</span></span>
+        <span class="v4"><span class="num">03</span><span class="bar"></span><span class="lbl">WHAT WE SPECIALISE IN</span></span>
+      </div>
+    </article>
+
+    <!-- V5 -->
+    <article class="card">
+      <span class="card-index">V5</span>
+      <h2 class="card-name">Telemetry dot</h2>
+      <p class="card-note">Pulsing blue dot, mono number, thin rule, label. No container. Subtle, alive.</p>
+      <div class="pill-stage">
+        <span class="v5"><span class="dot"></span><span class="num">01</span><span class="rule"></span><span class="lbl">Why UnderCurrent</span></span>
+        <span class="v5"><span class="dot"></span><span class="num">03</span><span class="rule"></span><span class="lbl">What we specialise in</span></span>
+      </div>
+    </article>
+
+    <!-- V6 -->
+    <article class="card">
+      <span class="card-index">V6</span>
+      <h2 class="card-name">Stacked stamp</h2>
+      <p class="card-note">Vertical layout: bold number up top, mono label below. Blue tick on the top edge anchors it.</p>
+      <div class="pill-stage">
+        <span class="v6"><span class="num">01</span><span class="lbl">WHY UNDERCURRENT</span></span>
+        <span class="v6"><span class="num">03</span><span class="lbl">WHAT WE SPECIALISE IN</span></span>
+      </div>
+    </article>
+
+    <!-- V7 -->
+    <article class="card">
+      <span class="card-index">V7</span>
+      <h2 class="card-name">Inverted hero chip</h2>
+      <p class="card-note">Off-white pill on dark page, dark badge inside. Flips the contrast of V1. Loud and confident.</p>
+      <div class="pill-stage">
+        <span class="v7"><span class="num">01</span><span class="lbl">Why UnderCurrent</span></span>
+        <span class="v7"><span class="num">03</span><span class="lbl">What we specialise in</span></span>
+      </div>
+    </article>
+
+    <!-- V8 -->
+    <article class="card">
+      <span class="card-index">V8</span>
+      <h2 class="card-name">Gradient label pill</h2>
+      <p class="card-note">Soft blue-tinted pill, off-white badge with inset ring, label painted in a blue→sage gradient. Editorial.</p>
+      <div class="pill-stage">
+        <span class="v8"><span class="num">01</span><span class="lbl">Why UnderCurrent</span></span>
+        <span class="v8"><span class="num">03</span><span class="lbl">What we specialise in</span></span>
+      </div>
+    </article>
+
+    <!-- V9 -->
+    <article class="card">
+      <span class="card-index">V9</span>
+      <h2 class="card-name">Progress notation</h2>
+      <p class="card-note">Shows where you are in the page (e.g. 01/06). Doubles as a wayfinding device for long pages.</p>
+      <div class="pill-stage">
+        <span class="v9"><span class="progress"><span class="current">01</span> / 06</span><span class="bar"></span><span class="lbl">WHY UNDERCURRENT</span></span>
+        <span class="v9"><span class="progress"><span class="current">03</span> / 06</span><span class="bar"></span><span class="lbl">WHAT WE SPECIALISE IN</span></span>
+      </div>
+    </article>
+
+    <!-- V10 -->
+    <article class="card">
+      <span class="card-index">V10</span>
+      <h2 class="card-name">Blueprint tab</h2>
+      <p class="card-note">Angular file-tab shape. Off-white wedge bites into charcoal body. Distinctive, high-structure.</p>
+      <div class="pill-stage">
+        <span class="v10"><span class="num">01</span><span class="lbl">Why UnderCurrent</span></span>
+        <span class="v10"><span class="num">03</span><span class="lbl">What we specialise in</span></span>
+      </div>
+    </article>
+
+  </div>
+</body>
+</html>

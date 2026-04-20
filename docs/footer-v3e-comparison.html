@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UnderCurrent — V3E comparison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --charcoal-deep: #121210;
+    --charcoal: #1C1C1A;
+    --off-white: #FAF9F5;
+    --blue: #6A8DAD;
+    --blue-light: #8AAEC8;
+    --sage: #8FAF9F;
+    --sage-light: #A8C4B8;
+    --text-primary: rgba(250, 249, 245, 0.88);
+    --text-secondary: rgba(250, 249, 245, 0.65);
+    --text-muted: rgba(250, 249, 245, 0.42);
+    --text-faint: rgba(250, 249, 245, 0.18);
+    --page-pad: 88px;
+    --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'SF Mono', 'Cascadia Code', ui-monospace, Menlo, monospace;
+  }
+  @media (max-width: 900px) { :root { --page-pad: 30px; } }
+  html, body { margin: 0; padding: 0; background: #0A0A09; color: var(--off-white); font-family: var(--font-display); }
+  * { box-sizing: border-box; }
+  a { color: inherit; text-decoration: none; }
+
+  .vheader { position: sticky; top: 0; z-index: 10; background: rgba(18,18,16,0.94); backdrop-filter: blur(10px); border-bottom: 1px solid var(--text-faint); padding: 14px var(--page-pad); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-secondary); }
+  .vheader b { color: var(--off-white); margin-right: 10px; }
+  .vheader span { color: var(--text-muted); font-weight: 400; letter-spacing: 0; text-transform: none; font-size: 13px; }
+  .vbody { background: var(--charcoal-deep); }
+
+  .ft { padding: 96px var(--page-pad) 0; position: relative; overflow: hidden; }
+  .ft__body { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; padding-bottom: 40px; align-items: start; position: relative; }
+  .ft__nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding-top: 12px; position: relative; z-index: 1; }
+  .ft__nav h4 { margin: 0 0 18px; font-family: var(--font-display); font-weight: 600; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
+  .ft__nav a { display: block; margin-bottom: 12px; font-family: var(--font-display); font-size: 14px; color: var(--off-white); }
+  .ft__nav a:hover { color: var(--blue-light); }
+  .ft__base { display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; padding: 22px var(--page-pad) 36px; border-top: 1px solid var(--text-faint); position: relative; z-index: 2; }
+  .ft__status { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); letter-spacing: 0.04em; }
+  .ft__status::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--sage); }
+  .ft__copy { font-family: var(--font-body); font-size: 11px; color: var(--text-muted); justify-self: center; }
+  .ft__built { font-family: var(--font-display); font-weight: 500; font-size: 12px; color: var(--text-muted); }
+
+  .brand { position: relative; z-index: 1; }
+  .brand__lockup { display: inline-flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+  .brand__glyph-inline { width: 52px; height: 52px; color: var(--off-white); flex-shrink: 0; }
+  .brand__wordmark { margin: 0; font-family: var(--font-display); font-weight: 500; font-size: clamp(32px, 3.6vw, 46px); letter-spacing: -0.03em; color: var(--off-white); line-height: 1; }
+  .brand__wordmark b { font-weight: 700; }
+  .brand__tag { margin: 20px 0 28px; font-family: var(--font-body); font-size: 15px; line-height: 1.55; color: var(--text-secondary); max-width: 380px; }
+  .brand__meta { display: grid; grid-template-columns: 90px 1fr; gap: 10px; font-size: 13px; line-height: 1.6; margin: 0 0 24px; }
+  .brand__meta dt { color: var(--text-muted); font-weight: 500; }
+  .brand__meta dd { margin: 0; color: var(--off-white); }
+  .brand__socials { display: flex; gap: 8px; }
+  .brand__socials a { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--text-faint); background: var(--charcoal); box-shadow: 3px 3px 0 0 var(--blue); color: var(--off-white); transition: transform 140ms cubic-bezier(.2,.7,.3,1), box-shadow 140ms cubic-bezier(.2,.7,.3,1); }
+  .brand__socials a:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 0 var(--blue); }
+
+  /* Watermark variant */
+  .ft--watermark .watermark {
+    position: absolute;
+    left: -40px;
+    top: 20px;
+    width: 420px;
+    height: 420px;
+    color: var(--off-white);
+    opacity: 0.05;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  @media (max-width: 900px) {
+    .ft__body { grid-template-columns: 1fr; gap: 48px; }
+    .ft__nav { grid-template-columns: repeat(2, 1fr); }
+    .ft__base { grid-template-columns: 1fr; gap: 16px; padding: 22px var(--page-pad) 32px; }
+    .ft__base > * { justify-self: flex-start; }
+    .ft--watermark .watermark { width: 240px; height: 240px; left: -30px; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="uc-glyph-mono" viewBox="0 0 96 96">
+    <g fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/>
+      <path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/>
+      <path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- ═════════════════ Option A: V3E clean (no watermark) ═════════════════ -->
+<div class="vheader"><b>Option A · V3E clean (no watermark)</b><span>Just the inline lockup · no big glyph behind · most restrained</span></div>
+<div class="vbody"><footer class="ft">
+  <div class="ft__body">
+    <div class="brand">
+      <span class="brand__lockup">
+        <svg class="brand__glyph-inline"><use href="#uc-glyph-mono"/></svg>
+        <h2 class="brand__wordmark"><b>Under</b>Current</h2>
+      </span>
+      <p class="brand__tag">AI automation for Australian small businesses. Built in Melbourne. You own every workflow.</p>
+      <dl class="brand__meta">
+        <dt>Based</dt><dd>Melbourne, VIC</dd>
+        <dt>Reply</dt><dd>Within 1 business day</dd>
+        <dt>Email</dt><dd><a style="color: var(--blue-light);" href="mailto:luke@undercurrentautomations.com">luke@undercurrentautomations.com</a></dd>
+      </dl>
+      <div class="brand__socials">
+        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10 L8 16 M8 7 L8 7.01 M12 16 L12 10 M12 13 C 12 10 16 10 16 13 L 16 16"/></svg></a>
+        <a href="#" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4 L20 20 M20 4 L4 20"/></svg></a>
+      </div>
+    </div>
+    <nav class="ft__nav">
+      <div><h4>Services</h4><a href="#">All services</a><a href="#">Lead generation</a><a href="#">Sales automation</a><a href="#">Website experience</a><a href="#">SEO & AI visibility</a></div>
+      <div><h4>Company</h4><a href="#">About</a><a href="#">Process</a><a href="#">Blog</a><a href="#">Case studies</a><a href="#">Contact</a></div>
+      <div><h4>Tools</h4><a href="#">Free audit</a><a href="#">ROI calculator</a><a href="#">Missed revenue</a><h4 style="margin-top: 24px;">Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </nav>
+  </div>
+  <div class="ft__base">
+    <span class="ft__status">System operational</span>
+    <span class="ft__copy">© 2026 UnderCurrent Automations · All rights reserved</span>
+    <span class="ft__built">Built by UnderCurrent Automations</span>
+  </div>
+</footer></div>
+
+<!-- ═════════════════ Option B: V3E + watermark glyph ═════════════════ -->
+<div class="vheader"><b>Option B · V3E with background watermark</b><span>Same inline lockup · plus huge outlined glyph at 5% opacity behind the whole left panel</span></div>
+<div class="vbody"><footer class="ft ft--watermark">
+  <svg class="watermark"><use href="#uc-glyph-mono"/></svg>
+  <div class="ft__body">
+    <div class="brand">
+      <span class="brand__lockup">
+        <svg class="brand__glyph-inline"><use href="#uc-glyph-mono"/></svg>
+        <h2 class="brand__wordmark"><b>Under</b>Current</h2>
+      </span>
+      <p class="brand__tag">AI automation for Australian small businesses. Built in Melbourne. You own every workflow.</p>
+      <dl class="brand__meta">
+        <dt>Based</dt><dd>Melbourne, VIC</dd>
+        <dt>Reply</dt><dd>Within 1 business day</dd>
+        <dt>Email</dt><dd><a style="color: var(--blue-light);" href="mailto:luke@undercurrentautomations.com">luke@undercurrentautomations.com</a></dd>
+      </dl>
+      <div class="brand__socials">
+        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10 L8 16 M8 7 L8 7.01 M12 16 L12 10 M12 13 C 12 10 16 10 16 13 L 16 16"/></svg></a>
+        <a href="#" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4 L20 20 M20 4 L4 20"/></svg></a>
+      </div>
+    </div>
+    <nav class="ft__nav">
+      <div><h4>Services</h4><a href="#">All services</a><a href="#">Lead generation</a><a href="#">Sales automation</a><a href="#">Website experience</a><a href="#">SEO & AI visibility</a></div>
+      <div><h4>Company</h4><a href="#">About</a><a href="#">Process</a><a href="#">Blog</a><a href="#">Case studies</a><a href="#">Contact</a></div>
+      <div><h4>Tools</h4><a href="#">Free audit</a><a href="#">ROI calculator</a><a href="#">Missed revenue</a><h4 style="margin-top: 24px;">Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </nav>
+  </div>
+  <div class="ft__base">
+    <span class="ft__status">System operational</span>
+    <span class="ft__copy">© 2026 UnderCurrent Automations · All rights reserved</span>
+    <span class="ft__built">Built by UnderCurrent Automations</span>
+  </div>
+</footer></div>
+
+<div style="padding: 80px var(--page-pad); background: #0A0A09; text-align: center;">
+  <p style="font-family: var(--font-display); font-size: 12px; color: var(--text-muted); letter-spacing: 0.12em; text-transform: uppercase; margin: 0;">A vs B · pick one</p>
+</div>
+
+</body>
+</html>
