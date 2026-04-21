@@ -5,7 +5,7 @@ date: "2026-04-19"
 slug: "how-much-are-manual-processes-costing-your-business"
 cluster: "time-admin"
 keyword: "How Much Are Manual Processes Costing Your Business"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 8
 heroImage: "/articles/how-much-are-manual-processes-costing-your-business/hero.jpg"

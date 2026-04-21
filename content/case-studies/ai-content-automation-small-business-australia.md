@@ -11,7 +11,7 @@ relatedCluster: "time-admin"
 category: "Self-dogfooding"
 industry: "Marketing & Automation"
 location: "Melbourne"
-author: "Luke"
+author: "Luke Marinovic"
 authorTitle: "Founder, UnderCurrent Automations"
 readingTime: 9
 keyword: "AI content automation small business Australia"

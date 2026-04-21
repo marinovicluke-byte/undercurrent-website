@@ -5,7 +5,7 @@ date: "2026-01-20"
 slug: "simplest-small-business-automation-tasks-australia-2026"
 cluster: "time-admin"
 keyword: "What is the simplest task a small business can automate right now using a no-code tool?"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 8
 summary: "This article walks through five specific automation tasks Australian small business owners can implement in under 30 minutes using free no-code tools like Zapier, Make, and n8n, including lead capture, invoice reminders, appointment confirmations, review requests, and social media updates."

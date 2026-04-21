@@ -5,7 +5,7 @@ date: "2026-01-09"
 slug: "best-marketing-automation-software-australia-2026"
 cluster: "leads-sales"
 keyword: "best marketing automation software australia 2026"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 9
 summary: "This article evaluates nine marketing automation platforms based on what Australian small businesses actually need in 2026: affordability, simplicity, and integration with local payment and accounting systems like Xero and Stripe."

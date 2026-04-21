@@ -40,7 +40,7 @@ export async function generateMetadata({ params }) {
       publishedTime: cs.frontmatter.date,
       modifiedTime: cs.frontmatter.dateModified || cs.frontmatter.date,
       url: `${SITE_URL}/case-studies/${slug}`,
-      authors: [cs.frontmatter.author || 'Luke'],
+      authors: [cs.frontmatter.author || 'Luke Marinovic'],
       images: image ? [{ url: image }] : undefined,
     },
     twitter: {
@@ -107,9 +107,10 @@ export default async function CaseStudyPage({ params }) {
     dateModified: fm.dateModified || fm.date,
     author: {
       '@type': 'Person',
-      name: fm.author || 'Luke',
+      name: fm.author || 'Luke Marinovic',
       jobTitle: fm.authorTitle || 'Founder, UnderCurrent Automations',
       url: `${SITE_URL}/about`,
+      sameAs: ['https://www.linkedin.com/in/lukemarinovic/'],
     },
     publisher: { '@type': 'Organization', name: 'UnderCurrent Automations', url: SITE_URL },
     mainEntityOfPage: `${SITE_URL}/case-studies/${slug}`,
@@ -193,7 +194,7 @@ export default async function CaseStudyPage({ params }) {
             </div>
             <div style={{ minWidth: 0 }}>
               <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--text-primary)' }}>
-                <strong style={{ color: 'var(--off-white)' }}>{fm.author || 'Luke'}</strong>
+                <strong style={{ color: 'var(--off-white)' }}>{fm.author || 'Luke Marinovic'}</strong>
                 {fm.authorTitle && ` · ${fm.authorTitle}`}
               </p>
               <p style={{ margin: '2px 0 0', fontFamily: 'var(--font-body)', fontSize: 12, color: 'var(--text-muted)' }}>
