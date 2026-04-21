@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import JsonLd from '@/components/ui/JsonLd'
+import AuthorBio from '@/components/ui/AuthorBio'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import { getAllCaseStudies, getCaseStudyBySlug } from '@/lib/caseStudies'
 import { getAllArticles } from '@/lib/articles'
@@ -260,6 +261,13 @@ export default async function CaseStudyPage({ params }) {
           />
         </div>
       </article>
+
+      {/* Author bio */}
+      <section style={{ padding: '0 var(--page-pad) 72px', background: 'var(--charcoal)' }}>
+        <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
+          <AuthorBio />
+        </div>
+      </section>
 
       <style>{`
         .cs-prose h1 { display: none; }

@@ -28,9 +28,8 @@ function Initials({ name }) {
   return (
     <div
       aria-hidden
+      className="uc-author-avatar"
       style={{
-        width: 96,
-        height: 96,
         borderRadius: '50%',
         background: 'var(--charcoal-light)',
         border: '1px solid var(--text-faint)',
@@ -39,7 +38,6 @@ function Initials({ name }) {
         justifyContent: 'center',
         fontFamily: 'var(--font-display)',
         fontWeight: 500,
-        fontSize: 32,
         letterSpacing: '-0.02em',
         color: 'var(--off-white)',
         flexShrink: 0,
@@ -52,47 +50,27 @@ function Initials({ name }) {
 
 export default function AuthorBio({ author = DEFAULT_AUTHOR, hasPhoto = false }) {
   return (
-    <aside
-      itemScope
-      itemType="https://schema.org/Person"
-      aria-label={`About the author, ${author.name}`}
-      style={{
-        maxWidth: 880,
-        padding: '28px 32px',
-        borderRadius: 14,
-        background: 'var(--charcoal)',
-        border: '1px solid var(--text-faint)',
-        boxShadow: '6px 6px 0 0 var(--blue)',
-        display: 'grid',
-        gridTemplateColumns: 'auto 1fr',
-        gap: 24,
-        alignItems: 'start',
-      }}
-    >
-      {hasPhoto ? (
-        <div
-          style={{
-            position: 'relative',
-            width: 96,
-            height: 96,
-            borderRadius: '50%',
-            overflow: 'hidden',
-            border: '1px solid var(--text-faint)',
-            flexShrink: 0,
-          }}
-        >
-          <Image
-            src={author.image}
-            alt={author.name}
-            width={96}
-            height={96}
-            itemProp="image"
-            style={{ objectFit: 'cover' }}
-          />
-        </div>
-      ) : (
-        <Initials name={author.name} />
-      )}
+    <>
+      <aside
+        itemScope
+        itemType="https://schema.org/Person"
+        aria-label={`About the author, ${author.name}`}
+        className="uc-author-bio"
+      >
+        {hasPhoto ? (
+          <div className="uc-author-avatar uc-author-avatar--photo">
+            <Image
+              src={author.image}
+              alt={author.name}
+              width={96}
+              height={96}
+              itemProp="image"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+          </div>
+        ) : (
+          <Initials name={author.name} />
+        )}
 
       <div style={{ minWidth: 0 }}>
         <p
@@ -200,7 +178,47 @@ export default function AuthorBio({ author = DEFAULT_AUTHOR, hasPhoto = false })
         {author.sameAs?.map(href => (
           <link key={href} itemProp="sameAs" href={href} />
         ))}
-      </div>
-    </aside>
+        </div>
+      </aside>
+
+      <style>{`
+        .uc-author-bio {
+          max-width: 880px;
+          padding: 28px 32px;
+          border-radius: 14px;
+          background: var(--charcoal);
+          border: 1px solid var(--text-faint);
+          box-shadow: 6px 6px 0 0 var(--blue);
+          display: grid;
+          grid-template-columns: auto 1fr;
+          gap: 24px;
+          align-items: start;
+        }
+        .uc-author-avatar {
+          width: 88px;
+          height: 88px;
+          font-size: 30px;
+        }
+        .uc-author-avatar--photo {
+          position: relative;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 1px solid var(--text-faint);
+          flex-shrink: 0;
+        }
+        @media (max-width: 640px) {
+          .uc-author-bio {
+            padding: 22px;
+            gap: 18px;
+            box-shadow: 4px 4px 0 0 var(--blue);
+          }
+          .uc-author-avatar {
+            width: 56px;
+            height: 56px;
+            font-size: 18px;
+          }
+        }
+      `}</style>
+    </>
   )
 }
