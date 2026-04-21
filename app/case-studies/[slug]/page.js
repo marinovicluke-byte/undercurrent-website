@@ -317,11 +317,14 @@ export default async function CaseStudyPage({ params }) {
         .cs-prose blockquote p { color: var(--text-primary); margin: 0; }
         .cs-prose table {
           width: 100%;
-          border-collapse: collapse;
+          border-collapse: separate;
+          border-spacing: 0;
           margin: 1.5rem 0;
           font-size: 14px;
           border-radius: 12px;
           overflow: hidden;
+          border: 1px solid var(--text-faint);
+          background: rgba(255,255,255,0.015);
         }
         @media (max-width: 700px) {
           .cs-prose table {
@@ -333,16 +336,29 @@ export default async function CaseStudyPage({ params }) {
         }
         .cs-prose th, .cs-prose td {
           padding: 0.85rem 1rem;
-          border: 1px solid var(--text-faint);
           text-align: left;
           color: var(--text-secondary);
           font-family: var(--font-body);
+          border-bottom: 1px solid rgba(250,249,245,0.08);
+        }
+        .cs-prose tr:last-child td {
+          border-bottom: none;
+        }
+        .cs-prose tbody tr:nth-child(even) td {
+          background: rgba(255,255,255,0.018);
+        }
+        .cs-prose tbody tr:hover td {
+          background: rgba(106,141,173,0.06);
         }
         .cs-prose th {
-          background: rgba(250,249,245,0.03);
+          background: rgba(250,249,245,0.04);
           color: var(--off-white);
           font-family: var(--font-display);
           font-weight: 500;
+          font-size: 12px;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          border-bottom: 1px solid var(--text-faint);
         }
       `}</style>
 
