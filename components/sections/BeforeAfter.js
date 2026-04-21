@@ -82,7 +82,7 @@ const PILLARS = [
   {
     key: 'ai',
     n: '04',
-    name: 'Surface & discovery',
+    name: 'SEO & AI visibility',
     before: {
       headline: 'Invisible to ChatGPT. Buried in Google page 3.',
       items: [
@@ -356,7 +356,7 @@ export default function BeforeAfter() {
       >
         Most Australian small businesses lose five to fifteen hours a week to manual work.
         Automation reclaims it across five pillars: lead generation, sales automation,
-        front-end experiences, surface and discovery, and custom integrations.
+        front-end experiences, SEO and AI visibility, and custom integrations.
       </p>
 
       <div style={{ marginTop: 48 }}>

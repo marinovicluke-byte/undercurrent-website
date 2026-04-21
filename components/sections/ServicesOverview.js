@@ -33,8 +33,8 @@ const SERVICES = [
   },
   {
     n: '04',
-    title: 'Surface & Discovery',
-    titleAccentWord: 'Discovery',
+    title: 'SEO & AI Visibility',
+    titleAccentWord: 'Visibility',
     blurb:
       'SEO tuned for both Google rankings and AI search. The same work that earns rankings earns citations in ChatGPT, Claude, and Perplexity.',
     bullets: ['Technical and content SEO', 'AI search optimisation (AEO, GEO)', 'Citations in ChatGPT, Claude, Perplexity'],

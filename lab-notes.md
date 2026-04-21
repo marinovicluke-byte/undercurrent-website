@@ -22,7 +22,7 @@
 - **`clamp()` inside a CSS custom property fails silently in React inline style shorthands.** Using `--page-pad: clamp(42px, 6.8vw, 180px)` then `padding: '120px var(--page-pad)'` rendered at 0px left padding — no error, just silent fallback. Fix: put a simple px value in the variable (`--page-pad: 88px`) and handle responsiveness via `@media` override on `:root`. Potential lesson for other projects.
 
 ## Content
-- (none yet)
+- **2026-04-21 inbound-lead-management copy pass, fact-check YELLOW → GREEN.** /undercurrent-copy rewrote service page (meta, hero, industries, comparison, 6 FAQs, CTA). /fact-checker flagged two DRIFT: (1) "lead form extensions" → "lead form assets" per Google's 2022 rename, (2) "dentists" listed inside Allied Health card, AU AHPA definition excludes dentists, swapped for "podiatrists". Luke set delivery to 14 days. Full report at docs/inbound-lead-management-factcheck-2026-04-21.md. Potential lessons promoted to memory: AU allied health taxonomy, Google Ads assets-not-extensions.
 
 ## Service pages
 - **2026-04-19 V5a rollout.** Replaced 954-line client `ServicePage.js` with a server-rendered layout driven by `lib/data/services.js`. Added 4 new fields per service (`bluf`, `pipelineStages`, `integrations`, `pricingTiers`). Shared SEO constants moved to `lib/data/seo.js` (permanent) so the preview file could be deleted.
