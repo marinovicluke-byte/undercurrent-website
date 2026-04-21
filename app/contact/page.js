@@ -81,7 +81,7 @@ export default function ContactPage() {
               <p style={{ margin: 0 }}>
                 Prefer to skip the form?{' '}
                 <a
-                  href="https://cal.com/undercurrent"
+                  href="https://cal.com/luke-marinovic-aqeosc/30min"
                   style={{ color: 'var(--blue-light)', textDecoration: 'underline', textDecorationColor: 'rgba(138,174,200,0.4)', textUnderlineOffset: 3 }}
                 >
                   Book a call directly
