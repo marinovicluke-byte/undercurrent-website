@@ -42,6 +42,8 @@ export default function Hero({
       }}
     >
       {/* Background video — dimmed over black. Hidden for reduced-motion. */}
+      {/* Poster paints immediately (LCP target ~200ms). Video streams in */}
+      {/* behind it without blocking the hero text. */}
       <video
         aria-hidden
         autoPlay
@@ -49,6 +51,7 @@ export default function Hero({
         loop
         playsInline
         preload="metadata"
+        poster="/hero-poster.jpg"
         className="uc-hero-video"
         style={{
           position: 'absolute',
@@ -68,11 +71,22 @@ export default function Hero({
         @media (prefers-reduced-motion: reduce) {
           .uc-hero-video { display: none; }
         }
+        /* Hide iOS Safari's overlay play button when autoplay is blocked
+           (Low Power Mode, data saver). Poster still shows. */
+        .uc-hero-video::-webkit-media-controls-start-playback-button {
+          display: none !important;
+          -webkit-appearance: none;
+        }
+        .uc-hero-video::-webkit-media-controls-overlay-play-button {
+          display: none !important;
+          -webkit-appearance: none;
+        }
         @media (max-width: 780px) {
           .uc-hero {
+            justify-content: flex-start !important;
             min-height: auto !important;
-            padding-top: 48px !important;
-            padding-bottom: 40px !important;
+            padding-top: 32px !important;
+            padding-bottom: 56px !important;
           }
           .uc-hero h1 {
             font-size: clamp(34px, 9vw, 48px) !important;
