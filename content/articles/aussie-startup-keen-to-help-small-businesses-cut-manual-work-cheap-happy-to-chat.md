@@ -5,7 +5,7 @@ date: "2026-01-10"
 slug: "aussie-startup-keen-to-help-small-businesses-cut-manual-work-cheap-happy-to-chat"
 cluster: "getting-started"
 keyword: "aussie startup keen to help small businesses cut manual work cheap happy to chat"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 8
 summary: "This article explains how Australian small businesses can find affordable, accessible automation partners who understand their needs, with practical steps to identify legitimate startups, questions to ask before committing, and what to expect from working with a local automation provider."

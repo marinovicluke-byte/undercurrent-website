@@ -5,7 +5,7 @@ date: "2026-03-31"
 slug: "why-tradies-dont-get-google-reviews-australia"
 cluster: "leads-sales"
 keyword: "why tradies don't get google reviews australia"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 9
 summary: "This article examines why Australian trade businesses underperform on Google reviews compared to other service industries, citing BrightLocal Local Consumer Review Survey data on unprompted vs prompted review rates, the impact of review volume on local SEO ranking and conversion rates, and practical automation solutions for getting more reviews after job completion."

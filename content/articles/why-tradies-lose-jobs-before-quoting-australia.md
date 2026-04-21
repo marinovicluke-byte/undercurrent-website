@@ -5,7 +5,7 @@ date: "2026-03-31"
 slug: "why-tradies-lose-jobs-before-quoting-australia"
 cluster: "leads-sales"
 keyword: "why tradies lose jobs before quoting australia"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 8
 summary: "This article explains why Australian trade businesses lose the majority of new enquiries before they even submit a quote, focusing on lead response time data and customer expectations, with practical automation solutions."

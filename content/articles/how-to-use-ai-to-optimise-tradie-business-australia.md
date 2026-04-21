@@ -7,7 +7,7 @@ cluster: "industry-guides"
 heroImage: "/articles/how-to-use-ai-to-optimise-tradie-business-australia/hero.jpg"
 heroImageAlt: "AI workflow automation for Australian tradies — instant quoting, scheduling, and Xero invoicing"
 keyword: "How to Use AI to Optimise Your Tradie Business"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 12
 summary: "AI optimises tradie businesses by automating quoting, scheduling, and invoicing workflows."
