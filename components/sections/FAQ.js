@@ -3,32 +3,40 @@ import JsonLd from '@/components/ui/JsonLd'
 
 const FAQS = [
   {
-    q: 'Will this actually work for my type of business?',
-    a: 'We work with any service-based business, tradies, consultants, coaches, agencies, healthcare practices. If you have repetitive tasks and customers, we can automate it. The audit tells you exactly how much.',
+    q: 'What is UnderCurrent Automations?',
+    a: 'UnderCurrent Automations is a Melbourne-based AI automation agency that builds custom workflow systems for Australian small businesses. We plug into the tools your team already uses (Xero, HubSpot, Gmail, Notion, Slack, Google Workspace, n8n) and automate the repetitive work behind them: lead follow-up, invoice chasing, review requests, inbox triage, reporting. You keep working the way you always have. The admin runs itself underneath.',
   },
   {
-    q: 'I\u2019m not tech-savvy, will I be able to manage this?',
-    a: 'You don\u2019t manage anything. We build it, we maintain it, we fix it when something changes. You just receive the results. Most clients never need to open a settings panel.',
+    q: 'Will this work for my type of business?',
+    a: 'We work with service-based businesses across four verticals: tradies (plumbers, electricians, builders, landscapers), business services (accountants, agencies, bookkeepers), consultants (coaches, strategists, advisors), and allied health practitioners (physio, chiro, psychology, dental). If your team does repetitive work and has customers, there’s a system inside it that can run itself. The free audit shows you which parts first.',
   },
   {
-    q: 'What if it doesn\u2019t save me as much time as you say?',
-    a: 'We don\u2019t guess. In the audit, we show you the exact hours and tasks we\u2019ll automate before we build anything. You see the numbers first. If they don\u2019t impress you, walk away, no charge.',
+    q: 'I’m not tech-savvy. Will I be able to manage it?',
+    a: 'You don’t manage it. We build the system, connect it to your tools, and monitor it as it runs. When something changes in your business or one of your apps releases an update, we handle the fix. Most clients never open a settings panel. Your job is to tell us what you want changed. Our job is everything else.',
   },
   {
-    q: 'How does this work with our existing tools?',
-    a: 'We connect to the software you already use, Gmail, HubSpot, Notion, Slack, Xero, whatever you have. Nothing changes about how your team works. We add automation underneath, so the results happen without you having to think about it.',
+    q: 'How does this work with the tools we already use?',
+    a: 'We connect directly into the software your team already runs. Xero or MYOB for invoicing, HubSpot or Salesforce for CRM, Cliniko or Halaxy for allied health bookings, Shopify for retail. Gmail, Outlook, Slack, Notion, and ClickUp for the daily grind. Nothing changes about how your team works. The automations sit underneath, so the results land without anyone pushing a button.',
   },
   {
-    q: 'What does it actually cost?',
-    a: 'We price based on what we save you. If automation saves your business $20,000 a year, we take a small share, you keep the rest. Most clients see their full investment back within six months. We show you the numbers in the free audit before you spend anything.',
+    q: 'What does it cost?',
+    a: 'Pricing depends on the hours and dollars a workflow saves. The free audit maps the repetitive work, puts numbers on what it’s costing you today, and lays out what a custom build would cost against that projected return. You see every figure before you commit. You only pay if the projected saving justifies the work. Exact bands are confirmed in the audit because every business has a different automation mix.',
   },
   {
     q: 'How long until we see results?',
-    a: 'Most clients notice a difference in the first two weeks. The full system is live in 30 days. We move fast because we\u2019ve done this before. The free audit maps out exactly what gets automated and when.',
+    a: 'Most clients notice the first automations running inside two weeks. The full system is live in 30 days. We move fast because we’ve built these workflows before, the wiring isn’t from scratch. The audit maps out what ships first, what ships second, and when each piece starts paying back.',
+  },
+  {
+    q: 'What if it doesn’t save me as much time as you say?',
+    a: 'You see the numbers before we build anything. In the audit, we walk through the exact tasks we’ll automate, the hours they’ll save, and the revenue they’ll recover. If the projected saving doesn’t justify the work, you keep the audit, the call is free, and we part ways. Our zero-risk guarantee: if we can’t find at least five hours a week to automate in the audit, you owe us nothing.',
   },
   {
     q: 'Do we own the automations, or are we locked in?',
-    a: 'You own everything we build. If you ever want to take it in-house or move on, the automations stay with you. We\u2019re not a subscription you can\u2019t escape, we\u2019re here to build something that works for your business long term.',
+    a: 'You own everything. Every workflow we build sits inside your accounts, on your logins, wired to your data. If you ever want to take it in-house or walk away, the system stays with you. No vendor lock-in, no black-box tools you can’t access. Ongoing maintenance is a service you choose to keep, not a cage you can’t leave.',
+  },
+  {
+    q: 'Do you work outside Melbourne?',
+    a: 'Yes. We’re based in Melbourne, but delivery is fully remote, so we work with clients in Sydney, Brisbane, Perth, Adelaide, and regional towns across every Australian state. Each major city has a dedicated page with regional context if you want the detail. The process itself is the same wherever you are: a video audit, a remote build, and ongoing support through the channels you already use.',
   },
 ]
 
@@ -120,9 +128,9 @@ export default function FAQ() {
             maxWidth: 1100,
           }}
         >
-          {'We\u2019ve heard every '}
-          <span className="uc-glow-word uc-glow-word--sage">objection</span>
-          {'. Here\u2019s the truth.'}
+          {'The questions that come up '}
+          <span className="uc-glow-word uc-glow-word--sage">before anyone decides</span>
+          {'. Answered straight.'}
         </h2>
 
         <p
@@ -135,7 +143,7 @@ export default function FAQ() {
             color: 'var(--text-secondary)',
           }}
         >
-          Honest answers to the questions we get asked most, before anyone writes a cheque.
+          The questions we get asked most, before anyone writes a cheque.
         </p>
 
         <div className="uc-faq-list" style={{ marginTop: 56 }}>
