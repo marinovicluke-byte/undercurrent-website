@@ -14,18 +14,18 @@ import JsonLd from '@/components/ui/JsonLd'
 const DOMAIN = 'https://undercurrentautomations.com'
 
 export const metadata = {
-  title: 'UnderCurrent Automations — AI Automation Agency for Australian Small Businesses',
+  title: { absolute: 'AI Automation Agency Melbourne | UnderCurrent Automations' },
   description: 'Melbourne AI automation agency serving Australia-wide. Custom workflows for lead gen, sales, content, finance and ops. Built on Xero, HubSpot, n8n. Live in 14 days.',
   alternates: { canonical: DOMAIN },
   openGraph: {
-    title: 'UnderCurrent Automations — AI Automation Agency for Australian Small Businesses',
+    title: 'AI Automation Agency Melbourne | UnderCurrent Automations',
     description: 'Melbourne AI automation agency serving Australia-wide. Custom workflows for lead gen, sales, content, finance and ops. Built on Xero, HubSpot, n8n. Live in 14 days.',
     url: DOMAIN,
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'UnderCurrent Automations — AI Automation Agency for Australian Small Businesses',
+    title: 'AI Automation Agency Melbourne | UnderCurrent Automations',
     description: 'Melbourne AI automation agency serving Australia-wide. Custom workflows for lead gen, sales, content, finance and ops.',
   },
 }

@@ -14,12 +14,12 @@ const SITE_URL = 'https://undercurrentautomations.com'
 const CONTENT_MAX = 1280
 
 export const metadata = {
-  title: 'Blog — Automation Guides for Australian Small Business',
+  title: 'Automation Blog',
   description:
     'Topic-clustered automation guides and case studies for Australian SMEs. Covers getting started, admin time, leads and sales, and industry-specific workflows. Built by Luke at UnderCurrent Automations, Melbourne.',
   alternates: { canonical: `${SITE_URL}/blog` },
   openGraph: {
-    title: 'Blog — Automation Guides for Australian Small Business',
+    title: 'Automation Blog for Australian Small Business',
     description:
       'Topic-clustered automation guides and case studies for Australian SMEs.',
     type: 'website',
@@ -27,7 +27,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog — Automation Guides for Australian Small Business',
+    title: 'Automation Blog for Australian Small Business',
     description:
       'Topic-clustered automation guides and case studies for Australian SMEs.',
   },
