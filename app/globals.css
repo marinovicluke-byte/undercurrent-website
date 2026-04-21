@@ -265,12 +265,13 @@ h1, h2, h3, h4 {
   }
   .uc-marquee-row {
     padding: 22px 0 !important;
+    animation-duration: 47s !important;
   }
   .uc-marquee-item {
     font-size: 16px !important;
   }
   .uc-section {
-    padding-top: 84px !important;
-    padding-bottom: 84px !important;
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
   }
 }
