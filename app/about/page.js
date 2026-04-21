@@ -2,7 +2,7 @@ import PillCTA from '@/components/ui/PillCTA'
 import SectionEyebrow from '@/components/ui/SectionEyebrow'
 
 export const metadata = {
-  title: 'About — UnderCurrent Automations',
+  title: 'About',
   description:
     'What UnderCurrent is, who built it, and where we\'re going — the full story.',
   alternates: { canonical: 'https://undercurrentautomations.com/about' },

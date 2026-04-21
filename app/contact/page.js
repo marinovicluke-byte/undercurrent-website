@@ -2,7 +2,7 @@ import ContactForm from '@/components/forms/ContactForm'
 import SectionEyebrow from '@/components/ui/SectionEyebrow'
 
 export const metadata = {
-  title: 'Contact UnderCurrent Automations — Melbourne AI Automation Agency',
+  title: 'Contact',
   description: 'Get in touch with UnderCurrent Automations. Melbourne-based, serving Australia-wide. We respond within 1 business day.',
   alternates: { canonical: 'https://undercurrentautomations.com/contact' },
   openGraph: {

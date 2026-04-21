@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
   if (!cluster) return {}
 
   return {
-    title: `${cluster.label} — Automation Guides`,
+    title: `${cluster.label} Guides`,
     description: cluster.description,
     alternates: { canonical: `${SITE_URL}/blog/cluster/${slug}` },
     openGraph: {

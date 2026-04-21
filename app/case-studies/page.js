@@ -9,12 +9,12 @@ const SITE_URL = 'https://undercurrentautomations.com'
 const CONTENT_MAX = 1280
 
 export const metadata = {
-  title: 'Case Studies — Real Automation Systems with Real Numbers',
+  title: 'Case Studies',
   description:
     'Real automation case studies from UnderCurrent Automations, Melbourne. Before/after metrics, tools used, and the workflow behind every system we build for Australian small businesses.',
   alternates: { canonical: `${SITE_URL}/case-studies` },
   openGraph: {
-    title: 'Case Studies — UnderCurrent Automations',
+    title: 'Case Studies — Real Automation Systems with Real Numbers',
     description:
       'Real automation systems with before/after metrics for Australian small businesses.',
     type: 'website',
