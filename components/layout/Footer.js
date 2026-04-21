@@ -101,7 +101,7 @@ function SocialIcon({ href, label, children }) {
 function NavColumn({ title, links }) {
   return (
     <div>
-      <h4
+      <h3
         style={{
           margin: '0 0 18px',
           fontFamily: 'var(--font-display)',
@@ -113,7 +113,7 @@ function NavColumn({ title, links }) {
         }}
       >
         {title}
-      </h4>
+      </h3>
       <ul
         style={{
           listStyle: 'none',
@@ -186,7 +186,7 @@ export default function Footer() {
         <div>
           <Link
             href="/"
-            aria-label="UnderCurrent Automations — home"
+            aria-label="UnderCurrent Automations, home"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -271,6 +271,43 @@ export default function Footer() {
                 luke@undercurrentautomations.com
               </a>
             </dd>
+            <dt
+              style={{
+                color: 'var(--text-muted)',
+                fontWeight: 500,
+                fontFamily: 'var(--font-display)',
+              }}
+            >
+              Phone
+            </dt>
+            <dd style={{ margin: 0 }}>
+              <a
+                href="tel:+61438780815"
+                style={{ color: 'var(--blue-light)', textDecoration: 'none' }}
+              >
+                0438 780 815
+              </a>
+            </dd>
+            <dt
+              style={{
+                color: 'var(--text-muted)',
+                fontWeight: 500,
+                fontFamily: 'var(--font-display)',
+              }}
+            >
+              Hours
+            </dt>
+            <dd style={{ margin: 0, color: 'var(--off-white)' }}>Mon–Fri 09:00–17:00 AEDT</dd>
+            <dt
+              style={{
+                color: 'var(--text-muted)',
+                fontWeight: 500,
+                fontFamily: 'var(--font-display)',
+              }}
+            >
+              ABN
+            </dt>
+            <dd style={{ margin: 0, color: 'var(--off-white)' }}>23 368 496 814</dd>
           </dl>
 
           <div style={{ display: 'flex', gap: 8 }} aria-label="Social">

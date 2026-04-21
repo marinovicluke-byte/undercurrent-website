@@ -2,8 +2,20 @@ import ContactForm from '@/components/forms/ContactForm'
 import SectionEyebrow from '@/components/ui/SectionEyebrow'
 
 export const metadata = {
-  title: 'Contact',
-  description: 'Get in touch with UnderCurrent Automations. We respond within 1 business day.',
+  title: 'Contact UnderCurrent Automations — Melbourne AI Automation Agency',
+  description: 'Get in touch with UnderCurrent Automations. Melbourne-based, serving Australia-wide. We respond within 1 business day.',
+  alternates: { canonical: 'https://undercurrentautomations.com/contact' },
+  openGraph: {
+    title: 'Contact UnderCurrent Automations',
+    description: 'Melbourne AI automation agency. We respond within 1 business day.',
+    url: 'https://undercurrentautomations.com/contact',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact UnderCurrent Automations',
+    description: 'Melbourne AI automation agency. We respond within 1 business day.',
+  },
 }
 
 export default function ContactPage() {
@@ -75,7 +87,32 @@ export default function ContactPage() {
                   Book a call directly
                 </a>.
               </p>
-              <p style={{ margin: '12px 0 0' }}>We respond within 1 business day.</p>
+
+              <div style={{ display: 'grid', gap: 10, marginTop: 20 }}>
+                <p style={{ margin: 0 }}>
+                  <span style={{ color: 'var(--text-muted)' }}>Email </span>
+                  <a
+                    href="mailto:luke@undercurrentautomations.com"
+                    style={{ color: 'var(--off-white)', textDecoration: 'none' }}
+                  >
+                    luke@undercurrentautomations.com
+                  </a>
+                </p>
+                <p style={{ margin: 0 }}>
+                  <span style={{ color: 'var(--text-muted)' }}>Phone </span>
+                  <a
+                    href="tel:+61438780815"
+                    style={{ color: 'var(--off-white)', textDecoration: 'none' }}
+                  >
+                    0438 780 815
+                  </a>
+                </p>
+                <p style={{ margin: 0, color: 'var(--text-muted)' }}>
+                  Melbourne, VIC · Serving Australia-wide · Mon–Fri 09:00–17:00 AEDT
+                </p>
+              </div>
+
+              <p style={{ margin: '16px 0 0' }}>We respond within 1 business day.</p>
             </div>
           </div>
 

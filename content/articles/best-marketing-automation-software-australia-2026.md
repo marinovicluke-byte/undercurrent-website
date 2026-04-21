@@ -9,6 +9,17 @@ author: "Luke"
 level: "beginner"
 readingTime: 9
 summary: "This article evaluates nine marketing automation platforms based on what Australian small businesses actually need in 2026: affordability, simplicity, and integration with local payment and accounting systems like Xero and Stripe."
+faqs:
+  - q: 'What''s the cheapest marketing automation software for Australian small business in 2026?'
+    a: 'The cheapest effective option is Mailchimp''s free tier for up to 500 contacts, or Make at $14 AUD/month for custom workflows. Mailchimp works if you just need basic email automation. Make works if you need to connect multiple tools and build custom marketing workflows. Both are under $20/month and solve real problems for SMEs.'
+  - q: 'Do I need marketing automation if I''m a small business with under 10 employees?'
+    a: 'Yes, but start simple. If you''re manually following up leads, sending the same emails repeatedly, or losing track of contacts, automation fixes that. You don''t need enterprise features. You need one or two reliable workflows that save you 5-10 hours a week. Start with a lead capture automation and a welcome email sequence. Build from there.'
+  - q: 'Which marketing automation platform integrates best with Xero?'
+    a: 'HubSpot has the most reliable native Xero integration for Australian SMEs. Invoices, contact data, and payment status sync both ways. Zoho also has solid Xero integration at a lower price point. If you need custom Xero workflows, Make gives you full API access to build exactly what you need.'
+  - q: 'Can I use free marketing automation tools or do I need to pay?'
+    a: 'You can start free. Mailchimp''s free tier, HubSpot''s free CRM, and Make''s free plan all work for basic automation. But you''ll hit limits fast — usually around 500-1,000 contacts or 1,000 automation runs per month. Budget $30-90/month once you''re serious about marketing automation. That covers most Australian SMEs up to 2,000 contacts.'
+  - q: 'How long does it take to set up marketing automation for a small business?'
+    a: 'A simple welcome email sequence takes 2-3 hours to set up properly. A full marketing automation system (lead capture, segmentation, nurture sequences, and CRM integration) takes 1-2 weeks if you''re doing it yourself, or 3-5 days if you hire someone who knows the platform. Don''t try to automate everything at once. Pick one workflow, get it working, then add the next one.'
 ---
 # Best Marketing Automation Software Australia 2026: 9 Tools That Actually Work for Small Business
 

@@ -9,6 +9,19 @@ author: "Luke"
 level: "intermediate"
 readingTime: 9
 summary: "A step-by-step calculation of what Australian tradies lose annually by running their business manually, using Fair Work Commission wage data, ABS time-tracking stats, and Xero invoicing research to build a fully defensible dollar figure with transparent maths."
+faqs:
+  - q: 'How much money do tradies lose to admin each year in Australia?'
+    a: 'Most Australian tradies lose between $31,500 and $54,400 per year to admin work, based on Fair Work Commission wage data and ASBFEO time-tracking research. The figure includes opportunity cost (time spent on admin instead of billable work), invoicing delays, and compliance burden. High-earning tradies with poor systems can lose over $70,000 annually.'
+  - q: 'What is the opportunity cost of doing admin manually for a trade business?'
+    a: 'Opportunity cost is the revenue you didn''t earn because you were busy doing something else. For a tradie charging $90 per hour who spends 7 hours per week on admin, the opportunity cost is $630 per week or $31,500 per year. That''s billable work you could''ve done but didn''t because you were stuck doing invoicing, bookkeeping, and paperwork instead.'
+  - q: 'How much does slow invoicing cost Australian small businesses?'
+    a: 'Xero''s 2024 Small Business Insights report found that Australian small businesses lose an average of $8,400 per year to late payments caused by invoicing delays. Businesses that invoice immediately after job completion get paid 11 days faster than those who batch their invoicing weekly. The cost includes cash flow stress, interest charges on overdrafts, and missed opportunities due to lack of working capital.'
+  - q: 'What does ASBFEO say about the cost of compliance for small businesses?'
+    a: 'The Australian Small Business and Family Enterprise Ombudsman''s 2023 Red Tape Report found that small businesses spend an average of $5,100 per year dealing with regulatory compliance. For trade businesses specifically, the cost sits closer to $6,500-$8,000 when you include time spent on licensing, insurance documentation, safety records, and subcontractor paperwork.'
+  - q: 'How much could a plumber or electrician in Australia save by automating their business?'
+    a: 'A typical Australian tradie can save between $31,000 and $50,000 per year by automating invoicing, quote follow-ups, and compliance paperwork. The payback period on automation setup (typically $8,000-$12,000) is 3-5 months. After that, you''re earning back 5-8 hours per week that you can spend on billable work, with your family, or growing the business.'
+  - q: 'How do I calculate the hidden cost of running my trade business manually?'
+    a: 'Use this formula: (Your hourly rate × Admin hours per week × 50 weeks) + Invoicing delay cost ($8,400 average) + Missed follow-ups (estimate 1-2 per month × average job value) + Compliance time cost ($6,500-$8,000). For example: ($95 × 7 × 50) + $8,400 + $24,000 + $7,000 = $72,650 per year. Track your actual admin hours for 2 weeks to get an accurate number.'
 ---
 # Hidden Cost Manual Trade Business Australia 2026: What Running Without Automation Really Costs You
 

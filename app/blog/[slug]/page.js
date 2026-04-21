@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import JsonLd from '@/components/ui/JsonLd'
+import Breadcrumb from '@/components/layout/Breadcrumb'
 import { getAllArticles, getArticleBySlug } from '@/lib/articles'
 import { getAllCaseStudies } from '@/lib/caseStudies'
 import { CLUSTERS } from '@/lib/clusters'
@@ -60,7 +61,20 @@ function formatDate(d) {
   })
 }
 
-function extractFaqs(html) {
+// Prefer structured frontmatter faqs over HTML regex extraction.
+// Frontmatter shape: `faqs: [{ q: '...', a: '...' }, ...]` — direct and reliable.
+// Regex fallback is kept for existing articles that haven't migrated yet;
+// new articles should always use frontmatter so FAQPage schema matches
+// visible content one-to-one (framework rule).
+function extractFaqs(frontmatter, html) {
+  if (Array.isArray(frontmatter?.faqs) && frontmatter.faqs.length > 0) {
+    return frontmatter.faqs
+      .map(f => ({
+        question: (f.q || f.question || '').trim(),
+        answer: (f.a || f.answer || '').trim(),
+      }))
+      .filter(f => f.question && f.answer)
+  }
   const faqStart = html.indexOf('Frequently Asked Questions')
   if (faqStart < 0) return []
   const faqSection = html.slice(faqStart)
@@ -88,7 +102,7 @@ export default async function ArticlePage({ params }) {
   if (!article) return notFound()
 
   const fm = article.frontmatter
-  const faqs = extractFaqs(article.html)
+  const faqs = extractFaqs(fm, article.html)
   const { quickAnswer, bodyHtml } = extractQuickAnswer(article.html)
   const clusterLabel = fm.cluster && CLUSTERS[fm.cluster]?.label
   const clusterSlug = fm.cluster
@@ -165,6 +179,16 @@ export default async function ArticlePage({ params }) {
       {/* Hero */}
       <section style={{ padding: '120px var(--page-pad) 60px', background: 'var(--bg-deep)' }}>
         <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
+          <div style={{ marginBottom: 28 }}>
+            <Breadcrumb
+              items={[
+                { label: 'Home', href: '/' },
+                { label: 'Blog', href: '/blog' },
+                ...(clusterSlug && clusterLabel ? [{ label: clusterLabel, href: `/blog/cluster/${clusterSlug}` }] : []),
+                { label: fm.title },
+              ]}
+            />
+          </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 12, marginBottom: 20 }}>
             <span
               style={{

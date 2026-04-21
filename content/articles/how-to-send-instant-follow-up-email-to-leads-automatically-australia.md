@@ -11,6 +11,19 @@ author: "Luke"
 level: "beginner"
 readingTime: 9
 summary: "Learn how to set up instant automated follow-up emails that respond to leads within minutes, not hours. This beginner-friendly guide covers platform setup, proven templates, and timing strategies used by Australian service businesses to convert 5x more leads without hiring developers or adding staff."
+faqs:
+  - q: 'How long should I wait before sending an automated follow-up email?'
+    a: 'Zero minutes. The instant follow-up should send within 60 seconds of the lead submitting their enquiry. Research from Harvard Business Review shows that responding within 5 minutes converts 5 times better than waiting 30 minutes. After your instant confirmation, send your detailed quote or proposal within 4-24 hours, then follow up again on day 3 and day 7 if they haven''t replied.'
+  - q: 'Can I automate follow-up emails for free in Australia?'
+    a: 'Yes. HubSpot''s free tier includes forms, CRM, and basic email automation for up to 1,000 contacts. Mailchimp''s free tier covers 500 contacts with limited automation. Zapier''s free tier allows 100 automated tasks per month, enough for small lead volumes. Most Australian service businesses can run instant follow-up automation completely free until they hit 50-100 leads per month.'
+  - q: 'What should I include in an automated follow-up email template?'
+    a: 'Include the lead''s name, reference their specific enquiry, confirm you received it, tell them exactly what happens next and when, and provide one useful resource or link while they wait. Keep it under 100 words. Avoid selling in the instant email, it''s purely to keep you in the conversation until you can send a proper response.'
+  - q: 'How do I stop automated emails going to spam?'
+    a: 'Use a business email address from your domain, not Gmail or Hotmail. Authenticate your domain with SPF and DKIM records (your automation platform will guide you). Avoid spam trigger words like "free," "guarantee," or excessive exclamation marks. Keep images small or use plain text. Most importantly, only email people who enquired directly, never buy lead lists.'
+  - q: 'Do automated follow-up emails work for tradies and service businesses?'
+    a: 'Yes. Australian tradies using instant automated follow-up report 30-40% higher quote-to-job conversion rates according to ServiceM8 and Tradify user data. The key is keeping the automation personal. Use their name, reference their job type, mention their suburb, and follow up with a real phone call or detailed quote within 24 hours.'
+  - q: 'Should I automate all my follow-up emails or just the first one?'
+    a: 'Automate the first confirmation email only. Your second email (the detailed quote or proposal) should be personalised and manual. After that, you can automate gentle nudges on day 3 and day 7 if they haven''t replied, but keep them short and personal. Never automate more than 4 emails in a 2-week period or you''ll annoy leads instead of converting them.'
 ---
 # How to Send Instant Follow-Up Email to Leads Automatically Australia 2026: Setup Guide for Small Business
 

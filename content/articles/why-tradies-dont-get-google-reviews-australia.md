@@ -9,6 +9,19 @@ author: "Luke"
 level: "beginner"
 readingTime: 9
 summary: "This article examines why Australian trade businesses underperform on Google reviews compared to other service industries, citing BrightLocal Local Consumer Review Survey data on unprompted vs prompted review rates, the impact of review volume on local SEO ranking and conversion rates, and practical automation solutions for getting more reviews after job completion."
+faqs:
+  - q: 'How many Google reviews does a tradie need to rank locally in Australia?'
+    a: 'You need at least 25 reviews to be competitive for most local trade searches in Australian cities. Businesses with 40+ reviews consistently rank in the local 3-pack for high-intent keywords like "plumber near me" or "electrician [suburb]". Below 10 reviews, you''re essentially invisible in competitive areas like Melbourne, Sydney, or Brisbane.'
+  - q: 'Will customers leave a review if I ask them directly?'
+    a: 'Yes. According to the BrightLocal Local Consumer Review Survey, 50-70% of satisfied customers will leave a review when asked directly, compared to only 4-6% who leave reviews unprompted. The key is asking within 24 hours of job completion when satisfaction is highest and the experience is still fresh.'
+  - q: 'How do Google reviews affect local search ranking for tradies?'
+    a: 'Google''s local search algorithm uses review signals for roughly 15% of local pack ranking factors. This includes review quantity, recency (when your last review was posted), and velocity (how often you get new reviews). A steady flow of recent reviews will outrank an older profile with the same number of total reviews.'
+  - q: 'What''s the best way to get more Google reviews for my trade business?'
+    a: 'Send an automated review request via SMS or email within 24 hours of completing the job. Include a direct link to your Google Business Profile review page and a short personalised message. This captures customers at the emotional peak when satisfaction is highest and increases response rates to 50-70% compared to 10-15% for manual follow-ups sent days or weeks later.'
+  - q: 'What percentage of Australian customers leave reviews without being asked?'
+    a: 'Only 4-6% of satisfied customers leave a Google review without being prompted. This means for every 100 jobs you complete, you''ll get 2-3 reviews naturally. But with an automated review request system, that same 100 jobs generates 50-70 reviews. The work quality is the same , the difference is simply asking.'
+  - q: 'Why do tradies with fewer skills but more reviews get more jobs?'
+    a: 'Because local search ranking and customer trust both depend heavily on review volume and recency. A plumber with 50 reviews and a 4.7 star rating will rank higher and convert better than a plumber with 8 reviews and a 4.9 star rating, even if the second plumber is technically more skilled. Google prioritises review signals, and customers filter out businesses with low review counts before making contact.'
 ---
 # Why Tradies Don't Get Google Reviews Australia 2026: The Data Behind the Local SEO Gap
 

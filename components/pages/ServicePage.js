@@ -2,15 +2,31 @@
 // Dispatched from app/[slug]/page.js. No 'use client' — crawlers read initial HTML only.
 // Layout matches the V5a exploration (boxed Q&A, high contrast, sticky TOC).
 
+import { execSync } from 'node:child_process'
 import Link from 'next/link'
 import SectionEyebrow from '@/components/ui/SectionEyebrow'
 import PillCTA from '@/components/ui/PillCTA'
+import Breadcrumb from '@/components/layout/Breadcrumb'
 import { DOMAIN, PROVIDER, AREAS_SERVED, LOCATIONS } from '@/lib/data/seo'
 
-// Default "last reviewed" date for service pages, ISO 8601.
-// Override per-service by setting `dateModified` on a service entry in
-// lib/data/services.js — useful when a single service gets a content refresh.
-const DEFAULT_SERVICE_DATE_MODIFIED = '2026-04-19'
+// Default "last reviewed" date for service pages, ISO 8601 (YYYY-MM-DD).
+// Derived from the last git commit that touched lib/data/services.js so any
+// service edit automatically bumps freshness without a manual field update.
+// Per-service override: set `dateModified` on the entry in lib/data/services.js
+// (useful when a single service gets a content refresh unrelated to a commit).
+// Fallback constant is used when git isn't available (sandboxed build envs).
+const GIT_FALLBACK_DATE = '2026-04-19'
+function resolveDefaultDateModified() {
+  try {
+    const iso = execSync('git log -1 --format=%cI -- lib/data/services.js', {
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim()
+    if (/^\d{4}-\d{2}-\d{2}/.test(iso)) return iso.slice(0, 10)
+  } catch {}
+  return GIT_FALLBACK_DATE
+}
+const DEFAULT_SERVICE_DATE_MODIFIED = resolveDefaultDateModified()
 
 function formatReviewedDate(iso) {
   const d = new Date(iso + 'T00:00:00Z')
@@ -173,7 +189,7 @@ export default function ServicePage({ service }) {
   const displaySc    = serviceDisplayName(service)   // sentence case
   const displayLc    = service.displayName ? service.displayName : displaySc.toLowerCase()
   const location     = serviceLocation(service)
-  const locationChip = location === 'Melbourne' ? 'Melbourne · Australia-wide' : 'Melbourne · Australia-wide'
+  const locationChip = 'Melbourne · Australia-wide'
   const areaServed   = AREAS_SERVED.join(', ')
   const dateModified = service.dateModified || DEFAULT_SERVICE_DATE_MODIFIED
   const reviewedLbl  = formatReviewedDate(dateModified)
@@ -191,7 +207,17 @@ export default function ServicePage({ service }) {
       <section style={{ ...S.heroBand, padding: '0 var(--page-pad)' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
 
-          <div style={{ display: 'grid', gap: 72, gridTemplateColumns: 'minmax(0, 1.25fr) minmax(0, 1fr)', padding: '60px 0 96px' }} className="uc-hero-grid">
+          <div style={{ padding: '40px 0 0' }}>
+            <Breadcrumb
+              items={[
+                { label: 'Home', href: '/' },
+                { label: 'Services', href: '/services' },
+                { label: serviceTitleCase(service) },
+              ]}
+            />
+          </div>
+
+          <div style={{ display: 'grid', gap: 72, gridTemplateColumns: 'minmax(0, 1.25fr) minmax(0, 1fr)', padding: '20px 0 96px' }} className="uc-hero-grid">
             <div>
               <div style={{ marginBottom: 28 }}>
                 <SectionEyebrow n={service.index} label={`Service · ${displaySc}`} />

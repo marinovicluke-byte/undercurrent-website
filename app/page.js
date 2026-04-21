@@ -11,25 +11,41 @@ import FAQ from '@/components/sections/FAQ'
 import ClosingCTA from '@/components/sections/ClosingCTA'
 import JsonLd from '@/components/ui/JsonLd'
 
-const orgSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'UnderCurrent Automations',
-  url: 'https://undercurrentautomations.com',
-  description: 'AI automation for small businesses in Australia.',
-  areaServed: 'Australia',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Melbourne',
-    addressRegion: 'VIC',
-    addressCountry: 'AU',
+const DOMAIN = 'https://undercurrentautomations.com'
+
+export const metadata = {
+  title: 'UnderCurrent Automations — AI Automation Agency for Australian Small Businesses',
+  description: 'Melbourne AI automation agency serving Australia-wide. Custom workflows for lead gen, sales, content, finance and ops. Built on Xero, HubSpot, n8n. Live in 14 days.',
+  alternates: { canonical: DOMAIN },
+  openGraph: {
+    title: 'UnderCurrent Automations — AI Automation Agency for Australian Small Businesses',
+    description: 'Melbourne AI automation agency serving Australia-wide. Custom workflows for lead gen, sales, content, finance and ops. Built on Xero, HubSpot, n8n. Live in 14 days.',
+    url: DOMAIN,
+    type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'UnderCurrent Automations — AI Automation Agency for Australian Small Businesses',
+    description: 'Melbourne AI automation agency serving Australia-wide. Custom workflows for lead gen, sales, content, finance and ops.',
+  },
+}
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${DOMAIN}#webpage`,
+  url: DOMAIN,
+  name: 'UnderCurrent Automations — AI Automation Agency for Australian Small Businesses',
+  description: 'Melbourne AI automation agency serving Australia-wide.',
+  isPartOf: { '@id': `${DOMAIN}#website` },
+  about: { '@id': `${DOMAIN}#organization` },
+  inLanguage: 'en-AU',
 }
 
 export default function HomePage() {
   return (
     <>
-      <JsonLd schema={orgSchema} />
+      <JsonLd schema={webPageSchema} />
       <Hero />
       <Marquee />
       <CompetitiveReality />

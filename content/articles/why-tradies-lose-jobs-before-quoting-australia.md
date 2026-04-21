@@ -9,6 +9,19 @@ author: "Luke"
 level: "beginner"
 readingTime: 8
 summary: "This article explains why Australian trade businesses lose the majority of new enquiries before they even submit a quote, focusing on lead response time data and customer expectations, with practical automation solutions."
+faqs:
+  - q: 'How fast should a tradie respond to a new enquiry in Australia?'
+    a: 'You should respond within 5 minutes for the best chance of winning the job. According to Harvard Business Review research, businesses that respond within 5 minutes are 100 times more likely to connect with the lead than those who wait 30 minutes. In practical terms for Australian tradies, an instant automated SMS followed by a phone call within 30 minutes is the target.'
+  - q: 'Do customers really go with the first tradie to respond?'
+    a: 'Yes, in most cases they do. InsideSales.com research found that 78% of customers go with the business that responds first, not necessarily the cheapest or most experienced. When customers have an urgent problem like a leaking pipe or broken air conditioner, they contact multiple tradies and book with whoever gets back to them first.'
+  - q: 'What is the average response time for Australian trade businesses?'
+    a: 'Most Australian trade businesses respond to enquiries within 4-6 hours, with many taking 24-48 hours or longer. This is far too slow. The tradies winning the most work are responding within 10-30 minutes using automated systems that send instant acknowledgments while they''re still on job sites.'
+  - q: 'How much work am I losing by responding slowly to enquiries?'
+    a: 'If you''re responding in 4-6 hours instead of 5 minutes, you''re likely losing 50-70% of potential jobs before you even get a chance to quote. For a tradie receiving 20 enquiries per month, fixing response time alone could double the number of jobs you quote and win, potentially adding $80,000-$100,000 in annual revenue.'
+  - q: 'Can I automate lead responses without losing the personal touch?'
+    a: 'Absolutely. An automated instant SMS that says "Thanks for your enquiry, I''ll call you back in 30 minutes" is far more personal than no response for 6 hours. The customer knows you''ve seen their message and you''re prioritising them. You still make the actual phone call yourself , automation just buys you time to do it properly.'
+  - q: 'What tools do I need to set up automated lead responses?'
+    a: 'Most Australian tradies can set up automated lead responses using their existing tools: a Google Form for enquiries, Google Sheets for tracking, their regular phone number, and an automation platform like n8n to connect everything. You don''t need expensive CRM software or a full-time admin person. The whole system can run in the background for under $50 a month.'
 ---
 # Why Tradies Lose Jobs Before Quoting Australia 2026: The Lead Response Time Problem
 

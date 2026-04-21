@@ -9,6 +9,17 @@ author: "Luke"
 level: "beginner"
 readingTime: 9
 summary: "This article walks Australian small business owners through exactly which processes to automate first, with real examples from trades, retail, and professional services, and shows how to do it without hiring technical experts or expensive consultants."
+faqs:
+  - q: 'How much does it cost to automate business processes in Australia?'
+    a: 'Most small businesses spend $50-200/month on automation tools like Zapier or Make. If you hire someone to build the automations for you, expect $500-2,000 upfront depending on complexity. Many businesses start with free tiers and build their first 2-3 automations themselves before paying for anything.'
+  - q: 'Do I need to know coding to automate my business?'
+    a: 'No. No-code automation platforms like Zapier, Make, and n8n work by connecting your existing apps through a visual interface. You select triggers and actions from dropdown menus instead of writing code. If you can use Excel and email, you can build automations.'
+  - q: 'What business processes should I automate first?'
+    a: 'Invoice follow-ups save the most time for most Australian SMEs—typically 2-3 hours per week. After that, automate quote generation, appointment reminders, and lead follow-ups. These four processes alone can save you 8-10 hours per week and usually pay for themselves within the first month.'
+  - q: 'How long does it take to see ROI from business automation?'
+    a: 'Most Australian SMEs see ROI in 4-6 weeks. Automated invoice reminders get you paid faster, automated quote generation lets you send more quotes, and the time you save compounds quickly. A typical small business saves 10-15 hours per week after automating their top 5 processes, which translates to $4,000-6,000 per month in recovered billable time.'
+  - q: 'Will my automations break when I update my software?'
+    a: 'Sometimes. When apps update their APIs, connections can break temporarily. Most automation platforms send you immediate error notifications when this happens. Check your automations once a month to make sure they''re still running. Most issues take 5-10 minutes to fix—usually just reconnecting an app or updating a field name.'
 ---
 # Automating Business Processes Australia 2026: A Practical Guide for Australian SMEs
 

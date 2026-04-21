@@ -9,6 +9,23 @@ author: "Luke"
 level: "beginner"
 readingTime: 8
 summary: "Defines business process automation from first principles for Australian small business owners, explains what it means in practical terms (not theory), shows real examples from 1-50 person teams, and outlines immediate time-saving benefits."
+faqs:
+  - q: 'What is the simplest business process automation example for small businesses?'
+    a: 'Email follow-ups after someone fills out a contact form. When a lead submits their details on your website, your CRM (like HubSpot) automatically sends them a thank-you email immediately, then another email 2 days later with more info, then another a week later if they haven''t responded. Zero manual work, massive improvement in response rates.'
+  - q: 'Do I need technical skills to set up business process automation?'
+    a: 'Not for basic automation using tools like Zapier. You can connect two apps and set a trigger/action with no coding. For more complex workflows or custom builds, you''ll need help from someone technical or an automation specialist. Most Australian small businesses start DIY for simple stuff, then hire help when they need something more sophisticated.'
+  - q: 'How long does it take to set up business process automation?'
+    a: 'Simple automations (2-3 steps, connecting 2 apps) take 30 minutes to an hour. Complex workflows spanning multiple systems with conditional logic and error handling take 5-20 hours depending on scope. A typical first project for a small business (3-5 key workflows) takes 1-2 weeks from planning to go-live.'
+  - q: 'What happens if my automation breaks?'
+    a: 'Good automation setups include error handling. If something fails, you get a notification (usually in Slack or email) telling you what broke and where. You fix it, the queue resumes, and you''re back running. This is why documentation and ongoing maintenance matter. Budget for someone to monitor and maintain your automations.'
+  - q: 'Can business process automation work with my existing software?'
+    a: 'Almost certainly yes. Most modern business tools (Xero, HubSpot, Stripe, Slack, Gmail, Shopify, WooCommerce) have APIs that let them talk to automation platforms. If a tool doesn''t have an API, you can usually automate it through email, webhooks, or by using the tool''s built-in automation features. The question isn''t "can it connect" but "how hard is it to connect".'
+  - q: 'Is business process automation worth it for very small teams (1-5 people)?'
+    a: 'Absolutely. Small teams have even less time to waste on repetitive tasks. A solo tradie saving 5 hours a week gets 20% of their work time back. That''s an extra day for actual paid work every week. The ROI is often better for very small businesses because every hour saved goes straight to the owner''s capacity to generate revenue.'
+  - q: 'What''s the difference between business process automation and robotic process automation (RPA)?'
+    a: 'Business process automation connects systems through APIs and automates workflows across multiple tools. Robotic process automation uses software "bots" to mimic human actions on a computer screen (clicking, typing, copying). RPA is useful when systems don''t have APIs and can''t connect. BPA is cleaner, faster, and more reliable when APIs are available. For small businesses in Australia, BPA is almost always the right choice.'
+  - q: 'Do automation platforms require ongoing subscription costs?'
+    a: 'Yes, most do. Zapier, Make, and similar tools charge monthly based on how many tasks you run. Costs range from $20-$150/month for typical small business usage. n8n is open-source and can be self-hosted with no subscription if you have the technical ability, though most businesses pay for n8n''s cloud hosting ($20-$50/month) for simplicity. Budget for ongoing platform costs plus occasional maintenance.'
 ---
 # What Is Business Process Automation Australia 2026: The Small Business Owner's No-Fluff Guide
 

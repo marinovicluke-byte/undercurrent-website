@@ -3,8 +3,15 @@ import SectionEyebrow from '@/components/ui/SectionEyebrow'
 import PillCTA from '@/components/ui/PillCTA'
 
 export const metadata = {
-  title: 'How We Work',
+  title: 'How We Work — UnderCurrent Automations',
   description: 'Three precise steps: Map your workflows, Build automations that fit, then let them Flow around the clock.',
+  alternates: { canonical: 'https://undercurrentautomations.com/process' },
+  openGraph: {
+    title: 'How UnderCurrent Works — Map, Build, Flow',
+    description: 'Three precise steps to AI automation for your business. Map workflows, build automations, let them flow.',
+    url: 'https://undercurrentautomations.com/process',
+    type: 'website',
+  },
 }
 
 const STEPS = [

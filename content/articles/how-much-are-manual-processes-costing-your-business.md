@@ -11,6 +11,17 @@ readingTime: 8
 heroImage: "/articles/how-much-are-manual-processes-costing-your-business/hero.jpg"
 heroImageAlt: "Cost breakdown visualisation of manual business processes draining time and revenue from Australian small businesses"
 summary: "A practical guide for Australian service businesses to calculate the true cost of manual admin, invoicing, and follow-up processes, with real SME examples and ROI calculations."
+faqs:
+  - q: 'How do I calculate the hourly cost of manual processes if I''m the only employee?'
+    a: 'Use your target hourly rate, not what you currently earn. If you want to bill $120/hour but you''re spending 10 hours/week on admin, that''s $62,400/year in lost earning capacity. Track your time for one week across invoicing, data entry, follow-ups, and quoting. Multiply by 48 working weeks, then by your target rate. That''s your annual manual process cost, not your current wages.'
+  - q: 'What''s the typical payback period for automating invoicing and follow-up in a small trade business?'
+    a: 'Most Australian tradies see payback in 2-4 months. A plumbing outfit spending 6 hours/week on invoicing ($14,400/year) can automate through ServiceM8 or Tradify for $2,000-$3,000 upfront plus $180-$250/month. Payback hits around month 3. After that, it''s $12,000+ annual savings. Lead follow-up automation pays back even faster because it increases conversion, not just saves time.'
+  - q: 'Should I automate data entry or hire a part-time admin assistant?'
+    a: 'Depends on task variability. If 80% of your data entry follows the same pattern (customer info, job notes, invoice details), automate it. If every task requires judgement calls, hire someone. A part-time admin at 15 hours/week costs $20,000-$25,000/year including super. Automating repetitive data entry costs $4,000-$8,000 to set up and $200-$400/month to maintain. If automation can handle 60% of the workload, do that first, then hire for the complex 40%.'
+  - q: 'How much does it cost to automate manual processes for a 5-10 person Australian service business?'
+    a: 'For basic automation (invoicing, follow-up, reconciliation), expect $8,000-$15,000 upfront for setup and integration, plus $300-$600/month for software subscriptions and maintenance. That covers tools like Xero, ServiceM8, Make or n8n, and a few custom workflows. ROI typically lands in 3-6 months. Businesses spending $60,000-$80,000/year on manual processes recover half of that in year one. We wrote a guide on which processes to automate first if you want the full breakdown.'
+  - q: 'What''s the difference between manual process costs and opportunity costs?'
+    a: 'Manual process costs are the wages you pay for time spent on repetitive admin (invoicing, data entry, follow-up). Opportunity costs are the revenue you didn''t earn because your team was doing admin instead of billable work. A consultant billing $180/hour who spends 4 hours/week on invoicing loses $34,560/year in opportunity cost on top of the $9,600 manual process cost. Both are real, both are recoverable through automation.'
 ---
 # How Much Are Manual Processes Costing Your Business?
 

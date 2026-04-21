@@ -9,6 +9,17 @@ author: "Luke"
 level: "beginner"
 readingTime: 8
 summary: "This article walks through five specific automation tasks Australian small business owners can implement in under 30 minutes using free no-code tools like Zapier, Make, and n8n, including lead capture, invoice reminders, appointment confirmations, review requests, and social media updates."
+faqs:
+  - q: 'What is the easiest automation for a complete beginner with no technical skills?'
+    a: 'Lead capture to email notification. Connect your website form to Zapier, set it to send you an email when someone submits, and you''re done in 10 minutes. No coding, no technical setup, just two clicks and a test.'
+  - q: 'Do I need to pay for automation tools or are free plans enough?'
+    a: 'Free plans are more than enough to start. Zapier gives you 100 tasks per month for free, Make gives you 1,000 operations, and n8n is completely free if you self-host. Most Australian small businesses run on free plans for months before they need to upgrade.'
+  - q: 'How long does it actually take to set up a simple automation?'
+    a: 'Between 10 and 30 minutes for the five automations in this article. Lead capture takes about 10 minutes. Invoice reminders take about 20. Appointment reminders take about 25 because you''re setting up multiple SMS triggers. Review requests take about 15. Social media scheduling takes about 30 if you''re filling in the spreadsheet at the same time.'
+  - q: 'Will automation break if I change something in my business?'
+    a: 'Only if you change the tools you''re using. If you switch from Xero to QuickBooks, you''ll need to reconnect that automation. But the process stays the same. Most automations are more resilient than you think. They just keep running until you turn them off or the connected app changes something major.'
+  - q: 'What happens if the automation makes a mistake or sends the wrong thing?'
+    a: 'Turn it off, fix it, test it again. That''s the beauty of no-code tools. You can pause any automation with one click, edit it, and turn it back on. And most platforms let you test automations before they go live so you can see exactly what will happen before it touches a real customer.'
 ---
 # What Is the Simplest Task a Small Business Can Automate Right Now Using a No-Code Tool? Australia 2026: 5 Wins You Can Set Up in Under 30 Minutes
 

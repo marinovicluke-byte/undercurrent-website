@@ -9,6 +9,19 @@ author: "Luke"
 level: "beginner"
 readingTime: 9
 summary: "Practical step-by-step guide covering eInvoicing setup for Australian small businesses, including ATO compliance requirements, software selection, Peppol network registration, and automation strategies to reduce invoice processing costs and speed up payment cycles."
+faqs:
+  - q: 'Do I need eInvoicing if I''m a small business under $20M turnover?'
+    a: 'No, eInvoicing is only mandatory for businesses over $20M turnover when dealing with the federal government. But you should still set it up because it cuts invoice processing costs by 60-80%, speeds up payments by 40%, and makes you more competitive when pitching larger clients who require eInvoicing capability.'
+  - q: 'Can I use eInvoicing if my customers aren''t on the Peppol network?'
+    a: 'Yes, but it won''t save you time for those specific customers. eInvoicing only works when both you and your customer are registered on Peppol. If your customer isn''t set up, your accounting software will fall back to sending a regular PDF invoice via email. You can still benefit from eInvoicing for customers who are registered while sending normal invoices to everyone else.'
+  - q: 'How long does it take to set up eInvoicing in Xero or MYOB?'
+    a: 'About 15-20 minutes for the initial setup. You''ll register your business on the Peppol network through your accounting software, add your business details and ABN, then add Peppol IDs to your customer records. After that, sending an eInvoice takes the same amount of time as sending a regular invoice , your software just routes it through Peppol automatically.'
+  - q: 'Does eInvoicing work for international invoices?'
+    a: 'Yes, but only in countries that use the Peppol network. Australia, New Zealand, Singapore, and most European countries are on Peppol. The US, Canada, and many other regions aren''t. If you''re invoicing a business in London, eInvoicing works. If you''re invoicing a business in Los Angeles, you''ll send a regular invoice.'
+  - q: 'What happens if I send an eInvoice to the wrong customer?'
+    a: 'Your accounting software checks the recipient''s Peppol ID before sending, so you can''t accidentally send an invoice to the wrong business. If you enter the wrong customer in your system, the invoice will go to whoever that customer record points to , same as a regular invoice. Always double-check the customer name before hitting send.'
+  - q: 'Can I still send PDF invoices after setting up eInvoicing?'
+    a: 'Yes. eInvoicing doesn''t replace your ability to send PDF invoices. It just adds a faster option for customers who are Peppol-registered. Your accounting software will automatically choose eInvoicing when available and fall back to PDF email when it''s not. You can also manually override and send a PDF if needed.'
 ---
 # eInvoicing for Small Business Australia 2026: Your Step-by-Step Setup Guide
 

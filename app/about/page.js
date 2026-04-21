@@ -5,6 +5,13 @@ export const metadata = {
   title: 'About — UnderCurrent Automations',
   description:
     'What UnderCurrent is, who built it, and where we\'re going — the full story.',
+  alternates: { canonical: 'https://undercurrentautomations.com/about' },
+  openGraph: {
+    title: 'About UnderCurrent Automations',
+    description: 'Melbourne AI automation agency. Founded by Luke Marinovic. We build custom workflows for Australian small businesses.',
+    url: 'https://undercurrentautomations.com/about',
+    type: 'website',
+  },
 }
 
 // ─── Shared tokens ────────────────────────────────────────────────────────────

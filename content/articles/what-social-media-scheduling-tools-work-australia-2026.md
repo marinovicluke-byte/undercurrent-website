@@ -11,6 +11,19 @@ author: "Luke"
 level: "beginner"
 readingTime: 9
 summary: "A practical comparison of 8 social media scheduling tools tested and working for Australian service businesses in 2026, with AUD pricing, ACCC compliance notes, and real performance benchmarks."
+faqs:
+  - q: 'What''s the cheapest social media scheduling tool that works in Australia?'
+    a: 'Metricool offers a permanently free plan with 1 user, 3 social profiles, and 50 scheduled posts. Buffer''s paid entry tier is $19 AUD/month for 3 profiles and 100 posts. Both work reliably without geo-restrictions and accept Australian businesses.'
+  - q: 'Can I schedule Instagram Stories and Reels through these tools?'
+    a: 'Later and Metricool support direct scheduling for Instagram Stories and Reels. Buffer, Hootsuite, and SocialBee send push notifications to your phone when it''s time to post Stories or Reels, but you tap to approve manually. Instagram''s API doesn''t allow fully automated Story posting for most tools.'
+  - q: 'Do these tools violate platform terms of service?'
+    a: 'No. All eight platforms use official APIs from Facebook, Instagram, LinkedIn, and TikTok. They''re authorised posting partners. Using a scheduling tool is completely compliant and won''t get your account banned or shadowbanned.'
+  - q: 'How far in advance can you schedule posts?'
+    a: 'Most tools allow unlimited advance scheduling. Buffer and Later let you queue posts months ahead. The practical limit is content relevance, not platform restrictions. Scheduling more than 4 weeks ahead usually means you''re posting outdated content.'
+  - q: 'What happens if I switch tools?'
+    a: 'You''ll need to manually export your scheduled posts (most tools offer CSV export) and reimport them into the new platform. Your historical analytics don''t transfer. Switch during a low-activity period and migrate one social profile at a time to avoid gaps.'
+  - q: 'Do I still need to manually engage with comments?'
+    a: 'Yes. Scheduling tools post content but don''t automate replies. You should still log into each platform daily to respond to comments, messages, and mentions. A 2025 BrightLocal survey found 72% of Australian consumers expect businesses to respond to social comments within 24 hours.'
 ---
 # What Social Media Scheduling Tools Work in Australia 2026? 8 Tested Platforms Compared
 

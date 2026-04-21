@@ -248,7 +248,7 @@ function FlatPanel({ tone, label, sub, headline, items, tagline }) {
       <div style={{ position: 'relative' }}>
         <BAColumnHeader tone={tone} label={label} sub={sub} />
 
-        <h4
+        <h3
           style={{
             margin: '16px 0 20px',
             fontFamily: 'var(--font-display)',
@@ -260,7 +260,7 @@ function FlatPanel({ tone, label, sub, headline, items, tagline }) {
           }}
         >
           {headline}
-        </h4>
+        </h3>
 
         <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
           {items.map((it, i) => (

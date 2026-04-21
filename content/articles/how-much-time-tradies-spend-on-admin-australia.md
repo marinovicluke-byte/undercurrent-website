@@ -9,6 +9,19 @@ author: "Luke"
 level: "beginner"
 readingTime: 8
 summary: "Australian trade and service business owners spend between 8 and 12 hours per week on administrative tasks like invoicing, bookkeeping, and compliance paperwork, costing between $4,000 and $7,200 annually in lost billable time based on average hourly rates."
+faqs:
+  - q: 'How many hours per week do Australian tradies spend on admin tasks?'
+    a: 'Australian tradies spend between 8 and 12 hours per week on administrative tasks according to Xero Small Business Insights and ABS data on small business working patterns. This includes invoicing, bookkeeping, quoting, compliance paperwork, and job scheduling.'
+  - q: 'What admin tasks take the most time for trade business owners in Australia?'
+    a: 'Invoicing and payment follow-up (2-3 hours/week), bookkeeping and expense tracking (2-4 hours/week), quoting and estimating (1-2 hours/week), compliance and regulatory paperwork (1-2 hours/week), and scheduling and job management (1-2 hours/week) are the top time consumers according to ASBFEO data.'
+  - q: 'How much does admin cost a trade business in Australia per year?'
+    a: 'At an average billable rate of $90 per hour for qualified tradespeople, 10 hours of weekly admin costs $43,200 per year in lost revenue. Even at 8 hours per week, that''s $34,560 annually , money you could''ve earned working on the tools instead of doing paperwork.'
+  - q: 'What is the average hourly rate for plumbers and electricians in Australia?'
+    a: 'Qualified plumbers charge $90-$120 per hour on average, while licensed electricians bill $95-$130 per hour according to Fair Work Commission award data and IBISWorld industry reports. Rates vary by location, with Sydney and Melbourne typically at the higher end.'
+  - q: 'Which admin tasks should tradies automate first to save the most time?'
+    a: 'Start with invoicing and payment follow-up (saves 2-3 hours/week), then automate expense tracking (saves 1-2 hours/week), then tackle scheduling and client communication (saves 1-2 hours/week). These three areas typically recover 6-8 hours per week within the first month.'
+  - q: 'How much time can automation save for Australian trade businesses?'
+    a: 'Properly implemented automation typically recovers 6-8 hours per week according to our work with trade businesses across Melbourne, Brisbane, and Sydney. At $90/hour billable rate, that''s $540 per week or $25,920 per year back in revenue-generating time.'
 ---
 # How Much Time Tradies Spend on Admin Australia 2026: The Real Cost of Paperwork
 
