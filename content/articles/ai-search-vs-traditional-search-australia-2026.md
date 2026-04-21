@@ -5,7 +5,7 @@ date: "2026-04-21"
 slug: "ai-search-vs-traditional-search-australia-2026"
 cluster: "ai"
 keyword: "AI Search vs Traditional Search in Australia (2026)"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 12
 summary: "Australian businesses are losing customers to AI search engines while optimizing for Google alone. This guide shows tradies, agencies, and consultants how ChatGPT, Perplexity, and AI Overviews reshape search visibility in 2026, and what content changes get you cited across both systems."
