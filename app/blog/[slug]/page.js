@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import JsonLd from '@/components/ui/JsonLd'
+import AuthorBio from '@/components/ui/AuthorBio'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import { getAllArticles, getArticleBySlug } from '@/lib/articles'
 import { getAllCaseStudies } from '@/lib/caseStudies'
@@ -296,6 +297,13 @@ export default async function ArticlePage({ params }) {
           />
         </div>
       </article>
+
+      {/* Author bio */}
+      <section style={{ padding: '0 var(--page-pad) 72px', background: 'var(--charcoal)' }}>
+        <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
+          <AuthorBio />
+        </div>
+      </section>
 
       <style>{`
         .article-prose h1 { display: none; }
