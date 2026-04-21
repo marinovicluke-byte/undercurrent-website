@@ -12,7 +12,7 @@ export default function Marquee() {
       style={{
         borderTop: '1px solid var(--text-faint)',
         borderBottom: '1px solid var(--text-faint)',
-        background: 'var(--charcoal)',
+        background: '#26241F',
         display: 'flex',
         alignItems: 'center',
         overflow: 'hidden',

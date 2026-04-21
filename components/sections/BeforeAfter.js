@@ -326,7 +326,7 @@ export default function BeforeAfter() {
   const p = PILLARS[pillarIdx]
 
   return (
-    <SectionShell n="05" label="The shift" anchor="before-after" bg="deep">
+    <SectionShell n="06" label="The shift" anchor="before-after" bg="panel">
       <h2
         style={{
           margin: 0,

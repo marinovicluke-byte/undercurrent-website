@@ -80,7 +80,7 @@ function SignatureCard() {
 
 export default function About() {
   return (
-    <SectionShell n="04" label="About us" anchor="about" bg="panel">
+    <SectionShell n="05" label="About us" anchor="about" bg="deep">
       <h2
         style={{
           margin: 0,

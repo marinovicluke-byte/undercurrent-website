@@ -1,5 +1,6 @@
 import Hero from '@/components/sections/Hero'
 import Marquee from '@/components/sections/Marquee'
+import CompetitiveReality from '@/components/sections/CompetitiveReality'
 import WhyUndercurrent from '@/components/sections/WhyUndercurrent'
 import WhyAutomation from '@/components/sections/WhyAutomation'
 import ServicesOverview from '@/components/sections/ServicesOverview'
@@ -31,6 +32,7 @@ export default function HomePage() {
       <JsonLd schema={orgSchema} />
       <Hero />
       <Marquee />
+      <CompetitiveReality />
       <WhyUndercurrent />
       <WhyAutomation />
       <ServicesOverview />

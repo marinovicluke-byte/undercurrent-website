@@ -3,7 +3,7 @@ import SectionEyebrow from '@/components/ui/SectionEyebrow'
 
 export default function WhyUndercurrent({
   eyebrow = 'Why UnderCurrent',
-  eyebrowNumber = '01',
+  eyebrowNumber = '02',
   headline,
   body = 'UnderCurrent works as a long-term partner alongside you. We build the first wave of automations, tune them as the business shifts, and design the next ones when new priorities land. You own every workflow. The retainer earns its place on measurable returns.',
   ctaLabel = "Let's talk",
@@ -14,7 +14,7 @@ export default function WhyUndercurrent({
       style={{
         position: 'relative',
         padding: '96px var(--page-pad)',
-        background: 'var(--bg-deep)',
+        background: '#26241F',
         overflow: 'hidden',
       }}
     >

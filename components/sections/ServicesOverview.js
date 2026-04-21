@@ -248,7 +248,7 @@ export default function ServicesOverview() {
   }, [])
 
   return (
-    <SectionShell anchor="services" bg="deep">
+    <SectionShell anchor="services" bg="panel">
       <div
         className="uc-stack-2col"
         style={{
@@ -269,7 +269,7 @@ export default function ServicesOverview() {
           }}
         >
           <div style={{ marginBottom: 28 }}>
-            <SectionEyebrow n="03" label="Our services" />
+            <SectionEyebrow n="04" label="Our services" />
           </div>
           <h2
             style={{

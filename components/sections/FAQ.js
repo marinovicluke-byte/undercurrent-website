@@ -46,7 +46,7 @@ export default function FAQ() {
   return (
     <>
       <JsonLd schema={schema} />
-      <SectionShell n="07" label="Common questions" anchor="faq" bg="deep">
+      <SectionShell n="08" label="Common questions" anchor="faq" bg="panel">
         <style>{`
           .uc-faq-list {
             border-radius: 14px;

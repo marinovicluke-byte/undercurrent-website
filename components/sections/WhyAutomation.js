@@ -179,13 +179,13 @@ function WhyCards() {
 export default function WhyAutomation() {
   return (
     <SectionShell
-      n="02"
+      n="03"
       label="The case"
       title="The case for automation, in three numbers."
       glowWords={['three', 'numbers']}
       glowClass="uc-glow-word uc-glow-word--sage"
       lede="Three stats every Australian small-business owner should read before the next hire. All conservative."
-      bg="panel"
+      bg="deep"
       anchor="why"
     >
       <WhyCards />

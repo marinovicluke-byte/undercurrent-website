@@ -30,7 +30,7 @@ const STAGES = [
 
 export default function Process() {
   return (
-    <SectionShell n="06" label="How we work" anchor="process" bg="panel">
+    <SectionShell n="07" label="How we work" anchor="process" bg="deep">
       <h2
         style={{
           margin: 0,
