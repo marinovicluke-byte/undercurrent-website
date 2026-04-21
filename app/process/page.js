@@ -305,7 +305,7 @@ export default function ProcessPage() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, alignItems: 'center' }}>
             <PillCTA label="Get your free audit" href="/audit" tone="blue" />
             <Link
-              href="/contact"
+              href="https://cal.com/luke-marinovic-aqeosc/30min"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',

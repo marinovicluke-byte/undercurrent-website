@@ -178,7 +178,7 @@ export default function Header({ ctaLabel = "Let's talk" }) {
           {/* Right side: CTA (desktop) + hamburger (mobile) */}
           <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
             <div className="uc-nav-cta-desktop">
-              <PillCTA label={ctaLabel} href="/contact" />
+              <PillCTA label={ctaLabel} href="https://cal.com/luke-marinovic-aqeosc/30min" />
             </div>
             <button
               type="button"
@@ -354,7 +354,7 @@ function MobileMenu({ pathname, ctaLabel, onClose }) {
         }}
       >
         <div className="uc-menu-cta" onClick={onClose}>
-          <PillCTA label={ctaLabel} href="/contact" large />
+          <PillCTA label={ctaLabel} href="https://cal.com/luke-marinovic-aqeosc/30min" large />
         </div>
         <style>{`
           .uc-menu-cta > a,

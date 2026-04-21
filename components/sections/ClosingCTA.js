@@ -54,7 +54,7 @@ export default function ClosingCTA() {
           Book a 20-minute call. No slides, no pitch — just a look at where automation pays back first.
         </p>
         <div style={{ display: 'inline-flex' }}>
-          <PillCTA label="Let's talk" href="/contact" large />
+          <PillCTA label="Let's talk" href="https://cal.com/luke-marinovic-aqeosc/30min" large />
         </div>
       </div>
     </section>

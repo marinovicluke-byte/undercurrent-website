@@ -229,7 +229,7 @@ function AboutMe() {
             </div>
 
             <div style={{ marginTop: 8, display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center' }}>
-              <PillCTA label="Let's talk" href="/contact" tone="sage" />
+              <PillCTA label="Let's talk" href="https://cal.com/luke-marinovic-aqeosc/30min" tone="sage" />
             </div>
           </div>
         </div>

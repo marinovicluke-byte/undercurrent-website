@@ -24,7 +24,7 @@ export default function Hero({
   subtext,
   showSubtext = false,
   ctaLabel = "Let's talk",
-  ctaHref = '/contact',
+  ctaHref = 'https://cal.com/luke-marinovic-aqeosc/30min',
 }) {
   return (
     <section

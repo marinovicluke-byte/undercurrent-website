@@ -7,7 +7,7 @@ export default function WhyUndercurrent({
   headline,
   body = 'UnderCurrent sticks with you. We build your first automations, adjust them as the business changes, and add new ones when priorities shift. Everything we build is yours. We only win when you win.',
   ctaLabel = "Let's talk",
-  ctaHref = '/contact',
+  ctaHref = 'https://cal.com/luke-marinovic-aqeosc/30min',
 }) {
   return (
     <section

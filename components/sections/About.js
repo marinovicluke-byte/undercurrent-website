@@ -134,7 +134,7 @@ export default function About() {
               flexWrap: 'wrap',
             }}
           >
-            <PillCTA label="Let's talk" href="/contact" tone="blue" />
+            <PillCTA label="Let's talk" href="https://cal.com/luke-marinovic-aqeosc/30min" tone="blue" />
             <Link
               href="/about"
               style={{

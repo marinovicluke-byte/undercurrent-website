@@ -236,7 +236,7 @@ export default function ServicePage({ service }) {
                 <span style={S.chip}>By {PROVIDER.name}</span>
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center' }}>
-                <PillCTA label="Book a scoping call" href="/contact" tone="blue" />
+                <PillCTA label="Book a scoping call" href="https://cal.com/luke-marinovic-aqeosc/30min" tone="blue" />
                 <Link href="/audit" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '12px 22px', borderRadius: 999, border: '1px solid var(--text-faint)', background: 'transparent', color: 'var(--off-white)', textDecoration: 'none', fontFamily: 'var(--font-display)', fontSize: 14, fontWeight: 500, letterSpacing: '-0.01em' }}>
                   Free workflow audit <span aria-hidden style={{ fontSize: 13 }}>→</span>
                 </Link>
@@ -439,7 +439,7 @@ export default function ServicePage({ service }) {
               <p style={{ ...S.h2, maxWidth: 560, marginBottom: 12 }}>{service.ctaHeadline}</p>
               <p style={{ ...S.body, maxWidth: 560, marginBottom: 24 }}>{service.ctaCopy}</p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center' }}>
-                <PillCTA label="Book a scoping call" href="/contact" tone="blue" />
+                <PillCTA label="Book a scoping call" href="https://cal.com/luke-marinovic-aqeosc/30min" tone="blue" />
                 <Link href="/audit" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, padding: '12px 22px', borderRadius: 999, border: '1px solid var(--text-faint)', background: 'transparent', color: 'var(--off-white)', textDecoration: 'none', fontFamily: 'var(--font-display)', fontSize: 14, fontWeight: 500, letterSpacing: '-0.01em' }}>
                   Free workflow audit <span aria-hidden style={{ fontSize: 13 }}>→</span>
                 </Link>

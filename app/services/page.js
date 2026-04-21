@@ -169,7 +169,7 @@ export default function ServicesPage() {
 
             {/* Discovery — spans full width */}
             <Link
-              href="/contact"
+              href="https://cal.com/luke-marinovic-aqeosc/30min"
               className="c7-disc"
               style={{
                 gridColumn: '1 / -1',
@@ -358,7 +358,7 @@ export default function ServicesPage() {
               30 minutes. A full picture of where automation fits your business.
             </h2>
           </div>
-          <PillCTA label="Let's talk" href="/contact" large />
+          <PillCTA label="Let's talk" href="https://cal.com/luke-marinovic-aqeosc/30min" large />
         </div>
       </section>
     </div>
