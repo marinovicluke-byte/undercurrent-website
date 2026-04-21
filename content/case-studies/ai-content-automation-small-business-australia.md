@@ -1,5 +1,5 @@
 ---
-title: "30 Minutes a Week: Content Marketing for Melbourne SMBs"
+title: "30 Minutes a Week: AI Content Automation for Melbourne Small Businesses"
 description: "How a Melbourne automation firm cut content production from 12-18 hours a week to 30 minutes using Claude Sonnet, Perplexity Sonar, and a 19-point scoring framework."
 date: "2026-04-18"
 dateModified: "2026-04-19"
@@ -39,8 +39,6 @@ tools:
   - "Hetzner"
 timeline: "2 weeks from first deploy to consistent 3x/week output"
 ---
-
-# 30 Minutes a Week: AI Content Automation for Melbourne Small Businesses
 
 > **Quick Answer:** A Melbourne automation firm automated its own content pipeline using Claude Sonnet, Perplexity Sonar, and a 19-point scoring framework. The system writes 3 SEO articles per week, cutting content time from 12-18 hours to 30 minutes of review. Annual content cost dropped from $62,400-$93,600 to ~$2,400 in API calls and hosting. The system went live in 2 weeks and has published 17 articles in the first month with an average quality score of 16.2/19.
 
