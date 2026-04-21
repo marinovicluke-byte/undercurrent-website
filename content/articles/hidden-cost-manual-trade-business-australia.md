@@ -5,7 +5,7 @@ date: "2026-03-31"
 slug: "hidden-cost-manual-trade-business-australia"
 cluster: "time-admin"
 keyword: "hidden cost manual trade business australia"
-author: "Luke"
+author: "Luke Marinovic"
 level: "intermediate"
 readingTime: 9
 summary: "A step-by-step calculation of what Australian tradies lose annually by running their business manually, using Fair Work Commission wage data, ABS time-tracking stats, and Xero invoicing research to build a fully defensible dollar figure with transparent maths."

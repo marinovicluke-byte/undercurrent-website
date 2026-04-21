@@ -7,7 +7,7 @@ cluster: "leads-sales"
 heroImage: "/articles/what-social-media-scheduling-tools-work-australia-2026/hero.jpg"
 heroImageAlt: "8 social media scheduling tools compared for Australian small business — Hootsuite, Buffer, Later, Metricool, SocialBee"
 keyword: "What social media scheduling tools work in Australia 2026"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 9
 summary: "A practical comparison of 8 social media scheduling tools tested and working for Australian service businesses in 2026, with AUD pricing, ACCC compliance notes, and real performance benchmarks."

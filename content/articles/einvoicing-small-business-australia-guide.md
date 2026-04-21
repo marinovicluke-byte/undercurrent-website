@@ -5,7 +5,7 @@ date: "2026-03-31"
 slug: "einvoicing-small-business-australia-guide"
 cluster: "industry-guides"
 keyword: "getting started with eInvoicing for small business"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 9
 summary: "Practical step-by-step guide covering eInvoicing setup for Australian small businesses, including ATO compliance requirements, software selection, Peppol network registration, and automation strategies to reduce invoice processing costs and speed up payment cycles."

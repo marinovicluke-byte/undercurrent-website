@@ -5,7 +5,7 @@ date: "2026-03-31"
 slug: "client-onboarding-accountants-automation-australia"
 cluster: "industry-guides"
 keyword: "client onboarding for accountants automate simplify"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 8
 summary: "This article shows Australian accountants and service firms how to cut manual onboarding admin by 20+ hours per week using automation, with specific examples for compliance forms, document collection, and client communication workflows."

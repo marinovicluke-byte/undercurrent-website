@@ -5,7 +5,7 @@ date: "2026-03-31"
 slug: "how-much-time-tradies-spend-on-admin-australia"
 cluster: "time-admin"
 keyword: "how much time tradies spend on admin australia"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 8
 summary: "Australian trade and service business owners spend between 8 and 12 hours per week on administrative tasks like invoicing, bookkeeping, and compliance paperwork, costing between $4,000 and $7,200 annually in lost billable time based on average hourly rates."

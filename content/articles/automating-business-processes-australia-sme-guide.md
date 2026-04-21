@@ -5,7 +5,7 @@ date: "2026-01-15"
 slug: "automating-business-processes-australia-sme-guide"
 cluster: "getting-started"
 keyword: "automating business processes australia"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 9
 summary: "This article walks Australian small business owners through exactly which processes to automate first, with real examples from trades, retail, and professional services, and shows how to do it without hiring technical experts or expensive consultants."
