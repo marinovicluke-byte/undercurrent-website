@@ -41,7 +41,7 @@ export async function generateMetadata({ params }) {
       publishedTime: fm.date,
       modifiedTime: fm.dateModified || fm.date,
       url: `${SITE_URL}/blog/${slug}`,
-      authors: [fm.author || 'Luke'],
+      authors: [fm.author || 'Luke Marinovic'],
       images: image ? [{ url: image }] : undefined,
     },
     twitter: {
@@ -129,9 +129,10 @@ export default async function ArticlePage({ params }) {
     dateModified: fm.dateModified || fm.date,
     author: {
       '@type': 'Person',
-      name: fm.author || 'Luke',
+      name: fm.author || 'Luke Marinovic',
       jobTitle: fm.authorTitle || 'Founder, UnderCurrent Automations',
       url: `${SITE_URL}/about`,
+      sameAs: ['https://www.linkedin.com/in/lukemarinovic/'],
     },
     publisher: { '@type': 'Organization', name: 'UnderCurrent Automations', url: SITE_URL },
     mainEntityOfPage: `${SITE_URL}/blog/${slug}`,
@@ -230,7 +231,7 @@ export default async function ArticlePage({ params }) {
           {/* Byline */}
           <div style={{ marginTop: 32, paddingTop: 20, borderTop: '1px solid var(--text-faint)' }}>
             <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--text-primary)' }}>
-              Written by <strong style={{ color: 'var(--off-white)' }}>{fm.author || 'Luke'}</strong>
+              Written by <strong style={{ color: 'var(--off-white)' }}>{fm.author || 'Luke Marinovic'}</strong>
               {fm.authorTitle ? `, ${fm.authorTitle}` : ', Founder of UnderCurrent Automations'} · Melbourne
             </p>
             <p style={{ margin: '4px 0 0', fontFamily: 'var(--font-body)', fontSize: 12, color: 'var(--text-muted)' }}>

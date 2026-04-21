@@ -5,7 +5,7 @@ date: "2026-01-10"
 slug: "what-is-business-process-automation-australia"
 cluster: "getting-started"
 keyword: "what is business process automation"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 8
 summary: "Defines business process automation from first principles for Australian small business owners, explains what it means in practical terms (not theory), shows real examples from 1-50 person teams, and outlines immediate time-saving benefits."

@@ -7,7 +7,7 @@ cluster: "time-admin"
 heroImage: "/articles/how-overdue-invoices-hurt-australian-sme-cash-flow/hero.jpg"
 heroImageAlt: "Overdue invoice chase cost visualisation for Australian small business cash flow"
 keyword: "how overdue invoices hurt australian sme cash flow"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 9
 summary: "Overdue invoices drain Australian SMEs through delayed payments averaging 42 days, staff wasting 6+ hours weekly chasing money, and compounding cash flow stress. Here's the real cost and how to fix it."

@@ -5,7 +5,7 @@ date: "2025-01-15"
 slug: "top-5-small-business-automation-tools-2026"
 cluster: "getting-started"
 keyword: "Top 5 Small Business Automation Tools in 2026"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 9
 summary: "Compares the five most practical automation platforms for Australian small businesses with 1-50 employees, covering costs, learning curves, use cases, and Australian-specific considerations for each tool."

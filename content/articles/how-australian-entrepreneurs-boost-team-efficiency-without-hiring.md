@@ -7,7 +7,7 @@ cluster: "getting-started"
 heroImage: "/articles/how-australian-entrepreneurs-boost-team-efficiency-without-hiring/hero.jpg"
 heroImageAlt: "Team efficiency gains without hiring — 7 automation strategies for Australian small business owners"
 keyword: "How Australian Entrepreneurs Can Boost Team Efficiency Without Hiring"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 9
 summary: "Australian small business owners can boost team efficiency without hiring by automating admin tasks, redesigning processes, and using smart tools. This guide shows 7 practical strategies with real tradie and service business examples."

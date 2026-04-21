@@ -7,7 +7,7 @@ cluster: "leads-sales"
 heroImage: "/articles/how-to-send-instant-follow-up-email-to-leads-automatically-australia/hero.jpg"
 heroImageAlt: "Instant automated lead follow-up email workflow for Australian small businesses — HubSpot, Mailchimp, ActiveCampaign platforms"
 keyword: "how to send instant follow-up email to leads automatically"
-author: "Luke"
+author: "Luke Marinovic"
 level: "beginner"
 readingTime: 9
 summary: "Learn how to set up instant automated follow-up emails that respond to leads within minutes, not hours. This beginner-friendly guide covers platform setup, proven templates, and timing strategies used by Australian service businesses to convert 5x more leads without hiring developers or adding staff."
