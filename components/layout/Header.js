@@ -1,9 +1,52 @@
 'use client'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import PillCTA from '@/components/ui/PillCTA'
+
+// 3-wave glyph, inline SVG using currentColor (matches Footer's GlyphMono).
+function GlyphMono({ size = 36 }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 96 96"
+      width={size}
+      height={size}
+      role="img"
+      aria-hidden="true"
+      style={{ flexShrink: 0 }}
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35" />
+        <path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48" />
+        <path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61" />
+      </g>
+    </svg>
+  )
+}
+
+function Wordmark({ size = 24 }) {
+  return (
+    <span
+      style={{
+        fontFamily: 'var(--font-display)',
+        fontWeight: 500,
+        fontSize: size,
+        letterSpacing: '-0.02em',
+        lineHeight: 1,
+        color: 'var(--off-white)',
+      }}
+    >
+      <b style={{ fontWeight: 700 }}>Under</b>Current
+    </span>
+  )
+}
 
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
@@ -69,23 +112,19 @@ export default function Header({ ctaLabel = "Let's talk" }) {
         >
           <Link
             href="/"
-            aria-label="UnderCurrent Automations — home"
+            aria-label="UnderCurrent Automations, home"
             className="uc-nav-logo"
             style={{
-              display: 'flex',
+              display: 'inline-flex',
               alignItems: 'center',
+              gap: 12,
               textDecoration: 'none',
               justifySelf: 'start',
+              color: 'var(--off-white)',
             }}
           >
-            <Image
-              src="/brand/logo-horizontal-dark.svg"
-              width={240}
-              height={48}
-              alt="UnderCurrent"
-              priority
-              unoptimized
-            />
+            <GlyphMono size={36} />
+            <Wordmark size={24} />
           </Link>
 
           {/* Desktop nav — hidden on mobile */}
@@ -192,7 +231,6 @@ export default function Header({ ctaLabel = "Let's talk" }) {
           .uc-nav-desktop { display: none !important; }
           .uc-nav-cta-desktop { display: none !important; }
           .uc-nav-hamburger { display: inline-flex !important; }
-          .uc-nav-logo img { width: 200px !important; height: auto !important; }
         }
         .uc-nav-hamburger:hover {
           transform: translate(-2px, -2px);
@@ -234,18 +272,18 @@ function MobileMenu({ pathname, ctaLabel, onClose }) {
       >
         <Link
           href="/"
-          aria-label="UnderCurrent Automations — home"
-          style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}
+          aria-label="UnderCurrent Automations, home"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 10,
+            textDecoration: 'none',
+            color: 'var(--off-white)',
+          }}
           onClick={onClose}
         >
-          <Image
-            src="/brand/logo-horizontal-dark.svg"
-            width={200}
-            height={40}
-            alt="UnderCurrent"
-            priority
-            unoptimized
-          />
+          <GlyphMono size={30} />
+          <Wordmark size={20} />
         </Link>
         <button
           type="button"
