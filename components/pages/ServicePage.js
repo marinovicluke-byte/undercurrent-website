@@ -269,7 +269,7 @@ export default function ServicePage({ service }) {
       <section style={{ ...S.contentBand, padding: '80px var(--page-pad) 120px' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gap: 64, gridTemplateColumns: '220px minmax(0, 1fr)' }} className="uc-body-grid">
 
-          <aside style={{ alignSelf: 'start', position: 'sticky', top: '38vh' }}>
+          <aside className="uc-svc-toc" style={{ alignSelf: 'start', position: 'sticky', top: '38vh' }}>
             <div style={{ paddingBottom: 14, marginBottom: 18, borderBottom: '1px solid var(--text-faint)' }}>
               <span style={S.label}>On this page</span>
             </div>
@@ -282,7 +282,7 @@ export default function ServicePage({ service }) {
             </nav>
           </aside>
 
-          <article style={{ maxWidth: 780, display: 'grid', gap: 24 }}>
+          <article className="uc-svc-article" style={{ maxWidth: 780, display: 'grid', gap: 24, gridTemplateColumns: 'minmax(0, 1fr)', minWidth: 0 }}>
 
             <QACard id="what" n="01" q={`What is ${displayLc}?`}>
               <p style={S.body}>
@@ -435,7 +435,7 @@ export default function ServicePage({ service }) {
             </section>
 
             {/* Final CTA */}
-            <section style={{ ...S.card, padding: 40, boxShadow: '6px 6px 0 0 var(--blue)' }}>
+            <section className="uc-svc-cta" style={{ ...S.card, padding: 40, boxShadow: '6px 6px 0 0 var(--blue)' }}>
               <p style={{ ...S.h2, maxWidth: 560, marginBottom: 12 }}>{service.ctaHeadline}</p>
               <p style={{ ...S.body, maxWidth: 560, marginBottom: 24 }}>{service.ctaCopy}</p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center' }}>
@@ -451,8 +451,14 @@ export default function ServicePage({ service }) {
 
       <style>{`
         @media (max-width: 900px) {
-          .uc-hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
-          .uc-body-grid { grid-template-columns: 1fr !important; }
+          .uc-hero-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 40px !important; }
+          .uc-body-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 32px !important; }
+          .uc-svc-toc { position: static !important; top: auto !important; }
+        }
+        @media (max-width: 700px) {
+          .uc-svc-qacard { padding: 22px !important; }
+          .uc-svc-subcard { padding: 16px !important; }
+          .uc-svc-cta { padding: 28px !important; }
         }
       `}</style>
     </div>
@@ -470,7 +476,7 @@ function blufAfterTerm(bluf, term) {
 
 function QACard({ id, n, q, children }) {
   return (
-    <section id={id} style={{ scrollMarginTop: 96, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(250,249,245,0.1)', borderRadius: 14, padding: 32 }}>
+    <section id={id} className="uc-svc-qacard" style={{ scrollMarginTop: 96, background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(250,249,245,0.1)', borderRadius: 14, padding: 32, minWidth: 0 }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 20 }}>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--text-muted)' }}>{n}</span>
         <span style={{ width: 24, height: 1, background: 'var(--text-faint)', display: 'inline-block' }} />

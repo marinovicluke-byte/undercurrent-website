@@ -323,6 +323,14 @@ export default async function CaseStudyPage({ params }) {
           border-radius: 12px;
           overflow: hidden;
         }
+        @media (max-width: 700px) {
+          .cs-prose table {
+            display: block;
+            overflow-x: auto;
+            max-width: 100%;
+            -webkit-overflow-scrolling: touch;
+          }
+        }
         .cs-prose th, .cs-prose td {
           padding: 0.85rem 1rem;
           border: 1px solid var(--text-faint);

@@ -359,6 +359,14 @@ export default async function ArticlePage({ params }) {
           border-radius: 12px;
           overflow: hidden;
         }
+        @media (max-width: 700px) {
+          .article-prose table {
+            display: block;
+            overflow-x: auto;
+            max-width: 100%;
+            -webkit-overflow-scrolling: touch;
+          }
+        }
         .article-prose th, .article-prose td {
           padding: 0.85rem 1rem;
           border: 1px solid var(--text-faint);
