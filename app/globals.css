@@ -57,8 +57,8 @@
 
   --text-primary:   rgba(250, 249, 245, 0.88);
   --text-secondary: rgba(250, 249, 245, 0.65);
-  --text-muted:     rgba(250, 249, 245, 0.42);
-  --text-faint:     rgba(250, 249, 245, 0.22);
+  --text-muted:     rgba(250, 249, 245, 0.60);
+  --text-faint:     rgba(250, 249, 245, 0.28);
 
   --tint-positive: rgba(143, 175, 159, 0.12);
   --tint-warning:  rgba(224, 122, 85, 0.12);
@@ -255,5 +255,22 @@ h1, h2, h3, h4 {
 @media (min-width: 600px) and (max-width: 900px) {
   .uc-stack-4col {
     grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .uc-marquee-label {
+    padding-top: 22px !important;
+    padding-bottom: 22px !important;
+  }
+  .uc-marquee-row {
+    padding: 22px 0 !important;
+  }
+  .uc-marquee-item {
+    font-size: 16px !important;
+  }
+  .uc-section {
+    padding-top: 84px !important;
+    padding-bottom: 84px !important;
   }
 }

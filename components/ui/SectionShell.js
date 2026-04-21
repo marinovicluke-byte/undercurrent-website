@@ -51,6 +51,7 @@ export default function SectionShell({
   return (
     <section
       id={anchor}
+      className="uc-section"
       style={{
         padding: hasTitle ? SECTION_PAD : '64px var(--page-pad) 120px',
         background: bgColor,

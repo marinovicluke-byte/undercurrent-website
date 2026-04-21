@@ -8,6 +8,7 @@ export default function Marquee() {
 
   return (
     <div
+      className="uc-marquee-wrap"
       style={{
         borderTop: '1px solid var(--text-faint)',
         borderBottom: '1px solid var(--text-faint)',
@@ -19,6 +20,7 @@ export default function Marquee() {
     >
       {/* Label — aligned with page content edge */}
       <div
+        className="uc-marquee-label"
         style={{
           flexShrink: 0,
           paddingTop: 30,
@@ -56,6 +58,7 @@ export default function Marquee() {
           {loop.map((name, i) => (
             <span
               key={i}
+              className="uc-marquee-item"
               style={{
                 fontFamily: 'var(--font-body)',
                 fontWeight: 300,
