@@ -17,7 +17,7 @@ const DEEP       = '#121210'
 const CHARCOAL   = '#1C1C1A'
 const OFF_WHITE  = 'rgba(250,249,245,0.88)'
 const SECONDARY  = 'rgba(250,249,245,0.55)'
-const MUTED      = 'rgba(250,249,245,0.38)'
+const MUTED      = 'rgba(250,249,245,0.60)'
 const FAINT      = 'rgba(250,249,245,0.09)'
 
 // Six services. `href` points to the live detail page where one exists,
@@ -204,7 +204,7 @@ export default function ServicesPage() {
                 </h2>
                 <p style={{
                   fontFamily: 'var(--font-body)', fontSize: 14,
-                  color: `rgba(${ORANGE_RGB}, 0.72)`, margin: 0,
+                  color: ORANGE, margin: 0,
                 }}>
                   We map before we build.
                 </p>
@@ -263,7 +263,7 @@ export default function ServicesPage() {
                   >
                     {s.num}
                   </span>
-                  <span className="c7-cta" style={{ opacity: 0.32 }}>
+                  <span aria-hidden="true" className="c7-cta" style={{ opacity: 0.32 }}>
                     <span style={{
                       fontFamily: 'var(--font-display)', fontSize: 11, fontWeight: 600,
                       color: `rgb(${s.ar})`, letterSpacing: '0.1em',
@@ -286,7 +286,7 @@ export default function ServicesPage() {
                 {/* Tagline */}
                 <p style={{
                   fontFamily: 'var(--font-body)', fontSize: 13,
-                  lineHeight: 1.5, color: `rgba(${s.ar}, 0.85)`,
+                  lineHeight: 1.5, color: `rgb(${s.ar})`,
                   margin: '0 0 20px', fontWeight: 500,
                 }}>
                   {s.tagline}

@@ -180,6 +180,7 @@ export default function ProcessPage() {
                   }}
                 >
                   <span
+                    aria-hidden="true"
                     style={{
                       fontFamily: 'var(--font-display)',
                       fontWeight: 500,
