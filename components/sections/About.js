@@ -7,7 +7,7 @@ const LUKE = {
   role: 'Founder, UnderCurrent Automations',
   location: 'Melbourne, VIC',
   paragraphs: [
-    'I started UnderCurrent Automations, a Melbourne AI automation agency, after watching too many Australian small businesses grind through work the way they\u2019d always done it, because no one had stopped to ask if they still had to. The answer, most of the time, is no. Automate the repetitive, and what\u2019s left is the work that moves things forward: revenue, creativity, time with the people you like.',
+    'Hi, I’m Luke. I started UnderCurrent Automations, a Melbourne AI automation agency, after watching too many Australian small businesses grind through work the way they\u2019d always done it, because no one had stopped to ask if they still had to. The answer, most of the time, is no. Automate the repetitive, and what\u2019s left is the work that moves things forward: revenue, creativity, time with the people you like.',
     'Today we run lead generation, sales automation, and business process automation for Australian tradies, consultants, allied health practices, and business services. Most builds go live in 14 days.',
   ],
 }

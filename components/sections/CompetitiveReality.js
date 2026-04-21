@@ -92,7 +92,7 @@ export default function CompetitiveReality() {
             maxWidth: 720,
           }}
         >
-          Australian small businesses are quietly being out-operated by competitors who adopted AI automation first. The good news: the tech isn’t the hard part, and you still have time to lead.
+          Australian small businesses are losing ground to competitors who started using AI first. The good news: the tech is the easy part. You still have time to catch up.
         </p>
 
         <div
@@ -104,29 +104,29 @@ export default function CompetitiveReality() {
           }}
         >
           <p style={narrativeStyle}>
-            You built your business the right way. Real customers. Real relationships. A team you trust. Now you’re watching someone in your market reply quicker, quote faster, and scale without hiring, and you can feel the deals starting to slide.
+            You built your business the right way. Real customers. Real relationships. A team you trust. Now a competitor in your market replies faster, quotes faster, and grows without hiring. You can feel deals starting to slip.
           </p>
 
           <p style={narrativeStyle}>You’re not imagining it.</p>
 
           <p style={narrativeStyle}>
-            Their engineers ship with AI coding assistants. Their customer service is 95% AI-handled. Their ops team runs at twice the productivity. Their proposals go out same-day.
+            Their developers code with AI. Their support is 95% AI-handled. Their ops team gets twice as much done. Their proposals go out same-day.
           </p>
 
           <p style={pullStyle}>
-            They’re not smarter than you. They just figured out the integration first.
+            They’re not smarter than you. They just wired AI into their business first.
           </p>
 
           <p style={narrativeStyle}>
-            If nothing changes, the gap compounds. Slow at first. Then all at once. Market share, talent, margin, gone to whoever moved before you did.
+            If nothing changes, the gap grows. Slow at first. Then all at once. Customers, staff, margin, gone to whoever moved first.
           </p>
 
           <p style={narrativeStyle}>
-            But the technology is commodity. The moat isn’t the tools, it is the human, organisational and integration work. That is the part UnderCurrent Automations builds.
+            The tools are cheap. Everyone has them. The real work is fitting AI to your people, your processes, and your systems. That is what UnderCurrent Automations builds.
           </p>
 
           <p style={decideStyle}>
-            Decide whether you want to disrupt your industry, or be disrupted by it.
+            Choose whether you disrupt your industry, or get disrupted by it.
           </p>
         </div>
 
