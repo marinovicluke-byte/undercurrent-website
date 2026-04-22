@@ -3,7 +3,7 @@ title: "How to Send Instant Follow-Up Email to Leads Automatically Australia 202
 description: "Step-by-step guide to setting up instant automated follow-up emails for Australian small businesses. No developers needed. Includes templates, timing strategies, and platform comparisons that convert leads faster."
 date: "2026-04-15"
 slug: "how-to-send-instant-follow-up-email-to-leads-automatically-australia"
-cluster: "leads-sales"
+cluster: "lead-generation"
 heroImage: "/articles/how-to-send-instant-follow-up-email-to-leads-automatically-australia/hero.jpg"
 heroImageAlt: "Instant automated lead follow-up email workflow for Australian small businesses — HubSpot, Mailchimp, ActiveCampaign platforms"
 keyword: "how to send instant follow-up email to leads automatically"

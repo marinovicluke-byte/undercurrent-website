@@ -3,7 +3,7 @@ title: "Aussie Startup Keen to Help Small Businesses Cut Manual Work Australia 2
 description: "Looking for an Aussie startup keen to help small businesses cut manual work? Here's how to find affordable, approachable automation partners who actually understand small business."
 date: "2026-01-10"
 slug: "aussie-startup-keen-to-help-small-businesses-cut-manual-work-cheap-happy-to-chat"
-cluster: "getting-started"
+cluster: "ai-strategy-training"
 keyword: "aussie startup keen to help small businesses cut manual work cheap happy to chat"
 author: "Luke Marinovic"
 level: "beginner"

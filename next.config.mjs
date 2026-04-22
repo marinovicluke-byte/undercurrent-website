@@ -65,6 +65,25 @@ const nextConfig = {
         destination: '/website-design',
         statusCode: 301,
       },
+
+      // Cluster taxonomy migration (2026-04-22): old topic clusters → service-aligned clusters.
+      // leads-sales → lead-generation; getting-started + time-admin → foundations.
+      // industry-guides slug unchanged.
+      {
+        source: '/blog/cluster/leads-sales',
+        destination: '/blog/cluster/lead-generation',
+        statusCode: 301,
+      },
+      {
+        source: '/blog/cluster/getting-started',
+        destination: '/blog/cluster/foundations',
+        statusCode: 301,
+      },
+      {
+        source: '/blog/cluster/time-admin',
+        destination: '/blog/cluster/foundations',
+        statusCode: 301,
+      },
     ]
   },
 }
