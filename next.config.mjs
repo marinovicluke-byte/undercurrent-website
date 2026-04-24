@@ -66,6 +66,16 @@ const nextConfig = {
         statusCode: 301,
       },
 
+      // Ghost URL reclaim (2026-04-24): /surface-discovery never existed on this site
+      // but Google found it externally. Route it to the booking CTA so any stray traffic
+      // lands somewhere useful instead of a 404.
+      {
+        source: '/surface-discovery',
+        destination: 'https://cal.com/luke-marinovic-aqeosc/30min',
+        statusCode: 301,
+        basePath: false,
+      },
+
       // Cluster taxonomy migration (2026-04-22): old topic clusters → service-aligned clusters.
       // leads-sales → lead-generation; getting-started + time-admin → foundations.
       // industry-guides slug unchanged.
