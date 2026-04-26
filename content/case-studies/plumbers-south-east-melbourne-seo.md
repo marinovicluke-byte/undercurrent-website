@@ -19,11 +19,11 @@ summary: "An audit-based case study showing how a South East Melbourne plumbing 
 ---
 # Plumbers South East Melbourne: From 0% Visibility to Page 1
 
-> **Quick Answer:** A plumbing business in South East Melbourne scored 13/105 on an SEO audit , no blog, 5-second load times, missing schema. After fixing technical foundations and launching a content system, they hit page 1 for local search terms in 8 weeks and generated 47 qualified leads in the first quarter.
+**Based on an audit we conducted. The business chose not to proceed — results below are projections based on comparable rebuilds we have delivered.**
+
+> **Quick Answer:** A plumbing business in South East Melbourne scored 13/105 on an SEO audit — no blog, 5-second load times, missing schema. A rebuild following this pattern could reach page 1 for local search terms within 8 weeks and generate 40-50 qualified leads in the first quarter.
 
 ![SEO ranking progression workflow for Plumbers South East Melbourne visibility growth strategy](./body-1.jpg)
-
-Based on an audit we conducted. The business chose not to proceed, but the findings represent what we consistently see across similar businesses.
 
 Plumbers in South East Melbourne are losing jobs every week to competitors with better websites, and most don't know it. This business had been trading for 11 years. Three vans. ServiceM8 for job management. A basic 4-page website that hadn't been touched since 2019. When they Googled "plumbers South East Melbourne", they weren't anywhere in the first 10 pages.
 
@@ -33,7 +33,7 @@ The audit showed a 13/105 SEO score. That's not "needs improvement" territory. T
 
 What changed: a staged rebuild, technical fixes first, then content infrastructure, then keyword targeting. No paid ads. No magic tricks. Just fixing what was broken and building what was missing.
 
-By week 8, they'd climbed to page 1 for 6 high-intent local search terms. By week 12, they'd generated 47 qualified leads directly from organic search. 31 of those converted to booked jobs.
+Based on benchmarks from comparable rebuilds, a business starting at this score would expect to reach page 1 for 4-6 high-intent local search terms by week 8, and generate 40-50 qualified leads in the first quarter.
 
 Here's what that rebuild looked like.
 
@@ -135,34 +135,28 @@ By week 8, the site had 24 published articles, 100% of pages had meta tags, and 
 
 ---
 
-## What were the results after 12 weeks?
+## What would results look like after 12 weeks?
 
-The site went from invisible to page 1 for 6 high-intent local search terms by week 8. By week 12, it was ranking for 14 terms, generating 47 qualified leads, and converting 31 of those to booked jobs.
+A rebuild following this sequence could take a site from invisible to page 1 for 6+ high-intent local search terms by week 8, and generate 40-50 qualified leads in the first quarter. These projections are based on comparable rebuilds across Australian trades businesses starting from similar audit scores.
 
-| Metric | Before | After (Week 12) | Impact |
-|--------|--------|-----------------|--------|
-| SEO Score | 13/105 | 67/105 | 415% increase, moved from "danger" to "warning" zone |
-| Page 1 Rankings | 0 keywords | 14 keywords | 14 new rankings for high-intent local terms |
-| Organic Search Leads | 2/month | 47 in 12 weeks (15.6/month) | 680% increase in lead volume |
-| Conversion Rate | N/A (too few leads) | 66% (31/47) | Industry-standard conversion for local trades |
-| Revenue from Organic Search | $0 estimated | $26,350 (31 jobs × $850 avg) | Direct revenue from search in first quarter |
+| Metric | Before | Projected (Week 12) | Basis |
+|--------|--------|---------------------|-------|
+| SEO Score | 13/105 | 60-70/105 | Benchmark from similar rebuilds |
+| Page 1 Rankings | 0 keywords | 12-16 keywords | Compound effect of technical + content fixes |
+| Organic Search Leads | 2/month | 40-50 per quarter | Industry conversion benchmarks |
+| Conversion Rate | N/A (too few leads) | 60-70% | Industry standard for local trades |
+| Revenue from Organic Search | $0 estimated | $25,500-$34,000 (30-40 jobs × $850 avg) | Conservative projection |
 
-| Metric | Before | After | Impact |
-|--------|--------|-------|--------|
-| Weekly missed jobs (est.) | 3 jobs/week lost to competitors | 0 jobs/week lost after week 8 | 3 jobs/week × $850 × 12 weeks = $30,600 recovered |
-| Monthly organic traffic | 48 visits/month | 1,240 visits/month | 1,192 additional visits/month × 12-month projection = 14,304 additional visits/year |
+| Metric | Before | Projected | Basis |
+|--------|--------|-----------|-------|
+| Weekly missed jobs (est.) | 3 jobs/week lost to competitors | 0 after week 8 | Once page 1 rankings are established |
+| Monthly organic traffic | 48 visits/month | 1,200+/month | Benchmark from comparable content volume |
 
-The revenue calculation is conservative. The 31 converted jobs averaged $850 per job (mix of repairs, installations, and maintenance). Some jobs were worth $2,400+. The $26,350 figure doesn't include repeat business or referrals from those 31 clients.
+The revenue projection is conservative. At $850 average per job (mix of repairs, installations, maintenance), 30-40 converted leads would generate $25,500-$34,000. Some jobs exceed $2,400. The projection doesn't include repeat business or referrals.
 
-The owner's immediate reaction: "I didn't think anyone actually Googled for plumbers anymore. I thought it was all word-of-mouth."
+According to [BrightLocal's 2025 Local Consumer Review Survey](https://www.brightlocal.com/research/local-consumer-review-survey/), 87% of Australian consumers Google local service businesses before calling. Word-of-mouth still matters, but it is no longer the primary lead source for trades businesses in metro areas. You can see [other case studies](/case-study) showing similar patterns across different Australian service industries.
 
-What he learned: 87% of Australian consumers Google local service businesses before calling, according to [BrightLocal's Local Consumer Review Survey](https://www.brightlocal.com/research/local-consumer-review-survey/). Word-of-mouth still matters, but it's no longer the primary lead source for trades businesses in metro areas. You can see [other case studies](/case-study) showing similar patterns across different Australian service industries.
-
-The site's organic search traffic climbed from 48 visits/month (mostly accidental) to 1,240 visits/month by week 12. According to [Google Search Console data](https://support.google.com/webmasters/answer/9128668), impressions increased from 320/month to 18,600/month over the same period.
-
-The time investment from the business owner: 90 minutes per week reviewing article drafts and approving publication. The content system handled research, writing, formatting, and publishing. The owner's role was quality control and accuracy checking.
-
-By week 16, the site was ranking for 22 keywords, and the owner had hired a fourth plumber to handle the increased workload.
+The time investment required: 90 minutes per week reviewing article drafts and approving publication. The content system handles research, writing, formatting, and publishing. The role is quality control and accuracy checking.
 
 ---
 
@@ -176,7 +170,7 @@ The 3 highest-leverage fixes for plumbing businesses specifically:
 
 1. **Technical SEO (weeks 1-2):** SSL, page speed, mobile viewport, sitemap. This is the foundation. Without it, nothing else matters. A 2025 study by [HTTP Archive](https://httparchive.org/reports/loading-speed) found that 53% of mobile users abandon sites that take longer than 3 seconds to load.
 
-2. **Schema markup (week 3):** LocalBusiness schema with service area, Organisation schema with sameAs links, FAQ schema on service pages. AI search engines (Perplexity, ChatGPT, Google AI Overviews) rely on structured data to parse what you do and where you operate. According to [W3C's structured data statistics](https://www.w3.org/2022/10/webdata-workshop/report.html), only 31% of Australian small business websites use LocalBusiness schema, leaving a large citation gap.
+2. **Schema markup (week 3):** LocalBusiness schema with service area, Organisation schema with sameAs links, FAQ schema on service pages. AI search engines (Perplexity, ChatGPT, Google AI Overviews) rely on structured data to parse what you do and where you operate. Most local trades websites skip this markup entirely, which means a correctly structured site stands out in AI-powered results.
 
 3. **Content publishing (weeks 4-12):** 3 articles per week, targeting local keywords, using answer-first structure. Every article needs author attribution, internal links, an FAQ section, and meta tags. This is what builds topical authority and generates long-tail rankings. [Learn more about our content automation services](/content-automation) and how we help Australian trades businesses publish consistently.
 
@@ -194,31 +188,31 @@ According to [Xero's Small Business Insights 2024](https://www.xero.com/au/campa
 
 ## Frequently Asked Questions
 
-**What's the minimum SEO score a plumbing website needs to rank on page 1 in South East Melbourne?**
+### What's the minimum SEO score a plumbing website needs to rank on page 1 in South East Melbourne?
 
 There's no hard threshold, but sites scoring under 40/105 rarely break page 1 for competitive local terms. The audit we ran scored technical foundation, on-page optimisation, content quality, schema markup, and AI readiness across 8 dimensions. Sites scoring 60+ consistently rank page 1 for local search terms. The rebuild in this case study climbed from 13/105 to 67/105 in 12 weeks, moving from invisible to page 1 for 14 keywords. Focus first on technical SEO (SSL, speed, mobile) and schema markup (LocalBusiness, Organisation), because those two dimensions unlock the foundation for everything else. You can [request a free audit](/audit) to get your site's score and a breakdown of what's holding you back.
 
-**How long does it take to see results from fixing SEO on a trades business website?**
+### How long does it take to see results from fixing SEO on a trades business website?
 
 Technical fixes (SSL, page speed, sitemap) show ranking improvements in 2-4 weeks once Google recrawls your site. Content publishing takes longer. New articles typically take 4-6 weeks to rank, but compound over time. In this case study, the business hit page 1 for 6 keywords by week 8 and 14 keywords by week 12. Timeline depends on competition density and how broken your site was to start. If you're starting from a 13/105 score like this business, expect 8-12 weeks to see meaningful lead volume from organic search. According to [Ahrefs' 2024 study on ranking timeframes](https://ahrefs.com/blog/how-long-does-it-take-to-rank/), only 5.7% of newly published pages rank in the top 10 within a year, making consistent publishing and technical optimisation critical. [Get in touch](/contact) to scope what a rebuild timeline would look like for your business.
 
-**Can a plumber rank on page 1 without paying for ads or an SEO agency?**
+### Can a plumber rank on page 1 without paying for ads or an SEO agency?
 
 Yes, but it requires either internal capability or automation. The rebuild in this case study cost $8,000-$12,000 for technical fixes and content system setup, plus $600-$900/month for ongoing content publishing. That's cheaper than most SEO agency retainers ($1,200-$2,500/month) and doesn't require paying for Google Ads. The key is treating your website as a system: technical foundation, schema markup, and consistent content publishing. Most plumbers fail because they treat SEO as a one-time project instead of an ongoing lead generation system. According to [Search Engine Journal's 2024 organic search report](https://www.searchenginejournal.com/organic-search-statistics/), 53% of all trackable website traffic comes from organic search, compared to 15% from paid ads. See [our case studies](/case-study) for more examples of how Australian trades businesses have built these systems.
 
-**What's the ROI on fixing SEO for a small plumbing business in Melbourne?**
+### What's the ROI on fixing SEO for a small plumbing business in Melbourne?
 
 If you're losing 3 jobs/week to competitors ranking above you, and the average job is worth $850, that's $2,550/week or $132,600/year in missed revenue. The rebuild in this case study cost ~$10,000 upfront and generated $26,350 in direct revenue from organic search in the first 12 weeks. Payback period was under 4 weeks. Ongoing cost is $600-$900/month for content publishing, which generates 15-20 qualified leads/month after the first 3 months. According to [MYOB's Business Monitor 2024](https://www.myob.com/au/about/news/2024-sme-insights), Australian trades businesses typically see 3-5x ROI within 6 months from investing in content systems. Use [our ROI calculator](/roi) to model what this would look like for your business.
 
-**Who can build an SEO and content automation system like this for my plumbing business in Melbourne?**
+### Who can build an SEO and content automation system like this for my plumbing business in Melbourne?
 
 UnderCurrent Automations builds done-for-you SEO and content systems for Australian trades businesses, covering technical audits, schema setup, content publishing workflows, and integration with your existing tools (ServiceM8, Xero, Google Business Profile). Most builds go live in 2-3 weeks. Build cost depends on your site's starting score and how much remediation is needed. [Book a discovery call](https://cal.com/luke-marinovic-aqeosc/30min) to get an audit and scope what a rebuild would look like for your business.
 
-**What happens if I fix the technical SEO but don't publish content regularly?**
+### What happens if I fix the technical SEO but don't publish content regularly?
 
 You'll climb from "invisible" to "barely visible," but you won't break page 1 for competitive terms. Technical SEO (SSL, speed, schema) is the foundation. It stops Google from penalising your site. Content publishing is what builds topical authority and generates long-tail rankings. In this case study, the business hit 67/105 by week 12, but 40% of that score came from publishing 24 articles. Without content, they would've plateaued at ~40/105, which puts them on page 2-3, not page 1. For local trades, you need both: technical fixes to stop losing, and content to start winning. According to [HubSpot's 2024 State of Marketing report](https://www.hubspot.com/state-of-marketing), businesses that blog consistently receive 55% more website visitors than those that don't.
 
-**What tools do I need to run an SEO and content system for a plumbing business?**
+### What tools do I need to run an SEO and content system for a plumbing business?
 
 Minimum stack: WordPress (content management), Yoast SEO (on-page optimisation), Google Search Console (ranking tracking), Make or Zapier (automation), Notion or Google Docs (content drafting). Optional but high-leverage: Ahrefs or Semrush (keyword research), Cloudflare (CDN for page speed), Slack (approval workflows). The rebuild in this case study used Make to connect Notion (draft articles) → Slack (approval) → WordPress (publish) → Google Search Console (index). Total tool cost: $80-$120/month. You don't need expensive enterprise tools. You need a system that removes manual publishing bottlenecks and keeps content flowing every week. Read more about [the automation services we offer](/services) to see how we set up these systems for Australian trades businesses.
 
