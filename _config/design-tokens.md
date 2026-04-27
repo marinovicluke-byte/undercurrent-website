@@ -1,53 +1,45 @@
-# Design Tokens — UnderCurrent Website (Redesign)
+# Design Tokens — UnderCurrent Website
 
-> Extracted from app/globals.css @theme and app/layout.js. This is the source of truth for the redesign branch design system.
-> For brand voice, colours, and typography used across all UC properties, see: Content/UC-Articles/_config/brand_guide.md
+**Source of truth:** `~/UnderCurrent/Vault/brand-visual.md`
+(palette, typography, six design principles, anti-patterns).
 
-## Colours (Tailwind v4 @theme)
+This file documents **website-specific deltas only** — what's in this codebase that isn't in the brand doc. If anything below conflicts with `brand-visual.md`, the brand doc wins.
 
-| Token | Hex | Usage |
-|-------|-----|-------|
-| --color-white | #FAFAF8 | Page background |
-| --color-charcoal | #1C1C1A | Primary text, dark sections |
-| --color-blue | #6A8DAD | Primary accent, links, CTAs |
-| --color-blue-dark | #4A6D8D | Hover states, active elements |
-| --color-muted | #6B7280 | Secondary text, captions |
-| --color-border | #E5E7EB | Dividers, card borders |
-| --color-surface | #F3F4F6 | Card backgrounds, alternate sections |
+## Where tokens live
 
-Note: The redesign palette differs from the live site (which uses sage #8FAF9F, parchment #E8E0D0, olive #6B7C4A). The redesign uses a cleaner blue-charcoal-white system.
+- Tailwind v4 `@theme {}` block → `app/globals.css` (lines ~5-27). Adds the `--color-*` prefix Tailwind needs to generate utility classes (e.g. `--color-blue` → `bg-blue`, `text-blue`).
+- Plain CSS custom properties → `app/globals.css` `:root` block. Used directly via `var(--blue)` in inline styles and component CSS.
 
-## Typography
+## Website-only tokens (not in brand-visual.md)
 
-| Role | Font | Variable | Source |
-|------|------|----------|--------|
-| Display (h1, h2) | Space Grotesk | --font-space-grotesk | Google Fonts (400-700) |
-| Body | Satoshi | --font-satoshi | Local woff2 (variable weight + italic) |
+| Token | Value | Purpose |
+|---|---|---|
+| `--bg-deep` | `#121210` | Page background, hero |
+| `--bg-main` | `#262624` | Body sections |
+| `--bg-card` | `#2E2E2B` | Card backgrounds |
+| `--page-pad` | `30px` mobile / `88px` desktop | Horizontal page padding (set via `@media`) |
+| `--tint-positive` | `rgba(143,175,159,0.12)` | Sage tint fills |
+| `--tint-warning` | `rgba(224,122,85,0.12)` | Orange tint fills |
+| `--tint-negative` | `rgba(212,86,74,0.12)` | Error tint fills |
+| `--tint-neutral` | `rgba(250,249,245,0.06)` | Subtle dividers |
 
-CSS aliases:
-- `--font-display: var(--font-space-grotesk)`
-- `--font-body: var(--font-satoshi)`
+## Animation conventions
 
-Note: The live site uses Cormorant Garamond + DM Sans. The redesign moved to Space Grotesk + Satoshi.
+- FadeIn: `opacity 0→1`, `translateY(24px→0)`, 600ms ease. Classes `.fade-hidden` / `.fade-visible`.
+- Card hover: `translate(-2px,-2px)`, shadow 6→8px, 160ms `cubic-bezier(.2,.7,.3,1)`.
+- Marquee: `@keyframes marquee-scroll`, `translateX(0 → -33.333%)`.
+- `prefers-reduced-motion`: all durations collapse to 0.01ms, `.fade-hidden` becomes visible immediately.
+- Hard rule: no GSAP, no Framer Motion. CSS transitions + intersection observer only.
 
-## Spacing
+## Utility classes
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| --spacing-section | 6rem | Vertical padding between major sections |
-| --spacing-section-sm | 4rem | Vertical padding on mobile |
+- `.uc-pop-blue` / `.uc-pop-sage` / `.uc-pop-orange` — `box-shadow: 6px 6px 0 0 var(--accent)`. The brand "teeth."
+- `.uc-pop-blue--sm` etc. — 4px variant for smaller cards.
+- `.uc-pop-hover-*` — adds the lift + shadow expand on hover.
+- `.label` — Space Grotesk 11px uppercase eyebrow.
+- `.mono` — SF Mono with tabular numerals. **Numerals only**, never decorative on labels.
+- `.uc-glow-word*` — neutralised to `inherit` after v2 (gradient text removed). Class names retained for backwards compatibility.
 
-## Animation
+## Inline `clamp()` warning
 
-- FadeIn: translateY(24px) → 0, opacity 0 → 1, 0.6s ease
-- Classes: `.fade-hidden` (initial), `.fade-visible` (intersected)
-- Scroll animation: `@keyframes scroll` for IndustryScroller marquee
-- Respects `prefers-reduced-motion: reduce`
-
-## Conventions
-- No border-radius on the live site (neo-brutalist), but the redesign uses standard rounding
-- Blue accent replaces sage green from the live site
-- Light-mode only (no dark mode)
-- All fonts loaded with `display: swap` for performance
-
-<!-- Last updated: 2026-04-10 -->
+Do not use `clamp()` inside a CSS custom property consumed via React inline shorthand — renders 0px. Use plain px in the variable + responsive `@media` on `:root` (see `--page-pad` for the pattern). Logged in `lab-notes.md`.
