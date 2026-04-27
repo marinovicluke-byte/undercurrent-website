@@ -5,47 +5,45 @@ The site is live. Work in `app/` is maintenance: content edits, copy tweaks, new
 ## Inputs
 
 - `codemap.md` (project root) — current route + component map. Regenerate via `/codemap` after structural changes.
-- `_config/voice-and-tone.md`, `_config/constraints.md`, `_config/design-tokens.md` — brand and design law.
-- `.impeccable.md` — six design principles.
-- `lab-notes.md` — what's broken in the past, what fixed it.
-- `content/articles/`, `content/case-studies/` — markdown source for blog and case study routes.
+- `_config/` — voice, constraints, design tokens. `.impeccable.md` — design law.
+- `lab-notes.md` — what's broken before, what fixed it. Read first.
+- `content/articles/`, `content/case-studies/` — markdown source for blog routes.
 
 ## Process
 
-1. Read `lab-notes.md` for any prior fix that touches your area.
-2. Read `codemap.md` to find the right file. If structure has changed since last codemap, regenerate first.
-3. Branch off `main` (e.g. `mobile-polish`, `service-page-rev-ops`).
-4. Make the change. Server Components by default; `'use client'` only when the component uses state, effects, or browser APIs (forms, FadeIn, audit tools).
-5. `npm run dev` and verify in browser. Type-checking and tests verify code, not feature behaviour.
-6. PR back to `main`. Wait for explicit "push it live" before merging.
+1. Read `lab-notes.md` for prior fixes in your area.
+2. Read `codemap.md`. Regenerate if structure has shifted.
+3. Branch off `main`. Make the change. Server Components by default.
+4. `npm run dev`, verify in browser.
+5. PR back to `main`. Wait for "push it live" before merging.
 
 ## Skills & tools
 
 | Job | Skill |
 |-----|-------|
-| New or rewritten service page | `/service-page-blueprint` |
-| Site copy edits (any user-facing text) | `/undercurrent-copy` |
-| Performance / accessibility / SEO check | `/audit` |
-| New article or case study | `scripts/` publishing pipeline + `/uc-article` |
+| New / rewritten service page | `/service-page-blueprint` |
+| Site copy edits | `/undercurrent-copy` |
+| Performance / a11y / SEO check | `/audit` |
+| New article or case study | `scripts/` + `/uc-article` |
 
-Do not duplicate skill content here. Invoke the skill.
+Don't duplicate skill content here — invoke the skill.
 
 ## What good looks like
 
-- Surgical edits — every changed line traces to the request.
+- Surgical edits: every changed line traces to the request.
 - Existing component reused before a new one is written.
-- JSON-LD on every page that has a structured data shape (Article, FAQPage, Service, BreadcrumbList).
-- Frontmatter `faqs:` on any article / case study with FAQ sections (drives FAQPage schema, see `lab-notes.md` 2026-04-27).
+- JSON-LD on every page with a structured shape (Article, FAQPage, Service, BreadcrumbList).
+- Frontmatter `faqs:` on any article / case study with FAQ sections.
 - Design tokens via `app/globals.css` `@theme {}`, never hardcoded hex.
 
 ## What to avoid
 
-- Editing files in `src/`, `dist/`, `vite.config.js`, `tailwind.config.js`, `index.html` — all legacy Vite, kept for migration history.
-- Pages Router patterns (no `pages/` directory).
-- Hardcoded n8n webhook URLs — use env vars.
-- Inline `clamp()` inside CSS custom properties (renders as 0px, see `lab-notes.md`).
-- Cluster slugs outside the valid list (`lead-generation`, `revenue-operations`, `website-experience-design`, `seo-ai-visibility`, `ai-strategy-training`, `custom-integrations`, `industry-guides`, `foundations`) — wrong cluster silently breaks the Vercel build.
+- Editing `src/`, `dist/`, `vite.config.js`, `tailwind.config.js`, `index.html` (legacy Vite).
+- Pages Router patterns (no `pages/` dir).
+- Hardcoded webhook URLs — use env vars.
+- `clamp()` inside CSS custom properties (renders 0px — see lab-notes).
+- Cluster slugs outside the valid 8-slug list — silently breaks Vercel build. Slug list lives in the publishing pipeline.
 
 ## Outputs
 
-A merged PR to `main` and an updated `lab-notes.md` entry if anything broke or surprised.
+A merged PR to `main` and a `lab-notes.md` entry if anything broke or surprised.
