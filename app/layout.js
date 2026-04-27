@@ -117,6 +117,7 @@ const siteJsonLd = [
       'https://www.instagram.com/undercurrent.automations/',
       'https://www.facebook.com/profile.php?id=61578553167947',
       'https://www.google.com/maps/place/Undercurrent+Automations/data=!4m2!3m1!1s0x0:0xfa88043129a24340',
+      'https://clutch.co/profile/undercurrent-automations',
     ],
   },
   {
