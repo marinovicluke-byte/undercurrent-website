@@ -20,11 +20,11 @@ const FAQS = [
   },
   {
     q: 'What does it cost?',
-    a: 'Pricing depends on the hours and dollars a workflow saves. The free audit maps the repetitive work, puts numbers on what it’s costing you today, and lays out what a custom build would cost against that projected return. You see every figure before you commit. You only pay if the projected saving justifies the work. Exact bands are confirmed in the audit because every business has a different automation mix.',
+    a: 'Flat pricing, no hourly billing. Starter project builds start at $1,500 for a single workflow. The Growth retainer starts at $1,200 a month for ongoing builds and optimisation. Done-with-you guidance starts at $500 a month if your team wants to drive the work. Every quote is fixed before you commit. The free audit shows which option fits and the projected return against the build cost.',
   },
   {
     q: 'How long until we see results?',
-    a: 'Most clients notice the first automations running inside two weeks. The full system is live in 30 days. We move fast because we’ve built these workflows before, the wiring isn’t from scratch. The audit maps out what ships first, what ships second, and when each piece starts paying back.',
+    a: 'Most clients notice the first automations running inside two weeks. Full systems typically go live in 4 to 6 weeks once requirements lock, depending on the integrations involved. We’ve built these workflows before, the wiring isn’t from scratch. The audit maps out what ships first, what ships second, and when each piece starts paying back.',
   },
   {
     q: 'What if it doesn’t save me as much time as you say?',
@@ -36,7 +36,7 @@ const FAQS = [
   },
   {
     q: 'Do you work outside Melbourne?',
-    a: 'Yes. We’re based in Melbourne, but delivery is fully remote, so we work with clients in Sydney, Brisbane, Perth, Adelaide, and regional towns across every Australian state. Each major city has a dedicated page with regional context if you want the detail. The process itself is the same wherever you are: a video audit, a remote build, and ongoing support through the channels you already use.',
+    a: 'Yes. UnderCurrent Automations is Melbourne-based, but delivery is fully remote, so we work with clients in Sydney, Brisbane, Perth, Adelaide, and regional towns across every Australian state. Each major city has a dedicated page with regional context if you want the detail. The process itself is the same wherever you are: a video audit, a remote build, and ongoing support through the channels you already use.',
   },
 ]
 
