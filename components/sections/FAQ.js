@@ -36,7 +36,7 @@ const FAQS = [
   },
   {
     q: 'Do you work outside Melbourne?',
-    a: 'Yes. We’re based in Melbourne, but delivery is fully remote, so we work with clients in Sydney, Brisbane, Perth, Adelaide, and regional towns across every Australian state. Each major city has a dedicated page with regional context if you want the detail. The process itself is the same wherever you are: a video audit, a remote build, and ongoing support through the channels you already use.',
+    a: 'Yes. UnderCurrent Automations is Melbourne-based, but delivery is fully remote, so we work with clients in Sydney, Brisbane, Perth, Adelaide, and regional towns across every Australian state. Each major city has a dedicated page with regional context if you want the detail. The process itself is the same wherever you are: a video audit, a remote build, and ongoing support through the channels you already use.',
   },
 ]
 
