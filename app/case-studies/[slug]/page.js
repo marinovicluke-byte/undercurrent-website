@@ -61,7 +61,18 @@ function formatDate(d) {
   })
 }
 
-function extractFaqs(html) {
+// Prefer structured frontmatter faqs over HTML regex extraction.
+// Frontmatter shape: `faqs: [{ q: '...', a: '...' }, ...]` — direct and reliable.
+// Regex fallback is kept for case studies that haven't been backfilled yet.
+function extractFaqs(frontmatter, html) {
+  if (Array.isArray(frontmatter?.faqs) && frontmatter.faqs.length > 0) {
+    return frontmatter.faqs
+      .map(f => ({
+        question: (f.q || f.question || '').trim(),
+        answer: (f.a || f.answer || '').trim(),
+      }))
+      .filter(f => f.question && f.answer)
+  }
   const faqStart = html.indexOf('Frequently Asked Questions')
   if (faqStart < 0) return []
   const faqSection = html.slice(faqStart)
@@ -89,7 +100,7 @@ export default async function CaseStudyPage({ params }) {
   if (!cs) return notFound()
 
   const fm = cs.frontmatter
-  const faqs = extractFaqs(cs.html)
+  const faqs = extractFaqs(fm, cs.html)
   const { quickAnswer, bodyHtml } = extractQuickAnswer(cs.html)
   const clusterLabel = fm.relatedCluster && CLUSTERS[fm.relatedCluster]?.label
   const clusterSlug = fm.relatedCluster
