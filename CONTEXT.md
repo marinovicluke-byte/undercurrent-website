@@ -1,38 +1,27 @@
 # UnderCurrent Website — Workspace Context
 
-## Overview
-Website for UnderCurrent Automations, a Melbourne AI automation agency targeting Australian SMEs. Currently a Vite + React SPA on `main`, rebuilt as Next.js App Router on `redesign`. Core build complete, now in design + polish phase.
+Live marketing site at undercurrentautomations.com for UnderCurrent Automations, a Melbourne AI automation agency targeting Australian SMEs. Next.js 16 App Router on Vercel, shipped to `main` 2026-04-20. Currently in maintenance mode: content publishing, copy edits, service pages, occasional bug fixes. No active redesign or phased build.
 
-## Current State
-All pages, components, API routes, SEO routes, and audit tools are built on `redesign`. The colorize design system (orange #E07A55 + sage #8FAF9F, sharp corners, pop-out box-shadows) is integrated. ServicesOverview uses sticky-scroll variant A1 with pain-point headlines.
+## Pointers
 
-## Stages
+| Need | Read |
+|------|------|
+| Where am I? | `CLAUDE.md` |
+| What's in app/? | `app/CONTEXT.md` + `codemap.md` |
+| What's in docs/? | `docs/CONTEXT.md` |
+| Brand voice | `_config/voice-and-tone.md` |
+| Constraints | `_config/constraints.md` |
+| Design tokens | `_config/design-tokens.md` |
+| Design law | `.impeccable.md` |
+| What broke before | `lab-notes.md` |
 
-| # | Stage | Status |
-|---|-------|--------|
-| 01 | Homepage Redesign | In progress — services section done, rest pending |
-| 02 | Design Pass | Not started |
-| 03 | Performance | Not started |
-| 04 | SEO Cutover | Not started |
-| 05 | Vercel Switch | Not started |
-| 06 | QA + Launch | Not started |
+## Recurring jobs
 
-## Shared Resources
-- Brand guide: `../../undercurrent-brand-guide.md`
-- Design tokens: `app/globals.css` `@theme {}` block
-- Voice + tone: `_config/voice-and-tone.md`
-- Constraints: `_config/constraints.md`
-- Planning docs: `docs/active/website-redesign-2026/`
-- Specs: `docs/superpowers/specs/`
+| Job | Skill |
+|-----|-------|
+| New service page or audit | `/service-page-blueprint` |
+| Site copy edits | `/undercurrent-copy` |
+| New article / case study | publishing pipeline (see `scripts/`) |
+| Performance / SEO sweep | `/audit` |
 
-## Deploy Cutover Checklist
-When Luke says "push it live":
-1. Switch Vercel framework preset from Vite to Next.js
-2. Verify all current production URLs have 301 redirects in next.config.mjs
-3. Verify sitemap.xml matches or exceeds current sitemap coverage
-4. Merge redesign → main
-5. Verify Vercel auto-deploys, check preview URL first
-6. Smoke test: homepage, blog posts, audit tools, contact form, location/service pages
-7. Check Google Search Console for crawl errors after 24h
-
-<!-- Last updated: 2026-04-15 -->
+One-off bugs and small features don't need a skill — branch off `main`, fix, PR back.
