@@ -20,7 +20,7 @@ const FAQS = [
   },
   {
     q: 'What does it cost?',
-    a: 'Pricing depends on the hours and dollars a workflow saves. The free audit maps the repetitive work, puts numbers on what it’s costing you today, and lays out what a custom build would cost against that projected return. You see every figure before you commit. You only pay if the projected saving justifies the work. Exact bands are confirmed in the audit because every business has a different automation mix.',
+    a: 'Flat pricing, no hourly billing. Starter project builds start at $1,500 for a single workflow. The Growth retainer starts at $1,200 a month for ongoing builds and optimisation. Done-with-you guidance starts at $500 a month if your team wants to drive the work. Every quote is fixed before you commit. The free audit shows which option fits and the projected return against the build cost.',
   },
   {
     q: 'How long until we see results?',
