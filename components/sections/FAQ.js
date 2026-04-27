@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     q: 'How long until we see results?',
-    a: 'Most clients notice the first automations running inside two weeks. The full system is live in 30 days. We move fast because we’ve built these workflows before, the wiring isn’t from scratch. The audit maps out what ships first, what ships second, and when each piece starts paying back.',
+    a: 'Most clients notice the first automations running inside two weeks. Full systems typically go live in 4 to 6 weeks once requirements lock, depending on the integrations involved. We’ve built these workflows before, the wiring isn’t from scratch. The audit maps out what ships first, what ships second, and when each piece starts paying back.',
   },
   {
     q: 'What if it doesn’t save me as much time as you say?',
