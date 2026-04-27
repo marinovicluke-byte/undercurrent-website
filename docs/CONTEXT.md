@@ -17,13 +17,18 @@ docs/
 │   ├── cutover-2026-04-20/            ← QA reports from the Next.js cutover
 │   ├── agency-automation/             ← parked: agency-platform planning
 │   └── eyebrow-pills.html             ← design experiment
+├── archive/                           ← shipped initiatives, kept for reference
+│   ├── seo-aio-audit-2026-04-20.md    ← source for the active seo-aio initiative
+│   ├── location-pages-qa-report.md    ← QA from 5-location-pages build
+│   ├── location-pages-summary.md      ← per-page metrics from same build
+│   ├── case-study-seo-improvement.md  ← raw source for a future case study
+│   ├── inbound-lead-management-factcheck-2026-04-21.md  ← referenced by lab-notes
+│   └── uncommitted-work-brief-2026-04-21.md             ← survey of still-untracked files
 ├── superpowers/
 │   ├── plans/                         ← dated plan files (build-time)
 │   └── specs/                         ← dated spec files (design-time)
 ├── screenshots/                       ← visual reference
-├── N8N_RECOVERY_GUIDE.md              ← n8n server access, Docker, API
-├── case-study-seo-improvement.md      ← SEO audit case study
-└── *-2026-04-*.md                     ← dated factcheck and handoff notes
+└── N8N_RECOVERY_GUIDE.md              ← n8n server access, Docker, API
 ```
 
 ## Process
@@ -31,11 +36,11 @@ docs/
 - New spec → `superpowers/specs/YYYY-MM-DD-<slug>-design.md`.
 - New plan → `superpowers/plans/YYYY-MM-DD-<slug>.md`.
 - New initiative active work → `active/<slug>-YYYY-MM-DD/`.
-- Initiative complete → leave in `active/` until next archive sweep.
-- One-off factcheck or handoff notes → `docs/<slug>-YYYY-MM-DD.md` at root.
+- Initiative complete → `active/<slug>/` stays put until next archive sweep, then moves to `archive/`.
+- Loose one-shot artefact at `docs/` root (factcheck, handoff prompt) → don't. Either put it under the right initiative folder in `active/` or archive immediately.
 
 ## What to avoid
 
 - Storing credentials in docs — use `.env`.
 - Editing shipped specs — write a new dated one if the design changes.
-- Treating loose `*.html` files at `docs/` root as live (they're frozen mockups).
+- Letting one-shot prompts and frozen mockups accumulate at `docs/` root (the symptom this archive sweep cleaned up).
