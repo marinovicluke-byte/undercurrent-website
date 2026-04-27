@@ -9,6 +9,21 @@ author: "Luke"
 level: "intermediate"
 readingTime: 13
 summary: "To rank in ChatGPT search, structure your content with question-based H2 headings, lead every section with a direct answer in the first 2-3 sentences."
+faqs:
+  - q: 'Does ChatGPT use Google''s search index?'
+    a: 'ChatGPT uses Bing''s search index for newer content and real-time queries, plus its training data for entity recognition and older information. It doesn''t directly use Google''s index, but being indexed by Google improves your entity recognition across multiple AI platforms. Submit your sitemap to both Google Search Console and Bing Webmaster Tools to cover all bases.'
+  - q: 'Can small Australian businesses realistically compete in AI search?'
+    a: 'Yes. AI search favours clear answers and verified entities over domain authority and backlink profiles. A solo tradie with a well-structured service page and strong Google Business Profile can outrank a national franchise if their content is more directly answerable. The barrier is content structure, not budget. Focus on answer-first paragraphs, FAQ schema, and entity mentions on local authority sites.'
+  - q: 'How long does it take to start ranking in ChatGPT search?'
+    a: 'Most Australian businesses see initial AI citations within 4-8 weeks after implementing answer-first content structure, FAQ schema, and submitting sitemaps to Bing. Full entity recognition and consistent citations take 3-6 months, depending on how quickly you build authority mentions outside your own domain. Track weekly by querying your target keywords in ChatGPT and Perplexity.'
+  - q: 'Do I need to block GPTBot if I don''t want ChatGPT using my content?'
+    a: 'If you block GPTBot in your robots.txt file, ChatGPT won''t crawl your site for newer content, which means you won''t appear in AI search results. For most Australian service businesses, this is a bad trade-off. You want AI visibility. If you''re concerned about content scraping, focus on original data and first-party observations that competitors can''t replicate, rather than blocking crawlers entirely.'
+  - q: 'What''s the difference between ranking in ChatGPT and ranking in Perplexity?'
+    a: 'ChatGPT favours encyclopedic, factual content with clear entity definitions and structured data. Perplexity favours peer experience and real-world accounts, often citing Reddit and forum posts alongside professional sources. To rank in both, your content needs a mix: one encyclopedic definition paragraph (for ChatGPT), one first-person practitioner perspective (for Perplexity), and clean schema markup (for both). Write for both engines, not just one.'
+  - q: 'Should I change existing content or create new content for AI search?'
+    a: 'Start by updating your top 5-10 existing service pages. Add answer-first intros, question-based H2 headings, and FAQ schema. This gives you the fastest ROI. Once those are indexed and you''re seeing AI referrals, then create new deep-dive content targeting long-tail queries. 80% of Australian SMEs now use AI tools, which means competition for AI citations is increasing. Fix what you have first, then expand.'
+  - q: 'How do I track whether ChatGPT is citing my site?'
+    a: 'Set up UTM parameters in Google Analytics for chat.openai.com and perplexity.ai as referral sources. Check your traffic sources weekly. You can also manually query your target keywords in ChatGPT and Perplexity to see if your business appears in the citations. If you''re not showing up after 6-8 weeks, audit your content structure, schema markup, and entity mentions. Something''s broken in the chain.'
 ---
 # How to Rank in ChatGPT Search (2026 Guide)
 

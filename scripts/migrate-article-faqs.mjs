@@ -1,16 +1,23 @@
 // One-off migration: extract the `## Frequently Asked Questions` section from
-// every article markdown file and inject a structured `faqs:` array into the
-// YAML frontmatter so FAQPage JSON-LD matches the visible content exactly.
+// every markdown file in the target directory and inject a structured `faqs:`
+// array into the YAML frontmatter so FAQPage JSON-LD matches the visible
+// content exactly. Works for content/articles and content/case-studies — same
+// section convention.
 // Idempotent: skips files that already have `faqs:` in frontmatter.
-// Usage: node scripts/migrate-article-faqs.mjs [--dry]
+// Usage:
+//   node scripts/migrate-article-faqs.mjs                  # articles (default)
+//   node scripts/migrate-article-faqs.mjs --dir=case-studies
+//   node scripts/migrate-article-faqs.mjs --dir=articles --dry
 
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-const ARTICLES_DIR = join(__dirname, '..', 'content', 'articles')
 const DRY = process.argv.includes('--dry')
+const dirArg = process.argv.find(a => a.startsWith('--dir='))
+const TARGET_SUBDIR = dirArg ? dirArg.slice('--dir='.length) : 'articles'
+const TARGET_DIR = join(__dirname, '..', 'content', TARGET_SUBDIR)
 
 function splitFrontmatter(raw) {
   if (!raw.startsWith('---\n')) return null
@@ -84,7 +91,8 @@ function extractFaqs(body) {
       i++
       while (i < lines.length) {
         const next = lines[i]
-        if (isQuestion(next.trim())) break
+        // stop on next question OR a horizontal rule (--- separator)
+        if (isQuestion(next.trim()) || next.trim() === '---') break
         answerLines.push(next)
         i++
       }
@@ -113,13 +121,14 @@ function insertFaqsIntoFrontmatter(frontmatter, faqsYaml) {
 }
 
 function main() {
-  const files = readdirSync(ARTICLES_DIR).filter(f => f.endsWith('.md'))
+  console.log(`Scanning ${TARGET_DIR}`)
+  const files = readdirSync(TARGET_DIR).filter(f => f.endsWith('.md'))
   let migrated = 0
   let skipped = 0
   let empty = 0
 
   for (const filename of files) {
-    const path = join(ARTICLES_DIR, filename)
+    const path = join(TARGET_DIR, filename)
     const raw = readFileSync(path, 'utf8')
     const split = splitFrontmatter(raw)
     if (!split) {

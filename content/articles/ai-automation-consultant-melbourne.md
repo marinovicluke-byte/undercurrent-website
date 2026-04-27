@@ -9,6 +9,21 @@ author: "Luke"
 level: "beginner"
 readingTime: 12
 summary: "A practical guide to hiring AI automation consultants in Melbourne — what they actually do, typical costs, ROI timelines, and how to tell if you need one or if off-the-shelf tools will do the job."
+faqs:
+  - q: 'How do I know if I need an AI automation consultant or just workflow automation?'
+    a: 'If your pain points are repetitive manual tasks , data entry, follow-up, invoicing, reporting , you need workflow automation. If you''re already automated and want predictive analytics, custom chatbots, or content generation tools, then look for AI-specific expertise. Most Australian small businesses need workflow automation first. AI-specific projects add value after the basics are running smoothly.'
+  - q: 'What''s the typical ROI timeline for automation projects in Melbourne?'
+    a: 'Most businesses see positive ROI within 3-6 months, with time savings visible immediately. Research shows 3-4x ROI in the first month for automation costing $500/month, saving 50-80 hours at $45/hour labour rates for a net $1,750/month gain. Projects under $5,000 typically pay for themselves in 4-6 months, then generate ongoing savings. Larger integrations may take 8-12 months to break even but save significantly more per month once live.'
+  - q: 'Can I start with one small automation project and expand later?'
+    a: 'Yes, this is the recommended approach. Start with the highest-pain, lowest-complexity workflow , typically lead follow-up or invoicing , run it for 30-60 days, measure results, then automate the next priority. Building incrementally reduces risk and makes it easier to measure ROI per workflow. Trying to automate everything at once overwhelms your team and makes troubleshooting harder.'
+  - q: 'What happens if my consultant builds the automation in their own accounts instead of mine?'
+    a: 'You lose ownership and control. The consultant can hold your workflows hostage or charge ongoing fees to make changes. Always insist automation is built inside your own accounts , your Make workspace, your Zapier login, your n8n instance. This means you can hire a different consultant later or make changes yourself without getting locked in.'
+  - q: 'How much should I budget for ongoing maintenance after the initial build?'
+    a: 'Expect $500-1,500/month for a multi-system automation setup, or pay-as-you-go at $150-250/hour for occasional fixes. Some consultants include 90 days of maintenance in the initial build cost. After that, you''ll need support when tools update, APIs change, or your processes evolve. Factor maintenance into your ROI calculation , a $4,000 automation costing $600/month to maintain has a different payback timeline than one with zero ongoing costs.'
+  - q: 'Who can help me set up AI automation for my Melbourne business?'
+    a: 'UnderCurrent Automations builds done-for-you workflow automation for Australian service businesses , connecting your CRM, accounting software, email, and booking tools so repetitive tasks happen automatically. Most builds go live in under two weeks and cost under $5,000. If you''re losing time to manual follow-up, invoicing, or admin tasks, book a free automation audit and we''ll map exactly where your team''s burning hours and what it''s costing you.'
+  - q: 'Should I hire a generalist consultant or someone who specialises in my industry?'
+    a: 'Industry-specific experience helps but isn''t essential if the consultant understands small business workflows. A consultant who''s automated 20 trade businesses will understand invoicing, job scheduling, and field service software better than someone who''s only worked with e-commerce. That said, the core automation principles , connect systems, eliminate manual steps, handle edge cases , transfer across industries. Look for portfolio examples close to your business type, but don''t dismiss a consultant just because they haven''t worked in your exact industry.'
 ---
 # How to Hire an AI Automation Consultant in Melbourne
 
