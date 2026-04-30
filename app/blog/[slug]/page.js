@@ -120,6 +120,20 @@ export default async function ArticlePage({ params }) {
     ? getAllCaseStudies().filter(c => c.relatedCluster === clusterSlug).slice(0, 2)
     : []
 
+  // about: primary semantic entities the article covers. Auto-fall-back to
+  // cluster + Australia as Place so every post emits coverage signals; writer
+  // can override or extend via `about:` frontmatter array of {name, type?}.
+  // mentions: secondary entities (tools, frameworks). Optional, frontmatter only.
+  const aboutEntities = (Array.isArray(fm.about) && fm.about.length > 0)
+    ? fm.about.map(e => ({ '@type': e.type || 'Thing', name: e.name || e }))
+    : [
+        ...(clusterLabel ? [{ '@type': 'Thing', name: clusterLabel }] : []),
+        { '@type': 'Place', name: 'Australia' },
+      ]
+  const mentionEntities = Array.isArray(fm.mentions) && fm.mentions.length > 0
+    ? fm.mentions.map(e => ({ '@type': e.type || 'Thing', name: e.name || e }))
+    : null
+
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -138,6 +152,8 @@ export default async function ArticlePage({ params }) {
     mainEntityOfPage: `${SITE_URL}/blog/${slug}`,
     keywords: [fm.keyword, fm.cluster, fm.level].filter(Boolean).join(', '),
     inLanguage: 'en-AU',
+    about: aboutEntities,
+    ...(mentionEntities && { mentions: mentionEntities }),
     ...(fm.heroImage && { image: `${SITE_URL}${fm.heroImage}` }),
   }
 

@@ -128,7 +128,7 @@ const siteJsonLd = [
     name: 'UnderCurrent Automations',
     url: DOMAIN,
     logo: `${DOMAIN}/logo.png`,
-    image: `${DOMAIN}/logo.png`,
+    image: `${DOMAIN}/brand/og-card.png`,
     description: 'Melbourne AI automation agency serving Australian small businesses.',
     priceRange: '$$-$$$',
     telephone: '+61438780815',

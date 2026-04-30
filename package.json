@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/migrate-article-faqs.mjs && node scripts/migrate-article-faqs.mjs --dir=case-studies",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
