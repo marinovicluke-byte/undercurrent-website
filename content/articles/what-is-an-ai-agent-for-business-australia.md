@@ -167,45 +167,6 @@ If you'd rather have this built for you, [that's exactly what we do at UnderCurr
 
 ---
 
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  // FAQPage schema for AI agent explainer , helps search engines surface Q&A pairs directly
-  "mainEntity": [
-    {
-      "@type": "Question",
-      // Phrase question exactly as a user would type it into Google or ChatGPT
-      "name": "What is an AI agent for business in Australia?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        // Answer must be self-contained , restates context so it reads standalone
-        "text": "An AI agent for business in Australia is autonomous software that perceives data, makes decisions, and executes multi-step tasks , like qualifying leads, chasing invoices, or booking jobs , without a human triggering each action. Unlike chatbots (which only respond) or basic automations (which follow fixed scripts), AI agents handle exceptions, integrate across tools like Xero, HubSpot, or ServiceM8, and improve over time. Around 40% of Australian SMEs had adopted AI agents by Q4 2024."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does an AI agent cost for a small business in Australia?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Off-the-shelf AI agent tools cost between $50 and $400 per month AUD for most small businesses, based on published pricing from platforms like Make and n8n. Custom-built systems run $2,000–$10,000 upfront. The ATO's R&D Tax Incentive provides a 43.5% refundable offset , reducing a $50,000 AI investment to roughly $28,250 net cost. Most businesses saving 10+ hours per week see positive ROI within 2–3 months."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What tasks can an AI agent automate for Australian tradies?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "AI agents used by Australian tradies typically handle lead follow-up (responding to enquiries within minutes), invoice chasing through Xero or MYOB, job scheduling and dispatch in tools like ServiceM8 or Tradify, appointment confirmations, and customer FAQ responses. The highest-ROI starting points are lead response and invoice follow-up , together they account for 7–14 hours per week in most small trade businesses."
-      }
-    }
-  ]
-}
-```
-
----
-
-
 ![AI agent rapid deployment timeline for Australian small businesses reducing setup weeks to live operation](./body-2.jpg)
 
 ## Frequently Asked Questions
