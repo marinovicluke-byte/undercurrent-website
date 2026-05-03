@@ -111,35 +111,38 @@ For most service businesses, the more practical question isn't "Can I get this s
 
 Here's the framework, formatted so you can run it yourself or hand it to a facilitator:
 
-```
-## 90-Minute AI Starter Session , Service Business Edition
-## Goal: Leave with ONE working automation. Not theory.
+### 90-Minute AI Starter Session — Service Business Edition
 
-## Block 1: 15 minutes , Pain Inventory
--  Each team member writes down the 3 most repetitive tasks they do weekly
--  Owner picks the ONE with the highest combined time cost
--  Name the task clearly: "We manually send a follow-up email 24 hours after every quote"
+**Goal:** Leave with ONE working automation. Not theory.
 
-## Block 2: 20 minutes , Tool Match
--  Map the task to a tool already in your stack (Gmail, Outlook, Xero, ServiceM8)
--  Identify the trigger event: "Quote sent" → what system records that?
--  Choose one automation layer: Make.com / Zapier / n8n (see: /blog/n8n-vs-zapier-australia-small-business)
--  If no tool is in place: pick ChatGPT for the content, Zapier for the trigger
+#### Block 1: 15 minutes — Pain Inventory
 
-## Block 3: 40 minutes , Build It Live
--  Screen-share the build. Everyone watches the first one.
--  Connect trigger → action → output in the chosen tool
--  Test with a real example before the session ends
--  Capture the workflow as a screenshot or Loom for future reference
+- Each team member writes down the 3 most repetitive tasks they do weekly
+- Owner picks the ONE with the highest combined time cost
+- Name the task clearly: "We manually send a follow-up email 24 hours after every quote"
 
-## Block 4: 15 minutes , Handoff Protocol
--  Who owns this automation going forward?
--  What breaks it? (e.g., if the trigger field changes in the source app)
--  Set a 30-day review date: is it still running? Saving time? Any errors?
+#### Block 2: 20 minutes — Tool Match
 
-## Expected output: 1 live automation + 1 documented workflow + owner assigned
-## Estimated time saved: 2–6 hours/week depending on task frequency
-```
+- Map the task to a tool already in your stack (Gmail, Outlook, Xero, ServiceM8)
+- Identify the trigger event: "Quote sent" → what system records that?
+- Choose one automation layer: Make.com / Zapier / n8n (see [n8n vs Zapier for Australian small business](/blog/n8n-vs-zapier-australia-small-business))
+- If no tool is in place: pick ChatGPT for the content, Zapier for the trigger
+
+#### Block 3: 40 minutes — Build It Live
+
+- Screen-share the build. Everyone watches the first one.
+- Connect trigger → action → output in the chosen tool
+- Test with a real example before the session ends
+- Capture the workflow as a screenshot or Loom for future reference
+
+#### Block 4: 15 minutes — Handoff Protocol
+
+- Who owns this automation going forward?
+- What breaks it? (e.g., if the trigger field changes in the source app)
+- Set a 30-day review date: is it still running? Saving time? Any errors?
+
+**Expected output:** 1 live automation + 1 documented workflow + owner assigned.
+**Estimated time saved:** 2–6 hours/week depending on task frequency.
 
 When we run automation audits for Australian service businesses, the first thing we look at is how many repetitive tasks are being done manually that already have a digital trigger point, a sent email, a booked job, a paid invoice. For most businesses, that's 4–6 tasks before we even get to the interesting stuff. You can learn more about [how we approach that process](/process) or read what others have found on the [case studies](/case-studies) page.
 
