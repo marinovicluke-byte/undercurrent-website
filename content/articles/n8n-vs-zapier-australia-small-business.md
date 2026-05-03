@@ -5,7 +5,7 @@ date: "2026-04-27"
 slug: "n8n-vs-zapier-australia-small-business"
 cluster: "ai-strategy-training"
 keyword: "n8n vs zapier australia small business"
-author: "Luke"
+author: "Luke Marinovic"
 level: "intermediate"
 readingTime: 13
 faqs:
