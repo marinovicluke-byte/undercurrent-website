@@ -323,7 +323,6 @@ export default async function ArticlePage({ params }) {
       </section>
 
       <style>{`
-        .article-prose h1 { display: none; }
         .article-prose h2 {
           font-family: var(--font-display);
           font-weight: 500;

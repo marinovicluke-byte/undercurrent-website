@@ -282,7 +282,6 @@ export default async function CaseStudyPage({ params }) {
       </section>
 
       <style>{`
-        .cs-prose h1 { display: none; }
         .cs-prose h2 {
           font-family: var(--font-display);
           font-weight: 500;
