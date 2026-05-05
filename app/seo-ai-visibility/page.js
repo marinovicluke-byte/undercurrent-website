@@ -5,6 +5,7 @@
 import Link from 'next/link'
 import PillCTA from '@/components/ui/PillCTA'
 import Breadcrumb from '@/components/layout/Breadcrumb'
+import SectionEyebrow from '@/components/ui/SectionEyebrow'
 import SeoTabDemo from '@/components/ui/SeoTabDemo'
 import { SERVICES } from '@/lib/data/services'
 import { DOMAIN, PROVIDER, AREAS_SERVED } from '@/lib/data/seo'
@@ -83,19 +84,6 @@ const FAQ_LD = {
 }
 
 // ── Small UI helpers (server components) ─────────────────────────────────────
-function Eyebrow({ label, color }) {
-  return (
-    <p style={{
-      fontFamily: 'var(--font-display)', fontSize: 11, fontWeight: 500,
-      letterSpacing: '0.14em', textTransform: 'uppercase',
-      color: color || MUTED,
-      margin: '0 0 20px',
-    }}>
-      {label}
-    </p>
-  )
-}
-
 function H2({ children, maxWidth, style }) {
   return (
     <h2 style={{
@@ -298,6 +286,7 @@ export default function SeoAiVisibilityPage() {
         borderBottom: `1px solid ${FAINT}`,
       }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', padding: '64px var(--page-pad)' }}>
+          <div style={{ marginBottom: 40 }}><SectionEyebrow n="01" label="By the numbers" /></div>
           <div className="seo-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 18 }}>
             {[
               { num: '3',     label: 'Search surfaces',            sub: 'Google, ChatGPT, Perplexity — one system' },
@@ -339,7 +328,7 @@ export default function SeoAiVisibilityPage() {
       {/* ── 03 WHAT MAKES US DIFFERENT ───────────────────────────────────── */}
       <section style={{ padding: '96px var(--page-pad)' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <Eyebrow label="Why UnderCurrent" />
+          <div style={{ marginBottom: 24 }}><SectionEyebrow n="02" label="Why UnderCurrent" /></div>
           <H2 style={{ marginBottom: 16 }}>
             Most agencies optimise for Google.<br />
             <span style={{ color: BLUE }}>We optimise for everywhere buyers look.</span>
@@ -416,7 +405,7 @@ export default function SeoAiVisibilityPage() {
       {/* ── 04 HOW IT WORKS (interactive tabs) ───────────────────────────── */}
       <section style={{ background: CHARCOAL, padding: '96px var(--page-pad)', borderTop: `1px solid ${FAINT}` }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <Eyebrow label="How Robin Signal works" />
+          <div style={{ marginBottom: 24 }}><SectionEyebrow n="03" label="How Robin Signal works" /></div>
           <H2 style={{ marginBottom: 56 }}>
             Audit, architect, publish.<br />
             <span style={{ color: BLUE }}>Then it compounds.</span>
@@ -428,7 +417,7 @@ export default function SeoAiVisibilityPage() {
       {/* ── 05 HOW WE COMPARE ────────────────────────────────────────────── */}
       <section style={{ padding: '96px var(--page-pad)' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <Eyebrow label="How we compare" />
+          <div style={{ marginBottom: 24 }}><SectionEyebrow n="04" label="How we compare" /></div>
           <H2 style={{ marginBottom: 16 }}>
             Most SEO retainers rank you for nothing.
           </H2>
@@ -493,7 +482,7 @@ export default function SeoAiVisibilityPage() {
       {/* ── 06 LOCAL + NATIONAL ──────────────────────────────────────────── */}
       <section style={{ background: CHARCOAL, padding: '96px var(--page-pad)', borderTop: `1px solid ${FAINT}` }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <Eyebrow label="Coverage" />
+          <div style={{ marginBottom: 24 }}><SectionEyebrow n="05" label="Coverage" /></div>
           <H2 style={{ marginBottom: 16 }}>
             Suburb level. State level.<br />
             <span style={{ color: BLUE }}>National scale.</span>
@@ -610,7 +599,7 @@ export default function SeoAiVisibilityPage() {
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24, marginBottom: 52 }}>
             <div>
-              <Eyebrow label="Plans" />
+              <div style={{ marginBottom: 24 }}><SectionEyebrow n="06" label="Plans" /></div>
               <H2>
                 Start with an audit.<br />
                 <span style={{ color: BLUE }}>Scale when it moves.</span>
@@ -760,7 +749,7 @@ export default function SeoAiVisibilityPage() {
       <section style={{ background: CHARCOAL, padding: '96px var(--page-pad)', borderTop: `1px solid ${FAINT}` }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 72, alignItems: 'center' }} className="seo-followup-grid">
           <div>
-            <Eyebrow label="Ongoing reporting" />
+            <div style={{ marginBottom: 24 }}><SectionEyebrow n="07" label="Ongoing reporting" /></div>
             <H2 style={{ marginBottom: 20 }}>
               Monthly proof.<br />
               <span style={{ color: BLUE }}>No surprises.</span>
@@ -806,7 +795,7 @@ export default function SeoAiVisibilityPage() {
       <section style={{ padding: '96px var(--page-pad)' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: '300px 1fr', gap: 80, alignItems: 'start' }} className="seo-faq-grid">
           <div style={{ position: 'sticky', top: '28vh' }}>
-            <Eyebrow label="FAQ" />
+            <div style={{ marginBottom: 24 }}><SectionEyebrow n="08" label="FAQ" /></div>
             <H2 style={{ fontSize: 'clamp(26px, 2.6vw, 38px)', marginBottom: 18 }}>
               Common questions.
             </H2>
@@ -855,7 +844,7 @@ export default function SeoAiVisibilityPage() {
           pointerEvents: 'none',
         }} />
         <div style={{ maxWidth: 700, margin: '0 auto', textAlign: 'center', position: 'relative' }}>
-          <Eyebrow label="Get started" />
+          <div style={{ marginBottom: 24 }}><SectionEyebrow n="09" label="Get started" /></div>
           <H2 style={{ fontSize: 'clamp(32px, 3.8vw, 58px)', maxWidth: 700, marginBottom: 20, margin: '0 auto 20px' }}>
             {SVC.ctaHeadline}
           </H2>
