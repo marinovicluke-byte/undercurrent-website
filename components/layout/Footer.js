@@ -20,6 +20,7 @@ const TOOLS = [
 const LEGAL = [
   { label: 'Privacy', href: '/privacy' },
   { label: 'Terms', href: '/terms' },
+  { label: 'Sitemap', href: '/sitemap.xml', external: true },
 ]
 
 function titleCaseLabel(str) {
@@ -124,23 +125,28 @@ function NavColumn({ title, links }) {
           gap: 10,
         }}
       >
-        {links.map(l => (
-          <li key={l.href}>
-            <Link
-              href={l.href}
-              className="uc-footer-link"
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 14,
-                color: 'var(--off-white)',
-                textDecoration: 'none',
-                letterSpacing: '-0.005em',
-              }}
-            >
-              {l.label}
-            </Link>
-          </li>
-        ))}
+        {links.map(l => {
+          const linkStyle = {
+            fontFamily: 'var(--font-display)',
+            fontSize: 14,
+            color: 'var(--off-white)',
+            textDecoration: 'none',
+            letterSpacing: '-0.005em',
+          }
+          return (
+            <li key={l.href}>
+              {l.external ? (
+                <a href={l.href} className="uc-footer-link" style={linkStyle}>
+                  {l.label}
+                </a>
+              ) : (
+                <Link href={l.href} className="uc-footer-link" style={linkStyle}>
+                  {l.label}
+                </Link>
+              )}
+            </li>
+          )
+        })}
       </ul>
     </div>
   )
