@@ -181,6 +181,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${satoshi.variable}`}>
       <head>
+        <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
         {siteJsonLd.map((obj, i) => (
           <script
             key={i}
