@@ -81,7 +81,7 @@ The fundamental shift is from page-level optimisation to passage-level optimisat
 
 **Answer Engine Optimisation (AEO)** is optimising specifically for the moment a user asks a direct question, rather than types a keyword. In practice, GEO and AEO describe the same content changes.
 
-According to the [ABS Business Characteristics Survey](https://www.abs.gov.au/statistics/industry/technology-and-innovation/business-characteristics-survey), over 80% of Australian businesses with 5–19 employees now use the internet as a primary sales or marketing channel. That's exactly the base most exposed as AI Overviews absorb more zero-click queries. [IBISWorld](https://www.ibisworld.com/au/) estimates there are over 2.5 million small businesses in Australia, most of which built their digital presence on traditional search rankings now being disrupted by AI-generated answers.
+According to the [ABS Business Characteristics Survey](https://www.abs.gov.au/statistics/industry/technology-and-innovation/characteristics-australian-business/latest-release), over 80% of Australian businesses with 5–19 employees now use the internet as a primary sales or marketing channel. That's exactly the base most exposed as AI Overviews absorb more zero-click queries. [IBISWorld](https://www.ibisworld.com/au/industry-reports) estimates there are over 2.5 million small businesses in Australia, most of which built their digital presence on traditional search rankings now being disrupted by AI-generated answers.
 
 ---
 
@@ -157,7 +157,7 @@ According to [Statista's Digital Advertising Australia report](https://www.stati
 
 A more precise check: open [Google Search Console](https://search.google.com/search-console) and look for referral traffic from `perplexity.ai` and `chat.openai.com` in your GA4 source/medium report. Zero traffic from those sources is a clear signal your content structure needs work, not necessarily your domain authority. [Local Digital reports](https://www.localdigital.com.au/blog/australian-seo-and-content-marketing-statistics-for-2025) that organic search still drives 53% of SMB website traffic in Australia, but the sources feeding that traffic are shifting as AI platforms handle more discovery queries.
 
-According to [Statista's Global Consumer Survey on voice assistant usage](https://www.statista.com/statistics/), voice and conversational queries, the exact format that feeds AI Overviews, are growing fastest among mobile users doing local service searches. That makes the test worth running monthly, not just once.
+According to [Statista's Global Consumer Survey on voice assistant usage](https://www.statista.com), voice and conversational queries, the exact format that feeds AI Overviews, are growing fastest among mobile users doing local service searches. That makes the test worth running monthly, not just once.
 
 If you'd rather skip the testing and have the whole thing built for you, [that's exactly what we do at UnderCurrent Automations](/audit) , most AI visibility audits and content rebuilds go live in under two weeks.
 
@@ -191,10 +191,10 @@ Measuring AI search optimisation results requires tracking three things: direct 
 
 ## Related Reading
 
-- [What is GEO? Generative Engine Optimisation Explained](/blog/what-is-geo-generative-engine-optimisation-explained-australia) , the deeper playbook on GEO structure and entity authority for Australian SMBs
+- [How to Rank in ChatGPT Search](/blog/how-to-rank-in-chatgpt-search) , the deeper playbook on entity authority, schema, and citation structure for AI engines
 - [AI Search vs Traditional Search in Australia (2026)](/blog/ai-search-vs-traditional-search-australia-2026) , how the traffic split between traditional and AI search is evolving and what to measure
-- [How to Use AI to Improve Your Tradie Business](/blog/how-to-use-ai-to-improve-tradie-business-australia) , practical AI applications for trades businesses beyond just search visibility
-- [AI Content Automation Small Business Australia](/blog/ai-content-automation-small-business-australia-case-study) , how automated content systems feed the citation surface area AI engines need
+- [How to Use AI to Optimise Your Tradie Business](/blog/how-to-use-ai-to-optimise-tradie-business-australia) , practical AI applications for trades businesses beyond just search visibility
+- [AI Content Automation Small Business Australia](/case-studies/ai-content-automation-small-business-australia) , how automated content systems feed the citation surface area AI engines need
 
 ---
 
@@ -203,9 +203,9 @@ Measuring AI search optimisation results requires tracking three things: direct 
 1. [Google Search Central , AI Overviews Documentation](https://developers.google.com/search/docs/appearance/ai-overviews)
 2. [Google Structured Data , FAQPage](https://developers.google.com/search/docs/appearance/structured-data/faqpage)
 3. [Google Blog , Generative AI in Search](https://blog.google/products/search/generative-ai-search/)
-4. [ABS Business Characteristics Survey](https://www.abs.gov.au/statistics/industry/technology-and-innovation/business-characteristics-survey)
+4. [ABS Business Characteristics Survey](https://www.abs.gov.au/statistics/industry/technology-and-innovation/characteristics-australian-business/latest-release)
 5. [BrightLocal , Local Consumer Review Survey](https://www.brightlocal.com/research/local-consumer-review-survey/)
-6. [IBISWorld , Australian Small Business Data](https://www.ibisworld.com/au/)
+6. [IBISWorld , Australian Small Business Data](https://www.ibisworld.com/au/industry-reports)
 7. [Zapier , Automation Research Blog](https://zapier.com/blog/)
 8. [Statista , Digital Advertising Australia](https://www.statista.com/outlook/dmo/digital-advertising/australia)
 9. [Local Digital , Australian SEO and Content Marketing Statistics 2025](https://www.localdigital.com.au/blog/australian-seo-and-content-marketing-statistics-for-2025)

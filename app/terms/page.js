@@ -3,6 +3,14 @@ import Link from 'next/link'
 export const metadata = {
   title: 'Terms of Service',
   description: 'Terms and conditions for using the UnderCurrent website and AI automation services. Read our service agreement, limitations, and policies.',
+  alternates: { canonical: 'https://undercurrentautomations.com/terms' },
+  openGraph: {
+    title: 'Terms of Service | UnderCurrent Automations',
+    description: 'Terms and conditions for using the UnderCurrent website and AI automation services.',
+    url: 'https://undercurrentautomations.com/terms',
+    type: 'website',
+    images: ['/brand/og-card.png'],
+  },
 }
 
 const DOMAIN = 'https://undercurrentautomations.com'

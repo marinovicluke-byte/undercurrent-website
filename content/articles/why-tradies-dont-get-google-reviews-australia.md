@@ -1,5 +1,5 @@
 ---
-title: "Why Tradies Don't Get Google Reviews Australia 2026: The Data Behind the Local SEO Gap"
+title: "Why Australian Tradies Don't Get Google Reviews"
 description: "Australian tradies are losing local search rankings and customers because they don't ask for reviews. Here's the data on what it costs — and how to fix it."
 date: "2026-03-31"
 slug: "why-tradies-dont-get-google-reviews-australia"

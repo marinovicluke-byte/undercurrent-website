@@ -10,6 +10,7 @@ export const metadata = {
     description: 'Melbourne AI automation agency. We respond within 1 business day.',
     url: 'https://undercurrentautomations.com/contact',
     type: 'website',
+    images: ['/brand/og-card.png'],
   },
   twitter: {
     card: 'summary_large_image',

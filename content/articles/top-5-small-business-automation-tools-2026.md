@@ -1,5 +1,5 @@
 ---
-title: "Top 5 Small Business Automation Tools in 2026 (Australia)"
+title: "Top 5 Small Business Automation Tools (Australia 2026)"
 description: "The best automation tools for Australian small businesses in 2026. Compare n8n, Make, Zapier, Xero, and HubSpot with real costs and use cases."
 date: "2025-01-15"
 slug: "top-5-small-business-automation-tools-2026"

@@ -4,13 +4,14 @@ import SectionEyebrow from '@/components/ui/SectionEyebrow'
 export const metadata = {
   title: 'About',
   description:
-    'What UnderCurrent is, who built it, and where we\'re going — the full story.',
+    'UnderCurrent Automations is a Melbourne AI automation agency founded by Luke Marinovic. The story behind the build, the team, and where we\'re going.',
   alternates: { canonical: 'https://undercurrentautomations.com/about' },
   openGraph: {
     title: 'About UnderCurrent Automations',
     description: 'Melbourne AI automation agency. Founded by Luke Marinovic. We build custom workflows for Australian small businesses.',
     url: 'https://undercurrentautomations.com/about',
     type: 'website',
+    images: ['/brand/og-card.png'],
   },
 }
 

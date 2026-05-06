@@ -1,5 +1,5 @@
 ---
-title: "How to Use AI to Optimise Your Tradie Business Australia 2026: Step-by-Step Workflow Guide"
+title: "How to Use AI to Optimise Your Tradie Business"
 description: "Step-by-step guide showing Australian tradies how to automate quoting, scheduling, and invoicing with AI workflow tools. Real examples and costs included."
 date: "2026-04-15"
 slug: "how-to-use-ai-to-optimise-tradie-business-australia"

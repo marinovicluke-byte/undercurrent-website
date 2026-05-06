@@ -1,6 +1,6 @@
 ---
 title: "How Much Are Manual Processes Costing Your Business?"
-description: "Manual processes cost Australian SMEs $15,000-$40,000 annually in lost time. Learn how to calculate your hidden costs and where automation pays for itself first."
+description: "Manual processes cost Australian SMEs $15,000-$40,000 a year in lost time. Calculate your hidden costs and find where automation pays for itself."
 date: "2026-04-19"
 slug: "how-much-are-manual-processes-costing-your-business"
 cluster: "foundations"

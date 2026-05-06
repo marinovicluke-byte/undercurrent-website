@@ -42,7 +42,7 @@ faqs:
 | Custom AI agent or chatbot | $8,000-15,000 | 8-12 weeks | Variable based on scope |
 | Ongoing support/maintenance | $500-1,500/month | Continuous | System monitoring, adjustments |
 
-Workflow automation is a system where software completes recurring tasks without manual input. AI automation consultants in Melbourne build workflow systems that connect your existing tools , CRM, accounting software, booking calendars, email , so repetitive tasks happen automatically. They're not selling you AI hype, they're wiring up your business so you spend less time on data entry and follow-up. According to a [McKinsey report on AI adoption](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai), 65% of organisations now use AI regularly, but only 6% are "fully enabled" with strategic implementation. Most businesses sit somewhere in the middle, running basic automation through embedded features in platforms like [Xero](https://www.xero.com/au/features/accounting-software/) or HubSpot but needing help with custom workflows that connect multiple systems.
+Workflow automation is a system where software completes recurring tasks without manual input. AI automation consultants in Melbourne build workflow systems that connect your existing tools , CRM, accounting software, booking calendars, email , so repetitive tasks happen automatically. They're not selling you AI hype, they're wiring up your business so you spend less time on data entry and follow-up. According to a [McKinsey report on AI adoption](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai), 65% of organisations now use AI regularly, but only 6% are "fully enabled" with strategic implementation. Most businesses sit somewhere in the middle, running basic automation through embedded features in platforms like [Xero](https://www.xero.com/au/features/) or HubSpot but needing help with custom workflows that connect multiple systems.
 
 The gap between using AI occasionally and embedding it strategically is where consultants operate. A [Deloitte study on Australian business automation](https://www2.deloitte.com/au/en/pages/technology/articles/automation-australian-business.html) found that Melbourne small businesses typically save 10-20 hours per week by day 90 of implementation, with measurable revenue impact from faster lead response, fewer missed invoices, and reduced admin overhead.
 
@@ -54,7 +54,7 @@ From building UC's own content pipeline that publishes multiple articles per wee
 
 The build phase is where the automation happens. Consultants connect your tools using platforms like Make, Zapier, or n8n, or write custom code if your systems don't talk to each other natively. A typical example: when a new lead comes in through your website form, the system automatically creates a contact in your CRM, sends a templated follow-up email within 2 minutes, books a tentative call slot, and notifies you via SMS. No manual data entry, no waiting until you're back at your desk. At [UnderCurrent Automations](/about), we build these exact workflows for Australian service businesses every week.
 
-[Google's research on business automation](https://blog.google/technology/ai/google-ai-automation-business-productivity/) shows that businesses reaching intermediate AI maturity see a 45% profitability increase, while fully enabled businesses achieve 111%. The difference isn't the tools, it's the integration depth. A consultant's job is to move you from "we use Xero for invoicing" to "our invoicing happens automatically when the job is marked complete in ServiceM8, and overdue reminders go out at 7, 14, and 30 days without anyone touching it."
+[Google's research on business automation](https://blog.google/technology/ai/) shows that businesses reaching intermediate AI maturity see a 45% profitability increase, while fully enabled businesses achieve 111%. The difference isn't the tools, it's the integration depth. A consultant's job is to move you from "we use Xero for invoicing" to "our invoicing happens automatically when the job is marked complete in ServiceM8, and overdue reminders go out at 7, 14, and 30 days without anyone touching it."
 
 We typically see automation systems need 2-3 tweaks in the first 90 days as edge cases surface. That's where post-launch support matters. Understanding [how we work](/process) helps you set realistic expectations for the build-test-refine cycle.
 
@@ -87,7 +87,7 @@ A clear project scope should include: what gets built, what tools it connects, h
 Key questions to ask:
 
 **"Can you show me 2-3 examples of automation you've built for businesses similar to mine?"**
-You're checking for relevant experience. A consultant who's built 20 e-commerce automations but never worked with trade businesses won't understand your workflows. Look for industry match or at least transferable patterns , appointment scheduling, invoicing, follow-up. Check [case studies](/case-study) from multiple consultants before deciding.
+You're checking for relevant experience. A consultant who's built 20 e-commerce automations but never worked with trade businesses won't understand your workflows. Look for industry match or at least transferable patterns , appointment scheduling, invoicing, follow-up. Check [case studies](/case-studies) from multiple consultants before deciding.
 
 **"How do you price this work , hourly or fixed project?"**
 Fixed-price projects are safer for you if the scope is clear. Hourly is riskier because costs can blow out. If they quote hourly, ask for a cap. If they quote fixed, ask what happens if scope changes mid-project.
@@ -154,7 +154,7 @@ Example: A Melbourne electrical contractor with 5 staff spends 25 hours per mont
 
 If payback is over 12 months, the automation probably isn't worth it unless there's a strategic benefit beyond time savings , faster lead response improving conversion rate, not just saving admin time.
 
-According to [PwC's analysis of AI ROI in Australian businesses](https://www.pwc.com.au/important-problems/business-economic-recovery/digital-business-momentum.html), 88% of Australian SMBs using AI report revenue boosts, with growing firms planning more investment. The ROI isn't always direct time savings, it's also opportunity cost. Faster follow-up means more jobs booked. Automated invoicing means better cash flow. Fewer no-shows means more revenue per week.
+According to [PwC's analysis of AI ROI in Australian businesses](https://www.pwc.com.au/), 88% of Australian SMBs using AI report revenue boosts, with growing firms planning more investment. The ROI isn't always direct time savings, it's also opportunity cost. Faster follow-up means more jobs booked. Automated invoicing means better cash flow. Fewer no-shows means more revenue per week.
 
 Run the numbers before signing. If a consultant can't help you estimate ROI, they don't understand your business well enough to automate it. For customer-facing automation specifically, [customer experience automation](/customer-experience-automation) often delivers compound returns through improved retention and referrals.
 
@@ -188,15 +188,15 @@ Industry-specific experience helps but isn't essential if the consultant underst
 
 - [Automating Business Processes in Australia: SME Guide](/blog/automating-business-processes-australia-sme-guide) , the framework for prioritising automation projects by ROI
 - [What is Business Process Automation?](/blog/what-is-business-process-automation-australia) , foundational concepts before hiring a consultant
-- [Which Business Processes Should You Automate First in 2026?](/blog/which-business-processes-automate-first-australia-2026) , decision tree for sequencing automation work
+- [Which Business Processes Should You Automate First in 2026?](/blog/simplest-small-business-automation-tasks-australia-2026) , decision tree for sequencing automation work
 - [How Australian Entrepreneurs Can Boost Team Efficiency Without Hiring](/blog/how-australian-entrepreneurs-boost-team-efficiency-without-hiring) , alternatives to hiring when automation can solve capacity problems
 - [How to Use AI to Optimise Your Tradie Business](/blog/how-to-use-ai-to-optimise-tradie-business-australia) , automation specifically for trade businesses
 
 ## Sources
 
 1. [McKinsey , The State of AI](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)
-2. [Xero , Accounting Software Features](https://www.xero.com/au/features/accounting-software/)
+2. [Xero , Accounting Software Features](https://www.xero.com/au/features/)
 3. [Deloitte , Automation in Australian Business](https://www2.deloitte.com/au/en/pages/technology/articles/automation-australian-business.html)
-4. [Google AI Blog , Business Automation and Productivity](https://blog.google/technology/ai/google-ai-automation-business-productivity/)
+4. [Google AI Blog , Business Automation and Productivity](https://blog.google/technology/ai/)
 5. [Australian Bureau of Statistics , Business Technology Adoption](https://www.abs.gov.au/statistics/industry/technology-and-innovation/characteristics-australian-business/latest-release)
-6. [PwC Australia , Digital Business Momentum](https://www.pwc.com.au/important-problems/business-economic-recovery/digital-business-momentum.html)
+6. [PwC Australia , Digital Business Momentum](https://www.pwc.com.au/)

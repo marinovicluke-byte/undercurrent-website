@@ -11,6 +11,7 @@ export const metadata = {
     description: 'Three precise steps to AI automation for your business. Map workflows, build automations, let them flow.',
     url: 'https://undercurrentautomations.com/process',
     type: 'website',
+    images: ['/brand/og-card.png'],
   },
 }
 

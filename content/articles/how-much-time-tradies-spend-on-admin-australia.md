@@ -1,6 +1,6 @@
 ---
-title: "How Much Time Tradies Spend on Admin Australia 2026: The Real Cost of Paperwork"
-description: "Australian tradies lose 8-12 hours per week to admin tasks. We break down the real hourly cost using ABS, ASBFEO, and Xero data , and show what automation recovers."
+title: "How Much Time Australian Tradies Spend on Admin"
+description: "Australian tradies lose 8-12 hours per week to admin. The real hourly cost using ABS, ASBFEO, and Xero data, and what automation recovers."
 date: "2026-03-31"
 slug: "how-much-time-tradies-spend-on-admin-australia"
 cluster: "foundations"

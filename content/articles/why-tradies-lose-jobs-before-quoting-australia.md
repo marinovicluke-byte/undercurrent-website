@@ -1,5 +1,5 @@
 ---
-title: "Why Tradies Lose Jobs Before Quoting Australia 2026: The Lead Response Time Problem"
+title: "Why Australian Tradies Lose Jobs Before Quoting"
 description: "Most Australian tradies lose 50-70% of enquiries simply by responding too slowly. Learn why the first business to respond wins the job and how to fix it."
 date: "2026-03-31"
 slug: "why-tradies-lose-jobs-before-quoting-australia"
@@ -57,7 +57,7 @@ Then they wait.
 
 The first business that calls back gets their full attention. If that business sounds professional, gives them a rough idea of timing and cost, and offers to come out for a quote, the customer stops looking. They've found someone. The other two or three businesses that contact them later? They don't even answer the phone.
 
-A [study by InsideSales.com](https://www.insidesales.com/insider/leads/lead-response-management-study/) found that 78% of customers go with the business that responds first. Not the cheapest. Not the one with the best website. The first one to actually make contact.
+A widely-cited study by InsideSales.com (since rebranded as XANT) found that 78% of customers go with the business that responds first. Not the cheapest. Not the one with the best website. The first one to actually make contact.
 
 This isn't about being pushy. It's about being available when the customer is ready to book. That window is narrow. If you miss it, they've moved on.
 
@@ -101,7 +101,7 @@ Here's what that looks like in practice:
 
 Most small trade businesses are responding same-day at best. Many take 24-48 hours. That's not because they don't care. It's because they're flat out. You finish a job at 4pm, drive home, eat dinner, then sit down to return the day's calls. By then, every single one of those customers has moved on.
 
-The [Lead Response Management Study by InsideSales.com](https://www.insidesales.com/insider/leads/lead-response-management-study/) found that the average response time across industries is 42 hours. For small businesses, it's worse.
+The Lead Response Management Study by InsideSales.com (now XANT) found that the average response time across industries is 42 hours. For small businesses, it's worse.
 
 But here's the thing: **you don't need to be perfect. You just need to be faster than your competitors.** If everyone in your industry is responding in 4-6 hours and you start responding in 10 minutes, you'll win the majority of enquiries.
 

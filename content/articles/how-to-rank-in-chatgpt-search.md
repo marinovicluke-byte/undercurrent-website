@@ -57,7 +57,7 @@ Across UC's automation audits for Australian service businesses, the most common
 
 ChatGPT relies on Bing's index and Google's index for newer content, plus its training data for entity recognition. That means your crawlability matters. If you're blocking GPTBot or ClaudeBot in your robots.txt file, you're invisible. If your sitemap isn't submitted to [Bing Webmaster Tools](https://www.bing.com/webmasters/), ChatGPT might not know your business exists.
 
-A Perth-based HVAC company saw zero AI citations until they submitted their sitemap to Bing, implemented FAQ schema on their service pages, and rewrote their content with answer-first structure. Within six weeks, they started appearing in ChatGPT responses for "best HVAC service Perth" and "how much does ducted heating cost." The same [process automation](/resources) that freed up their admin time also gave them capacity to fix their content strategy.
+A Perth-based HVAC company saw zero AI citations until they submitted their sitemap to Bing, implemented FAQ schema on their service pages, and rewrote their content with answer-first structure. Within six weeks, they started appearing in ChatGPT responses for "best HVAC service Perth" and "how much does ducted heating cost." The same [process automation](/blog) that freed up their admin time also gave them capacity to fix their content strategy.
 
 ## How Should I Structure Content to Rank in ChatGPT Search?
 
@@ -175,7 +175,7 @@ Add a Quick Answer block to every article. Right after the H1, write a 40-60 wor
 
 Build entity mentions. Write a guest post for an industry blog. Get featured in a local business roundup. Sponsor a trade association event and get listed on their site. You want 5+ authority mentions outside your own domain within six months. Branded domains score 11.1 points higher in AI citations when they have distributed entity signals.
 
-Track your AI referrals. Set up UTM parameters for chat.openai.com and perplexity.ai in Google Analytics. Check your traffic sources weekly. If you're not seeing AI referrals after 4-6 weeks, your content structure or schema is broken. Go back and audit it. Our [lead follow-up automation guide](/blog/automate-lead-follow-up-australian-service-businesses) shows how to track and convert these AI-driven enquiries once they come in.
+Track your AI referrals. Set up UTM parameters for chat.openai.com and perplexity.ai in Google Analytics. Check your traffic sources weekly. If you're not seeing AI referrals after 4-6 weeks, your content structure or schema is broken. Go back and audit it. Our [instant lead follow-up guide](/blog/how-to-send-instant-follow-up-email-to-leads-automatically-australia) shows how to track and convert these AI-driven enquiries once they come in.
 
 
 ![ChatGPT search ranking visibility for Australian content creators optimizing Bing index integration](./body-2.jpg)
@@ -215,7 +215,7 @@ Set up UTM parameters in Google Analytics for chat.openai.com and perplexity.ai 
 - [AI Search vs Traditional Search in Australia 2026](/blog/ai-search-vs-traditional-search-australia-2026) , why your SEO strategy needs to split focus between Google and AI engines
 - [Automating Business Processes for Australian SMEs](/blog/automating-business-processes-australia-sme-guide) , the automation systems that free up time for content strategy
 - [What Is Business Process Automation](/blog/what-is-business-process-automation-australia) , foundational guide to automation for Australian service businesses
-- [How to Automate Lead Follow-Up for Australian Service Businesses](/blog/automate-lead-follow-up-australian-service-businesses) , the first automation most businesses should ship
+- [How to Send Instant Follow-Up Email to Leads Automatically](/blog/how-to-send-instant-follow-up-email-to-leads-automatically-australia) , the first automation most businesses should ship
 
 ## Sources
 

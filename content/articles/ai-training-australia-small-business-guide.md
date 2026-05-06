@@ -180,7 +180,7 @@ After that, the free options worth your time in 2026:
 
 The [ATSE's AI investment blueprint](https://www.atse.org.au/media/e3dfpie1/251201-unleashing-growth-australias-ai-investment-blueprint.pdf) estimates AI will add $142 billion to Australia's GDP by 2030, with SMEs achieving 22% faster productivity growth among adopters. That productivity gain doesn't come from watching videos. It comes from having at least one automated task running inside your business this week.
 
-For a practical starting point on what to automate first, the guide on [which business processes to automate first in 2026](/blog/which-business-processes-automate-first-australia-2026) covers the decision framework most service businesses need before they start any training program. If you want to understand what admin tasks are costing you right now, [how much manual processes are costing your business](/blog/how-much-are-manual-processes-costing-your-business) puts a dollar figure on it. The [automation stats](/stats) page has current benchmarks across Australian service businesses, and the [content automation](/content-automation) page is worth a look if your team spends time on repetitive written outputs.
+For a practical starting point on what to automate first, the guide on [the simplest small business automation tasks for 2026](/blog/simplest-small-business-automation-tasks-australia-2026) covers the decision framework most service businesses need before they start any training program. If you want to understand what admin tasks are costing you right now, [how much manual processes are costing your business](/blog/how-much-are-manual-processes-costing-your-business) puts a dollar figure on it. The [content automation](/content-automation) page is worth a look if your team spends time on repetitive written outputs.
 
 ---
 
@@ -218,7 +218,7 @@ For a practical starting point on what to automate first, the guide on [which bu
 
 ## Related Reading
 
-- [Which Business Processes Should You Automate First in 2026](/blog/which-business-processes-automate-first-australia-2026) , the prioritisation framework before any training session makes sense
+- [Which Business Processes Should You Automate First in 2026](/blog/simplest-small-business-automation-tasks-australia-2026) , the prioritisation framework before any training session makes sense
 - [Automating Business Processes Australia , SME Guide](/blog/automating-business-processes-australia-sme-guide) , covers the full range of what's worth automating for Australian service businesses
 - [n8n vs Zapier for Australian Small Business](/blog/n8n-vs-zapier-australia-small-business) , the tool comparison that comes up in every 90-minute session
 - [How Australian Entrepreneurs Can Boost Team Efficiency Without Hiring](/blog/how-australian-entrepreneurs-boost-team-efficiency-without-hiring) , the systems-not-staff argument in full

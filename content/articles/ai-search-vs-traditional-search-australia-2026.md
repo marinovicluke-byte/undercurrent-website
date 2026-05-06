@@ -1,6 +1,6 @@
 ---
 title: "Why Traditional Search Won't Save Your Business in 2026"
-description: "AI search engines now handle 37% of queries, convert at 4.4x the rate, and cite content Google ignores. Here's what Australian service businesses must change in 2026."
+description: "AI search handles 37% of queries, converts at 4.4x the rate, and cites content Google ignores. What Australian businesses must change in 2026."
 date: "2026-04-21"
 slug: "ai-search-vs-traditional-search-australia-2026"
 cluster: "seo-ai-visibility"
@@ -84,7 +84,7 @@ The most common mistake is ignoring AI search entirely until traffic drops. By t
 
 **Mistake 2: Treating content freshness as optional.** Google's algorithm weights freshness for some queries, news and trends, but not others. AI engines, especially Perplexity, weight freshness for everything. A page published in 2023, even if it ranks well on Google, is citation-invisible to Perplexity. Add a "Last Updated" date at the top, refresh one stat or example per month, republish it. That's all it takes to stay citation-eligible. [Our automation services](/services) can handle monthly content refreshes without manual effort, using workflows that update stats, republish pages, and track performance automatically.
 
-**Mistake 3: Skipping the FAQ section.** Every AI citation study in 2026 shows the same result: pages with structured FAQ sections get cited at 4-6x the rate of pages without them. Each question-answer pair is a discrete passage AI engines can pull independently. A 5-question FAQ gives you 5 citation opportunities. Zero FAQs gives you one, the opening paragraph. Australian service businesses consistently underuse FAQs because they feel repetitive or unnecessary. They're the single highest-impact change you can make for AI visibility. [See our resources](/resources) for FAQ templates built specifically for AI citation.
+**Mistake 3: Skipping the FAQ section.** Every AI citation study in 2026 shows the same result: pages with structured FAQ sections get cited at 4-6x the rate of pages without them. Each question-answer pair is a discrete passage AI engines can pull independently. A 5-question FAQ gives you 5 citation opportunities. Zero FAQs gives you one, the opening paragraph. Australian service businesses consistently underuse FAQs because they feel repetitive or unnecessary. They're the single highest-impact change you can make for AI visibility. [See our resources](/blog) for FAQ templates built specifically for AI citation.
 
 **Mistake 4: Using generic keywords instead of question queries.** Traditional SEO targets "plumber Melbourne" or "digital marketing agency Sydney." Those still work for Google map pack. But AI search responds to full questions: "How much does a blocked drain cost to fix in Melbourne?" or "What's the difference between SEO and content marketing for small business?" Your content needs to mirror those question queries in H2 headings and FAQ sections. The more your headings match what someone types into ChatGPT, the higher your citation rate.
 
@@ -94,7 +94,7 @@ A 3-person plumbing outfit in Melbourne's southeast had decent Google rankings b
 
 Pick your top 3 service pages and make these changes this week. Add a Quick Answer block (60-80 words, direct answer to the page's main query) in the first paragraph. Rewrite 2-3 H2 headings as questions ending with "?". Add a 5-question FAQ section at the bottom. Include a comparison table if the page covers multiple options, service tiers, pricing, timelines. Update the publish date to this month.
 
-That's it. Those five structural changes take 60-90 minutes per page. They don't require rewriting the full content, just reformatting what's already there into structures AI engines can extract and cite. [Check our resources section](/resources) for downloadable templates and checklists.
+That's it. Those five structural changes take 60-90 minutes per page. They don't require rewriting the full content, just reformatting what's already there into structures AI engines can extract and cite. [Check our resources section](/blog) for downloadable templates and checklists.
 
 Test it manually before waiting for traffic. Open ChatGPT and ask the exact question your target customer would ask. "How much does a blocked drain cost to fix in Melbourne?" or "What's the fastest way to automate client invoicing for consultants?" See which pages ChatGPT cites. If yours isn't in the top 3-5 sources, query Perplexity with the same question. Compare what those cited pages have that yours doesn't. Nine times out of ten, it's structure, not content quality. [Use our ROI calculator](/roi) to see what improved conversion rates from AI traffic mean for your business, and [book an audit](/audit) to get specific recommendations for your pages.
 

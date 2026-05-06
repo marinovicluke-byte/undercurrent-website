@@ -138,7 +138,7 @@ For most trade businesses, yes. When a job is marked complete in your field serv
 
 [Xero's Small Business Insights data](https://www.xero.com/au/resources/small-business-insights/) shows Australian small businesses wait an average of 23 days to get paid on invoices , automated payment reminders typically cut that by 30-50%. Separately, [a survey published by chiefit.me covering 106 Australian SME finance leaders](https://chiefit.me/survey-finds-ai-automation-interest-outpaces-adoption-among-australian-sme-finance-leaders/) found that manual tasks consume 20-59% of finance team time for 75% of respondents, and 74% are already using cloud accounting software that supports automation. That's foundational readiness sitting unused.
 
-The labour time savings from automated invoicing are well-documented: [MYOB's SMB research](https://www.myob.com/au/resources/reports) consistently finds small business owners spend 7-10 hours per week on financial admin tasks that could be partially or fully automated. Getting started is straightforward , [eInvoicing for small business](/blog/getting-started-with-einvoicing-small-business-australia) explains the current options in Australia. Our [finance automation](/finance-automation) service connects your field software directly to your accounting platform.
+The labour time savings from automated invoicing are well-documented: [MYOB's SMB research](https://www.myob.com/au/resources/) consistently finds small business owners spend 7-10 hours per week on financial admin tasks that could be partially or fully automated. Getting started is straightforward , [eInvoicing for small business](/blog/einvoicing-small-business-australia-guide) explains the current options in Australia. Our [finance automation](/finance-automation) service connects your field software directly to your accounting platform.
 
 ### Can AI Automation Request Google Reviews Without Being Awkward?
 
@@ -163,7 +163,7 @@ Here's a realistic cost breakdown:
 | Field service software | ServiceM8, Tradify | $50-$150 |
 | **Total** | | **$180-$850** |
 
-Setup cost depends on whether you build it yourself or have it done for you. DIY takes 20-40 hours and requires moderate technical comfort. Done-for-you typically runs under $5,000 AUD for a foundational stack , a figure consistent with what the [ASBFEO's small business technology investment guidance](https://www.asbfeo.gov.au/resources/small-business-technology) identifies as a typical entry-level digital systems investment for businesses under 20 staff. Most businesses recover that in 2-3 months from time savings alone.
+Setup cost depends on whether you build it yourself or have it done for you. DIY takes 20-40 hours and requires moderate technical comfort. Done-for-you typically runs under $5,000 AUD for a foundational stack , a figure consistent with what the [ASBFEO's small business technology investment guidance](https://www.asbfeo.gov.au/resources) identifies as a typical entry-level digital systems investment for businesses under 20 staff. Most businesses recover that in 2-3 months from time savings alone.
 
 [According to ascendai.net.au](https://ascendai.net.au/ai-workflow-automation-for-smes/), ROI on AI automation for SMBs is typically realised within 2-3 months, with 70% of SMBs reporting significant efficiency improvements after implementation. The [ROI calculator](/roi) can give you a rough number based on your current admin hours and hourly rate.
 
@@ -201,7 +201,7 @@ The most common stack for Australian service businesses in 2026 combines a workf
 
 At UnderCurrent Automations, when we run automation audits for Australian service businesses, the first thing we look at is which repetitive tasks the owner is still doing manually every week , and in most cases, it's lead follow-up, invoicing, and review requests. Those three workflows alone account for 80% of recoverable admin time.
 
-For a broader look at [which business processes to automate first in 2026](/blog/which-business-processes-automate-first-australia-2026), that article maps the priority order by business type. And if you want to see the full range of [automation services](/services) we offer, that page breaks it down by workflow category.
+For a broader look at [which business processes to automate first in 2026](/blog/simplest-small-business-automation-tasks-australia-2026), that article maps the priority order by business type. And if you want to see the full range of [automation services](/services) we offer, that page breaks it down by workflow category.
 
 ---
 
@@ -243,7 +243,7 @@ For a broader look at [which business processes to automate first in 2026](/blog
 ## Related Reading
 
 - [How Much Time Tradies Spend on Admin in Australia](/blog/how-much-time-tradies-spend-on-admin-australia) , quantifies the admin burden before you decide what to automate
-- [Which Business Processes Should You Automate First in 2026](/blog/which-business-processes-automate-first-australia-2026) , priority order for service businesses starting from scratch
+- [Which Business Processes Should You Automate First in 2026](/blog/simplest-small-business-automation-tasks-australia-2026) , priority order for service businesses starting from scratch
 - [n8n vs Zapier for Australian Small Business](/blog/n8n-vs-zapier-australia-small-business) , tool comparison for the most common workflow engine decision
 - [Hidden Cost of Manual Processes in a Trade Business](/blog/hidden-cost-manual-trade-business-australia) , the dollar figure most tradies don't know they're losing
 - [How to Send Instant Follow-Up Email to Leads Automatically](/blog/how-to-send-instant-follow-up-email-to-leads-automatically-australia) , the first automation most service businesses should ship
@@ -257,8 +257,8 @@ For a broader look at [which business processes to automate first in 2026](/blog
 3. [McKinsey , Australia's Automation Opportunity](https://www.mckinsey.com/au/~/media/mckinsey/featured%20insights/future%20of%20organizations/australias%20automation%20opportunity%20reigniting%20productivity%20and%20inclusive%20growth/australia-automation-opportunity-vf.pdf)
 4. [Harvard Business Review , The Short Life of Online Sales Leads (Oldroyd et al.)](https://hbr.org/2011/03/the-short-life-of-online-sales-leads)
 5. [Xero , Small Business Insights](https://www.xero.com/au/resources/small-business-insights/)
-6. [MYOB , SMB Research Reports](https://www.myob.com/au/resources/reports)
-7. [ASBFEO , Small Business Technology Investment Guidance](https://www.asbfeo.gov.au/resources/small-business-technology)
+6. [MYOB , SMB Research Reports](https://www.myob.com/au/resources/)
+7. [ASBFEO , Small Business Technology Investment Guidance](https://www.asbfeo.gov.au/resources)
 8. [KPMG Australia , Australia Leads World on Responsible AI, Lags Productivity Gains (April 2026)](https://kpmg.com/au/en/media/media-releases/2026/04/australia-leads-world-on-responsible-ai-lags-productivity-gains.html)
 9. [chiefit.me , Survey Finds AI Automation Interest Outpaces Adoption Among Australian SME Finance Leaders](https://chiefit.me/survey-finds-ai-automation-interest-outpaces-adoption-among-australian-sme-finance-leaders/)
 10. [Roy Morgan , AI Press Release October 2025](https://www.roymorgan.com/findings/10048-ai-press-release-october-2025)

@@ -31,6 +31,7 @@ export async function generateMetadata({ params }) {
       description: cluster.description,
       type: 'website',
       url: `${SITE_URL}/blog/cluster/${slug}`,
+      images: ['/brand/og-card.png'],
     },
   }
 }

@@ -72,8 +72,15 @@ const SERVICES = [
 
 export const metadata = {
   title: 'Services',
-  description: 'Six automation disciplines for Australian small businesses — lead generation, revenue operations, frontend experiences, SEO and discovery, AI strategy, and custom integrations.',
+  description: 'Six automation disciplines for Australian SMBs: lead gen, revenue ops, frontend, SEO, AI strategy, and custom integrations.',
   alternates: { canonical: 'https://undercurrentautomations.com/services' },
+  openGraph: {
+    title: 'Services | UnderCurrent Automations',
+    description: 'Six automation disciplines for Australian SMBs: lead gen, revenue ops, frontend, SEO, AI strategy, and custom integrations.',
+    url: 'https://undercurrentautomations.com/services',
+    type: 'website',
+    images: ['/brand/og-card.png'],
+  },
 }
 
 const BREADCRUMB_SCHEMA = {

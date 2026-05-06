@@ -1,5 +1,5 @@
 ---
-title: "n8n vs Zapier Australia: Small Business Comparison Guide"
+title: "n8n vs Zapier: Small Business Comparison (Australia)"
 description: "Compare n8n vs Zapier for Australian small businesses. AUD pricing, self-hosting on AWS Sydney for data sovereignty, and which tool fits your task volume."
 date: "2026-04-27"
 slug: "n8n-vs-zapier-australia-small-business"
@@ -220,7 +220,7 @@ If you want a shortcut, [book a free automation audit](/audit) and we'll map you
 
 If you'd rather have this built for you, [that's exactly what we do at UnderCurrent Automations](/audit) , most automation builds go live in under two weeks, whether we're setting up Zapier workflows or deploying n8n on AWS Sydney. Learn more [about UnderCurrent](/about) and the types of businesses we work with across Melbourne and the rest of Australia.
 
-For a broader look at which business processes to automate first, the [which business processes should you automate first in 2026](/blog/which-business-processes-automate-first-australia-2026) guide covers the sequencing logic we use across every client engagement.
+For a broader look at which business processes to automate first, the [which business processes should you automate first in 2026](/blog/simplest-small-business-automation-tasks-australia-2026) guide covers the sequencing logic we use across every client engagement.
 
 ---
 
@@ -251,7 +251,7 @@ Automation tools handle repetitive, rule-based tasks , sending emails, creating 
 
 ## Related Reading
 
-- [Which Business Processes Should You Automate First in 2026](/blog/which-business-processes-automate-first-australia-2026) , sequencing logic for Australian service businesses starting their automation journey
+- [Which Business Processes Should You Automate First in 2026](/blog/simplest-small-business-automation-tasks-australia-2026) , sequencing logic for Australian service businesses starting their automation journey
 - [Automating Business Processes in Australia: SME Guide](/blog/automating-business-processes-australia-sme-guide) , broader framework for identifying and prioritising automation opportunities
 - [Best Marketing Automation Software Australia 2026](/blog/best-marketing-automation-software-australia-2026) , how automation tools stack up specifically for marketing workflows
 - [The Hidden Cost of Manual Trade Business Admin](/blog/hidden-cost-manual-trade-business-australia) , where manual processes cost Australian tradies the most money

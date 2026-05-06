@@ -1,6 +1,6 @@
 ---
-title: "How Australian Entrepreneurs Can Boost Team Efficiency Without Hiring 2026: 7 Proven Strategies"
-description: "Discover 7 practical ways Australian small business owners can grow revenue and output without adding headcount. Real tradie and service business examples included."
+title: "Boost Team Efficiency Without Hiring: 7 Strategies"
+description: "7 practical ways Australian small business owners grow revenue and output without adding headcount. Real tradie and service business examples."
 date: "2026-04-15"
 slug: "how-australian-entrepreneurs-boost-team-efficiency-without-hiring"
 cluster: "ai-strategy-training"

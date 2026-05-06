@@ -1,5 +1,5 @@
 ---
-title: "eInvoicing for Small Business Australia 2026: Your Step-by-Step Setup Guide"
+title: "eInvoicing for Small Business: Australian Setup Guide"
 description: "Step-by-step guide for Australian small businesses to set up eInvoicing, meet ATO requirements, and get paid 40% faster with automated invoicing."
 date: "2026-03-31"
 slug: "einvoicing-small-business-australia-guide"
