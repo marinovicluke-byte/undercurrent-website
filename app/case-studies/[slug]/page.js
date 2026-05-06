@@ -384,6 +384,34 @@ export default async function CaseStudyPage({ params }) {
           text-transform: uppercase;
           border-bottom: 1px solid var(--text-faint);
         }
+        .cs-prose pre {
+          background: rgba(255,255,255,0.04);
+          border: 1px solid var(--text-faint);
+          border-radius: 10px;
+          padding: 1.25rem 1.5rem;
+          overflow-x: auto;
+          max-width: 100%;
+          margin: 1.5rem 0;
+          -webkit-overflow-scrolling: touch;
+        }
+        .cs-prose pre code {
+          font-family: 'SF Mono', ui-monospace, 'Cascadia Code', monospace;
+          font-size: 13px;
+          line-height: 1.6;
+          color: var(--text-primary);
+          background: none;
+          padding: 0;
+          border-radius: 0;
+          white-space: pre;
+        }
+        .cs-prose code {
+          font-family: 'SF Mono', ui-monospace, 'Cascadia Code', monospace;
+          font-size: 13px;
+          background: rgba(255,255,255,0.06);
+          padding: 2px 6px;
+          border-radius: 4px;
+          color: var(--blue-light);
+        }
       `}</style>
 
       {/* Tools */}
