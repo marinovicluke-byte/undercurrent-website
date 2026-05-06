@@ -7,9 +7,11 @@ import { notFound } from 'next/navigation'
 import JsonLd from '@/components/ui/JsonLd'
 import AuthorBio from '@/components/ui/AuthorBio'
 import Breadcrumb from '@/components/layout/Breadcrumb'
+import HeroCta from '@/components/article/HeroCta'
 import { getAllCaseStudies, getCaseStudyBySlug } from '@/lib/caseStudies'
 import { getAllArticles } from '@/lib/articles'
 import { CLUSTERS } from '@/lib/clusters'
+import { LUKE_PERSON } from '@/lib/schema/person'
 
 const SITE_URL = 'https://undercurrentautomations.com'
 const CONTENT_MAX = 1280
@@ -27,7 +29,7 @@ export async function generateMetadata({ params }) {
   const cs = await getCaseStudyBySlug(slug)
   if (!cs) return {}
 
-  const image = cs.frontmatter.heroImage ? `${SITE_URL}${cs.frontmatter.heroImage}` : undefined
+  const heroImageUrl = `${SITE_URL}/case-studies/${slug}/hero.jpg`
 
   return {
     title: cs.frontmatter.title,
@@ -41,13 +43,13 @@ export async function generateMetadata({ params }) {
       modifiedTime: cs.frontmatter.dateModified || cs.frontmatter.date,
       url: `${SITE_URL}/case-studies/${slug}`,
       authors: [cs.frontmatter.author || 'Luke Marinovic'],
-      images: image ? [{ url: image }] : undefined,
+      images: [{ url: heroImageUrl, width: 1536, height: 1024, alt: cs.frontmatter.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title: cs.frontmatter.title,
       description: cs.frontmatter.description || cs.frontmatter.summary,
-      images: image ? [image] : undefined,
+      images: [heroImageUrl],
     },
   }
 }
@@ -109,25 +111,25 @@ export default async function CaseStudyPage({ params }) {
     ? getAllArticles().filter(a => a.cluster === clusterSlug).slice(0, 3)
     : []
 
-  const articleSchema = {
+  const pageSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: fm.title,
-    description: fm.description || fm.summary,
-    datePublished: fm.date,
-    dateModified: fm.dateModified || fm.date,
-    author: {
-      '@type': 'Person',
-      name: fm.author || 'Luke Marinovic',
-      jobTitle: fm.authorTitle || 'Founder, UnderCurrent Automations',
-      url: `${SITE_URL}/about`,
-      sameAs: ['https://www.linkedin.com/in/lukemarinovic/'],
-    },
-    publisher: { '@type': 'Organization', name: 'UnderCurrent Automations', url: SITE_URL },
-    mainEntityOfPage: `${SITE_URL}/case-studies/${slug}`,
-    keywords: [fm.keyword, fm.industry, fm.location, ...(fm.tools || [])].filter(Boolean).join(', '),
-    inLanguage: 'en-AU',
-    ...(fm.heroImage && { image: `${SITE_URL}${fm.heroImage}` }),
+    '@graph': [
+      {
+        '@type': 'Article',
+        '@id': `${SITE_URL}/case-studies/${slug}#article`,
+        headline: fm.title,
+        description: fm.description || fm.summary,
+        datePublished: fm.date,
+        dateModified: fm.dateModified || fm.date,
+        author: { '@id': `${SITE_URL}/about#luke` },
+        publisher: { '@type': 'Organization', name: 'UnderCurrent Automations', url: SITE_URL },
+        mainEntityOfPage: `${SITE_URL}/case-studies/${slug}`,
+        keywords: [fm.keyword, fm.industry, fm.location, ...(fm.tools || [])].filter(Boolean).join(', '),
+        inLanguage: 'en-AU',
+        image: `${SITE_URL}/case-studies/${slug}/hero.jpg`,
+      },
+      LUKE_PERSON,
+    ],
   }
 
   const breadcrumbSchema = {
@@ -152,7 +154,7 @@ export default async function CaseStudyPage({ params }) {
 
   return (
     <>
-      <JsonLd schema={articleSchema} />
+      <JsonLd schema={pageSchema} />
       <JsonLd schema={breadcrumbSchema} />
       {faqSchema && <JsonLd schema={faqSchema} />}
 
@@ -199,21 +201,24 @@ export default async function CaseStudyPage({ params }) {
           )}
 
           {/* Author byline */}
-          <div style={{ marginTop: 40, paddingTop: 24, borderTop: '1px solid var(--text-faint)', display: 'flex', alignItems: 'center', gap: 16 }}>
-            <div aria-hidden="true" style={{ width: 44, height: 44, borderRadius: '50%', background: 'var(--blue)', color: 'var(--charcoal-deep)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 16, flexShrink: 0 }}>
-              {(fm.author || 'L')[0]}
+          <div style={{ marginTop: 40, paddingTop: 24, borderTop: '1px solid var(--text-faint)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+              <div aria-hidden="true" style={{ width: 44, height: 44, borderRadius: '50%', background: 'var(--blue)', color: 'var(--charcoal-deep)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 16, flexShrink: 0 }}>
+                {(fm.author || 'L')[0]}
+              </div>
+              <div style={{ minWidth: 0 }}>
+                <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--text-primary)' }}>
+                  <strong style={{ color: 'var(--off-white)' }}>{fm.author || 'Luke Marinovic'}</strong>
+                  {fm.authorTitle && ` · ${fm.authorTitle}`}
+                </p>
+                <p style={{ margin: '2px 0 0', fontFamily: 'var(--font-body)', fontSize: 12, color: 'var(--text-muted)' }}>
+                  Published {formatDate(fm.date)}
+                  {fm.dateModified && fm.dateModified !== fm.date && ` · Updated ${formatDate(fm.dateModified)}`}
+                  {fm.readingTime && ` · ${fm.readingTime} min read`}
+                </p>
+              </div>
             </div>
-            <div style={{ minWidth: 0 }}>
-              <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--text-primary)' }}>
-                <strong style={{ color: 'var(--off-white)' }}>{fm.author || 'Luke Marinovic'}</strong>
-                {fm.authorTitle && ` · ${fm.authorTitle}`}
-              </p>
-              <p style={{ margin: '2px 0 0', fontFamily: 'var(--font-body)', fontSize: 12, color: 'var(--text-muted)' }}>
-                Published {formatDate(fm.date)}
-                {fm.dateModified && fm.dateModified !== fm.date && ` · Updated ${formatDate(fm.dateModified)}`}
-                {fm.readingTime && ` · ${fm.readingTime} min read`}
-              </p>
-            </div>
+            <HeroCta />
           </div>
         </div>
       </section>
