@@ -1176,51 +1176,36 @@ function FAQ() {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 0, maxWidth: 920 }}>
           {FAQS.map((f, i) => (
-            <details
+            <div
               key={i}
               style={{
+                padding: '28px 0',
                 borderTop: '1px solid var(--text-faint)',
                 borderBottom: i === FAQS.length - 1 ? '1px solid var(--text-faint)' : 'none',
               }}
             >
-              <summary
-                style={{
-                  cursor: 'pointer',
-                  listStyle: 'none',
-                  padding: '22px 0',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  gap: 24,
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 500,
-                  fontSize: 18,
-                  letterSpacing: '-0.015em',
-                  color: 'var(--off-white)',
-                  lineHeight: 1.35,
-                }}
-              >
+              <h3 style={{
+                margin: '0 0 14px',
+                fontFamily: 'var(--font-display)',
+                fontWeight: 500,
+                fontSize: 19,
+                letterSpacing: '-0.015em',
+                color: 'var(--off-white)',
+                lineHeight: 1.3,
+              }}>
                 {f.q}
-                <span aria-hidden="true" style={{
-                  fontFamily: 'var(--font-mono)',
-                  fontSize: 18,
-                  color: 'var(--text-muted)',
-                  flexShrink: 0,
-                }}>+</span>
-              </summary>
-              <div style={{ padding: '0 0 22px' }}>
-                <p style={{
-                  margin: 0,
-                  fontFamily: 'var(--font-body)',
-                  fontSize: 15.5,
-                  lineHeight: 1.7,
-                  color: 'var(--text-secondary)',
-                  maxWidth: 820,
-                }}>
-                  {f.a}
-                </p>
-              </div>
-            </details>
+              </h3>
+              <p style={{
+                margin: 0,
+                fontFamily: 'var(--font-body)',
+                fontSize: 15.5,
+                lineHeight: 1.7,
+                color: 'var(--text-secondary)',
+                maxWidth: 820,
+              }}>
+                {f.a}
+              </p>
+            </div>
           ))}
         </div>
       </div>
