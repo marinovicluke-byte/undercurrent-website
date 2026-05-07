@@ -7,6 +7,7 @@ const BRAND_TAG =
 
 const COMPANY = [
   { label: 'About', href: '/about' },
+  { label: 'Company information', href: '/company-information' },
   { label: 'Process', href: '/process' },
   { label: 'Case studies', href: '/case-studies' },
   { label: 'Blog', href: '/blog' },

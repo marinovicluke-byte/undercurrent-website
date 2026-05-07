@@ -11,6 +11,7 @@ export default function sitemap() {
     '', '/about', '/services', '/process', '/contact',
     '/audit',
     '/blog', '/case-studies',
+    '/company-information',
     '/privacy', '/terms',
   ].map(path => ({
     url: `${BASE}${path}`,
