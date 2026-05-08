@@ -67,6 +67,8 @@ The audit window before we get into the answers:
 | Scoring method | Automated , regex checks, structural assertions, model-classified categories |
 | Verticals beyond SEO agencies | Trades, healthcare, legal, hospitality (reference set) |
 
+Audited agencies were not contacted in advance. Any agency in the corpus can request its own anonymised score, category-level breakdown, and a re-audit on a specified URL set by contacting UC. The standing offer is open.
+
 Those questions are the right ones. The rest of this article is built around answering them transparently. What we did to mitigate the conflict:
 
 - **Scoring is automated, not human-graded.** The same code runs over UC content and competitor content with no override path. There is no reviewer to bias.
@@ -79,6 +81,8 @@ What we did not solve:
 - **We chose the agencies.** The 22-domain list is a judgement call. A different sampler might have produced a different industry average.
 - **We chose the rubric.** Other valid frameworks exist for measuring content quality. This one is built specifically for AI search extraction; agencies optimising for other goals will look different through different lenses.
 - **We are not blind to the result.** We knew the broad shape of the gap from our citation data before we ran the corpus systematically. The numbers came out roughly where the tracking already pointed.
+
+Per-agency scores are presented anonymously throughout this article. The intent is to make the structural pattern legible without singling out individual firms publicly. Any audited agency can request its own scores and category breakdown by contacting UC directly.
 
 Read on with that in mind. The pattern we are reporting is real and reproducible by anyone running a similar measurement system. Whether UC is the right partner for your business is a separate question with a separate answer.
 
@@ -146,7 +150,7 @@ That distinction matters when reading the corpus results below. An agency scorin
 
 ### How Were the 22 Australian Agency Domains Chosen?
 
-**We started with the top-ranked Australian SEO agencies surfacing for "Australian SEO consultancy" queries on Google and ChatGPT, plus specialist agencies appearing in Australian industry directories.** The list deliberately spans the full quality spectrum, large established agencies (StudioHawk, Online Marketing Gurus, Prosperity Media), mid-size specialists (Rocket Agency, Shout Digital, SearchMinistry), and smaller location-led firms (SEO Melbourne, Perth Digital Edge, Dilate Digital). Including high-reputation agencies in the same corpus as smaller ones was intentional, if the structural gap shows up across the spectrum, the gap is structural, not a function of agency size.
+**We started with the top-ranked Australian SEO agencies surfacing for "Australian SEO consultancy" queries on Google and ChatGPT, plus specialist agencies appearing in Australian industry directories.** The list deliberately spans the full quality spectrum: large established agencies with national brand presence, mid-size specialists serving Australia-wide clients, and smaller location-led firms operating in single capital cities. Including high-reputation agencies in the same corpus as smaller ones was intentional — if the structural gap shows up across the spectrum, the gap is structural, not a function of agency size.
 
 ### How Were Articles Sampled Per Domain?
 
@@ -230,7 +234,7 @@ That said, an AI search agency that cannot demonstrate AI search readiness in it
 
 **Answer Architecture** is the single largest gap, UC 76% (12.2/16), AU agencies 29% (4.6/16). Across the 86 audited articles, 65% or more open with no quick-answer block in the first 200 words. That is the most common anti-pattern in the corpus. The fix is a writing-brief change rather than a tooling change: front-load the answer, then expand.
 
-**Source Discipline** is the second-largest gap: UC 92% (12.8/14), AU agencies 38% (5.4/14). The pattern in low-scoring articles is outbound links pointing mostly to Semrush, Ahrefs, and the agency's own older posts, rather than to primary sources like the [Australian Bureau of Statistics](https://www.abs.gov.au/), [ACCC Digital Platforms reports](https://www.accc.gov.au/about-us/publications/serial-publications/digital-platforms-services-inquiry-interim-reports), [industry.gov.au](https://www.industry.gov.au/publications/ai-adoption-tracker), or peer-reviewed research. AI crawlers tend to follow outbound links to verify claims; the source profile a page presents shapes how the engines weigh it. The [Search Quality Rater Guidelines](https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf) treat source quality as a core E-E-A-T signal, and the gap shows up in the data.
+**Source Discipline** is the second-largest gap: UC 92% (12.8/14), AU agencies 38% (5.4/14). The pattern in low-scoring articles is outbound links pointing mostly to Semrush, Ahrefs, and the agency's own older posts, rather than to primary sources like the [Australian Bureau of Statistics](https://www.abs.gov.au/), [ACCC Digital Platforms reports](https://www.accc.gov.au/about-us/publications/serial-publications/digital-platform-services-inquiry-2020-25-reports), [industry.gov.au](https://www.industry.gov.au/publications/ai-adoption-tracker), or peer-reviewed research. AI crawlers tend to follow outbound links to verify claims; the source profile a page presents shapes how the engines weigh it. The [Search Quality Rater Guidelines](https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf) treat source quality as a core E-E-A-T signal, and the gap shows up in the data.
 
 ---
 
@@ -241,20 +245,20 @@ That said, an AI search agency that cannot demonstrate AI search readiness in it
 | Agency | Avg Robin Search Score | Articles Audited |
 |---|---|---|
 | UnderCurrent Automations | 79.4 | 9 |
-| Rocket Agency | 58.0 | , |
-| Shout Digital | 58.0 | , |
-| Online Marketing Gurus | 57.0 | , |
-| SEO Melbourne | 56.5 | 12 |
-| SearchMinistry | 52.2 | 4 |
-| StudioHawk | 51.3 | 3 |
-| Authority Builders | 51.0 | 3 |
-| Dilate Digital | 45.0 | 2 |
-| Prosperity Media | 43.0 | , |
+| Agency A | 58.0 | 5 |
+| Agency B | 58.0 | 4 |
+| Agency C | 57.0 | 4 |
+| Agency D | 56.5 | 12 |
+| Agency E | 52.2 | 4 |
+| Agency F | 51.3 | 3 |
+| Agency G | 51.0 | 3 |
+| Agency H | 45.0 | 2 |
+| Agency I | 43.0 | 2 |
 | **Australian Agency Average** | **53.9** | **39** |
 
-*Scores reflect publicly available content audited during the selected timeframe and should not be interpreted as overall agency capability.*
+*Scores reflect publicly available content audited during the selected timeframe and should not be interpreted as overall agency capability. Agency letters (A–I) do not correspond to the agency-name order anywhere else in this article.*
 
-> **The 21.4-point spread between UC's average (79.4) and the next-highest agency average (58.0) is the largest single-domain gap in the 22-agency corpus.** No other agency in the audit window sits within 20 points of UC. The closest cluster, Rocket Agency, Shout Digital, and Online Marketing Gurus at 57–58, sits 21 to 22 points below. Whether that gap is meaningful for your business depends on how heavily AI search figures into your acquisition channel mix; the rubric measures one thing, not everything.
+> **The 21.4-point spread between UC's average (79.4) and the next-highest agency average (58.0) is the largest single-domain gap in the 22-agency corpus.** No other agency in the audit window sits within 20 points of UC. The closest cluster of three agencies, scoring 57–58, sits 21 to 22 points below. Whether that gap is meaningful for your business depends on how heavily AI search figures into your acquisition channel mix; the rubric measures one thing, not everything.
 
 Seven percent of non-UC articles in the corpus score 70 or higher. Among the agencies in our audit window, the highest average was 58.0, a meaningful spread, but a narrower range than the headline numbers suggest at first glance. According to [Google Australia's 2025 AI adoption survey](https://blog.google/intl/en-au/company-news/ai-adoption-in-australia-new-survey-reveals-increased-use-belief-in-potential/), 49% of Australians used generative AI in the past 12 months, up from 38% in 2023. The structural readiness of agency content for that audience is what the rubric measures, not commercial track record, not creative quality, not service depth.
 
@@ -336,7 +340,7 @@ The Robin Search rubric covered earlier names the nine categories that, in our t
 
 **Traditional Google search, Google AI Overviews, ChatGPT search, Perplexity, Gemini, and Microsoft Copilot are not six separate channels, they are converging into a single answer layer.** The content infrastructure that gets cited across them looks broadly the same regardless of which engine is doing the extracting.
 
-[SparkToro's 2024 Zero-Click Study](https://sparktoro.com/blog/2024-zero-click-search-study-for-every-1000-us-google-searches-only-374-clicks-go-to-the-open-web-in-the-eu-its-360/), authored by Rand Fishkin from Datos clickstream data, reports 58.5% of US Google searches and 62.6% of EU Google searches now end without a click to the open web. [Gartner's February 2024 press release](https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents) projects traditional search engine volume will drop around 25% by 2026 as generative AI substitutes for query traffic. The [Fifth Quadrant consumer tracker](https://www.fifthquadrant.com.au/5-strong-generative-ai-search-shifts) found 69% of Australian AI users engage with AI tools weekly, up from 55% in 2024. The audience is already there. The structural fitness of the content sitting in front of that audience is the open question for most agencies.
+[SparkToro's 2024 Zero-Click Study](https://sparktoro.com/blog/2024-zero-click-search-study-for-every-1000-us-google-searches-only-374-clicks-go-to-the-open-web-in-the-eu-its-360/), authored by Rand Fishkin from Datos clickstream data, reports 58.5% of US Google searches and 62.6% of EU Google searches now end without a click to the open web. [Gartner's February 2024 press release](https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents) projects traditional search engine volume will drop around 25% by 2026 as generative AI substitutes for query traffic. The [Fifth Quadrant consumer tracker](https://www.fifthquadrant.com.au/5-powerful-generative-ai-search-shifts) found 69% of Australian AI users engage with AI tools weekly, up from 55% in 2024. The audience is already there. The structural fitness of the content sitting in front of that audience is the open question for most agencies.
 
 ---
 
@@ -437,10 +441,10 @@ If you'd like to apply the rubric to your own content, or to compare your existi
 1. [Google Search Central, AI Overviews documentation](https://developers.google.com/search/docs/appearance/ai-overviews)
 2. [Schema.org, FAQPage schema reference](https://schema.org/FAQPage)
 3. [Google Search Quality Rater Guidelines](https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf)
-4. [ACCC, Digital Platforms Services Inquiry](https://www.accc.gov.au/about-us/publications/serial-publications/digital-platforms-services-inquiry-interim-reports)
+4. [ACCC, Digital Platforms Services Inquiry](https://www.accc.gov.au/about-us/publications/serial-publications/digital-platform-services-inquiry-2020-25-reports)
 5. [Australian Bureau of Statistics](https://www.abs.gov.au/)
 6. [Department of Industry, AI Adoption Tracker](https://www.industry.gov.au/publications/ai-adoption-tracker)
 7. [Google Australia, 2025 AI Adoption Survey](https://blog.google/intl/en-au/company-news/ai-adoption-in-australia-new-survey-reveals-increased-use-belief-in-potential/)
 8. [SparkToro, 2024 Zero-Click Search Study (Rand Fishkin)](https://sparktoro.com/blog/2024-zero-click-search-study-for-every-1000-us-google-searches-only-374-clicks-go-to-the-open-web-in-the-eu-its-360/)
 9. [Gartner, Search Engine Volume Will Drop 25% by 2026 (press release, Feb 2024)](https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents)
-10. [Fifth Quadrant, Generative AI Search Shifts](https://www.fifthquadrant.com.au/5-strong-generative-ai-search-shifts)
+10. [Fifth Quadrant, Generative AI Search Shifts](https://www.fifthquadrant.com.au/5-powerful-generative-ai-search-shifts)
