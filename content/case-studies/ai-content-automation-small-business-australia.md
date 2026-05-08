@@ -114,7 +114,7 @@ The system now runs unattended. Every Monday, Wednesday, and Friday at 10am, a n
 
 The case study pipeline you're reading right now is the Saturday extension of that same system. Same infrastructure, different scorer profile (22 points), different prompt template. Single pipeline, the content_type flag decides which path.
 
-Replacement cost for a comparable freelance writer is $600-$900 per week. The pipeline runs for under $5 per week in API calls. According to [Gartner data cited by Diamond IT](https://www.diamondit.pro/blog/gartner-it-spending-forecast-australia-2025), Australian IT spending is projected to exceed $172.3 billion in 2026, with over 70% of organisations running workloads in the cloud. The trend is toward API-first automation, not staff hires.
+Replacement cost for a comparable freelance writer is $600-$900 per week. The pipeline runs for under $5 per week in API calls. According to [Gartner's IT spending forecast](https://www.gartner.com/en/newsroom/press-releases/2025-09-08-gartner-forecasts-it-spending-in-australia-to-exceed-172bn-in-2026), Australian IT spending is projected to exceed $172.3 billion in 2026, with over 70% of organisations running workloads in the cloud. The trend is toward API-first automation, not staff hires.
 
 ## What would this mean for a similar content marketing business?
 

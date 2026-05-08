@@ -79,7 +79,7 @@ A chatbot responds to a single question. A standard automation runs a fixed sequ
 
 A chatbot on your website can answer "what are your hours?" An AI agent can take an enquiry, check your calendar, confirm a booking slot, send the client a confirmation SMS, create the job in ServiceM8, and flag it in Xero, all while you're on a roof or in a meeting.
 
-[Gartner's 2025 Hype Cycle research](https://www.gartner.com/en/newsroom/press-releases/2025-03-17-gartner-survey-finds-major-shift-underway-in-enterprise-use-of-ai) found that 82% of enterprises plan to integrate AI agents within the next one to three years, with agentic AI listed as one of the top three technology priorities for 2025. That shift is already happening in the businesses around you.
+[Gartner predicts](https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025) that 40% of enterprise applications will feature task-specific AI agents by 2026, up from less than 5% in 2025. That shift is already happening in the businesses around you.
 
 If you want to understand where AI agents fit in a broader automation strategy, the [how we work](/process) page explains the sequencing we use with every new client.
 
@@ -219,7 +219,7 @@ If you'd rather have this built for you, [that's exactly what we do at UnderCurr
 4. [Australian Government , AI Adopt Program](https://business.gov.au/grants-and-programs)
 5. [MYOB Business Monitor](https://www.myob.com/au/blog/myob-business-monitor/)
 6. [Xero Small Business Insights](https://www.xero.com/au/resources/small-business-guides/)
-7. [Gartner , 2025 AI Agent Research](https://www.gartner.com/en/newsroom/press-releases/2025-03-17-gartner-survey-finds-major-shift-underway-in-enterprise-use-of-ai)
+7. [Gartner , Enterprise Apps with Task-Specific AI Agents Forecast](https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025)
 8. [Deloitte , Digital Consumer Trends Australia](https://www2.deloitte.com/au/en/pages/technology-media-and-telecommunications/articles/digital-consumer-trends.html)
 9. [McKinsey , The Economic Potential of Generative AI](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai)
 10. [Make , Pricing](https://www.make.com/en/pricing)

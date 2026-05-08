@@ -121,7 +121,7 @@ Below is the canonical JSON-LD structure for an Australian local service busines
 
 The DIY path above surfaces the majority of problems. What it won't give you is a full site crawl, a competitor gap analysis, or a prioritised roadmap with effort vs impact scored. [Bruce Clay Australia's audit methodology](https://www.bruceclay.com/au/seo/seo_assessment/) runs a deep audit with architecture fixes included , that's a different product entirely from a self-check.
 
-Public [Australian SEO agency pricing pages](https://www.bruceclay.com/au/seo/seo_assessment/) and [IBISWorld's Australian Digital Advertising industry data](https://www.ibisworld.com/au/) put a standalone audit in the $500–$2,500 band for most Australian small businesses, with ongoing retainers varying widely by scope. Beyond price, the [ASBFEO's small business advice hub](https://www.asbfeo.gov.au/business-information/business-advice/getting-business-advice) is the canonical Australian government resource for SMB cost benchmarks , a one-off audit is one of the lower-cost diagnostics available before committing to a retainer.
+Public [Australian SEO agency pricing pages](https://www.bruceclay.com/au/seo/seo_assessment/) and [IBISWorld's Australian Digital Advertising Agencies industry report](https://www.ibisworld.com/australia/industry/digital-advertising-agencies/5535/) put a standalone audit in the $500–$2,500 band for most Australian small businesses, with ongoing retainers varying widely by scope. Beyond price, the [ASBFEO](https://www.asbfeo.gov.au/) is the canonical Australian government resource for SMB cost benchmarks , a one-off audit is one of the lower-cost diagnostics available before committing to a retainer.
 
 The honest framing: run this checklist first. If you find three or more red flags, a paid audit has clear ROI. If everything looks clean, you may just need content , which you can do yourself.
 
@@ -169,11 +169,11 @@ According to [Semrush's local SEO data](https://www.semrush.com/blog/seo-statist
 
 ## Related Reading
 
-- [How to Get Found on Google Maps in Australia](/blog/google-maps-seo-australia) , local SEO tactics specific to Australian service businesses trying to rank in the map pack
-- [AI Search vs Traditional Search: What Australian Businesses Need to Know](/blog/ai-search-vs-traditional-search-australia) , why ranking in ChatGPT and Perplexity now matters as much as ranking in Google
-- [What Is GEO (Generative Engine Optimisation)?](/blog/what-is-geo-generative-engine-optimisation) , the strategy behind getting cited in AI-generated answers, not just organic results
-- [Schema Markup for Australian Tradies](/blog/schema-markup-australian-tradies) , step-by-step guide to structured data that feeds directly into local pack rankings
-- [How to Write SEO Content That Ranks in 2026](/blog/seo-content-that-ranks-2026) , content depth and intent-matching principles for Australian service pages
+- [AI Search vs Traditional Search: What Australian Businesses Need to Know](/blog/ai-search-vs-traditional-search-australia-2026) , why ranking in ChatGPT and Perplexity now matters as much as ranking in Google
+- [How to Do AI Search Optimisation in Australia](/blog/what-is-ai-search-optimisation-australia) , the strategy behind getting cited in AI-generated answers, not just organic results
+- [How to Rank in ChatGPT Search](/blog/how-to-rank-in-chatgpt-search) , what determines whether your business gets quoted in AI search results
+- [Why Australian Tradies Don't Get Google Reviews](/blog/why-tradies-dont-get-google-reviews-australia) , the local SEO signal most service businesses underweight
+- [Why Most AU SEO Agencies Fail at AI Search](/blog/best-ai-search-agency-australia) , what to look for when choosing an SEO partner in 2026
 
 ---
 
@@ -186,9 +186,9 @@ According to [Semrush's local SEO data](https://www.semrush.com/blog/seo-statist
 5. [Google Search Central , LocalBusiness Structured Data](https://developers.google.com/search/docs/appearance/structured-data/local-business)
 6. [Google Search Central , Ranking Updates](https://developers.google.com/search/updates/ranking)
 7. [Google Support , Google Business Profile Local Ranking Signals](https://support.google.com/business/answer/7091)
-8. [IBISWorld , Australian Digital Advertising Industry Data](https://www.ibisworld.com/au/)
+8. [IBISWorld , Australian Digital Advertising Agencies Industry Report](https://www.ibisworld.com/australia/industry/digital-advertising-agencies/5535/)
 9. [Bruce Clay Australia , SEO Assessment](https://www.bruceclay.com/au/seo/seo_assessment/)
 10. [Ahrefs , Free Backlink Checker](https://ahrefs.com/backlink-checker)
 11. [Statista , Australia Mobile Internet Usage](https://www.statista.com/statistics/683055/australia-mobile-internet-usage/)
-12. [ASBFEO , Business Advice and Cost Benchmarks](https://www.asbfeo.gov.au/business-information/business-advice/getting-business-advice)
+12. [ASBFEO , Australian Small Business and Family Enterprise Ombudsman](https://www.asbfeo.gov.au/)
 13. [ABS , Counts of Australian Businesses](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release)

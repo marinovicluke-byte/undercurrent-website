@@ -1,5 +1,5 @@
 ---
-title: "Customer Onboarding Automation for Service Businesses: How to Set It Up Without Killing the Personal Touch"
+title: "Customer Onboarding Automation for Service Businesses"
 description: "Customer onboarding automation for service businesses, what to automate, what to keep human, and how to get a client signed and paying inside a week."
 date: "2026-05-08"
 slug: "customer-onboarding-automation-service-business"
@@ -38,7 +38,7 @@ faqs:
 
 ![Customer onboarding automation workflow for Australian service businesses from CRM trigger to team handover](./body-1.jpg)
 
-Six emails to onboard a new customer is six chances they ghost you. [Visa research](https://usa.visa.com/visa-everywhere/security/digital-banking-onboarding.html) found that 70% of customers abandon a process if it takes longer than 20 minutes, and that number does not care whether you sell SaaS or skip bins. [SundaySky's 2026 benchmarks](https://sundaysky.com/blog/customer-onboarding-statistics/) push it harder, showing 74% of potential customers switch to a competitor if onboarding feels too complicated.
+Six emails to onboard a new customer is six chances they ghost you. [Visa research](https://corporate.visa.com/content/dam/VCOM/global/services/documents/vca-how-to-boost-your-customers-onboarding-experience.pdf) found that 70% of customers abandon a process if it takes longer than 20 minutes, and that number does not care whether you sell SaaS or skip bins. [SundaySky's 2026 benchmarks](https://sundaysky.com/blog/customer-onboarding-statistics/) push it harder, showing 74% of potential customers switch to a competitor if onboarding feels too complicated.
 
 If you run a trade, agency, or consultancy, you already know the pattern. The quote gets accepted Monday. By Thursday, you are still chasing the deposit, the address, the insurance certificate, and a signed scope. The customer's excitement has cooled. Your team has not started. Cash has not landed.
 
@@ -237,7 +237,7 @@ Want this built on your CRM and Xero, usually live within a week? Book a [free a
 
 ## Sources
 
-1. Visa, *Digital Banking Onboarding Research* , https://usa.visa.com/visa-everywhere/security/digital-banking-onboarding.html
+1. Visa, *How to Boost Your Customer's Onboarding Experience* , https://corporate.visa.com/content/dam/VCOM/global/services/documents/vca-how-to-boost-your-customers-onboarding-experience.pdf
 2. SundaySky, *Customer Onboarding Statistics 2026* , https://sundaysky.com/blog/customer-onboarding-statistics/
 3. GetContrast, *Automate Client Onboarding* , https://www.getcontrast.io/learn/automate-client-onboarding
 4. Akita, *Customer Onboarding Statistics* , https://akitaapp.com/blog/customer-onboarding-statistics/
