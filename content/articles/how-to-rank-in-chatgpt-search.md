@@ -212,29 +212,29 @@ Set up UTM parameters in Google Analytics for chat.openai.com and perplexity.ai 
 
 ## Related Reading
 
-- [AI Search vs Traditional Search in Australia 2026](/blog/ai-search-vs-traditional-search-australia-2026) , why your SEO strategy needs to split focus between Google and AI engines
-- [Automating Business Processes for Australian SMEs](/blog/automating-business-processes-australia-sme-guide) , the automation systems that free up time for content strategy
-- [What Is Business Process Automation](/blog/what-is-business-process-automation-australia) , foundational guide to automation for Australian service businesses
-- [How to Send Instant Follow-Up Email to Leads Automatically](/blog/how-to-send-instant-follow-up-email-to-leads-automatically-australia) , the first automation most businesses should ship
+- [AI Search vs Traditional Search in Australia 2026](/blog/ai-search-vs-traditional-search-australia-2026), why your SEO strategy needs to split focus between Google and AI engines
+- [Automating Business Processes for Australian SMEs](/blog/automating-business-processes-australia-sme-guide), the automation systems that free up time for content strategy
+- [What Is Business Process Automation](/blog/what-is-business-process-automation-australia), foundational guide to automation for Australian service businesses
+- [How to Send Instant Follow-Up Email to Leads Automatically](/blog/how-to-send-instant-follow-up-email-to-leads-automatically-australia), the first automation most businesses should ship
 
 ## Sources
 
-1. [AI Rank Lab , ChatGPT vs Google Search: Where Business Show Up 2026](https://www.airanklab.com/blog/chatgpt-vs-google-search-where-business-show-up-2026)
-2. [Pathfinder Marketing , ChatGPT Statistics](https://www.pathfindermarketing.com.au/chatgpt-statistics/)
-3. [First Page Sage , ChatGPT Usage Statistics](https://firstpagesage.com/seo-blog/chatgpt-usage-statistics/)
-4. [Aidan Coleman , AI SEO Statistics](https://aidancoleman.com.au/ai-seo-statistics/)
-5. [Incremys , ChatGPT Statistics](https://www.incremys.com/en/resources/blog/chatgpt-statistics)
-6. [ROI , Answer Engine Optimisation Australia Complete Guide](https://roi.com.au/answer-engine-optimisation-australia-the-complete-guide-for-ranking-in-ai-search-results-in-2026/)
-7. [Red Search , ChatGPT Statistics Australia Global](https://www.redsearch.com.au/resources/chatgpt-statistics-australia-global/)
-8. [ROI , AI Usage Adoption Statistics in Australia 2026](https://roi.com.au/blog/stats/ai-usage-adoption-statistics-in-australia-2026-18-dec-2025)
-9. [Google Developers , Search Central Documentation](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+1. [AI Rank Lab, ChatGPT vs Google Search: Where Business Show Up 2026](https://www.airanklab.com/blog/chatgpt-vs-google-search-where-business-show-up-2026)
+2. [Pathfinder Marketing, ChatGPT Statistics](https://www.pathfindermarketing.com.au/chatgpt-statistics/)
+3. [First Page Sage, ChatGPT Usage Statistics](https://firstpagesage.com/seo-blog/chatgpt-usage-statistics/)
+4. [Aidan Coleman, AI SEO Statistics](https://aidancoleman.com.au/ai-seo-statistics/)
+5. [Incremys, ChatGPT Statistics](https://www.incremys.com/en/resources/blog/chatgpt-statistics)
+6. [ROI, Answer Engine Optimisation Australia Complete Guide](https://roi.com.au/answer-engine-optimisation-australia-the-complete-guide-for-ranking-in-ai-search-results-in-2026/)
+7. [Red Search, ChatGPT Statistics Australia Global](https://www.redsearch.com.au/resources/chatgpt-statistics-australia-global/)
+8. [ROI, AI Usage Adoption Statistics in Australia 2026](https://roi.com.au/blog/stats/ai-usage-adoption-statistics-in-australia-2026-18-dec-2025)
+9. [Google Developers, Search Central Documentation](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
 10. [Bing Webmaster Tools](https://www.bing.com/webmasters/)
-11. [Schema.org , Structured Data Documentation](https://schema.org/docs/documents.html)
-12. [Google , About Knowledge Graph and Knowledge Panels](https://blog.google/products/search/about-knowledge-graph-and-knowledge-panels/)
-13. [Schema.org , Organization Schema](https://schema.org/Organization)
+11. [Schema.org, Structured Data Documentation](https://schema.org/docs/documents.html)
+12. [Google, About Knowledge Graph and Knowledge Panels](https://blog.google/products/search/about-knowledge-graph-and-knowledge-panels/)
+13. [Schema.org, Organization Schema](https://schema.org/Organization)
 14. [Google Rich Results Test](https://search.google.com/test/rich-results)
 15. [Schema.org Validator](https://validator.schema.org/)
-16. [Google Support , Business Profile Setup](https://support.google.com/business/answer/6300665)
+16. [Google Support, Business Profile Setup](https://support.google.com/business/answer/6300665)
 17. [Google Search Console Help](https://support.google.com/webmasters/answer/9128668)
 18. [Google Search Console](https://search.google.com/search-console)
-19. [Google Developers , Structured Data Intro](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)
+19. [Google Developers, Structured Data Intro](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)

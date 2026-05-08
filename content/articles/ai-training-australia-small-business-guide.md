@@ -13,7 +13,7 @@ faqs:
   - q: "How long does it take to train a small team on AI tools?"
     a: "For practical daily use, training a small team on AI tools takes 90 minutes to half a day when the session is built around one real workflow your business already runs. Earning a formal credential is a different matter, TAFE and university programs run 4–12 weeks. For most service businesses, the goal isn't a certificate. It's getting one time-saving automation running. Teams typically see results within the first week after a well-run session."
   - q: "What's the difference between AI training and no-code automation training?"
-    a: "AI training teaches people to use tools like ChatGPT or Microsoft Copilot , writing prompts, reviewing outputs, applying AI to communications and documents. No-code automation training focuses on connecting apps using tools like Zapier, Make, or n8n to create triggered workflows. In practice, most useful small business sessions cover both: AI generates the content, automation handles the delivery. The two skill sets build on each other, and you don't need either to be deep to get results."
+    a: "AI training teaches people to use tools like ChatGPT or Microsoft Copilot, writing prompts, reviewing outputs, applying AI to communications and documents. No-code automation training focuses on connecting apps using tools like Zapier, Make, or n8n to create triggered workflows. In practice, most useful small business sessions cover both: AI generates the content, automation handles the delivery. The two skill sets build on each other, and you don't need either to be deep to get results."
   - q: "Is government-funded AI training available for small business owners in Australia?"
     a: "Government-funded AI training exists in Australia, but most programs are designed for employees rather than business owners. Victoria's Digital Jobs – AI Career Conversion Program has $8.1 million allocated for AI upskilling, and subsidised TAFE courses can cost as little as $0–$400 for eligible workers. The federal National AI Plan focuses on workforce-level skills. Check Business.gov.au for current eligibility. Most programs exclude owners from the subsidised tier."
   - q: "Who can help set up AI automation training for an Australian service business?"
@@ -45,7 +45,7 @@ faqs:
 
 According to the [ABS, business AI R&D expenditure reached $668.3 million in 2023–24](https://www.abs.gov.au/media-centre/media-releases/ai-now-fastest-growing-area-business-rd), up 142% from $276.3 million two years prior. Yet only 21.1% of workers have completed any formal AI training, according to [AI Lab Australia](https://www.ailabaustralia.com/blog/ai-adoption-australian-smbs-2026). There's a real gap between businesses using AI tools and those actually knowing how to use them well.
 
-**AI upskilling** is the practical subset of AI training focused on applying existing tools to real tasks , writing prompts, configuring no-code automations, or reviewing AI-generated outputs before they go to clients. **No-code automation** refers to workflow tools like Make, Zapier, or n8n that connect your apps without writing a line of code. Both terms get used interchangeably in course listings, which causes a lot of confusion for buyers.
+**AI upskilling** is the practical subset of AI training focused on applying existing tools to real tasks, writing prompts, configuring no-code automations, or reviewing AI-generated outputs before they go to clients. **No-code automation** refers to workflow tools like Make, Zapier, or n8n that connect your apps without writing a line of code. Both terms get used interchangeably in course listings, which causes a lot of confusion for buyers.
 
 What most training programs don't cover: the specific tools your business already uses. A Xero user learning generic "AI for accounting" theory is getting theory. A Xero user learning to auto-reconcile and trigger overdue invoice reminders is getting a system. That distinction is the whole article. If you want to understand the cost of staying manual, the [ROI calculator](/roi) will show you what that's worth in your specific situation.
 
@@ -59,7 +59,7 @@ Here's the breakdown by option:
 
 ### What do TAFE AI courses actually teach?
 
-TAFE short courses on AI in Australia typically run 6–12 weeks and focus on AI literacy , understanding how machine learning works, responsible use, and applying tools like Microsoft Copilot or ChatGPT in a workplace setting. According to [TAFE NSW's published course fees](https://www.tafensw.edu.au), short courses in digital skills and AI literacy range from $800 to $2,500 depending on subsidy eligibility and course length. They're credential-focused and suit staff who want formal recognition or employers with training requirements. They rarely touch the specific apps a plumbing company or cleaning business uses day-to-day.
+TAFE short courses on AI in Australia typically run 6–12 weeks and focus on AI literacy, understanding how machine learning works, responsible use, and applying tools like Microsoft Copilot or ChatGPT in a workplace setting. According to [TAFE NSW's published course fees](https://www.tafensw.edu.au), short courses in digital skills and AI literacy range from $800 to $2,500 depending on subsidy eligibility and course length. They're credential-focused and suit staff who want formal recognition or employers with training requirements. They rarely touch the specific apps a plumbing company or cleaning business uses day-to-day.
 
 ### Are uni short courses worth it for small business owners?
 
@@ -172,11 +172,11 @@ If you want this done for you rather than run yourself, [that's exactly what we 
 
 After that, the free options worth your time in 2026:
 
-1. **ChatGPT free tier** , good enough for writing, summarising, and drafting. Start here before paying for anything.
-2. **Zapier's free plan** , connects up to 5 apps, 100 tasks/month. Enough to test one automation before committing.
-3. **Google's Applied AI courses** , available through [Google's AI resources](https://appinventiv.com/blog/ai-in-australia/) and worth an afternoon.
-4. **[QCIF's applied AI training](https://www.qcif.edu.au/capabilities/applied-ai)** , originally built for Australian researchers and industry, but the fundamentals content is accessible and free.
-5. **YouTube** , for workflow tools specifically (Make.com, n8n, Zapier), YouTube tutorials are often more current than formal course materials.
+1. **ChatGPT free tier:** good enough for writing, summarising, and drafting. Start here before paying for anything.
+2. **Zapier's free plan:** connects up to 5 apps, 100 tasks/month. Enough to test one automation before committing.
+3. **Google's Applied AI courses:** available through [Google's AI resources](https://appinventiv.com/blog/ai-in-australia/) and worth an afternoon.
+4. **[QCIF's applied AI training](https://www.qcif.edu.au/capabilities/applied-ai):** originally built for Australian researchers and industry, but the fundamentals content is accessible and free.
+5. **YouTube:** for workflow tools specifically (Make.com, n8n, Zapier), YouTube tutorials are often more current than formal course materials.
 
 The [ATSE's AI investment blueprint](https://www.atse.org.au/media/e3dfpie1/251201-unleashing-growth-australias-ai-investment-blueprint.pdf) estimates AI will add $142 billion to Australia's GDP by 2030, with SMEs achieving 22% faster productivity growth among adopters. That productivity gain doesn't come from watching videos. It comes from having at least one automated task running inside your business this week.
 
@@ -192,7 +192,7 @@ For a practical starting point on what to automate first, the guide on [the simp
 
 ### What's the difference between AI training and no-code automation training?
 
-**AI training teaches people to use tools like ChatGPT or Microsoft Copilot , writing prompts, reviewing outputs, applying AI to communications and documents.** No-code automation training focuses on connecting apps using tools like Zapier, Make, or n8n to create triggered workflows. In practice, most useful small business sessions cover both: AI generates the content, automation handles the delivery. The two skill sets build on each other, and you don't need either to be deep to get results.
+**AI training teaches people to use tools like ChatGPT or Microsoft Copilot, writing prompts, reviewing outputs, applying AI to communications and documents.** No-code automation training focuses on connecting apps using tools like Zapier, Make, or n8n to create triggered workflows. In practice, most useful small business sessions cover both: AI generates the content, automation handles the delivery. The two skill sets build on each other, and you don't need either to be deep to get results.
 
 ### Is government-funded AI training available for small business owners in Australia?
 
@@ -218,25 +218,25 @@ For a practical starting point on what to automate first, the guide on [the simp
 
 ## Related Reading
 
-- [Which Business Processes Should You Automate First in 2026](/blog/simplest-small-business-automation-tasks-australia-2026) , the prioritisation framework before any training session makes sense
-- [Automating Business Processes Australia , SME Guide](/blog/automating-business-processes-australia-sme-guide) , covers the full range of what's worth automating for Australian service businesses
-- [n8n vs Zapier for Australian Small Business](/blog/n8n-vs-zapier-australia-small-business) , the tool comparison that comes up in every 90-minute session
-- [How Australian Entrepreneurs Can Boost Team Efficiency Without Hiring](/blog/how-australian-entrepreneurs-boost-team-efficiency-without-hiring) , the systems-not-staff argument in full
-- [How Much Are Manual Processes Costing Your Business](/blog/how-much-are-manual-processes-costing-your-business) , the financial case for moving faster on automation
+- [Which Business Processes Should You Automate First in 2026](/blog/simplest-small-business-automation-tasks-australia-2026), the prioritisation framework before any training session makes sense
+- [Automating Business Processes Australia, SME Guide](/blog/automating-business-processes-australia-sme-guide), covers the full range of what's worth automating for Australian service businesses
+- [n8n vs Zapier for Australian Small Business](/blog/n8n-vs-zapier-australia-small-business), the tool comparison that comes up in every 90-minute session
+- [How Australian Entrepreneurs Can Boost Team Efficiency Without Hiring](/blog/how-australian-entrepreneurs-boost-team-efficiency-without-hiring), the systems-not-staff argument in full
+- [How Much Are Manual Processes Costing Your Business](/blog/how-much-are-manual-processes-costing-your-business), the financial case for moving faster on automation
 
 ---
 
 ## Sources
 
-1. [Australian Bureau of Statistics , AI Now Fastest Growing Area of Business R&D](https://www.abs.gov.au/media-centre/media-releases/ai-now-fastest-growing-area-business-rd)
-2. [AI Lab Australia , AI Adoption in Australian SMBs 2026](https://www.ailabaustralia.com/blog/ai-adoption-australian-smbs-2026)
-3. [AppInventiv , AI in Australia](https://appinventiv.com/blog/ai-in-australia/)
-4. [ATSE , Unleashing Growth: Australia's AI Investment Blueprint](https://www.atse.org.au/media/e3dfpie1/251201-unleashing-growth-australias-ai-investment-blueprint.pdf)
-5. [Deloitte , State of AI in Enterprise (AU)](https://www.deloitte.com/au/en/issues/generative-ai/state-of-ai-in-enterprise.html)
-6. [Australian Cyber Security Centre , AI for Small Business](https://www.cyber.gov.au/business-government/secure-design/artificial-intelligence/artificial-intelligence-for-small-business)
-7. [Department of Industry , Australia's National AI Plan](https://www.industry.gov.au/news/australia-launches-national-ai-plan-capture-opportunities-share-benefits-and-keep-australians-safe)
-8. [Department of Industry , Government Response: Senate Select Committee on Adopting AI](https://www.industry.gov.au/publications/australian-government-response-senate-select-committee-adopting-artificial-intelligence-ai-report)
-9. [University of Sydney , AI and Data Short Courses](https://short-courses.sydney.edu.au/courses/ai-data)
-10. [QCIF , Applied AI](https://www.qcif.edu.au/capabilities/applied-ai)
-11. [Praxis Australia , AI in Action Virtual Workshops](https://praxisaustralia.com.au/services/virtual-workshops/ai-in-action/)
-12. [TAFE NSW , Digital Skills and AI Short Courses](https://www.tafensw.edu.au)
+1. [Australian Bureau of Statistics, AI Now Fastest Growing Area of Business R&D](https://www.abs.gov.au/media-centre/media-releases/ai-now-fastest-growing-area-business-rd)
+2. [AI Lab Australia, AI Adoption in Australian SMBs 2026](https://www.ailabaustralia.com/blog/ai-adoption-australian-smbs-2026)
+3. [AppInventiv, AI in Australia](https://appinventiv.com/blog/ai-in-australia/)
+4. [ATSE, Unleashing Growth: Australia's AI Investment Blueprint](https://www.atse.org.au/media/e3dfpie1/251201-unleashing-growth-australias-ai-investment-blueprint.pdf)
+5. [Deloitte, State of AI in Enterprise (AU)](https://www.deloitte.com/au/en/issues/generative-ai/state-of-ai-in-enterprise.html)
+6. [Australian Cyber Security Centre, AI for Small Business](https://www.cyber.gov.au/business-government/secure-design/artificial-intelligence/artificial-intelligence-for-small-business)
+7. [Department of Industry, Australia's National AI Plan](https://www.industry.gov.au/news/australia-launches-national-ai-plan-capture-opportunities-share-benefits-and-keep-australians-safe)
+8. [Department of Industry, Government Response: Senate Select Committee on Adopting AI](https://www.industry.gov.au/publications/australian-government-response-senate-select-committee-adopting-artificial-intelligence-ai-report)
+9. [University of Sydney, AI and Data Short Courses](https://short-courses.sydney.edu.au/courses/ai-data)
+10. [QCIF, Applied AI](https://www.qcif.edu.au/capabilities/applied-ai)
+11. [Praxis Australia, AI in Action Virtual Workshops](https://praxisaustralia.com.au/services/virtual-workshops/ai-in-action/)
+12. [TAFE NSW, Digital Skills and AI Short Courses](https://www.tafensw.edu.au)

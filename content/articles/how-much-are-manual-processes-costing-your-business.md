@@ -168,9 +168,9 @@ Manual process costs are the wages you pay for time spent on repetitive admin (i
 
 ## Sources
 
-1. [Source Digital , Australian SMEs Cutting Costs with AI 2026](https://source-digital.com.au/blog/australian-smes-cutting-costs-with-ai-2026)
-2. [OFX , The State of SME Financial Management in Australia (October 2025)](https://www.ofx.com/wp-content/uploads/2025/10/The-state-of-SME-financial-management-in-Australia-2.pdf)
-3. [OFX , The State of SME Financial Management in Australia (November 2025)](https://www.ofx.com/wp-content/uploads/2025/11/The-state-of-SME-financial-management-in-Australia-2025.pdf)
-4. [Endless Automation , The ROI of Automation in 2026](https://endlessautomation.com.au/the-roi-of-automation-in-2026-a-guide-for-australian-manufacturers-facing-high-labor-costs/)
-5. [A One Outsourcing , Automation Accounting in Australia](https://www.aoneoutsourcing.au/blog/automation-accounting-in-australia)
-6. [RBA , Small Business Economic and Financial Conditions (October 2025)](https://www.rba.gov.au/publications/bulletin/2025/oct/pdf/small-business-economic-and-financial-conditions.pdf)
+1. [Source Digital, Australian SMEs Cutting Costs with AI 2026](https://source-digital.com.au/blog/australian-smes-cutting-costs-with-ai-2026)
+2. [OFX, The State of SME Financial Management in Australia (October 2025)](https://www.ofx.com/wp-content/uploads/2025/10/The-state-of-SME-financial-management-in-Australia-2.pdf)
+3. [OFX, The State of SME Financial Management in Australia (November 2025)](https://www.ofx.com/wp-content/uploads/2025/11/The-state-of-SME-financial-management-in-Australia-2025.pdf)
+4. [Endless Automation, The ROI of Automation in 2026](https://endlessautomation.com.au/the-roi-of-automation-in-2026-a-guide-for-australian-manufacturers-facing-high-labor-costs/)
+5. [A One Outsourcing, Automation Accounting in Australia](https://www.aoneoutsourcing.au/blog/automation-accounting-in-australia)
+6. [RBA, Small Business Economic and Financial Conditions (October 2025)](https://www.rba.gov.au/publications/bulletin/2025/oct/pdf/small-business-economic-and-financial-conditions.pdf)

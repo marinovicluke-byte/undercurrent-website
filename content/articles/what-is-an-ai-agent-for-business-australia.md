@@ -26,7 +26,7 @@ faqs:
 ---
 # How to Use an AI Agent for Business in Australia
 
-> **Quick Answer:** An AI agent is autonomous software that completes multi-step tasks on your behalf , booking jobs, chasing invoices, qualifying leads , without you clicking a button each time. In Australia, around [40% of SMEs have already adopted some form of AI agent](https://thomas-wiegold.com/blog/ai-agents-for-small-businesses-sydney/) as of late 2024, and the businesses using them are growing [2.8 times faster than those that aren't](https://insidesmallbusiness.com.au/technology/systems-software/smes-adopting-ai-grow-2-8-times-faster-data-shows). Start with one process. Results follow fast.
+> **Quick Answer:** An AI agent is autonomous software that completes multi-step tasks on your behalf, booking jobs, chasing invoices, qualifying leads, without you clicking a button each time. In Australia, around [40% of SMEs have already adopted some form of AI agent](https://thomas-wiegold.com/blog/ai-agents-for-small-businesses-sydney/) as of late 2024, and the businesses using them are growing [2.8 times faster than those that aren't](https://insidesmallbusiness.com.au/technology/systems-software/smes-adopting-ai-grow-2-8-times-faster-data-shows). Start with one process. Results follow fast.
 
 ![AI agent business workflow showing autonomous task processing for Australian enterprises](./body-1.jpg)
 
@@ -46,7 +46,7 @@ faqs:
 
 An AI agent is autonomous software that perceives its environment, makes decisions, and takes actions without a human triggering each step. Unlike a standard automation that follows a fixed script, an AI agent can handle unexpected inputs, choose between options, and complete multi-step workflows from start to finish.
 
-The clearest way to understand it: a basic automation is a domino chain , knock the first one, the rest fall in order. An AI agent is more like a junior employee , you give it a goal, and it figures out the steps.
+The clearest way to understand it: a basic automation is a domino chain, knock the first one, the rest fall in order. An AI agent is more like a junior employee, you give it a goal, and it figures out the steps.
 
 **AI agent** is defined as: software that observes data, reasons over it, and executes actions within set boundaries to complete a defined goal.
 
@@ -203,27 +203,27 @@ If you'd rather have this built for you, [that's exactly what we do at UnderCurr
 
 ## Related Reading
 
-- [Automating Business Processes in Australia: An SME Guide](/blog/automating-business-processes-australia-sme-guide) , where to start if you're new to automation and want a process-first approach
-- [What Is Business Process Automation in Australia?](/blog/what-is-business-process-automation-australia) , the foundational explainer before you move to AI agents
-- [How Much Time Tradies Spend on Admin in Australia](/blog/how-much-time-tradies-spend-on-admin-australia) , the data behind why automation pays for itself so fast in trade businesses
-- [How to Send Instant Follow-Up Email to Leads Automatically](/blog/how-to-send-instant-follow-up-email-to-leads-automatically-australia) , how to automate the front of the sales pipeline so no enquiry gets lost
-- [How Overdue Invoices Hurt Australian SME Cash Flow](/blog/how-overdue-invoices-hurt-australian-sme-cash-flow) , the data behind invoicing and payment-chasing systems that run without you
+- [Automating Business Processes in Australia: An SME Guide](/blog/automating-business-processes-australia-sme-guide), where to start if you're new to automation and want a process-first approach
+- [What Is Business Process Automation in Australia?](/blog/what-is-business-process-automation-australia), the foundational explainer before you move to AI agents
+- [How Much Time Tradies Spend on Admin in Australia](/blog/how-much-time-tradies-spend-on-admin-australia), the data behind why automation pays for itself so fast in trade businesses
+- [How to Send Instant Follow-Up Email to Leads Automatically](/blog/how-to-send-instant-follow-up-email-to-leads-automatically-australia), how to automate the front of the sales pipeline so no enquiry gets lost
+- [How Overdue Invoices Hurt Australian SME Cash Flow](/blog/how-overdue-invoices-hurt-australian-sme-cash-flow), the data behind invoicing and payment-chasing systems that run without you
 
 ---
 
 ## Sources
 
-1. [Australian Bureau of Statistics , AI Now Fastest Growing Area of Business R&D](https://www.abs.gov.au/media-centre/media-releases/ai-now-fastest-growing-area-business-rd)
+1. [Australian Bureau of Statistics, AI Now Fastest Growing Area of Business R&D](https://www.abs.gov.au/media-centre/media-releases/ai-now-fastest-growing-area-business-rd)
 2. [ABS Business Characteristics Survey](https://www.abs.gov.au/statistics/industry/technology-and-innovation/characteristics-australian-business/latest-release)
-3. [ATO , R&D Tax Incentive](https://www.ato.gov.au/businesses-and-organisations/income-deductions-and-concessions/incentives-and-concessions)
-4. [Australian Government , AI Adopt Program](https://business.gov.au/grants-and-programs)
+3. [ATO, R&D Tax Incentive](https://www.ato.gov.au/businesses-and-organisations/income-deductions-and-concessions/incentives-and-concessions)
+4. [Australian Government, AI Adopt Program](https://business.gov.au/grants-and-programs)
 5. [MYOB Business Monitor](https://www.myob.com/au/blog/myob-business-monitor/)
 6. [Xero Small Business Insights](https://www.xero.com/au/resources/small-business-guides/)
-7. [Gartner , Enterprise Apps with Task-Specific AI Agents Forecast](https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025)
-8. [Deloitte , Digital Consumer Trends Australia](https://www2.deloitte.com/au/en/pages/technology-media-and-telecommunications/articles/digital-consumer-trends.html)
-9. [McKinsey , The Economic Potential of Generative AI](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai)
-10. [Make , Pricing](https://www.make.com/en/pricing)
-11. [n8n , Pricing](https://n8n.io/pricing/)
-12. [Thomas Wiegold , AI Agents for Small Businesses Sydney](https://thomas-wiegold.com/blog/ai-agents-for-small-businesses-sydney/)
-13. [Inside Small Business , SMEs Adopting AI Grow 2.8 Times Faster](https://insidesmallbusiness.com.au/technology/systems-software/smes-adopting-ai-grow-2-8-times-faster-data-shows)
-14. [OAIC , Privacy Act 1988](https://www.oaic.gov.au/privacy/the-privacy-act)
+7. [Gartner, Enterprise Apps with Task-Specific AI Agents Forecast](https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025)
+8. [Deloitte, Digital Consumer Trends Australia](https://www2.deloitte.com/au/en/pages/technology-media-and-telecommunications/articles/digital-consumer-trends.html)
+9. [McKinsey, The Economic Potential of Generative AI](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai)
+10. [Make, Pricing](https://www.make.com/en/pricing)
+11. [n8n, Pricing](https://n8n.io/pricing/)
+12. [Thomas Wiegold, AI Agents for Small Businesses Sydney](https://thomas-wiegold.com/blog/ai-agents-for-small-businesses-sydney/)
+13. [Inside Small Business, SMEs Adopting AI Grow 2.8 Times Faster](https://insidesmallbusiness.com.au/technology/systems-software/smes-adopting-ai-grow-2-8-times-faster-data-shows)
+14. [OAIC, Privacy Act 1988](https://www.oaic.gov.au/privacy/the-privacy-act)

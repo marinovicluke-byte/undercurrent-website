@@ -19,25 +19,25 @@ faqs:
   - q: 'What''s the best way to get more Google reviews for my trade business?'
     a: 'Send an automated review request via SMS or email within 24 hours of completing the job. Include a direct link to your Google Business Profile review page and a short personalised message. This captures customers at the emotional peak when satisfaction is highest and increases response rates to 50-70% compared to 10-15% for manual follow-ups sent days or weeks later.'
   - q: 'What percentage of Australian customers leave reviews without being asked?'
-    a: 'Only 4-6% of satisfied customers leave a Google review without being prompted. This means for every 100 jobs you complete, you''ll get 2-3 reviews naturally. But with an automated review request system, that same 100 jobs generates 50-70 reviews. The work quality is the same , the difference is simply asking.'
+    a: 'Only 4-6% of satisfied customers leave a Google review without being prompted. This means for every 100 jobs you complete, you''ll get 2-3 reviews naturally. But with an automated review request system, that same 100 jobs generates 50-70 reviews. The work quality is the same, the difference is simply asking.'
   - q: 'Why do tradies with fewer skills but more reviews get more jobs?'
     a: 'Because local search ranking and customer trust both depend heavily on review volume and recency. A plumber with 50 reviews and a 4.7 star rating will rank higher and convert better than a plumber with 8 reviews and a 4.9 star rating, even if the second plumber is technically more skilled. Google prioritises review signals, and customers filter out businesses with low review counts before making contact.'
 ---
 # Why Tradies Don't Get Google Reviews Australia 2026: The Data Behind the Local SEO Gap
 
-> Most Australian tradies finish a job, send the invoice, and move on. Meanwhile, their Google Business Profile sits at 3-7 reviews while competitors with 40+ reviews rank higher and convert better. The problem isn't quality of work , it's that tradies don't ask, and customers don't leave reviews unless prompted.
+> Most Australian tradies finish a job, send the invoice, and move on. Meanwhile, their Google Business Profile sits at 3-7 reviews while competitors with 40+ reviews rank higher and convert better. The problem isn't quality of work, it's that tradies don't ask, and customers don't leave reviews unless prompted.
 
 You've been in business for five years. You do good work. Your customers are happy. But when someone in Melbourne searches "plumber near me" or "electrician Geelong", you're on page two. Or worse.
 
 The tradie with half your experience but 50 Google reviews? They're in the local 3-pack. They get the call. You don't.
 
-Here's what the data says about why that happens , and what you can do about it.
+Here's what the data says about why that happens, and what you can do about it.
 
 ## How Many Google Reviews Does a Tradie Actually Need to Rank Locally?
 
 According to [BrightLocal's 2024 Local Consumer Review Survey](https://www.brightlocal.com/research/local-consumer-review-survey/), the average consumer reads 10 online reviews before feeling confident enough to trust a local business. But that's just the trust threshold. For local search ranking, the numbers tell a different story.
 
-**A local search ranking factor is any signal Google uses to determine which businesses appear in the map pack and local results.** Google's local search algorithm weighs review quantity, recency, and velocity heavily. A [2023 study by Whitespark](https://whitespark.ca/local-search-ranking-factors/) found that review signals account for roughly 15% of local pack ranking factors , that's more than on-page SEO or citation consistency.
+**A local search ranking factor is any signal Google uses to determine which businesses appear in the map pack and local results.** Google's local search algorithm weighs review quantity, recency, and velocity heavily. A [2023 study by Whitespark](https://whitespark.ca/local-search-ranking-factors/) found that review signals account for roughly 15% of local pack ranking factors, that's more than on-page SEO or citation consistency.
 
 Here's what the data shows for trade businesses specifically:
 
@@ -46,7 +46,7 @@ Here's what the data shows for trade businesses specifically:
 - **25-50 reviews**: You're competitive for most local trade searches in your area.
 - **50+ reviews**: You're in the top 3 local pack for high-intent keywords like "electrician near me" or "builder [city]".
 
-The Australian trade businesses that dominate local search in Sydney, Melbourne, and Brisbane consistently have 40+ reviews. Not because they're better , but because they ask.
+The Australian trade businesses that dominate local search in Sydney, Melbourne, and Brisbane consistently have 40+ reviews. Not because they're better, but because they ask.
 
 ## Why Australian Tradies Don't Get Google Reviews Without Asking
 
@@ -70,7 +70,7 @@ So why don't tradies ask?
 
 **1. They forget.** You're packing up the van, heading to the next job, thinking about tomorrow's quote. Asking for a review doesn't cross your mind.
 
-**2. It feels awkward.** Australian culture makes asking for something , even a review , feel pushy. You don't want to be "that guy".
+**2. It feels awkward.** Australian culture makes asking for something, even a review, feel pushy. You don't want to be "that guy".
 
 **3. They don't know how.** Do you ask in person? Text a link later? Email? What if the customer says no?
 
@@ -139,7 +139,7 @@ Here's the solution. It's not complicated.
 
 **Send an automated review request within 24 hours of job completion.**
 
-That's it. Not a week later. Not when you send the invoice. The same day you finish the job , or the next morning at the latest.
+That's it. Not a week later. Not when you send the invoice. The same day you finish the job, or the next morning at the latest.
 
 **A review request automation is a system that sends a personalised message asking for a Google review immediately after a job is marked as complete.** Why 24 hours? Because that's when satisfaction is highest and the job is still fresh in their mind. Wait three days and the urgency drops. Wait a week and they've forgotten half the details. Wait until invoicing and they're thinking about money, not quality.
 
@@ -149,7 +149,7 @@ Here's how it works in practice:
 
 **Step 2: Mark the job as "completed" in your system** (CRM, spreadsheet, job management app, whatever you use)
 
-**Step 3: An automated text or email goes out 24 hours later** with a direct link to your Google review page and a short message: "Hey [Name], just checking in , how did everything go with the [job type]? If you're happy with the work, would you mind leaving us a quick Google review? [Link]"
+**Step 3: An automated text or email goes out 24 hours later** with a direct link to your Google review page and a short message: "Hey [Name], just checking in, how did everything go with the [job type]? If you're happy with the work, would you mind leaving us a quick Google review? [Link]"
 
 **Step 4: If they don't respond, send one follow-up 3 days later** (optional, but increases response rate by 15-20%)
 
@@ -175,7 +175,7 @@ Here's what the data shows. According to the [BrightLocal survey](https://www.br
    
 2. **Effort increases over time.** Leaving a review today takes 90 seconds. Leaving a review next week requires them to remember your business name, search for it on Google, and summon the motivation to write something. Every day that passes adds friction.
 
-3. **Emotional peak fades fast.** The moment you hand over the keys, fix the electrical fault, or finish the reno , that's the emotional high point. That's when they'd happily tell their mates you're brilliant. Capture that moment with a review request and they'll say the same thing on Google.
+3. **Emotional peak fades fast.** The moment you hand over the keys, fix the electrical fault, or finish the reno, that's the emotional high point. That's when they'd happily tell their mates you're brilliant. Capture that moment with a review request and they'll say the same thing on Google.
 
 Here's a real example from a Melbourne plumber we worked with. Before automation, he'd ask for reviews when he sent the invoice (usually 7-10 days after the job). His review rate was 8%. We moved the request to 24 hours post-job. His review rate jumped to 52%. Same business. Same customers. Same quality of work. Just better timing.
 
@@ -185,7 +185,7 @@ Most Australian tradies still don't have a review system. That's your edge.
 
 A builder in Brisbane told us this recently: "I set up the automated review request in January. By March I had 30 new reviews. My competitor down the road still has 12. We're both good at what we do, but now when people search, they see 50+ reviews for me and 12 for him. I'm getting 60% of the calls."
 
-That's the advantage of moving first. You're not just catching up to competitors , you're lapping them while they're still trying to remember to ask.
+That's the advantage of moving first. You're not just catching up to competitors, you're lapping them while they're still trying to remember to ask.
 
 And here's the thing: once you have 40-50 reviews, you've built a moat. A competitor starting from zero needs 6-12 months to catch you, even if they implement the same system tomorrow. You've already won.
 
@@ -223,7 +223,7 @@ Send an automated review request via SMS or email within 24 hours of completing 
 
 ### What percentage of Australian customers leave reviews without being asked?
 
-Only 4-6% of satisfied customers leave a Google review without being prompted. This means for every 100 jobs you complete, you'll get 2-3 reviews naturally. But with an automated review request system, that same 100 jobs generates 50-70 reviews. The work quality is the same , the difference is simply asking.
+Only 4-6% of satisfied customers leave a Google review without being prompted. This means for every 100 jobs you complete, you'll get 2-3 reviews naturally. But with an automated review request system, that same 100 jobs generates 50-70 reviews. The work quality is the same, the difference is simply asking.
 
 ### Why do tradies with fewer skills but more reviews get more jobs?
 

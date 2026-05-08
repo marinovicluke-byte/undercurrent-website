@@ -15,7 +15,7 @@ faqs:
   - q: 'What admin tasks take the most time for trade business owners in Australia?'
     a: 'Invoicing and payment follow-up (2-3 hours/week), bookkeeping and expense tracking (2-4 hours/week), quoting and estimating (1-2 hours/week), compliance and regulatory paperwork (1-2 hours/week), and scheduling and job management (1-2 hours/week) are the top time consumers according to ASBFEO data.'
   - q: 'How much does admin cost a trade business in Australia per year?'
-    a: 'At an average billable rate of $90 per hour for qualified tradespeople, 10 hours of weekly admin costs $43,200 per year in lost revenue. Even at 8 hours per week, that''s $34,560 annually , money you could''ve earned working on the tools instead of doing paperwork.'
+    a: 'At an average billable rate of $90 per hour for qualified tradespeople, 10 hours of weekly admin costs $43,200 per year in lost revenue. Even at 8 hours per week, that''s $34,560 annually, money you could''ve earned working on the tools instead of doing paperwork.'
   - q: 'What is the average hourly rate for plumbers and electricians in Australia?'
     a: 'Qualified plumbers charge $90-$120 per hour on average, while licensed electricians bill $95-$130 per hour according to Fair Work Commission award data and IBISWorld industry reports. Rates vary by location, with Sydney and Melbourne typically at the higher end.'
   - q: 'Which admin tasks should tradies automate first to save the most time?'
@@ -25,13 +25,13 @@ faqs:
 ---
 # How Much Time Tradies Spend on Admin Australia 2026: The Real Cost of Paperwork
 
-> **Quick Answer:** Australian tradies spend between 8 and 12 hours per week on administrative tasks according to data from Xero Small Business Insights and the Australian Bureau of Statistics. At an average billable rate of $80-$100 per hour for qualified tradespeople, that's $4,000 to $7,200 in lost revenue annually , time that could be spent on the tools earning money.
+> **Quick Answer:** Australian tradies spend between 8 and 12 hours per week on administrative tasks according to data from Xero Small Business Insights and the Australian Bureau of Statistics. At an average billable rate of $80-$100 per hour for qualified tradespeople, that's $4,000 to $7,200 in lost revenue annually, time that could be spent on the tools earning money.
 
-Understanding how much time tradies spend on admin in Australia reveals a sobering reality for trade business owners. Recent data shows that Australian tradespeople dedicate between 8 and 12 hours weekly to administrative tasks , from invoicing and bookkeeping to compliance paperwork and payment follow-ups. This administrative burden translates directly into lost billable hours, with the average tradie potentially forfeiting over $40,000 annually in revenue that could have been earned working on the tools instead of pushing paper.
+Understanding how much time tradies spend on admin in Australia reveals a sobering reality for trade business owners. Recent data shows that Australian tradespeople dedicate between 8 and 12 hours weekly to administrative tasks, from invoicing and bookkeeping to compliance paperwork and payment follow-ups. This administrative burden translates directly into lost billable hours, with the average tradie potentially forfeiting over $40,000 annually in revenue that could have been earned working on the tools instead of pushing paper.
 
 It's 5pm now. The kids are home. You're still at the kitchen table doing paperwork instead of spending time with them.
 
-This isn't a rare day. According to [Xero Small Business Insights 2024](https://www.xero.com/au/small-business-insights/), Australian small business owners spend an average of 10.5 hours per week on administrative tasks. For trade and service businesses , plumbers, electricians, builders, HVAC technicians , the number sits at the higher end of that range because of the job-by-job invoicing, compliance requirements, and vehicle-related paperwork.
+This isn't a rare day. According to [Xero Small Business Insights 2024](https://www.xero.com/au/small-business-insights/), Australian small business owners spend an average of 10.5 hours per week on administrative tasks. For trade and service businesses, plumbers, electricians, builders, HVAC technicians, the number sits at the higher end of that range because of the job-by-job invoicing, compliance requirements, and vehicle-related paperwork.
 
 The [Australian Bureau of Statistics](https://www.abs.gov.au) reports that sole traders and businesses with 1-4 employees work an average of 44 hours per week. Between 8 and 12 of those hours aren't spent on revenue-generating work. They're spent keeping the business running.
 
@@ -75,7 +75,7 @@ Even if you're only losing 8 hours per week to admin, that's still $34,560 annua
 
 And that's just the direct cost. It doesn't account for the mental load, the stress of chasing late payments, or the time you're not spending with your family.
 
-Here's the brutal truth: if you're spending 10 hours a week on admin, you're working a full extra day every week just to keep your business running. That's 520 hours a year , 13 full 40-hour weeks , doing work that doesn't directly earn you money.
+Here's the brutal truth: if you're spending 10 hours a week on admin, you're working a full extra day every week just to keep your business running. That's 520 hours a year, 13 full 40-hour weeks, doing work that doesn't directly earn you money.
 
 You could've taken 13 weeks off. Or you could've worked those 520 hours on the tools and earned an extra $46,800.
 
@@ -93,7 +93,7 @@ We've seen tradies cut invoicing time from 2-3 hours per week down to 15 minutes
 
 A Sydney builder we work with used to spend 90 minutes every Friday afternoon sorting receipts and updating his expense spreadsheet. Now he takes a photo when he buys something and the system does the rest. Total weekly time: 10 minutes.
 
-**Then tackle scheduling and job updates.** Customer relationship management (CRM) systems designed for trade businesses , like Tradify, Simpro, or ServiceM8 , let clients book directly into your calendar, send automatic job confirmations, and trigger "we're on our way" texts without you lifting a finger.
+**Then tackle scheduling and job updates.** Customer relationship management (CRM) systems designed for trade businesses, like Tradify, Simpro, or ServiceM8, let clients book directly into your calendar, send automatic job confirmations, and trigger "we're on our way" texts without you lifting a finger.
 
 One Melbourne plumber told us he used to field 15-20 "when are you coming?" calls per week. After setting up automated SMS updates, that dropped to zero. Clients get a text when he's 30 minutes away. They know when to expect him. He doesn't field the calls.
 
@@ -115,7 +115,7 @@ The goal is simple: anything that doesn't require your judgement or expertise sh
 
 **Invoicing automation** means the invoice gets written and sent the moment you mark a job complete in your system. Payment reminders go out automatically at 7 days, 14 days, and 30 days overdue. When the payment clears, your accounting software records it without you touching anything.
 
-**Expense tracking automation** means receipts get captured, categorised, and logged the moment you photograph them. Fuel, materials, tolls, coffees with clients , all tracked in real time instead of reconstructed from memory at the end of the month.
+**Expense tracking automation** means receipts get captured, categorised, and logged the moment you photograph them. Fuel, materials, tolls, coffees with clients, all tracked in real time instead of reconstructed from memory at the end of the month.
 
 **Scheduling automation** means clients get confirmations, reminders, and updates without you sending a single text. Your calendar syncs across your phone, your laptop, and your team's devices so everyone knows where they need to be and when.
 
@@ -165,7 +165,7 @@ Invoicing and payment follow-up (2-3 hours/week), bookkeeping and expense tracki
 
 ### How much does admin cost a trade business in Australia per year?
 
-At an average billable rate of $90 per hour for qualified tradespeople, 10 hours of weekly admin costs $43,200 per year in lost revenue. Even at 8 hours per week, that's $34,560 annually , money you could've earned working on the tools instead of doing paperwork.
+At an average billable rate of $90 per hour for qualified tradespeople, 10 hours of weekly admin costs $43,200 per year in lost revenue. Even at 8 hours per week, that's $34,560 annually, money you could've earned working on the tools instead of doing paperwork.
 
 ### What is the average hourly rate for plumbers and electricians in Australia?
 

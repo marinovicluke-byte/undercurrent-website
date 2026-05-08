@@ -61,10 +61,10 @@ The audit window before we get into the answers:
 | Total articles audited | 86 |
 | Australian SEO agency domains in corpus | 22 |
 | UC articles in corpus | 9 |
-| Audit window | Q1 2026 , May 2026 |
-| Article publication range | 2024 , 2026 (sample weighted toward most recent) |
+| Audit window | Q1 2026, May 2026 |
+| Article publication range | 2024, 2026 (sample weighted toward most recent) |
 | Rubric version | Robin Search v3.2 |
-| Scoring method | Automated , regex checks, structural assertions, model-classified categories |
+| Scoring method | Automated, regex checks, structural assertions, model-classified categories |
 | Verticals beyond SEO agencies | Trades, healthcare, legal, hospitality (reference set) |
 
 Audited agencies were not contacted in advance. Any agency in the corpus can request its own anonymised score, category-level breakdown, and a re-audit on a specified URL set by contacting UC. The standing offer is open.
@@ -269,7 +269,7 @@ The table below shows how content standards have shifted between eras:
 | Opening structure | Hook or story | Direct answer in first 60 words |
 | Section length | As long as needed | 130-170 words, self-contained |
 | Source quality | Any credible blog | Primary sources, inline hyperlinks |
-| Schema | Nice to have | FAQPage, HowTo, Article , required |
+| Schema | Nice to have | FAQPage, HowTo, Article, required |
 | Entity density | Keywords | Named entities + relational triples |
 | Local signals | City-level mention | Suburb-level specificity |
 | Citation surface | Whole article | Each H2 extractable independently |
@@ -352,7 +352,7 @@ The Robin Search rubric covered earlier names the nine categories that, in our t
 ## Robin Search: Section-Level Pre-Publish Checklist
 ## (9-point audit against the UC benchmark standard)
 ### Answer Architecture
-- [ ] First sentence of H2 directly answers the section heading , no preamble
+- [ ] First sentence of H2 directly answers the section heading, no preamble
 - [ ] Quick-answer blockquote present in the opening section (40-60 words)
 - [ ] Each H2/H3 is self-contained: makes sense without reading surrounding sections
 ### Source Discipline

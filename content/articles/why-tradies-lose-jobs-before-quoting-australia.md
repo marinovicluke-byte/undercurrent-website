@@ -19,7 +19,7 @@ faqs:
   - q: 'How much work am I losing by responding slowly to enquiries?'
     a: 'If you''re responding in 4-6 hours instead of 5 minutes, you''re likely losing 50-70% of potential jobs before you even get a chance to quote. For a tradie receiving 20 enquiries per month, fixing response time alone could double the number of jobs you quote and win, potentially adding $80,000-$100,000 in annual revenue.'
   - q: 'Can I automate lead responses without losing the personal touch?'
-    a: 'Absolutely. An automated instant SMS that says "Thanks for your enquiry, I''ll call you back in 30 minutes" is far more personal than no response for 6 hours. The customer knows you''ve seen their message and you''re prioritising them. You still make the actual phone call yourself , automation just buys you time to do it properly.'
+    a: 'Absolutely. An automated instant SMS that says "Thanks for your enquiry, I''ll call you back in 30 minutes" is far more personal than no response for 6 hours. The customer knows you''ve seen their message and you''re prioritising them. You still make the actual phone call yourself, automation just buys you time to do it properly.'
   - q: 'What tools do I need to set up automated lead responses?'
     a: 'Most Australian tradies can set up automated lead responses using their existing tools: a Google Form for enquiries, Google Sheets for tracking, their regular phone number, and an automation platform like n8n to connect everything. You don''t need expensive CRM software or a full-time admin person. The whole system can run in the background for under $50 a month.'
 ---
@@ -33,7 +33,7 @@ Here's the thing no one tells you: **you're not losing jobs because your quote w
 
 The Harvard Business Review and InsideSales.com ran a study analysing 2.2 million sales leads across 42 companies. The finding was brutal. Businesses that responded within 5 minutes were 100 times more likely to connect with the lead compared to those who waited 30 minutes. After an hour, your chances drop to almost zero.
 
-In Australian trade industries , plumbers, electricians, builders, HVAC techs , this hits even harder. Customers have an urgent problem. They're not shopping around for fun. They want it fixed now. And they'll book the first person who sounds competent and available.
+In Australian trade industries, plumbers, electricians, builders, HVAC techs, this hits even harder. Customers have an urgent problem. They're not shopping around for fun. They want it fixed now. And they'll book the first person who sounds competent and available.
 
 ## Why Australian Tradies Lose Jobs Through Slow Response Times
 
@@ -81,7 +81,7 @@ Most tradies don't realise how fast their competitors are moving. You assume eve
 
 The Harvard Business Review study tracked this precisely. After 5 minutes, your contact rate drops by 80%. After an hour, it's dropped by 90%. After 24 hours, you're essentially invisible.
 
-A [2024 survey by BrightLocal](https://www.brightlocal.com/research/local-consumer-review-survey/) found that 53% of consumers expect a response to their enquiry within an hour. For urgent service requests , plumbing, electrical, HVAC , that expectation is even tighter. They want a call back within 30 minutes, or they're ringing someone else.
+A [2024 survey by BrightLocal](https://www.brightlocal.com/research/local-consumer-review-survey/) found that 53% of consumers expect a response to their enquiry within an hour. For urgent service requests, plumbing, electrical, HVAC, that expectation is even tighter. They want a call back within 30 minutes, or they're ringing someone else.
 
 Here's what that looks like in practice:
 
@@ -129,7 +129,7 @@ The tradies who figure this out early are the ones who scale past the one-person
 
 Here's what a basic [automated lead response system](/services) looks like for a trade business:
 
-1. **Instant acknowledgment.** The second someone fills out your contact form or sends an enquiry, they get an automated SMS or email. Something simple: "Thanks for reaching out. I'll call you back within 30 minutes to discuss your project. , [Your Name], [Your Business]."
+1. **Instant acknowledgment.** The second someone fills out your contact form or sends an enquiry, they get an automated SMS or email. Something simple: "Thanks for reaching out. I'll call you back within 30 minutes to discuss your project., [Your Name], [Your Business]."
 2. **Lead capture.** The enquiry goes straight into a spreadsheet or CRM. You're not juggling scraps of paper or trying to remember who called.
 3. **Follow-up reminder.** You get a notification on your phone to call them back. Not at the end of the day. Right now.
 
@@ -173,7 +173,7 @@ If you're responding in 4-6 hours instead of 5 minutes, you're likely losing 50-
 
 ### Can I automate lead responses without losing the personal touch?
 
-Absolutely. An automated instant SMS that says "Thanks for your enquiry, I'll call you back in 30 minutes" is far more personal than no response for 6 hours. The customer knows you've seen their message and you're prioritising them. You still make the actual phone call yourself , automation just buys you time to do it properly.
+Absolutely. An automated instant SMS that says "Thanks for your enquiry, I'll call you back in 30 minutes" is far more personal than no response for 6 hours. The customer knows you've seen their message and you're prioritising them. You still make the actual phone call yourself, automation just buys you time to do it properly.
 
 ### What tools do I need to set up automated lead responses?
 

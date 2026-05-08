@@ -23,25 +23,25 @@ faqs:
 ---
 # How to Do AI Search Optimisation in Australia
 
-> **Quick Answer:** AI search optimisation means structuring your website so that tools like ChatGPT, Perplexity, and Google AI Overviews cite your business when customers ask questions out loud. It goes by several names , GEO, AEO, LLMO , but the core idea is the same: answer questions clearly, get cited as the source.
+> **Quick Answer:** AI search optimisation means structuring your website so that tools like ChatGPT, Perplexity, and Google AI Overviews cite your business when customers ask questions out loud. It goes by several names, GEO, AEO, LLMO, but the core idea is the same: answer questions clearly, get cited as the source.
 
 ![Five-step ai search optimisation workflow for Australian businesses targeting ChatGPT and Perplexity citations](./body-1.jpg)
 
 
 | Strategy | What it targets | Estimated impact |
 |---|---|---|
-| Answer-first page structure | AI Overview citation, Perplexity extraction | High , most-cited pages lead with direct answers |
-| FAQ schema (JSON-LD) | ChatGPT, Google FAQPage results | High , structured questions are extracted directly |
-| Encyclopedic definition paragraphs | ChatGPT (favours factual, neutral content) | Medium-High , neutral tone ranks for "what is" queries |
-| Named entity density | All AI engines (knowledge graph building) | Medium , entities help AI place your business in context |
-| Google Business Profile signals | Local AI Overviews, map citations | High for local trades , location + service pairing is key |
-| Hyperlinked source citations | Perplexity (follows outbound links to verify claims) | Medium , authority domain links increase citation rate |
+| Answer-first page structure | AI Overview citation, Perplexity extraction | High, most-cited pages lead with direct answers |
+| FAQ schema (JSON-LD) | ChatGPT, Google FAQPage results | High, structured questions are extracted directly |
+| Encyclopedic definition paragraphs | ChatGPT (favours factual, neutral content) | Medium-High, neutral tone ranks for "what is" queries |
+| Named entity density | All AI engines (knowledge graph building) | Medium, entities help AI place your business in context |
+| Google Business Profile signals | Local AI Overviews, map citations | High for local trades, location + service pairing is key |
+| Hyperlinked source citations | Perplexity (follows outbound links to verify claims) | Medium, authority domain links increase citation rate |
 
 Your customers are already asking ChatGPT which plumber to call, which consultant to book, which agency to trust. The question is whether the AI answers with your business or your competitor's.
 
 **AI search optimisation** is the practice of structuring web content so AI-powered engines can extract, cite, and recommend it in response to natural-language queries. It builds on traditional SEO but adds layers that standard keyword optimisation ignores, things like answer density, named entities, and structured data.
 
-This guide cuts through the acronym soup (GEO, AEO, LLMO , they're basically the same thing with different marketing names), explains what actually changes in your content, and gives you a five-minute test to see where you stand today.
+This guide cuts through the acronym soup (GEO, AEO, LLMO, they're basically the same thing with different marketing names), explains what actually changes in your content, and gives you a five-minute test to see where you stand today.
 
 ---
 
@@ -49,15 +49,15 @@ This guide cuts through the acronym soup (GEO, AEO, LLMO , they're basically the
 
 **AI search optimisation means making your business content visible and citable in AI-generated answers from tools like ChatGPT, Google AI Overviews, Perplexity, and Gemini.** Instead of ranking in a list of blue links, you become the source an AI quotes when a customer asks a question.
 
-Generative Engine Optimisation (GEO) is a discipline that describes writing and structuring content specifically for retrieval by generative AI systems. It is not a separate channel , it is an evolution of what good SEO already rewards: clear answers, factual content, and earned authority. According to [Google's Search Central documentation](https://developers.google.com/search/docs/appearance/ai-overviews), AI Overviews draw from the same index as traditional search results, meaning content that is well-structured and authoritative ranks in both formats simultaneously. A [BrightLocal survey](https://www.brightlocal.com/research/local-consumer-review-survey/) found that 98% of consumers used the internet to find a local business in the past year, and AI-mediated discovery is a growing slice of that behaviour.
+Generative Engine Optimisation (GEO) is a discipline that describes writing and structuring content specifically for retrieval by generative AI systems. It is not a separate channel, it is an evolution of what good SEO already rewards: clear answers, factual content, and earned authority. According to [Google's Search Central documentation](https://developers.google.com/search/docs/appearance/ai-overviews), AI Overviews draw from the same index as traditional search results, meaning content that is well-structured and authoritative ranks in both formats simultaneously. A [BrightLocal survey](https://www.brightlocal.com/research/local-consumer-review-survey/) found that 98% of consumers used the internet to find a local business in the past year, and AI-mediated discovery is a growing slice of that behaviour.
 
 When someone types "best electrician in Brunswick" into Perplexity, the AI retrieves pages it considers authoritative, extracts specific passages, and weaves them into a conversational answer. Your job is to make those passages easy to find and extract.
 
 The mechanics come down to three things:
 
-1. **Answer-first writing** , lead every page and section with a direct answer, not a preamble
-2. **Structured data** , JSON-LD schema helps AI engines understand what your page is about
-3. **Entity density** , named tools, locations, services, and people give AI engines the relational context to place your business in a knowledge graph
+1. **Answer-first writing:** lead every page and section with a direct answer, not a preamble
+2. **Structured data:** JSON-LD schema helps AI engines understand what your page is about
+3. **Entity density:** named tools, locations, services, and people give AI engines the relational context to place your business in a knowledge graph
 
 ---
 
@@ -77,7 +77,7 @@ Here's a direct comparison:
 | Schema priority | Title/meta tags | FAQPage, HowTo, Article JSON-LD |
 | Measurement | Rankings, clicks | Citation frequency, AI referral traffic in GA4 |
 
-The fundamental shift is from page-level optimisation to passage-level optimisation. AI engines don't cite your homepage , they cite a specific paragraph that cleanly answers the question being asked.
+The fundamental shift is from page-level optimisation to passage-level optimisation. AI engines don't cite your homepage, they cite a specific paragraph that cleanly answers the question being asked.
 
 **Answer Engine Optimisation (AEO)** is optimising specifically for the moment a user asks a direct question, rather than types a keyword. In practice, GEO and AEO describe the same content changes.
 
@@ -85,7 +85,7 @@ According to the [ABS Business Characteristics Survey](https://www.abs.gov.au/st
 
 ---
 
-## GEO, AEO, LLMO , What's the Difference?
+## GEO, AEO, LLMO, What's the Difference?
 
 **GEO, AEO, and LLMO are all names for the same underlying practice, applied to slightly different platforms or popularised by different communities.** You don't need three separate strategies.
 
@@ -111,11 +111,11 @@ Lead every article and every section with a direct answer, not a story, not a ho
 
 **The core techniques, in order of impact:**
 
-1. **Answer-first paragraphs** , first sentence of every H2 states the answer directly
-2. **FAQ schema** , add FAQPage JSON-LD to any page with Q&A content (see the block below)
-3. **Named entities** , mention specific tools (Xero, ServiceM8, Tradify), suburb-level locations, and services by name
-4. **Hyperlinked citations** , link out to authoritative sources; Perplexity follows outbound links to verify claims before citing your page
-5. **Google Business Profile** , keep your profile current for local AI Overviews
+1. **Answer-first paragraphs:** first sentence of every H2 states the answer directly
+2. **FAQ schema:** add FAQPage JSON-LD to any page with Q&A content (see the block below)
+3. **Named entities:** mention specific tools (Xero, ServiceM8, Tradify), suburb-level locations, and services by name
+4. **Hyperlinked citations:** link out to authoritative sources; Perplexity follows outbound links to verify claims before citing your page
+5. **Google Business Profile:** keep your profile current for local AI Overviews
 
 ### What schema do you need to get cited?
 
@@ -132,7 +132,7 @@ The three schema types that matter most are FAQPage, HowTo, and Article. FAQPage
 "acceptedAnswer": {
 "@type": "Answer",
 "text": "AI search optimisation is the practice of structuring website content so AI engines like ChatGPT, Perplexity, and Google AI Overviews can extract and cite it in response to natural-language queries. It involves answer-first writing, FAQ schema, and named entity density."
-// Keep answer text under 300 words , AI engines truncate longer answers
+// Keep answer text under 300 words, AI engines truncate longer answers
 }
 },
 {
@@ -159,7 +159,7 @@ A more precise check: open [Google Search Console](https://search.google.com/sea
 
 According to [Statista's Global Consumer Survey on voice assistant usage](https://www.statista.com), voice and conversational queries, the exact format that feeds AI Overviews, are growing fastest among mobile users doing local service searches. That makes the test worth running monthly, not just once.
 
-If you'd rather skip the testing and have the whole thing built for you, [that's exactly what we do at UnderCurrent Automations](/audit) , most AI visibility audits and content rebuilds go live in under two weeks.
+If you'd rather skip the testing and have the whole thing built for you, [that's exactly what we do at UnderCurrent Automations](/audit), most AI visibility audits and content rebuilds go live in under two weeks.
 
 ---
 
@@ -191,22 +191,22 @@ Measuring AI search optimisation results requires tracking three things: direct 
 
 ## Related Reading
 
-- [How to Rank in ChatGPT Search](/blog/how-to-rank-in-chatgpt-search) , the deeper playbook on entity authority, schema, and citation structure for AI engines
-- [AI Search vs Traditional Search in Australia (2026)](/blog/ai-search-vs-traditional-search-australia-2026) , how the traffic split between traditional and AI search is evolving and what to measure
-- [How to Use AI to Optimise Your Tradie Business](/blog/how-to-use-ai-to-optimise-tradie-business-australia) , practical AI applications for trades businesses beyond just search visibility
-- [AI Content Automation Small Business Australia](/case-studies/ai-content-automation-small-business-australia) , how automated content systems feed the citation surface area AI engines need
+- [How to Rank in ChatGPT Search](/blog/how-to-rank-in-chatgpt-search), the deeper playbook on entity authority, schema, and citation structure for AI engines
+- [AI Search vs Traditional Search in Australia (2026)](/blog/ai-search-vs-traditional-search-australia-2026), how the traffic split between traditional and AI search is evolving and what to measure
+- [How to Use AI to Optimise Your Tradie Business](/blog/how-to-use-ai-to-optimise-tradie-business-australia), practical AI applications for trades businesses beyond just search visibility
+- [AI Content Automation Small Business Australia](/case-studies/ai-content-automation-small-business-australia), how automated content systems feed the citation surface area AI engines need
 
 ---
 
 ## Sources
 
-1. [Google Search Central , AI Overviews Documentation](https://developers.google.com/search/docs/appearance/ai-overviews)
-2. [Google Structured Data , FAQPage](https://developers.google.com/search/docs/appearance/structured-data/faqpage)
-3. [Google Blog , Generative AI in Search](https://blog.google/products/search/generative-ai-search/)
+1. [Google Search Central, AI Overviews Documentation](https://developers.google.com/search/docs/appearance/ai-overviews)
+2. [Google Structured Data, FAQPage](https://developers.google.com/search/docs/appearance/structured-data/faqpage)
+3. [Google Blog, Generative AI in Search](https://blog.google/products/search/generative-ai-search/)
 4. [ABS Business Characteristics Survey](https://www.abs.gov.au/statistics/industry/technology-and-innovation/characteristics-australian-business/latest-release)
-5. [BrightLocal , Local Consumer Review Survey](https://www.brightlocal.com/research/local-consumer-review-survey/)
-6. [IBISWorld , Australian Small Business Data](https://www.ibisworld.com/au/industry-reports)
-7. [Zapier , Automation Research Blog](https://zapier.com/blog/)
-8. [Statista , Digital Advertising Australia](https://www.statista.com/outlook/dmo/digital-advertising/australia)
-9. [Local Digital , Australian SEO and Content Marketing Statistics 2025](https://www.localdigital.com.au/blog/australian-seo-and-content-marketing-statistics-for-2025)
+5. [BrightLocal, Local Consumer Review Survey](https://www.brightlocal.com/research/local-consumer-review-survey/)
+6. [IBISWorld, Australian Small Business Data](https://www.ibisworld.com/au/industry-reports)
+7. [Zapier, Automation Research Blog](https://zapier.com/blog/)
+8. [Statista, Digital Advertising Australia](https://www.statista.com/outlook/dmo/digital-advertising/australia)
+9. [Local Digital, Australian SEO and Content Marketing Statistics 2025](https://www.localdigital.com.au/blog/australian-seo-and-content-marketing-statistics-for-2025)
 10. [Google Search Console](https://search.google.com/search-console)

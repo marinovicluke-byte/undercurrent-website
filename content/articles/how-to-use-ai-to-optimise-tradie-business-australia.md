@@ -43,9 +43,9 @@ The Australian Small Business and Family Enterprise Ombudsman's 2025 report foun
 
 Three types of AI tools matter for Australian trade businesses:
 
-1. **Quote automation tools** , generate accurate quotes from photos or measurements using image recognition
-2. **Scheduling AI** , books jobs into your calendar based on your availability rules and sends confirmations
-3. **Invoice automation** , creates and sends invoices automatically when you mark a job complete
+1. **Quote automation tools:** generate accurate quotes from photos or measurements using image recognition
+2. **Scheduling AI:** books jobs into your calendar based on your availability rules and sends confirmations
+3. **Invoice automation:** creates and sends invoices automatically when you mark a job complete
 
 Here's what matters: you don't need one expensive platform. Most tradies connect 2-4 specialist tools that each do one job well. Tom, a Sydney plumber with three apprentices, runs his entire workflow through ServiceM8 ($49/month), Xero ($30/month), and Zapier ($29/month). Total cost: $108/month. Time saved: 11 hours weekly across the team.
 
@@ -125,19 +125,19 @@ The hidden value in invoice automation is cash flow predictability. When invoice
 Australian tradies don't use ChatGPT for business automation. They use workflow tools that connect their existing systems. Here's the actual tech stack based on 2025 ServiceM8 and Tradify user surveys:
 
 **For quoting and job management:**
-- ServiceM8 ($49-$99/month) , most popular among electricians and plumbers
-- Tradify ($59-$99/month) , strong with HVAC and builders
-- Fergus ($89-$149/month) , preferred by larger teams (5+ staff)
+- ServiceM8 ($49-$99/month), most popular among electricians and plumbers
+- Tradify ($59-$99/month), strong with HVAC and builders
+- Fergus ($89-$149/month), preferred by larger teams (5+ staff)
 
 **For accounting and invoicing:**
-- Xero ($30-$70/month) , 73% market share among Australian trade businesses
-- MYOB ($30-$80/month) , 19% market share, stronger in rural areas
-- QuickBooks ($15-$60/month) , growing but still under 8%
+- Xero ($30-$70/month), 73% market share among Australian trade businesses
+- MYOB ($30-$80/month), 19% market share, stronger in rural areas
+- QuickBooks ($15-$60/month), growing but still under 8%
 
 **For connecting systems:**
-- Zapier ($29-$99/month) , connects apps that don't have native integrations
-- Make (formerly Integromat) ($9-$29/month) , cheaper alternative, steeper learning curve
-- Native integrations , ServiceM8↔Xero, Tradify↔Xero work without middleware
+- Zapier ($29-$99/month), connects apps that don't have native integrations
+- Make (formerly Integromat) ($9-$29/month), cheaper alternative, steeper learning curve
+- Native integrations, ServiceM8↔Xero, Tradify↔Xero work without middleware
 
 Jake, the solo Melbourne sparky mentioned earlier, runs this stack:
 - ServiceM8 Core ($49/month)

@@ -97,14 +97,14 @@ By 2025, the owner had written off SEO as a scam.
 What changed: the audit showed him exactly what was broken, in plain language, with a scored rubric. Not marketing fluff. Not promises. Just: "Here's your score. Here's what's missing. Here's what it's costing you." This is the same framework we use at [UnderCurrent Automations](/about) for every business we audit.
 
 The audit broke down 8 dimensions:
-1. Technical Foundation (1/11) , slow load, missing SSL, no sitemap
-2. On-Page Optimisation (2/16) , no meta tags, broken internal links
-3. Content Quality (0/17) , 4 pages, 180 words average
-4. Blog & Articles (0/11) , no content system
-5. Site Architecture (3/11) , poor internal link distribution
-6. Schema & Structured Data (2/11) , no markup
-7. Backlink & Authority (3/11) , no social presence
-8. AI Search Readiness (2/17) , no answer-first structure, no FAQ
+1. Technical Foundation (1/11), slow load, missing SSL, no sitemap
+2. On-Page Optimisation (2/16), no meta tags, broken internal links
+3. Content Quality (0/17), 4 pages, 180 words average
+4. Blog & Articles (0/11), no content system
+5. Site Architecture (3/11), poor internal link distribution
+6. Schema & Structured Data (2/11), no markup
+7. Backlink & Authority (3/11), no social presence
+8. AI Search Readiness (2/17), no answer-first structure, no FAQ
 
 Most Australian small businesses don't fail at SEO because they're lazy. They fail because they don't know what "good" looks like, and agencies oversell tactics without explaining fundamentals. This is one of the core [mistakes contractors make with SEO in 2026](https://core6.marketing/blog/what-contractors-get-wrong-about-seo-in-2026/), prioritising tactics over technical foundations.
 
@@ -118,27 +118,27 @@ The rebuild happened in 3 stages: technical fixes, content infrastructure, then 
 
 **Stage 1: Technical Foundation (Weeks 1-2)**
 
-1. **SSL certificate fix** , installed SSL across all pages, redirected HTTP to HTTPS.
-2. **Page speed optimisation** , compressed images, enabled caching, moved to faster hosting (Cloudflare CDN). Load time dropped from 5 seconds to 1.2 seconds.
-3. **Mobile viewport** , added viewport meta tag, tested mobile rendering across 6 devices.
-4. **Robots.txt and sitemap** , created XML sitemap, submitted to Google Search Console, configured robots.txt to allow all crawlers.
-5. **Internal link audit** , fixed 18 broken links, rebuilt navigation structure, added breadcrumbs.
+1. **SSL certificate fix:** installed SSL across all pages, redirected HTTP to HTTPS.
+2. **Page speed optimisation:** compressed images, enabled caching, moved to faster hosting (Cloudflare CDN). Load time dropped from 5 seconds to 1.2 seconds.
+3. **Mobile viewport:** added viewport meta tag, tested mobile rendering across 6 devices.
+4. **Robots.txt and sitemap:** created XML sitemap, submitted to Google Search Console, configured robots.txt to allow all crawlers.
+5. **Internal link audit:** fixed 18 broken links, rebuilt navigation structure, added breadcrumbs.
 
 **Stage 2: Content Infrastructure (Weeks 3-5)**
 
-1. **Blog setup** , installed WordPress with Yoast SEO, configured categories for Repairs, Installations, Maintenance, Emergency.
-2. **Author attribution** , added author bio for the owner, linked to Google Business Profile and LinkedIn.
-3. **Schema markup** , added Organisation schema with sameAs links (Google Business, Facebook, LinkedIn), added LocalBusiness schema with service area (South East Melbourne suburbs), added BreadcrumbList schema. [Schema.org's LocalBusiness documentation](https://schema.org/LocalBusiness) was the primary reference.
-4. **FAQ sections** , added FAQ schema to service pages, targeting common queries like "How much does a blocked drain cost to fix in Melbourne?" and "Do plumbers work weekends in South East Melbourne?"
-5. **llms.txt file** , created /llms.txt with business description, service list, and key pages for AI crawlers.
+1. **Blog setup:** installed WordPress with Yoast SEO, configured categories for Repairs, Installations, Maintenance, Emergency.
+2. **Author attribution:** added author bio for the owner, linked to Google Business Profile and LinkedIn.
+3. **Schema markup:** added Organisation schema with sameAs links (Google Business, Facebook, LinkedIn), added LocalBusiness schema with service area (South East Melbourne suburbs), added BreadcrumbList schema. [Schema.org's LocalBusiness documentation](https://schema.org/LocalBusiness) was the primary reference.
+4. **FAQ sections:** added FAQ schema to service pages, targeting common queries like "How much does a blocked drain cost to fix in Melbourne?" and "Do plumbers work weekends in South East Melbourne?"
+5. **llms.txt file:** created /llms.txt with business description, service list, and key pages for AI crawlers.
 
 **Stage 3: Keyword Targeting & Content Publishing (Weeks 6-8)**
 
-1. **Keyword research** , identified 32 high-intent local search terms (e.g. "emergency plumber Dandenong", "hot water system repair Berwick", "blocked drains Cranbourne").
-2. **Content calendar** , scheduled 3 articles per week, targeting 1 keyword per article, using answer-first structure.
-3. **Internal linking** , every new article linked to 5-8 existing pages (services, contact, other articles).
-4. **Meta tags** , wrote keyword-optimised meta titles and descriptions for every page, under 60 chars for titles, 150-160 for descriptions.
-5. **Monthly reporting** , tracked rankings in Google Search Console, lead volume in ServiceM8, conversion rates from organic search.
+1. **Keyword research:** identified 32 high-intent local search terms (e.g. "emergency plumber Dandenong", "hot water system repair Berwick", "blocked drains Cranbourne").
+2. **Content calendar:** scheduled 3 articles per week, targeting 1 keyword per article, using answer-first structure.
+3. **Internal linking:** every new article linked to 5-8 existing pages (services, contact, other articles).
+4. **Meta tags:** wrote keyword-optimised meta titles and descriptions for every page, under 60 chars for titles, 150-160 for descriptions.
+5. **Monthly reporting:** tracked rankings in Google Search Console, lead volume in ServiceM8, conversion rates from organic search.
 
 The system wasn't complex. It was systematic.
 

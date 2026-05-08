@@ -118,7 +118,7 @@ Here's a template for a Sydney electrician:
 
 ---
 
-**Subject:** Got your enquiry, Jake , I'll call you this arvo
+**Subject:** Got your enquiry, Jake, I'll call you this arvo
 
 Hi [First Name],
 
@@ -145,7 +145,7 @@ For consultants or agencies, you can add more value upfront:
 
 ---
 
-**Subject:** Your [Service Type] enquiry , here's what happens next
+**Subject:** Your [Service Type] enquiry, here's what happens next
 
 Hi [First Name],
 
@@ -171,10 +171,10 @@ But one email isn't enough. You need a sequence.
 
 Here's the proven timing structure for Australian service businesses:
 
-**Email 1: Instant (0 minutes)** , Confirmation + next steps
-**Email 2: Same day or next day (+4-24 hours)** , Detailed response, quote, or booking link
-**Email 3: Day 3 (+72 hours)** , "Still interested?" nudge with added value
-**Email 4: Day 7 (+168 hours)** , Final check-in before you move on
+**Email 1: Instant (0 minutes):** Confirmation + next steps
+**Email 2: Same day or next day (+4-24 hours):** Detailed response, quote, or booking link
+**Email 3: Day 3 (+72 hours):** "Still interested?" nudge with added value
+**Email 4: Day 7 (+168 hours):** Final check-in before you move on
 
 Research from HubSpot shows that sending 3-5 follow-ups increases reply rates by 40% compared to sending just one. But there's a balance. More than 6 emails in 2 weeks tips into spam territory.
 
@@ -194,9 +194,9 @@ In HubSpot, use `{{ contact.firstname }}` to insert their name. In Mailchimp, us
 
 You can personalise beyond names:
 
-- `{{ contact.service_type }}` , "Thanks for enquiring about **bathroom renovations**"
-- `{{ contact.suburb }}` , "We've done 40+ jobs in **Newtown**"
-- `{{ contact.urgency }}` , "I see this is **urgent**, so I'll call you within the hour"
+- `{{ contact.service_type }}`, "Thanks for enquiring about **bathroom renovations**"
+- `{{ contact.suburb }}`, "We've done 40+ jobs in **Newtown**"
+- `{{ contact.urgency }}`, "I see this is **urgent**, so I'll call you within the hour"
 
 Sarah the agency owner takes this further. Her form asks "What's your biggest marketing challenge right now?" If they select "We don't get enough leads," her automation sends case studies about lead generation. If they select "We can't retain clients," she sends case studies about retention.
 
@@ -220,13 +220,13 @@ The more specific your form, the more you can personalise. But don't make your f
 
 Track four metrics:
 
-**1. Delivery rate** , What percentage of emails actually land in inboxes? Should be 98%+. If it's lower, your domain or IP is flagged as spam.
+**1. Delivery rate:** What percentage of emails actually land in inboxes? Should be 98%+. If it's lower, your domain or IP is flagged as spam.
 
-**2. Open rate** , What percentage of delivered emails get opened? 40-60% is normal for instant follow-ups. Below 30% means bad subject lines or wrong timing.
+**2. Open rate:** What percentage of delivered emails get opened? 40-60% is normal for instant follow-ups. Below 30% means bad subject lines or wrong timing.
 
-**3. Click rate** , What percentage clicked a link? 10-20% is good for instant emails. Below 5% means your call-to-action is weak.
+**3. Click rate:** What percentage clicked a link? 10-20% is good for instant emails. Below 5% means your call-to-action is weak.
 
-**4. Reply/conversion rate** , What percentage booked a call, replied, or became a customer? This is the only metric that matters for revenue. Track it in your CRM.
+**4. Reply/conversion rate:** What percentage booked a call, replied, or became a customer? This is the only metric that matters for revenue. Track it in your CRM.
 
 Sarah tracks one more: **time to first response.** Her automation logs when the lead came in and when she sent her personalised follow-up. Goal is under 4 hours. If it creeps above 6 hours, she knows her team is stretched.
 
@@ -242,13 +242,13 @@ For more on how automation impacts your bottom line, check out our [free ROI cal
 
 Once instant follow-up is working, the next high-impact automations for Australian service businesses are:
 
-**Quote follow-up** , If they don't reply to your quote in 3 days, send a "did you get my quote?" email. Recovers 15-20% of ghosted leads.
+**Quote follow-up:** If they don't reply to your quote in 3 days, send a "did you get my quote?" email. Recovers 15-20% of ghosted leads.
 
-**Review requests** , 24 hours after job completion, send an email asking for a Google review. Most tradies don't ask at the right time.
+**Review requests:** 24 hours after job completion, send an email asking for a Google review. Most tradies don't ask at the right time.
 
-**Invoice reminders** , Chase overdue invoices automatically at 7, 14, and 30 days. Overdue invoices hurt your cash flow more than you think.
+**Invoice reminders:** Chase overdue invoices automatically at 7, 14, and 30 days. Overdue invoices hurt your cash flow more than you think.
 
-**Appointment reminders** , SMS or email 24 hours before a booked job. Cuts no-shows by 40%.
+**Appointment reminders:** SMS or email 24 hours before a booked job. Cuts no-shows by 40%.
 
 Tom the plumber automated all four. His revenue is up 30% year-on-year, he's spending 8 hours less per week on admin, and he's closed 40% more jobs from the same lead volume.
 

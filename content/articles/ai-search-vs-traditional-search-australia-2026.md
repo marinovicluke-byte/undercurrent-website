@@ -15,7 +15,7 @@ faqs:
   - q: 'Do I need separate pages for traditional SEO and AI search?'
     a: 'No. The same page can rank on Google and get cited by AI engines if it''s structured correctly. Use question-format H2 headings, lead each section with a direct answer, include a 5-7 question FAQ, and add a comparison table where relevant. Pages built this way perform well on both systems because they match search intent more precisely. DBugLab''s zero-click era guide notes that pages built for AI citation also see improved traditional rankings because Google''s algorithm increasingly rewards content that directly answers queries. Our process includes dual-optimisation for both search types.'
   - q: 'How often should I update content to stay visible in AI search?'
-    a: 'Update your top 10 pages every 30-45 days with minor refreshes , a new example, updated stat, or rephrased section. Change the "Last Updated" date and republish. Perplexity cites content published in the last 30 days at a 50% higher rate than older content. You don''t need to rewrite the full page, just signal freshness to AI crawlers. For blog content, one new well-structured post per month beats weekly generic updates. Consistency matters more than frequency. Our automation services can schedule and execute these updates automatically.'
+    a: 'Update your top 10 pages every 30-45 days with minor refreshes, a new example, updated stat, or rephrased section. Change the "Last Updated" date and republish. Perplexity cites content published in the last 30 days at a 50% higher rate than older content. You don''t need to rewrite the full page, just signal freshness to AI crawlers. For blog content, one new well-structured post per month beats weekly generic updates. Consistency matters more than frequency. Our automation services can schedule and execute these updates automatically.'
   - q: 'What if my business doesn''t have time to rewrite all our content?'
     a: 'Start with your top 3 highest-traffic pages and your top 3 highest-value service pages, the ones that drive the most revenue. Add Quick Answer blocks, rewrite 2-3 H2s as questions, add a 5-question FAQ, update the publish date. That''s 60-90 minutes per page, 6 pages total. You''ll see measurable AI citation lift within 30-45 days. Once you prove ROI on those six pages, expand to the next 10. At UnderCurrent, we automate the content refresh process using tools like Make and Airtable to schedule monthly updates without manual effort, cutting the time from 90 minutes to 15 per page. Book an audit to identify your highest-impact pages.'
   - q: 'Are AI search results biased toward certain industries or topics?'
@@ -27,7 +27,7 @@ faqs:
 ---
 # Why Traditional Search Won't Save Your Business in 2026
 
-> **Quick Answer:** AI search engines (ChatGPT, Perplexity, Google AI Overviews) now handle 37% of searches, convert at 4.4x the rate of traditional search, and cite fresh content Google often ignores. Australian service businesses must work with both systems in 2026 , AI search favours direct answers, first-person experience, and content updated in the last 30 days, while traditional search still drives volume but clicks are down 60-70% when AI summaries appear.
+> **Quick Answer:** AI search engines (ChatGPT, Perplexity, Google AI Overviews) now handle 37% of searches, convert at 4.4x the rate of traditional search, and cite fresh content Google often ignores. Australian service businesses must work with both systems in 2026, AI search favours direct answers, first-person experience, and content updated in the last 30 days, while traditional search still drives volume but clicks are down 60-70% when AI summaries appear.
 
 ![AI search versus traditional search workflow for Australian businesses 2026 comparison process](./body-1.jpg)
 
@@ -124,7 +124,7 @@ No. The same page can rank on Google and get cited by AI engines if it's structu
 
 ### How often should I update content to stay visible in AI search?
 
-Update your top 10 pages every 30-45 days with minor refreshes , a new example, updated stat, or rephrased section. Change the "Last Updated" date and republish. [Perplexity cites content published in the last 30 days at a 50% higher rate](https://codeqy.com.au/blog/ai-seo-australia-complete-guide) than older content. You don't need to rewrite the full page, just signal freshness to AI crawlers. For blog content, one new well-structured post per month beats weekly generic updates. Consistency matters more than frequency. [Our automation services](/services) can schedule and execute these updates automatically.
+Update your top 10 pages every 30-45 days with minor refreshes, a new example, updated stat, or rephrased section. Change the "Last Updated" date and republish. [Perplexity cites content published in the last 30 days at a 50% higher rate](https://codeqy.com.au/blog/ai-seo-australia-complete-guide) than older content. You don't need to rewrite the full page, just signal freshness to AI crawlers. For blog content, one new well-structured post per month beats weekly generic updates. Consistency matters more than frequency. [Our automation services](/services) can schedule and execute these updates automatically.
 
 ### What if my business doesn't have time to rewrite all our content?
 
@@ -146,13 +146,13 @@ No, but rebalance the mix. Backlinks still matter for Google rankings, which sti
 
 ## Sources
 
-1. [ROI.com.au , AI Search vs Traditional Search in Australia 2026](https://roi.com.au/blog/stats/ai-search-vs-traditional-search-in-australia-2026)
-2. [CodeQy , AI SEO Australia Complete Guide](https://codeqy.com.au/blog/ai-seo-australia-complete-guide)
-3. [DBugLab , Zero-Click Era: AI Search for Australian Businesses](https://dbuglab.com/blogs/zero-click-era-ai-search-australian)
-4. [Sticky Digital , AI Search vs Traditional Search: Why Brand Authority is the New Ranking Factor](https://www.sticky.digital/ai-search-vs-traditional-search-why-brand-authority-is-the-new-ranking-factor/)
-5. [Aidan Coleman , AI SEO Statistics](https://aidancoleman.com.au/ai-seo-statistics/)
-6. [Meta Creative , Search in 2026: Things Are Changing](https://metacreative.com.au/blog/search-in-2026-things-are-changing/)
-7. [Arc Interactive Media , Case Study: Impact of AI Search on User Behavior and CTR in 2026](https://www.arcintermedia.com/shoptalk/case-study-impact-of-ai-search-on-user-behavior-ctr-in-2026/)
-8. [Search Engine Land , Consumers Start Searches with AI, Not Google](https://searchengineland.com/consumers-start-searches-ai-not-google-study-467159)
-9. [KPMG Australia , Australia Leads World on Responsible AI, Lags Productivity Gains](https://kpmg.com/au/en/media/media-releases/2026/04/australia-leads-world-on-responsible-ai-lags-productivity-gains.html)
-10. [Newsreel , Small Businesses Starting to Embrace AI](https://newsreel.com.au/article/business/small-businesses-starting-to-embrace-ai/)
+1. [ROI.com.au, AI Search vs Traditional Search in Australia 2026](https://roi.com.au/blog/stats/ai-search-vs-traditional-search-in-australia-2026)
+2. [CodeQy, AI SEO Australia Complete Guide](https://codeqy.com.au/blog/ai-seo-australia-complete-guide)
+3. [DBugLab, Zero-Click Era: AI Search for Australian Businesses](https://dbuglab.com/blogs/zero-click-era-ai-search-australian)
+4. [Sticky Digital, AI Search vs Traditional Search: Why Brand Authority is the New Ranking Factor](https://www.sticky.digital/ai-search-vs-traditional-search-why-brand-authority-is-the-new-ranking-factor/)
+5. [Aidan Coleman, AI SEO Statistics](https://aidancoleman.com.au/ai-seo-statistics/)
+6. [Meta Creative, Search in 2026: Things Are Changing](https://metacreative.com.au/blog/search-in-2026-things-are-changing/)
+7. [Arc Interactive Media, Case Study: Impact of AI Search on User Behavior and CTR in 2026](https://www.arcintermedia.com/shoptalk/case-study-impact-of-ai-search-on-user-behavior-ctr-in-2026/)
+8. [Search Engine Land, Consumers Start Searches with AI, Not Google](https://searchengineland.com/consumers-start-searches-ai-not-google-study-467159)
+9. [KPMG Australia, Australia Leads World on Responsible AI, Lags Productivity Gains](https://kpmg.com/au/en/media/media-releases/2026/04/australia-leads-world-on-responsible-ai-lags-productivity-gains.html)
+10. [Newsreel, Small Businesses Starting to Embrace AI](https://newsreel.com.au/article/business/small-businesses-starting-to-embrace-ai/)

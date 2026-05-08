@@ -228,18 +228,18 @@ Use the customer's first name, reference the specific job they enquired about, a
 
 ## Related Reading
 
-- [Customer experience automation](/customer-experience-automation) , how onboarding fits into the full customer lifecycle
-- [Finance automation](/finance-automation) , Xero, invoicing, and payment chasing without the chasing
-- [Custom integrations](/custom-integrations) , wiring CRM, Xero, and booking tools into one flow
-- [Case studies](/case-studies) , real Australian service businesses using these systems
+- [Customer experience automation](/customer-experience-automation), how onboarding fits into the full customer lifecycle
+- [Finance automation](/finance-automation), Xero, invoicing, and payment chasing without the chasing
+- [Custom integrations](/custom-integrations), wiring CRM, Xero, and booking tools into one flow
+- [Case studies](/case-studies), real Australian service businesses using these systems
 
 Want this built on your CRM and Xero, usually live within a week? Book a [free automation audit](/audit) or [get in touch](/contact).
 
 ## Sources
 
-1. Visa, *How to Boost Your Customer's Onboarding Experience* , https://corporate.visa.com/content/dam/VCOM/global/services/documents/vca-how-to-boost-your-customers-onboarding-experience.pdf
-2. SundaySky, *Customer Onboarding Statistics 2026* , https://sundaysky.com/blog/customer-onboarding-statistics/
-3. GetContrast, *Automate Client Onboarding* , https://www.getcontrast.io/learn/automate-client-onboarding
-4. Akita, *Customer Onboarding Statistics* , https://akitaapp.com/blog/customer-onboarding-statistics/
-5. Australian Taxation Office, *eInvoicing Customer Onboarding Guidance* , https://www.ato.gov.au/businesses-and-organisations/einvoicing/einvoicing-for-businesses/customer-onboarding-guidance
-6. Federal Register of Legislation, *Privacy Act 1988* , https://www.legislation.gov.au/Details/C2021C00139
+1. Visa, *How to Boost Your Customer's Onboarding Experience*, https://corporate.visa.com/content/dam/VCOM/global/services/documents/vca-how-to-boost-your-customers-onboarding-experience.pdf
+2. SundaySky, *Customer Onboarding Statistics 2026*, https://sundaysky.com/blog/customer-onboarding-statistics/
+3. GetContrast, *Automate Client Onboarding*, https://www.getcontrast.io/learn/automate-client-onboarding
+4. Akita, *Customer Onboarding Statistics*, https://akitaapp.com/blog/customer-onboarding-statistics/
+5. Australian Taxation Office, *eInvoicing Customer Onboarding Guidance*, https://www.ato.gov.au/businesses-and-organisations/einvoicing/einvoicing-for-businesses/customer-onboarding-guidance
+6. Federal Register of Legislation, *Privacy Act 1988*, https://www.legislation.gov.au/Details/C2021C00139
