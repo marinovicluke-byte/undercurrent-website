@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { SERVICES } from '@/lib/data/services'
+import { SERVICES_V2 } from '@/lib/data/services-v2'
 import { LOCATIONS } from '@/lib/data/locations'
 
 const BRAND_TAG =
@@ -24,17 +24,10 @@ const LEGAL = [
   { label: 'Sitemap', href: '/sitemap.xml', external: true },
 ]
 
-function titleCaseLabel(str) {
-  return str
-    .split(' ')
-    .map(w => w.charAt(0) + w.slice(1).toLowerCase())
-    .join(' ')
-}
-
 const SERVICES_LINKS = [
   { label: 'All services', href: '/services' },
-  ...SERVICES.map(s => ({
-    label: s.displayName || titleCaseLabel(s.label),
+  ...SERVICES_V2.map(s => ({
+    label: s.name,
     href: `/${s.slug}`,
   })),
 ]
