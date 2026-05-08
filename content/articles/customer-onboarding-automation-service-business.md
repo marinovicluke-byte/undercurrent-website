@@ -94,7 +94,14 @@ You do not need a new CRM to start. You need to use the one you have. Most faile
 
 **Day zero, the customer accepts. Day seven, work has started.** Here is the actual flow we deploy for most service businesses, tuned to feel fast without feeling impersonal.
 
-Day 0, deal marked won, welcome SMS fires within 60 seconds. Personalised with first name and the job they enquired about. Day 0, deposit invoice generated in Xero, emailed with payment link. Day 1, intake form sent, asking for site address, access notes, ABN if applicable, insurance certificate uploads. Day 2, calendar booking link for the kickoff call goes out if not already booked. Day 3, deposit reminder if unpaid. Day 4, scope document pre-filled and sent for digital signature. Day 5, kickoff call happens. Day 7, internal job card created, team notified, work starts.
+1. **Day 0 — Deal won:** Welcome SMS fires within 60 seconds, personalised with the client's first name and the job they enquired about.
+2. **Day 0 — Deposit invoice:** Auto-generated in Xero and emailed with a payment link, same trigger as the welcome SMS.
+3. **Day 1 — Intake form:** Sent automatically, collecting site address, access notes, ABN (if applicable), and insurance certificate uploads.
+4. **Day 2 — Booking link:** Calendar link for the kickoff call goes out via Calendly or SavvyCal, tied to real team availability.
+5. **Day 3 — Deposit reminder:** Fires automatically if the invoice is still unpaid.
+6. **Day 4 — Scope document:** Pre-filled contract sent for digital signature via DocuSign or PandaDoc.
+7. **Day 5 — Kickoff call:** The one human touchpoint. Owner or project lead speaks with the client.
+8. **Day 7 — Internal handover:** Job card created in the CRM, team notified, delivery begins.
 
 [ATO eInvoicing guidance](https://www.ato.gov.au/businesses-and-organisations/einvoicing/einvoicing-for-businesses/customer-onboarding-guidance) recommends automating high-frequency compliance steps to reduce error rates, which is exactly what this stack does. Our [finance automation](/finance-automation) page covers the Xero side in more depth.
 
