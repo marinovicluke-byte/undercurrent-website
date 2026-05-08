@@ -51,7 +51,7 @@ function Wordmark({ size = 24 }) {
 const NAV_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
-  { label: 'Audit', href: '/audit' },
+  { label: 'Free Tools', href: '/audit' },
   { label: 'About', href: '/about' },
   { label: 'Blog', href: '/blog' },
 ]
