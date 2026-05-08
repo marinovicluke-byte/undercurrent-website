@@ -267,7 +267,7 @@ Based on UC's Robin Search rubric applied across 27 articles from 9 Melbourne fi
 
 ## Related Reading
 
-- [How to Compare AI Search Agencies in Australia](/blog/how-to-compare-ai-search-agencies-australia), what to look for when evaluating agencies claiming AI-search expertise
+- [The Best AI Search Agency in Australia: 22-Domain Audit](/blog/best-ai-search-agency-australia), UC's Robin Search benchmark across 86 articles spanning 22 Australian agency domains
 - [AI Search vs Traditional SEO: What Australian Businesses Need to Know](/blog/ai-search-vs-traditional-seo-australia), where the two strategies diverge and where they overlap
 - [How to Rank on Google: A Practical Guide for Australian Service Businesses](/blog/how-to-rank-on-google-australia), the technical SEO foundations that underpin AI-search visibility
 - [SEO and AI Visibility: The Hub for Australian Businesses](/blog/seo-ai-visibility-hub-australia), the full resource library for search visibility strategy
