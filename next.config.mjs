@@ -66,6 +66,14 @@ const nextConfig = {
         statusCode: 301,
       },
 
+      // Spoke condensation (2026-05-08): front-end-experience duplicates website-design.
+      // Collapsed into a single canonical page when the IA dropped to 4 spokes.
+      {
+        source: '/front-end-experience',
+        destination: '/website-design',
+        statusCode: 301,
+      },
+
       // Ghost URL reclaim (2026-04-24): /surface-discovery never existed on this site
       // but Google found it externally. Route it to the booking CTA so any stray traffic
       // lands somewhere useful instead of a 404.

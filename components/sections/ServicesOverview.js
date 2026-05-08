@@ -2,63 +2,16 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import SectionShell from '@/components/ui/SectionShell'
 import SectionEyebrow from '@/components/ui/SectionEyebrow'
+import { SERVICES_V2 } from '@/lib/data/services-v2'
 
-const SERVICES = [
-  {
-    n: '01',
-    title: 'Lead Generation',
-    titleAccentWord: 'Generation',
-    blurb:
-      'Lead generation automation that finds prospects, writes personalised outreach, and keeps following up until someone replies.',
-    bullets: ['AI cold email at scale', 'Lead capture and qualification', 'Automated follow-up sequences'],
-    accent: 'blue',
-  },
-  {
-    n: '02',
-    title: 'Sales Automation',
-    titleAccentWord: 'Automation',
-    blurb:
-      'Every step from lead to closed deal, automated. CRM stays clean. Nurture runs itself. Pipeline reports make sense.',
-    bullets: ['CRM automation and data hygiene', 'AI lead nurture sequences', 'Pipeline reporting dashboards'],
-    accent: 'orange',
-  },
-  {
-    n: '03',
-    title: 'Frontend Experiences',
-    titleAccentWord: 'Experiences',
-    blurb:
-      'Websites and landing pages built to convert. Interactive demos that work like sales tools. Fast, credible, built to rank.',
-    bullets: ['Marketing websites and landing pages', 'Interactive product demos', 'Conversion-focused redesigns'],
-    accent: 'sage',
-  },
-  {
-    n: '04',
-    title: 'SEO & AI Visibility',
-    titleAccentWord: 'Visibility',
-    blurb:
-      'SEO tuned for both Google rankings and AI search. The same work that earns rankings earns citations in ChatGPT, Claude, and Perplexity.',
-    bullets: ['Technical and content SEO', 'AI search optimisation (AEO, GEO)', 'Citations in ChatGPT, Claude, Perplexity'],
-    accent: 'blue',
-  },
-  {
-    n: '05',
-    title: 'AI Strategy & Training',
-    titleAccentWord: 'Training',
-    blurb:
-      'AI strategy and training sized to your business. Workshops, audits, and roadmaps that fit your team\u2019s workflow and tools.',
-    bullets: ['AI workshops and team training', '90-day AI roadmaps', 'Tool selection audits'],
-    accent: 'orange',
-  },
-  {
-    n: '06',
-    title: 'Custom Integrations',
-    titleAccentWord: 'Integrations',
-    blurb:
-      'Business process automation that connects the tools you already use. Custom APIs, multi-tool agents, and workflows that survive version updates and staff changes.',
-    bullets: ['Custom API integrations', 'Multi-tool AI agent systems', 'Workflow automation across your stack'],
-    accent: 'sage',
-  },
-]
+const SERVICES = SERVICES_V2.map(s => ({
+  n: s.num,
+  title: s.name,
+  titleAccentWord: s.titleAccentWord,
+  blurb: s.desc,
+  bullets: s.bullets,
+  accent: s.accent,
+}))
 
 const ACCENTS = {
   blue: { rgb: '106, 141, 173', light: '138, 174, 200' },

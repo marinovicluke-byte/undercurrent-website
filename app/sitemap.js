@@ -27,12 +27,19 @@ export default function sitemap() {
     priority: 0.8,
   }))
 
-  const servicePages = SERVICES.map(s => ({
-    url: `${BASE}/${s.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly',
-    priority: 0.8,
-  }))
+  // Slugs excluded from the sitemap. Pages still render via the [slug] dispatcher
+  // for direct visitors, but they're not promoted to search engines.
+  // - front-end-experience: 301'd to website-design (see next.config.mjs)
+  const SITEMAP_EXCLUDED = new Set(['front-end-experience'])
+
+  const servicePages = SERVICES
+    .filter(s => !SITEMAP_EXCLUDED.has(s.slug))
+    .map(s => ({
+      url: `${BASE}/${s.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    }))
 
   // Topic cluster pillar pages — high SEO priority (topical authority hubs)
   const clusterPages = CLUSTER_ORDER.map(slug => ({

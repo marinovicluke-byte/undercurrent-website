@@ -5,7 +5,7 @@
 import Link from 'next/link'
 import JsonLd from '@/components/ui/JsonLd'
 import PillCTA from '@/components/ui/PillCTA'
-import { SERVICES_SCHEMA } from '@/lib/data/services-v2'
+import { SERVICES_V2, SERVICES_SCHEMA } from '@/lib/data/services-v2'
 
 const ORANGE     = '#E07A55'
 const ORANGE_RGB = '224,122,85'
@@ -20,63 +20,33 @@ const SECONDARY  = 'rgba(250,249,245,0.55)'
 const MUTED      = 'rgba(250,249,245,0.60)'
 const FAINT      = 'rgba(250,249,245,0.09)'
 
-// Six services. `href` points to the live detail page where one exists,
-// otherwise to a future top-level slug — update when detail pages are built.
-// Per vault SEO rules, future URLs follow the same /{slug} pattern as
-// existing services so the [slug] dispatcher picks them up once added to
-// lib/data/services.js.
-const SERVICES = [
-  {
-    num: '01', name: 'Lead Generation', accent: BLUE, ar: BLUE_RGB,
-    tagline: 'Fill your pipeline without the manual grind.',
-    desc: 'AI cold email, outbound sequences, and content systems that bring qualified buyers to you — on repeat.',
-    bullets: ['AI cold-email at scale', 'Outbound that follows up', 'Content that compounds'],
-    href: '/inbound-lead-management-melbourne',
-  },
-  {
-    num: '02', name: 'Revenue Operations', accent: ORANGE, ar: ORANGE_RGB,
-    tagline: 'Close more. Keep more. Grow faster.',
-    desc: 'CRM, automated follow-up, proposal workflows, and pipeline reporting — no lead slips through.',
-    bullets: ['CRM hygiene & setup', 'AI nurture sequences', 'Pipeline views that get opened'],
-    href: '/sales-automation',
-  },
-  {
-    num: '03', name: 'Website Experience Design', accent: SAGE, ar: SAGE_RGB,
-    tagline: 'The face of your business, built to convert.',
-    desc: 'Websites, portals, booking systems, and dashboards. Built for performance, built for trust.',
-    bullets: ['Marketing sites', 'Interactive demos', 'Booking & client portals'],
-    href: '/website-design',
-  },
-  {
-    num: '04', name: 'SEO & AI Visibility', accent: BLUE, ar: BLUE_RGB,
-    tagline: 'Rank everywhere your buyers are looking.',
-    desc: 'Classic SEO plus AEO and GEO — earning rankings in Google and citations in ChatGPT and Claude.',
-    bullets: ['Classic SEO foundations', 'Answer-engine presence (AEO)', 'Generative search (GEO)'],
-    href: '/seo-ai-visibility',
-  },
-  {
-    num: '05', name: 'AI Strategy & Training', accent: ORANGE, ar: ORANGE_RGB,
-    tagline: 'The right tools. The right way.',
-    desc: 'Roadmaps, tool selection, and hands-on training so your team uses AI with confidence.',
-    bullets: ['90-day AI roadmaps', 'Team workshops', 'Tool-selection audits'],
-    href: '/ai-strategy-training',
-  },
-  {
-    num: '06', name: 'Custom Integrations', accent: SAGE, ar: SAGE_RGB,
-    tagline: 'Connect everything.',
-    desc: "If your tools don't talk, we fix it. n8n, Make, Zapier, direct APIs — wired and built to last.",
-    bullets: ['Bespoke API integrations', 'Multi-tool agent systems', 'Automations built to last'],
-    href: '/custom-integrations',
-  },
-]
+const ACCENTS = {
+  blue:   { hex: BLUE,   rgb: BLUE_RGB   },
+  sage:   { hex: SAGE,   rgb: SAGE_RGB   },
+  orange: { hex: ORANGE, rgb: ORANGE_RGB },
+}
+
+const SERVICES = SERVICES_V2.map(s => {
+  const a = ACCENTS[s.accent]
+  return {
+    num: s.num,
+    name: s.name,
+    accent: a.hex,
+    ar: a.rgb,
+    tagline: s.tagline,
+    desc: s.desc,
+    bullets: s.bullets,
+    href: `/${s.slug}`,
+  }
+})
 
 export const metadata = {
   title: 'Services',
-  description: 'Six automation disciplines for Australian SMBs: lead gen, revenue ops, frontend, SEO, AI strategy, and custom integrations.',
+  description: 'Four spokes covering search visibility (Robin Search), website design, custom integrations, and AI strategy and training for Australian small businesses.',
   alternates: { canonical: 'https://undercurrentautomations.com/services' },
   openGraph: {
     title: 'Services | UnderCurrent Automations',
-    description: 'Six automation disciplines for Australian SMBs: lead gen, revenue ops, frontend, SEO, AI strategy, and custom integrations.',
+    description: 'Four spokes covering search visibility (Robin Search), website design, custom integrations, and AI strategy and training for Australian small businesses.',
     url: 'https://undercurrentautomations.com/services',
     type: 'website',
     images: ['/brand/og-card.png'],
@@ -165,14 +135,14 @@ export default function ServicesPage() {
           fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.65,
           color: SECONDARY, margin: 0, maxWidth: 520,
         }}>
-          Six disciplines covering every layer of your operation. Most teams start with a Discovery session to find their highest-leverage entry point.
+          Four spokes covering every layer of your operation. Most teams start with a Discovery session to find their highest-leverage entry point.
         </p>
       </header>
 
       {/* ── SECTION 2: DISCOVERY + SERVICES — charcoal ── */}
       <section style={{ background: CHARCOAL, borderTop: `1px solid ${FAINT}` }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', padding: '72px var(--page-pad) 100px' }}>
-          <div className="c7-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
+          <div className="c7-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 20 }}>
 
             {/* Discovery — spans full width */}
             <Link

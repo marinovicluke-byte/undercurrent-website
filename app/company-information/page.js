@@ -259,7 +259,7 @@ function AtAGlance() {
 function WhatWeDo() {
   const pillars = [
     { ac: AC_ORANGE, label: 'Get found online',
-      text: 'AI search, SEO, and content automation that put a small business in front of the people already searching. Google, ChatGPT, Claude, Perplexity, the lot.' },
+      text: 'Robin Search puts a small business in front of buyers across every search surface — Google, ChatGPT, Claude, Perplexity, Maps, and paid. SEO, AEO, PPC and Places, wired together.' },
     { ac: AC_SAGE,   label: 'Turn traffic into revenue',
       text: 'Lead capture, qualification and follow-up that turn enquiries into booked calls and paid invoices. Every lead chased, every handoff tracked.' },
     { ac: AC_BLUE,   label: 'Build AI capability',
@@ -1112,7 +1112,7 @@ const FAQS = [
   },
   {
     q: 'What services does UnderCurrent Automations offer?',
-    a: 'UnderCurrent Automations offers eleven services: customer experience automation, sales automation, content automation, personal system automation, finance automation, inbound lead management, website design, SEO and AI visibility, front-end experience, AI strategy and training, and custom integrations. Each service is a self-contained workflow that can run on its own or stack with the others.',
+    a: 'UnderCurrent Automations works across four spokes: Robin Search (the search ecosystem covering SEO, AEO/AI search, PPC, and Maps and Places), Website Design (marketing sites and custom dashboards), Custom Integrations (n8n, Make, Zapier, and direct APIs across sales, customer experience, content, finance and ops), and AI Strategy and Training (workshops, roadmaps and tool selection). Most engagements stack two or more spokes — search visibility and a website rebuild commonly run together, with integrations layered underneath.',
   },
   {
     q: 'Who founded UnderCurrent Automations?',
