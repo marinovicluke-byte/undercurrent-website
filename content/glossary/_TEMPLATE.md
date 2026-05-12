@@ -10,8 +10,11 @@
 #   • shortDefinition ≤ 30 words — it becomes the <meta description>, the DefinedTerm.description,
 #     and the sentence an AI engine extracts as the answer. One sentence, triple duty.
 #   • body 250–400 words · 5–8 named entities · 2–3 external citations as inline links
-#   • 2–3 internal links, mixed targets: one relatedService + 1–2 relatedTerms (+ a blog article
-#     ONLY if it is confirmed live)
+#   • 2–3 internal links woven INTO the prose, mixed targets: one relatedService + 1–2 relatedTerms
+#     (+ a blog article ONLY if it is confirmed live). The page auto-renders a "Related" nav block
+#     from `relatedServices` + `relatedTerms` — do NOT add a `## Related` section to the body.
+#   • the page auto-renders a "Sources" list from the `sources` array — inline-cite the same URLs in
+#     the prose too, but don't add a `## Sources` section to the body.
 #   • NEVER link a target that doesn't exist or doesn't ship in the same batch
 #   • body opens with `# {term}` — the page renders front-matter `term` as the H1 and strips this one
 # ─────────────────────────────────────────────────────────────────────────────
@@ -43,9 +46,4 @@ Body copy, 250–400 words. Lead with the UC angle — the framing the generic d
 
 Pick a structural shape that fits the term type: a discipline gets a "how it differs from X" beat; a tool gets "where it fits / what it replaces"; a workflow gets "how it works in three steps"; a metric gets "what good looks like". Don't reuse the last entry's skeleton.
 
-If `complianceNote` is set, the page renders it as a callout above the body — so the body doesn't need to repeat it.
-
-## Related
-- [Some related term](/glossary/some-related-slug)
-- [Another related term](/glossary/another-related-slug)
-- UC service: [SEO & AI Visibility](/seo-ai-visibility)
+If `complianceNote` is set, the page renders it as a callout above the body — so the body doesn't need to repeat it. No `## Related` or `## Sources` section here: the page builds those from front-matter.
