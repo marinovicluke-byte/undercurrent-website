@@ -29,6 +29,15 @@ source: claude-code
 
 AI Search Optimisation is the umbrella term for everything below it. [Answer Engine Optimisation](/glossary/what-is-answer-engine-optimisation) handles the extracted answers, the featured snippet, the AI Overview, the voice reply. [Generative Engine Optimisation](/glossary/what-is-generative-engine-optimisation) handles being named inside a chat answer from ChatGPT, Perplexity or Claude. There's also a newer slice, optimising for AI agents that browse and act on a person's behalf, sometimes called search agent optimisation, where the "reader" is software deciding which provider to shortlist. Three names, one job. The signals overlap so heavily that running them as separate projects just duplicates the work.
 
-What good looks like, the same checklist whichever engine you're chasing: a direct answer in the first one or two sentences of every section; question-format headings; structured data, [schema.org](https://schema.org) markup, so the machine can parse what each page is; a clear, consistent entity, your business name, suburbs and services said the same way everywhere, including on sites you don't own; citations from sources the engine already trusts; and recency, AI engines weight pages updated recently because their answers are meant to be current. Hit those and the same page tends to pick up Google rankings, snippet eligibility and AI citations together, because they all reward content that answers the question precisely.
+What good looks like is the same checklist whichever engine you're chasing:
+
+- A direct answer in the first one or two sentences of every section.
+- Question-format headings, phrased the way people actually ask.
+- Structured data, [schema.org](https://schema.org) markup, so the machine can parse what each page is.
+- A clear, consistent entity: your business name, suburbs and services said the same way everywhere, including on sites you don't own.
+- Citations from sources the engine already trusts.
+- Recency, AI engines tend to favour pages updated recently because their answers are meant to be current.
+
+Hit those and the same page tends to pick up Google rankings, snippet eligibility and AI citations together, because they all reward content that answers the question precisely.
 
 Why it's its own discipline now and not a footnote on SEO: the traffic moved. [Gartner expects traditional search volume to fall 25% by 2026](https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents) as people ask chatbots instead, and [ChatGPT now has its own search product](https://openai.com/index/introducing-chatgpt-search/). A concrete read on what that means: ask Perplexity "best mortgage broker in Brisbane" and you get back a handful of named firms with citations. Every broker not in that set is invisible to that buyer, and Google rankings didn't decide it, content structure and entity clarity did. Closing that gap, across AEO, GEO and agent visibility at once, is what our [SEO & AI Visibility](/seo-ai-visibility) service does.

@@ -162,6 +162,27 @@ export default async function GlossaryEntryPage({ params }) {
         </div>
       </article>
 
+      {/* FAQ — rendered visibly so the FAQPage schema matches on-page content */}
+      {faqs.length > 0 && (
+        <section style={{ padding: '0 var(--page-pad) 56px', background: 'var(--charcoal)' }}>
+          <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
+            <div style={{ maxWidth: TEXT_MAX, paddingTop: 24, borderTop: '1px solid var(--text-faint)' }}>
+              <h2 style={{ margin: '0 0 22px', fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 'clamp(20px, 2.2vw, 26px)', letterSpacing: '-0.02em', color: 'var(--off-white)' }}>
+                Frequently asked questions
+              </h2>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 22 }}>
+                {faqs.map((f, i) => (
+                  <div key={i}>
+                    <h3 style={{ margin: '0 0 6px', fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 16, lineHeight: 1.3, letterSpacing: '-0.01em', color: 'var(--off-white)' }}>{f.question}</h3>
+                    <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.6, color: 'var(--text-secondary)' }}>{f.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Sources */}
       {sources.length > 0 && (
         <section style={{ padding: '0 var(--page-pad) 48px', background: 'var(--charcoal)' }}>
