@@ -2,6 +2,7 @@ import { LOCATIONS } from '@/lib/data/locations'
 import { SERVICES } from '@/lib/data/services'
 import { getAllArticles } from '@/lib/articles'
 import { getAllCaseStudies } from '@/lib/caseStudies'
+import { getAllGlossaryTerms } from '@/lib/glossary'
 import { CLUSTER_ORDER } from '@/lib/clusters'
 
 const BASE = 'https://undercurrentautomations.com'
@@ -10,7 +11,7 @@ export default function sitemap() {
   const staticPages = [
     '', '/about', '/services', '/process', '/contact',
     '/audit',
-    '/blog', '/case-studies',
+    '/blog', '/case-studies', '/glossary',
     '/company-information',
     '/privacy', '/terms',
   ].map(path => ({
@@ -63,6 +64,13 @@ export default function sitemap() {
     priority: 0.7,
   }))
 
+  const glossaryPages = getAllGlossaryTerms().map(t => ({
+    url: `${BASE}/glossary/${t.slug}`,
+    lastModified: new Date(t.dateModified || t.datePublished || Date.now()),
+    changeFrequency: 'monthly',
+    priority: 0.5,
+  }))
+
   return [
     ...staticPages,
     ...locationPages,
@@ -70,5 +78,6 @@ export default function sitemap() {
     ...clusterPages,
     ...articles,
     ...caseStudies,
+    ...glossaryPages,
   ]
 }
