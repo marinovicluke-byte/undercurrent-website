@@ -31,7 +31,7 @@ faqs:
 
 Someone two suburbs over opens ChatGPT and types "best plumber near me" or "good bookkeeper in Brunswick". A tidy list of two or three names comes back. If your business isn't on it, you didn't lose to a competitor's ad budget. You lost because ChatGPT had nothing recent and trustworthy to pull your name from.
 
-That's the gap ChatGPT SEO closes, and most of it is plumbing, not magic. This guide is the 30-minute version: the handful of moves a service owner can make this week to start showing up. If you want the deeper, section-by-section breakdown of the citation signals AI engines look for, our [guide on how to rank in ChatGPT search](/blog/how-to-rank-in-chatgpt-search) covers each one. This one stays practical, and it sits inside our [AI search visibility cluster](/blog/cluster/seo-ai-visibility), so the links at the end go further on every step. Nothing here costs money, and you won't need a developer for most of it.
+That's the gap ChatGPT SEO closes, and most of it is plumbing, not magic. This guide is the 30-minute version: the handful of moves a service owner can make this week to start showing up. If you want the deeper, section-by-section breakdown of the citation signals AI engines look for, our [guide on how to rank in ChatGPT search](/blog/how-to-rank-in-chatgpt-search) covers each one, and our [ChatGPT Search glossary entry](/glossary/what-is-chatgpt-search) is the one-screen definition of the product itself. This guide stays practical, and it sits inside our [AI search visibility cluster](/blog/cluster/seo-ai-visibility), so the links at the end go further on every step. Nothing here costs money, and you won't need a developer for most of it.
 
 ## What Is ChatGPT SEO, Really?
 

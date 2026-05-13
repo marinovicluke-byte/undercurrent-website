@@ -31,7 +31,7 @@ faqs:
 
 > **Business process automation (BPA) is using software to handle repetitive tasks without manual input, so your team can focus on work that actually grows the business.** For Australian small businesses, this typically means connecting tools like Xero, HubSpot, and Gmail so data flows between them automatically, cutting out hours of copy-paste work every week.
 
-**Business process automation is the practice of using software to complete recurring tasks without someone having to do them manually.** That's it. No fancy jargon. You have tasks that happen the same way every time — invoicing, data entry, follow-up emails, booking confirmations — and you set up software to handle them instead of paying someone to do them by hand.
+**Business process automation is the practice of using software to complete recurring tasks without someone having to do them manually.** That's it. No fancy jargon. You have tasks that happen the same way every time — invoicing, data entry, follow-up emails, booking confirmations — and you set up software to handle them instead of paying someone to do them by hand. For the one-screen version of this definition with the three traits that separate BPA from a single Zap, see our [business process automation glossary entry](/glossary/what-is-business-process-automation).
 
 For most Australian small businesses (1-50 employees), BPA looks like this: you connect the tools you already use (your CRM, your accounting software, your email platform) so they talk to each other. When something happens in one system, it triggers an action in another. Automatically. Without anyone lifting a finger.
 
