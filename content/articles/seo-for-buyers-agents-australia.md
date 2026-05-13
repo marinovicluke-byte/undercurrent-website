@@ -96,7 +96,30 @@ A buyers agent's fee on a single purchase usually clears five figures, so one ex
 
 ## What Surprised Us Auditing 122 Property and Buyers-Agent Websites
 
-**Our Robin Search rubric across 122 property and buyers-agent pages says the property vertical averages 55.4 / 100, weaker than it looks.** The full breakdown:
+**Our Robin Search rubric across 122 property and buyers-agent pages says the property vertical averages 55.4 / 100, weaker than it looks.**
+
+<svg width="100%" viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Robin Search mean scores out of 100: UC's own pages 83.4, property vertical 55.4, whole corpus 53.7. As of May 2026.">
+  <rect width="640" height="260" fill="#121210" rx="8"/>
+  <text x="24" y="34" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="600" fill="#f5f1e8">Robin Search mean score (out of 100)</text>
+  <text x="24" y="54" font-family="system-ui,sans-serif" font-size="12" fill="rgba(245,241,232,0.55)">As of May 2026 — UnderCurrent Robin Search corpus</text>
+  <g font-family="system-ui,sans-serif" font-size="13" fill="#f5f1e8">
+    <text x="230" y="100" text-anchor="end">UC own pages (n=16)</text>
+    <rect x="240" y="84" width="333" height="22" fill="#6a8a72" rx="2"/>
+    <text x="582" y="100" font-weight="600">83.4</text>
+    <text x="230" y="140" text-anchor="end">Property vertical (n=122)</text>
+    <rect x="240" y="124" width="222" height="22" fill="#d4b896" rx="2"/>
+    <text x="471" y="140" font-weight="600">55.4</text>
+    <text x="230" y="180" text-anchor="end">Whole corpus (n=171)</text>
+    <rect x="240" y="164" width="215" height="22" fill="rgba(245,241,232,0.32)" rx="2"/>
+    <text x="464" y="180" font-weight="600">53.7</text>
+  </g>
+  <line x1="240" y1="205" x2="640" y2="205" stroke="rgba(245,241,232,0.3)"/>
+  <g font-family="system-ui,sans-serif" font-size="11" fill="rgba(245,241,232,0.55)">
+    <text x="240" y="222">0</text>
+    <text x="440" y="222" text-anchor="middle">50</text>
+    <text x="640" y="222" text-anchor="end">100</text>
+  </g>
+</svg>
 
 | Cohort | n | Mean | Strong (80+) | Weak (30–59) |
 |---|---|---|---|---|
