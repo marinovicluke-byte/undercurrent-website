@@ -78,8 +78,7 @@ export default function CompetitiveReality() {
           }}
         >
           <span className="uc-glow-word uc-glow-word--sage">Search</span>{' '}
-          changed. Your buyer asks ChatGPT now. Your business isn’t in the
-          answer.
+          has a new era.
         </h2>
 
         <p
