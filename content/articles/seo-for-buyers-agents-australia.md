@@ -165,7 +165,7 @@ Then start the citable-content and structured-data work for AI-engine visibility
 
 - [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo), the content and structured-data patterns that get pages cited inside ChatGPT.
 - [How to rank in ChatGPT search](/blog/how-to-rank-in-chatgpt-search), practical steps for getting named when a buyer asks ChatGPT for a recommendation.
-- [What is AI search optimisation in Australia](/blog/what-is-ai-search-optimisation-australia), the broader discipline buyers-agent GEO work sits inside.
+- [What is AI search optimisation in Australia](/blog/what-is-ai-search-optimisation-australia), the broader discipline buyers-agent [GEO](/glossary/what-is-generative-engine-optimisation) work sits inside.
 - [The best AI search agency in Australia: how to choose one](/blog/best-ai-search-agency-australia), what to look for if you're hiring out the AI-engine half.
 - [What is GEO? Generative engine optimisation explained](/blog/what-is-geo-generative-engine-optimisation-explained-australia), the technique stack behind getting cited by AI engines.
 

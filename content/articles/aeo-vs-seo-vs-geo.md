@@ -24,7 +24,7 @@ faqs:
 ---
 # AEO vs SEO vs GEO: Pick the One That Gets You Found
 
-If your agency is pitching AEO vs SEO vs GEO as three separate line items on the invoice, here's the page that sorts out which one actually makes your phone ring. Three letters apart. Very different work. Same job.
+If your agency is pitching [AEO](/glossary/what-is-answer-engine-optimisation) vs SEO vs [GEO](/glossary/what-is-generative-engine-optimisation) as three separate line items on the invoice, here's the page that sorts out which one actually makes your phone ring. Three letters apart. Very different work. Same job.
 
 > **Quick Answer:** SEO gets your page into Google's ranked list of blue links. AEO formats that same page so Google, Siri and the People Also Ask box can lift a clean one-line answer straight off it. GEO gets your business named and quoted inside the answer ChatGPT or Perplexity writes from scratch. You don't pick one. Build them in order: SEO foundation first, AEO next, GEO last.
 
@@ -39,7 +39,7 @@ We've audited the AI-search visibility of 69 articles across 37 Australian websi
 
 SEO is the discipline of earning a spot in a search engine's ranked list of links, the ten blue results you scroll on Google. AEO is the practice of structuring a page so an answer engine can lift a direct response off it, the bit that shows up in a featured snippet, an AI Overview, or out of a voice assistant. GEO is the work of getting your business named and quoted inside an answer a generative model writes from scratch, the kind you get from [ChatGPT search](/blog/how-to-rank-in-chatgpt-search), Gemini or Perplexity.
 
-GEO is short for generative engine optimisation, sometimes called AI search optimisation, and it's a real discipline, not a rebrand of SEO. Schema markup is a shared vocabulary that labels the parts of a page so machines read it the way a person would, and it sits underneath both AEO and GEO. Our [full breakdown of answer engine optimisation](/blog/what-is-answer-engine-optimisation) goes deeper on the AEO side, and [what AI search optimisation means for Australian businesses](/blog/what-is-ai-search-optimisation-australia) covers the GEO end. This page is the comparison, and the short version is: the same three pages get found everywhere or get found nowhere.
+GEO is short for generative engine optimisation, sometimes called [AI search optimisation](/glossary/what-is-ai-search-optimisation), and it's a real discipline, not a rebrand of SEO. Schema markup is a shared vocabulary that labels the parts of a page so machines read it the way a person would, and it sits underneath both AEO and GEO. Our [full breakdown of answer engine optimisation](/blog/what-is-answer-engine-optimisation) goes deeper on the AEO side, and [what AI search optimisation means for Australian businesses](/blog/what-is-ai-search-optimisation-australia) covers the GEO end. This page is the comparison, and the short version is: the same three pages get found everywhere or get found nowhere.
 
 ## How Much Are Australian Businesses Spending on This?
 

@@ -39,7 +39,7 @@ faqs:
 
 Your customers are already asking ChatGPT which plumber to call, which consultant to book, which agency to trust. The question is whether the AI answers with your business or your competitor's.
 
-**AI search optimisation** is the practice of structuring web content so AI-powered engines can extract, cite, and recommend it in response to natural-language queries. It builds on traditional SEO but adds layers that standard keyword optimisation ignores, things like answer density, named entities, and structured data.
+**AI search optimisation** is the practice of structuring web content so AI-powered engines can extract, cite, and recommend it in response to natural-language queries. It builds on traditional SEO but adds layers that standard keyword optimisation ignores, things like answer density, named entities, and structured data. The [short glossary definition](/glossary/what-is-ai-search-optimisation) gives the umbrella view; this guide is the playbook.
 
 This guide cuts through the acronym soup (GEO, AEO, LLMO, they're basically the same thing with different marketing names), explains what actually changes in your content, and gives you a five-minute test to see where you stand today.
 

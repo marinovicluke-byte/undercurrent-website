@@ -160,7 +160,7 @@ Almost always because someone published something fresher or better-structured o
 - [How to Rank in ChatGPT Search](/blog/how-to-rank-in-chatgpt-search): the other half of the AI-search split, and why a ChatGPT win doesn't carry to Perplexity.
 - [AI Search vs Traditional SEO in Australia](/blog/ai-search-vs-traditional-search-australia-2026): what changes when answer engines, not blue links, decide who gets seen.
 - [The AI Search Visibility Hub for Australia](/blog/cluster/seo-ai-visibility): the full map of getting cited across ChatGPT, Perplexity and Google AI Overviews.
-- [How to Compare AI Search Agencies in Australia](/blog/best-ai-search-agency-australia): what to actually check before you hand AEO work to an outside team.
+- [How to Compare AI Search Agencies in Australia](/blog/best-ai-search-agency-australia): what to actually check before you hand [AEO](/glossary/what-is-answer-engine-optimisation) work to an outside team.
 - [How a Buyers Agency Ranked on AI Search in Melbourne](/blog/how-to-rank-buyers-agency-ai-search-melbourne): a worked example of cadence and structure beating a bigger competitor.
 
 ## Sources

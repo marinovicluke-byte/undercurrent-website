@@ -29,7 +29,7 @@ faqs:
 ![Answer engine optimisation workflow for Australian businesses in five steps](./body-1.jpg)
 
 
-Your customer asks ChatGPT for a recommended Sydney accountant, an Adelaide buyers agent, or a Brisbane plumber, and an answer comes back in three sentences. No ten blue links. No scrolling. One name gets quoted, the rest don't exist. That's the new front door of buyer search, and answer engine optimisation is the work of being the business that gets quoted.
+Your customer asks ChatGPT for a recommended Sydney accountant, an Adelaide buyers agent, or a Brisbane plumber, and an answer comes back in three sentences. No ten blue links. No scrolling. One name gets quoted, the rest don't exist. That's the new front door of buyer search, and answer engine optimisation, [defined in plain English here](/glossary/what-is-answer-engine-optimisation), is the work of being the business that gets quoted.
 
 If you've spent the last decade chasing Google rankings, AEO is the discipline that decides whether your work still pays off. [About 49% of Australians used a generative AI tool in the past year](https://searchscope.com.au/industry-research/search-engine-usage-statistics-australia/), and the share is climbing every quarter. We've audited 32 Australian articles ranking for AI search keywords against [our 100-point Robin Search rubric](/blog/seo-ai-visibility-hub-australia) (version 2.0.0), and the spread between visible businesses and invisible ones is wider than you'd think. [Ahrefs' breakdown of AEO](https://ahrefs.com/blog/answer-engine-optimization/) lays out the same retrieval shifts at a global level. This guide unpacks the field for owners who want a real answer, not a sales pitch.
 

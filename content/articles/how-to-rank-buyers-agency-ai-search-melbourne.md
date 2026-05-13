@@ -74,7 +74,7 @@ Anonymised letters A-G do not correspond to firm-name order anywhere else in the
 
 Per-firm scores reflect between 2 and 8 audited articles per firm depending on each firm's blog volume; smaller samples carry wider confidence intervals. Scores measure structural fitness for AI search extraction at the time of the audit (May 2026), which is a separate question from any firm's service quality, market reputation, or commercial track record. Any audited firm can request a re-audit on a specified URL set; contact details are at the foot of the article.
 
-AI Engine Optimisation (AEO) is the practice of structuring content so that AI answer engines, ChatGPT, Perplexity, Google AI Overviews, Claude, Gemini, can extract, verify, and cite it. It's distinct from traditional SEO in that rankings aren't determined by backlinks or keyword density alone, but by how cleanly a page answers a specific query with verifiable, structured content.
+AI Engine Optimisation ([AEO](/glossary/what-is-answer-engine-optimisation)) is the practice of structuring content so that AI answer engines, ChatGPT, Perplexity, Google AI Overviews, Claude, Gemini, can extract, verify, and cite it. It's distinct from traditional SEO in that rankings aren't determined by backlinks or keyword density alone, but by how cleanly a page answers a specific query with verifiable, structured content.
 
 ---
 
