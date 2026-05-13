@@ -2,6 +2,7 @@ import { SERVICES } from '@/lib/data/services'
 import { SERVICES_V2 } from '@/lib/data/services-v2'
 import { LOCATIONS } from '@/lib/data/locations'
 import { getAllArticles } from '@/lib/articles'
+import { getAllGlossaryTerms } from '@/lib/glossary'
 
 const BASE = 'https://undercurrentautomations.com'
 
@@ -13,6 +14,7 @@ const HIDDEN_FROM_LLMS_TXT = new Set(['front-end-experience'])
 
 export async function GET() {
   const articles = getAllArticles()
+  const glossary = getAllGlossaryTerms()
 
   const spokeServices = SERVICES_V2
     .map(s => SERVICES.find(x => x.slug === s.slug))
@@ -39,6 +41,10 @@ ${orphanServices.map(renderService).join('\n')}
 ## Locations
 
 ${LOCATIONS.map(l => `- [${l.city}, ${l.region}](${BASE}/${l.slug}): ${l.metaDescription}`).join('\n')}
+
+## Glossary
+
+${glossary.map(t => `- [${t.term}](${BASE}/glossary/${t.slug}): ${t.shortDefinition}`).join('\n')}
 
 ## Blog
 
