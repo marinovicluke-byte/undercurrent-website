@@ -316,7 +316,7 @@ The gap is bridgeable. It is not a tooling problem or a budget problem. It is a 
 
 ### Does the Agency Source-Cite Like a Journalist or Like a Marketer?
 
-**Read three of the agency's recent blog posts.** Count outbound hyperlinks to government data sources, the [Australian Bureau of Statistics](https://www.abs.gov.au/), [ACCC](https://www.accc.gov.au/), [industry.gov.au](https://www.industry.gov.au/), Fair Work Commission, ATO, ASIC, peer-reviewed research, or primary organisational documentation from Google, Anthropic, OpenAI, or Schema.org. Compare to outbound links pointing to Semrush, Ahrefs, HubSpot, Wikipedia, or the agency's own older blog posts. The ratio is the Source Discipline tell. Agencies sourcing from primary documentation are writing for AI extraction; agencies sourcing from tool-vendor blogs are writing for keyword density.
+**Read three of the agency's recent blog posts.** Count outbound hyperlinks to government data sources, the [Australian Bureau of Statistics](https://www.abs.gov.au/), [ACCC](https://www.accc.gov.au/), [industry.gov.au](https://www.industry.gov.au/), Fair Work Commission, ATO, [ASIC](/glossary/what-is-asic), peer-reviewed research, or primary organisational documentation from Google, Anthropic, OpenAI, or Schema.org. Compare to outbound links pointing to Semrush, Ahrefs, HubSpot, Wikipedia, or the agency's own older blog posts. The ratio is the Source Discipline tell. Agencies sourcing from primary documentation are writing for AI extraction; agencies sourcing from tool-vendor blogs are writing for keyword density.
 
 ### Can They Score Their Own Content Against a Public Rubric?
 
