@@ -28,6 +28,9 @@ If your agency is pitching AEO vs SEO vs GEO as three separate line items on the
 
 > **Quick Answer:** SEO gets your page into Google's ranked list of blue links. AEO formats that same page so Google, Siri and the People Also Ask box can lift a clean one-line answer straight off it. GEO gets your business named and quoted inside the answer ChatGPT or Perplexity writes from scratch. You don't pick one. Build them in order: SEO foundation first, AEO next, GEO last.
 
+![AEO vs SEO vs GEO workflow for Australian businesses, from SEO foundations to GEO authority](./body-1.jpg)
+
+
 We've audited the AI-search visibility of 69 articles across 37 Australian websites, and the gap between the pages that show up in AI answers and the ones that don't almost never comes down to which acronym the agency sold. It comes down to whether the basics were done at all. Here's the plain version, the money behind it, and the three-layer check you can run this week.
 
 ## AEO vs SEO vs GEO: The Plain-English Version
@@ -156,6 +159,9 @@ First, the scores are low across the board. Of the 69 articles we audited agains
 **Layer one and most of layer two you can do yourself with a free afternoon and the checklist above.** Layer three is where outside help usually earns its fee.
 
 The DIY scope is real: claim and fill out your Google Business Profile, about 20 minutes of work, add basic schema with a plugin, rewrite your key pages answer-first, run the self-check. Where it gets hard is technical SEO on a messy site, producing content at any scale, building genuine off-site authority, and tracking whether AI tools actually name you. That's the work that tends to need a team, and you can see how we [work with clients](/about) if that's the route you're weighing. If you're getting quotes, the test is simple: ask them what's actually different between the three services they're charging for, and what they'd do first. If the answer isn't "fix the SEO foundations", be careful. [How to compare AI-search agencies in Australia](/blog/best-ai-search-agency-australia) helps you read a proposal properly.
+
+
+![AEO vs SEO vs GEO compared for Australian businesses, siloed services versus one layered plan](./body-2.jpg)
 
 ## Frequently Asked Questions
 
