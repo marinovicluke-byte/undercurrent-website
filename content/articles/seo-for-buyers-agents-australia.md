@@ -66,7 +66,7 @@ Google organic and the map pack are this guide's focus. The AI-engine half sits 
 
 **Two: a Google Business Profile set up as a service-area business.** Buyers agents usually visit clients or work remotely, so you hide your address and set service areas. Most generalist agencies leave it as a storefront listing or never claim it. Add categories, services, photos from real inspections, and a steady drip of reviews.
 
-**Three: structured data so engines and AI can read you.** Mark up your business with `RealEstateAgent` schema:
+**Three: structured data so engines and AI can read you.** Mark up the business with `RealEstateAgent` schema:
 
 ```json
 {
@@ -76,12 +76,11 @@ Google organic and the map pack are this guide's focus. The AI-engine half sits 
   "areaServed": ["Hawthorn VIC", "Camberwell VIC", "Kew VIC"],
   "priceRange": "$$$",
   "url": "https://yoursite.com.au",
-  "telephone": "+61 3 XXXX XXXX",
   "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "37"}
 }
 ```
 
-Google's [structured data guidance for local businesses](https://developers.google.com/search/docs/appearance/structured-data/local-business) and the [Schema.org RealEstateAgent type](https://schema.org/RealEstateAgent) define the fields.
+Google's [local-business structured data guide](https://developers.google.com/search/docs/appearance/structured-data/local-business) and the [Schema.org RealEstateAgent type](https://schema.org/RealEstateAgent) define the fields.
 
 ## What Does Buyers-Agent SEO Cost in Australia, and Is It Worth It?
 
@@ -97,17 +96,17 @@ A buyers agent's fee on a single purchase usually clears five figures, so one ex
 
 ## What Surprised Us Auditing 122 Property and Buyers-Agent Websites
 
-**We run Robin Search, our AI-search rubric, across hundreds of Australian small-business sites, and the property cohort told us three things the rankings alone don't.** As of May 2026, our property and buyers-agent corpus covers 122 articles across 50 distinct websites, with a mean quality score of 55.4 out of 100, middling, and weaker than it looks. The full breakdown:
+**Our Robin Search rubric across 122 property and buyers-agent pages says the property vertical averages 55.4 / 100, weaker than it looks.** The full breakdown:
 
-| Cohort | n (articles) | Hosts | Mean score | Median | Strong (80+) | Weak (30–59) |
-|---|---|---|---|---|---|---|
-| Property + buyers-agent vertical | 122 | 50 | 55.4 / 100 | 54.5 | 13 | 79 |
-| UC's own published pages | 16 | 1 | 83.4 / 100 | , | , | , |
-| Whole Robin Search corpus | 171 | , | 53.7 / 100 | , | , | , |
+| Cohort | n | Mean | Strong (80+) | Weak (30–59) |
+|---|---|---|---|---|
+| Property + buyers-agent vertical | 122 | 55.4 / 100 | 13 | 79 |
+| UC's own published pages | 16 | 83.4 / 100 | — | — |
+| Whole Robin Search corpus | 171 | 53.7 / 100 | — | — |
 
-*Source: UnderCurrent Robin Search corpus, as of May 2026. Rubric version 2.0.0. Numbers refresh as new audits land in Supabase.*
+*Source: UnderCurrent Robin Search corpus, as of May 2026. Numbers refresh as audits land in Supabase.*
 
-First, the spread is brutal: only 13 of those 122 pages scored 80 or above, while 79 sat in the weak band between 30 and 59. Most buyers-agent content isn't bad, it's forgettable, and forgettable is what AI engines skip. Second, the gap is mechanical: the high scorers had suburb pages, schema, and a Business Profile set up properly. The 28-point spread between our own pages and the vertical mean is almost entirely those three line items. Third, almost nobody in the cohort had structured data, so the firm that adds it gets a near-free head start in AI Overviews.
+Three things hit harder than the score sheet shows. The spread is brutal: 79 of 122 sit in the weak band. Most buyers-agent content isn't bad, it's forgettable, and forgettable is what AI engines skip. The gap is mechanical: high scorers had suburb pages, schema, and a Business Profile set up properly. And almost nobody had structured data, so the firm that adds it gets a near-free head start in AI Overviews.
 
 ## How to Start: A 90-Day SEO Plan for a Buyers Agency
 
