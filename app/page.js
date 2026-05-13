@@ -15,11 +15,11 @@ const DOMAIN = 'https://undercurrentautomations.com'
 
 export const metadata = {
   title: { absolute: 'AI Automation Agency Melbourne | UnderCurrent Automations' },
-  description: 'Melbourne AI automation agency. Custom workflows for lead gen, sales, content, finance and ops. Built on Xero, HubSpot, n8n. Live in 14 days.',
+  description: 'UnderCurrent Automations is a Melbourne AI automation agency for Australian small businesses. SEO and AI search, custom websites, AI integrations, AI training.',
   alternates: { canonical: DOMAIN },
   openGraph: {
     title: 'AI Automation Agency Melbourne | UnderCurrent Automations',
-    description: 'Melbourne AI automation agency. Custom workflows for lead gen, sales, content, finance and ops. Built on Xero, HubSpot, n8n. Live in 14 days.',
+    description: 'UnderCurrent Automations is a Melbourne AI automation agency for Australian small businesses. SEO and AI search, custom websites, AI integrations, AI training.',
     url: DOMAIN,
     type: 'website',
     images: ['/brand/og-card.png'],
@@ -27,7 +27,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'AI Automation Agency Melbourne | UnderCurrent Automations',
-    description: 'Melbourne AI automation agency serving Australia-wide. Custom workflows for lead gen, sales, content, finance and ops.',
+    description: 'UnderCurrent Automations is a Melbourne AI automation agency for Australian small businesses. SEO and AI search, custom websites, AI integrations, AI training.',
   },
 }
 
