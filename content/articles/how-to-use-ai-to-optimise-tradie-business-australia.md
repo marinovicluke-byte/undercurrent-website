@@ -39,7 +39,7 @@ Most tradies think AI means ChatGPT writing emails. That's 5% of what's actually
 
 AI for tradies is workflow automation that removes manual steps between enquiry and payment. **Workflow automation is a system where software completes multi-step business processes automatically based on triggers you set once.** When someone calls asking for a quote, AI can send them a price estimate, book their preferred time slot, send a confirmation SMS, and add the job to your calendar without you opening an app.
 
-The Australian Small Business and Family Enterprise Ombudsman's 2025 report found that 62% of tradies spend more than 10 hours weekly on administrative tasks. **Business process automation is the use of technology to execute recurring tasks or processes with minimal human intervention.** For tradies, this typically covers quoting, scheduling, invoicing, and follow-up communications.
+The Australian Small Business and Family Enterprise Ombudsman's 2025 report found that 62% of tradies spend more than 10 hours weekly on administrative tasks. **[Business process automation](/glossary/what-is-business-process-automation) is the use of technology to execute recurring tasks or processes with minimal human intervention.** For tradies, this typically covers quoting, scheduling, invoicing, and follow-up communications.
 
 Three types of AI tools matter for Australian trade businesses:
 
@@ -152,7 +152,7 @@ If you're nervous about the tech, start with one workflow. Automate quoting firs
 
 ## How Do You Calculate ROI on Tradie AI Automation?
 
-ROI for AI automation comes from three sources: time saved, jobs won, and cash flow improved. Here's how to calculate your actual return before buying anything.
+ROI for [AI automation](/glossary/what-is-ai-automation) comes from three sources: time saved, jobs won, and cash flow improved. Here's how to calculate your actual return before buying anything.
 
 **Time saved calculation:**
 1. Count monthly repetitive tasks (quotes sent, appointments booked, invoices created)

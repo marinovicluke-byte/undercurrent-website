@@ -27,7 +27,7 @@ faqs:
 ---
 # How to Hire an AI Automation Consultant in Melbourne
 
-> **Quick Answer:** An AI automation consultant in Melbourne typically charges $150-250/hour or $3,000-8,000 for a scoped project. Most small businesses see 3-4x ROI within the first month from workflow automation that saves 50-80 hours monthly. Before hiring, identify which processes burn the most time, lead follow-up, invoicing, reporting, or admin, and check if off-the-shelf tools like Xero or ServiceM8 can handle it first. Consultants add value when you need custom integrations, multi-system workflows, or strategic AI implementation beyond plug-and-play features.
+> **Quick Answer:** An [AI automation](/glossary/what-is-ai-automation) consultant in Melbourne typically charges $150-250/hour or $3,000-8,000 for a scoped project. Most small businesses see 3-4x ROI within the first month from workflow automation that saves 50-80 hours monthly. Before hiring, identify which processes burn the most time, lead follow-up, invoicing, reporting, or admin, and check if off-the-shelf tools like Xero or ServiceM8 can handle it first. Consultants add value when you need custom integrations, multi-system workflows, or strategic AI implementation beyond plug-and-play features.
 
 ![Five-step consultant hiring workflow for Melbourne AI automation business projects](./body-1.jpg)
 
@@ -39,7 +39,7 @@ faqs:
 | Automation audit | $800-1,500 | 1-2 weeks | Prioritised workflow map |
 | Single-system automation (e.g. invoicing) | $2,000-4,000 | 2-4 weeks | 10-20 hours saved/month |
 | Multi-system integration (CRM + accounting + scheduling) | $5,000-10,000 | 4-8 weeks | 40-60 hours saved/month |
-| Custom AI agent or chatbot | $8,000-15,000 | 8-12 weeks | Variable based on scope |
+| Custom [AI agent](/glossary/what-is-an-ai-agent) or chatbot | $8,000-15,000 | 8-12 weeks | Variable based on scope |
 | Ongoing support/maintenance | $500-1,500/month | Continuous | System monitoring, adjustments |
 
 Workflow automation is a system where software completes recurring tasks without manual input. AI automation consultants in Melbourne build workflow systems that connect your existing tools, CRM, accounting software, booking calendars, email, so repetitive tasks happen automatically. They're not selling you AI hype, they're wiring up your business so you spend less time on data entry and follow-up. According to a [McKinsey report on AI adoption](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai), 65% of organisations now use AI regularly, but only 6% are "fully enabled" with strategic implementation. Most businesses sit somewhere in the middle, running basic automation through embedded features in platforms like [Xero](https://www.xero.com/au/features/) or HubSpot but needing help with custom workflows that connect multiple systems.

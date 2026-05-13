@@ -50,7 +50,7 @@ The clearest way to understand it: a basic automation is a domino chain, knock t
 
 **AI agent** is defined as: software that observes data, reasons over it, and executes actions within set boundaries to complete a defined goal.
 
-**Business process automation** is defined as: using software to handle repetitive, rule-based tasks that previously required manual human effort.
+**[Business process automation](/glossary/what-is-business-process-automation)** is defined as: using software to handle repetitive, rule-based tasks that previously required manual human effort.
 
 **Agentic AI** is defined as: AI systems capable of independent decision-making across multiple steps, as opposed to single-turn chatbots or static rule-based tools.
 
