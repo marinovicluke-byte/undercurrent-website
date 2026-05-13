@@ -17,7 +17,7 @@ faqs:
     a: "Small businesses often benefit more. AI engines pick sources by structure, entity clarity and recency rather than domain size, so a well-built service page from a solo buyers agent can be cited ahead of a national franchise's old one. The barrier is content structure, not budget."
 author: Luke Marinovic
 datePublished: 2026-05-12
-dateModified: 2026-05-12
+dateModified: 2026-05-13
 complianceNote: null
 ai-assisted: true
 source: claude-code
@@ -26,6 +26,8 @@ source: claude-code
 # AI Search Optimisation
 
 **AI Search Optimisation is the discipline of getting your business found and cited across AI-powered search, Google AI Overviews, ChatGPT, Perplexity, Claude and the AI agents that browse for users, not just ranked in the list of blue links.**
+
+Across UC's 146-article Australian corpus audit, 22% of audited sites published an llms.txt file and 35% named any AI platform like ChatGPT or Perplexity in body copy, most sites still treat AI surfaces as a footnote, not a primary channel.
 
 AI Search Optimisation is the umbrella term for everything below it. [Answer Engine Optimisation](/glossary/what-is-answer-engine-optimisation) handles the extracted answers, the featured snippet, the AI Overview, the voice reply. [Generative Engine Optimisation](/glossary/what-is-generative-engine-optimisation) handles being named inside a chat answer from ChatGPT, Perplexity or Claude. There's also a newer slice, optimising for AI agents that browse and act on a person's behalf, sometimes called search agent optimisation, where the "reader" is software deciding which provider to shortlist. Three names, one job. The signals overlap so heavily that running them as separate projects just duplicates the work.
 

@@ -17,7 +17,7 @@ faqs:
     a: "Phrase a real question as a heading, answer it directly in the first one or two sentences underneath (self-contained, around 40 to 60 words), put the supporting detail below that, and mark the page up with schema. Tables and step lists get extracted especially cleanly. Then make sure the page is genuinely authoritative on the topic, structure alone won't carry a thin page."
 author: Luke Marinovic
 datePublished: 2026-05-12
-dateModified: 2026-05-12
+dateModified: 2026-05-13
 complianceNote: null
 ai-assisted: true
 source: claude-code
@@ -26,6 +26,8 @@ source: claude-code
 # Answer Engine Optimisation (AEO)
 
 **Answer Engine Optimisation is structuring your content so an answer engine, Google's featured snippets and AI Overviews, Perplexity, voice assistants like Siri and Alexa, extracts a direct answer from your page and presents it as the answer.**
+
+Across UC's 146-article Australian corpus audit, only 14% of sites used question-format H2 headings on more than half of their sections, and 0% carried a labelled Quick Answer block at the top, the two cheapest structural fixes for snippet eligibility.
 
 AEO and SEO answer different questions. SEO asks "how do I rank in the list of links?" AEO asks "how do I become the answer that sits above the list, or replaces it?" An answer engine doesn't show ten options. It pulls one passage, names a source or two, and that passage is what most people read. So AEO optimises the shape of your content, not just its authority: a question phrased the way people ask it as the heading, the answer in the first one or two sentences underneath (self-contained, around 40 to 60 words), supporting detail after that, and structured data so the engine can tell what it's looking at. [Google's documentation on featured snippets](https://developers.google.com/search/docs/appearance/featured-snippets) describes them as a single answer pulled from a page and shown above the regular results; in practice, tables, definition lists and step lists get extracted more cleanly than walls of prose.
 
