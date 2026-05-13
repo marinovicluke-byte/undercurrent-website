@@ -28,6 +28,8 @@ source: claude-code
 
 **SEO, search engine optimisation, is the practice of helping search engines understand your content and helping users find your site and decide whether to visit, now applied across Google's blue links, AI Overviews, ChatGPT citations and every other surface that connects a query to a result.**
 
+Across UC's 146-article Australian corpus audit, the median Australian site scored 51/100 against our AI-search rubric and only 1% of audited sites reached the 80+ Strong band; UC's own articles average 84/100. The gap between table-stakes execution and citation-worthy execution is wider than most owners assume.
+
 [Google's own definition](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) puts it plainly: SEO "is about helping search engines understand your content, and helping users find your site and make a decision about whether they should visit your site through a search engine." That job hasn't changed. What has changed is the number of surfaces it applies to.
 
 For most of the 2010s, search meant one thing: a page of ten blue links on Google. The discipline was built around that surface, keyword research, backlinks, technical crawlability, on-page structure. Those fundamentals still hold. What's expanded is the list of places where the same question gets answered.

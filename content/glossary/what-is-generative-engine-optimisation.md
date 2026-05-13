@@ -17,7 +17,7 @@ faqs:
     a: "Yes, if your customers ask AI tools for recommendations. Google rankings don't guarantee you get cited in a ChatGPT answer, the engine picks sources by structure, entity clarity and recency. If a meaningful share of your enquiries now start in an AI chat, GEO is the only way to be in those answers."
 author: Luke Marinovic
 datePublished: 2026-05-12
-dateModified: 2026-05-12
+dateModified: 2026-05-13
 complianceNote: null
 ai-assisted: true
 source: claude-code
@@ -26,6 +26,8 @@ source: claude-code
 # Generative Engine Optimisation (GEO)
 
 **Generative Engine Optimisation is the practice of getting your business named and cited inside AI-generated answers, the responses from ChatGPT, Perplexity, Claude and Google AI Overviews, instead of ranked as a blue link.**
+
+Across UC's 146-article Australian corpus audit, 0% of audited non-UC sites carried a labelled Quick Answer block at the top of the page, the single feature AI engines lift most cleanly as a citation.
 
 GEO and SEO want the same thing, to be the source people trust, but they reward different things. Classic SEO chases position one on a page of ten links: backlinks, exact-match anchor text, domain age. A generative engine never shows that page. It reads dozens of sources, writes one answer, and names two or three businesses inside it. So GEO optimises for being quotable: a direct answer in the first two sentences of a section, structured data the model can lift cleanly, dense and consistent mentions of your entity (business name, suburb, service), and citations from sources the model already trusts. The term comes from a 2024 research paper by Aggarwal and colleagues at Princeton, Georgia Tech and IIT Delhi, who found [content tuned for those signals can lift visibility in generative answers by up to 40%](https://arxiv.org/abs/2311.09735). It overlaps heavily with [Answer Engine Optimisation](/glossary/what-is-answer-engine-optimisation) and sits under the broader discipline of [AI Search Optimisation](/glossary/what-is-ai-search-optimisation). Our [full GEO explainer for Australian businesses](/blog/what-is-geo-generative-engine-optimisation-explained-australia) walks through the playbook end to end.
 
