@@ -25,7 +25,7 @@ faqs:
 
 > **Quick Answer:** The best marketing automation software for Australian small businesses in 2026 depends on your specific pain point. For email-focused campaigns, ActiveCampaign and Mailchimp offer strong automation at under $50/month. For businesses needing CRM integration with Xero, HubSpot and Zoho CRM are the top choices. If you want custom workflows without developer costs, Make (formerly Integromat) and n8n deliver the most flexibility for $10-30/month.
 
-Most marketing automation reviews compare features you'll never use. This one's different. We're looking at which tools solve the three biggest problems Australian SMEs face with marketing automation in 2026: cost (because $500/month isn't realistic), complexity (because you don't have a dedicated marketing team), and integration with the local systems you already use.
+Most marketing automation reviews compare features you'll never use. This one's different. We're looking at which tools solve the three biggest problems Australian SMEs face with marketing automation in 2026: cost (because $500/month isn't realistic), complexity (because you don't have a dedicated marketing team), and integration with the local systems you already use. Want the one-screen definition before the platform comparison? Our [marketing automation glossary entry](/glossary/what-is-marketing-automation) covers what it is and what good looks like.
 
 Here's what we tested, how much it actually costs when you're running a real business, and which pain points each platform solves best.
 

@@ -44,7 +44,7 @@ faqs:
 
 ## What Is an AI Agent for Business?
 
-An AI agent is autonomous software that perceives its environment, makes decisions, and takes actions without a human triggering each step. Unlike a standard automation that follows a fixed script, an AI agent can handle unexpected inputs, choose between options, and complete multi-step workflows from start to finish.
+An AI agent is autonomous software that perceives its environment, makes decisions, and takes actions without a human triggering each step. Unlike a standard automation that follows a fixed script, an AI agent can handle unexpected inputs, choose between options, and complete multi-step workflows from start to finish. For the short, one-screen definition with the workflow-vs-agent distinction, see our [AI agent glossary entry](/glossary/what-is-an-ai-agent).
 
 The clearest way to understand it: a basic automation is a domino chain, knock the first one, the rest fall in order. An AI agent is more like a junior employee, you give it a goal, and it figures out the steps.
 
