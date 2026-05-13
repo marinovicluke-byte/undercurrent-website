@@ -27,6 +27,9 @@ faqs:
 ---
 > **Quick Answer:** Customer onboarding automation for service businesses is the system that handles welcome messages, deposit invoices, calendar bookings, intake forms, and paperwork the moment a customer says yes, without you chasing. Done well it saves around 90 minutes per new client and stops the deal-won-to-job-start window leaking. Ship this first.
 
+![Customer onboarding automation workflow for Australian service businesses from CRM trigger to team handover](./body-1.jpg)
+
+
 | Onboarding step | What gets automated | Time saved per client |
 |---|---|---|
 | Welcome message | SMS or email triggered on deal-won | 10 min |
@@ -137,6 +140,9 @@ Use the customer's first name. Reference the specific job they enquired about, n
 The automation handles the timing and the consistency. You handle the tone. A good template feels more personal than a rushed email you write at 9pm because you actually thought about it once and got it right. Clients in [Perth](/ai-automation-perth) tell us the automated welcome SMS gets more replies than their old manual ones, because the manual ones were always late.
 
 ---
+
+
+![Customer onboarding automation comparison showing Australian service business manual versus automated client workflows](./body-2.jpg)
 
 ## Frequently Asked Questions
 
