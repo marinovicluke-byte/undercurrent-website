@@ -31,7 +31,7 @@ You've been in business for five years. You do good work. Your customers are hap
 
 The tradie with half your experience but 50 Google reviews? They're in the local 3-pack. They get the call. You don't.
 
-Here's what the data says about why that happens, and what you can do about it.
+Here's what the data says about why that happens, and what you can do about it. For the one-screen definition of the listing that drives all of this, see our [Google Business Profile glossary entry](/glossary/what-is-google-business-profile).
 
 ## How Many Google Reviews Does a Tradie Actually Need to Rank Locally?
 

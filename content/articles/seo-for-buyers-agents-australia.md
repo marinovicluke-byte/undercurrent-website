@@ -31,7 +31,7 @@ faqs:
 
 The buyer who used to ring three buyers agents now asks ChatGPT for one and books the first name it gives back. SEO for buyers agents in Australia is the work of being that name across every surface a purchase enquiry passes through. It is not the same job as "real estate SEO", because a buyers agent sells representation and judgement, not listings, and the searches that bring a client are different.
 
-This guide is the plain-English playbook: how buyers actually search, the four surfaces you need to show up on, the three line items most generalist agencies quietly skip for buyers agents, what it costs, and what we found auditing 122 property and buyers-agent websites. No 40-point checklist, just the order of operations that moves the needle.
+This guide is the plain-English playbook: how buyers actually search, the four surfaces you need to show up on, the three line items most generalist agencies quietly skip for buyers agents, what it costs, and what we found auditing 122 property and buyers-agent websites. No 40-point checklist, just the order of operations that moves the needle. For the one-screen definition of the discipline this guide sits inside, see our [Local SEO glossary entry](/glossary/what-is-local-seo).
 
 ## What Does SEO for Buyers Agents in Australia Actually Mean?
 
