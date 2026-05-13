@@ -31,7 +31,7 @@ faqs:
 |-----|-------------------|-----------------|
 | Above-fold quick-answer block | 26/27 articles failing AI extraction | High, first thing AI engines pull |
 | Exactly one H1 | Multiple H1s breaking heading hierarchy | High, blocks AI Overview extraction |
-| Article + FAQPage + RealEstateAgent schema | Missing or incomplete JSON-LD | High, entity disambiguation |
+| Article + [FAQPage](/glossary/what-is-faq-schema) + RealEstateAgent schema | Missing or incomplete JSON-LD | High, entity disambiguation |
 | sameAs on Person/RealEstateAgent | Most audited articles missing this signal | Medium, brand entity signal |
 | Tier-1 source discipline | 3/27 articles link to .gov.au sources | Medium, E-E-A-T and trust score |
 | Comparison tables | Only 2/27 articles have them | Medium, AI extraction signal |
@@ -43,7 +43,7 @@ This is the Melbourne instalment in UC's state-by-state buyers-agency AI-search 
 
 ## What Does the Robin Search Audit Actually Show?
 
-**The Melbourne buyers-agency vertical is structurally underprepared for AI search, the foundations most firms have built for traditional SEO aren't the foundations AI engines extract from.**
+**The Melbourne buyers-agency vertical is structurally underprepared for AI search, the foundations most firms have built for traditional [SEO](/glossary/what-is-seo) aren't the foundations AI engines extract from.**
 
 Robin Search is UC's proprietary 100-point content-intelligence rubric across 9 scoring categories, built by reverse-engineering 12 months of UC's own AI-citation data against [Google Search Central documentation](https://developers.google.com/search/docs), the Search Quality Rater Guidelines, and [Schema.org entity definitions](https://schema.org/RealEstateAgent). Rubric version 3.2.
 
@@ -82,7 +82,7 @@ AI Engine Optimisation ([AEO](/glossary/what-is-answer-engine-optimisation)) is 
 
 **The short answer: their content is written for humans to scroll, not for AI engines to extract.**
 
-AI engines don't read a page top-to-bottom. They parse it in discrete chunks, looking for a direct answer in the first 60 words, scanning H2 and H3 headings for structured sections, then checking schema markup to confirm entity identity. If none of those signals are present, the page gets passed over regardless of how good the underlying advice is.
+AI engines don't read a page top-to-bottom. They parse it in discrete chunks, looking for a direct answer in the first 60 words, scanning H2 and H3 headings for structured sections, then checking [schema markup](/glossary/what-is-schema-markup) to confirm entity identity. If none of those signals are present, the page gets passed over regardless of how good the underlying advice is.
 
 The Robin Search audit identified six structural defects appearing across the Melbourne buyers-agency corpus that directly suppress AI visibility.
 

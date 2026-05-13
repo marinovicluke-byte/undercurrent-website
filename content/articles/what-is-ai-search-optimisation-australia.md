@@ -31,15 +31,15 @@ faqs:
 | Strategy | What it targets | Estimated impact |
 |---|---|---|
 | Answer-first page structure | AI Overview citation, Perplexity extraction | High, most-cited pages lead with direct answers |
-| FAQ schema (JSON-LD) | ChatGPT, Google FAQPage results | High, structured questions are extracted directly |
+| [FAQ schema](/glossary/what-is-faq-schema) (JSON-LD) | ChatGPT, Google FAQPage results | High, structured questions are extracted directly |
 | Encyclopedic definition paragraphs | ChatGPT (favours factual, neutral content) | Medium-High, neutral tone ranks for "what is" queries |
 | Named entity density | All AI engines (knowledge graph building) | Medium, entities help AI place your business in context |
-| Google Business Profile signals | Local AI Overviews, map citations | High for local trades, location + service pairing is key |
+| [Google Business Profile](/glossary/what-is-google-business-profile) signals | Local AI Overviews, map citations | High for local trades, location + service pairing is key |
 | Hyperlinked source citations | Perplexity (follows outbound links to verify claims) | Medium, authority domain links increase citation rate |
 
 Your customers are already asking ChatGPT which plumber to call, which consultant to book, which agency to trust. The question is whether the AI answers with your business or your competitor's.
 
-**AI search optimisation** is the practice of structuring web content so AI-powered engines can extract, cite, and recommend it in response to natural-language queries. It builds on traditional SEO but adds layers that standard keyword optimisation ignores, things like answer density, named entities, and structured data. The [short glossary definition](/glossary/what-is-ai-search-optimisation) gives the umbrella view; this guide is the playbook.
+**AI search optimisation** is the practice of structuring web content so AI-powered engines can extract, cite, and recommend it in response to natural-language queries. It builds on traditional [SEO](/glossary/what-is-seo) but adds layers that standard keyword optimisation ignores, things like answer density, named entities, and [structured data](/glossary/what-is-schema-markup). The [short glossary definition](/glossary/what-is-ai-search-optimisation) gives the umbrella view; this guide is the playbook.
 
 This guide cuts through the acronym soup (GEO, AEO, LLMO, they're basically the same thing with different marketing names), explains what actually changes in your content, and gives you a five-minute test to see where you stand today.
 

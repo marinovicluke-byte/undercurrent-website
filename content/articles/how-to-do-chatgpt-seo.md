@@ -24,7 +24,7 @@ faqs:
 ---
 # How to Do ChatGPT SEO in 30 Minutes
 
-> **Quick answer:** ChatGPT SEO is the work of making your business the answer ChatGPT gives when someone asks for a recommendation in your field. No algorithm to game, no ad slot to buy. You get there by being easy to find, easy to trust, and described consistently everywhere it matters: your website, your Google Business Profile, your reviews, the directories you appear in, and the odd best-of list. Most of the groundwork takes about 30 minutes. Start with the basics today.
+> **Quick answer:** ChatGPT SEO is the work of making your business the answer ChatGPT gives when someone asks for a recommendation in your field. No algorithm to game, no ad slot to buy. You get there by being easy to find, easy to trust, and described consistently everywhere it matters: your website, your [Google Business Profile](/glossary/what-is-google-business-profile), your reviews, the directories you appear in, and the odd best-of list. Most of the groundwork takes about 30 minutes. Start with the basics today.
 
 ![ChatGPT SEO workflow in five steps for Australian service businesses](./body-1.jpg)
 
@@ -80,7 +80,7 @@ Steps two and three move the most weight for the least effort, so if you only ha
 
 ## How Do You Add the Schema That ChatGPT Reads?
 
-**Schema markup is a small block of structured data in your page's code that spells out, in machine-readable terms, what your business is, so crawlers don't have to guess.** For a service business the type you want is LocalBusiness, or a more specific sub-type like Plumber, Electrician, or Accountant. Paste this into your homepage, replace every value with your real details, and you're done:
+**[Schema markup](/glossary/what-is-schema-markup) is a small block of structured data in your page's code that spells out, in machine-readable terms, what your business is, so crawlers don't have to guess.** For a service business the type you want is LocalBusiness, or a more specific sub-type like Plumber, Electrician, or Accountant. Paste this into your homepage, replace every value with your real details, and you're done:
 
 ```json
 {

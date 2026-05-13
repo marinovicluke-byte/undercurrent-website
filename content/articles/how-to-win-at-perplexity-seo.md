@@ -73,7 +73,7 @@ Three things stood out. First, freshness, not length, split the bands. Pages bel
 
 ## What Schema and Structure Does Perplexity Prefer?
 
-**Structured, dated, machine-readable content, plus a crawler door left open.** PerplexityBot is the crawler Perplexity uses to fetch and index pages, so the first move is making sure your robots.txt isn't blocking it. The second is putting `datePublished` and `dateModified` on your articles, and FAQ schema on your question-and-answer blocks, so the engine can read the answer cleanly. Article schema with an `author` and an `organization` block helps the entity-clarity side; it tells the crawler who published this. Here's the FAQ schema shape:
+**Structured, dated, machine-readable content, plus a crawler door left open.** PerplexityBot is the crawler Perplexity uses to fetch and index pages, so the first move is making sure your robots.txt isn't blocking it. The second is putting `datePublished` and `dateModified` on your articles, and [FAQ schema](/glossary/what-is-faq-schema) on your question-and-answer blocks, so the engine can read the answer cleanly. Article schema with an `author` and an `organization` block helps the entity-clarity side; it tells the crawler who published this. Here's the FAQ schema shape:
 
 ```json
 {

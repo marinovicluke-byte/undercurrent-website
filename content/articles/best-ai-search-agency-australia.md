@@ -33,7 +33,7 @@ faqs:
 ---
 # Best AI Search Agency in Australia: What the Data Shows
 
-> **Quick Answer:** Most Australian SEO agencies are optimising for a search engine that no longer runs the game. We audited 86 articles across 22 Australian agency domains using our Robin Search content intelligence system and found a 25.5-point gap on a 100-point scale between UC content and the industry average. Fix Answer Architecture and Source Discipline first.
+> **Quick Answer:** Most Australian [SEO](/glossary/what-is-seo) agencies are optimising for a search engine that no longer runs the game. We audited 86 articles across 22 Australian agency domains using our Robin Search content intelligence system and found a 25.5-point gap on a 100-point scale between UC content and the industry average. Fix Answer Architecture and Source Discipline first.
 
 | Category | UC Score | AU Agency Avg | Gap |
 |---|---|---|---|
@@ -122,9 +122,9 @@ The framework was built by reverse-engineering what gets cited and what doesn't.
 | Source Discipline | 14 | Inline hyperlinks to primary sources (gov.au, peer-reviewed, original data) | AI crawlers verify claims by following outbound links. Tool-vendor blogs lower citation weight. |
 | Authority and E-E-A-T | 14 | Named-author signal, first-party data presence, demonstrated experience | Direct mapping to [Google's quality rater framework](https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf). |
 | Entity and Topic Coverage | 12 | Density and diversity of named entities (people, tools, locations, regulations) | Entities are how AI engines map a page into a knowledge graph. |
-| Technical Foundation | 12 | Page speed, structured data validity, JS-render parity, indexability | Crawlers cannot cite what they cannot read. |
+| Technical Foundation | 12 | Page speed, [structured data](/glossary/what-is-schema-markup) validity, JS-render parity, indexability | Crawlers cannot cite what they cannot read. |
 | Internal Architecture | 10 | Hub-and-spoke linking, anchor text quality, related-article signals | Topical authority is built across pages, not within one. |
-| AI Search Surface | 8 | FAQPage schema, `llms.txt` presence, extractable definitions | The structured signals AI engines look for first. |
+| AI Search Surface | 8 | [FAQPage](/glossary/what-is-faq-schema) schema, `llms.txt` presence, extractable definitions | The structured signals AI engines look for first. |
 | Local Relevance | 8 | Suburb-level specificity, industry + location pairing, local entity references | Local intent is the highest-converting AI search query type. |
 | Editorial Voice and Intent | 6 | Section-level intent matching (what a heading promises vs delivers) | Mismatched intent is a common reason for citation drops. |
 
@@ -172,7 +172,7 @@ We also excluded UC's own client-deliverable case studies and audit reports. The
 
 ### Anonymous Agency A, 47/100
 
-**A 4,200-word pillar-style article on local SEO for trades businesses.** The agency is well-regarded, the prose is professional, the content is comprehensive on its surface.
+**A 4,200-word pillar-style article on [local SEO](/glossary/what-is-local-seo) for trades businesses.** The agency is well-regarded, the prose is professional, the content is comprehensive on its surface.
 
 Where the points went:
 

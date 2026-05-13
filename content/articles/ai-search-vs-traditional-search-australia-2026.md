@@ -24,7 +24,7 @@ faqs:
 ---
 # What Changed: AI Search vs Traditional Search in Australia
 
-> **Quick answer:** In Australia, AI search and traditional search now run side by side. By 2026, AI tools answer a big share of the queries Google used to own, so the win isn't just ranking a page, it's getting your business named in the answer. The good news: most classic SEO fundamentals still do that job. A short list of old tactics is dead. Answer first, or get skipped.
+> **Quick answer:** In Australia, AI search and traditional search now run side by side. By 2026, AI tools answer a big share of the queries Google used to own, so the win isn't just ranking a page, it's getting your business named in the answer. The good news: most classic [SEO](/glossary/what-is-seo) fundamentals still do that job. A short list of old tactics is dead. Answer first, or get skipped.
 
 ![Five-step AI search vs traditional search readiness workflow for Australian businesses building AI visibility](./body-1.jpg)
 
@@ -67,7 +67,7 @@ When we audit competitor and our own articles on the same yardstick, the AI-sear
 
 ## How Do You Win Both AI Search and Traditional Search in Australia?
 
-One content system, two payoffs, if you build pages that answer cleanly and prove their claims. Five moves cover most of it. One, answer first: every section opens with the takeaway, so a model can quote it without hunting. Two, add structured data: mark up FAQs and articles so engines parse your content reliably. Three, fix entity consistency: same business name, address and service list everywhere, plus genuine reviews. Four, publish first-hand proof: numbers, examples and observations a competitor can't copy, since an AI summariser can rewrite generic content, not your data. Five, track citations: check whether ChatGPT, Gemini and Google's AI Overviews are naming you. Here's a starter FAQ schema block you can adapt and drop into a page's `<head>`:
+One content system, two payoffs, if you build pages that answer cleanly and prove their claims. Five moves cover most of it. One, answer first: every section opens with the takeaway, so a model can quote it without hunting. Two, add [structured data](/glossary/what-is-schema-markup): mark up FAQs and articles so engines parse your content reliably. Three, fix entity consistency: same business name, address and service list everywhere, plus genuine reviews. Four, publish first-hand proof: numbers, examples and observations a competitor can't copy, since an AI summariser can rewrite generic content, not your data. Five, track citations: check whether ChatGPT, Gemini and Google's AI Overviews are naming you. Here's a starter [FAQ schema](/glossary/what-is-faq-schema) block you can adapt and drop into a page's `<head>`:
 
 ```html
 <script type="application/ld+json">
@@ -90,7 +90,7 @@ If you'd rather have someone do the build, [UnderCurrent's SEO and AI visibility
 
 ## How Should an Australian Small Business Start This Week?
 
-Start small, with one engine and your three best pages, not a full rebuild. Day one: pick the engine your customers actually use, usually ChatGPT or Google's AI Overviews, and search a few real service-plus-suburb queries to see who gets named. Day two: take your three highest-value pages and rewrite the opening of each section so the answer comes first, in plain language. Day three: add FAQ and article schema to those pages, using questions real customers type. Day four: tidy up your business name, address and service list so they match across your site, Google Business Profile and any directories. Day five: set a reminder every 30 days to re-run the citation check. Five focused jobs, for about $0 in tools. If you want a shortlist of help, UnderCurrent's guide on [how to compare AI search agencies in Australia](/blog/best-ai-search-agency-australia) is a good filter, [what AI automation means for small business](/blog/what-is-ai-automation-australia) shows where this connects, and you can [talk to the UnderCurrent team](/contact) if you'd rather not DIY. One week, one engine, three pages.
+Start small, with one engine and your three best pages, not a full rebuild. Day one: pick the engine your customers actually use, usually ChatGPT or Google's AI Overviews, and search a few real service-plus-suburb queries to see who gets named. Day two: take your three highest-value pages and rewrite the opening of each section so the answer comes first, in plain language. Day three: add FAQ and article schema to those pages, using questions real customers type. Day four: tidy up your business name, address and service list so they match across your site, [Google Business Profile](/glossary/what-is-google-business-profile) and any directories. Day five: set a reminder every 30 days to re-run the citation check. Five focused jobs, for about $0 in tools. If you want a shortlist of help, UnderCurrent's guide on [how to compare AI search agencies in Australia](/blog/best-ai-search-agency-australia) is a good filter, [what AI automation means for small business](/blog/what-is-ai-automation-australia) shows where this connects, and you can [talk to the UnderCurrent team](/contact) if you'd rather not DIY. One week, one engine, three pages.
 
 
 ![Before and after comparison of traditional search versus AI search for Australian businesses](./body-2.jpg)
