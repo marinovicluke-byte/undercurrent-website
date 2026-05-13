@@ -26,7 +26,7 @@ faqs:
 
 > **Quick Answer:** GEO ([Generative Engine Optimisation](/glossary/what-is-generative-engine-optimisation)) for buyers agents is the work of setting up your site so ChatGPT, Gemini, Perplexity, and Google's AI Overviews cite your firm by name when an Australian property buyer asks "who's the best buyers agent near me?" Hit the rubric: a direct one-sentence answer up top, schema-marked services, named-entity density, and tier-1 citations on every claim. Win the citation, win the lead.
 
-A note on terminology. **GEO for buyers agents** in this guide means *Generative Engine Optimisation*, the AI-search version of SEO. Some real-estate writers use "GEO" as shorthand for *geographic targeting*. That's not what we mean. We're talking about getting your buyers agency surfaced inside AI answer engines.
+A note on terminology. **GEO for buyers agents** in this guide means *Generative Engine Optimisation*, the AI-search version of [SEO](/glossary/what-is-seo). Some real-estate writers use "GEO" as shorthand for *geographic targeting*. That's not what we mean. We're talking about getting your buyers agency surfaced inside AI answer engines.
 
 The shift matters now because AI use among Australian businesses is climbing fast. The [Australian Bureau of Statistics 2024 release](https://www.abs.gov.au/statistics/industry/industry-overview/australian-industry/latest-release) reported 24% of Australian businesses with 5–200 employees used AI in 2024, up from 8% in 2022. [HubSpot's 2025 APAC business growth report](https://offers.hubspot.com/apac/business-growth-australia-2025) calls GEO "a core marketing channel" across SaaS, eCommerce, corporate services, healthcare, finance, and hospitality. Buyers agents who treat their site like a 2018 SEO play will keep losing leads to firms that show up inside the AI answer itself.
 
@@ -50,7 +50,7 @@ GEO is your way onto that shortlist. It runs on five levers, all measurable, all
 
 [![Five steps from website to AI citation](./body-1.jpg)](#)
 
-Generative Engine Optimisation is the work of setting up your published content so AI engines (ChatGPT, Gemini, Perplexity, Claude, Google's AI Overviews) pull from it and cite it inside their answers. It's an extension of technical SEO with three differences. First, it rewards direct, extractable answers over keyword-padded prose. Second, it weights structured data heavily, because AI engines read JSON-LD before HTML. Third, it rewards entity density (named tools, suburbs, regulators, dollar figures), because entities are how engines tell one firm apart from the next.
+Generative Engine Optimisation is the work of setting up your published content so AI engines (ChatGPT, Gemini, Perplexity, Claude, Google's AI Overviews) pull from it and cite it inside their answers. It's an extension of technical SEO with three differences. First, it rewards direct, extractable answers over keyword-padded prose. Second, it weights [structured data](/glossary/what-is-schema-markup) heavily, because AI engines read JSON-LD before HTML. Third, it rewards entity density (named tools, suburbs, regulators, dollar figures), because entities are how engines tell one firm apart from the next.
 
 For a buyers agent, the practical question becomes: when a Toorak couple types "should I use a buyers agent or do it myself" into Perplexity, which firms get named in the answer? Right now the cited pages are usually general-information ones (REIA, government sites, big media). GEO is how you trade your way onto that page.
 

@@ -24,7 +24,7 @@ faqs:
 ---
 # SEO for Buyers Agents in Australia: Win More Clients
 
-> **Quick Answer:** SEO for buyers agents in Australia means getting your firm in front of buyers the moment they search "buyers agent [suburb]" on Google, in the local map pack, in AI Overviews, and inside ChatGPT. Most buyers-agent sites lose on suburb-level intent and Google Business Profile, not on backlinks. Fix those two first, then everything else.
+> **Quick Answer:** SEO for buyers agents in Australia means getting your firm in front of buyers the moment they search "buyers agent [suburb]" on Google, in the local map pack, in AI Overviews, and inside ChatGPT. Most buyers-agent sites lose on suburb-level intent and [Google Business Profile](/glossary/what-is-google-business-profile), not on backlinks. Fix those two first, then everything else.
 
 ![Five-step SEO for buyers agents in Australia workflow chart with claim and schema steps](./body-1.jpg)
 
@@ -60,7 +60,7 @@ Google organic and the map pack are this guide's focus. The AI-engine half sits 
 
 ## The Three SEO Line Items Generalist Agencies Skip for Buyers Agents
 
-**Generalist real estate SEO agencies skip suburb landing pages, service-area Google Business Profiles, and structured data, the three things buyers-agent SEO lives or dies on.**
+**Generalist real estate SEO agencies skip suburb landing pages, service-area Google Business Profiles, and [structured data](/glossary/what-is-schema-markup), the three things buyers-agent SEO lives or dies on.**
 
 **One: real suburb landing pages, not a dropdown.** Every suburb you genuinely service gets its own page with local detail, auction trends, what a buyer there is up against, a real example. Not a thin doorway page. A buyers agent covering the inner east should have pages for Hawthorn, Camberwell, and Kew that a local would recognise as informed.
 

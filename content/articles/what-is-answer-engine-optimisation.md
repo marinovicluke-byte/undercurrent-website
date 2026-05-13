@@ -24,7 +24,7 @@ faqs:
 ---
 # What is Answer Engine Optimisation? A Plain-English Guide
 
-> **Quick Answer:** Answer engine optimisation makes your business one of the three citations an AI hands a buyer, instead of one of ten blue links they scroll past. The work is structural: definitional answers, schema markup, citation-friendly sources, and weekly tracking. Australian small businesses with decent Google rankings often have zero AI citations on the same queries. The fix is repeatable. Citations beat clicks now.
+> **Quick Answer:** Answer engine optimisation makes your business one of the three citations an AI hands a buyer, instead of one of ten blue links they scroll past. The work is structural: definitional answers, [schema markup](/glossary/what-is-schema-markup), citation-friendly sources, and weekly tracking. Australian small businesses with decent Google rankings often have zero AI citations on the same queries. The fix is repeatable. Citations beat clicks now.
 
 ![Answer engine optimisation workflow for Australian businesses in five steps](./body-1.jpg)
 
@@ -47,7 +47,7 @@ If you've spent the last decade chasing Google rankings, AEO is the discipline t
 
 ## What signals do AI engines use to pick their answers?
 
-**AI engines pull from a small set of signals every time they answer a query, and you can engineer for each one.** First, semantic match: the model needs to be sure your page covers the question being asked, which means a clear answer in the first sentence of the section, not buried under three paragraphs of context. Second, source trust: domain authority still matters, plus published author credentials and brand mentions across [tier-one Australian and global sources](https://www.semrush.com/blog/answer-engine-optimization-aeo/). Third, schema and structure: FAQ schema, Article schema, and clean H2 hierarchy let a model extract a citable chunk in milliseconds. Fourth, freshness: pages updated in the last six months get pulled more often than evergreen pages last touched in 2022. The four signals are simple to list. They're harder to execute consistently, especially across a 60-page service site where most pages were written for human readers, not for an extraction model that needs precise definitions and named entities to do its job.
+**AI engines pull from a small set of signals every time they answer a query, and you can engineer for each one.** First, semantic match: the model needs to be sure your page covers the question being asked, which means a clear answer in the first sentence of the section, not buried under three paragraphs of context. Second, source trust: domain authority still matters, plus published author credentials and brand mentions across [tier-one Australian and global sources](https://www.semrush.com/blog/answer-engine-optimization-aeo/). Third, schema and structure: [FAQ schema](/glossary/what-is-faq-schema), Article schema, and clean H2 hierarchy let a model extract a citable chunk in milliseconds. Fourth, freshness: pages updated in the last six months get pulled more often than evergreen pages last touched in 2022. The four signals are simple to list. They're harder to execute consistently, especially across a 60-page service site where most pages were written for human readers, not for an extraction model that needs precise definitions and named entities to do its job.
 
 ## Where AEO shows up: ChatGPT, Perplexity, Google AI Overviews, Gemini
 
@@ -117,7 +117,7 @@ Yes, if the owner is hands-on, comfortable editing markdown and JSON-LD, and abl
 
 ### Is AEO worth it for a small Australian service business?
 
-Almost always yes, with a caveat about timing. If you're a sole trader doing fewer than five enquiries a week from search, the immediate ROI is muted, and your money is better spent on local SEO and Google Business Profile work first. If you're a growing service business with a real sales pipeline that depends on inbound search, AEO is now table stakes, not a luxury. The cost of being absent from AI answers compounds quietly. By the time it shows up in your reporting, a competitor has already taken the citation slot, and citations are stickier than rankings.
+Almost always yes, with a caveat about timing. If you're a sole trader doing fewer than five enquiries a week from search, the immediate ROI is muted, and your money is better spent on [local SEO](/glossary/what-is-local-seo) and [Google Business Profile](/glossary/what-is-google-business-profile) work first. If you're a growing service business with a real sales pipeline that depends on inbound search, AEO is now table stakes, not a luxury. The cost of being absent from AI answers compounds quietly. By the time it shows up in your reporting, a competitor has already taken the citation slot, and citations are stickier than rankings.
 
 ### Will AEO replace SEO, or do I still need both?
 

@@ -39,7 +39,7 @@ This guide walks you through the whole setup process, from picking your software
 
 ## What Is eInvoicing and How Does It Work for Australian Small Businesses?
 
-**eInvoicing is a system that sends invoices directly between accounting software using a secure network called Peppol.** Instead of creating a PDF, emailing it, and waiting for your customer to manually enter the data into their system, eInvoicing sends structured data that populates their accounts payable automatically.
+**eInvoicing is a system that sends invoices directly between accounting software using a secure network called Peppol.** Instead of creating a PDF, emailing it, and waiting for your customer to manually enter the data into their system, eInvoicing sends [structured data](/glossary/what-is-schema-markup) that populates their accounts payable automatically.
 
 Here's the simple version of how it works:
 

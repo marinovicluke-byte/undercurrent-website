@@ -36,7 +36,7 @@ faqs:
 | 4. On-page basics (title, H1, meta, schema) | PageSpeed / View Source | 5 min | Fixes the signals Google reads first |
 | 5. Internal linking shape | Google Search Console | 3 min | Spots orphaned pages |
 | 6. Content depth vs intent | Manual search + wordcount | 4 min | Reveals thin or mismatched content |
-| 7. Google Business Profile parity | Google Maps / GBP dashboard | 3 min | Aligns local signals |
+| 7. [Google Business Profile](/glossary/what-is-google-business-profile) parity | Google Maps / GBP dashboard | 3 min | Aligns local signals |
 | 8. Backlink sanity check | Google Search Console | 4 min | Flags toxic or missing links |
 
 ---

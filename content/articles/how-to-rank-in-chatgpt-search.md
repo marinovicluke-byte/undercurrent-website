@@ -27,7 +27,7 @@ faqs:
 ---
 # How to Rank in ChatGPT Search (2026 Guide)
 
-> **Quick Answer:** To rank in ChatGPT search, structure your content with question-based H2 headings, lead every section with a direct answer in the first 2-3 sentences, implement FAQ schema markup, and build entity associations by getting mentioned on authority domains. ChatGPT citations favour pages with clear semantic structure, answer-first formatting, and verifiable data over marketing fluff.
+> **Quick Answer:** To rank in ChatGPT search, structure your content with question-based H2 headings, lead every section with a direct answer in the first 2-3 sentences, implement [FAQ schema](/glossary/what-is-faq-schema) markup, and build entity associations by getting mentioned on authority domains. ChatGPT citations favour pages with clear semantic structure, answer-first formatting, and verifiable data over marketing fluff.
 
 ![ChatGPT search ranking workflow for Australian content creators optimizing citations and visibility](./body-1.jpg)
 
@@ -53,7 +53,7 @@ ChatGPT doesn't rank pages the way Google does. It doesn't care about backlinks,
 
 According to [Google's Search Central documentation on AI-generated content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content), these factors carry different weights. Semantic coherence accounts for roughly 45% of citation decisions, solution validation 35%, and knowledge graph links 20%. For Australian service businesses, this means your content needs to be directly answerable, backed by real numbers, and connected to verifiable local entities.
 
-Across UC's automation audits for Australian service businesses, the most common bottleneck is content written for Google's crawlers instead of AI language models. Pages that rank well in traditional search often don't get cited by ChatGPT because they bury the answer under three paragraphs of SEO filler. AI engines extract the first substantive paragraph, so if your first 60 words don't directly answer the query, you're out. We cover [how we work through content audits](/process) as part of our automation assessments.
+Across UC's automation audits for Australian service businesses, the most common bottleneck is content written for Google's crawlers instead of AI language models. Pages that rank well in traditional search often don't get cited by ChatGPT because they bury the answer under three paragraphs of [SEO](/glossary/what-is-seo) filler. AI engines extract the first substantive paragraph, so if your first 60 words don't directly answer the query, you're out. We cover [how we work through content audits](/process) as part of our automation assessments.
 
 ChatGPT relies on Bing's index and Google's index for newer content, plus its training data for entity recognition. That means your crawlability matters. If you're blocking GPTBot or ClaudeBot in your robots.txt file, you're invisible. If your sitemap isn't submitted to [Bing Webmaster Tools](https://www.bing.com/webmasters/), ChatGPT might not know your business exists.
 
