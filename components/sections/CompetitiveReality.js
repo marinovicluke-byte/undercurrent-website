@@ -77,9 +77,9 @@ export default function CompetitiveReality() {
             maxWidth: 1200,
           }}
         >
-          Someone in your market has{' '}
-          <span className="uc-glow-word uc-glow-word--sage">already</span>{' '}
-          figured out AI.
+          <span className="uc-glow-word uc-glow-word--sage">Search</span>{' '}
+          changed. Your buyer asks ChatGPT now. Your business isn’t in the
+          answer.
         </h2>
 
         <p
@@ -92,7 +92,7 @@ export default function CompetitiveReality() {
             maxWidth: 720,
           }}
         >
-          Australian small businesses are losing ground to competitors who started using AI first. The good news: the tech is the easy part. You still have time to catch up.
+          Australian small businesses are about to lose a decade of search work. Buyers ask AI now. Most of your market isn’t there.
         </p>
 
         <div
@@ -104,34 +104,34 @@ export default function CompetitiveReality() {
           }}
         >
           <p style={narrativeStyle}>
-            You built your business the right way. Real customers. Real relationships. A team you trust. Now a competitor in your market replies faster, quotes faster, and grows without hiring. You can feel deals starting to slip.
+            You built the business right. Real customers, real word-of-mouth, a Google ranking you worked for. Then your buyer started asking ChatGPT instead of Google. The ranking stopped delivering.
           </p>
 
           <p style={narrativeStyle}>You’re not imagining it.</p>
 
           <p style={narrativeStyle}>
-            Their developers code with AI. Their support is 95% AI-handled. Their ops team gets twice as much done. Their proposals go out same-day.
+            A competitor in your market shows up in ChatGPT answers, Perplexity citations, and Google AI Overviews. Your buyer asks once, gets the answer, books them. You never even saw the search.
           </p>
 
           <p style={pullStyle}>
-            They’re not smarter than you. They just wired AI into their business first.
+            They didn’t beat you on quality. They beat you to AI search.
           </p>
 
           <p style={narrativeStyle}>
-            If nothing changes, the gap grows. Slow at first. Then all at once. Customers, staff, margin, gone to whoever moved first.
+            The window is open. Almost no one in your market is fighting for AI citations yet. First movers compound. Latecomers fight for scraps.
           </p>
 
           <p style={narrativeStyle}>
-            The tools are cheap. Everyone has them. The real work is fitting AI to your people, your processes, and your systems. That is what UnderCurrent Automations builds.
+            AI search isn’t a setting. It’s the structure, the authority, and the code under your content. That’s what UnderCurrent Automations builds.
           </p>
 
           <p style={decideStyle}>
-            Choose whether you disrupt your industry, or get disrupted by it.
+            Win AI search, or watch a competitor take your market.
           </p>
         </div>
 
         <div style={{ marginTop: 12 }}>
-          <PillCTA label="See what we’d automate first" href="/services" tone="blue" />
+          <PillCTA label="Let’s talk" href="https://cal.com/luke-marinovic-aqeosc/30min" tone="blue" />
         </div>
       </div>
     </section>
