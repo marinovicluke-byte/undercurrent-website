@@ -11,7 +11,6 @@ const COMPANY = [
   { label: 'Process', href: '/process' },
   { label: 'Case studies', href: '/case-studies' },
   { label: 'Blog', href: '/blog' },
-  { label: 'Glossary', href: '/glossary' },
   { label: 'Contact', href: '/contact' },
 ]
 
