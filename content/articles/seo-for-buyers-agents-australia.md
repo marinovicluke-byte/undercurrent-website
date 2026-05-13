@@ -8,6 +8,19 @@ keyword: "seo for buyers agents australia"
 author: "Luke"
 level: "intermediate"
 readingTime: 9
+faqs:
+  - q: "How long does it take a buyers agent to rank in Google?"
+    a: "Realistically, three to six months for suburb-level terms and longer for competitive metro phrases. Buyers agents have an advantage because suburb terms are far less competitive than broad real estate keywords, so a focused page can move in weeks. Treat anyone promising page one in 30 days as a warning sign."
+  - q: "Can I do SEO myself or do I need an agency?"
+    a: "You can do the foundations yourself — claiming your Google Business Profile, fixing titles and headings, writing your first suburb pages — and that puts you ahead of most buyers agents. An agency earns its fee once you need consistent content, technical schema work, link building, and AI-engine optimisation done every month. Start DIY, hire when the backlog of work never gets cleared."
+  - q: "Does AI search matter for buyers agents in 2026?"
+    a: "Yes, and earlier than most expect. The Australian property sector leads small-business AI adoption at nearly 70 per cent, which means buyers are already asking ChatGPT for recommendations. Firms with structured data and citable pages get named; the rest don't appear. It is a small body of work with an outsized payoff because so few competitors have done it."
+  - q: "How do I rank for 'buyers agent [suburb]' searches?"
+    a: "Build a real page for that suburb — local auction context, what buyers there compete against, a worked example, your process — and add RealEstateAgent schema with the suburb in areaServed. Make sure your Google Business Profile lists that area as a service area. Specificity is the whole game; thin doorway pages get filtered out."
+  - q: "What's the single highest-payoff SEO task for a new buyers agency?"
+    a: "Setting up your Google Business Profile properly as a service-area business. It is free, takes an afternoon, and for 'buyers agent near me' and map-pack searches it does more than months of blogging. Hide the address, set real service areas, pick the right categories, add photos from actual inspections, and ask every happy client for a review."
+  - q: "How do I track whether my buyers-agent SEO is working?"
+    a: "Watch three things in Google Search Console: impressions and clicks for buyer-intent suburb queries, your average position on those terms over a rolling 90 days, and how many enquiries cite Google as their first touchpoint. Pair that with Google Business Profile insights for calls and direction requests. If suburb-query impressions are climbing, the content is landing."
 ---
 # SEO for Buyers Agents in Australia: Win More Clients
 
@@ -28,7 +41,7 @@ Real estate agent SEO chases listing keywords and suburb sales data. Buyers-agen
 
 ## Why Do Property Buyers Search Differently From Sellers?
 
-**Buyers research for months before they contact anyone, and they research by suburb, not by brand.** Australian buyers now take around 44 weeks on average to purchase, up roughly ten weeks year on year, and more than half want price clarity before they'll inspect, per [REA Group's Property Seeker research reported by Real Estate Business](https://www.realestatebusiness.com.au/sales/30432-new-research-reveals-what-buyers-want-and-where-agents-fit-in). The profession has grown from roughly 500 buyers agents operating nationally in 2016, per [Entry Education](https://entryeducation.edu.au/blog/how-many-buyer-agents-australia/), to many times that today, more competition for the same long window.
+**Buyers research for months before they contact anyone, and they research by suburb, not by brand.** Australian buyers now take around 44 weeks on average to purchase, up roughly ten weeks year on year, and more than half want price clarity before they'll inspect, per [REA Group's Property Seeker research reported by Real Estate Business](https://www.realestatebusiness.com.au/sales/30432-new-research-reveals-what-buyers-want-and-where-agents-fit-in). The profession has grown substantially over the past decade, more competition for the same long window.
 
 A buyer in Hawthorn does not search "best buyers agency". They search "buyers agent Hawthorn" or "buyers advocate eastern suburbs Melbourne", on a phone, comparing two or three names, and the top organic result on Google takes about 27% of clicks, per [Backlinko's study of four million search results](https://backlinko.com/google-ctr-stats). Intent also spikes around spring auction seasons, when [ABS lending indicators](https://www.abs.gov.au/statistics/economy/finance/lending-indicators/latest-release) show new owner-occupier commitments climbing.
 
@@ -47,13 +60,13 @@ Google organic and the map pack are this guide's focus. The AI-engine half sits 
 
 ## The Three SEO Line Items Generalist Agencies Skip for Buyers Agents
 
-**Generalist real estate SEO agencies skip suburb landing pages, service-area Google Business Profiles, and structured data, the three things buyers-agent SEO lives or dies on.** They are built for sales agents with a listing feed, so they default to the wrong template.
+**Generalist real estate SEO agencies skip suburb landing pages, service-area Google Business Profiles, and structured data, the three things buyers-agent SEO lives or dies on.**
 
 **One: real suburb landing pages, not a dropdown.** Every suburb you genuinely service gets its own page with local detail, auction trends, what a buyer there is up against, a real example. Not a thin doorway page. A buyers agent covering the inner east should have pages for Hawthorn, Camberwell, and Kew that a local would recognise as informed.
 
 **Two: a Google Business Profile set up as a service-area business.** Buyers agents usually visit clients or work remotely, so you hide your address and set service areas. Most generalist agencies leave it as a storefront listing or never claim it. Add categories, services, photos from real inspections, and a steady drip of reviews.
 
-**Three: structured data so engines and AI can read you.** Mark up your business with `RealEstateAgent` schema:
+**Three: structured data so engines and AI can read you.** Mark up the business with `RealEstateAgent` schema:
 
 ```json
 {
@@ -63,12 +76,11 @@ Google organic and the map pack are this guide's focus. The AI-engine half sits 
   "areaServed": ["Hawthorn VIC", "Camberwell VIC", "Kew VIC"],
   "priceRange": "$$$",
   "url": "https://yoursite.com.au",
-  "telephone": "+61 3 XXXX XXXX",
   "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "37"}
 }
 ```
 
-Google's [structured data guidance for local businesses](https://developers.google.com/search/docs/appearance/structured-data/local-business) and the [Schema.org RealEstateAgent type](https://schema.org/RealEstateAgent) define the fields. Sanity-check your own site with our [DIY SEO audit checklist](/blog/seo-audit-self-check-australia).
+Google's [local-business structured data guide](https://developers.google.com/search/docs/appearance/structured-data/local-business) and the [Schema.org RealEstateAgent type](https://schema.org/RealEstateAgent) define the fields.
 
 ## What Does Buyers-Agent SEO Cost in Australia, and Is It Worth It?
 
@@ -84,21 +96,44 @@ A buyers agent's fee on a single purchase usually clears five figures, so one ex
 
 ## What Surprised Us Auditing 122 Property and Buyers-Agent Websites
 
-**We run Robin Search, our AI-search rubric, across hundreds of Australian small-business sites, and the property cohort told us three things the rankings alone don't.** As of May 2026, our property and buyers-agent corpus covers 122 articles across 50 distinct websites, with a mean quality score of 55.4 out of 100, middling, and weaker than it looks. The full breakdown:
+**Our Robin Search rubric across 122 property and buyers-agent pages says the property vertical averages 55.4 / 100, weaker than it looks.**
 
-| Cohort | n (articles) | Hosts | Mean score | Median | Strong (80+) | Weak (30–59) |
-|---|---|---|---|---|---|---|
-| Property + buyers-agent vertical | 122 | 50 | 55.4 / 100 | 54.5 | 13 | 79 |
-| UC's own published pages | 16 | 1 | 83.4 / 100 | , | , | , |
-| Whole Robin Search corpus | 171 | , | 53.7 / 100 | , | , | , |
+<svg width="100%" viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Robin Search mean scores out of 100: UC's own pages 83.4, property vertical 55.4, whole corpus 53.7. As of May 2026.">
+  <rect width="640" height="260" fill="#121210" rx="8"/>
+  <text x="24" y="34" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="600" fill="#f5f1e8">Robin Search mean score (out of 100)</text>
+  <text x="24" y="54" font-family="system-ui,sans-serif" font-size="12" fill="rgba(245,241,232,0.55)">As of May 2026 — UnderCurrent Robin Search corpus</text>
+  <g font-family="system-ui,sans-serif" font-size="13" fill="#f5f1e8">
+    <text x="230" y="100" text-anchor="end">UC own pages (n=16)</text>
+    <rect x="240" y="84" width="333" height="22" fill="#6a8a72" rx="2"/>
+    <text x="582" y="100" font-weight="600">83.4</text>
+    <text x="230" y="140" text-anchor="end">Property vertical (n=122)</text>
+    <rect x="240" y="124" width="222" height="22" fill="#d4b896" rx="2"/>
+    <text x="471" y="140" font-weight="600">55.4</text>
+    <text x="230" y="180" text-anchor="end">Whole corpus (n=171)</text>
+    <rect x="240" y="164" width="215" height="22" fill="rgba(245,241,232,0.32)" rx="2"/>
+    <text x="464" y="180" font-weight="600">53.7</text>
+  </g>
+  <line x1="240" y1="205" x2="640" y2="205" stroke="rgba(245,241,232,0.3)"/>
+  <g font-family="system-ui,sans-serif" font-size="11" fill="rgba(245,241,232,0.55)">
+    <text x="240" y="222">0</text>
+    <text x="440" y="222" text-anchor="middle">50</text>
+    <text x="640" y="222" text-anchor="end">100</text>
+  </g>
+</svg>
 
-*Source: UnderCurrent Robin Search corpus, as of May 2026. Rubric version 2.0.0. Numbers refresh as new audits land in Supabase.*
+| Cohort | n | Mean | Strong (80+) | Weak (30–59) |
+|---|---|---|---|---|
+| Property + buyers-agent vertical | 122 | 55.4 / 100 | 13 | 79 |
+| UC's own published pages | 16 | 83.4 / 100 | — | — |
+| Whole Robin Search corpus | 171 | 53.7 / 100 | — | — |
 
-First, the spread is brutal: only 13 of those 122 pages scored 80 or above, while 79 sat in the weak band between 30 and 59. Most buyers-agent content isn't bad, it's forgettable, and forgettable is what AI engines skip. Second, the gap is mechanical: the high scorers had suburb pages, schema, and a Business Profile set up properly. The 28-point spread between our own pages and the vertical mean is almost entirely those three line items. Third, almost nobody in the cohort had structured data, so the firm that adds it gets a near-free head start in AI Overviews.
+*Source: UnderCurrent Robin Search corpus, as of May 2026. Numbers refresh as audits land in Supabase.*
+
+Three things hit harder than the score sheet shows. The spread is brutal: 79 of 122 sit in the weak band. Most buyers-agent content isn't bad, it's forgettable, and forgettable is what AI engines skip. The gap is mechanical: high scorers had suburb pages, schema, and a Business Profile set up properly. And almost nobody had structured data, so the firm that adds it gets a near-free head start in AI Overviews.
 
 ## How to Start: A 90-Day SEO Plan for a Buyers Agency
 
-**You don't need a 12-month strategy; you need the right first 90 days, run in order.** Most buyers agents fail by doing a bit of everything instead of a few things properly.
+**You don't need a 12-month strategy; you need the right first 90 days, run in order.**
 
 **Days 1 to 14, claim and fix the foundations.** Claim and verify your Google Business Profile, set it as a service-area business, hide the address, add categories and 10 to 20 real photos. Fix the obvious on-site stuff: title tag and heading on every page, fast mobile load, a clear "book a call" path.
 
@@ -110,7 +145,7 @@ First, the spread is brutal: only 13 of those 122 pages scored 80 or above, whil
 (buyers?\s*agent|buyers?\s*advoca|property\s*buyer)\b.*\b(melbourne|sydney|brisbane|hawthorn|brunswick|toorak|paddington|new\s*farm)\b
 ```
 
-Then start the citable-content and structured-data work that gets you into AI answers, picked up in our [Melbourne playbook](/blog/how-to-rank-buyers-agency-ai-search-melbourne) and [what answer engine optimisation actually is](/blog/what-is-answer-engine-optimisation). For in-house versus hand-off, our [AI training guide](/blog/ai-training-australia-small-business-guide) and [services](/services) cover it.
+Then start the citable-content and structured-data work for AI-engine visibility, covered in our [Melbourne playbook](/blog/how-to-rank-buyers-agency-ai-search-melbourne) and [AEO guide](/blog/what-is-answer-engine-optimisation).
 
 ## Frequently Asked Questions
 
@@ -138,8 +173,7 @@ Then start the citable-content and structured-data work that gets you into AI an
 
 1. [Local Digital, Australian SEO and Content Marketing Statistics for 2025](https://www.localdigital.com.au/blog/australian-seo-and-content-marketing-statistics-for-2025)
 2. [Real Estate Business, New research reveals what buyers want and where agents fit in](https://www.realestatebusiness.com.au/sales/30432-new-research-reveals-what-buyers-want-and-where-agents-fit-in)
-3. [Entry Education, How many buyers agents are there in Australia?](https://entryeducation.edu.au/blog/how-many-buyer-agents-australia/)
-4. [Backlinko, Google CTR statistics: organic click-through rates by position](https://backlinko.com/google-ctr-stats)
+3. [Backlinko, Google CTR statistics: organic click-through rates by position](https://backlinko.com/google-ctr-stats)
 5. [Australian Bureau of Statistics, Lending indicators, latest release](https://www.abs.gov.au/statistics/economy/finance/lending-indicators/latest-release)
 6. [Search Engine Journal, Google AI Overviews coverage](https://www.searchenginejournal.com/google-ai-overviews/)
 7. [Google Search Central, Local business structured data](https://developers.google.com/search/docs/appearance/structured-data/local-business)
