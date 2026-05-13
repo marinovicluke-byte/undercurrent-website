@@ -5,7 +5,7 @@ export default function WhyUndercurrent({
   eyebrow = 'Why UnderCurrent',
   eyebrowNumber = '02',
   headline,
-  body = 'UnderCurrent sticks with you. We build your first automations, adjust them as the business changes, and add new ones when priorities shift. Everything we build is yours. We only win when you win.',
+  body = 'UnderCurrent Automations sticks with you. We build your first systems, adjust them as the business changes, and add new ones when priorities shift. Everything we build is yours. We only win when you win.',
   ctaLabel = "Let's talk",
   ctaHref = 'https://cal.com/luke-marinovic-aqeosc/30min',
 }) {
@@ -70,6 +70,76 @@ export default function WhyUndercurrent({
         >
           {body}
         </p>
+
+        <ul
+          style={{
+            margin: 0,
+            padding: 0,
+            listStyle: 'none',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 16,
+            maxWidth: 720,
+          }}
+        >
+          <li
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: 17,
+              lineHeight: 1.55,
+              color: 'var(--text-secondary)',
+            }}
+          >
+            <strong
+              style={{
+                color: 'var(--off-white)',
+                fontFamily: 'var(--font-display)',
+                fontWeight: 500,
+              }}
+            >
+              Proactive.
+            </strong>{' '}
+            You work with us, not a junior account manager. We bring new ideas every month.
+          </li>
+          <li
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: 17,
+              lineHeight: 1.55,
+              color: 'var(--text-secondary)',
+            }}
+          >
+            <strong
+              style={{
+                color: 'var(--off-white)',
+                fontFamily: 'var(--font-display)',
+                fontWeight: 500,
+              }}
+            >
+              Always Current.
+            </strong>{' '}
+            AI moves fast. We test the newest tools every week. We only ship what works.
+          </li>
+          <li
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: 17,
+              lineHeight: 1.55,
+              color: 'var(--text-secondary)',
+            }}
+          >
+            <strong
+              style={{
+                color: 'var(--off-white)',
+                fontFamily: 'var(--font-display)',
+                fontWeight: 500,
+              }}
+            >
+              Transparent ROI.
+            </strong>{' '}
+            Every month you see the work. Hours, automations, rankings, ROI tracked. No black box.
+          </li>
+        </ul>
 
         <div style={{ marginTop: 8 }}>
           <PillCTA label={ctaLabel} href={ctaHref} />
