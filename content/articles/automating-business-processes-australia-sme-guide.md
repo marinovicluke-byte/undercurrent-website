@@ -1,7 +1,8 @@
 ---
 title: "Automating Business Processes: A Practical Guide for Australian SMEs"
 description: "Step-by-step guide to automating your Australian small business. Real examples from trades, retail, and professional services. No technical expertise required."
-date: "2026-01-15"
+date: "2026-04-21"
+dateModified: "2026-05-14"
 slug: "automating-business-processes-australia-sme-guide"
 cluster: "foundations"
 keyword: "automating business processes australia"
