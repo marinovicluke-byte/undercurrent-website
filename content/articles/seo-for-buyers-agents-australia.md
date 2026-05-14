@@ -98,7 +98,7 @@ A buyers agent's fee on a single purchase usually clears five figures, so one ex
 
 **Our AI search and SEO rubric across 122 property and buyers-agent pages says the property vertical averages 55.4 / 100, weaker than it looks.**
 
-<svg width="100%" viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UnderCurrent Article Reviewer mean scores out of 100: UC's own pages 83.4, property vertical 55.4, whole corpus 53.7. As of May 2026.">
+<svg width="100%" viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mean scores out of 100: UC 83.4, property vertical 55.4, whole corpus 53.7. May 2026.">
   <rect width="640" height="260" fill="#121210" rx="8"/>
   <text x="24" y="34" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="600" fill="#f5f1e8">Article Reviewer mean score (out of 100)</text>
   <text x="24" y="54" font-family="system-ui,sans-serif" font-size="12" fill="rgba(245,241,232,0.55)">As of May 2026 — UnderCurrent Article Reviewer corpus</text>
