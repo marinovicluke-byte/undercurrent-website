@@ -24,7 +24,7 @@ faqs:
 ---
 # What is Answer Engine Optimisation? A Plain-English Guide
 
-> **Quick Answer:** Answer engine optimisation makes your business one of the three citations an AI hands a buyer, instead of one of ten blue links they scroll past. The work is structural: definitional answers, schema markup, citation-friendly sources, and weekly tracking. Australian small businesses with decent Google rankings often have zero AI citations on the same queries. The fix is repeatable. Citations beat clicks now.
+> **Quick Answer:** Answer engine optimisation makes your business one of the three citations an AI hands a buyer, instead of one of ten blue links they scroll past. The work is structural: definitional answers, [schema markup](/glossary/what-is-schema-markup), citation-friendly sources, and weekly tracking. Australian small businesses with decent Google rankings often have zero AI citations on the same queries. The fix is repeatable. Citations beat clicks now.
 
 ![Answer engine optimisation workflow for Australian businesses in five steps](./body-1.jpg)
 
@@ -39,7 +39,7 @@ If you've spent the last decade chasing Google rankings, AEO is the discipline t
 
 ## How is answer engine optimisation different from SEO?
 
-**Traditional SEO optimises for clicks. AEO optimises for being cited inside an answer the customer often won't click through.** That single shift changes almost everything downstream. SEO rewards keyword density, backlink volume, and ranking on page one. AEO rewards a clear definitional sentence near the top of a page, structured data the model can parse, named entities the model recognises, and citation-worthy facts an AI can quote without summarising you into mush. [Roughly 65% of Google searches now end without a click globally](https://roi.com.au/answer-engine-optimisation-australia-the-complete-guide-for-ranking-in-ai-search-results-in-2026/), with [Moz's industry tracking corroborating the zero-click trend](https://moz.com/blog), and the trend is accelerating. The other big shift is feedback loops. SEO has Google Search Console, ten years of dashboards, and clear rank tracking. AEO citation tracking is still being built, which means the businesses winning today are the ones running their own [AI search self-checks](/blog/seo-audit-self-check-australia) instead of waiting for tools to catch up. Closely related but not identical: [AI search optimisation more broadly](/blog/what-is-ai-search-optimisation-australia) covers the surface area. AEO is the answer-extraction subset.
+**Traditional [SEO](/glossary/what-is-seo) optimises for clicks. AEO optimises for being cited inside an answer the customer often won't click through.** That single shift changes almost everything downstream. SEO rewards keyword density, backlink volume, and ranking on page one. AEO rewards a clear definitional sentence near the top of a page, structured data the model can parse, named entities the model recognises, and citation-worthy facts an AI can quote without summarising you into mush. [Roughly 65% of Google searches now end without a click globally](https://roi.com.au/answer-engine-optimisation-australia-the-complete-guide-for-ranking-in-ai-search-results-in-2026/), with [Moz's industry tracking corroborating the zero-click trend](https://moz.com/blog), and the trend is accelerating. The other big shift is feedback loops. SEO has Google Search Console, ten years of dashboards, and clear rank tracking. AEO citation tracking is still being built, which means the businesses winning today are the ones running their own [AI search self-checks](/blog/seo-audit-self-check-australia) instead of waiting for tools to catch up. Closely related but not identical: [AI search optimisation more broadly](/blog/what-is-ai-search-optimisation-australia) covers the surface area. AEO is the answer-extraction subset.
 
 ## Why answer engine optimisation matters for Australian businesses right now
 
@@ -47,7 +47,7 @@ If you've spent the last decade chasing Google rankings, AEO is the discipline t
 
 ## What signals do AI engines use to pick their answers?
 
-**AI engines pull from a small set of signals every time they answer a query, and you can engineer for each one.** First, semantic match: the model needs to be sure your page covers the question being asked, which means a clear answer in the first sentence of the section, not buried under three paragraphs of context. Second, source trust: domain authority still matters, plus published author credentials and brand mentions across [tier-one Australian and global sources](https://www.semrush.com/blog/answer-engine-optimization-aeo/). Third, schema and structure: FAQ schema, Article schema, and clean H2 hierarchy let a model extract a citable chunk in milliseconds. Fourth, freshness: pages updated in the last six months get pulled more often than evergreen pages last touched in 2022. The four signals are simple to list. They're harder to execute consistently, especially across a 60-page service site where most pages were written for human readers, not for an extraction model that needs precise definitions and named entities to do its job.
+**AI engines pull from a small set of signals every time they answer a query, and you can engineer for each one.** First, semantic match: the model needs to be sure your page covers the question being asked, which means a clear answer in the first sentence of the section, not buried under three paragraphs of context. Second, source trust: domain authority still matters, plus published author credentials and brand mentions across [tier-one Australian and global sources](https://www.semrush.com/blog/answer-engine-optimization-aeo/). Third, schema and structure: [FAQ schema](/glossary/what-is-faq-schema), Article schema, and clean H2 hierarchy let a model extract a citable chunk in milliseconds. Fourth, freshness: pages updated in the last six months get pulled more often than evergreen pages last touched in 2022. The four signals are simple to list. They're harder to execute consistently, especially across a 60-page service site where most pages were written for human readers, not for an extraction model that needs precise definitions and named entities to do its job.
 
 ## Where AEO shows up: ChatGPT, Perplexity, Google AI Overviews, Gemini
 
@@ -117,7 +117,7 @@ Most owners sit in the hybrid lane for the first six months. If you're [comparin
 
 ### Is AEO worth it for a small Australian service business?
 
-**Almost always yes, with a caveat about timing.** If you're a sole trader doing fewer than five enquiries a week from search, the immediate ROI is muted, and your money is better spent on local SEO and Google Business Profile work first. If you're a growing service business with a real sales pipeline that depends on inbound search, AEO is now table stakes, not a luxury. The cost of being absent from AI answers compounds quietly. By the time it shows up in your reporting, a competitor has already taken the citation slot, and citations are stickier than rankings.
+**Almost always yes, with a caveat about timing.** If you're a sole trader doing fewer than five enquiries a week from search, the immediate ROI is muted, and your money is better spent on [local SEO](/glossary/what-is-local-seo) and [Google Business Profile](/glossary/what-is-google-business-profile) work first. If you're a growing service business with a real sales pipeline that depends on inbound search, AEO is now table stakes, not a luxury. The cost of being absent from AI answers compounds quietly. By the time it shows up in your reporting, a competitor has already taken the citation slot, and citations are stickier than rankings.
 
 ### Will AEO replace SEO, or do I still need both?
 
@@ -125,6 +125,7 @@ Most owners sit in the hybrid lane for the first six months. If you're [comparin
 
 ## Related Reading
 
+- [What Is AI Automation? An Australian Plain-English Guide](/blog/what-is-ai-automation-australia)
 - [What is AI search optimisation in Australia, in plain English](/blog/what-is-ai-search-optimisation-australia)
 - [AI search vs traditional search in Australia, 2026 outlook](/blog/ai-search-vs-traditional-search-australia-2026)
 - [How to rank a buyers agency on AI search in Melbourne](/blog/how-to-rank-buyers-agency-ai-search-melbourne)
