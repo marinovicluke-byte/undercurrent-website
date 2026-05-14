@@ -107,21 +107,6 @@ function Hero({ location }) {
           }}
         >
           <PillCTA label="Book a Workflow Review" href={CTA_HREF} tone={location.heroAccent || 'blue'} large external />
-          <a
-            href="tel:+61438780815"
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 14,
-              fontWeight: 500,
-              color: 'var(--off-white)',
-              textDecoration: 'none',
-              borderBottom: '1px solid var(--text-faint)',
-              paddingBottom: 3,
-              letterSpacing: '-0.005em',
-            }}
-          >
-            Call 0438 780 815
-          </a>
           <Link
             href="/audit"
             style={{
