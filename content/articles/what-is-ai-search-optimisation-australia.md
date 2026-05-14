@@ -28,15 +28,15 @@ faqs:
 | Strategy | What it targets | Estimated impact |
 |---|---|---|
 | Answer-first page structure | AI Overview citation, Perplexity extraction | High , most-cited pages lead with direct answers |
-| FAQ schema (JSON-LD) | ChatGPT, Google FAQPage results | High , structured questions are extracted directly |
+| [FAQ schema](/glossary/what-is-faq-schema) (JSON-LD) | ChatGPT, Google FAQPage results | High , structured questions are extracted directly |
 | Encyclopedic definition paragraphs | ChatGPT (favours factual, neutral content) | Medium-High , neutral tone ranks for "what is" queries |
 | Named entity density | All AI engines (knowledge graph building) | Medium , entities help AI place your business in context |
-| Google Business Profile signals | Local AI Overviews, map citations | High for local trades , location + service pairing is key |
+| [Google Business Profile](/glossary/what-is-google-business-profile) signals | Local AI Overviews, map citations | High for local trades , location + service pairing is key |
 | Hyperlinked source citations | Perplexity (follows outbound links to verify claims) | Medium , authority domain links increase citation rate |
 
 Your customers are already asking ChatGPT which plumber to call, which consultant to book, which agency to trust. The question is whether the AI answers with your business or your competitor's.
 
-**AI search optimisation** is a practice that involves structuring web content so AI-powered engines can extract, cite, and recommend it in response to natural-language queries. It builds on traditional SEO but adds layers that standard keyword optimisation ignores , things like answer density, named entities, and structured data.
+**AI search optimisation** is a practice that involves structuring web content so AI-powered engines can extract, cite, and recommend it in response to natural-language queries. It builds on traditional [SEO](/glossary/what-is-seo) but adds layers that standard keyword optimisation ignores , things like answer density, named entities, and structured data.
 
 This guide cuts through the acronym soup (GEO, AEO, LLMO , they're basically the same thing with different marketing names), explains what actually changes in your content, and gives you a five-minute test to see where you stand today.
 
@@ -46,7 +46,7 @@ This guide cuts through the acronym soup (GEO, AEO, LLMO , they're basically the
 
 **AI search optimisation refers to the practice of making your business content visible and citable in AI-generated answers from tools like ChatGPT, Google AI Overviews, Perplexity, and Gemini.** Instead of ranking in a list of blue links, you become the source an AI quotes when a customer asks a question.
 
-Generative Engine Optimisation (GEO) is a discipline that describes writing and structuring content specifically for retrieval by generative AI systems. It is not a separate channel , it is an evolution of what good SEO already rewards: clear answers, factual content, and earned authority. According to [Google's Search Central documentation](https://developers.google.com/search/docs/appearance/ai-overviews), AI Overviews draw from the same index as traditional search results, meaning content that is well-structured and authoritative ranks in both formats simultaneously. A [BrightLocal survey](https://www.brightlocal.com/research/local-consumer-review-survey/) found that 98% of consumers used the internet to find a local business in the past year , and AI-mediated discovery is now a growing slice of that behaviour.
+[Generative Engine Optimisation](/glossary/what-is-generative-engine-optimisation) (GEO) is a discipline that describes writing and structuring content specifically for retrieval by generative AI systems. It is not a separate channel , it is an evolution of what good SEO already rewards: clear answers, factual content, and earned authority. According to [Google's Search Central documentation](https://developers.google.com/search/docs/appearance/ai-overviews), AI Overviews draw from the same index as traditional search results, meaning content that is well-structured and authoritative ranks in both formats simultaneously. A [BrightLocal survey](https://www.brightlocal.com/research/local-consumer-review-survey/) found that 98% of consumers used the internet to find a local business in the past year , and AI-mediated discovery is now a growing slice of that behaviour.
 
 When someone types "best electrician in Brunswick" into Perplexity, the AI retrieves pages it considers authoritative, extracts specific passages, and weaves them into a conversational answer. Your job is to make those passages easy to find and extract.
 
@@ -76,7 +76,7 @@ Here's a direct comparison:
 
 The fundamental shift is from page-level optimisation to passage-level optimisation. AI engines don't cite your homepage , they cite a specific paragraph that cleanly answers the question being asked.
 
-**Answer Engine Optimisation (AEO)** is a term that describes optimising specifically for the moment a user asks a direct question, rather than types a keyword. In practice, GEO and AEO describe the same content changes.
+**[Answer Engine Optimisation](/blog/what-is-answer-engine-optimisation) (AEO)** is a term that describes optimising specifically for the moment a user asks a direct question, rather than types a keyword. In practice, GEO and AEO describe the same content changes.
 
 According to the [ABS Business Characteristics Survey](https://www.abs.gov.au/statistics/industry/technology-and-innovation/business-characteristics-survey), over 80% of Australian businesses with 5–19 employees now use the internet as a primary sales or marketing channel , the exact base most at risk as AI Overviews absorb more zero-click queries. [IBISWorld](https://www.ibisworld.com/au/) estimates there are over 2.5 million small businesses in Australia, most of which built their digital presence on traditional search rankings now being disrupted by AI-generated answers.
 
@@ -88,7 +88,7 @@ According to the [ABS Business Characteristics Survey](https://www.abs.gov.au/st
 
 **GEO (Generative Engine Optimisation)** describes optimisation for generative AI systems broadly , ChatGPT, Perplexity, Gemini, Claude. It focuses on content structure, entity authority, and passage extractability.
 
-**AEO (Answer Engine Optimisation)** refers to structuring content to answer direct questions , the kind you'd type into a voice search or ask a chatbot. It's associated with FAQ schema and concise, question-anchored content.
+**AEO ([Answer Engine Optimisation](/glossary/what-is-answer-engine-optimisation))** refers to structuring content to answer direct questions , the kind you'd type into a voice search or ask a chatbot. It's associated with FAQ schema and concise, question-anchored content.
 
 **LLMO (Large Language Model Optimisation)** is the most technical framing , seeding content into the retrieval index of large language models like GPT-4 and Gemini. In practice, it means the same thing as GEO: earn citations, get mentioned by credible sources, write clearly enough that a language model can extract your content reliably.
 
@@ -176,7 +176,7 @@ If you'd rather skip the testing and have the whole thing built for you, [that's
 
 ### What's the difference between AI search optimisation and just having a Google Business Profile?
 
-**A Google Business Profile handles your visibility in Google Maps and local pack results, but it does not control how ChatGPT, Perplexity, or Gemini describe your business in conversational answers.** AI search optimisation covers your website content structure, FAQ schema markup, and named entity signals across your entire online presence , not just your GBP listing. Both matter: businesses that maintain a presence across multiple digital channels consistently generate more leads than those relying on a single channel. Your GBP and your website content need to work together for full AI visibility coverage.
+**A Google Business Profile handles your visibility in Google Maps and local pack results, but it does not control how ChatGPT, Perplexity, or Gemini describe your business in conversational answers.** AI search optimisation covers your website content structure, FAQ [schema markup](/glossary/what-is-schema-markup), and named entity signals across your entire online presence , not just your GBP listing. Both matter: businesses that maintain a presence across multiple digital channels consistently generate more leads than those relying on a single channel. Your GBP and your website content need to work together for full AI visibility coverage.
 
 ### How do you measure whether AI search optimisation is actually working?
 
@@ -186,6 +186,8 @@ If you'd rather skip the testing and have the whole thing built for you, [that's
 
 ## Related Reading
 
+- [What Is AI Automation? An Australian Plain-English Guide](/blog/what-is-ai-automation-australia)
+- [What Is Answer Engine Optimisation (AEO)?](/blog/what-is-answer-engine-optimisation)
 - [What is GEO? Generative Engine Optimisation Explained](/blog/what-is-geo-generative-engine-optimisation-explained-australia) , the deeper playbook on GEO structure and entity authority for Australian SMBs
 - [AI Search vs Traditional Search in Australia (2026)](/blog/ai-search-vs-traditional-search-australia-2026) , how the traffic split between traditional and AI search is evolving and what to measure
 - [How to Use AI to Improve Your Tradie Business](/blog/how-to-use-ai-to-improve-tradie-business-australia) , practical AI applications for trades businesses beyond just search visibility
