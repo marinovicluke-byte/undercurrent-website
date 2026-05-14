@@ -25,7 +25,7 @@ faqs:
   - q: "Why is Answer Architecture the highest-weighted Robin Search category?"
     a: "Answer Architecture carries 16 of the 100 available points because it is the variable with the highest correlation to AI search citation in our tracking data. Across UC's own published articles, lifting Answer Architecture from 50 percent to 75 percent lifted citation rate by roughly 2.3 times within four weeks. AI engines pull sections out of articles, not whole articles. If a section opens with a hook or a story rather than a direct answer in the first 60 words, the section is unlikely to be extracted regardless of how strong the surrounding content is."
   - q: "What does it actually mean to rank in ChatGPT, Perplexity, and Google AI Overviews?"
-    a: "Ranking in AI search engines means your content gets extracted and surfaced as a cited answer when someone queries a relevant topic. It's not a position in a list, it's a citation in a generated response. The signals that drive citation are: a direct answer in the first 60 words of each section, FAQPage schema for question-format content, inline hyperlinks to credible primary sources, named-entity density, and section length in the 130-170 word range. Our guide on how to rank in ChatGPT search walks through each of these with implementation steps. You can also run our free audit to see where your content sits."
+    a: "Ranking in AI search engines means your content gets extracted and surfaced as a cited answer when someone queries a relevant topic. It's not a position in a list, it's a citation in a generated response. The signals that drive citation are: a direct answer in the first 60 words of each section, FAQPage schema for question-format content, inline hyperlinks to credible primary sources, named-entity density, and section length in the 130-170 word range. Our guide on how to rank in ChatGPT search walks through each of these with implementation steps. You can also get in touch with our team to see where your content sits."
   - q: "Who can help me with AI search optimisation in Australia?"
     a: "Several Australian agencies offer AI search work; the question is which ones can show measurable structural fitness in their own content. The five-question evaluation framework above is agency-agnostic, apply it to any shortlist. UnderCurrent Automations is Melbourne-based, works with one client per industry per metro, and applies the Robin Search rubric to client content the same way we apply it to our own. If you want a starting score, the free audit gives a category-level Robin Search breakdown and the highest-impact gaps to address."
   - q: "What is the Robin Search rubric and how does it work?"
@@ -328,6 +328,8 @@ The gap is bridgeable. It is not a tooling problem or a budget problem. It is a 
 
 The same evaluation framework holds whether you are a Richmond plumber, a Surry Hills consultancy, a Fortitude Valley healthcare clinic, a Subiaco professional services firm, a Glenelg hospitality operator, or a national consultancy. The five questions are agency-agnostic by design and should produce the same red flags or the same green flags regardless of who you are evaluating. Suburb-level signal is part of what we are evaluating *in* the agency: ask whether their case studies and service pages name the actual suburbs and trade verticals they serve, or whether everything sits at the metro-level abstraction layer.
 
+If you want a structural review of your existing agency's content against the Robin Search rubric, [get in touch with our team](/services) — we'll grade them with you and flag the gaps before you sign.
+
 ---
 
 ## What Does It Actually Take to Rank in ChatGPT, Perplexity, and AI Overviews?
@@ -380,7 +382,7 @@ The Robin Search rubric covered earlier names the nine categories that, in our t
 
 UnderCurrent Automations works with one client per industry per metro, typically nine to twelve active clients at any time, across Melbourne (Richmond through to Box Hill), Sydney (Parramatta through to Bondi), Brisbane (Fortitude Valley through to South Brisbane), Perth (Subiaco through to Fremantle), and Adelaide (Norwood through to Glenelg). The exclusivity is deliberate. At limited scale, structural content quality has to be measurable rather than aspirational, which is why Robin Search exists. The same rubric that scored this benchmark scores every UC article before it is published, and the same rubric is available, as a service, to clients building AI search visibility for their own brand.
 
-If you'd like to apply the rubric to your own content, or to compare your existing agency's published work against it, [book a 30-minute audit](/audit). One audit per company, regardless of whether you become a client. If your industry-and-metro slot is already taken, we will say so up front rather than waste a call.
+If you'd like to apply the rubric to your own content, or to compare your existing agency's published work against it, **[get in touch about an AI search engagement](/services)**. One scoping call per company, regardless of whether you become a client. If your industry-and-metro slot is already taken, we will say so up front rather than waste a call.
 
 ---
 
@@ -416,7 +418,7 @@ If you'd like to apply the rubric to your own content, or to compare your existi
 
 ### What does it actually mean to rank in ChatGPT, Perplexity, and Google AI Overviews?
 
-**Ranking in AI search engines means your content gets extracted and surfaced as a cited answer when someone queries a relevant topic.** It's not a position in a list, it's a citation in a generated response. The signals that drive citation are: a direct answer in the first 60 words of each section, FAQPage schema for question-format content, inline hyperlinks to credible primary sources, named-entity density, and section length in the 130-170 word range. Our [guide on how to rank in ChatGPT search](/blog/how-to-rank-in-chatgpt-search) walks through each of these with implementation steps. You can also run our [free audit](/audit) to see where your content sits.
+**Ranking in AI search engines means your content gets extracted and surfaced as a cited answer when someone queries a relevant topic.** It's not a position in a list, it's a citation in a generated response. The signals that drive citation are: a direct answer in the first 60 words of each section, FAQPage schema for question-format content, inline hyperlinks to credible primary sources, named-entity density, and section length in the 130-170 word range. Our [guide on how to rank in ChatGPT search](/blog/how-to-rank-in-chatgpt-search) walks through each of these with implementation steps. You can also [get in touch with our team](/services) to see where your content sits.
 
 ### Who can help me with AI search optimisation in Australia?
 

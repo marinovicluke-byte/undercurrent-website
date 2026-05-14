@@ -90,6 +90,8 @@ The honest answer depends on the hours you can give it and how technical your te
 
 Most owners sit in the hybrid lane for the first six months. If you're [comparing Australian AI search agencies](/blog/how-to-compare-ai-search-agencies-australia), shortlist on citation evidence, not slide decks. [Search Engine Journal's review of AEO methodology](https://www.searchenginejournal.com) is a useful sense-check.
 
+If you want this mapped for your business, [book a free AI search audit](/audit) — we'll show your structural gaps across ChatGPT, Perplexity, and Google AI Overviews in 30 minutes.
+
 ## How long does AEO take to show measurable results?
 
 Expect first citations within four to eight weeks if your domain already has reasonable authority and indexing is healthy. Expect twelve to sixteen weeks before AI citations start producing measurable lead volume. The honest version: AEO is faster than traditional SEO because the AI engines re-crawl frequently and respond to schema and definitional rewrites within days, not months. It is slower than ads because the citation graph compounds rather than spikes. Two checkpoints we use with clients: at week six, you should be cited at least once for a tracked question. At week twelve, the citation graph should cover three to five tracked questions across at least two of the four major engines. Sites under those numbers usually have either a [trust-signal gap or a structural-data gap](/blog/best-ai-search-agency-australia), and both are diagnosable in an afternoon. If you're shaped like an early UC client, you'll have your first citation in the first month. The 30-minute fixes carry that distance.
@@ -137,4 +139,4 @@ Both, for at least the next three to five years. Traditional SEO still drives th
 
 External reading worth bookmarking: [HubSpot's AEO guide](https://www.hubspot.com/products/marketing/aeo-guide), [Ahrefs on answer engine optimisation](https://ahrefs.com/blog/answer-engine-optimization/), and [Google's own AI Mode rollout notes](https://blog.google/products/search/google-search-ai-mode/).
 
-If you'd like a 30-minute walk-through of where your business sits across ChatGPT, Perplexity, and Google AI Overviews, our team runs [a free AI search visibility check](/ai-strategy-training).
+If you'd like a 30-minute walk-through of where your business sits across ChatGPT, Perplexity, and Google AI Overviews, **[book a free AI search audit](/audit)**.

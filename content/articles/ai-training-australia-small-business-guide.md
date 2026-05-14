@@ -17,7 +17,7 @@ faqs:
   - q: "Is government-funded AI training available for small business owners in Australia?"
     a: "Government-funded AI training exists in Australia, but most programs are designed for employees rather than business owners. Victoria's Digital Jobs – AI Career Conversion Program has $8.1 million allocated for AI upskilling, and subsidised TAFE courses can cost as little as $0–$400 for eligible workers. The federal National AI Plan focuses on workforce-level skills. Check Business.gov.au for current eligibility. Most programs exclude owners from the subsidised tier."
   - q: "Who can help set up AI automation training for an Australian service business?"
-    a: "UnderCurrent Automations runs hands-on AI automation sessions for Australian service businesses, practical builds tied to your actual workflows, not slides about machine learning theory. Sessions run from blank screen to live automation in under 90 minutes, and most full builds go live within two weeks. If you're not sure where to start, book a free automation audit to map which tasks in your business are ready to automate right now and what it costs you to keep doing them manually."
+    a: "UnderCurrent Automations runs hands-on AI automation sessions for Australian service businesses, practical builds tied to your actual workflows, not slides about machine learning theory. Sessions run from blank screen to live automation in under 90 minutes, and most full builds go live within two weeks. If you're not sure where to start, book a 90-minute starter session to map which tasks in your business are ready to automate right now and what it costs you to keep doing them manually."
   - q: "How do I know if my team is ready for AI training or needs basics first?"
     a: "If your team can use email and a smartphone, they're ready for applied AI training. The baseline requirement for tools like ChatGPT, Make, or Zapier is being comfortable with a browser, not coding, not IT knowledge, not any formal tech background. The more useful readiness question is whether your business has at least one repetitive digital task that happens on a predictable trigger. If yes, you have something to automate. That's all you need to start."
   - q: "What should I look for when choosing an AI training provider in Australia?"
@@ -89,7 +89,7 @@ A breakdown of realistic costs in 2026:
 
 The [Australian Government's National AI Plan](https://www.industry.gov.au/news/australia-launches-national-ai-plan-capture-opportunities-share-benefits-and-keep-australians-safe) directs funding toward workforce upskilling, including a $30 million AI Safety Institute and extensions to state-level digital jobs programs. Victoria's Digital Jobs – AI Career Conversion Program has $8.1 million allocated to help workers from adjacent industries retrain into AI-adjacent roles. These programs are mostly aimed at employees transitioning careers, not at a solo operator trying to automate their follow-up emails.
 
-If you're an Australian SMB owner and you want to understand what you're eligible for, [Business.gov.au](https://business.gov.au) lists current grants and subsidies. But don't bank on government funding as your primary path to getting your team using AI this quarter. A [free automation audit](/audit) will tell you faster what's worth tackling now and what the payback period looks like.
+If you're an Australian SMB owner and you want to understand what you're eligible for, [Business.gov.au](https://business.gov.au) lists current grants and subsidies. But don't bank on government funding as your primary path to getting your team using AI this quarter. [Book a 90-minute starter session](https://cal.com/luke-marinovic-aqeosc/30min) and we'll tell you faster what's worth tackling now and what the payback period looks like.
 
 ---
 
@@ -162,7 +162,7 @@ A cleaning company in Carindale was spending roughly 6 hours a week on manual cl
 
 The pattern we see consistently is that practical automation skills compound faster when teams build something real in the first session, even a clunky version, rather than spending weeks in theory before touching a live workflow.
 
-If you want this done for you rather than run yourself, [that's exactly what we do at UnderCurrent Automations](/audit). Most automation builds go live in under two weeks, and the audit is free. You can also read more [about UnderCurrent](/about) to understand what we focus on and who we work with.
+If you want this done for you rather than run yourself, **[Book a 90-minute starter session](https://cal.com/luke-marinovic-aqeosc/30min)** — most automation builds go live in under two weeks, and the session is free. You can also read more about UnderCurrent to understand what we focus on and who we work with.
 
 ---
 
@@ -200,7 +200,7 @@ For a practical starting point on what to automate first, the guide on [which bu
 
 ### Who can help set up AI automation training for an Australian service business?
 
-**UnderCurrent Automations runs hands-on AI automation sessions for Australian service businesses, practical builds tied to your actual workflows, not slides about machine learning theory.** Sessions run from blank screen to live automation in under 90 minutes, and most full builds go live within two weeks. If you're not sure where to start, [book a free automation audit](/audit) to map which tasks in your business are ready to automate right now and what it costs you to keep doing them manually.
+**UnderCurrent Automations runs hands-on AI automation sessions for Australian service businesses, practical builds tied to your actual workflows, not slides about machine learning theory.** Sessions run from blank screen to live automation in under 90 minutes, and most full builds go live within two weeks. If you're not sure where to start, [book a 90-minute starter session](https://cal.com/luke-marinovic-aqeosc/30min) to map which tasks in your business are ready to automate right now and what it costs you to keep doing them manually.
 
 ### How do I know if my team is ready for AI training or needs basics first?
 

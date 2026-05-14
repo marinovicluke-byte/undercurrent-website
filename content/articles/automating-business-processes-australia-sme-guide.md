@@ -120,7 +120,7 @@ Here's how to build your first automation in under an hour:
 
 That's it. You just automated invoice follow-ups. It'll run forever until you turn it off.
 
-If you get stuck, use our [free business audit](/audit) to map out your processes. We'll show you exactly which automations to build first and which tools to use.
+If you get stuck, [book a free business audit](/audit) to map out your processes. We'll show you exactly which automations to build first and which tools to use.
 
 ## The Hidden Cost of NOT Automating Business Processes
 
@@ -219,9 +219,9 @@ Here's exactly what to do next:
 
 2. **Book 2 hours in your calendar this week.** Label it "Automation Setup". Treat it like a client meeting. Don't let other tasks eat it.
 
-3. **Use our [free business audit](/audit) to map out your processes.** We'll show you exactly which workflows to automate first and which tools to use. It takes 10 minutes and you'll walk away with a prioritised action plan.
+3. **[Get a free business audit](/audit)** — we'll map out your processes and show you exactly which workflows to automate first and which tools to use. It takes 10 minutes and you'll walk away with a prioritised action plan.
 
-If you'd rather have someone handle it for you—and most business owners do—check out our [automation services](/services). We build it, test it, hand it over, and train your team. White-glove service. Partnership, not transaction. Our one goal is for you to be our best case study.
+If you'd rather have someone handle it for you—and most business owners do—we offer automation services where we build it, test it, hand it over, and train your team. White-glove service. Partnership, not transaction. Our one goal is for you to be our best case study.
 
 Time back for the things that matter. That's what automating business processes gives you. Not efficiency for efficiency's sake. Time back for revenue-generating tasks. Time back for your family. Time back for the business you actually want to build.
 

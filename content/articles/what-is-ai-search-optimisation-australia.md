@@ -99,6 +99,8 @@ According to the [ABS Business Characteristics Survey](https://www.abs.gov.au/st
 
 At [UnderCurrent Automations](/ai-automation-melbourne), we use "AI search optimisation" as the umbrella term covering GEO structure, AEO schema, and named-entity seeding.
 
+If you want this mapped for your site, [book a free AI search audit](/audit) — we'll surface your structural gaps and the highest-impact fixes in 30 minutes.
+
 ---
 
 ## How Do You Actually Do AI Search Optimisation?
@@ -159,7 +161,7 @@ A more precise check: open [Google Search Console](https://search.google.com/sea
 
 According to [Statista's Global Consumer Survey on voice assistant usage](https://www.statista.com), voice and conversational queries, the exact format that feeds AI Overviews, are growing fastest among mobile users doing local service searches. That makes the test worth running monthly, not just once.
 
-If you'd rather skip the testing and have the whole thing built for you, [that's exactly what we do at UnderCurrent Automations](/audit), most AI visibility audits and content rebuilds go live in under two weeks.
+If you'd rather skip the testing and have the whole thing built for you, **[book a free AI search audit](/audit)** — most AI visibility audits and content rebuilds go live in under two weeks.
 
 ---
 

@@ -169,7 +169,7 @@ Setup cost depends on whether you build it yourself or have it done for you. DIY
 
 Most service businesses in the 5-15 staff range find the payback period is under 90 days. If you want to see real examples of what that looks like in practice, the [case studies](/case-studies) page has a few.
 
-If you'd rather have this built for you, [that's exactly what we do at UnderCurrent Automations](/audit) , most builds go live in under two weeks.
+If you'd rather have this built for you, [book a free automation audit](/audit) , most builds go live in under two weeks.
 
 ---
 
@@ -201,7 +201,7 @@ The most common stack for Australian service businesses in 2026 combines a workf
 
 At UnderCurrent Automations, when we run automation audits for Australian service businesses, the first thing we look at is which repetitive tasks the owner is still doing manually every week , and in most cases, it's lead follow-up, invoicing, and review requests. Those three workflows alone account for 80% of recoverable admin time.
 
-For a broader look at [which business processes to automate first in 2026](/blog/which-business-processes-automate-first-australia-2026), that article maps the priority order by business type. And if you want to see the full range of [automation services](/services) we offer, that page breaks it down by workflow category.
+For a broader look at [which business processes to automate first in 2026](/blog/which-business-processes-automate-first-australia-2026), that article maps the priority order by business type. And if you want to see the full range of automation services we offer, that page breaks it down by workflow category.
 
 ---
 
@@ -236,7 +236,7 @@ For a broader look at [which business processes to automate first in 2026](/blog
 
 ### Who can help me set up AI automation for my trade business in Australia?
 
-**UnderCurrent Automations builds done-for-you AI automation systems for Australian service businesses , lead follow-up sequences, automated invoicing, and review request workflows, all connected to your existing tools (ServiceM8, Xero, Tradify, MYOB).** Most builds go live in under two weeks and setup typically runs under $5,000 AUD. If you're unsure where to start, [book a free automation audit](/audit) to identify exactly which tasks are costing you the most time each week.
+**UnderCurrent Automations builds done-for-you AI automation systems for Australian service businesses , lead follow-up sequences, automated invoicing, and review request workflows, all connected to your existing tools (ServiceM8, Xero, Tradify, MYOB).** Most builds go live in under two weeks and setup typically runs under $5,000 AUD. If you're unsure where to start, **[book a free automation audit](/audit)** to identify exactly which tasks are costing you the most time each week.
 
 ---
 
