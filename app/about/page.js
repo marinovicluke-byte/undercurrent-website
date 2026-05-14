@@ -28,7 +28,7 @@ const EyebrowPill = SectionEyebrow
 // ═══════════════════════════════════════════════════════════════════════════════
 function AboutUndercurrent() {
   const pillars = [
-    { ac: AC_ORANGE, label: 'Get found online', text: 'Robin Search puts your business in front of buyers wherever they look — Google, ChatGPT, Perplexity, Maps, and paid. SEO, AEO, PPC and Places, in one engine.' },
+    { ac: AC_ORANGE, label: 'Get found online', text: "Our search ecosystem puts your business in front of buyers wherever they look, Google, ChatGPT, Perplexity, Maps, and paid. SEO, AEO, PPC and Places, in one engine." },
     { ac: AC_SAGE,   label: 'Turn traffic into revenue', text: 'Lead capture and sales automation that turns traffic into booked calls and paid invoices. Every lead chased, every follow-up sent.' },
     { ac: AC_BLUE,   label: 'Build AI capability', text: 'AI training and strategy consulting for teams that want to build it themselves. Real workflows, not workshop theatre.' },
   ]

@@ -42,11 +42,11 @@ const SERVICES = SERVICES_V2.map(s => {
 
 export const metadata = {
   title: 'Services',
-  description: 'Four spokes covering search visibility (Robin Search), website design, custom integrations, and AI strategy and training for Australian small businesses.',
+  description: 'Four spokes covering search visibility, website design, custom integrations, and AI strategy and training for Australian small businesses.',
   alternates: { canonical: 'https://undercurrentautomations.com/services' },
   openGraph: {
     title: 'Services | UnderCurrent Automations',
-    description: 'Four spokes covering search visibility (Robin Search), website design, custom integrations, and AI strategy and training for Australian small businesses.',
+    description: 'Four spokes covering search visibility, website design, custom integrations, and AI strategy and training for Australian small businesses.',
     url: 'https://undercurrentautomations.com/services',
     type: 'website',
     images: ['/brand/og-card.png'],
