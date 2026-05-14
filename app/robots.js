@@ -1,10 +1,14 @@
-// AI crawler allowlist per vault/Research/wiki/seo-aio/nextjs-ai-search-framework.md.
-// GPTBot (OpenAI), Google-Extended (Gemini training + AI Overviews data),
-// Googlebot-AI (AI Overviews serving), PerplexityBot, ClaudeBot (Anthropic),
-// CCBot (Common Crawl, used by many LLMs), and the opt-in ChatGPT-User /
-// OAI-SearchBot are all explicitly allowed. Wildcard `*` rule remains for
-// traditional search and general crawlers.
+// AI + search crawler allowlist per vault/Research/wiki/seo-aio/.
+// searchBots: general web indexers that also feed AI surfaces — Bingbot powers
+// ChatGPT Search + Copilot, Bravebot powers Claude's live retrieval. Get the
+// strict `*` disallow because audit reports are user-specific.
+// aiBots: AI training + on-demand fetchers. Looser disallow.
 export default function robots() {
+  const searchBots = [
+    'Bingbot',
+    'Bravebot',
+  ]
+
   const aiBots = [
     'GPTBot',
     'ChatGPT-User',
@@ -28,6 +32,11 @@ export default function robots() {
         allow: '/',
         disallow: ['/api/', '/audit/report'],
       },
+      ...searchBots.map((agent) => ({
+        userAgent: agent,
+        allow: '/',
+        disallow: ['/api/', '/audit/report'],
+      })),
       ...aiBots.map((agent) => ({
         userAgent: agent,
         allow: '/',
