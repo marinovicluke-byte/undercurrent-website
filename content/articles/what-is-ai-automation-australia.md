@@ -184,6 +184,8 @@ A [free 30-minute automation audit](/audit) maps your first three workflows to t
 
 ## Related Reading
 
+- [What Is Answer Engine Optimisation (AEO)?](/blog/what-is-answer-engine-optimisation)
+- [What Is AI Search Optimisation? An Australian Plain-English Guide](/blog/what-is-ai-search-optimisation-australia)
 - [The Plain Guide to Automating Business Processes in Australia](/blog/automating-business-processes-australia-sme-guide), the level-up from this article once you've picked a workflow
 - [The Simplest Small-Business Automation Tasks for 2026](/blog/simplest-small-business-automation-tasks-australia-2026), the build order, easiest wins first
 - [Customer Onboarding Automation for Service Businesses](/blog/customer-onboarding-automation-service-business), the same pattern applied after the sale
