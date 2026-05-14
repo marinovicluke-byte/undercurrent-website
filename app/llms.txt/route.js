@@ -30,6 +30,10 @@ export async function GET() {
 
 > AI automation for Australian small businesses. We build custom workflows that save 15+ hours a week.
 
+## Research
+
+- [The Robin Search Article Reviewer](${BASE}/research/article-reviewer): Open methodology for scoring Australian blog articles on AI search and SEO criteria. Six dimensions, 100-point rubric, live corpus snapshot.
+
 ## Services
 
 ${spokeServices.map(renderService).join('\n')}
