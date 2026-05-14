@@ -1,7 +1,7 @@
 ---
 title: "What is Answer Engine Optimisation? A Plain-English Guide"
 description: "Answer engine optimisation is how Australian businesses get cited by ChatGPT, Perplexity, and Google AI Overviews. A plain-English guide for owners."
-date: "2026-05-13"
+date: "2026-05-14"
 slug: "what-is-answer-engine-optimisation"
 cluster: "seo-ai-visibility"
 keyword: "answer engine optimisation"
@@ -24,12 +24,12 @@ faqs:
 ---
 # What is Answer Engine Optimisation? A Plain-English Guide
 
-> **Quick Answer:** Answer engine optimisation makes your business one of the three citations an AI hands a buyer, instead of one of ten blue links they scroll past. The work is structural: definitional answers, [schema markup](/glossary/what-is-schema-markup), citation-friendly sources, and weekly tracking. Australian small businesses with decent Google rankings often have zero AI citations on the same queries. The fix is repeatable. Citations beat clicks now.
+> **Quick Answer:** Answer engine optimisation makes your business one of the three citations an AI hands a buyer, instead of one of ten blue links they scroll past. The work is structural: definitional answers, schema markup, citation-friendly sources, and weekly tracking. Australian small businesses with decent Google rankings often have zero AI citations on the same queries. The fix is repeatable. Citations beat clicks now.
 
 ![Answer engine optimisation workflow for Australian businesses in five steps](./body-1.jpg)
 
 
-Your customer asks ChatGPT for a recommended Sydney accountant, an Adelaide buyers agent, or a Brisbane plumber, and an answer comes back in three sentences. No ten blue links. No scrolling. One name gets quoted, the rest don't exist. That's the new front door of buyer search, and answer engine optimisation, [defined in plain English here](/glossary/what-is-answer-engine-optimisation), is the work of being the business that gets quoted.
+Your customer asks ChatGPT for a recommended Sydney accountant, an Adelaide buyers agent, or a Brisbane plumber, and an answer comes back in three sentences. No ten blue links. No scrolling. One name gets quoted, the rest don't exist. That's the new front door of buyer search, and answer engine optimisation is the work of being the business that gets quoted.
 
 If you've spent the last decade chasing Google rankings, AEO is the discipline that decides whether your work still pays off. [About 49% of Australians used a generative AI tool in the past year](https://searchscope.com.au/industry-research/search-engine-usage-statistics-australia/), and the share is climbing every quarter. We've audited 32 Australian articles ranking for AI search keywords against [our 100-point Robin Search rubric](/blog/seo-ai-visibility-hub-australia) (version 2.0.0), and the spread between visible businesses and invisible ones is wider than you'd think. [Ahrefs' breakdown of AEO](https://ahrefs.com/blog/answer-engine-optimization/) lays out the same retrieval shifts at a global level. This guide unpacks the field for owners who want a real answer, not a sales pitch.
 
@@ -47,7 +47,7 @@ If you've spent the last decade chasing Google rankings, AEO is the discipline t
 
 ## What signals do AI engines use to pick their answers?
 
-**AI engines pull from a small set of signals every time they answer a query, and you can engineer for each one.** First, semantic match: the model needs to be sure your page covers the question being asked, which means a clear answer in the first sentence of the section, not buried under three paragraphs of context. Second, source trust: domain authority still matters, plus published author credentials and brand mentions across [tier-one Australian and global sources](https://www.semrush.com/blog/answer-engine-optimization-aeo/). Third, schema and structure: [FAQ schema](/glossary/what-is-faq-schema), Article schema, and clean H2 hierarchy let a model extract a citable chunk in milliseconds. Fourth, freshness: pages updated in the last six months get pulled more often than evergreen pages last touched in 2022. The four signals are simple to list. They're harder to execute consistently, especially across a 60-page service site where most pages were written for human readers, not for an extraction model that needs precise definitions and named entities to do its job.
+**AI engines pull from a small set of signals every time they answer a query, and you can engineer for each one.** First, semantic match: the model needs to be sure your page covers the question being asked, which means a clear answer in the first sentence of the section, not buried under three paragraphs of context. Second, source trust: domain authority still matters, plus published author credentials and brand mentions across [tier-one Australian and global sources](https://www.semrush.com/blog/answer-engine-optimization-aeo/). Third, schema and structure: FAQ schema, Article schema, and clean H2 hierarchy let a model extract a citable chunk in milliseconds. Fourth, freshness: pages updated in the last six months get pulled more often than evergreen pages last touched in 2022. The four signals are simple to list. They're harder to execute consistently, especially across a 60-page service site where most pages were written for human readers, not for an extraction model that needs precise definitions and named entities to do its job.
 
 ## Where AEO shows up: ChatGPT, Perplexity, Google AI Overviews, Gemini
 
@@ -101,27 +101,27 @@ Most owners sit in the hybrid lane for the first six months. If you're [comparin
 
 ### How much does answer engine optimisation cost in Australia in 2026?
 
-Pricing splits into three tiers in our experience. A foundational AEO audit and one-off schema implementation lands at $1,500 to $3,000. An ongoing retainer that covers content production, schema maintenance, and citation tracking runs $2,000 to $10,000 per month for small to mid-sized service businesses, in line with [TitanBlue's benchmarks for Australian SEO](https://titanblue.com.au/seo-services-in-2026-a-strategic-comparison-for-australian-businesses/). Enterprise scopes with multiple brands or product lines can exceed $15,000 per month. Tooling alone, if you DIY, sits at $40 to $300 per month depending on whether you're tracking a single location or a multi-site footprint.
+**Pricing splits into three tiers in our experience.** A foundational AEO audit and one-off schema implementation lands at $1,500 to $3,000. An ongoing retainer that covers content production, schema maintenance, and citation tracking runs $2,000 to $10,000 per month for small to mid-sized service businesses, in line with [TitanBlue's benchmarks for Australian SEO](https://titanblue.com.au/seo-services-in-2026-a-strategic-comparison-for-australian-businesses/). Enterprise scopes with multiple brands or product lines can exceed $15,000 per month. Tooling alone, if you DIY, sits at $40 to $300 per month depending on whether you're tracking a single location or a multi-site footprint.
 
 ### Which AI engines does AEO target, ChatGPT, Perplexity, Google AI Overviews?
 
-The four worth tracking today are ChatGPT (OpenAI), Perplexity, Google's AI Overviews and AI Mode, and Gemini. Claude is increasingly relevant for B2B research queries. The four overlap on retrieval signals, but each weights citation differently, which is why a page can get cited in Perplexity and missed by ChatGPT. A serious AEO program tracks all four on a weekly cadence and writes the gaps into the next sprint. Tracking only Google AI Overviews understates how much of buyer research has moved to direct ChatGPT and Perplexity sessions.
+**The four worth tracking today are ChatGPT (OpenAI), Perplexity, Google's AI Overviews and AI Mode, and Gemini.** Claude is increasingly relevant for B2B research queries. The four overlap on retrieval signals, but each weights citation differently, which is why a page can get cited in Perplexity and missed by ChatGPT. A serious AEO program tracks all four on a weekly cadence and writes the gaps into the next sprint. Tracking only Google AI Overviews understates how much of buyer research has moved to direct ChatGPT and Perplexity sessions.
 
 ### Do I need AEO if my Google rankings are already good?
 
-Yes, with a caveat. Strong Google rankings give you a head start on domain authority and indexing, both of which feed AI retrieval. They don't guarantee citations. The page structures Google rewards (long-form, keyword-dense, FAQ-light) are not the structures answer engines prefer (definitional, schema-rich, citation-friendly). Most Australian businesses we audit rank decently on Google and earn close to zero AI citations on the same queries. The fix is structural, not strategic, and the [AI search vs traditional search comparison](/blog/ai-search-vs-traditional-search-australia-2026) lays out exactly what changes.
+**Yes, with a caveat.** Strong Google rankings give you a head start on domain authority and indexing, both of which feed AI retrieval. They don't guarantee citations. The page structures Google rewards (long-form, keyword-dense, FAQ-light) are not the structures answer engines prefer (definitional, schema-rich, citation-friendly). Most Australian businesses we audit rank decently on Google and earn close to zero AI citations on the same queries. The fix is structural, not strategic, and the [AI search vs traditional search comparison](/blog/ai-search-vs-traditional-search-australia-2026) lays out exactly what changes.
 
 ### Can a small business do answer engine optimisation without an agency?
 
-Yes, if the owner is hands-on, comfortable editing markdown and JSON-LD, and able to spend four to six hours per week on the work. The technical bar is lower than people think. The discipline bar is higher. The DIY path that works in practice is to start with one cluster of pages that map to your highest-margin services, run a Robin Search style self-audit, fix the obvious structural gaps, and repeat the loop monthly. The path that fails is doing scattershot tactical edits across the whole site without a tracked rubric.
+**Yes, if the owner is hands-on, comfortable editing markdown and JSON-LD, and able to spend four to six hours per week on the work.** The technical bar is lower than people think. The discipline bar is higher. The DIY path that works in practice is to start with one cluster of pages that map to your highest-margin services, run a Robin Search style self-audit, fix the obvious structural gaps, and repeat the loop monthly. The path that fails is doing scattershot tactical edits across the whole site without a tracked rubric.
 
 ### Is AEO worth it for a small Australian service business?
 
-Almost always yes, with a caveat about timing. If you're a sole trader doing fewer than five enquiries a week from search, the immediate ROI is muted, and your money is better spent on [local SEO](/glossary/what-is-local-seo) and [Google Business Profile](/glossary/what-is-google-business-profile) work first. If you're a growing service business with a real sales pipeline that depends on inbound search, AEO is now table stakes, not a luxury. The cost of being absent from AI answers compounds quietly. By the time it shows up in your reporting, a competitor has already taken the citation slot, and citations are stickier than rankings.
+**Almost always yes, with a caveat about timing.** If you're a sole trader doing fewer than five enquiries a week from search, the immediate ROI is muted, and your money is better spent on local SEO and Google Business Profile work first. If you're a growing service business with a real sales pipeline that depends on inbound search, AEO is now table stakes, not a luxury. The cost of being absent from AI answers compounds quietly. By the time it shows up in your reporting, a competitor has already taken the citation slot, and citations are stickier than rankings.
 
 ### Will AEO replace SEO, or do I still need both?
 
-Both, for at least the next three to five years. Traditional SEO still drives the click-bearing portion of search, the comparison and decision-stage queries where users want to compare three options, and the long-tail commercial queries where AI engines defer to organic results. AEO captures the question-shaped queries that increasingly resolve inside the answer. The smart move is to treat them as one program, not two: every page should rank on Google and be citable in ChatGPT. The plumbing is shared, and the writing differs.
+**Both, for at least the next three to five years.** Traditional SEO still drives the click-bearing portion of search, the comparison and decision-stage queries where users want to compare three options, and the long-tail commercial queries where AI engines defer to organic results. AEO captures the question-shaped queries that increasingly resolve inside the answer. The smart move is to treat them as one program, not two: every page should rank on Google and be citable in ChatGPT. The plumbing is shared, and the writing differs.
 
 ## Related Reading
 
