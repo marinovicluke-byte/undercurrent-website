@@ -1,6 +1,6 @@
 ---
 title: "How to Rank a Melbourne Buyers Agency on AI Search"
-description: "Melbourne buyers agencies average 45/100 on Robin Search. Six structural fixes — quick-answer block, schema with sameAs, tier-1 sources, comparison tables, valid llms.txt — to rank in AI search across ChatGPT, Perplexity, and Google AI Overviews."
+description: "Melbourne buyers agencies average 45/100 on our AI search and SEO rubric. Six structural fixes — quick-answer block, schema with sameAs, tier-1 sources, comparison tables, valid llms.txt — to rank in AI search across ChatGPT, Perplexity, and Google AI Overviews."
 date: "2026-05-08"
 slug: "how-to-rank-buyers-agency-ai-search-melbourne"
 cluster: "seo-ai-visibility"
@@ -18,11 +18,11 @@ faqs:
   - q: "What suburbs in Melbourne do buyers agents typically cover, and does geography affect AI rankings?"
     a: "Most Melbourne buyers agencies publish suburb-specific content covering inner-city markets (Fitzroy, Richmond, South Yarra), middle-ring growth corridors (Preston, Coburg, Footscray), and outer southeast and northwest suburbs. Geographic specificity directly affects AI rankings: an article targeting \"buyers agent Brunswick Melbourne\" with a quick-answer block, suburb-level data sourced from Cotality (CoreLogic), and valid `RealEstateAgent` schema will extract into AI answers at a substantially higher rate than a generic buyers-agency service page with no location-specific structure."
   - q: "How do Melbourne buyers agency AI search scores compare to the national average?"
-    a: "Based on UC's Robin Search rubric applied across 27 articles from 9 Melbourne firms in May 2026, the Melbourne buyers-agency vertical averaged 45/100, 8.9 points below the broader Australian agency-industry average of 53.9/100, and 34.4 points below UC's own content benchmark of 79.4/100. HousingWire's analysis of AI search in real estate confirms this structural underperformance is consistent nationally, with sourced and structured content earning materially more AI-generated citations than unlinked prose. State-by-state comparisons for Sydney, Brisbane, Adelaide, and Perth are in production."
+    a: "Based on UC's AI search and SEO rubric applied across 27 articles from 9 Melbourne firms in May 2026, the Melbourne buyers-agency vertical averaged 45/100, 8.9 points below the broader Australian agency-industry average of 53.9/100, and 34.4 points below UC's own content benchmark of 79.4/100. HousingWire's analysis of AI search in real estate confirms this structural underperformance is consistent nationally, with sourced and structured content earning materially more AI-generated citations than unlinked prose. State-by-state comparisons for Sydney, Brisbane, Adelaide, and Perth are in production."
 ---
 # How to Rank a Melbourne Buyers Agency on AI Search
 
-> **Quick Answer:** Melbourne buyers agencies average just 45/100 on the Robin Search AI-visibility rubric, 34 points below UC's own content benchmark. The core problem isn't keyword strategy. It's structural: missing quick-answer blocks, broken schema, no llms.txt, and prose where comparison tables should be. Fix the structure, and AI engines have something to extract and cite.
+> **Quick Answer:** Melbourne buyers agencies average just 45/100 on our AI search and SEO rubric, 34 points below UC's own content benchmark. The core problem isn't keyword strategy. It's structural: missing quick-answer blocks, broken schema, no llms.txt, and prose where comparison tables should be. Fix the structure, and AI engines have something to extract and cite.
 
 ![Australian Melbourne buyers agency AI search ranking five-step optimisation workflow diagram](./body-1.jpg)
 
@@ -41,11 +41,11 @@ This is the Melbourne instalment in UC's state-by-state buyers-agency AI-search 
 
 ---
 
-## What Does the Robin Search Audit Actually Show?
+## What Does the UnderCurrent Article Reviewer Audit Actually Show?
 
 **The Melbourne buyers-agency vertical is structurally underprepared for AI search, the foundations most firms have built for traditional [SEO](/glossary/what-is-seo) aren't the foundations AI engines extract from.**
 
-Robin Search is UC's proprietary 100-point content-intelligence rubric across 9 scoring categories, built by reverse-engineering 12 months of UC's own AI-citation data against [Google Search Central documentation](https://developers.google.com/search/docs), the Search Quality Rater Guidelines, and [Schema.org entity definitions](https://schema.org/RealEstateAgent). Rubric version 3.2.
+The UnderCurrent Article Reviewer is UC's proprietary 100-point content-intelligence rubric across 9 scoring categories, built by reverse-engineering 12 months of UC's own AI-citation data against [Google Search Central documentation](https://developers.google.com/search/docs), the Search Quality Rater Guidelines, and [Schema.org entity definitions](https://schema.org/RealEstateAgent). Rubric version 3.2.
 
 In May 2026, we ran the rubric across 27 articles from 9 Melbourne buyers-agency firms. The vertical average came back at **45/100**, 8.9 points below the broader Australian agency average of 53.9/100, and 34.4 points below UC's own content average of 79.4/100. Zero articles scored Strong (80+). Three scored Competent. Eleven were Weak. Seven scored below the 30-point threshold the rubric uses to flag fundamental structural gaps.
 
@@ -60,7 +60,7 @@ Two of the nine audited firms came in materially above the 45/100 average and de
 
 ### The remaining seven firms (anonymised)
 
-| Firm | Robin Search Score |
+| Firm | Article Reviewer Score |
 |------|--------------------|
 | Firm C | 45/100 |
 | Firm A | 44/100 |
@@ -84,7 +84,7 @@ AI Engine Optimisation ([AEO](/glossary/what-is-answer-engine-optimisation)) is 
 
 AI engines don't read a page top-to-bottom. They parse it in discrete chunks, looking for a direct answer in the first 60 words, scanning H2 and H3 headings for structured sections, then checking [schema markup](/glossary/what-is-schema-markup) to confirm entity identity. If none of those signals are present, the page gets passed over regardless of how good the underlying advice is.
 
-The Robin Search audit identified six structural defects appearing across the Melbourne buyers-agency corpus that directly suppress AI visibility.
+The Article Reviewer audit identified six structural defects appearing across the Melbourne buyers-agency corpus that directly suppress AI visibility.
 
 ### Does a Missing Quick-Answer Block Actually Suppress AI Citations?
 
@@ -234,7 +234,7 @@ If you'd rather have this built for you, [that's exactly what we do at UnderCurr
 
 Across the automation systems UC has shipped for content-heavy service businesses, the single fastest win on AI search visibility is adding the `sameAs` array to both the `Person` and `RealEstateAgent` nodes, it takes under 30 minutes and immediately gives AI engines the entity links they need to confidently cite the author as a real, verifiable expert.
 
-The Robin Search rubric scores `sameAs` presence as one of nine categories precisely because it's the difference between a name string and a verified entity. Most audited firms in the Melbourne corpus have at least part of the schema stack in place; the missing `sameAs` array is the most common single-line fix that lifts a firm's score by a measurable margin.
+The Article Reviewer rubric scores `sameAs` presence as one of nine categories precisely because it's the difference between a name string and a verified entity. Most audited firms in the Melbourne corpus have at least part of the schema stack in place; the missing `sameAs` array is the most common single-line fix that lifts a firm's score by a measurable margin.
 
 ---
 
@@ -261,13 +261,13 @@ Most Melbourne buyers agencies publish suburb-specific content covering inner-ci
 
 ### How do Melbourne buyers agency AI search scores compare to the national average?
 
-Based on UC's Robin Search rubric applied across 27 articles from 9 Melbourne firms in May 2026, the Melbourne buyers-agency vertical averaged 45/100, 8.9 points below the broader Australian agency-industry average of 53.9/100, and 34.4 points below UC's own content benchmark of 79.4/100. [HousingWire's analysis of AI search in real estate](https://www.housingwire.com/articles/agents-invisible-ai-search/) confirms this structural underperformance is consistent nationally, with sourced and structured content earning materially more AI-generated citations than unlinked prose. State-by-state comparisons for Sydney, Brisbane, Adelaide, and Perth are in production.
+Based on UC's AI search and SEO rubric applied across 27 articles from 9 Melbourne firms in May 2026, the Melbourne buyers-agency vertical averaged 45/100, 8.9 points below the broader Australian agency-industry average of 53.9/100, and 34.4 points below UC's own content benchmark of 79.4/100. [HousingWire's analysis of AI search in real estate](https://www.housingwire.com/articles/agents-invisible-ai-search/) confirms this structural underperformance is consistent nationally, with sourced and structured content earning materially more AI-generated citations than unlinked prose. State-by-state comparisons for Sydney, Brisbane, Adelaide, and Perth are in production.
 
 ---
 
 ## Related Reading
 
-- [The Best AI Search Agency in Australia: 22-Domain Audit](/blog/best-ai-search-agency-australia), UC's Robin Search benchmark across 86 articles spanning 22 Australian agency domains
+- [The Best AI Search Agency in Australia: 22-Domain Audit](/blog/best-ai-search-agency-australia), UC's Article Reviewer benchmark across 86 articles spanning 22 Australian agency domains
 - [AI Search vs Traditional SEO: What Australian Businesses Need to Know](/blog/ai-search-vs-traditional-seo-australia), where the two strategies diverge and where they overlap
 - [How to Rank on Google: A Practical Guide for Australian Service Businesses](/blog/how-to-rank-on-google-australia), the technical SEO foundations that underpin AI-search visibility
 - [SEO and AI Visibility: The Hub for Australian Businesses](/blog/seo-ai-visibility-hub-australia), the full resource library for search visibility strategy

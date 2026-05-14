@@ -82,7 +82,7 @@ const PILLARS = [
   {
     key: 'ai',
     n: '04',
-    name: 'Robin Search',
+    name: 'Search ecosystem',
     before: {
       headline: 'Invisible to ChatGPT. Buried in Google page 3.',
       items: [
