@@ -1091,6 +1091,9 @@ function ClosingCTA({ location }) {
 function QuickAnswer({ location }) {
   if (!location.quickAnswer) return null
   const accent = ACCENTS[location.heroAccent || 'sage']
+  const paragraphs = Array.isArray(location.quickAnswer)
+    ? location.quickAnswer
+    : [location.quickAnswer]
 
   return (
     <section
@@ -1098,27 +1101,38 @@ function QuickAnswer({ location }) {
       data-aeo="quick-answer"
       style={{
         background: 'var(--charcoal-deep)',
-        padding: 'clamp(56px, 8vh, 96px) var(--page-pad)',
+        padding: 'clamp(80px, 12vh, 128px) var(--page-pad)',
         borderBottom: '1px solid var(--text-faint)',
       }}
     >
-      <div style={{ maxWidth: 880, margin: 0 }}>
-        <div style={{ marginBottom: 20 }}>
-          <SectionEyebrow n="QA" label="Quick answer" />
+      <div style={{ maxWidth: 920, margin: 0 }}>
+        <div style={{ marginBottom: 28 }}>
+          <SectionEyebrow n="QA" label="The honest answer" />
         </div>
-        <p
+        <div
           style={{
-            margin: 0,
-            fontFamily: 'var(--font-body)',
-            fontSize: 'clamp(18px, 1.8vw, 21px)',
-            lineHeight: 1.55,
-            color: 'var(--off-white)',
             borderLeft: `3px solid ${accent.hex}`,
-            paddingLeft: 24,
+            paddingLeft: 28,
+            display: 'grid',
+            gap: 22,
           }}
         >
-          {location.quickAnswer}
-        </p>
+          {paragraphs.map((p, i) => (
+            <p
+              key={i}
+              style={{
+                margin: 0,
+                fontFamily: 'var(--font-body)',
+                fontSize: 'clamp(19px, 1.9vw, 22px)',
+                lineHeight: 1.65,
+                color: i === 0 ? 'var(--off-white)' : 'var(--text-secondary)',
+                letterSpacing: '-0.005em',
+              }}
+            >
+              {p}
+            </p>
+          ))}
+        </div>
       </div>
     </section>
   )
@@ -1170,23 +1184,29 @@ function MetroDetail({ location }) {
           style={{
             display: 'grid',
             gridTemplateColumns: 'minmax(0, 1.4fr) minmax(0, 1fr)',
-            gap: 48,
+            gap: 56,
             alignItems: 'start',
           }}
         >
           <div>
             {md.body && (
-              <p
-                style={{
-                  margin: 0,
-                  fontFamily: 'var(--font-body)',
-                  fontSize: 17,
-                  lineHeight: 1.65,
-                  color: 'var(--text-secondary)',
-                }}
-              >
-                {md.body}
-              </p>
+              <div style={{ display: 'grid', gap: 20 }}>
+                {(Array.isArray(md.body) ? md.body : [md.body]).map((p, i) => (
+                  <p
+                    key={i}
+                    style={{
+                      margin: 0,
+                      fontFamily: 'var(--font-body)',
+                      fontSize: 17,
+                      lineHeight: 1.7,
+                      color: 'var(--text-secondary)',
+                      letterSpacing: '-0.005em',
+                    }}
+                  >
+                    {p}
+                  </p>
+                ))}
+              </div>
             )}
 
             {md.stats && md.stats.length > 0 && (
