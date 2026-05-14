@@ -96,12 +96,12 @@ A buyers agent's fee on a single purchase usually clears five figures, so one ex
 
 ## What Surprised Us Auditing 122 Property and Buyers-Agent Websites
 
-**Our Robin Search rubric across 122 property and buyers-agent pages says the property vertical averages 55.4 / 100, weaker than it looks.**
+**Our AI search and SEO rubric across 122 property and buyers-agent pages says the property vertical averages 55.4 / 100, weaker than it looks.**
 
-<svg width="100%" viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Robin Search mean scores out of 100: UC's own pages 83.4, property vertical 55.4, whole corpus 53.7. As of May 2026.">
+<svg width="100%" viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UnderCurrent Article Reviewer mean scores out of 100: UC's own pages 83.4, property vertical 55.4, whole corpus 53.7. As of May 2026.">
   <rect width="640" height="260" fill="#121210" rx="8"/>
-  <text x="24" y="34" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="600" fill="#f5f1e8">Robin Search mean score (out of 100)</text>
-  <text x="24" y="54" font-family="system-ui,sans-serif" font-size="12" fill="rgba(245,241,232,0.55)">As of May 2026 — UnderCurrent Robin Search corpus</text>
+  <text x="24" y="34" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="600" fill="#f5f1e8">Article Reviewer mean score (out of 100)</text>
+  <text x="24" y="54" font-family="system-ui,sans-serif" font-size="12" fill="rgba(245,241,232,0.55)">As of May 2026 — UnderCurrent Article Reviewer corpus</text>
   <g font-family="system-ui,sans-serif" font-size="13" fill="#f5f1e8">
     <text x="230" y="100" text-anchor="end">UC own pages (n=16)</text>
     <rect x="240" y="84" width="333" height="22" fill="#6a8a72" rx="2"/>
@@ -125,9 +125,9 @@ A buyers agent's fee on a single purchase usually clears five figures, so one ex
 |---|---|---|---|---|
 | Property + buyers-agent vertical | 122 | 55.4 / 100 | 13 | 79 |
 | UC's own published pages | 16 | 83.4 / 100 | — | — |
-| Whole Robin Search corpus | 171 | 53.7 / 100 | — | — |
+| Whole Article Reviewer corpus | 171 | 53.7 / 100 | — | — |
 
-*Source: UnderCurrent Robin Search corpus, as of May 2026. Numbers refresh as audits land in Supabase.*
+*Source: UnderCurrent Article Reviewer corpus, as of May 2026. Numbers refresh as audits land in Supabase.*
 
 Three things hit harder than the score sheet shows. The spread is brutal: 79 of 122 sit in the weak band. Most buyers-agent content isn't bad, it's forgettable, and forgettable is what AI engines skip. The gap is mechanical: high scorers had suburb pages, schema, and a Business Profile set up properly. And almost nobody had structured data, so the firm that adds it gets a near-free head start in AI Overviews.
 
