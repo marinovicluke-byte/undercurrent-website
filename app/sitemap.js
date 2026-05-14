@@ -12,13 +12,14 @@ export default function sitemap() {
     '', '/about', '/services', '/process', '/contact',
     '/audit',
     '/blog', '/case-studies', '/glossary',
+    '/research', '/research/article-reviewer',
     '/company-information',
     '/privacy', '/terms',
   ].map(path => ({
     url: `${BASE}${path}`,
     lastModified: new Date(),
-    changeFrequency: 'monthly',
-    priority: path === '' ? 1.0 : 0.7,
+    changeFrequency: path.startsWith('/research') ? 'weekly' : 'monthly',
+    priority: path === '' ? 1.0 : path.startsWith('/research') ? 0.8 : 0.7,
   }))
 
   const locationPages = LOCATIONS.map(l => ({
