@@ -35,39 +35,61 @@ function buildLocationJsonLd(location) {
 
   const isNational = location.region === 'AU'
 
-  return [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'LocalBusiness',
-      '@id': `${url}#business`,
-      name: `UnderCurrent Automations, ${location.city}`,
-      description: location.metaDescription,
-      url,
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: isNational ? 'Melbourne' : location.city,
-        addressRegion: isNational ? 'VIC' : location.region,
-        addressCountry: 'AU',
-      },
-      areaServed: isNational
-        ? { '@type': 'Country', name: 'Australia' }
-        : [
-            { '@type': 'City', name: location.city },
-            { '@type': 'Country', name: 'Australia' },
-          ],
-      serviceType: [
-        'AI Business Automation',
-        'Workflow Automation',
-        'Business Process Automation',
-        'Lead Generation Automation',
-        'Sales Automation',
-      ],
-      parentOrganization: { '@id': `${DOMAIN}#organization` },
-      provider: { '@id': `${DOMAIN}#organization` },
-      priceRange: 'AUD',
-      telephone: '+61438780815',
-      email: 'luke@undercurrentautomations.com',
+  const localBusiness = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': `${url}#business`,
+    name: `UnderCurrent Automations, ${location.city}`,
+    description: location.metaDescription,
+    url,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: isNational ? 'Melbourne' : location.city,
+      addressRegion: isNational ? 'VIC' : location.region,
+      addressCountry: 'AU',
     },
+    areaServed: isNational
+      ? { '@type': 'Country', name: 'Australia' }
+      : [
+          { '@type': 'City', name: location.city },
+          { '@type': 'Country', name: 'Australia' },
+        ],
+    serviceType: [
+      'AI Business Automation',
+      'Workflow Automation',
+      'Business Process Automation',
+      'Lead Generation Automation',
+      'Sales Automation',
+    ],
+    parentOrganization: { '@id': `${DOMAIN}#organization` },
+    provider: { '@id': `${DOMAIN}#organization` },
+    priceRange: 'AUD',
+    telephone: '+61438780815',
+    email: 'luke@undercurrentautomations.com',
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '09:00',
+        closes: '17:00',
+      },
+    ],
+  }
+
+  if (location.geo && typeof location.geo.latitude === 'number' && typeof location.geo.longitude === 'number') {
+    localBusiness.geo = {
+      '@type': 'GeoCoordinates',
+      latitude: location.geo.latitude,
+      longitude: location.geo.longitude,
+    }
+  }
+
+  if (location.dateModified) {
+    localBusiness.dateModified = location.dateModified
+  }
+
+  return [
+    localBusiness,
     {
       '@context': 'https://schema.org',
       '@type': 'Service',
@@ -94,6 +116,20 @@ function buildLocationJsonLd(location) {
           description: 'Value-based pricing, scoped per engagement after a free workflow review.',
         },
       },
+      ...(location.dateModified ? { dateModified: location.dateModified } : {}),
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': `${url}#practitioner`,
+      name: 'Luke Marinovic',
+      jobTitle: 'Founder, UnderCurrent Automations',
+      worksFor: { '@id': `${DOMAIN}#organization` },
+      url: `${DOMAIN}/about`,
+      sameAs: [
+        'https://www.linkedin.com/in/lukemarinovic/',
+        'https://x.com/UC_Automations',
+      ],
     },
     {
       '@context': 'https://schema.org',

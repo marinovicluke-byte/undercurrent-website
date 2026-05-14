@@ -107,6 +107,21 @@ function Hero({ location }) {
           }}
         >
           <PillCTA label="Book a Workflow Review" href={CTA_HREF} tone={location.heroAccent || 'blue'} large external />
+          <a
+            href="tel:+61438780815"
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: 14,
+              fontWeight: 500,
+              color: 'var(--off-white)',
+              textDecoration: 'none',
+              borderBottom: '1px solid var(--text-faint)',
+              paddingBottom: 3,
+              letterSpacing: '-0.005em',
+            }}
+          >
+            Call 0438 780 815
+          </a>
           <Link
             href="/audit"
             style={{
@@ -1070,18 +1085,364 @@ function ClosingCTA({ location }) {
 }
 
 // ────────────────────────────────────────────────────────────────────────────
+// QuickAnswer: BLUF callout block. Renders only when location.quickAnswer is
+// set in the data file. AEO citation block + featured-snippet candidate.
+// ────────────────────────────────────────────────────────────────────────────
+function QuickAnswer({ location }) {
+  if (!location.quickAnswer) return null
+  const accent = ACCENTS[location.heroAccent || 'sage']
+  const paragraphs = Array.isArray(location.quickAnswer)
+    ? location.quickAnswer
+    : [location.quickAnswer]
+
+  return (
+    <section
+      id="quick-answer"
+      data-aeo="quick-answer"
+      style={{
+        background: 'var(--charcoal-deep)',
+        padding: 'clamp(80px, 12vh, 128px) var(--page-pad)',
+        borderBottom: '1px solid var(--text-faint)',
+      }}
+    >
+      <div style={{ maxWidth: 920, margin: 0 }}>
+        <div style={{ marginBottom: 28 }}>
+          <SectionEyebrow n="QA" label="The honest answer" />
+        </div>
+        <div
+          style={{
+            borderLeft: `3px solid ${accent.hex}`,
+            paddingLeft: 28,
+            display: 'grid',
+            gap: 22,
+          }}
+        >
+          {paragraphs.map((p, i) => (
+            <p
+              key={i}
+              style={{
+                margin: 0,
+                fontFamily: 'var(--font-body)',
+                fontSize: 'clamp(19px, 1.9vw, 22px)',
+                lineHeight: 1.65,
+                color: i === 0 ? 'var(--off-white)' : 'var(--text-secondary)',
+                letterSpacing: '-0.005em',
+              }}
+            >
+              {p}
+            </p>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ────────────────────────────────────────────────────────────────────────────
+// MetroDetail: anti-doorway paragraph + regulators + stats + embedded map.
+// Renders only when location.metroDetail is set. This is the section that
+// makes the page genuinely scope-specific (Cat 1 + Cat 9 rubric lift).
+// ────────────────────────────────────────────────────────────────────────────
+function MetroDetail({ location }) {
+  if (!location.metroDetail) return null
+  const md = location.metroDetail
+  const accent = ACCENTS[location.heroAccent || 'sage']
+  const mapQuery = encodeURIComponent(location.city)
+
+  return (
+    <section
+      style={{
+        background: 'var(--charcoal-deep)',
+        padding: 'clamp(80px, 12vh, 140px) var(--page-pad)',
+        borderBottom: '1px solid var(--text-faint)',
+      }}
+    >
+      <div style={{ maxWidth: 1280, margin: 0 }}>
+        <div style={{ marginBottom: 32 }}>
+          <SectionEyebrow n="LO" label={`${location.city}, ${location.region}`} />
+        </div>
+
+        {md.heading && (
+          <h2
+            style={{
+              margin: '0 0 32px',
+              fontFamily: 'var(--font-display)',
+              fontWeight: 500,
+              fontSize: 'clamp(32px, 4.5vw, 52px)',
+              lineHeight: 1.1,
+              letterSpacing: '-0.03em',
+              color: 'var(--off-white)',
+              textWrap: 'balance',
+              maxWidth: 900,
+            }}
+          >
+            {md.heading}
+          </h2>
+        )}
+
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'minmax(0, 1.4fr) minmax(0, 1fr)',
+            gap: 56,
+            alignItems: 'start',
+          }}
+        >
+          <div>
+            {md.body && (
+              <div style={{ display: 'grid', gap: 20 }}>
+                {(Array.isArray(md.body) ? md.body : [md.body]).map((p, i) => (
+                  <p
+                    key={i}
+                    style={{
+                      margin: 0,
+                      fontFamily: 'var(--font-body)',
+                      fontSize: 17,
+                      lineHeight: 1.7,
+                      color: 'var(--text-secondary)',
+                      letterSpacing: '-0.005em',
+                    }}
+                  >
+                    {p}
+                  </p>
+                ))}
+              </div>
+            )}
+
+            {md.stats && md.stats.length > 0 && (
+              <div
+                style={{
+                  marginTop: 48,
+                  paddingTop: 32,
+                  borderTop: '1px solid var(--text-faint)',
+                  display: 'grid',
+                  gridTemplateColumns: `repeat(${Math.min(md.stats.length, 3)}, 1fr)`,
+                  gap: 24,
+                }}
+              >
+                {md.stats.map((s, i) => (
+                  <div key={i}>
+                    <div
+                      style={{
+                        fontFamily: 'var(--font-display)',
+                        fontWeight: 600,
+                        fontSize: 'clamp(22px, 2.6vw, 32px)',
+                        letterSpacing: '-0.025em',
+                        color: `rgb(${accent.light})`,
+                        lineHeight: 1,
+                        fontVariantNumeric: 'tabular-nums',
+                      }}
+                    >
+                      {s.value}
+                    </div>
+                    <div
+                      style={{
+                        marginTop: 10,
+                        fontFamily: 'var(--font-body)',
+                        fontSize: 12,
+                        color: 'var(--text-muted)',
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      {s.source ? (
+                        <a
+                          href={s.source}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ color: 'var(--text-muted)', textDecoration: 'underline' }}
+                        >
+                          {s.label}
+                        </a>
+                      ) : (
+                        s.label
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {md.regulators && md.regulators.length > 0 && (
+              <div style={{ marginTop: 40 }}>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: 12,
+                    color: 'var(--text-muted)',
+                    letterSpacing: '0.05em',
+                    textTransform: 'uppercase',
+                    marginBottom: 14,
+                  }}
+                >
+                  Regulators we design around
+                </div>
+                <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'grid', gap: 8 }}>
+                  {md.regulators.map((r, i) => (
+                    <li key={i}>
+                      <a
+                        href={r.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          fontFamily: 'var(--font-body)',
+                          fontSize: 14,
+                          color: 'var(--text-secondary)',
+                          textDecoration: 'underline',
+                          textDecorationColor: 'var(--text-faint)',
+                        }}
+                      >
+                        {r.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
+          <div
+            style={{
+              position: 'relative',
+              aspectRatio: '4/5',
+              borderRadius: 14,
+              overflow: 'hidden',
+              border: '1px solid var(--text-faint)',
+              background: 'var(--charcoal)',
+            }}
+          >
+            <iframe
+              title={`Map of greater ${location.city}`}
+              src={`https://www.google.com/maps?q=${mapQuery}&z=10&output=embed`}
+              width="100%"
+              height="100%"
+              style={{ border: 0, display: 'block', filter: 'grayscale(0.4) contrast(0.95)' }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ────────────────────────────────────────────────────────────────────────────
+// LocalProof: inline case-study reference. Renders only when
+// location.localProof is set. Cat 4 (Local Proof) lift.
+// ────────────────────────────────────────────────────────────────────────────
+function LocalProof({ location }) {
+  if (!location.localProof) return null
+  const lp = location.localProof
+  const accent = ACCENTS[location.heroAccent || 'sage']
+
+  return (
+    <section
+      style={{
+        background: 'var(--charcoal-deep)',
+        padding: 'clamp(56px, 8vh, 96px) var(--page-pad)',
+        borderBottom: '1px solid var(--text-faint)',
+      }}
+    >
+      <div style={{ maxWidth: 1000, margin: 0 }}>
+        <div style={{ marginBottom: 28 }}>
+          <SectionEyebrow n="PR" label={`Proof in ${location.city}`} />
+        </div>
+        <p
+          style={{
+            margin: 0,
+            fontFamily: 'var(--font-body)',
+            fontSize: 'clamp(17px, 1.6vw, 19px)',
+            lineHeight: 1.6,
+            color: 'var(--off-white)',
+            borderLeft: `3px solid ${accent.hex}`,
+            paddingLeft: 24,
+            maxWidth: 820,
+          }}
+        >
+          {lp.excerpt}
+        </p>
+        {lp.caseStudyPath && (
+          <div style={{ marginTop: 28 }}>
+            <Link
+              href={lp.caseStudyPath}
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 14,
+                fontWeight: 500,
+                color: `rgb(${accent.light})`,
+                textDecoration: 'none',
+                borderBottom: `1px solid rgb(${accent.rgb})`,
+                paddingBottom: 3,
+                letterSpacing: '-0.005em',
+              }}
+            >
+              {lp.caseStudyLabel || 'Read the case study'} →
+            </Link>
+          </div>
+        )}
+      </div>
+    </section>
+  )
+}
+
+// ────────────────────────────────────────────────────────────────────────────
+// PageMeta: visible "Last reviewed" line + author attribution. Cat 3
+// (E-E-A-T) + Cat 7 (technical foundation, freshness signal).
+// ────────────────────────────────────────────────────────────────────────────
+function PageMeta({ location }) {
+  if (!location.dateModified) return null
+  const d = new Date(location.dateModified)
+  const formatted = d.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' })
+  return (
+    <section
+      style={{
+        background: 'var(--charcoal-deep)',
+        padding: '32px var(--page-pad) 56px',
+        borderBottom: '1px solid var(--text-faint)',
+      }}
+    >
+      <div
+        style={{
+          maxWidth: 1280,
+          margin: 0,
+          fontFamily: 'var(--font-body)',
+          fontSize: 13,
+          color: 'var(--text-muted)',
+          lineHeight: 1.5,
+        }}
+      >
+        Last reviewed{' '}
+        <time dateTime={location.dateModified} style={{ color: 'var(--text-secondary)' }}>
+          {formatted}
+        </time>
+        {' '}by{' '}
+        <Link href="/about" style={{ color: 'var(--text-secondary)', textDecoration: 'underline', textDecorationColor: 'var(--text-faint)' }}>
+          Luke Marinovic
+        </Link>
+        , Founder, UnderCurrent Automations.
+      </div>
+    </section>
+  )
+}
+
+// ────────────────────────────────────────────────────────────────────────────
 // Main export
 // ────────────────────────────────────────────────────────────────────────────
 export default function LocationPageClient({ location }) {
   return (
     <>
       <Hero location={location} />
+      <QuickAnswer location={location} />
+      <MetroDetail location={location} />
       <Industries location={location} />
       <Benefits location={location} />
       <Process location={location} />
       <Comparison location={location} />
+      <LocalProof location={location} />
       <FAQ location={location} />
       <ClosingCTA location={location} />
+      <PageMeta location={location} />
     </>
   )
 }

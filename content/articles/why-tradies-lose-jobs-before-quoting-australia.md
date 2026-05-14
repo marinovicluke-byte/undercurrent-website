@@ -2,6 +2,7 @@
 title: "Why Australian Tradies Lose Jobs Before Quoting"
 description: "Most Australian tradies lose 50-70% of enquiries simply by responding too slowly. Learn why the first business to respond wins the job and how to fix it."
 date: "2026-03-31"
+dateModified: "2026-05-13"
 slug: "why-tradies-lose-jobs-before-quoting-australia"
 cluster: "lead-generation"
 keyword: "why tradies lose jobs before quoting australia"

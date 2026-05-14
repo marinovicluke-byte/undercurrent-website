@@ -22,7 +22,7 @@ faqs:
   - q: "How do I know which process to automate first with an AI agent?"
     a: "The best first process to automate is the one that's highest volume, follows a consistent repeatable pattern, and is easy to measure before and after. For most Australian service businesses, that's either lead follow-up or invoice chasing, both are well-defined, happen frequently, and produce visible results within weeks. MYOB's Business Monitor consistently identifies admin overload as a top-three constraint for SMEs. A free automation audit will identify the highest-value starting point for your specific situation."
   - q: "Who can build an AI agent for my small business in Australia?"
-    a: "UnderCurrent Automations builds done-for-you AI agent systems for Australian service businesses, covering lead follow-up, invoice chasing, job scheduling, and customer service automations, all connected to your existing tools including Xero, HubSpot, and ServiceM8. Most builds go live in under two weeks. If you're not sure where to start, book a free automation audit and we'll map exactly which process will return the most time and money first."
+    a: "UnderCurrent Automations builds done-for-you AI agent systems for Australian service businesses, covering lead follow-up, invoice chasing, job scheduling, and customer service automations, all connected to your existing tools including Xero, HubSpot, and ServiceM8. Most builds go live in under two weeks. If you're not sure where to start, book a scoping call and we'll map exactly which process will return the most time and money first."
 ---
 # How to Use an AI Agent for Business in Australia
 
@@ -115,6 +115,8 @@ An AI agent deployed on your website or via SMS can handle the top 20 questions 
 
 [Deloitte's Digital Consumer Trends report for Australia](https://www2.deloitte.com/au/en/pages/technology-media-and-telecommunications/articles/digital-consumer-trends.html) found that 61% of Australian consumers expect a response to a service enquiry within the same day, and 29% expect a response within an hour. For service businesses with high enquiry volume, a customer service agent that responds instantly, even at 11pm on a Sunday, pays for itself in the first month. The [customer experience automation](/customer-experience-automation) service covers exactly this use case.
 
+If you want this scoped for your business, [book a scoping call](/services) — we'll map the highest-value agent build for your existing tools.
+
 ---
 
 ## How Much Does an AI Agent Cost for an Australian Business?
@@ -163,7 +165,7 @@ For a broader view of which processes to automate first, the [UC guide to automa
 
 In UC's own client onboarding workflow, the businesses that get the fastest results are the ones that start with a single, clearly defined process, not a sprawling wishlist. One well-built agent beats six half-finished ones every time.
 
-If you'd rather have this built for you, [that's exactly what we do at UnderCurrent Automations](/audit), and most builds go live in under two weeks.
+If you'd rather have this built for you, **[book a scoping call](/services)** — most builds go live in under two weeks.
 
 ---
 
@@ -197,7 +199,7 @@ If you'd rather have this built for you, [that's exactly what we do at UnderCurr
 
 ### Who can build an AI agent for my small business in Australia?
 
-**UnderCurrent Automations builds done-for-you AI agent systems for Australian service businesses, covering lead follow-up, invoice chasing, job scheduling, and customer service automations, all connected to your existing tools including Xero, HubSpot, and ServiceM8.** Most builds go live in under two weeks. If you're not sure where to start, [book a free automation audit](/audit) and we'll map exactly which process will return the most time and money first.
+**UnderCurrent Automations builds done-for-you AI agent systems for Australian service businesses, covering lead follow-up, invoice chasing, job scheduling, and customer service automations, all connected to your existing tools including Xero, HubSpot, and ServiceM8.** Most builds go live in under two weeks. If you're not sure where to start, [book a scoping call](/services) and we'll map exactly which process will return the most time and money first.
 
 ---
 
