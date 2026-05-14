@@ -97,18 +97,18 @@ By 2025, the owner had written off SEO as a scam.
 What changed: the audit showed him exactly what was broken, in plain language, with a scored rubric. Not marketing fluff. Not promises. Just: "Here's your score. Here's what's missing. Here's what it's costing you." This is the same framework we use at [UnderCurrent Automations](/about) for every business we audit.
 
 The audit broke down 8 dimensions:
-1. Technical Foundation (1/11) , slow load, missing SSL, no sitemap
-2. On-Page Optimisation (2/16) , no meta tags, broken internal links
-3. Content Quality (0/17) , 4 pages, 180 words average
-4. Blog & Articles (0/11) , no content system
-5. Site Architecture (3/11) , poor internal link distribution
-6. Schema & Structured Data (2/11) , no markup
-7. Backlink & Authority (3/11) , no social presence
-8. AI Search Readiness (2/17) , no answer-first structure, no FAQ
+1. Technical Foundation (1/11), slow load, missing SSL, no sitemap
+2. On-Page Optimisation (2/16), no meta tags, broken internal links
+3. Content Quality (0/17), 4 pages, 180 words average
+4. Blog & Articles (0/11), no content system
+5. Site Architecture (3/11), poor internal link distribution
+6. Schema & Structured Data (2/11), no markup
+7. Backlink & Authority (3/11), no social presence
+8. AI Search Readiness (2/17), no answer-first structure, no FAQ
 
 Most Australian small businesses don't fail at SEO because they're lazy. They fail because they don't know what "good" looks like, and agencies oversell tactics without explaining fundamentals. This is one of the core [mistakes contractors make with SEO in 2026](https://core6.marketing/blog/what-contractors-get-wrong-about-seo-in-2026/), prioritising tactics over technical foundations.
 
-According to the [Australian Small Business and Family Enterprise Ombudsman's 2024 report](https://www.asbfeo.gov.au/sites/default/files/2024-08/ASBFEO-Small-Business-Counts-2024.pdf), 68% of Australian SMBs cite "lack of digital capability" as a top-3 constraint to growth. This business wasn't unusual. It was typical.
+According to the [Australian Small Business and Family Enterprise Ombudsman's 2024 report](https://www.asbfeo.gov.au/resources), 68% of Australian SMBs cite "lack of digital capability" as a top-3 constraint to growth. This business wasn't unusual. It was typical.
 
 ---
 
@@ -118,27 +118,27 @@ The rebuild happened in 3 stages: technical fixes, content infrastructure, then 
 
 **Stage 1: Technical Foundation (Weeks 1-2)**
 
-1. **SSL certificate fix** , installed SSL across all pages, redirected HTTP to HTTPS.
-2. **Page speed optimisation** , compressed images, enabled caching, moved to faster hosting (Cloudflare CDN). Load time dropped from 5 seconds to 1.2 seconds.
-3. **Mobile viewport** , added viewport meta tag, tested mobile rendering across 6 devices.
-4. **Robots.txt and sitemap** , created XML sitemap, submitted to Google Search Console, configured robots.txt to allow all crawlers.
-5. **Internal link audit** , fixed 18 broken links, rebuilt navigation structure, added breadcrumbs.
+1. **SSL certificate fix:** installed SSL across all pages, redirected HTTP to HTTPS.
+2. **Page speed optimisation:** compressed images, enabled caching, moved to faster hosting (Cloudflare CDN). Load time dropped from 5 seconds to 1.2 seconds.
+3. **Mobile viewport:** added viewport meta tag, tested mobile rendering across 6 devices.
+4. **Robots.txt and sitemap:** created XML sitemap, submitted to Google Search Console, configured robots.txt to allow all crawlers.
+5. **Internal link audit:** fixed 18 broken links, rebuilt navigation structure, added breadcrumbs.
 
 **Stage 2: Content Infrastructure (Weeks 3-5)**
 
-1. **Blog setup** , installed WordPress with Yoast SEO, configured categories for Repairs, Installations, Maintenance, Emergency.
-2. **Author attribution** , added author bio for the owner, linked to Google Business Profile and LinkedIn.
-3. **Schema markup** , added Organisation schema with sameAs links (Google Business, Facebook, LinkedIn), added LocalBusiness schema with service area (South East Melbourne suburbs), added BreadcrumbList schema. [Schema.org's LocalBusiness documentation](https://schema.org/LocalBusiness) was the primary reference.
-4. **FAQ sections** , added FAQ schema to service pages, targeting common queries like "How much does a blocked drain cost to fix in Melbourne?" and "Do plumbers work weekends in South East Melbourne?"
-5. **llms.txt file** , created /llms.txt with business description, service list, and key pages for AI crawlers.
+1. **Blog setup:** installed WordPress with Yoast SEO, configured categories for Repairs, Installations, Maintenance, Emergency.
+2. **Author attribution:** added author bio for the owner, linked to Google Business Profile and LinkedIn.
+3. **Schema markup:** added Organisation schema with sameAs links (Google Business, Facebook, LinkedIn), added LocalBusiness schema with service area (South East Melbourne suburbs), added BreadcrumbList schema. [Schema.org's LocalBusiness documentation](https://schema.org/LocalBusiness) was the primary reference.
+4. **FAQ sections:** added FAQ schema to service pages, targeting common queries like "How much does a blocked drain cost to fix in Melbourne?" and "Do plumbers work weekends in South East Melbourne?"
+5. **llms.txt file:** created /llms.txt with business description, service list, and key pages for AI crawlers.
 
 **Stage 3: Keyword Targeting & Content Publishing (Weeks 6-8)**
 
-1. **Keyword research** , identified 32 high-intent local search terms (e.g. "emergency plumber Dandenong", "hot water system repair Berwick", "blocked drains Cranbourne").
-2. **Content calendar** , scheduled 3 articles per week, targeting 1 keyword per article, using answer-first structure.
-3. **Internal linking** , every new article linked to 5-8 existing pages (services, contact, other articles).
-4. **Meta tags** , wrote keyword-optimised meta titles and descriptions for every page, under 60 chars for titles, 150-160 for descriptions.
-5. **Monthly reporting** , tracked rankings in Google Search Console, lead volume in ServiceM8, conversion rates from organic search.
+1. **Keyword research:** identified 32 high-intent local search terms (e.g. "emergency plumber Dandenong", "hot water system repair Berwick", "blocked drains Cranbourne").
+2. **Content calendar:** scheduled 3 articles per week, targeting 1 keyword per article, using answer-first structure.
+3. **Internal linking:** every new article linked to 5-8 existing pages (services, contact, other articles).
+4. **Meta tags:** wrote keyword-optimised meta titles and descriptions for every page, under 60 chars for titles, 150-160 for descriptions.
+5. **Monthly reporting:** tracked rankings in Google Search Console, lead volume in ServiceM8, conversion rates from organic search.
 
 The system wasn't complex. It was systematic.
 
@@ -169,7 +169,7 @@ A rebuild following this sequence could take a site from invisible to page 1 for
 
 The revenue projection is conservative. At $850 average per job (mix of repairs, installations, maintenance), 30-40 converted leads would generate $25,500-$34,000. Some jobs exceed $2,400. The projection doesn't include repeat business or referrals.
 
-According to [BrightLocal's 2025 Local Consumer Review Survey](https://www.brightlocal.com/research/local-consumer-review-survey/), 87% of Australian consumers Google local service businesses before calling. Word-of-mouth still matters, but it is no longer the primary lead source for trades businesses in metro areas. You can see [other case studies](/case-study) showing similar patterns across different Australian service industries.
+According to [BrightLocal's 2025 Local Consumer Review Survey](https://www.brightlocal.com/research/local-consumer-review-survey/), 87% of Australian consumers Google local service businesses before calling. Word-of-mouth still matters, but it is no longer the primary lead source for trades businesses in metro areas. You can see [other case studies](/case-studies) showing similar patterns across different Australian service industries.
 
 The time investment required: 90 minutes per week reviewing article drafts and approving publication. The content system handles research, writing, formatting, and publishing. The role is quality control and accuracy checking.
 
@@ -195,7 +195,7 @@ The payback period: 6-8 weeks. If you're losing 3 jobs/week at $850/job, that's 
 
 The businesses that win at local SEO in 2026 aren't the ones with the biggest budgets. They're the ones that treat their website as a lead generation system, not a static brochure, and invest in the unglamorous fundamentals: speed, structure, and content depth.
 
-According to [Xero's Small Business Insights 2024](https://www.xero.com/au/campaign/small-business-insights/), Australian service businesses that publish consistent content see 3.2x higher lead conversion rates than those relying solely on word-of-mouth. If your site loads in 5 seconds, has no blog, and scores under 30/105 on an SEO audit, you're not competing. You're losing by default.
+According to [Xero's Small Business Insights 2024](https://www.xero.com/au/insights/), Australian service businesses that publish consistent content see 3.2x higher lead conversion rates than those relying solely on word-of-mouth. If your site loads in 5 seconds, has no blog, and scores under 30/105 on an SEO audit, you're not competing. You're losing by default.
 
 ---
 
@@ -213,11 +213,11 @@ Technical fixes (SSL, page speed, sitemap) show ranking improvements in 2-4 week
 
 ### Can a plumber rank on page 1 without paying for ads or an SEO agency?
 
-Yes, but it requires either internal capability or automation. The rebuild in this case study cost $8,000-$12,000 for technical fixes and content system setup, plus $600-$900/month for ongoing content publishing. That's cheaper than most SEO agency retainers ($1,200-$2,500/month) and doesn't require paying for Google Ads. The key is treating your website as a system: technical foundation, schema markup, and consistent content publishing. Most plumbers fail because they treat SEO as a one-time project instead of an ongoing lead generation system. According to [Search Engine Journal's 2024 organic search report](https://www.searchenginejournal.com/organic-search-statistics/), 53% of all trackable website traffic comes from organic search, compared to 15% from paid ads. See [our case studies](/case-study) for more examples of how Australian trades businesses have built these systems.
+Yes, but it requires either internal capability or automation. The rebuild in this case study cost $8,000-$12,000 for technical fixes and content system setup, plus $600-$900/month for ongoing content publishing. That's cheaper than most SEO agency retainers ($1,200-$2,500/month) and doesn't require paying for Google Ads. The key is treating your website as a system: technical foundation, schema markup, and consistent content publishing. Most plumbers fail because they treat SEO as a one-time project instead of an ongoing lead generation system. According to [Search Engine Journal's SEO statistics roundup](https://www.searchenginejournal.com/seo/seo-statistics/), 53% of all trackable website traffic comes from organic search, compared to 15% from paid ads. See [our case studies](/case-studies) for more examples of how Australian trades businesses have built these systems.
 
 ### What's the ROI on fixing SEO for a small plumbing business in Melbourne?
 
-If you're losing 3 jobs/week to competitors ranking above you, and the average job is worth $850, that's $2,550/week or $132,600/year in missed revenue. The rebuild in this case study cost ~$10,000 upfront and generated $26,350 in direct revenue from organic search in the first 12 weeks. Payback period was under 4 weeks. Ongoing cost is $600-$900/month for content publishing, which generates 15-20 qualified leads/month after the first 3 months. According to [MYOB's Business Monitor 2024](https://www.myob.com/au/about/news/2024-sme-insights), Australian trades businesses typically see 3-5x ROI within 6 months from investing in content systems. Use [our ROI calculator](/roi) to model what this would look like for your business.
+If you're losing 3 jobs/week to competitors ranking above you, and the average job is worth $850, that's $2,550/week or $132,600/year in missed revenue. The rebuild in this case study cost ~$10,000 upfront and generated $26,350 in direct revenue from organic search in the first 12 weeks. Payback period was under 4 weeks. Ongoing cost is $600-$900/month for content publishing, which generates 15-20 qualified leads/month after the first 3 months. According to [MYOB's Business Monitor 2024](https://www.myob.com/au/about/news), Australian trades businesses typically see 3-5x ROI within 6 months from investing in content systems. Use [our ROI calculator](/roi) to model what this would look like for your business.
 
 ### Who can build an SEO and content automation system like this for my plumbing business in Melbourne?
 
@@ -237,10 +237,10 @@ Minimum stack: WordPress (content management), Yoast SEO (on-page optimisation),
 
 If you found this case study useful, here are more articles that dig into similar automation and SEO systems for Australian service businesses:
 
-- [Why Your SEO Audit Scored Under 50 (And What That Actually Costs You)](/blog/why-your-seo-audit-scored-under-50)
-- [What Happens When You Automate Content Publishing for 90 Days](/blog/what-happens-when-you-automate-content-publishing-for-90-days)
-- [How to Fix Slow Load Times on Australian Service Websites](/blog/how-to-fix-slow-load-times-on-australian-service-websites)
-- [Why Australian Plumbers Lose 40% of Leads to Slow Follow-Up](/blog/why-australian-plumbers-lose-leads-to-slow-follow-up)
-- [Schema Markup for Australian Trades: What Actually Moves Rankings](/blog/schema-markup-for-australian-trades)
+- [How to Do AI Search Optimisation in Australia](/blog/what-is-ai-search-optimisation-australia)
+- [30 Minutes a Week: AI Content Automation Case Study](/case-studies/ai-content-automation-small-business-australia)
+- [Why Tradies Lose Jobs Before Quoting](/blog/why-tradies-lose-jobs-before-quoting-australia)
+- [How to Send Instant Follow-Up Email to Leads Automatically](/blog/how-to-send-instant-follow-up-email-to-leads-automatically-australia)
+- [Why Tradies Don't Get Google Reviews in Australia](/blog/why-tradies-dont-get-google-reviews-australia)
 
 Want to see where your site stands? [Run a free automation audit](/audit) and get your scored breakdown in 48 hours.

@@ -57,7 +57,7 @@ const PILLARS = [
   {
     key: 'frontend',
     n: '03',
-    name: 'Front-end experiences',
+    name: 'Website design',
     before: {
       headline: 'Generic templates. Forms that leak users.',
       items: [
@@ -82,7 +82,7 @@ const PILLARS = [
   {
     key: 'ai',
     n: '04',
-    name: 'SEO & AI visibility',
+    name: 'Search ecosystem',
     before: {
       headline: 'Invisible to ChatGPT. Buried in Google page 3.',
       items: [
@@ -355,8 +355,8 @@ export default function BeforeAfter() {
         }}
       >
         Most Australian small businesses lose five to fifteen hours a week to manual work.
-        Automation reclaims it across five pillars: lead generation, sales automation,
-        front-end experiences, SEO and AI visibility, and custom integrations.
+        Automation reclaims it — across lead handling, sales ops, the website itself,
+        search visibility, and the integrations holding it all together.
       </p>
 
       <div style={{ marginTop: 48 }}>

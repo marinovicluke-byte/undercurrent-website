@@ -16,7 +16,7 @@ const CONTENT_MAX = 1280
 export const metadata = {
   title: 'Automation Blog',
   description:
-    'Topic-clustered automation guides and case studies for Australian SMEs. Covers getting started, admin time, leads and sales, and industry-specific workflows. Built by Luke at UnderCurrent Automations, Melbourne.',
+    'Topic-clustered automation guides and case studies for Australian SMEs. Getting started, admin time, leads and sales, and industry workflows.',
   alternates: { canonical: `${SITE_URL}/blog` },
   openGraph: {
     title: 'Automation Blog for Australian Small Business',
@@ -24,6 +24,7 @@ export const metadata = {
       'Topic-clustered automation guides and case studies for Australian SMEs.',
     type: 'website',
     url: `${SITE_URL}/blog`,
+    images: ['/brand/og-card.png'],
   },
   twitter: {
     card: 'summary_large_image',
@@ -397,9 +398,9 @@ export default function BlogV4() {
                         <h3 style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 17, lineHeight: 1.35, letterSpacing: '-0.015em', color: 'var(--text-primary)', transition: 'color 0.15s ease' }}>
                           {article.title}
                         </h3>
-                        {article.summary && (
+                        {(article.summary || article.description) && (
                           <p style={{ margin: '6px 0 0', fontFamily: 'var(--font-body)', fontSize: 14, lineHeight: 1.55, color: 'var(--text-muted)', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                            {article.summary}
+                            {article.summary || article.description}
                           </p>
                         )}
                       </div>

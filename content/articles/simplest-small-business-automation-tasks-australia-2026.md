@@ -1,5 +1,5 @@
 ---
-title: "What Is the Simplest Task a Small Business Can Automate Right Now Using a No-Code Tool? Australia 2026: 5 Wins You Can Set Up in Under 30 Minutes"
+title: "Simplest Small Business Automation Tasks: 5 No-Code Wins"
 description: "Five concrete automation wins small business owners in Australia can implement in under 30 minutes using free no-code tools. No technical skills required."
 date: "2026-01-20"
 slug: "simplest-small-business-automation-tasks-australia-2026"

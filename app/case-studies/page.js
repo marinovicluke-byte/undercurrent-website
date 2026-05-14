@@ -11,7 +11,7 @@ const CONTENT_MAX = 1280
 export const metadata = {
   title: 'Case Studies',
   description:
-    'Real automation case studies from UnderCurrent Automations, Melbourne. Before/after metrics, tools used, and the workflow behind every system we build for Australian small businesses.',
+    'Real automation case studies from UnderCurrent Automations, Melbourne. Before/after metrics, tools used, and the workflow behind every build.',
   alternates: { canonical: `${SITE_URL}/case-studies` },
   openGraph: {
     title: 'Case Studies — Real Automation Systems with Real Numbers',
@@ -19,6 +19,7 @@ export const metadata = {
       'Real automation systems with before/after metrics for Australian small businesses.',
     type: 'website',
     url: `${SITE_URL}/case-studies`,
+    images: ['/brand/og-card.png'],
   },
 }
 

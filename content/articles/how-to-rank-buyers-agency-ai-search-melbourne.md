@@ -1,6 +1,6 @@
 ---
 title: "How to Rank a Melbourne Buyers Agency on AI Search"
-description: "Melbourne buyers agencies average 45/100 on the UnderCurrent Article Reviewer. Six structural fixes — quick-answer block, schema with sameAs, tier-1 sources, comparison tables, valid llms.txt — to rank in AI search across ChatGPT, Perplexity, and Google AI Overviews."
+description: "Melbourne buyers agencies average 45/100 on our AI search and SEO rubric. Six structural fixes — quick-answer block, schema with sameAs, tier-1 sources, comparison tables, valid llms.txt — to rank in AI search across ChatGPT, Perplexity, and Google AI Overviews."
 date: "2026-05-08"
 slug: "how-to-rank-buyers-agency-ai-search-melbourne"
 cluster: "seo-ai-visibility"
@@ -22,7 +22,7 @@ faqs:
 ---
 # How to Rank a Melbourne Buyers Agency on AI Search
 
-> **Quick Answer:** Melbourne buyers agencies average just 45/100 on the UnderCurrent Article Reviewer, 34 points below UC's own content benchmark. The core problem isn't keyword strategy. It's structural: missing quick-answer blocks, broken schema, no llms.txt, and prose where comparison tables should be. Fix the structure, and AI engines have something to extract and cite.
+> **Quick Answer:** Melbourne buyers agencies average just 45/100 on our AI search and SEO rubric, 34 points below UC's own content benchmark. The core problem isn't keyword strategy. It's structural: missing quick-answer blocks, broken schema, no llms.txt, and prose where comparison tables should be. Fix the structure, and AI engines have something to extract and cite.
 
 ![Australian Melbourne buyers agency AI search ranking five-step optimisation workflow diagram](./body-1.jpg)
 
@@ -31,7 +31,7 @@ faqs:
 |-----|-------------------|-----------------|
 | Above-fold quick-answer block | 26/27 articles failing AI extraction | High, first thing AI engines pull |
 | Exactly one H1 | Multiple H1s breaking heading hierarchy | High, blocks AI Overview extraction |
-| Article + FAQPage + RealEstateAgent schema | Missing or incomplete JSON-LD | High, entity disambiguation |
+| Article + [FAQPage](/glossary/what-is-faq-schema) + RealEstateAgent schema | Missing or incomplete JSON-LD | High, entity disambiguation |
 | sameAs on Person/RealEstateAgent | Most audited articles missing this signal | Medium, brand entity signal |
 | Tier-1 source discipline | 3/27 articles link to .gov.au sources | Medium, E-E-A-T and trust score |
 | Comparison tables | Only 2/27 articles have them | Medium, AI extraction signal |
@@ -43,7 +43,7 @@ This is the Melbourne instalment in UC's state-by-state buyers-agency AI-search 
 
 ## What Does the UnderCurrent Article Reviewer Audit Actually Show?
 
-**The Melbourne buyers-agency vertical is structurally underprepared for AI search, the foundations most firms have built for traditional SEO aren't the foundations AI engines extract from.**
+**The Melbourne buyers-agency vertical is structurally underprepared for AI search, the foundations most firms have built for traditional [SEO](/glossary/what-is-seo) aren't the foundations AI engines extract from.**
 
 The UnderCurrent Article Reviewer is UC's proprietary 100-point content-intelligence rubric across 9 scoring categories, built by reverse-engineering 12 months of UC's own AI-citation data against [Google Search Central documentation](https://developers.google.com/search/docs), the Search Quality Rater Guidelines, and [Schema.org entity definitions](https://schema.org/RealEstateAgent). Rubric version 3.2.
 
@@ -74,7 +74,7 @@ Anonymised letters A-G do not correspond to firm-name order anywhere else in the
 
 Per-firm scores reflect between 2 and 8 audited articles per firm depending on each firm's blog volume; smaller samples carry wider confidence intervals. Scores measure structural fitness for AI search extraction at the time of the audit (May 2026), which is a separate question from any firm's service quality, market reputation, or commercial track record. Any audited firm can request a re-audit on a specified URL set; contact details are at the foot of the article.
 
-AI Engine Optimisation (AEO) is the practice of structuring content so that AI answer engines, ChatGPT, Perplexity, Google AI Overviews, Claude, Gemini, can extract, verify, and cite it. It's distinct from traditional SEO in that rankings aren't determined by backlinks or keyword density alone, but by how cleanly a page answers a specific query with verifiable, structured content.
+AI Engine Optimisation ([AEO](/glossary/what-is-answer-engine-optimisation)) is the practice of structuring content so that AI answer engines, ChatGPT, Perplexity, Google AI Overviews, Claude, Gemini, can extract, verify, and cite it. It's distinct from traditional SEO in that rankings aren't determined by backlinks or keyword density alone, but by how cleanly a page answers a specific query with verifiable, structured content.
 
 ---
 
@@ -82,9 +82,9 @@ AI Engine Optimisation (AEO) is the practice of structuring content so that AI a
 
 **The short answer: their content is written for humans to scroll, not for AI engines to extract.**
 
-AI engines don't read a page top-to-bottom. They parse it in discrete chunks, looking for a direct answer in the first 60 words, scanning H2 and H3 headings for structured sections, then checking schema markup to confirm entity identity. If none of those signals are present, the page gets passed over regardless of how good the underlying advice is.
+AI engines don't read a page top-to-bottom. They parse it in discrete chunks, looking for a direct answer in the first 60 words, scanning H2 and H3 headings for structured sections, then checking [schema markup](/glossary/what-is-schema-markup) to confirm entity identity. If none of those signals are present, the page gets passed over regardless of how good the underlying advice is.
 
-The UnderCurrent Article Reviewer audit identified six structural defects appearing across the Melbourne buyers-agency corpus that directly suppress AI visibility.
+The Article Reviewer audit identified six structural defects appearing across the Melbourne buyers-agency corpus that directly suppress AI visibility.
 
 ### Does a Missing Quick-Answer Block Actually Suppress AI Citations?
 
@@ -234,7 +234,7 @@ If you'd rather have this built for you, [that's exactly what we do at UnderCurr
 
 Across the automation systems UC has shipped for content-heavy service businesses, the single fastest win on AI search visibility is adding the `sameAs` array to both the `Person` and `RealEstateAgent` nodes, it takes under 30 minutes and immediately gives AI engines the entity links they need to confidently cite the author as a real, verifiable expert.
 
-The UnderCurrent Article Reviewer scores `sameAs` presence as one of nine categories precisely because it's the difference between a name string and a verified entity. Most audited firms in the Melbourne corpus have at least part of the schema stack in place; the missing `sameAs` array is the most common single-line fix that lifts a firm's score by a measurable margin.
+The Article Reviewer rubric scores `sameAs` presence as one of nine categories precisely because it's the difference between a name string and a verified entity. Most audited firms in the Melbourne corpus have at least part of the schema stack in place; the missing `sameAs` array is the most common single-line fix that lifts a firm's score by a measurable margin.
 
 ---
 
@@ -267,7 +267,7 @@ Based on UC's AI search and SEO rubric applied across 27 articles from 9 Melbour
 
 ## Related Reading
 
-- [The Best AI Search Agency in Australia: 22-Domain Audit](/blog/best-ai-search-agency-australia), UC's AI search and SEO benchmark across 86 articles spanning 22 Australian agency domains
+- [The Best AI Search Agency in Australia: 22-Domain Audit](/blog/best-ai-search-agency-australia), UC's Article Reviewer benchmark across 86 articles spanning 22 Australian agency domains
 - [AI Search vs Traditional SEO: What Australian Businesses Need to Know](/blog/ai-search-vs-traditional-seo-australia), where the two strategies diverge and where they overlap
 - [How to Rank on Google: A Practical Guide for Australian Service Businesses](/blog/how-to-rank-on-google-australia), the technical SEO foundations that underpin AI-search visibility
 - [SEO and AI Visibility: The Hub for Australian Businesses](/blog/seo-ai-visibility-hub-australia), the full resource library for search visibility strategy

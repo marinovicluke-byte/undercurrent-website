@@ -24,14 +24,14 @@ faqs:
 ---
 # SEO for Buyers Agents in Australia: Win More Clients
 
-> **Quick Answer:** SEO for buyers agents in Australia means getting your firm in front of buyers the moment they search "buyers agent [suburb]" on Google, in the local map pack, in AI Overviews, and inside ChatGPT. Most buyers-agent sites lose on suburb-level intent and Google Business Profile, not on backlinks. Fix those two first, then everything else.
+> **Quick Answer:** SEO for buyers agents in Australia means getting your firm in front of buyers the moment they search "buyers agent [suburb]" on Google, in the local map pack, in AI Overviews, and inside ChatGPT. Most buyers-agent sites lose on suburb-level intent and [Google Business Profile](/glossary/what-is-google-business-profile), not on backlinks. Fix those two first, then everything else.
 
 ![Five-step SEO for buyers agents in Australia workflow chart with claim and schema steps](./body-1.jpg)
 
 
 The buyer who used to ring three buyers agents now asks ChatGPT for one and books the first name it gives back. SEO for buyers agents in Australia is the work of being that name across every surface a purchase enquiry passes through. It is not the same job as "real estate SEO", because a buyers agent sells representation and judgement, not listings, and the searches that bring a client are different.
 
-This guide is the plain-English playbook: how buyers actually search, the four surfaces you need to show up on, the three line items most generalist agencies quietly skip for buyers agents, what it costs, and what we found auditing 122 property and buyers-agent websites. No 40-point checklist, just the order of operations that moves the needle.
+This guide is the plain-English playbook: how buyers actually search, the four surfaces you need to show up on, the three line items most generalist agencies quietly skip for buyers agents, what it costs, and what we found auditing 122 property and buyers-agent websites. No 40-point checklist, just the order of operations that moves the needle. For the one-screen definition of the discipline this guide sits inside, see our [Local SEO glossary entry](/glossary/what-is-local-seo).
 
 ## What Does SEO for Buyers Agents in Australia Actually Mean?
 
@@ -60,7 +60,7 @@ Google organic and the map pack are this guide's focus. The AI-engine half sits 
 
 ## The Three SEO Line Items Generalist Agencies Skip for Buyers Agents
 
-**Generalist real estate SEO agencies skip suburb landing pages, service-area Google Business Profiles, and structured data, the three things buyers-agent SEO lives or dies on.**
+**Generalist real estate SEO agencies skip suburb landing pages, service-area Google Business Profiles, and [structured data](/glossary/what-is-schema-markup), the three things buyers-agent SEO lives or dies on.**
 
 **One: real suburb landing pages, not a dropdown.** Every suburb you genuinely service gets its own page with local detail, auction trends, what a buyer there is up against, a real example. Not a thin doorway page. A buyers agent covering the inner east should have pages for Hawthorn, Camberwell, and Kew that a local would recognise as informed.
 
@@ -98,7 +98,7 @@ A buyers agent's fee on a single purchase usually clears five figures, so one ex
 
 **Our AI search and SEO rubric across 122 property and buyers-agent pages says the property vertical averages 55.4 / 100, weaker than it looks.**
 
-<svg width="100%" viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mean scores out of 100: UC 83.4, property vertical 55.4, whole corpus 53.7. May 2026.">
+<svg width="100%" viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Article Reviewer mean scores out of 100: UC's own pages 83.4, property vertical 55.4, whole corpus 53.7. As of May 2026.">
   <rect width="640" height="260" fill="#121210" rx="8"/>
   <text x="24" y="34" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="600" fill="#f5f1e8">Article Reviewer mean score (out of 100)</text>
   <text x="24" y="54" font-family="system-ui,sans-serif" font-size="12" fill="rgba(245,241,232,0.55)">As of May 2026 — UnderCurrent Article Reviewer corpus</text>
@@ -165,7 +165,7 @@ Then start the citable-content and structured-data work for AI-engine visibility
 
 - [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo), the content and structured-data patterns that get pages cited inside ChatGPT.
 - [How to rank in ChatGPT search](/blog/how-to-rank-in-chatgpt-search), practical steps for getting named when a buyer asks ChatGPT for a recommendation.
-- [What is AI search optimisation in Australia](/blog/what-is-ai-search-optimisation-australia), the broader discipline buyers-agent GEO work sits inside.
+- [What is AI search optimisation in Australia](/blog/what-is-ai-search-optimisation-australia), the broader discipline buyers-agent [GEO](/glossary/what-is-generative-engine-optimisation) work sits inside.
 - [The best AI search agency in Australia: how to choose one](/blog/best-ai-search-agency-australia), what to look for if you're hiring out the AI-engine half.
 - [What is GEO? Generative engine optimisation explained](/blog/what-is-geo-generative-engine-optimisation-explained-australia), the technique stack behind getting cited by AI engines.
 

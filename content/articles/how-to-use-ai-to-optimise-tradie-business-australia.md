@@ -1,5 +1,5 @@
 ---
-title: "How to Use AI to Optimise Your Tradie Business Australia 2026: Step-by-Step Workflow Guide"
+title: "How to Use AI to Optimise Your Tradie Business"
 description: "Step-by-step guide showing Australian tradies how to automate quoting, scheduling, and invoicing with AI workflow tools. Real examples and costs included."
 date: "2026-04-15"
 slug: "how-to-use-ai-to-optimise-tradie-business-australia"
@@ -39,13 +39,13 @@ Most tradies think AI means ChatGPT writing emails. That's 5% of what's actually
 
 AI for tradies is workflow automation that removes manual steps between enquiry and payment. **Workflow automation is a system where software completes multi-step business processes automatically based on triggers you set once.** When someone calls asking for a quote, AI can send them a price estimate, book their preferred time slot, send a confirmation SMS, and add the job to your calendar without you opening an app.
 
-The Australian Small Business and Family Enterprise Ombudsman's 2025 report found that 62% of tradies spend more than 10 hours weekly on administrative tasks. **Business process automation is the use of technology to execute recurring tasks or processes with minimal human intervention.** For tradies, this typically covers quoting, scheduling, invoicing, and follow-up communications.
+The Australian Small Business and Family Enterprise Ombudsman's 2025 report found that 62% of tradies spend more than 10 hours weekly on administrative tasks. **[Business process automation](/glossary/what-is-business-process-automation) is the use of technology to execute recurring tasks or processes with minimal human intervention.** For tradies, this typically covers quoting, scheduling, invoicing, and follow-up communications.
 
 Three types of AI tools matter for Australian trade businesses:
 
-1. **Quote automation tools** , generate accurate quotes from photos or measurements using image recognition
-2. **Scheduling AI** , books jobs into your calendar based on your availability rules and sends confirmations
-3. **Invoice automation** , creates and sends invoices automatically when you mark a job complete
+1. **Quote automation tools:** generate accurate quotes from photos or measurements using image recognition
+2. **Scheduling AI:** books jobs into your calendar based on your availability rules and sends confirmations
+3. **Invoice automation:** creates and sends invoices automatically when you mark a job complete
 
 Here's what matters: you don't need one expensive platform. Most tradies connect 2-4 specialist tools that each do one job well. Tom, a Sydney plumber with three apprentices, runs his entire workflow through ServiceM8 ($49/month), Xero ($30/month), and Zapier ($29/month). Total cost: $108/month. Time saved: 11 hours weekly across the team.
 
@@ -125,19 +125,19 @@ The hidden value in invoice automation is cash flow predictability. When invoice
 Australian tradies don't use ChatGPT for business automation. They use workflow tools that connect their existing systems. Here's the actual tech stack based on 2025 ServiceM8 and Tradify user surveys:
 
 **For quoting and job management:**
-- ServiceM8 ($49-$99/month) , most popular among electricians and plumbers
-- Tradify ($59-$99/month) , strong with HVAC and builders
-- Fergus ($89-$149/month) , preferred by larger teams (5+ staff)
+- ServiceM8 ($49-$99/month), most popular among electricians and plumbers
+- Tradify ($59-$99/month), strong with HVAC and builders
+- Fergus ($89-$149/month), preferred by larger teams (5+ staff)
 
 **For accounting and invoicing:**
-- Xero ($30-$70/month) , 73% market share among Australian trade businesses
-- MYOB ($30-$80/month) , 19% market share, stronger in rural areas
-- QuickBooks ($15-$60/month) , growing but still under 8%
+- Xero ($30-$70/month), 73% market share among Australian trade businesses
+- MYOB ($30-$80/month), 19% market share, stronger in rural areas
+- QuickBooks ($15-$60/month), growing but still under 8%
 
 **For connecting systems:**
-- Zapier ($29-$99/month) , connects apps that don't have native integrations
-- Make (formerly Integromat) ($9-$29/month) , cheaper alternative, steeper learning curve
-- Native integrations , ServiceM8↔Xero, Tradify↔Xero work without middleware
+- Zapier ($29-$99/month), connects apps that don't have native integrations
+- Make (formerly Integromat) ($9-$29/month), cheaper alternative, steeper learning curve
+- Native integrations, ServiceM8↔Xero, Tradify↔Xero work without middleware
 
 Jake, the solo Melbourne sparky mentioned earlier, runs this stack:
 - ServiceM8 Core ($49/month)
@@ -152,7 +152,7 @@ If you're nervous about the tech, start with one workflow. Automate quoting firs
 
 ## How Do You Calculate ROI on Tradie AI Automation?
 
-ROI for AI automation comes from three sources: time saved, jobs won, and cash flow improved. Here's how to calculate your actual return before buying anything.
+ROI for [AI automation](/glossary/what-is-ai-automation) comes from three sources: time saved, jobs won, and cash flow improved. Here's how to calculate your actual return before buying anything.
 
 **Time saved calculation:**
 1. Count monthly repetitive tasks (quotes sent, appointments booked, invoices created)

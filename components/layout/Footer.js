@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { SERVICES } from '@/lib/data/services'
+import { SERVICES_V2 } from '@/lib/data/services-v2'
 import { LOCATIONS } from '@/lib/data/locations'
 
 const BRAND_TAG =
@@ -7,6 +7,7 @@ const BRAND_TAG =
 
 const COMPANY = [
   { label: 'About', href: '/about' },
+  { label: 'Company information', href: '/company-information' },
   { label: 'Process', href: '/process' },
   { label: 'Case studies', href: '/case-studies' },
   { label: 'Blog', href: '/blog' },
@@ -20,19 +21,13 @@ const TOOLS = [
 const LEGAL = [
   { label: 'Privacy', href: '/privacy' },
   { label: 'Terms', href: '/terms' },
+  { label: 'Sitemap', href: '/sitemap.xml', external: true },
 ]
-
-function titleCaseLabel(str) {
-  return str
-    .split(' ')
-    .map(w => w.charAt(0) + w.slice(1).toLowerCase())
-    .join(' ')
-}
 
 const SERVICES_LINKS = [
   { label: 'All services', href: '/services' },
-  ...SERVICES.map(s => ({
-    label: s.displayName || titleCaseLabel(s.label),
+  ...SERVICES_V2.map(s => ({
+    label: s.name,
     href: `/${s.slug}`,
   })),
 ]
@@ -124,23 +119,28 @@ function NavColumn({ title, links }) {
           gap: 10,
         }}
       >
-        {links.map(l => (
-          <li key={l.href}>
-            <Link
-              href={l.href}
-              className="uc-footer-link"
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 14,
-                color: 'var(--off-white)',
-                textDecoration: 'none',
-                letterSpacing: '-0.005em',
-              }}
-            >
-              {l.label}
-            </Link>
-          </li>
-        ))}
+        {links.map(l => {
+          const linkStyle = {
+            fontFamily: 'var(--font-display)',
+            fontSize: 14,
+            color: 'var(--off-white)',
+            textDecoration: 'none',
+            letterSpacing: '-0.005em',
+          }
+          return (
+            <li key={l.href}>
+              {l.external ? (
+                <a href={l.href} className="uc-footer-link" style={linkStyle}>
+                  {l.label}
+                </a>
+              ) : (
+                <Link href={l.href} className="uc-footer-link" style={linkStyle}>
+                  {l.label}
+                </Link>
+              )}
+            </li>
+          )
+        })}
       </ul>
     </div>
   )

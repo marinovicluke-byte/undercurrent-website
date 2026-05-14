@@ -24,12 +24,12 @@ faqs:
 ---
 # What Is Generative Engine Optimisation? GEO Explained
 
-> **Quick answer:** Generative engine optimisation (GEO) is the work of making your content easy for AI engines like ChatGPT, Google's AI Overviews, Gemini and Perplexity to retrieve, trust and quote when they write an answer. It builds on classic SEO and answer engine optimisation, but adds a retrievable corpus, fresh dated pages, and short quotable claims backed by real sources. The goal isn't a blue link or an answer box. Be the page it quotes.
+> **Quick answer:** Generative engine optimisation (GEO) is the work of making your content easy for AI engines like ChatGPT, Google's AI Overviews, Gemini and Perplexity to retrieve, trust and quote when they write an answer. It builds on classic [SEO](/glossary/what-is-seo) and answer engine optimisation, but adds a retrievable corpus, fresh dated pages, and short quotable claims backed by real sources. The goal isn't a blue link or an answer box. Be the page it quotes.
 
 ![Five-step generative engine optimisation workflow for Australian businesses, from crawlable page to AI citation](./body-1.jpg)
 
 
-If you've read our explainer on [answer engine optimisation](/blog/what-is-answer-engine-optimisation), you already know the headline: AI now answers questions instead of just listing links, so the job is to be the source it leans on. This piece zooms in on one slice of that job. We're not going to re-argue why AI search matters, the AEO guide does that. We're going to define generative engine optimisation properly, show how it differs from SEO and answer engine optimisation, and walk through what it actually takes for a ChatGPT or Gemini answer to quote your business by name. If you run a service business in [Melbourne](/ai-automation-melbourne), [Sydney](/ai-automation-sydney), [Brisbane](/ai-automation-brisbane), [Perth](/ai-automation-perth), [Adelaide](/ai-automation-adelaide) or anywhere else in [Australia](/ai-automation-australia), this is the channel quietly deciding who gets recommended.
+If you've read our explainer on [answer engine optimisation](/blog/what-is-answer-engine-optimisation), you already know the headline: AI now answers questions instead of just listing links, so the job is to be the source it leans on. This piece zooms in on one slice of that job, and pairs with our [short glossary definition](/glossary/what-is-generative-engine-optimisation) if you want the 30-second version first. We're not going to re-argue why AI search matters, the AEO guide does that. We're going to define generative engine optimisation properly, show how it differs from SEO and answer engine optimisation, and walk through what it actually takes for a ChatGPT or Gemini answer to quote your business by name. If you run a service business in [Melbourne](/ai-automation-melbourne), [Sydney](/ai-automation-sydney), [Brisbane](/ai-automation-brisbane), [Perth](/ai-automation-perth), [Adelaide](/ai-automation-adelaide) or anywhere else in [Australia](/ai-automation-australia), this is the channel quietly deciding who gets recommended.
 
 ## What Is Generative Engine Optimisation?
 
@@ -45,7 +45,7 @@ One caveat: GEO doesn't replace SEO. Around 65% of organisations now use generat
 
 SEO ranks the blue link, AEO wins the answer box, GEO gets quoted inside the answer the AI writes. Three layers of one job, not three rivals.
 
-Search engine optimisation is the older craft of ranking a page in a list of links: keywords, backlinks, on-page structure. Answer engine optimisation is the discipline of being picked as the single direct answer (a featured snippet, a voice reply) through question headings, short answers and FAQ schema ([schema.org's FAQPage type](https://schema.org/FAQPage)).
+Search engine optimisation is the older craft of ranking a page in a list of links: keywords, backlinks, on-page structure. Answer engine optimisation is the discipline of being picked as the single direct answer (a featured snippet, a voice reply) through question headings, short answers and [FAQ schema](/glossary/what-is-faq-schema) ([schema.org's FAQPage type](https://schema.org/FAQPage)).
 
 GEO is the newest layer and the only one with no real SEO twin: a generative engine doesn't crown one winner, it blends a few sources into new prose, so GEO optimises for being one of those sources. The full head-to-head is coming in a dedicated AEO-vs-SEO-vs-GEO comparison; our [buyers' agency GEO walk-through](/blog/geo-for-buyers-agents-australia) shows it in one Australian niche. The one-line version:
 
@@ -67,7 +67,7 @@ Where they ground their answers matters for GEO. ChatGPT and Copilot run live we
 
 ## What Makes Your Content Retrievable by a Generative Engine?
 
-A generative engine can only quote what it can fetch, parse and trust, so retrievability is the part of GEO with no SEO twin: clean chunks, schema markup, fresh dates, and a site that doesn't block the crawlers.
+A generative engine can only quote what it can fetch, parse and trust, so retrievability is the part of GEO with no SEO twin: clean chunks, [schema markup](/glossary/what-is-schema-markup), fresh dates, and a site that doesn't block the crawlers.
 
 Retrieval-augmented generation is the technique most AI engines use to ground an answer; they search, pull a few documents, and feed those to the model alongside your question. Your page has to survive that pipeline. Four levers do most of the work:
 

@@ -7,9 +7,11 @@ import { notFound } from 'next/navigation'
 import JsonLd from '@/components/ui/JsonLd'
 import AuthorBio from '@/components/ui/AuthorBio'
 import Breadcrumb from '@/components/layout/Breadcrumb'
+import HeroCta from '@/components/article/HeroCta'
 import { getAllArticles, getArticleBySlug } from '@/lib/articles'
 import { getAllCaseStudies } from '@/lib/caseStudies'
 import { CLUSTERS } from '@/lib/clusters'
+import { LUKE_PERSON } from '@/lib/schema/person'
 
 const SITE_URL = 'https://undercurrentautomations.com'
 const CONTENT_MAX = 1280
@@ -28,7 +30,7 @@ export async function generateMetadata({ params }) {
   if (!article) return {}
 
   const fm = article.frontmatter
-  const image = fm.heroImage ? `${SITE_URL}${fm.heroImage}` : undefined
+  const heroImageUrl = `${SITE_URL}/articles/${slug}/hero.jpg`
 
   return {
     title: fm.title,
@@ -42,13 +44,13 @@ export async function generateMetadata({ params }) {
       modifiedTime: fm.dateModified || fm.date,
       url: `${SITE_URL}/blog/${slug}`,
       authors: [fm.author || 'Luke Marinovic'],
-      images: image ? [{ url: image }] : undefined,
+      images: [{ url: heroImageUrl, width: 1536, height: 1024, alt: fm.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title: fm.title,
       description: fm.description || fm.summary,
-      images: image ? [image] : undefined,
+      images: [heroImageUrl],
     },
   }
 }
@@ -134,27 +136,27 @@ export default async function ArticlePage({ params }) {
     ? fm.mentions.map(e => ({ '@type': e.type || 'Thing', name: e.name || e }))
     : null
 
-  const articleSchema = {
+  const pageSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: fm.title,
-    description: fm.description || fm.summary,
-    datePublished: fm.date,
-    dateModified: fm.dateModified || fm.date,
-    author: {
-      '@type': 'Person',
-      name: fm.author || 'Luke Marinovic',
-      jobTitle: fm.authorTitle || 'Founder, UnderCurrent Automations',
-      url: `${SITE_URL}/about`,
-      sameAs: ['https://www.linkedin.com/in/lukemarinovic/'],
-    },
-    publisher: { '@type': 'Organization', name: 'UnderCurrent Automations', url: SITE_URL },
-    mainEntityOfPage: `${SITE_URL}/blog/${slug}`,
-    keywords: [fm.keyword, fm.cluster, fm.level].filter(Boolean).join(', '),
-    inLanguage: 'en-AU',
-    about: aboutEntities,
-    ...(mentionEntities && { mentions: mentionEntities }),
-    ...(fm.heroImage && { image: `${SITE_URL}${fm.heroImage}` }),
+    '@graph': [
+      {
+        '@type': 'Article',
+        '@id': `${SITE_URL}/blog/${slug}#article`,
+        headline: fm.title,
+        description: fm.description || fm.summary,
+        datePublished: fm.date,
+        dateModified: fm.dateModified || fm.date,
+        author: { '@id': `${SITE_URL}/about#luke` },
+        publisher: { '@type': 'Organization', name: 'UnderCurrent Automations', url: SITE_URL },
+        mainEntityOfPage: `${SITE_URL}/blog/${slug}`,
+        keywords: [fm.keyword, fm.cluster, fm.level].filter(Boolean).join(', '),
+        inLanguage: 'en-AU',
+        about: aboutEntities,
+        ...(mentionEntities && { mentions: mentionEntities }),
+        image: `${SITE_URL}/articles/${slug}/hero.jpg`,
+      },
+      LUKE_PERSON,
+    ],
   }
 
   const breadcrumbSchema = {
@@ -190,7 +192,7 @@ export default async function ArticlePage({ params }) {
 
   return (
     <>
-      <JsonLd schema={articleSchema} />
+      <JsonLd schema={pageSchema} />
       <JsonLd schema={breadcrumbSchema} />
       {faqSchema && <JsonLd schema={faqSchema} />}
 
@@ -255,6 +257,7 @@ export default async function ArticlePage({ params }) {
               {fm.dateModified && fm.dateModified !== fm.date && ` · Updated ${formatDate(fm.dateModified)}`}
               {fm.readingTime && ` · ${fm.readingTime} min read`}
             </p>
+            <HeroCta />
           </div>
         </div>
       </section>
@@ -419,6 +422,34 @@ export default async function ArticlePage({ params }) {
           letter-spacing: 0.05em;
           text-transform: uppercase;
           border-bottom: 1px solid var(--text-faint);
+        }
+        .article-prose pre {
+          background: rgba(255,255,255,0.04);
+          border: 1px solid var(--text-faint);
+          border-radius: 10px;
+          padding: 1.25rem 1.5rem;
+          overflow-x: auto;
+          max-width: 100%;
+          margin: 1.5rem 0;
+          -webkit-overflow-scrolling: touch;
+        }
+        .article-prose pre code {
+          font-family: 'SF Mono', ui-monospace, 'Cascadia Code', monospace;
+          font-size: 13px;
+          line-height: 1.6;
+          color: var(--text-primary);
+          background: none;
+          padding: 0;
+          border-radius: 0;
+          white-space: pre;
+        }
+        .article-prose code {
+          font-family: 'SF Mono', ui-monospace, 'Cascadia Code', monospace;
+          font-size: 13px;
+          background: rgba(255,255,255,0.06);
+          padding: 2px 6px;
+          border-radius: 4px;
+          color: var(--blue-light);
         }
       `}</style>
 

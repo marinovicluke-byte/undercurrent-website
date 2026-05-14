@@ -9,6 +9,7 @@ export const metadata = {
     description: 'Find out exactly which parts of your business could be automated. Free, instant results.',
     url: 'https://undercurrentautomations.com/audit',
     type: 'website',
+    images: ['/brand/og-card.png'],
   },
 }
 

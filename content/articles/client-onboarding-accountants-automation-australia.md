@@ -1,6 +1,6 @@
 ---
-title: "Client Onboarding for Accountants Australia 2026: Automate & Simplify Your First Impression"
-description: "Cut 20+ hours of manual admin per week with automated client onboarding. Australian accountants' guide to streamlined workflows, compliance, and better first impressions."
+title: "Client Onboarding for Accountants: Automate the First Week"
+description: "Cut 20+ hours of manual admin per week with automated client onboarding. Australian accountants' guide to streamlined workflows and compliance."
 date: "2026-03-31"
 slug: "client-onboarding-accountants-automation-australia"
 cluster: "industry-guides"

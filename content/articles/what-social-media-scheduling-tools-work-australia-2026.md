@@ -1,5 +1,5 @@
 ---
-title: "What Social Media Scheduling Tools Work in Australia 2026? 8 Tested Platforms Compared"
+title: "Social Media Scheduling Tools (Australia 2026): 8 Compared"
 description: "8 social media scheduling tools tested for Australian businesses in 2026. Compare features, pricing in AUD, local compliance, and real performance data."
 date: "2026-04-15"
 slug: "what-social-media-scheduling-tools-work-australia-2026"

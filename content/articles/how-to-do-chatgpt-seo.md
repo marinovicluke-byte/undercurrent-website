@@ -24,18 +24,18 @@ faqs:
 ---
 # How to Do ChatGPT SEO in 30 Minutes
 
-> **Quick answer:** ChatGPT SEO is the work of making your business the answer ChatGPT gives when someone asks for a recommendation in your field. No algorithm to game, no ad slot to buy. You get there by being easy to find, easy to trust, and described consistently everywhere it matters: your website, your Google Business Profile, your reviews, the directories you appear in, and the odd best-of list. Most of the groundwork takes about 30 minutes. Start with the basics today.
+> **Quick answer:** ChatGPT SEO is the work of making your business the answer ChatGPT gives when someone asks for a recommendation in your field. No algorithm to game, no ad slot to buy. You get there by being easy to find, easy to trust, and described consistently everywhere it matters: your website, your [Google Business Profile](/glossary/what-is-google-business-profile), your reviews, the directories you appear in, and the odd best-of list. Most of the groundwork takes about 30 minutes. Start with the basics today.
 
 ![ChatGPT SEO workflow in five steps for Australian service businesses](./body-1.jpg)
 
 
 Someone two suburbs over opens ChatGPT and types "best plumber near me" or "good bookkeeper in Brunswick". A tidy list of two or three names comes back. If your business isn't on it, you didn't lose to a competitor's ad budget. You lost because ChatGPT had nothing recent and trustworthy to pull your name from.
 
-That's the gap ChatGPT SEO closes, and most of it is plumbing, not magic. This guide is the 30-minute version: the handful of moves a service owner can make this week to start showing up. If you want the deeper, section-by-section breakdown of the citation signals AI engines look for, our [guide on how to rank in ChatGPT search](/blog/how-to-rank-in-chatgpt-search) covers each one. This one stays practical, and it sits inside our [AI search visibility cluster](/blog/cluster/seo-ai-visibility), so the links at the end go further on every step. Nothing here costs money, and you won't need a developer for most of it.
+That's the gap ChatGPT SEO closes, and most of it is plumbing, not magic. This guide is the 30-minute version: the handful of moves a service owner can make this week to start showing up. If you want the deeper, section-by-section breakdown of the citation signals AI engines look for, our [guide on how to rank in ChatGPT search](/blog/how-to-rank-in-chatgpt-search) covers each one, and our [ChatGPT Search glossary entry](/glossary/what-is-chatgpt-search) is the one-screen definition of the product itself. This guide stays practical, and it sits inside our [AI search visibility cluster](/blog/cluster/seo-ai-visibility), so the links at the end go further on every step. Nothing here costs money, and you won't need a developer for most of it.
 
 ## What Is ChatGPT SEO, Really?
 
-**ChatGPT SEO is the practice of getting your business named when ChatGPT recommends someone in your field, and of making the facts it states about you correct.** Generative engine optimisation refers to the same job across every AI answer tool: ChatGPT, Perplexity, Gemini, Microsoft Copilot, and Google's AI Overviews. People also call it AI SEO or AEO, short for answer engine optimisation. The label moves around. The job doesn't.
+**ChatGPT SEO is the practice of getting your business named when ChatGPT recommends someone in your field, and of making the facts it states about you correct.** [Generative engine optimisation](/glossary/what-is-generative-engine-optimisation) refers to the same job across every AI answer tool: ChatGPT, Perplexity, Gemini, Microsoft Copilot, and Google's AI Overviews. People also call it AI SEO or [AEO](/glossary/what-is-answer-engine-optimisation), short for answer engine optimisation. The label moves around. The job doesn't.
 
 ChatGPT doesn't have a ranking page you can climb. When it names a plumber in Coburg or an accountant in Newtown, it stitches together what it learned during training, what it can fetch from the live web when search is switched on, and the patterns in how the rest of the internet describes you. There's no ad slot to buy your way in either, though [paid placements may be coming to ChatGPT](https://roi.com.au/chatgpt-advertising-in-australia-whats-really-coming/). So the lever isn't a keyword you repeat. It's whether your business shows up, consistently and credibly, in the sources ChatGPT leans on: your own site, your Google Business Profile, review platforms, solid directories, and articles that mention you by name. If you've never thought about [answer engine optimisation](/blog/what-is-answer-engine-optimisation) before, the 30-minute checklist below is where to start.
 
@@ -80,7 +80,7 @@ Steps two and three move the most weight for the least effort, so if you only ha
 
 ## How Do You Add the Schema That ChatGPT Reads?
 
-**Schema markup is a small block of structured data in your page's code that spells out, in machine-readable terms, what your business is, so crawlers don't have to guess.** For a service business the type you want is LocalBusiness, or a more specific sub-type like Plumber, Electrician, or Accountant. Paste this into your homepage, replace every value with your real details, and you're done:
+**[Schema markup](/glossary/what-is-schema-markup) is a small block of structured data in your page's code that spells out, in machine-readable terms, what your business is, so crawlers don't have to guess.** For a service business the type you want is LocalBusiness, or a more specific sub-type like Plumber, Electrician, or Accountant. Paste this into your homepage, replace every value with your real details, and you're done:
 
 ```json
 {
@@ -115,7 +115,7 @@ That 25-query sweep is exactly what we run as a free [ChatGPT visibility check](
 
 ## What Surprised Us Auditing 69 Australian ChatGPT SEO Articles
 
-**We reviewed 69 published articles from 37 Australian websites that target ChatGPT SEO and AI search, scored them using the UnderCurrent Article Reviewer, and honestly, the spread was wider than I expected.** Fewer than 1 in 7 of those articles cleared 80 out of 100. From our wider audit corpus of 146 articles, the ChatGPT-and-AI-search slice averages 59 out of 100, while our own articles on the same rubric average 81. The gap we keep finding is the same: the bar isn't high, most published content just isn't clearing it.
+**We reviewed 69 published articles from 37 Australian websites that target ChatGPT SEO and AI search, scored them on the UnderCurrent Article Reviewer, and honestly, the spread was wider than I expected.** Fewer than 1 in 7 of those articles cleared 80 out of 100. From our wider audit corpus of 146 articles, the ChatGPT-and-AI-search slice averages 59 out of 100, while our own articles on the same rubric average 81. The gap we keep finding is the same: the bar isn't high, most published content just isn't clearing it.
 
 Three things stood out. First, length wasn't the signal: some of the lowest-scoring pieces were the longest, padded with definitions nobody searched for. Second, the cheap wins were the ones people skipped: a direct answer up top, consistent business facts, a real citation or two. Those are the same gaps a [basic AI search self-check](/blog/seo-audit-self-check-australia) flags, and the ones that take minutes to fix. Third, when we look at how our own blog posts get cited by AI tools, the pages that earn mentions are the plain, well-sourced ones. The full benchmark is in [the data behind the best AI search agencies in Australia](/blog/best-ai-search-agency-australia) and a guide to [comparing AI search agencies](/blog/best-ai-search-agency-australia).
 

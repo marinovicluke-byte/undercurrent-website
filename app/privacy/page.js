@@ -3,6 +3,14 @@ import Link from 'next/link'
 export const metadata = {
   title: 'Privacy Policy',
   description: 'How UnderCurrent collects, uses, and protects your personal information. We respect your privacy and handle data responsibly.',
+  alternates: { canonical: 'https://undercurrentautomations.com/privacy' },
+  openGraph: {
+    title: 'Privacy Policy | UnderCurrent Automations',
+    description: 'How UnderCurrent collects, uses, and protects your personal information.',
+    url: 'https://undercurrentautomations.com/privacy',
+    type: 'website',
+    images: ['/brand/og-card.png'],
+  },
 }
 
 const DOMAIN = 'https://undercurrentautomations.com'
