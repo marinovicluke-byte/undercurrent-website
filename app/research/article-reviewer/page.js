@@ -1,5 +1,5 @@
 // /research/article-reviewer
-// Methodology hub for the Robin Search Article Reviewer.
+// Methodology hub for the UnderCurrent Article Reviewer.
 // Scores Australian articles on AI-search and SEO criteria.
 // Visual system matches /process and /glossary: dark hero → charcoal body,
 // 1280 maxWidth, var(--page-pad), Space Grotesk display + Satoshi body.
@@ -14,7 +14,7 @@ import SectionEyebrow from '@/components/ui/SectionEyebrow'
 import PillCTA from '@/components/ui/PillCTA'
 import Breadcrumb from '@/components/layout/Breadcrumb'
 import AuthorBio from '@/components/ui/AuthorBio'
-import { ROBIN_RUBRIC_SNAPSHOT } from '@/lib/data/robinRubricSnapshot'
+import { ARTICLE_REVIEWER_SNAPSHOT } from '@/lib/data/articleReviewerSnapshot'
 import { DOMAIN, PROVIDER } from '@/lib/data/seo'
 
 const PAGE_PATH = '/research/article-reviewer'
@@ -24,16 +24,16 @@ const PUBLISHED_ISO = '2026-05-14'
 const PUBLISHED_DISPLAY = '14 May 2026'
 const READING_TIME = '8 min read'
 
-const SNAP = ROBIN_RUBRIC_SNAPSHOT
+const SNAP = ARTICLE_REVIEWER_SNAPSHOT
 
 // ── Metadata ─────────────────────────────────────────────────────────────────
 export const metadata = {
-  title: 'The Robin Search Article Reviewer',
+  title: 'The UnderCurrent Article Reviewer',
   description:
     'UnderCurrent Automations\' open methodology for scoring Australian blog articles on AI search and SEO criteria. Six dimensions, 100-point rubric, live corpus snapshot.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'The Robin Search Article Reviewer, UnderCurrent Automations',
+    title: 'The UnderCurrent Article Reviewer, UnderCurrent Automations',
     description:
       'Open methodology for scoring Australian blog articles on AI search and SEO. Six dimensions, generic scoring, live corpus snapshot.',
     url: PAGE_URL,
@@ -42,7 +42,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'The Robin Search Article Reviewer',
+    title: 'The UnderCurrent Article Reviewer',
     description:
       'How UnderCurrent Automations scores Australian articles for AI search and SEO. Six dimensions, generic scoring, live corpus snapshot.',
   },
@@ -51,8 +51,8 @@ export const metadata = {
 // ── FAQ content (paired with FAQPage schema below) ───────────────────────────
 const FAQS = [
   {
-    q: 'What is the Robin Search Article Reviewer?',
-    a: 'The Robin Search Article Reviewer is UnderCurrent Automations\' rubric for scoring Australian blog articles on AI search and SEO criteria. It scores six dimensions across a 100-point scale: structural integrity, AI search readiness, citation density, vertical specificity, article-type fit, and authority and freshness.',
+    q: 'What is the UnderCurrent Article Reviewer?',
+    a: 'The UnderCurrent Article Reviewer is UnderCurrent Automations\' rubric for scoring Australian blog articles on AI search and SEO criteria. It scores six dimensions across a 100-point scale: structural integrity, AI search readiness, citation density, vertical specificity, article-type fit, and authority and freshness.',
   },
   {
     q: 'What does the rubric measure exactly?',
@@ -72,7 +72,7 @@ const FAQS = [
   },
   {
     q: 'How is this different from a Lighthouse, SEMrush, or Ahrefs audit?',
-    a: 'Lighthouse measures page performance. SEMrush and Ahrefs measure ranking position and backlinks. None of them check whether your page is shaped to be cited by ChatGPT, Perplexity, or Google AI Overviews. The Robin Search Article Reviewer measures that shape, on Australian content, against Australian queries.',
+    a: 'Lighthouse measures page performance. SEMrush and Ahrefs measure ranking position and backlinks. None of them check whether your page is shaped to be cited by ChatGPT, Perplexity, or Google AI Overviews. The UnderCurrent Article Reviewer measures that shape, on Australian content, against Australian queries.',
   },
 ]
 
@@ -118,7 +118,7 @@ const COMPARISON = {
     ['Lighthouse',                'Yes', 'No',  'No',  'No',  'No'],
     ['SEMrush',                   'No',  'Yes', 'Yes', 'No',  'No'],
     ['Ahrefs',                    'No',  'Yes', 'Yes', 'No',  'No'],
-    ['Robin Search Article Reviewer', 'No', 'No', 'No', 'Yes', 'Yes'],
+    ['UnderCurrent Article Reviewer', 'No', 'No', 'No', 'Yes', 'Yes'],
   ],
 }
 
@@ -129,7 +129,7 @@ const BREADCRUMB_LD = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home',     item: DOMAIN },
     { '@type': 'ListItem', position: 2, name: 'Research', item: `${DOMAIN}/research` },
-    { '@type': 'ListItem', position: 3, name: 'The Robin Search Article Reviewer', item: PAGE_URL },
+    { '@type': 'ListItem', position: 3, name: 'The UnderCurrent Article Reviewer', item: PAGE_URL },
   ],
 }
 
@@ -137,7 +137,7 @@ const ARTICLE_LD = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   '@id': `${PAGE_URL}#article`,
-  headline: 'The Robin Search Article Reviewer',
+  headline: 'The UnderCurrent Article Reviewer',
   description: metadata.description,
   inLanguage: 'en-AU',
   url: PAGE_URL,
@@ -174,8 +174,8 @@ const DATASET_LD = {
   '@context': 'https://schema.org',
   '@type': 'Dataset',
   '@id': `${PAGE_URL}#corpus-snapshot`,
-  name: 'Robin Search Australian Article Corpus Snapshot',
-  description: `Aggregate scoring snapshot of ${SNAP.articlesAudited} Australian blog articles audited by the Robin Search Article Reviewer. Reports the percentage of audited articles meeting key AI-search readiness criteria.`,
+  name: 'UnderCurrent Article Reviewer, Australian Corpus Snapshot',
+  description: `Aggregate scoring snapshot of ${SNAP.articlesAudited} Australian blog articles audited by the UnderCurrent Article Reviewer. Reports the percentage of audited articles meeting key AI-search readiness criteria.`,
   url: `${PAGE_URL}#snapshot`,
   inLanguage: 'en-AU',
   spatialCoverage: { '@type': 'Place', name: 'Australia' },
@@ -371,7 +371,7 @@ export default function ArticleReviewerResearchPage() {
                 maxWidth: 720,
               }}
             >
-              The Robin Search Article Reviewer scores Australian blog articles on AI search and SEO criteria. Six dimensions, generic scoring, live corpus snapshot. Open methodology, proprietary scoring engine, built in Melbourne.
+              The UnderCurrent Article Reviewer scores Australian blog articles on AI search and SEO criteria. Six dimensions, generic scoring, live corpus snapshot. Open methodology, proprietary scoring engine, built in Melbourne.
             </p>
 
             <div className="uc-meta-strip">
@@ -422,7 +422,7 @@ export default function ArticleReviewerResearchPage() {
                   color: 'var(--off-white)',
                 }}
               >
-                The Robin Search Article Reviewer is UnderCurrent Automations&apos; rubric for scoring Australian blog articles on AI search and SEO criteria. It checks structural integrity, AI search readiness, citation density, vertical specificity, article-type fit, and authority signals across a live corpus of {SNAP.articlesAudited} Australian articles. Updated {SNAP.lastUpdatedDisplay}.
+                The UnderCurrent Article Reviewer is UnderCurrent Automations&apos; rubric for scoring Australian blog articles on AI search and SEO criteria. It checks structural integrity, AI search readiness, citation density, vertical specificity, article-type fit, and authority signals across a live corpus of {SNAP.articlesAudited} Australian articles. Updated {SNAP.lastUpdatedDisplay}.
               </p>
             </div>
           </div>
@@ -555,7 +555,7 @@ export default function ArticleReviewerResearchPage() {
             </h2>
             <div style={{ maxWidth: 820, display: 'grid', gap: 18 }}>
               <p style={BOLD_ANSWER_STYLE}>
-                We built the Robin Search Article Reviewer because no existing audit tool measures whether your page is shaped to be lifted into an AI answer, on Australian content, against Australian queries.
+                We built the UnderCurrent Article Reviewer because no existing audit tool measures whether your page is shaped to be lifted into an AI answer, on Australian content, against Australian queries.
               </p>
               <p style={PROSE_STYLE}>
                 Australian SEO agencies still rank for the queries. Few of them rank inside ChatGPT, Perplexity, or Google AI Overviews. The shape of an article that earns a citation from a language model is different to the shape of an article that ranked on Google a decade ago. <Link className={PROSE_LINK_CLASS} href="/glossary/what-is-answer-engine-optimisation">Answer Engine Optimisation</Link>, <Link className={PROSE_LINK_CLASS} href="/glossary/what-is-generative-engine-optimisation">Generative Engine Optimisation</Link>, and <Link className={PROSE_LINK_CLASS} href="/glossary/what-is-ai-search-optimisation">AI Search Optimisation</Link> name three overlapping disciplines that all chase the same prize: getting cited, not just ranked.
@@ -564,7 +564,7 @@ export default function ArticleReviewerResearchPage() {
                 Existing audit tools check the older shape. Lighthouse measures page performance. SEMrush and Ahrefs measure rank position and backlink profile. None of them check whether a page leads with a definitional answer, ships <Link className={PROSE_LINK_CLASS} href="/glossary/what-is-schema-markup">schema markup</Link> a parser can lift, or carries an Australian regulator citation a buyer will trust.
               </p>
               <p style={PROSE_STYLE}>
-                We built the Robin Search Article Reviewer because we needed something that measured the new shape, on Australian content, against Australian queries. Today it scores {SNAP.articlesAudited} articles. The corpus grows monthly.
+                We built the UnderCurrent Article Reviewer because we needed something that measured the new shape, on Australian content, against Australian queries. Today it scores {SNAP.articlesAudited} articles. The corpus grows monthly.
               </p>
             </div>
           </div>
@@ -683,7 +683,7 @@ export default function ArticleReviewerResearchPage() {
               Where this sits next to Lighthouse, SEMrush, and Ahrefs.
             </h2>
             <p style={{ ...BOLD_ANSWER_STYLE, margin: '0 0 28px', maxWidth: 820 }}>
-              Each existing tool covers one corner of the picture. The Robin Search Article Reviewer is the only one that scores AI-search shape against an Australian corpus, instead of page performance or backlink profile.
+              Each existing tool covers one corner of the picture. The UnderCurrent Article Reviewer is the only one that scores AI-search shape against an Australian corpus, instead of page performance or backlink profile.
             </p>
             <div style={{
               borderRadius: 14,
@@ -1165,7 +1165,7 @@ export default function ArticleReviewerResearchPage() {
                 maxWidth: 640,
               }}
             >
-              Our SEO and AI Visibility audit applies the Robin Search Article Reviewer to every article on your domain, then prioritises the fixes that move the score most.
+              Our SEO and AI Visibility audit applies the UnderCurrent Article Reviewer to every article on your domain, then prioritises the fixes that move the score most.
             </p>
             <PillCTA href="/seo-ai-visibility">See the audit</PillCTA>
           </div>

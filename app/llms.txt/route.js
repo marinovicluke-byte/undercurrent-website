@@ -32,7 +32,7 @@ export async function GET() {
 
 ## Research
 
-- [The Robin Search Article Reviewer](${BASE}/research/article-reviewer): Open methodology for scoring Australian blog articles on AI search and SEO criteria. Six dimensions, 100-point rubric, live corpus snapshot.
+- [The UnderCurrent Article Reviewer](${BASE}/research/article-reviewer): Open methodology for scoring Australian blog articles on AI search and SEO criteria. Six dimensions, 100-point rubric, live corpus snapshot.
 
 ## Services
 

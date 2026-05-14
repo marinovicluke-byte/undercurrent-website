@@ -4,7 +4,7 @@ import Link from 'next/link'
 import JsonLd from '@/components/ui/JsonLd'
 import SectionEyebrow from '@/components/ui/SectionEyebrow'
 import Breadcrumb from '@/components/layout/Breadcrumb'
-import { ROBIN_RUBRIC_SNAPSHOT } from '@/lib/data/robinRubricSnapshot'
+import { ARTICLE_REVIEWER_SNAPSHOT } from '@/lib/data/articleReviewerSnapshot'
 import { DOMAIN } from '@/lib/data/seo'
 
 const PAGE_URL = `${DOMAIN}/research`
@@ -14,10 +14,10 @@ const STUDIES = [
   {
     slug: 'article-reviewer',
     eyebrow: 'Study 01',
-    title: 'The Robin Search Article Reviewer',
-    blurb: `Open methodology for scoring Australian blog articles on AI search and SEO criteria. Six dimensions, 100-point rubric, live snapshot of ${ROBIN_RUBRIC_SNAPSHOT.articlesAudited} audited articles.`,
+    title: 'The UnderCurrent Article Reviewer',
+    blurb: `Open methodology for scoring Australian blog articles on AI search and SEO criteria. Six dimensions, 100-point rubric, live snapshot of ${ARTICLE_REVIEWER_SNAPSHOT.articlesAudited} audited articles.`,
     href: '/research/article-reviewer',
-    lastUpdated: ROBIN_RUBRIC_SNAPSHOT.lastUpdatedDisplay,
+    lastUpdated: ARTICLE_REVIEWER_SNAPSHOT.lastUpdatedDisplay,
     accent: 'var(--blue)',
   },
 ]
