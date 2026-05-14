@@ -35,7 +35,7 @@ The shift matters now because AI use among Australian businesses is climbing fas
 
 ### Why you should be skeptical of this article
 
-Worth naming the conflict before going further. UnderCurrent sells the fix to the GEO problems this article points out. The Robin Search rubric we apply is built and run by us. The audit data is ours. The method is reproducible by anyone running the same checks. A sharp reader is right to push on a benchmark argument where the author also sells the fix. Any firm referenced in our audit corpus can request a re-audit on a specified URL set. Contact details are at the foot of the article.
+Worth naming the conflict before going further. UnderCurrent sells the fix to the GEO problems this article points out. The UnderCurrent Article Reviewer rubric we apply is built and run by us. The audit data is ours. The method is reproducible by anyone running the same checks. A sharp reader is right to push on a benchmark argument where the author also sells the fix. Any firm referenced in our audit corpus can request a re-audit on a specified URL set. Contact details are at the foot of the article.
 
 [![GEO for buyers agents framework](./hero.jpg)](#)
 
@@ -69,9 +69,9 @@ Three retrieval signals move the needle:
 
 ## What does the audit data say about Australian buyers agents?
 
-In May 2026, we ran the Robin Search rubric across 27 articles from 9 Melbourne buyers-agency firms. The vertical averaged 45/100. Zero articles scored Strong (80+). The method, per-firm scoring, and structural problems are documented in [our Melbourne buyers-agency AI search audit](/blog/how-to-rank-buyers-agency-ai-search-melbourne). That piece is the methodology source for this article. Any firm in the corpus can request a re-audit on a specified URL set via the contact page.
+In May 2026, we ran the UnderCurrent Article Reviewer across 27 articles from 9 Melbourne buyers-agency firms. The vertical averaged 45/100. Zero articles scored Strong (80+). The method, per-firm scoring, and structural problems are documented in [our Melbourne buyers-agency AI search audit](/blog/how-to-rank-buyers-agency-ai-search-melbourne). That piece is the methodology source for this article. Any firm in the corpus can request a re-audit on a specified URL set via the contact page.
 
-Robin Search is UnderCurrent's 100-point content-intelligence rubric across 9 scoring categories. We built it by reverse-engineering 12 months of UnderCurrent's own AI-citation data against [Google Search Central documentation](https://developers.google.com/search/docs) and [Schema.org's RealEstateAgent definition](https://schema.org/RealEstateAgent). Rubric version 3.2.
+The UnderCurrent Article Reviewer is a 100-point content-intelligence rubric across 9 scoring categories. We built it by reverse-engineering 12 months of UnderCurrent's own AI-citation data against [Google Search Central documentation](https://developers.google.com/search/docs) and [Schema.org's RealEstateAgent definition](https://schema.org/RealEstateAgent). Rubric version 3.2.
 
 Across the 145-article corpus we've audited, the whole-corpus mean sits at ~53/100. UnderCurrent's own articles average ~80/100. The Melbourne buyers-agency vertical sits 8 points below the wider agency average and 35 points below our own benchmark. Spot-checks in Mosman, Paddington (Sydney), New Farm, Bulimba (Brisbane), Cottesloe, Subiaco (Perth), Norwood, and Glenelg (Adelaide) showed the same structural patterns. The deep state-by-state instalments are in production.
 
@@ -216,8 +216,8 @@ Every quantitative claim in the body above appears in this table with its primar
 | 2.5M+ small businesses in Australia | [ASBFEO Data Portal](https://www.asbfeo.gov.au/small-business-data-portal/number-small-businesses-australia) | 2025 |
 | AI adoption above 30% across consumer-facing sectors | [KPMG Australian Retail Outlook](https://assets.kpmg.com/content/dam/kpmgsites/au/pdf/2025/australian-retail-outlook-2025.pdf) | 2025 |
 | SMB automation benchmark: $2,500–$12,000 first-project, 60–90 day payback | UC summary of public Bocati case data | 2025 |
-| Robin Search Melbourne audit: 27 articles / 9 firms, 45/100 mean | [UC Melbourne audit](/blog/how-to-rank-buyers-agency-ai-search-melbourne) | May 2026 |
-| Whole-corpus mean across UC's 145-article rubric run, UC own-content avg ~80/100 | UC Robin Search corpus | 2026 |
+| UnderCurrent Article Reviewer Melbourne audit: 27 articles / 9 firms, 45/100 mean | [UC Melbourne audit](/blog/how-to-rank-buyers-agency-ai-search-melbourne) | May 2026 |
+| Whole-corpus mean across UC's 145-article rubric run, UC own-content avg ~80/100 | UC Article Reviewer corpus | 2026 |
 
 ## What are the common GEO mistakes for buyers agents?
 
