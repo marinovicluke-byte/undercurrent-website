@@ -92,7 +92,7 @@ Most owners sit in the hybrid lane for the first six months. If you're [comparin
 
 ## How long does AEO take to show measurable results?
 
-**Expect first citations within four to eight weeks if your domain already has reasonable authority and indexing is healthy.** Expect twelve to sixteen weeks before AI citations start producing measurable lead volume. The honest version: AEO is faster than traditional SEO because the AI engines re-crawl frequently and respond to schema and definitional rewrites within days, not months. It is slower than ads because the citation graph compounds rather than spikes. Two checkpoints we use with clients: at week six, you should be cited at least once for a tracked question. At week twelve, the citation graph should cover three to five tracked questions across at least two of the four major engines. Sites under those numbers usually have either a [trust-signal gap or a structural-data gap](/blog/best-ai-search-agency-australia), and both are diagnosable in an afternoon. If you're shaped like an early UC client, you'll have your first citation in the first month. The 30-minute fixes carry that distance.
+**Expect first citations within four to eight weeks if your domain already has reasonable authority and indexing is healthy.** Expect twelve to sixteen weeks before AI citations start producing measurable lead volume. The honest version: AEO is faster than traditional SEO because the AI engines re-crawl frequently and respond to schema and definitional rewrites within days, not months. It is slower than ads because the citation graph compounds rather than spikes. Two checkpoints we use with clients: at week six, you should be cited at least once for a tracked question. At week twelve, the citation graph should cover three to five tracked questions across at least two of the four major engines. Sites under those numbers usually have either a [trust-signal gap or a structural-data gap](/blog/au-seo-agencies-ai-search-audit), and both are diagnosable in an afternoon. If you're shaped like an early UC client, you'll have your first citation in the first month. The 30-minute fixes carry that distance.
 
 
 ![Traditional SEO compared with answer engine optimisation for Australian businesses](./body-2.jpg)
@@ -130,7 +130,7 @@ Most owners sit in the hybrid lane for the first six months. If you're [comparin
 - [AI search vs traditional search in Australia, 2026 outlook](/blog/ai-search-vs-traditional-search-australia-2026)
 - [How to rank a buyers agency on AI search in Melbourne](/blog/how-to-rank-buyers-agency-ai-search-melbourne)
 - [How to rank in ChatGPT search](/blog/how-to-rank-in-chatgpt-search)
-- [Best AI search agency Australia](/blog/best-ai-search-agency-australia)
+- [Best AI search agency Australia](/blog/au-seo-agencies-ai-search-audit)
 - [How to compare AI search agencies in Australia](/blog/how-to-compare-ai-search-agencies-australia)
 - [SEO and AI visibility hub Australia](/blog/seo-ai-visibility-hub-australia)
 - [GEO for buyers agents Australia](/blog/geo-for-buyers-agents-australia)

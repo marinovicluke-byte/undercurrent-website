@@ -98,9 +98,10 @@ export default async function GlossaryEntryPage({ params }) {
     inLanguage: 'en-AU',
     datePublished: fm.datePublished,
     dateModified: fm.dateModified || fm.datePublished,
-    author: { '@type': 'Person', name: fm.author || 'Luke Marinovic', jobTitle: 'Founder, UnderCurrent Automations', url: `${SITE_URL}/about`, sameAs: ['https://www.linkedin.com/in/lukemarinovic/'] },
-    publisher: { '@type': 'Organization', name: 'UnderCurrent Automations', url: SITE_URL },
-    isPartOf: { '@type': 'WebSite', name: 'UnderCurrent Automations', url: SITE_URL },
+    articleSection: 'Glossary',
+    author: { '@id': `${SITE_URL}/about#luke` },
+    publisher: { '@id': `${SITE_URL}#organization` },
+    isPartOf: { '@id': `${SITE_URL}#website` },
   }
   const breadcrumb = {
     '@context': 'https://schema.org',

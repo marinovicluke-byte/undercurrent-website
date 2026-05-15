@@ -48,11 +48,11 @@ MONTHLY AEO REPORT - what a real one shows you
 - next month's plan:     the 3 to 5 prompts you're chasing next and why
 ```
 
-If a proposal can't describe a deliverable in that much detail, it isn't a plan, it's a holding pattern. Ask for last quarter's report for a client like you, and [a frank comparison of two or three agencies](/blog/best-ai-search-agency-australia), before you sign anything.
+If a proposal can't describe a deliverable in that much detail, it isn't a plan, it's a holding pattern. Ask for last quarter's report for a client like you, and [a frank comparison of two or three agencies](/blog/au-seo-agencies-ai-search-audit), before you sign anything.
 
 ## How Does an AEO Retainer Differ From an SEO Retainer in Australia?
 
-**An AEO retainer is a monthly engagement aimed at getting your business quoted by AI assistants, while an SEO retainer aims at ranking in Google's blue links.** SEO leans on keywords, backlinks and page speed; AEO leans on clear answers, schema, entity coverage and citations. The reporting is the giveaway: SEO hands you rank-tracker screenshots, AEO hands you a prompt-by-prompt citation log. Plenty of [Australian agencies now run both](/blog/best-ai-search-agency-australia), which is fine, as long as the AEO half is itemised, not buried in "content". Here's the contrast:
+**An AEO retainer is a monthly engagement aimed at getting your business quoted by AI assistants, while an SEO retainer aims at ranking in Google's blue links.** SEO leans on keywords, backlinks and page speed; AEO leans on clear answers, schema, entity coverage and citations. The reporting is the giveaway: SEO hands you rank-tracker screenshots, AEO hands you a prompt-by-prompt citation log. Plenty of [Australian agencies now run both](/blog/au-seo-agencies-ai-search-audit), which is fine, as long as the AEO half is itemised, not buried in "content". Here's the contrast:
 
 | A typical SEO retainer | An AEO retainer |
 |---|---|
@@ -73,7 +73,7 @@ If your new "AEO" line item has the same deliverables as your old SEO line item,
 
 ## Specialist or Full-Service: Which Kind of AEO Agency Do You Need?
 
-**Pick a specialist if AEO is the whole point of the engagement, and a full-service agency only if its AEO line is itemised and run by someone who's done this for 12 months or more.** A small specialist who lives in answer engines all day usually moves faster than a generalist juggling 30 other retainers. The trade-off: a specialist may not touch your ads or your [website build](/website-design), so you carry the coordination. To tell whether any agency is doing AEO or just renaming SEO, [ask three things](/blog/best-ai-search-agency-australia): show me a recent citation report, show me the schema you shipped last month, and show me three prompts you're chasing next quarter. Thirty minutes of that tells you more than any pitch deck. A real AEO team answers fast and specifically; a rebadged SEO team changes the subject to backlinks. If you're in Melbourne, Sydney or Brisbane you've got plenty of both to compare, so make them prove it before you commit a cent.
+**Pick a specialist if AEO is the whole point of the engagement, and a full-service agency only if its AEO line is itemised and run by someone who's done this for 12 months or more.** A small specialist who lives in answer engines all day usually moves faster than a generalist juggling 30 other retainers. The trade-off: a specialist may not touch your ads or your [website build](/website-design), so you carry the coordination. To tell whether any agency is doing AEO or just renaming SEO, [ask three things](/blog/au-seo-agencies-ai-search-audit): show me a recent citation report, show me the schema you shipped last month, and show me three prompts you're chasing next quarter. Thirty minutes of that tells you more than any pitch deck. A real AEO team answers fast and specifically; a rebadged SEO team changes the subject to backlinks. If you're in Melbourne, Sydney or Brisbane you've got plenty of both to compare, so make them prove it before you commit a cent.
 
 ## What Surprised Us Auditing Australia's AEO Agency Pages?
 
@@ -111,7 +111,7 @@ Open ChatGPT, Perplexity and Google's AI Overview, then ask the three or four qu
 
 ## Related Reading
 
-- [The best AI search agency in Australia: how to choose one](/blog/best-ai-search-agency-australia), the wider AI-search agency picture, not just AEO
+- [The best AI search agency in Australia: how to choose one](/blog/au-seo-agencies-ai-search-audit), the wider AI-search agency picture, not just AEO
 - [What is answer engine optimisation?](/blog/what-is-answer-engine-optimisation), the plain-English explainer behind this guide
 - [AI search vs traditional search in Australia (2026)](/blog/ai-search-vs-traditional-search-australia-2026), why the old SEO playbook isn't enough on its own
 - [How to rank a buyers agency on AI search in Melbourne](/blog/how-to-rank-buyers-agency-ai-search-melbourne), a worked example in one Australian niche

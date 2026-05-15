@@ -37,6 +37,15 @@ const nextConfig = {
         statusCode: 301,
       },
 
+      // Slug rename (2026-05-15): article slug "best-ai-search-agency-australia"
+      // suggested a buyer's guide but content is an industry audit. Renamed to
+      // match content; old slug 301s to the new one to preserve link equity.
+      {
+        source: '/blog/best-ai-search-agency-australia',
+        destination: '/blog/au-seo-agencies-ai-search-audit',
+        statusCode: 301,
+      },
+
       // Duplicate / variant article URLs consolidated to the canonical version
       {
         source: '/blog/getting-started-einvoicing-small-business-australia-guide',

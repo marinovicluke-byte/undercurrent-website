@@ -212,6 +212,7 @@ Set up UTM parameters in Google Analytics for chat.openai.com and perplexity.ai 
 
 ## Related Reading
 
+- [How to Do ChatGPT SEO in 30 Minutes](/blog/how-to-do-chatgpt-seo), the quickstart version of this guide for service owners who want the practical first hour, not the structural deep-dive
 - [AI Search vs Traditional Search in Australia 2026](/blog/ai-search-vs-traditional-search-australia-2026), why your SEO strategy needs to split focus between Google and AI engines
 - [Automating Business Processes for Australian SMEs](/blog/automating-business-processes-australia-sme-guide), the automation systems that free up time for content strategy
 - [What Is Business Process Automation](/blog/what-is-business-process-automation-australia), foundational guide to automation for Australian service businesses

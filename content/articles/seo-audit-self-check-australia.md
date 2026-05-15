@@ -173,7 +173,7 @@ According to [Semrush's local SEO data](https://www.semrush.com/blog/seo-statist
 - [How to Do AI Search Optimisation in Australia](/blog/what-is-ai-search-optimisation-australia), the strategy behind getting cited in AI-generated answers, not just organic results
 - [How to Rank in ChatGPT Search](/blog/how-to-rank-in-chatgpt-search), what determines whether your business gets quoted in AI search results
 - [Why Australian Tradies Don't Get Google Reviews](/blog/why-tradies-dont-get-google-reviews-australia), the local SEO signal most service businesses underweight
-- [Why Most AU SEO Agencies Fail at AI Search](/blog/best-ai-search-agency-australia), what to look for when choosing an SEO partner in 2026
+- [Why Most AU SEO Agencies Fail at AI Search](/blog/au-seo-agencies-ai-search-audit), what to look for when choosing an SEO partner in 2026
 
 ---
 

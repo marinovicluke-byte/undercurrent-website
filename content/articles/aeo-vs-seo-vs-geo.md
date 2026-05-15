@@ -86,7 +86,7 @@ The practical starting point is the same checklist that helps SEO: findable, con
 | GEO | Citations in AI replies | ChatGPT, Gemini, Perplexity | wants the AI to name it |
 | All three | Visibility top to bottom | The whole results page | has a long buying decision |
 
-Read the last column first, it tells you where your money goes. A tradie chasing emergency jobs, where the buyer picks one of the first 3 results in 10 minutes, starts with SEO and local. If buyers Google "how much does X cost" first, AEO earns its keep fast. A [plain rundown of SEO, GEO and AEO](https://digitalmarketinginstitute.com/blog/what-is-seo-geo-and-aeo) covers the split. [How to compare AI-search agencies](/blog/best-ai-search-agency-australia) helps if you're quoted for all three.
+Read the last column first, it tells you where your money goes. A tradie chasing emergency jobs, where the buyer picks one of the first 3 results in 10 minutes, starts with SEO and local. If buyers Google "how much does X cost" first, AEO earns its keep fast. A [plain rundown of SEO, GEO and AEO](https://digitalmarketinginstitute.com/blog/what-is-seo-geo-and-aeo) covers the split. [How to compare AI-search agencies](/blog/au-seo-agencies-ai-search-audit) helps if you're quoted for all three.
 
 ## Which One Comes First, SEO or AEO?
 
@@ -158,7 +158,7 @@ First, the scores are low across the board. Of the 69 articles we audited agains
 
 **Layer one and most of layer two you can do yourself with a free afternoon and the checklist above.** Layer three is where outside help usually earns its fee.
 
-The DIY scope is real: claim and fill out your Google Business Profile, about 20 minutes of work, add basic schema with a plugin, rewrite your key pages answer-first, run the self-check. Where it gets hard is technical SEO on a messy site, producing content at any scale, building genuine off-site authority, and tracking whether AI tools actually name you. That's the work that tends to need a team, and you can see how we [work with clients](/about) if that's the route you're weighing. If you're getting quotes, the test is simple: ask them what's actually different between the three services they're charging for, and what they'd do first. If the answer isn't "fix the SEO foundations", be careful. [How to compare AI-search agencies in Australia](/blog/best-ai-search-agency-australia) helps you read a proposal properly.
+The DIY scope is real: claim and fill out your Google Business Profile, about 20 minutes of work, add basic schema with a plugin, rewrite your key pages answer-first, run the self-check. Where it gets hard is technical SEO on a messy site, producing content at any scale, building genuine off-site authority, and tracking whether AI tools actually name you. That's the work that tends to need a team, and you can see how we [work with clients](/about) if that's the route you're weighing. If you're getting quotes, the test is simple: ask them what's actually different between the three services they're charging for, and what they'd do first. If the answer isn't "fix the SEO foundations", be careful. [How to compare AI-search agencies in Australia](/blog/au-seo-agencies-ai-search-audit) helps you read a proposal properly.
 
 
 ![AEO vs SEO vs GEO compared for Australian businesses, siloed services versus one layered plan](./body-2.jpg)

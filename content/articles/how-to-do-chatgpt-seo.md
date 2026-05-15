@@ -117,7 +117,7 @@ That 25-query sweep is exactly what we run as a free [ChatGPT visibility check](
 
 **We reviewed 69 published articles from 37 Australian websites that target ChatGPT SEO and AI search, scored them on the UnderCurrent Article Reviewer, and honestly, the spread was wider than I expected.** Fewer than 1 in 7 of those articles cleared 80 out of 100. From our wider audit corpus of 146 articles, the ChatGPT-and-AI-search slice averages 59 out of 100, while our own articles on the same rubric average 81. The gap we keep finding is the same: the bar isn't high, most published content just isn't clearing it.
 
-Three things stood out. First, length wasn't the signal: some of the lowest-scoring pieces were the longest, padded with definitions nobody searched for. Second, the cheap wins were the ones people skipped: a direct answer up top, consistent business facts, a real citation or two. Those are the same gaps a [basic AI search self-check](/blog/seo-audit-self-check-australia) flags, and the ones that take minutes to fix. Third, when we look at how our own blog posts get cited by AI tools, the pages that earn mentions are the plain, well-sourced ones. The full benchmark is in [the data behind the best AI search agencies in Australia](/blog/best-ai-search-agency-australia) and a guide to [comparing AI search agencies](/blog/best-ai-search-agency-australia).
+Three things stood out. First, length wasn't the signal: some of the lowest-scoring pieces were the longest, padded with definitions nobody searched for. Second, the cheap wins were the ones people skipped: a direct answer up top, consistent business facts, a real citation or two. Those are the same gaps a [basic AI search self-check](/blog/seo-audit-self-check-australia) flags, and the ones that take minutes to fix. Third, when we look at how our own blog posts get cited by AI tools, the pages that earn mentions are the plain, well-sourced ones. The full benchmark is in [the data behind the best AI search agencies in Australia](/blog/au-seo-agencies-ai-search-audit) and a guide to [comparing AI search agencies](/blog/au-seo-agencies-ai-search-audit).
 
 ## What's the Fastest Way to Start Showing Up in ChatGPT Answers?
 
@@ -160,7 +160,7 @@ You can do the 30-minute checklist yourself, and most service owners should star
 - [AI search vs traditional SEO in Australia](/blog/ai-search-vs-traditional-search-australia-2026) , what changes, what carries over, and where to put your effort first.
 - [SEO self-check for Australian businesses](/blog/seo-audit-self-check-australia) , a quick DIY audit that flags the same gaps the 30-minute checklist fixes.
 - [AI search visibility hub for Australia](/blog/cluster/seo-ai-visibility) , the wider map of getting found across ChatGPT, Perplexity, Gemini, and Google.
-- [The data behind the best AI search agencies in Australia](/blog/best-ai-search-agency-australia) , what audited agency content reveals about who is actually doing this well.
+- [The data behind the best AI search agencies in Australia](/blog/au-seo-agencies-ai-search-audit) , what audited agency content reveals about who is actually doing this well.
 
 ## Sources
 

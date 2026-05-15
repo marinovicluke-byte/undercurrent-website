@@ -28,10 +28,10 @@ const satoshi = localFont({
 export const metadata = {
   metadataBase: new URL('https://undercurrentautomations.com'),
   title: {
-    default: 'UnderCurrent Automations — AI Automation Melbourne',
+    default: 'UnderCurrent Automations — AI Search & Automation Agency Australia',
     template: '%s | UnderCurrent Automations',
   },
-  description: 'UnderCurrent is an AI automation agency in Melbourne. Lead gen, revenue ops, websites, AI search, SEO, strategy and integrations for Australian small businesses.',
+  description: 'UnderCurrent Automations is an AI search and automation agency for Australian small business. SEO and AI visibility, custom workflows, websites and integrations. Built in Melbourne, working Australia-wide.',
   openGraph: {
     type: 'website',
     locale: 'en_AU',

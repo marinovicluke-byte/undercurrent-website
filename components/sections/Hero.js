@@ -39,6 +39,10 @@ export default function Hero({
         overflow: 'hidden',
         minHeight: 'calc(100vh - 80px - 90px)',
         background: 'var(--charcoal-deep)',
+        backgroundImage: 'url(/hero-poster.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundBlendMode: 'multiply',
       }}
     >
       {/* Background video — dimmed over black. Hidden for reduced-motion. */}
@@ -82,6 +86,9 @@ export default function Hero({
           -webkit-appearance: none;
         }
         @media (max-width: 780px) {
+          /* Mobile: drop the autoplaying video entirely. Section keeps the
+             same look via the CSS background-image (hero-poster.jpg). */
+          .uc-hero-video { display: none !important; }
           .uc-hero {
             justify-content: flex-start !important;
             min-height: auto !important;
