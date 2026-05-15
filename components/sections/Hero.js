@@ -38,11 +38,12 @@ export default function Hero({
         paddingBottom: 'clamp(80px, 14vh, 160px)',
         overflow: 'hidden',
         minHeight: 'calc(100vh - 80px - 90px)',
-        background: 'var(--charcoal-deep)',
-        backgroundImage: 'url(/hero-poster.jpg)',
+        backgroundColor: 'var(--charcoal-deep)',
+        // Stack a semi-transparent dark overlay over the poster so the H1 stays
+        // readable. Mirrors the desktop look where the video sits at 0.26 opacity.
+        backgroundImage: 'linear-gradient(rgba(14,14,12,0.55), rgba(14,14,12,0.55)), url(/hero-poster.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundBlendMode: 'multiply',
       }}
     >
       {/* Background video — dimmed over black. Hidden for reduced-motion. */}
