@@ -334,6 +334,11 @@ export default function Footer() {
                 <path d="M14 8 L14 5 C 14 3.5, 15 3, 16.5 3 L 18 3 L 18 7 L 16.5 7 C 15.8 7, 15.5 7.3, 15.5 8 L 15.5 10 L 18 10 L 17.5 13.5 L 15.5 13.5 L 15.5 21 L 12 21 L 12 13.5 L 10 13.5 L 10 10 L 12 10 L 12 8 Z" />
               </svg>
             </SocialIcon>
+            <SocialIcon href="https://share.google/8D5PJ6iwEdSVpE7lO" label="Google Business Profile">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+                <path d="M21.8 10.2H12v3.6h5.7C17 16.2 14.7 17.6 12 17.6c-3.1 0-5.6-2.5-5.6-5.6s2.5-5.6 5.6-5.6c1.4 0 2.7.5 3.7 1.4l2.6-2.6C16.5 3.5 14.4 2.6 12 2.6 6.8 2.6 2.6 6.8 2.6 12s4.2 9.4 9.4 9.4c5.4 0 9-3.8 9-9.1 0-.6-.1-1.4-.2-2.1z" />
+              </svg>
+            </SocialIcon>
           </div>
         </div>
 
