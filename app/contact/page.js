@@ -1,5 +1,15 @@
 import ContactForm from '@/components/forms/ContactForm'
 import SectionEyebrow from '@/components/ui/SectionEyebrow'
+import JsonLd from '@/components/ui/JsonLd'
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home',    item: 'https://undercurrentautomations.com' },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://undercurrentautomations.com/contact' },
+  ],
+}
 
 export const metadata = {
   title: 'Contact',
@@ -21,13 +31,15 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <section
-      style={{
-        padding: '120px var(--page-pad) 120px',
-        background: 'var(--bg-deep)',
-        minHeight: '100vh',
-      }}
-    >
+    <>
+      <JsonLd schema={BREADCRUMB_SCHEMA} />
+      <section
+        style={{
+          padding: '120px var(--page-pad) 120px',
+          background: 'var(--bg-deep)',
+          minHeight: '100vh',
+        }}
+      >
       <div style={{ maxWidth: 1280, margin: 0, width: '100%' }}>
         <div style={{ marginBottom: 32 }}>
           <SectionEyebrow label="Contact" />
@@ -120,6 +132,7 @@ export default function ContactPage() {
           <ContactForm />
         </div>
       </div>
-    </section>
+      </section>
+    </>
   )
 }

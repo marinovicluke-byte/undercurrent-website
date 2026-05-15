@@ -4,7 +4,6 @@
 
 import Link from 'next/link'
 import PillCTA from '@/components/ui/PillCTA'
-import Breadcrumb from '@/components/layout/Breadcrumb'
 import SectionEyebrow from '@/components/ui/SectionEyebrow'
 import SeoTabDemo from '@/components/ui/SeoTabDemo'
 import { SERVICES } from '@/lib/data/services'
@@ -189,14 +188,6 @@ export default function SeoAiVisibilityPage() {
       {/* ── 01 HERO ──────────────────────────────────────────────────────── */}
       <section style={{ padding: '0 var(--page-pad)' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-
-          <div style={{ paddingTop: 40 }}>
-            <Breadcrumb items={[
-              { label: 'Home', href: '/' },
-              { label: 'Services', href: '/services' },
-              { label: 'SEO & AI Visibility' },
-            ]} />
-          </div>
 
           {/* Centred hero text */}
           <div style={{

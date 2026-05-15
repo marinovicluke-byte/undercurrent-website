@@ -1,5 +1,15 @@
 import PillCTA from '@/components/ui/PillCTA'
 import SectionEyebrow from '@/components/ui/SectionEyebrow'
+import JsonLd from '@/components/ui/JsonLd'
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home',  item: 'https://undercurrentautomations.com' },
+    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://undercurrentautomations.com/about' },
+  ],
+}
 
 export const metadata = {
   title: 'About',
@@ -538,6 +548,7 @@ function OurJourney() {
 export default function AboutPage() {
   return (
     <>
+      <JsonLd schema={BREADCRUMB_SCHEMA} />
       <AboutUndercurrent />
       <AboutMe />
       <OurJourney />

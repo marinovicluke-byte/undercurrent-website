@@ -1,6 +1,16 @@
 import Link from 'next/link'
 import SectionEyebrow from '@/components/ui/SectionEyebrow'
 import PillCTA from '@/components/ui/PillCTA'
+import JsonLd from '@/components/ui/JsonLd'
+
+const BREADCRUMB_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home',         item: 'https://undercurrentautomations.com' },
+    { '@type': 'ListItem', position: 2, name: 'How We Work',  item: 'https://undercurrentautomations.com/process' },
+  ],
+}
 
 export const metadata = {
   title: 'How We Work',
@@ -50,6 +60,8 @@ const PROMISES = [
 
 export default function ProcessPage() {
   return (
+    <>
+    <JsonLd schema={BREADCRUMB_SCHEMA} />
     <div style={{ background: 'var(--bg-deep)' }}>
       {/* Hero */}
       <section style={{ padding: '120px var(--page-pad) 80px', background: 'var(--bg-deep)' }}>
@@ -329,5 +341,6 @@ export default function ProcessPage() {
         </div>
       </section>
     </div>
+    </>
   )
 }

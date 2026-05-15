@@ -8,7 +8,6 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import JsonLd from '@/components/ui/JsonLd'
 import AuthorBio from '@/components/ui/AuthorBio'
-import Breadcrumb from '@/components/layout/Breadcrumb'
 import { getAllGlossaryTerms, getGlossaryTermBySlug } from '@/lib/glossary'
 
 const SITE_URL = 'https://undercurrentautomations.com'
@@ -128,9 +127,6 @@ export default async function GlossaryEntryPage({ params }) {
       {/* Hero */}
       <header style={{ padding: '120px var(--page-pad) 48px', background: 'var(--bg-deep)' }}>
         <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-          <div style={{ marginBottom: 24 }}>
-            <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: 'Glossary', href: '/glossary' }, { label: fm.term }]} />
-          </div>
           <p style={{ margin: '0 0 14px', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--blue-light)' }}>
             Glossary{fm.category ? ` · ${String(fm.category).replace(/-/g, ' ')}` : ''}
           </p>

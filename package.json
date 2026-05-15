@@ -32,5 +32,13 @@
     "eslint-config-next": "16.2.2",
     "playwright": "^1.59.1",
     "tailwindcss": "^4"
-  }
+  },
+  "browserslist": [
+    "Chrome >= 105",
+    "Edge >= 105",
+    "Firefox >= 105",
+    "Safari >= 15.4",
+    "iOS >= 15.4",
+    "not dead"
+  ]
 }

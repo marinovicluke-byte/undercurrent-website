@@ -6,7 +6,6 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import JsonLd from '@/components/ui/JsonLd'
 import AuthorBio from '@/components/ui/AuthorBio'
-import Breadcrumb from '@/components/layout/Breadcrumb'
 import HeroCta from '@/components/article/HeroCta'
 import { getAllCaseStudies, getCaseStudyBySlug } from '@/lib/caseStudies'
 import { getAllArticles } from '@/lib/articles'
@@ -162,15 +161,6 @@ export default async function CaseStudyPage({ params }) {
       {/* Hero */}
       <section style={{ padding: '120px var(--page-pad) 60px', background: 'var(--bg-deep)' }}>
         <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-          <div style={{ marginBottom: 28 }}>
-            <Breadcrumb
-              items={[
-                { label: 'Home', href: '/' },
-                { label: 'Case Studies', href: '/case-studies' },
-                { label: fm.title },
-              ]}
-            />
-          </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 12, marginBottom: 20 }}>
             <span
               style={{
