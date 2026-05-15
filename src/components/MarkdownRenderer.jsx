@@ -2,8 +2,19 @@ import DOMPurify from 'dompurify'
 
 export default function MarkdownRenderer({ html }) {
   const clean = DOMPurify.sanitize(html, {
-    ADD_TAGS: ['iframe'],
-    ADD_ATTR: ['target', 'rel', 'loading'],
+    ADD_TAGS: [
+      'iframe',
+      'svg', 'path', 'circle', 'rect', 'line', 'polyline', 'polygon',
+      'text', 'g', 'title', 'desc',
+    ],
+    ADD_ATTR: [
+      'target', 'rel', 'loading',
+      'viewBox', 'width', 'height', 'aria-label', 'role', 'xmlns',
+      'fill', 'stroke', 'stroke-width', 'transform', 'd',
+      'cx', 'cy', 'r', 'x', 'y', 'x1', 'y1', 'x2', 'y2', 'points',
+      'font-size', 'text-anchor', 'dominant-baseline', 'class',
+    ],
+    KEEP_CONTENT: true,
   })
 
   return (
