@@ -44,8 +44,8 @@ Most agencies publish a range instead of a fixed price. That sets an anchor befo
 
 | # | Agency | Format | Headline price |
 |---|---|---|---|
-| 1 | [StudioHawk](https://studiohawk.com.au/blog/seo-pricing/) | Range | $500-$1k · $1.5-$3k · $5k+ |
-| 2 | [Safari Digital](https://www.safaridigital.com.au/blog/how-much-does-seo-cost/) | Range | $1,400-$10,000+/mo |
+| 1 | StudioHawk | Range | $500-$1k · $1.5-$3k · $5k+ |
+| 2 | Safari Digital | Range | $1,400-$10,000+/mo |
 | 3 | SOUP Agency | Tiered packages | $2,500 · $4,000 · $6,000+/mo |
 | 4 | Digital Nomads HQ | Range | $1,800-$2,200/mo average |
 | 5 | Xugar | Range | $500-$5,000/mo |
