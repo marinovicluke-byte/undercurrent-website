@@ -79,7 +79,7 @@ Most businesses run both: plain automation for the structured stuff like invoici
 
 ## A Speed-to-Lead Workflow You Can Copy
 
-**This is the highest-value automation for almost any service business, and it's one workflow, not a project: catch the enquiry, reply in seconds, log it, follow up once, then go quiet until they answer.** Build it in [Make](https://www.make.com), or [n8n or Zapier](/blog/n8n-vs-zapier-australia-small-business), or hand the spec below to whoever sets up your systems.
+**This is the highest-value automation for almost any service business, and it's one workflow, not a project: catch the enquiry, reply in seconds, log it, follow up once, then go quiet until they answer.** Build it in [Make](https://www.make.com/en), or [n8n or Zapier](/blog/n8n-vs-zapier-australia-small-business), or hand the spec below to whoever sets up your systems.
 
 The discipline is keeping it small. The version that works is four steps and one alert. The version that breaks is the one with twelve branches, a dashboard and a "phase two." Ship the small one, watch it for a fortnight, then add the next workflow.
 
@@ -113,7 +113,7 @@ A sequence like this takes a couple of days to set up and then runs without you.
 
 ## How Much Does AI Automation Cost a Small Business in Australia?
 
-**AI automation for an Australian small business typically runs $200-$800 AUD a month for a working stack covering enquiry follow-up, invoicing and review requests; setup is a one-off on top.** Done yourself it's 20-40 hours and a fair bit of fiddling. Done for you, a foundational stack is usually a one-off under $5,000 AUD; the [ASBFEO](https://www.asbfeo.gov.au/resources/small-business-technology) keeps neutral small-business technology guidance worth reading before you spend anything.
+**AI automation for an Australian small business typically runs $200-$800 AUD a month for a working stack covering enquiry follow-up, invoicing and review requests; setup is a one-off on top.** Done yourself it's 20-40 hours and a fair bit of fiddling. Done for you, a foundational stack is usually a one-off under $5,000 AUD; the [ASBFEO](https://www.asbfeo.gov.au/resources-tools-centre) keeps neutral small-business technology guidance worth reading before you spend anything.
 
 | Component | Tool options | Monthly cost (AUD) |
 |---|---|---|
@@ -132,7 +132,7 @@ In the audits we run, most stacks pay the setup back inside two to three months 
 
 **Yes, if you're losing real hours to tasks that follow the same pattern every week.** Quoting, invoicing, following up and asking for reviews by hand runs 8-15 hours a week for a lot of sole traders. At $80-$120 AUD a billable hour, that's $640-$1,800 of your time a week going to admin you could hand off.
 
-The honest caveat: it's not worth it for one-off or wildly variable work. If every job is genuinely different and needs bespoke communication, the setup won't pay back. But standard service work, electrical, plumbing, cleaning, landscaping, accounting, consulting, repeats enough that a few workflows earn their keep fast. That 44% from [McKinsey's Australia automation analysis](https://www.mckinsey.com/au/~/media/mckinsey/featured%20insights/future%20of%20organizations/australias%20automation%20opportunity%20reigniting%20productivity%20and%20inclusive%20growth/australia-automation-opportunity-vf.pdf) is the national average; for an admin-heavy business the real share is higher. The [best marketing automation software for Australia](/blog/best-marketing-automation-software-australia-2026) is the next read if marketing is your bottleneck rather than admin.
+The honest caveat: it's not worth it for one-off or wildly variable work. If every job is genuinely different and needs bespoke communication, the setup won't pay back. But standard service work, electrical, plumbing, cleaning, landscaping, accounting, consulting, repeats enough that a few workflows earn their keep fast. That 44% from [McKinsey's Australia automation analysis](https://www.mckinsey.com/featured-insights/future-of-work/australias-automation-opportunity-reigniting-productivity-and-inclusive-income-growth) is the national average; for an admin-heavy business the real share is higher. The [best marketing automation software for Australia](/blog/best-marketing-automation-software-australia-2026) is the next read if marketing is your bottleneck rather than admin.
 
 ---
 
@@ -146,7 +146,7 @@ The honest caveat: it's not worth it for one-off or wildly variable work. If eve
 
 **The common 2026 stack is three layers: a workflow engine to move data, a model layer for the thinking, and the business software you already run.** Most owners already pay for half of it.
 
-**Workflow engines** are the connective tissue. Make and n8n are cheapest at scale; Zapier is friendliest to start but gets dear as volume grows, the [n8n vs Zapier comparison](/blog/n8n-vs-zapier-australia-small-business) covers the trade-off. **Model layers** add the judgement: drafting replies, sorting enquiries, pulling job details from free text. OpenAI and Anthropic cover most of it. **Business software** is where it plugs in: ServiceM8, Tradify, simPRO and AroFlo fire webhooks on a status change, and Xero and MYOB take the invoice and the reminder. [MYOB's small-business research](https://www.myob.com/au/resources/reports) keeps finding owners losing hours a week to financial admin.
+**Workflow engines** are the connective tissue. Make and n8n are cheapest at scale; Zapier is friendliest to start but gets dear as volume grows, the [n8n vs Zapier comparison](/blog/n8n-vs-zapier-australia-small-business) covers the trade-off. **Model layers** add the judgement: drafting replies, sorting enquiries, pulling job details from free text. OpenAI and Anthropic cover most of it. **Business software** is where it plugs in: ServiceM8, Tradify, simPRO and AroFlo fire webhooks on a status change, and Xero and MYOB take the invoice and the reminder. [MYOB's small-business research](https://www.myob.com/au/about/media-centre/myob-reports) keeps finding owners losing hours a week to financial admin.
 
 A [free 30-minute automation audit](/audit) maps your first three workflows to the tools you already run. We also cover [Sydney](/ai-automation-sydney), [Brisbane](/ai-automation-brisbane), [Perth](/ai-automation-perth), [Adelaide](/ai-automation-adelaide) and [the rest of Australia](/ai-automation-australia); the [Melbourne automation consultant](/blog/ai-automation-consultant-melbourne) explainer covers what to expect from one.
 
@@ -174,7 +174,7 @@ A [free 30-minute automation audit](/audit) maps your first three workflows to t
 
 ### Do automated customer messages need to follow Australian law?
 
-**Yes.** Automated SMS and email to customers must comply with the [Spam Act 2003](https://www.legislation.gov.au/Details/C2004A01214): you need the recipient's consent, clear identification of who's sending, and a working unsubscribe. If your automation stores or handles customer personal data, the [Privacy Act 1988](https://www.oaic.gov.au/privacy/the-privacy-act) and the Australian Privacy Principles apply too, with stricter obligations once your turnover passes $3M AUD. Build consent and unsubscribe into the workflow from day one rather than bolting it on later.
+**Yes.** Automated SMS and email to customers must comply with the [Spam Act 2003](https://www.legislation.gov.au/Details/C2004A01214): you need the recipient's consent, clear identification of who's sending, and a working unsubscribe. If your automation stores or handles customer personal data, the [Privacy Act 1988](https://www.oaic.gov.au/privacy/privacy-legislation/the-privacy-act) and the Australian Privacy Principles apply too, with stricter obligations once your turnover passes $3M AUD. Build consent and unsubscribe into the workflow from day one rather than bolting it on later.
 
 ### How long until AI automation actually pays off?
 
@@ -197,11 +197,11 @@ A [free 30-minute automation audit](/audit) maps your first three workflows to t
 ## Sources
 
 1. [McKinsey, The State of AI (Global Survey)](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)
-2. [McKinsey, Australia's Automation Opportunity](https://www.mckinsey.com/au/~/media/mckinsey/featured%20insights/future%20of%20organizations/australias%20automation%20opportunity%20reigniting%20productivity%20and%20inclusive%20growth/australia-automation-opportunity-vf.pdf)
+2. [McKinsey, Australia's Automation Opportunity](https://www.mckinsey.com/featured-insights/future-of-work/australias-automation-opportunity-reigniting-productivity-and-inclusive-income-growth)
 3. [KPMG Australia, Australia Leads World on Responsible AI, Lags Productivity Gains (April 2026)](https://kpmg.com/au/en/media/media-releases/2026/04/australia-leads-world-on-responsible-ai-lags-productivity-gains.html)
 4. [Harvard Business Review, The Short Life of Online Sales Leads (Oldroyd et al.)](https://hbr.org/2011/03/the-short-life-of-online-sales-leads)
 5. [Xero, Small Business Insights](https://www.xero.com/au/resources/small-business-insights/)
-6. [MYOB, Small Business Research Reports](https://www.myob.com/au/resources/reports)
-7. [ASBFEO, Small Business Technology Guidance](https://www.asbfeo.gov.au/resources/small-business-technology)
+6. [MYOB, Small Business Research Reports](https://www.myob.com/au/about/media-centre/myob-reports)
+7. [ASBFEO, Small Business Technology Guidance](https://www.asbfeo.gov.au/resources-tools-centre)
 8. [Spam Act 2003 (Federal Register of Legislation)](https://www.legislation.gov.au/Details/C2004A01214)
-9. [Privacy Act 1988 and the Australian Privacy Principles (OAIC)](https://www.oaic.gov.au/privacy/the-privacy-act)
+9. [Privacy Act 1988 and the Australian Privacy Principles (OAIC)](https://www.oaic.gov.au/privacy/privacy-legislation/the-privacy-act)

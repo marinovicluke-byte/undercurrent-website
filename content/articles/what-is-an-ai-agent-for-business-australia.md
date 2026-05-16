@@ -95,17 +95,17 @@ Here are the real-world applications that move the needle fastest:
 
 Yes, and this is where most service businesses see the fastest return. An AI agent monitors your inbound enquiry channels (website form, email, missed calls), sends a personalised response within minutes, qualifies the lead with a couple of questions, and books them into your calendar. No manual chasing.
 
-According to [Xero's Small Business Insights](https://www.xero.com/au/resources/small-business-guides/), cash flow and time pressure are the two most cited constraints for Australian small businesses, and slow lead response directly compounds both by losing jobs before they're even quoted. Across our automation audits, the most consistent finding is a response gap between when a lead arrives and when someone actually follows up, often 4–24 hours, by which point the prospect has called someone else. That single bottleneck costs more than most business owners realise. The [inbound lead management](/inbound-lead-management-melbourne) service page explains how we close that gap.
+According to [Xero's Small Business Insights](https://www.xero.com/au/guides/), cash flow and time pressure are the two most cited constraints for Australian small businesses, and slow lead response directly compounds both by losing jobs before they're even quoted. Across our automation audits, the most consistent finding is a response gap between when a lead arrives and when someone actually follows up, often 4–24 hours, by which point the prospect has called someone else. That single bottleneck costs more than most business owners realise. The [inbound lead management](/inbound-lead-management-melbourne) service page explains how we close that gap.
 
 ### Can an AI Agent Chase Invoices and Handle Payments?
 
 Absolutely. An invoice-chasing agent connects to Xero or MYOB, monitors overdue balances, sends personalised payment reminders at set intervals (7 days, 14 days, 30 days), escalates the tone appropriately, and flags persistently overdue accounts for your attention. You review the exceptions. The agent handles the volume.
 
-[MYOB's Business Monitor](https://www.myob.com/au/blog/myob-business-monitor/) consistently shows late payments as a top-five issue for Australian SMEs, with trade businesses among the hardest hit, many carrying 30–60 days of outstanding invoices at any point. Based on typical outcomes from our automation audits, a trade business in Joondalup with six staff was spending roughly five hours a week manually following up on overdue invoices. After connecting an AI agent to their Xero account with a tiered reminder sequence, that dropped to under an hour, a 15-minute review of flagged accounts instead of a Friday afternoon of phone calls. You can run your own numbers using the [UnderCurrent ROI calculator](/roi).
+[MYOB's Business Monitor](https://www.myob.com/au/blog/myob-business-monitor) consistently shows late payments as a top-five issue for Australian SMEs, with trade businesses among the hardest hit, many carrying 30–60 days of outstanding invoices at any point. Based on typical outcomes from our automation audits, a trade business in Joondalup with six staff was spending roughly five hours a week manually following up on overdue invoices. After connecting an AI agent to their Xero account with a tiered reminder sequence, that dropped to under an hour, a 15-minute review of flagged accounts instead of a Friday afternoon of phone calls. You can run your own numbers using the [UnderCurrent ROI calculator](/roi).
 
 ### What About Scheduling, Dispatch, and Job Management?
 
-For trade and field service businesses, scheduling is one of the biggest time sinks. An AI agent can handle new booking requests, check existing job schedules, assign the right team member based on location and availability, send confirmation to the client, and update the job board in tools like [Tradify](https://www.tradify.com) or ServiceM8.
+For trade and field service businesses, scheduling is one of the biggest time sinks. An AI agent can handle new booking requests, check existing job schedules, assign the right team member based on location and availability, send confirmation to the client, and update the job board in tools like [Tradify](https://tradify.com) or ServiceM8.
 
 According to the [ABS Business Characteristics Survey](https://www.abs.gov.au/statistics/industry/technology-and-innovation/characteristics-australian-business/latest-release), businesses with 5–19 employees account for a significant share of total small business employment in Australia, and this cohort consistently reports scheduling and coordination as a primary operational constraint. Job scheduling is one of the top use cases where AI agents reduce manual effort in this size bracket. For examples of how this plays out in practice, the [case studies](/case-studies) page has real-world builds across trades and field services.
 
@@ -113,7 +113,7 @@ According to the [ABS Business Characteristics Survey](https://www.abs.gov.au/st
 
 An AI agent deployed on your website or via SMS can handle the top 20 questions your business gets asked every week, pricing, availability, service areas, booking process, and escalate the unusual ones to a human. This isn't a static FAQ page. The agent reads the question, decides on the best answer based on your business rules, and responds conversationally.
 
-[Deloitte's Digital Consumer Trends report for Australia](https://www2.deloitte.com/au/en/pages/technology-media-and-telecommunications/articles/digital-consumer-trends.html) found that 61% of Australian consumers expect a response to a service enquiry within the same day, and 29% expect a response within an hour. For service businesses with high enquiry volume, a customer service agent that responds instantly, even at 11pm on a Sunday, pays for itself in the first month. The [customer experience automation](/customer-experience-automation) service covers exactly this use case.
+[Deloitte's Digital Consumer Trends report for Australia](https://www.deloitte.com/au/en/pages/technology-media-and-telecommunications/articles/digital-consumer-trends.html) found that 61% of Australian consumers expect a response to a service enquiry within the same day, and 29% expect a response within an hour. For service businesses with high enquiry volume, a customer service agent that responds instantly, even at 11pm on a Sunday, pays for itself in the first month. The [customer experience automation](/customer-experience-automation) service covers exactly this use case.
 
 If you want this scoped for your business, [book a scoping call](/services) — we'll map the highest-value agent build for your existing tools.
 
@@ -127,7 +127,7 @@ AI agents for small businesses in Australia typically run $50–$400 per month f
 
 Platforms like Make, n8n, or vertical-specific tools publish tiered pricing from free through to enterprise. Most small businesses land in the $50–$400 per month range depending on volume and the number of connected tools. For a tradie or small agency, a well-configured tool at $150/month that saves 10 hours a week is paying for itself inside a fortnight.
 
-[MYOB's Business Monitor](https://www.myob.com/au/blog/myob-business-monitor/) found that SMEs using automation grow significantly faster than those that don't, and every quarter without it is a quarter competitors are widening the gap. For a breakdown of which automation category fits your situation, the [automation services](/services) page lists them by business type. If you're unsure where to start, a [free automation audit](/audit) takes about 30 minutes and maps the highest-value opportunity first.
+[MYOB's Business Monitor](https://www.myob.com/au/blog/myob-business-monitor) found that SMEs using automation grow significantly faster than those that don't, and every quarter without it is a quarter competitors are widening the gap. For a breakdown of which automation category fits your situation, the [automation services](/services) page lists them by business type. If you're unsure where to start, a [free automation audit](/audit) takes about 30 minutes and maps the highest-value opportunity first.
 
 ### Are There Government Incentives Available?
 
@@ -137,7 +137,7 @@ For a business considering a custom AI agent build, a $50,000 investment has a n
 
 ### What's the ROI Timeframe?
 
-[McKinsey's analysis of automation ROI](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai) estimates that AI and automation deployments in service businesses typically reach payback within 6–18 months, with faster returns for high-volume, repetitive workflows. For Australian SMEs in trades and professional services, where admin load is high and margins are squeezed, that window is often 2–4 months when the agent targets lead response or invoice chasing specifically.
+[McKinsey's analysis of automation ROI](https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai) estimates that AI and automation deployments in service businesses typically reach payback within 6–18 months, with faster returns for high-volume, repetitive workflows. For Australian SMEs in trades and professional services, where admin load is high and margins are squeezed, that window is often 2–4 months when the agent targets lead response or invoice chasing specifically.
 
 A Footscray wholesale distributor with 12 staff reduced inventory holding by 18%, freed $125,000 in cash, and cut receipt processing from four hours to 45 minutes per week, with an annual tool cost of $7,044 and a net benefit of $136,320. If you want to run your own numbers before committing, the [UnderCurrent ROI calculator](/roi) gives you a rough figure based on your current hours and hourly rate. More detailed build outcomes are documented in the [case studies](/case-studies) section.
 
@@ -179,7 +179,7 @@ If you'd rather have this built for you, **[book a scoping call](/services)** �
 
 ### Is my business data safe when using an AI agent platform in Australia?
 
-**Data safety is a genuine concern for Australian businesses covered by the [Privacy Act 1988](https://www.oaic.gov.au/privacy/the-privacy-act).** Reputable AI agent platforms offer Australian data residency options, audit logs, and role-based access controls. When evaluating any tool, ask whether your data is stored in Australian AWS or Azure regions and whether the vendor complies with Australian Privacy Principles. Businesses in regulated industries, healthcare, finance, or legal, should get compliance advice before deploying any agent that touches client data.
+**Data safety is a genuine concern for Australian businesses covered by the [Privacy Act 1988](https://www.oaic.gov.au/privacy/privacy-legislation/the-privacy-act).** Reputable AI agent platforms offer Australian data residency options, audit logs, and role-based access controls. When evaluating any tool, ask whether your data is stored in Australian AWS or Azure regions and whether the vendor complies with Australian Privacy Principles. Businesses in regulated industries, healthcare, finance, or legal, should get compliance advice before deploying any agent that touches client data.
 
 ### Do I need a developer to build and run an AI agent for my business?
 
@@ -195,7 +195,7 @@ If you'd rather have this built for you, **[book a scoping call](/services)** �
 
 ### How do I know which process to automate first with an AI agent?
 
-**The best first process to automate is the one that's highest volume, follows a consistent repeatable pattern, and is easy to measure before and after.** For most Australian service businesses, that's either lead follow-up or invoice chasing, both are well-defined, happen frequently, and produce visible results within weeks. [MYOB's Business Monitor](https://www.myob.com/au/blog/myob-business-monitor/) consistently identifies admin overload as a top-three constraint for SMEs. A [free automation audit](/audit) will identify the highest-value starting point for your specific situation.
+**The best first process to automate is the one that's highest volume, follows a consistent repeatable pattern, and is easy to measure before and after.** For most Australian service businesses, that's either lead follow-up or invoice chasing, both are well-defined, happen frequently, and produce visible results within weeks. [MYOB's Business Monitor](https://www.myob.com/au/blog/myob-business-monitor) consistently identifies admin overload as a top-three constraint for SMEs. A [free automation audit](/audit) will identify the highest-value starting point for your specific situation.
 
 ### Who can build an AI agent for my small business in Australia?
 
@@ -219,13 +219,13 @@ If you'd rather have this built for you, **[book a scoping call](/services)** �
 2. [ABS Business Characteristics Survey](https://www.abs.gov.au/statistics/industry/technology-and-innovation/characteristics-australian-business/latest-release)
 3. [ATO, R&D Tax Incentive](https://www.ato.gov.au/businesses-and-organisations/income-deductions-and-concessions/incentives-and-concessions)
 4. [Australian Government, AI Adopt Program](https://business.gov.au/grants-and-programs)
-5. [MYOB Business Monitor](https://www.myob.com/au/blog/myob-business-monitor/)
-6. [Xero Small Business Insights](https://www.xero.com/au/resources/small-business-guides/)
+5. [MYOB Business Monitor](https://www.myob.com/au/blog/myob-business-monitor)
+6. [Xero Small Business Insights](https://www.xero.com/au/guides/)
 7. [Gartner, Enterprise Apps with Task-Specific AI Agents Forecast](https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025)
-8. [Deloitte, Digital Consumer Trends Australia](https://www2.deloitte.com/au/en/pages/technology-media-and-telecommunications/articles/digital-consumer-trends.html)
-9. [McKinsey, The Economic Potential of Generative AI](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai)
+8. [Deloitte, Digital Consumer Trends Australia](https://www.deloitte.com/au/en/pages/technology-media-and-telecommunications/articles/digital-consumer-trends.html)
+9. [McKinsey, The Economic Potential of Generative AI](https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai)
 10. [Make, Pricing](https://www.make.com/en/pricing)
 11. [n8n, Pricing](https://n8n.io/pricing/)
 12. [Thomas Wiegold, AI Agents for Small Businesses Sydney](https://thomas-wiegold.com/blog/ai-agents-for-small-businesses-sydney/)
 13. [Inside Small Business, SMEs Adopting AI Grow 2.8 Times Faster](https://insidesmallbusiness.com.au/technology/systems-software/smes-adopting-ai-grow-2-8-times-faster-data-shows)
-14. [OAIC, Privacy Act 1988](https://www.oaic.gov.au/privacy/the-privacy-act)
+14. [OAIC, Privacy Act 1988](https://www.oaic.gov.au/privacy/privacy-legislation/the-privacy-act)

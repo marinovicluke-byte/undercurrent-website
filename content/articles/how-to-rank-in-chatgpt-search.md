@@ -43,7 +43,7 @@ faqs:
 
 Need the one-screen definition first? Our [ChatGPT Search glossary entry](/glossary/what-is-chatgpt-search) covers what it is, when it launched, and how it picks sources, then come back here for the ranking playbook. ChatGPT holds [80.1% of the AI search engine market share globally](https://www.incremys.com/en/resources/blog/chatgpt-statistics), and [49% of Australians now use generative AI tools](https://roi.com.au/answer-engine-optimisation-australia-the-complete-guide-for-ranking-in-ai-search-results-in-2026/). For Australian service businesses, this isn't theoretical. [62% of Australian SMB owners report that their customers use ChatGPT or similar AI tools before making contact](https://www.pathfindermarketing.com.au/chatgpt-statistics/), which means if you're not showing up in AI search results, you're invisible to two-thirds of your potential customers before they even pick up the phone.
 
-The shift is real. Across UC's automation audits for Australian service businesses last quarter, businesses that implemented AI-optimised content structure saw AI referral traffic increase by 180-320% within 8 weeks. Brisbane plumbers using [Google Business Profile integration strategies](https://support.google.com/business/answer/6300665) saw 90% faster AI response inclusion. Meanwhile, most Australian tradies and service businesses are still writing content like it's 2019, optimising for Google's algorithm instead of the AI engines actually deciding which sources get cited.
+The shift is real. Across UC's automation audits for Australian service businesses last quarter, businesses that implemented AI-optimised content structure saw AI referral traffic increase by 180-320% within 8 weeks. Brisbane plumbers using [Google Business Profile integration strategies](https://support.google.com/business/answer/7107242) saw 90% faster AI response inclusion. Meanwhile, most Australian tradies and service businesses are still writing content like it's 2019, optimising for Google's algorithm instead of the AI engines actually deciding which sources get cited.
 
 This guide covers how ChatGPT picks sources, what content structure gets cited, and the technical signals Australian businesses need to rank when someone asks an AI, "Who's the best plumber in Frankston?" or "How much does a solar install cost in Perth?" If you're looking to automate your entire [sales follow-up process](/sales-automation) while improving your AI visibility, the two strategies work together. We help businesses build these systems through our [automation services](/services).
 
@@ -55,7 +55,7 @@ According to [Google's Search Central documentation on AI-generated content](htt
 
 Across UC's automation audits for Australian service businesses, the most common bottleneck is content written for Google's crawlers instead of AI language models. Pages that rank well in traditional search often don't get cited by ChatGPT because they bury the answer under three paragraphs of [SEO](/glossary/what-is-seo) filler. AI engines extract the first substantive paragraph, so if your first 60 words don't directly answer the query, you're out. We cover [how we work through content audits](/process) as part of our automation assessments.
 
-ChatGPT relies on Bing's index and Google's index for newer content, plus its training data for entity recognition. That means your crawlability matters. If you're blocking GPTBot or ClaudeBot in your robots.txt file, you're invisible. If your sitemap isn't submitted to [Bing Webmaster Tools](https://www.bing.com/webmasters/), ChatGPT might not know your business exists.
+ChatGPT relies on Bing's index and Google's index for newer content, plus its training data for entity recognition. That means your crawlability matters. If you're blocking GPTBot or ClaudeBot in your robots.txt file, you're invisible. If your sitemap isn't submitted to [Bing Webmaster Tools](https://www.bing.com/toolbox/webmaster/), ChatGPT might not know your business exists.
 
 A Perth-based HVAC company saw zero AI citations until they submitted their sitemap to Bing, implemented FAQ schema on their service pages, and rewrote their content with answer-first structure. Within six weeks, they started appearing in ChatGPT responses for "best HVAC service Perth" and "how much does ducted heating cost." The same [process automation](/blog) that freed up their admin time also gave them capacity to fix their content strategy.
 
@@ -139,7 +139,7 @@ A solo electrician in Geelong added FAQPage schema to his service pages, coverin
 
 AI engines don't just index content, they index entities. An entity is a person, place, business, or concept that exists independently of any single webpage. Google's knowledge graph, Wikidata, and other entity databases tell AI models what things are and how they're connected.
 
-For your business to rank in ChatGPT, you need to exist as a recognised entity. That means getting mentioned on authority sites, linking your Google Business Profile, and building consistent NAP (name, address, phone) citations across the web. [Google's documentation on entities and the knowledge graph](https://blog.google/products/search/about-knowledge-graph-and-knowledge-panels/) explains how this works.
+For your business to rank in ChatGPT, you need to exist as a recognised entity. That means getting mentioned on authority sites, linking your Google Business Profile, and building consistent NAP (name, address, phone) citations across the web. [Google's documentation on entities and the knowledge graph](https://blog.google/products-and-platforms/products/search/about-knowledge-graph-and-knowledge-panels/) explains how this works.
 
 An entity is a uniquely identifiable thing. "Luke Marinovic" is an entity. "UnderCurrent Automations" is an entity. "Melbourne" is an entity. AI engines use entity recognition to understand what a query is asking for and which sources are authoritative on that entity.
 
@@ -163,7 +163,7 @@ Start by auditing your top 5-10 service pages. Check if they lead with a direct 
 
 Next, add an FAQ section to each service page. Pick the 5-7 questions customers actually ask you, write 60-80 word answers, and wrap them in FAQPage schema. Use [Google's Rich Results Test](https://search.google.com/test/rich-results) to validate. This alone will get you into AI citation contention for those queries.
 
-Then, submit your sitemap to [Bing Webmaster Tools](https://www.bing.com/webmasters/). ChatGPT uses Bing's index for newer content. If Bing hasn't crawled you, ChatGPT doesn't know you exist. Check your robots.txt file and make sure you're not blocking GPTBot or ClaudeBot. [Google's Search Console documentation](https://support.google.com/webmasters/answer/9128668) covers the technical setup.
+Then, submit your sitemap to [Bing Webmaster Tools](https://www.bing.com/toolbox/webmaster/). ChatGPT uses Bing's index for newer content. If Bing hasn't crawled you, ChatGPT doesn't know you exist. Check your robots.txt file and make sure you're not blocking GPTBot or ClaudeBot. [Google's Search Console documentation](https://support.google.com/webmasters/answer/9128668) covers the technical setup.
 
 Finally, claim and set up your Google Business Profile. Add your service areas in kilometres, upload photos with alt text describing your location and service, and link it in your Organization schema. This is your entity anchor for AI search.
 
@@ -184,7 +184,7 @@ Track your AI referrals. Set up UTM parameters for chat.openai.com and perplexit
 
 ### Does ChatGPT use Google's search index?
 
-ChatGPT uses Bing's search index for newer content and real-time queries, plus its training data for entity recognition and older information. It doesn't directly use Google's index, but being indexed by Google improves your entity recognition across multiple AI platforms. Submit your sitemap to both [Google Search Console](https://search.google.com/search-console) and Bing Webmaster Tools to cover all bases.
+ChatGPT uses Bing's search index for newer content and real-time queries, plus its training data for entity recognition and older information. It doesn't directly use Google's index, but being indexed by Google improves your entity recognition across multiple AI platforms. Submit your sitemap to both [Google Search Console](https://search.google.com/search-console/about) and Bing Webmaster Tools to cover all bases.
 
 ### Can small Australian businesses realistically compete in AI search?
 
@@ -229,13 +229,13 @@ Set up UTM parameters in Google Analytics for chat.openai.com and perplexity.ai 
 7. [Red Search, ChatGPT Statistics Australia Global](https://www.redsearch.com.au/resources/chatgpt-statistics-australia-global/)
 8. [ROI, AI Usage Adoption Statistics in Australia 2026](https://roi.com.au/blog/stats/ai-usage-adoption-statistics-in-australia-2026-18-dec-2025)
 9. [Google Developers, Search Central Documentation](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
-10. [Bing Webmaster Tools](https://www.bing.com/webmasters/)
+10. [Bing Webmaster Tools](https://www.bing.com/toolbox/webmaster/)
 11. [Schema.org, Structured Data Documentation](https://schema.org/docs/documents.html)
-12. [Google, About Knowledge Graph and Knowledge Panels](https://blog.google/products/search/about-knowledge-graph-and-knowledge-panels/)
+12. [Google, About Knowledge Graph and Knowledge Panels](https://blog.google/products-and-platforms/products/search/about-knowledge-graph-and-knowledge-panels/)
 13. [Schema.org, Organization Schema](https://schema.org/Organization)
 14. [Google Rich Results Test](https://search.google.com/test/rich-results)
 15. [Schema.org Validator](https://validator.schema.org/)
-16. [Google Support, Business Profile Setup](https://support.google.com/business/answer/6300665)
+16. [Google Support, Business Profile Setup](https://support.google.com/business/answer/7107242)
 17. [Google Search Console Help](https://support.google.com/webmasters/answer/9128668)
-18. [Google Search Console](https://search.google.com/search-console)
+18. [Google Search Console](https://search.google.com/search-console/about)
 19. [Google Developers, Structured Data Intro](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)

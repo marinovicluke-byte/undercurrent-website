@@ -6,7 +6,7 @@ category: regulator
 relatedServices: [/seo-ai-visibility]
 relatedTerms: [what-is-best-interests-duty, what-is-australian-credit-licence, what-is-afca]
 sources:
-  - { title: "Our role (ASIC)", url: "https://asic.gov.au/about-asic/what-we-do/our-role/" }
+  - { title: "Our role (ASIC)", url: "https://www.asic.gov.au/about-asic/what-we-do/our-role/" }
   - { title: "History (ASIC)", url: "https://www.asic.gov.au/about-asic/what-we-do/our-role/history/" }
   - { title: "Laws we administer (ASIC)", url: "https://www.asic.gov.au/about-asic/what-we-do/our-role/laws-we-administer/" }
 faqs:
@@ -25,7 +25,7 @@ source: claude-code
 
 **ASIC, the Australian Securities and Investments Commission, is Australia's integrated corporate, markets, financial services and consumer credit regulator. It administers the laws that determine who can sell, advise on or arrange financial products and credit in Australia, and it grants and revokes the licences those activities depend on.**
 
-ASIC's [statutory remit](https://asic.gov.au/about-asic/what-we-do/our-role/) is to "maintain, facilitate and improve the performance of the financial system and entities in it." Behind that single line sits the licensing regime every Australian financial-services or credit business operates under. If a business arranges a loan, sells an insurance policy, recommends a managed fund, runs a super fund or trades on a licensed exchange, the question of whether ASIC has authorised that activity is the first question.
+ASIC's [statutory remit](https://www.asic.gov.au/about-asic/what-we-do/our-role/) is to "maintain, facilitate and improve the performance of the financial system and entities in it." Behind that single line sits the licensing regime every Australian financial-services or credit business operates under. If a business arranges a loan, sells an insurance policy, recommends a managed fund, runs a super fund or trades on a licensed exchange, the question of whether ASIC has authorised that activity is the first question.
 
 The agency expanded its remit in three jumps. It started in 1991 as the Australian Securities Commission (ASC), replacing the National Companies and Securities Commission to run corporate law nationally. In 1998 it took on consumer protection in superannuation, insurance and deposit taking and was renamed the Australian Securities and Investments Commission. Its current role, functions and powers sit in the Australian Securities and Investments Commission Act 2001. In 2010 it picked up consumer credit, finance broking, trustee companies and the supervision of trading on Australia's licensed equity, derivatives and futures markets, the remit it operates under today (the full list lives in [the laws we administer](https://www.asic.gov.au/about-asic/what-we-do/our-role/laws-we-administer/)).
 

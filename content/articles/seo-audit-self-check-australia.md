@@ -67,7 +67,7 @@ The self-check below covers all three layers in 30 minutes. It won't replace a d
 
 **Check 2, Search Console coverage:** Open [Google Search Console](https://search.google.com/search-console/about). The Coverage report should show zero "Error" URLs and the Core Web Vitals report should show URLs in the "Good" band per [Google's thresholds](https://developers.google.com/search/docs/appearance/core-web-vitals). Across UC's audit corpus, unoptimised images are the most common Core Web Vitals red flag, a 10-minute fix most owners miss.
 
-**Check 3, Mobile usability:** Use [Google's PageSpeed Insights](https://pagespeed.web.dev/) (Mobile tab) or run [Chrome Lighthouse](https://developer.chrome.com/docs/lighthouse/) from Chrome DevTools. A broken mobile layout suppresses your whole domain. Per [Statista's Australian mobile usage data](https://www.statista.com/statistics/683055/australia-mobile-internet-usage/), over 60% of Australian web traffic is mobile.
+**Check 3, Mobile usability:** Use [Google's PageSpeed Insights](https://pagespeed.web.dev/) (Mobile tab) or run [Chrome Lighthouse](https://developer.chrome.com/docs/lighthouse/) from Chrome DevTools. A broken mobile layout suppresses your whole domain. Per Statista's Australian mobile usage data, over 60% of Australian web traffic is mobile.
 
 **Check 4, On-page basics:** Every page needs a unique title under 60 characters, one H1 matching search intent, a meta description under 160 characters, and LocalBusiness schema. Validate via [Google's Rich Results Test](https://search.google.com/test/rich-results). [Google's structured data documentation](https://developers.google.com/search/docs/appearance/structured-data/local-business) confirms LocalBusiness schema feeds directly into local pack rankings.
 
@@ -189,6 +189,6 @@ According to [Semrush's local SEO data](https://www.semrush.com/blog/seo-statist
 8. [IBISWorld, Australian Digital Advertising Agencies Industry Report](https://www.ibisworld.com/australia/industry/digital-advertising-agencies/5535/)
 9. [Bruce Clay Australia, SEO Assessment](https://www.bruceclay.com/au/seo/seo_assessment/)
 10. [Ahrefs, Free Backlink Checker](https://ahrefs.com/backlink-checker)
-11. [Statista, Australia Mobile Internet Usage](https://www.statista.com/statistics/683055/australia-mobile-internet-usage/)
+11. Statista, Australia Mobile Internet Usage
 12. [ASBFEO, Australian Small Business and Family Enterprise Ombudsman](https://www.asbfeo.gov.au/)
 13. [ABS, Counts of Australian Businesses](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release)

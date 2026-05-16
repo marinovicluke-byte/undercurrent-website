@@ -100,7 +100,7 @@ Across 86 articles spanning 22 Australian agency domains plus verticals includin
 
 One finding cuts through the noise: non-UC articles average 4,371 words, 36% longer than UC's average of 3,206 words, yet score 25.5 points lower. Length is not the signal. Structure is. (One acknowledgement: this benchmark report runs longer than UC's typical 3,206-word average because it is a methodology piece, not a standard article. A typical UC service-page or how-to piece sits in the 2,500 to 3,500 word range; methodology and corpus-level work runs longer by necessity.)
 
-As [Google Search Central documentation](https://developers.google.com/search/docs/appearance/ai-overviews) describes, AI Overviews tend to prioritise structurally extractable answers over keyword density. Many of the longest articles in our corpus appear to have been written under a content system designed before AI extraction layers became measurable, which is not a moral failing, just a timing problem.
+As [Google Search Central documentation](https://developers.google.com/search/docs/appearance/ai-features) describes, AI Overviews tend to prioritise structurally extractable answers over keyword density. Many of the longest articles in our corpus appear to have been written under a content system designed before AI extraction layers became measurable, which is not a moral failing, just a timing problem.
 
 The methodology sections below cover what the Article Reviewer measures, how the corpus was sampled, how a score breaks down in practice, and how scoring stays consistent. Skip ahead to the [agency comparison table](#how-do-australian-ai-search-agencies-compare-to-each-other) if methodology is not what you came for.
 
@@ -110,7 +110,7 @@ The methodology sections below cover what the Article Reviewer measures, how the
 
 **The Article Reviewer scores content across nine categories on a 100-point scale, weighted by how strongly each category influences AI search citation outcomes in our tracking data.** No category is graded in isolation. Each one maps to a specific behaviour AI engines exhibit when they extract, evaluate, or cite a page, behaviours we monitor weekly across ChatGPT, Perplexity, Gemini, and Google AI Overviews.
 
-The framework was built by reverse-engineering what gets cited and what doesn't. We took 12 months of citation data from our own published articles, cross-referenced it against [Google Search Central documentation on AI Overviews](https://developers.google.com/search/docs/appearance/ai-overviews), the [Search Quality Rater Guidelines](https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf), and the structural patterns described in [Schema.org](https://schema.org/Article) entity definitions. The categories that survived correlation analysis, the ones where movement in the variable consistently moved citation rates, are the categories in the rubric today.
+The framework was built by reverse-engineering what gets cited and what doesn't. We took 12 months of citation data from our own published articles, cross-referenced it against [Google Search Central documentation on AI Overviews](https://developers.google.com/search/docs/appearance/ai-features), the [Search Quality Rater Guidelines](https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf), and the structural patterns described in [Schema.org](https://schema.org/Article) entity definitions. The categories that survived correlation analysis, the ones where movement in the variable consistently moved citation rates, are the categories in the rubric today.
 
 ### What Does Each Article Reviewer Category Measure?
 
@@ -332,7 +332,7 @@ The same evaluation framework holds whether you are a Richmond plumber, a Surry 
 
 ## What Does It Actually Take to Rank in ChatGPT, Perplexity, and AI Overviews?
 
-**Ranking in AI search engines requires a different content architecture from traditional SEO.** The mechanics aren't secret, [Google Search Central documentation](https://developers.google.com/search/docs/appearance/ai-overviews) outlines the structural signals AI Overviews use. The gap is execution.
+**Ranking in AI search engines requires a different content architecture from traditional SEO.** The mechanics aren't secret, [Google Search Central documentation](https://developers.google.com/search/docs/appearance/ai-features) outlines the structural signals AI Overviews use. The gap is execution.
 
 The Article Reviewer rubric covered earlier names the nine categories that, in our tracking, correlate most strongly with extraction outcomes. The two most actionable for agencies starting from a typical 2019-era content base are FAQPage schema deployment and section-level word count discipline. Articles carrying FAQPage schema from [Schema.org](https://schema.org/FAQPage) plus a quick-answer block in the first 60 words tend to see citation lift within two to three weeks of publication in our tracking sample. Several audited agencies score close to zero on section word count compliance, with sections running anywhere from 400 to 3,000+ words. The 130–170 word target is not arbitrary, it reflects where extraction engines appear to work best in our observation.
 
@@ -424,7 +424,7 @@ If you'd like to apply the rubric to your own content, or to compare your existi
 
 ### What is the UnderCurrent Article Reviewer and how does it work?
 
-**The UnderCurrent Article Reviewer is a proprietary 9-category content quality system developed by UnderCurrent Automations to score content for AI search extractability.** The 9 categories, Answer Architecture, Source Discipline, Local Relevance, Authority and E-E-A-T, Entity and Topic Coverage, AI Search Surface, Internal Architecture, Editorial Voice and Intent, and Technical Foundation, total 100 points. Each category is scored against criteria drawn from [Google Search Central documentation](https://developers.google.com/search/docs/appearance/ai-overviews), [Schema.org](https://schema.org) structured data requirements, and UC's own citation tracking across Perplexity, ChatGPT, and Google AI Overviews. The full weighting and scoring mechanics are proprietary. You can read more about how AI search works on our [AI search guide](/blog/what-is-ai-search-optimisation-australia).
+**The UnderCurrent Article Reviewer is a proprietary 9-category content quality system developed by UnderCurrent Automations to score content for AI search extractability.** The 9 categories, Answer Architecture, Source Discipline, Local Relevance, Authority and E-E-A-T, Entity and Topic Coverage, AI Search Surface, Internal Architecture, Editorial Voice and Intent, and Technical Foundation, total 100 points. Each category is scored against criteria drawn from [Google Search Central documentation](https://developers.google.com/search/docs/appearance/ai-features), [Schema.org](https://schema.org) structured data requirements, and UC's own citation tracking across Perplexity, ChatGPT, and Google AI Overviews. The full weighting and scoring mechanics are proprietary. You can read more about how AI search works on our [AI search guide](/blog/what-is-ai-search-optimisation-australia).
 
 ---
 
@@ -438,7 +438,7 @@ If you'd like to apply the rubric to your own content, or to compare your existi
 
 ## Sources
 
-1. [Google Search Central, AI Overviews documentation](https://developers.google.com/search/docs/appearance/ai-overviews)
+1. [Google Search Central, AI Overviews documentation](https://developers.google.com/search/docs/appearance/ai-features)
 2. [Schema.org, FAQPage schema reference](https://schema.org/FAQPage)
 3. [Google Search Quality Rater Guidelines](https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf)
 4. [ACCC, Digital Platforms Services Inquiry](https://www.accc.gov.au/about-us/publications/serial-publications/digital-platform-services-inquiry-2020-25-reports)

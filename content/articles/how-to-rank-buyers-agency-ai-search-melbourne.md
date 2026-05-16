@@ -116,7 +116,7 @@ For Melbourne buyers agencies, the tier-1 source stack:
 
 | Data Type | Tier-1 Source | Link Format |
 |-----------|--------------|-------------|
-| Median house prices | [Cotality (CoreLogic)](https://www.corelogic.com.au/) | Hyperlinked in-text |
+| Median house prices | [Cotality (CoreLogic)](https://www.cotality.com/) | Hyperlinked in-text |
 | Buyer's agent licensing | [Consumer Affairs Victoria](https://www.consumer.vic.gov.au/) | Hyperlinked in-text |
 | Stamp duty thresholds | [SRO Victoria](https://www.sro.vic.gov.au/) | Hyperlinked in-text |
 | Financial service obligations | [ASIC](https://www.asic.gov.au/) | Hyperlinked in-text |
@@ -135,7 +135,7 @@ Only two of 27 Melbourne buyers-agency articles contain real comparison tables, 
 
 This matters because AI engines, particularly Perplexity and Google AI Overviews, strongly favour structured data when answering comparison queries. "Fixed fee vs. percentage fee buyers agent Melbourne" is a high-value query for this vertical. If your answer is buried in three paragraphs of prose, AI engines will cite a competitor who answered it in a two-column table.
 
-[Realbot's analysis of AI search visibility for real estate practices](https://realbot.com.au/the-new-visibility-game-for-real-estate-ai-search-answers) confirms this pattern: structured content formats receive materially higher extraction rates than equivalent prose for comparison-intent queries.
+Realbot's analysis of AI search visibility for real estate practices confirms this pattern: structured content formats receive materially higher extraction rates than equivalent prose for comparison-intent queries.
 
 Every buyers-agency article comparing two or more options should render that comparison as a table. It takes five minutes to convert and the extraction uplift is immediate.
 
@@ -257,7 +257,7 @@ Schema changes, adding `sameAs` to `Person` and `RealEstateAgent` nodes, or corr
 
 ### What suburbs in Melbourne do buyers agents typically cover, and does geography affect AI rankings?
 
-Most Melbourne buyers agencies publish suburb-specific content covering inner-city markets (Fitzroy, Richmond, South Yarra), middle-ring growth corridors (Preston, Coburg, Footscray), and outer southeast and northwest suburbs. Geographic specificity directly affects AI rankings: an article targeting "buyers agent Brunswick Melbourne" with a quick-answer block, suburb-level data sourced from [Cotality (CoreLogic)](https://www.corelogic.com.au/), and valid `RealEstateAgent` schema will extract into AI answers at a substantially higher rate than a generic buyers-agency service page with no location-specific structure.
+Most Melbourne buyers agencies publish suburb-specific content covering inner-city markets (Fitzroy, Richmond, South Yarra), middle-ring growth corridors (Preston, Coburg, Footscray), and outer southeast and northwest suburbs. Geographic specificity directly affects AI rankings: an article targeting "buyers agent Brunswick Melbourne" with a quick-answer block, suburb-level data sourced from [Cotality (CoreLogic)](https://www.cotality.com/), and valid `RealEstateAgent` schema will extract into AI answers at a substantially higher rate than a generic buyers-agency service page with no location-specific structure.
 
 ### How do Melbourne buyers agency AI search scores compare to the national average?
 
@@ -268,9 +268,8 @@ Based on UC's AI search and SEO rubric applied across 27 articles from 9 Melbour
 ## Related Reading
 
 - [The Best AI Search Agency in Australia: 22-Domain Audit](/blog/au-seo-agencies-ai-search-audit), UC's Article Reviewer benchmark across 86 articles spanning 22 Australian agency domains
-- [AI Search vs Traditional SEO: What Australian Businesses Need to Know](/blog/ai-search-vs-traditional-seo-australia), where the two strategies diverge and where they overlap
-- [How to Rank on Google: A Practical Guide for Australian Service Businesses](/blog/how-to-rank-on-google-australia), the technical SEO foundations that underpin AI-search visibility
-- [SEO and AI Visibility: The Hub for Australian Businesses](/blog/seo-ai-visibility-hub-australia), the full resource library for search visibility strategy
+- [AI Search vs Traditional SEO: What Australian Businesses Need to Know](/blog/ai-search-vs-traditional-search-australia-2026), where the two strategies diverge and where they overlap
+- [SEO and AI Visibility: The Hub for Australian Businesses](/blog/cluster/seo-ai-visibility), the full resource library for search visibility strategy
 
 ---
 
@@ -279,8 +278,8 @@ Based on UC's AI search and SEO rubric applied across 27 articles from 9 Melbour
 1. [Google Search Central Documentation, Structured Data](https://developers.google.com/search/docs)
 2. [Schema.org, RealEstateAgent Type Definition](https://schema.org/RealEstateAgent)
 3. [HousingWire, Agents Invisible in AI Search](https://www.housingwire.com/articles/agents-invisible-ai-search/)
-4. [Realbot, AI Search Visibility for Real Estate](https://realbot.com.au/the-new-visibility-game-for-real-estate-ai-search-answers)
+4. Realbot, AI Search Visibility for Real Estate
 5. [Consumer Affairs Victoria, Buyer's Advocate Licensing](https://www.consumer.vic.gov.au/)
 6. [SRO Victoria, Stamp Duty Thresholds](https://www.sro.vic.gov.au/)
 7. [ABS, Population and Migration Data](https://www.abs.gov.au/)
-8. [Cotality (CoreLogic), Property Data](https://www.corelogic.com.au/)
+8. [Cotality (CoreLogic), Property Data](https://www.cotality.com/)

@@ -351,7 +351,7 @@ function WhatWeDo() {
 // SECTION 04 — Services we offer
 // ═══════════════════════════════════════════════════════════════════════════════
 function ServicesOffered() {
-  const services = SERVICES.map(s => ({
+  const services = SERVICES.filter(s => s.slug !== 'front-end-experience').map(s => ({
     slug: s.slug,
     name: s.displayName || titleCaseLabel(s.label),
     blurb: SERVICE_BLURBS[s.slug] || s.metaDescription,

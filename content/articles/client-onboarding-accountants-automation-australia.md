@@ -51,7 +51,7 @@ Without automation, each step is a manual task. You send an email. You wait. You
 
 [Workflow automation](/services) removes the manual handoffs. A client signs your engagement letter in DocuSign, and your system automatically sends the next step,a link to upload their financial documents. When they upload, your CRM updates their status to "Documents Received" and schedules a reminder for you to review. No emails written. No copying and pasting. No "did they send that yet?" moments.
 
-According to a [2024 Deloitte study on professional services efficiency](https://www2.deloitte.com), service firms waste 20+ hours per week on manual onboarding tasks that could be fully automated. That's three and a half days of your week you could spend on advisory work, client strategy calls, or (wild idea) going home on time.
+According to a 2024 Deloitte study on professional services efficiency, service firms waste 20+ hours per week on manual onboarding tasks that could be fully automated. That's three and a half days of your week you could spend on advisory work, client strategy calls, or (wild idea) going home on time.
 
 ## How Much Time Does Client Onboarding Actually Take Without Automation?
 
@@ -182,7 +182,7 @@ Here's a breakdown:
 
 **Total monthly cost:** $165-$400 depending on client volume and feature needs.
 
-**Time saved:** 20+ hours per week (according to [Deloitte's 2024 efficiency report](https://www2.deloitte.com)).
+**Time saved:** 20+ hours per week (according to Deloitte's 2024 efficiency report).
 
 **ROI calculation:** Let's say your billable rate is $200/hour. If you save 20 hours per week on onboarding admin, that's $4,000/week in recovered time. You could spend that time on advisory calls, new client acquisition, or actual tax work. Even if you only convert half of that time into billable hours, you're looking at $2,000/week = $8,000/month in recovered revenue.
 

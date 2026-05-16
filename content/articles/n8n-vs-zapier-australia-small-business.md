@@ -52,7 +52,7 @@ Zapier is a closed, fully managed, no-code platform. You log in, pick your apps,
 
 n8n is an open-source automation platform. You can run it on n8n's cloud, or self-host it on your own server, including an AWS Sydney instance, so your data never leaves Australia. Critically, n8n counts an entire workflow run as one "execution," regardless of how many steps it contains. That execution model makes n8n dramatically more cost-effective at scale. A 4-step workflow running 1,000 times a month counts as 4,000 tasks on Zapier, but just 1,000 executions on n8n.
 
-According to [Zapier's own comparison of the two platforms](https://zapier.com/blog/n8n-vs-zapier/), Zapier connects to 7,000+ apps with maintained, pre-built integrations. n8n offers 400+ native integrations plus 600+ community-built nodes, with strong custom API flexibility for developers, as noted in [this detailed platform comparison](https://latenode.com/blog/platform-comparisons-alternatives/n8n-alternatives/n8n-vs-zapier-2025-complete-platform-comparison-hidden-costs-analysis).
+According to [Zapier's own comparison of the two platforms](https://zapier.com/blog/n8n-vs-zapier/), Zapier connects to 7,000+ apps with maintained, pre-built integrations. n8n offers 400+ native integrations plus 600+ community-built nodes, with strong custom API flexibility for developers, as noted in [this detailed platform comparison](https://latenode.com/blog/n8n-vs-zapier).
 
 The [Australian Bureau of Statistics](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release) reports there are approximately 2.5 million actively trading businesses in Australia, with the vast majority employing fewer than 20 people. For these small operators, tool selection comes down to practical factors: how long setup takes, what it costs per month, and whether it connects to the software they already use.
 
@@ -261,7 +261,7 @@ Automation tools handle repetitive, rule-based tasks, sending emails, creating r
 ## Sources
 
 1. [Zapier, n8n vs Zapier Comparison](https://zapier.com/blog/n8n-vs-zapier/)
-2. [Latenode, n8n vs Zapier 2025 Complete Platform Comparison](https://latenode.com/blog/platform-comparisons-alternatives/n8n-alternatives/n8n-vs-zapier-2025-complete-platform-comparison-hidden-costs-analysis)
+2. [Latenode, n8n vs Zapier 2025 Complete Platform Comparison](https://latenode.com/blog/n8n-vs-zapier)
 3. [Intuz, Make vs n8n vs Zapier Detailed Comparison](https://www.intuz.com/blog/make-vs-n8n-vs-zapier-detailed-comparison)
 4. [n8n, n8n vs Zapier Official Comparison](https://n8n.io/vs/zapier/)
 5. [n8n Community, Is Zapier Better Than n8n?](https://community.n8n.io/t/is-zapier-better-then-n8n/228894)

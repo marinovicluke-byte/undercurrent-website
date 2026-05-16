@@ -39,7 +39,7 @@ faqs:
 | Scope or contract | Pre-filled doc sent for digital signature | 30 min |
 | Internal handover | Job card created in CRM, team notified | 15 min |
 
-Six emails to onboard a new customer is six chances they ghost you. [Visa research](https://usa.visa.com/visa-everywhere/security/digital-banking-onboarding.html) found that 70% of customers abandon a process if it takes longer than 20 minutes, and that number does not care whether you sell SaaS or skip bins. [SundaySky's 2026 benchmarks](https://sundaysky.com/blog/customer-onboarding-statistics/) push it harder, showing 74% of potential customers switch to a competitor if onboarding feels too complicated.
+Six emails to onboard a new customer is six chances they ghost you. Visa research found that 70% of customers abandon a process if it takes longer than 20 minutes, and that number does not care whether you sell SaaS or skip bins. [SundaySky's 2026 benchmarks](https://sundaysky.com/blog/customer-onboarding-statistics/) push it harder, showing 74% of potential customers switch to a competitor if onboarding feels too complicated.
 
 If you run a trade, agency, or consultancy, you already know the pattern. The quote gets accepted Monday. By Thursday, you are still chasing the deposit, the address, the insurance certificate, and a signed scope. The customer's excitement has cooled. Your team has not started. Cash has not landed.
 

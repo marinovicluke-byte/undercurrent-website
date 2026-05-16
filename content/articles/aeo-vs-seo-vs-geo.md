@@ -92,7 +92,7 @@ Read the last column first, it tells you where your money goes. A tradie chasing
 
 **SEO first, always, because AEO is a layer that sits on top of pages that already work.**
 
-You can't get lifted into an AI Overview if the page isn't indexed and ranking, so the order is: build the page, earn the ranking, which takes 6 to 9 months on a competitive term and 2 to 3 months on a quiet one, then format it for extraction, then build the off-site authority GEO needs. There's one exception. A brand-new site with no content does the SEO and AEO basics at the same time, because clear structure, useful answers and clean schema help both at once, so there's no point staging them. In our own audit corpus, the pages that show up in AI answers are almost always the ones already ranking on page one, not the ones with the fanciest schema bolted onto thin content. For what AEO, GEO and the rest of the alphabet actually mean, see [this rundown of the 2025 search acronyms](https://vtdigital.com.au/seo-strategies-2025-what-aeo-geo-aio-and-sxo-actually-mean), then run [the free self-check](/blog/seo-audit-self-check-australia) before you spend a cent on AEO.
+You can't get lifted into an AI Overview if the page isn't indexed and ranking, so the order is: build the page, earn the ranking, which takes 6 to 9 months on a competitive term and 2 to 3 months on a quiet one, then format it for extraction, then build the off-site authority GEO needs. There's one exception. A brand-new site with no content does the SEO and AEO basics at the same time, because clear structure, useful answers and clean schema help both at once, so there's no point staging them. In our own audit corpus, the pages that show up in AI answers are almost always the ones already ranking on page one, not the ones with the fanciest schema bolted onto thin content. For what AEO, GEO and the rest of the alphabet actually mean, see [this rundown of the 2025 search acronyms](https://vtdigital.com.au/seo-strategies-2025-what-aeo-geo-aio-and-sxo-actually-mean/), then run [the free self-check](/blog/seo-audit-self-check-australia) before you spend a cent on AEO.
 
 ## Which Layer Matters Most for a Local Service Business?
 
@@ -211,4 +211,4 @@ If the page already ranks, AEO formatting changes can show up in search features
 8. [LocalBusiness type on schema.org](https://schema.org/LocalBusiness)
 9. [An Australian guide to answer engine optimisation](https://roi.com.au/answer-engine-optimisation-australia-the-complete-guide-for-ranking-in-ai-search-results-in-2026/)
 10. [What is SEO, GEO and AEO](https://digitalmarketinginstitute.com/blog/what-is-seo-geo-and-aeo)
-11. [What AEO, GEO, AIO and SXO actually mean](https://vtdigital.com.au/seo-strategies-2025-what-aeo-geo-aio-and-sxo-actually-mean)
+11. [What AEO, GEO, AIO and SXO actually mean](https://vtdigital.com.au/seo-strategies-2025-what-aeo-geo-aio-and-sxo-actually-mean/)
