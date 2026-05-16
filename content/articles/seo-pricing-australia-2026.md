@@ -30,7 +30,7 @@ faqs:
 ---
 # How Much Does SEO Pricing Australia Cost in 2026?
 
-> **Quick Answer:** Australian SEO pricing spans $500-$20,000+/mo across five clean retainer bands from solo-freelancer to enterprise. UnderCurrent publishes three fixed packages: $2,800, $5,500, $9,500/mo with one-off setup from $1,200. Across our May 2026 audit of the 10 ranking pages for "seo pricing australia", none publish the labour math. We do.
+> **Quick Answer:** Australian SEO pricing spans $500-$20,000+/mo across five retainer bands. UnderCurrent starts at a $1,000/mo Foundation package for businesses entering search, then three fixed tiers at $2,800, $5,500, and $9,500/mo, plus a $3,000 custom website build. You can also take individual services à la carte instead of a package. Across our May 2026 audit of the 10 ranking pages for "seo pricing australia", none publish the labour math. We publish all of it.
 
 ## What does an SEO packages Australia comparison reveal in 2026?
 
@@ -97,20 +97,20 @@ Sweet spot for serious growth SMEs is the $2-$3.5k band: enough budget for real 
 
 ## What does each UnderCurrent SEO package actually include?
 
-**UnderCurrent publishes three fixed packages, $2,800, $5,500, and $9,500/mo, with every deliverable per tier, anchored to [ABS counts of trading businesses](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release) showing 994,178 employing businesses span wide scope variance.** A package tier is a fixed bundle of monthly SEO deliverables priced at a single retainer. The price is on the page before the call.
+**UnderCurrent publishes a $1,000/mo Foundation package as an entry point, plus three fixed tiers at $2,800, $5,500, and $9,500/mo, with every deliverable named per tier.** Foundation sits below Tier 1 Local so a smaller business is never priced out at the start.
 
-| Deliverable | Tier 1 Local | Tier 2 Regional | Tier 3 National |
-|---|---|---|---|
-| Monthly retainer | $2,800 | $5,500 | $9,500 |
-| Setup fee | $1,200 | $2,000 | $3,500 |
-| Articles per month | 8 | 12 | 18 |
-| Service / location pages per month | 4 | 6 | 8 |
-| [GBP](/glossary/what-is-google-business-profile) + Apple Business | 1 location | 1-3 locations | Up to 10 |
-| [AI search optimisation](/glossary/what-is-ai-search-optimisation) | [FAQ schema](/glossary/what-is-faq-schema) + entity | Full + Peec AI monitoring | Full + Rankability |
-| Link building | Add-on | Active outreach | 4-6 high-DR/mo |
-| Strategy calls | Onboarding only | Quarterly | Bi-weekly |
+| Deliverable | Foundation | Tier 1 Local | Tier 2 Regional | Tier 3 National |
+|---|---|---|---|---|
+| Monthly retainer | $1,000 | $2,800 | $5,500 | $9,500 |
+| Setup fee | Scope-dependent | $1,200 | $2,000 | $3,500 |
+| Articles per month | 2 | 8 | 12 | 18 |
+| Service / location pages per month | 2 | 4 | 6 | 8 |
+| [GBP](/glossary/what-is-google-business-profile) + Apple Business | Not included | 1 location | 1-3 locations | Up to 10 |
+| [AI search optimisation](/glossary/what-is-ai-search-optimisation) | Schema fixes | [FAQ schema](/glossary/what-is-faq-schema) + entity | Full + Peec AI monitoring | Full + Rankability |
+| Link building | Not included | Add-on | Active outreach | 4-6 high-DR/mo |
+| Strategy calls | Onboarding only | Onboarding only | Quarterly | Bi-weekly |
 
-Apple Business Connect launched in Australia on 14 April 2026 and is included from May 2026, per [Google's Business Profile documentation](https://support.google.com/business).
+Apple Business Connect launched in Australia on 14 April 2026 and is included from May 2026.
 
 ## What does the hours × rate math behind each UC tier look like?
 
@@ -232,7 +232,7 @@ Revenue-share and cost-per-lead deals exist but stay niche; both fold into the b
 | GBP management | $300/mo | Per location |
 | AI search optimisation | $850/mo | Schema + entity + monitoring |
 
-Pick-and-mix runs at 15% under market mid. Full bundle adds another 15% discount on top. Here's the JSON-LD pricing schema UnderCurrent publishes, copy it for your own pricing pages:
+You don't have to take a package at all. Pick individual line items à la carte, each at 15% under market mid, and a full bundle adds another 15% discount on the sum. UnderCurrent also builds custom websites as a one-off, $3,000 for a site built and optimised for SEO and AI search from the first page. Here's the JSON-LD pricing schema UnderCurrent publishes, copy it for your own pricing pages:
 
 ```json
 {
