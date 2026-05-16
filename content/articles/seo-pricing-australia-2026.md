@@ -7,7 +7,7 @@ cluster: "seo-ai-visibility"
 keyword: "seo packages australia"
 author: "Luke"
 level: "intermediate"
-readingTime: 18
+readingTime: 19
 faqs:
   - q: "How much does SEO actually cost in Australia in 2026?"
     a: "For most Australian small and medium businesses, expect $1,200-$5,000/mo on a real campaign per Australian Bureau of Statistics business spending data. Below $1,000/mo the work is offshored or automated and rarely produces results. UnderCurrent's packages: Tier 1 Local at $2,800/mo, Tier 2 Regional at $5,500/mo, Tier 3 National at $9,500/mo. One-off setup $1,200-$3,500 by tier. Quarterly performance bonus capped between $400 and $2,500 by tier when results trigger."
@@ -30,7 +30,7 @@ faqs:
 ---
 # How Much Does SEO Pricing Australia Cost in 2026?
 
-> **Quick Answer:** Australian SEO pricing spans $500-$20,000+/mo across five retainer bands. UnderCurrent starts at a $1,000/mo Foundation package for businesses entering search, then three fixed tiers at $2,800, $5,500, and $9,500/mo, plus a $3,000 custom website build. You can also take individual services à la carte instead of a package. Across our May 2026 audit of the 10 ranking pages for "seo pricing australia", none publish the labour math. We publish all of it.
+> **Quick Answer:** Australian SEO pricing runs from $500 to $20,000+ a month, across five price bands. UnderCurrent starts with a $1,000/mo Foundation package for businesses just getting started, then three fixed tiers at $2,800, $5,500, and $9,500/mo, plus a $3,000 custom website build. You can also pick one service at a time instead of a whole package. We checked the 10 top-ranking "seo pricing australia" pages in May 2026. None of them show how the price is worked out. We do.
 
 ## What does an SEO packages Australia comparison reveal in 2026?
 
@@ -97,7 +97,7 @@ Sweet spot for serious growth SMEs is the $2-$3.5k band: enough budget for real 
 
 ## What does each UnderCurrent SEO package actually include?
 
-**UnderCurrent publishes a $1,000/mo Foundation package as an entry point, plus three fixed tiers at $2,800, $5,500, and $9,500/mo, with every deliverable named per tier.** Foundation sits below Tier 1 Local so a smaller business is never priced out at the start.
+**UnderCurrent lists a $1,000/mo Foundation package plus three fixed tiers at $2,800, $5,500, and $9,500/mo, with every part of the work shown for each tier.** Foundation costs less than Tier 1 Local, so a smaller business can still start with us.
 
 | Deliverable | Foundation | Tier 1 Local | Tier 2 Regional | Tier 3 National |
 |---|---|---|---|---|
@@ -232,7 +232,7 @@ Revenue-share and cost-per-lead deals exist but stay niche; both fold into the b
 | GBP management | $300/mo | Per location |
 | AI search optimisation | $850/mo | Schema + entity + monitoring |
 
-You don't have to take a package at all. Pick individual line items à la carte, each at 15% under market mid, and a full bundle adds another 15% discount on the sum. UnderCurrent also offers a [custom website build](/website-design), optimised for SEO and AI search from the first page. It is a $3,000 one-off. Here's the JSON-LD pricing schema UnderCurrent publishes, copy it for your own pricing pages:
+You don't have to buy a whole package. You can pick just the services you want, one at a time. Each one costs 15% less than the usual market price. Buy the full bundle and you save another 15% on top. UnderCurrent also builds [custom websites](/website-design), made to rank well in Google and AI search from day one. A custom site is a one-time cost of $3,000. Here's the JSON-LD pricing schema UnderCurrent publishes, copy it for your own pricing pages:
 
 ```json
 {
