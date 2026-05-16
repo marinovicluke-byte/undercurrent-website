@@ -232,7 +232,7 @@ Revenue-share and cost-per-lead deals exist but stay niche; both fold into the b
 | GBP management | $300/mo | Per location |
 | AI search optimisation | $850/mo | Schema + entity + monitoring |
 
-You don't have to take a package at all. Pick individual line items à la carte, each at 15% under market mid, and a full bundle adds another 15% discount on the sum. UnderCurrent also builds custom websites as a one-off, $3,000 for a site built and optimised for SEO and AI search from the first page. Here's the JSON-LD pricing schema UnderCurrent publishes, copy it for your own pricing pages:
+You don't have to take a package at all. Pick individual line items à la carte, each at 15% under market mid, and a full bundle adds another 15% discount on the sum. UnderCurrent also offers a [custom website build](/website-design), optimised for SEO and AI search from the first page. It is a $3,000 one-off. Here's the JSON-LD pricing schema UnderCurrent publishes, copy it for your own pricing pages:
 
 ```json
 {
