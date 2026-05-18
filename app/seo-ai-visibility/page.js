@@ -2,8 +2,11 @@
 // Preserves all copy and schema from lib/data/services.js entry slug:'seo-ai-visibility'.
 // SEO Melbourne — primary keyword page. Hub for Local SEO, National SEO, AI Search sub-pages.
 
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import PillCTA from '@/components/ui/PillCTA'
+
+const StillWaves = dynamic(() => import('@/components/visuals/StillWaves'), { ssr: false })
 import SectionEyebrow from '@/components/ui/SectionEyebrow'
 import SeoTabDemo from '@/components/ui/SeoTabDemo'
 import { SERVICES } from '@/lib/data/services'
@@ -186,8 +189,12 @@ export default function SeoAiVisibilityPage() {
       }} />
 
       {/* ── 01 HERO ──────────────────────────────────────────────────────── */}
-      <section style={{ padding: '0 var(--page-pad)' }}>
-        <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+      <section style={{ padding: '0 var(--page-pad)', position: 'relative', overflow: 'hidden' }}>
+        {/* Animated wave — desktop only, hidden on mobile via CSS */}
+        <div aria-hidden className="seo-wave-bg" style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+          <StillWaves height={900} />
+        </div>
+        <div style={{ maxWidth: 1280, margin: '0 auto', position: 'relative', zIndex: 1 }}>
 
           {/* Centred hero text */}
           <div style={{
@@ -213,7 +220,7 @@ export default function SeoAiVisibilityPage() {
               We build the organic rankings and AI search citations that compound over time. Google, ChatGPT, Perplexity — one system, one team, one brief.
             </p>
 
-            <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 28 }}>
+            <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
               <PillCTA label="Book a scoping call" href="https://cal.com/luke-marinovic-aqeosc/30min" tone="blue" />
               <Link href="/audit" style={{
                 display: 'inline-flex', alignItems: 'center', gap: 10,
@@ -225,20 +232,6 @@ export default function SeoAiVisibilityPage() {
               }}>
                 Free SEO audit <span aria-hidden style={{ fontSize: 12 }}>→</span>
               </Link>
-            </div>
-
-            <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
-              {['Melbourne · Australia-wide', 'Google + ChatGPT + Perplexity', 'No lock-in contracts'].map(chip => (
-                <span key={chip} style={{
-                  display: 'inline-block', padding: '5px 12px',
-                  border: `1px solid rgba(250,249,245,0.13)`,
-                  background: 'rgba(255,255,255,0.025)',
-                  fontFamily: 'var(--font-display)', fontWeight: 500,
-                  fontSize: 12, color: MUTED, borderRadius: 999,
-                }}>
-                  {chip}
-                </span>
-              ))}
             </div>
           </div>
 
@@ -261,12 +254,13 @@ export default function SeoAiVisibilityPage() {
       }}>
         <div style={{ maxWidth: 1280, margin: '0 auto', padding: '64px var(--page-pad)' }}>
           <div style={{ marginBottom: 40 }}><SectionEyebrow n="01" label="By the numbers" /></div>
-          <div className="seo-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 18 }}>
+          <div className="seo-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 18 }}>
             {[
-              { num: '3',     label: 'Search surfaces',            sub: 'Google, ChatGPT, Perplexity — one system' },
-              { num: '20%',   label: 'Above enterprise benchmarks', sub: 'Average content quality score uplift' },
-              { num: '4–8',   label: 'Weeks to first movement',     sub: 'Technical fixes and on-page retrofits' },
-              { num: '$0',    label: 'Lock-in fees',                sub: 'Cancel any month, no questions' },
+              { num: '+40%',  label: 'Organic traffic uplift',       sub: 'Average client result in the first 6 months' },
+              { num: '6×',    label: 'More clicks on page 1',         sub: 'Versus the same query ranking on page 2' },
+              { num: '91%',   label: 'Of clicks go to page 1',        sub: 'Positions 1–10 capture nearly all search traffic' },
+              { num: '4–8',   label: 'Weeks to first movement',       sub: 'Technical SEO and on-page retrofits' },
+              { num: '#1',    label: 'Article quality rating',        sub: 'Benchmarked against top enterprise editorial content' },
             ].map(s => (
               <div key={s.num} style={{
                 background: DEEP,
@@ -275,9 +269,10 @@ export default function SeoAiVisibilityPage() {
                 boxShadow: `6px 6px 0 0 rgba(${BLUE_RGB},0.18)`,
               }}>
                 <p style={{
-                  fontFamily: 'var(--font-mono)',
-                  fontSize: 'clamp(28px, 3vw, 44px)',
+                  fontFamily: 'var(--font-display)', fontWeight: 500,
+                  fontSize: 'clamp(26px, 2.8vw, 42px)',
                   color: BLUE, margin: '0 0 10px', lineHeight: 1,
+                  letterSpacing: '-0.03em',
                 }}>
                   {s.num}
                 </p>
@@ -314,7 +309,7 @@ export default function SeoAiVisibilityPage() {
             Traditional SEO retainers chase blue-link rankings. We cover the whole discovery surface — Google, AI Overviews, ChatGPT, and Perplexity — as one compounding system.
           </p>
 
-          <div className="seo-diff-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 18 }}>
+          <div className="seo-diff-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 18 }}>
             {[
               {
                 num: '01',
@@ -325,8 +320,8 @@ export default function SeoAiVisibilityPage() {
               {
                 num: '02',
                 accent: SAGE_RGB,
-                title: '20% above enterprise content benchmarks',
-                body: 'Our content scoring model benchmarks against the top 1% of enterprise editorial content before anything ships. You get article-quality writing with AEO structure baked in — not AI slop dressed up as SEO.',
+                title: 'Highest rated article quality',
+                body: 'Our content scoring model benchmarks every piece against the top 1% of enterprise editorial content before anything ships. Article-quality writing with AEO structure baked in — not AI slop dressed up as SEO.',
               },
               {
                 num: '03',
@@ -338,7 +333,19 @@ export default function SeoAiVisibilityPage() {
                 num: '04',
                 accent: SAGE_RGB,
                 title: 'Human editorial review on everything',
-                body: 'AI accelerates keyword clustering, schema generation, and draft structure. A human editor reviews and rewrites before anything publishes. AI-generated slop caught in quality review never ships.',
+                body: 'AI accelerates keyword clustering, schema generation, and draft structure. A senior human editor reviews and rewrites before anything publishes. AI-generated slop is caught in quality review and never ships.',
+              },
+              {
+                num: '05',
+                accent: BLUE_RGB,
+                title: 'You work with the strategist, not their intern',
+                body: 'No junior account managers. No hand-offs after onboarding. The person who designs your campaign is the person in the room — with direct access, direct answers, and skin in the result.',
+              },
+              {
+                num: '06',
+                accent: SAGE_RGB,
+                title: 'Monthly strategy sessions included',
+                body: 'Every retainer includes a monthly working session — not a report read-out. We walk through what moved, what is next, and where we push harder. You stay close to the work without doing the work.',
               },
             ].map(d => (
               <div key={d.num} style={{
@@ -402,8 +409,9 @@ export default function SeoAiVisibilityPage() {
             {SVC.comparisonCopy}
           </p>
 
-          <div style={{ overflowX: 'auto', borderRadius: 14, border: `1px solid rgba(250,249,245,0.09)` }}>
-            <table style={{ width: '100%', minWidth: 640, borderCollapse: 'collapse' }}>
+          <div className="seo-table-wrap" style={{ position: 'relative' }}>
+            <div style={{ overflowX: 'auto', borderRadius: 14, border: `1px solid rgba(250,249,245,0.09)`, WebkitOverflowScrolling: 'touch' }}>
+            <table style={{ width: '100%', minWidth: 560, borderCollapse: 'collapse' }}>
               <thead>
                 <tr style={{ background: CHARCOAL, borderBottom: `1px solid ${FAINT}` }}>
                   <th style={{
@@ -449,6 +457,14 @@ export default function SeoAiVisibilityPage() {
                 ))}
               </tbody>
             </table>
+            </div>
+            {/* Right fade — visible only when table overflows (mobile) */}
+            <div aria-hidden className="seo-table-fade" style={{
+              position: 'absolute', top: 0, right: 0, bottom: 0,
+              width: 48, pointerEvents: 'none',
+              background: `linear-gradient(to right, transparent, ${DEEP})`,
+              borderRadius: '0 14px 14px 0',
+            }} />
           </div>
         </div>
       </section>
@@ -845,12 +861,24 @@ export default function SeoAiVisibilityPage() {
       </section>
 
       <style>{`
+        /* Wave bg: hide canvas on mobile, keep static bg */
+        @media (max-width: 780px) {
+          .seo-wave-bg { display: none !important; }
+        }
+        /* Table fade hint: only show when content overflows (mobile) */
+        @media (min-width: 780px) {
+          .seo-table-fade { display: none !important; }
+        }
+        @media (max-width: 1180px) {
+          .seo-stats { grid-template-columns: repeat(3, 1fr) !important; }
+          .seo-diff-grid { grid-template-columns: repeat(2, 1fr) !important; }
+        }
         @media (max-width: 1080px) {
           .seo-plans-grid { grid-template-columns: 1fr 1fr !important; }
         }
         @media (max-width: 900px) {
           .seo-stats { grid-template-columns: repeat(2, 1fr) !important; }
-          .seo-diff-grid { grid-template-columns: 1fr !important; }
+          .seo-diff-grid { grid-template-columns: 1fr 1fr !important; }
           .seo-coverage-grid { grid-template-columns: 1fr !important; }
           .seo-followup-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
           .seo-faq-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
@@ -858,8 +886,12 @@ export default function SeoAiVisibilityPage() {
           .seo-plan-detail-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
         }
         @media (max-width: 640px) {
-          .seo-stats { grid-template-columns: 1fr !important; }
+          .seo-stats { grid-template-columns: repeat(2, 1fr) !important; }
+          .seo-diff-grid { grid-template-columns: 1fr !important; }
           .seo-plans-grid { grid-template-columns: 1fr !important; }
+        }
+        @media (max-width: 420px) {
+          .seo-stats { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </div>
