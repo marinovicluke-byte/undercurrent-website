@@ -50,7 +50,7 @@ const MEGA_SERVICES = [
     href: '/seo-ai-visibility',
     tagline: 'Rank everywhere your buyers are looking.',
     desc: 'SEO, AEO, PPC, and Maps — wired together so the same work earns Google rankings, ChatGPT citations, and local visibility at once.',
-    items: ['Local SEO', 'AI Search (AEO)', 'PPC', 'Google Profile Management', 'National SEO', 'Small Business SEO', 'Technical SEO', 'Google Places'],
+    items: [],
   },
   {
     num: '02',
@@ -59,7 +59,7 @@ const MEGA_SERVICES = [
     href: '/website-design',
     tagline: 'The face of your business, built to convert.',
     desc: 'Marketing sites and SEO migrations built on Next.js, wired to your CRM, calendar and payment stack.',
-    items: ['Custom Website', 'SEO Website Migration'],
+    items: [],
   },
   {
     num: '03',
@@ -84,7 +84,7 @@ const MEGA_SERVICES = [
     href: '/ai-strategy-training',
     tagline: 'The right tools. Used the right way.',
     desc: 'Hands-on training so your team uses AI with confidence, from ChatGPT basics to Claude Code for power users.',
-    items: ['AI Training Workshop', 'ChatGPT Training', 'Claude Training', 'Claude Co-work Training', 'Claude Code Training', 'AI Workflow Design', 'Tool Selection Audits', 'Team Onboarding'],
+    items: [],
   },
 ]
 
