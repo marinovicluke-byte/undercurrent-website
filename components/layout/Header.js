@@ -41,6 +41,7 @@ function Wordmark({ size = 24 }) {
   )
 }
 
+// items: string (links to parent href) or { label, href } (own page)
 const MEGA_SERVICES = [
   {
     num: '01',
@@ -67,7 +68,14 @@ const MEGA_SERVICES = [
     href: '/custom-integrations',
     tagline: 'Automate the work that eats your week.',
     desc: 'Lead, review, content and sales automation wired into one stack using n8n, Make, and direct APIs.',
-    items: ['Lead Automation', 'Review Automation', 'Marketing & Ads Automation', 'Content Automation', 'Sales Automation', 'CRM Automation', 'Email Automation', 'Reporting Automation'],
+    items: [
+      { label: 'Sales Automation',                href: '/sales-automation' },
+      { label: 'Customer Experience Automation',  href: '/customer-experience-automation' },
+      { label: 'Content Automation',              href: '/content-automation' },
+      { label: 'Finance Automation',              href: '/finance-automation' },
+      { label: 'Personal System Automation',      href: '/personal-system-automation' },
+      { label: 'Inbound Lead Management',         href: '/inbound-lead-management-melbourne' },
+    ],
   },
   {
     num: '04',
@@ -405,33 +413,37 @@ function MegaMenu({ activeIdx, onSetActive, onClose }) {
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
-          {s.items.map(item => (
-            <Link
-              key={item}
-              href={s.href}
-              onClick={onClose}
-              className="uc-mega-item"
-              style={{
-                '--item-accent': s.accentHex,
-                display: 'flex',
-                alignItems: 'center',
-                gap: 9,
-                padding: '10px 12px',
-                borderRadius: 10,
-                border: '1px solid rgba(250,249,245,0.09)',
-                textDecoration: 'none',
-                color: 'rgba(250,249,245,0.85)',
-                fontSize: 13,
-                fontWeight: 500,
-                background: 'rgba(250,249,245,0.04)',
-                transition: 'border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease, color 140ms ease',
-                fontFamily: 'var(--font-body)',
-              }}
-            >
-              <span style={{ width: 5, height: 5, borderRadius: '50%', background: s.accentHex, flexShrink: 0, display: 'inline-block' }} />
-              {item}
-            </Link>
-          ))}
+          {s.items.map(item => {
+            const label = typeof item === 'string' ? item : item.label
+            const href  = typeof item === 'string' ? s.href : item.href
+            return (
+              <Link
+                key={label}
+                href={href}
+                onClick={onClose}
+                className="uc-mega-item"
+                style={{
+                  '--item-accent': s.accentHex,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 9,
+                  padding: '10px 12px',
+                  borderRadius: 10,
+                  border: '1px solid rgba(250,249,245,0.09)',
+                  textDecoration: 'none',
+                  color: 'rgba(250,249,245,0.85)',
+                  fontSize: 13,
+                  fontWeight: 500,
+                  background: 'rgba(250,249,245,0.04)',
+                  transition: 'border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease, color 140ms ease',
+                  fontFamily: 'var(--font-body)',
+                }}
+              >
+                <span style={{ width: 5, height: 5, borderRadius: '50%', background: s.accentHex, flexShrink: 0, display: 'inline-block' }} />
+                {label}
+              </Link>
+            )
+          })}
         </div>
 
         <Link
