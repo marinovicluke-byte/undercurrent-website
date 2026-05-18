@@ -2,11 +2,9 @@
 // Preserves all copy and schema from lib/data/services.js entry slug:'seo-ai-visibility'.
 // SEO Melbourne — primary keyword page. Hub for Local SEO, National SEO, AI Search sub-pages.
 
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import PillCTA from '@/components/ui/PillCTA'
-
-const StillWaves = dynamic(() => import('@/components/visuals/StillWaves'), { ssr: false })
+import StillWaves from '@/components/visuals/StillWavesClient'
 import SectionEyebrow from '@/components/ui/SectionEyebrow'
 import SeoTabDemo from '@/components/ui/SeoTabDemo'
 import { SERVICES } from '@/lib/data/services'
