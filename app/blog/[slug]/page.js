@@ -6,7 +6,6 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import JsonLd from '@/components/ui/JsonLd'
 import AuthorBio from '@/components/ui/AuthorBio'
-import Breadcrumb from '@/components/layout/Breadcrumb'
 import HeroCta from '@/components/article/HeroCta'
 import { getAllArticles, getArticleBySlug } from '@/lib/articles'
 import { getAllCaseStudies } from '@/lib/caseStudies'
@@ -147,9 +146,10 @@ export default async function ArticlePage({ params }) {
         datePublished: fm.date,
         dateModified: fm.dateModified || fm.date,
         author: { '@id': `${SITE_URL}/about#luke` },
-        publisher: { '@type': 'Organization', name: 'UnderCurrent Automations', url: SITE_URL },
+        publisher: { '@id': `${SITE_URL}#organization` },
         mainEntityOfPage: `${SITE_URL}/blog/${slug}`,
-        keywords: [fm.keyword, fm.cluster, fm.level].filter(Boolean).join(', '),
+        ...(clusterLabel && { articleSection: clusterLabel }),
+        keywords: [fm.keyword, clusterLabel, fm.level].filter(Boolean).join(', '),
         inLanguage: 'en-AU',
         about: aboutEntities,
         ...(mentionEntities && { mentions: mentionEntities }),
@@ -199,16 +199,6 @@ export default async function ArticlePage({ params }) {
       {/* Hero */}
       <section style={{ padding: '120px var(--page-pad) 60px', background: 'var(--bg-deep)' }}>
         <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-          <div style={{ marginBottom: 28 }}>
-            <Breadcrumb
-              items={[
-                { label: 'Home', href: '/' },
-                { label: 'Blog', href: '/blog' },
-                ...(clusterSlug && clusterLabel ? [{ label: clusterLabel, href: `/blog/cluster/${clusterSlug}` }] : []),
-                { label: fm.title },
-              ]}
-            />
-          </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 12, marginBottom: 20 }}>
             <span
               style={{

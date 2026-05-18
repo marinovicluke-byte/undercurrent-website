@@ -73,7 +73,7 @@ Three things stood out. First, freshness, not length, split the bands. Pages bel
 
 ## What Schema and Structure Does Perplexity Prefer?
 
-**Structured, dated, machine-readable content, plus a crawler door left open.** PerplexityBot is the crawler Perplexity uses to fetch and index pages, so the first move is making sure your robots.txt isn't blocking it. The second is putting `datePublished` and `dateModified` on your articles, and [FAQ schema](/glossary/what-is-faq-schema) on your question-and-answer blocks, so the engine can read the answer cleanly. Article schema with an `author` and an `organization` block helps the entity-clarity side; it tells the crawler who published this. Here's the FAQ schema shape:
+**Structured, dated, machine-readable content, plus a crawler door left open.** PerplexityBot is the crawler Perplexity uses to fetch and index pages, so the first move is making sure your robots.txt isn't blocking it. The second is putting `datePublished` and `dateModified` on your articles, and FAQ schema on your question-and-answer blocks, so the engine can read the answer cleanly. Article schema with an `author` and an `organization` block helps the entity-clarity side; it tells the crawler who published this. Here's the FAQ schema shape:
 
 ```json
 {
@@ -102,11 +102,11 @@ User-agent: PerplexityBot-User
 Allow: /
 ```
 
-Beyond schema, the structure that wins on Perplexity is plain: H2 headings phrased as the questions people actually type, the answer in the first sentence of each section, and short self-contained passages instead of walls of text. Our guide on [comparing AI search agencies in Australia](/blog/best-ai-search-agency-australia) covers what to look for if you hand this to an outside team.
+Beyond schema, the structure that wins on Perplexity is plain: H2 headings phrased as the questions people actually type, the answer in the first sentence of each section, and short self-contained passages instead of walls of text. Our guide on [comparing AI search agencies in Australia](/blog/au-seo-agencies-ai-search-audit) covers what to look for if you hand this to an outside team.
 
 ## Can You Track Your Perplexity Citations?
 
-**You can, not perfectly, but well enough to steer.** There's no Search Console for Perplexity, so the practical method is a recurring check: run your priority questions in Perplexity yourself, note which pages it cites and whether yours appears, and log it monthly. It takes about 20 minutes a month. Add a referral-traffic filter for `perplexity.ai` in your analytics, since a share of cited pages do pull direct visits. Tools that monitor brand mentions across answer engines are starting to land, but a disciplined manual pass (same questions, same day each month) catches most of what you need. If a citation disappears, the usual cause is a competitor publishing something fresher, so the fix is republishing with a newer date and a sharper answer. In our experience the swap-back often lands inside 14 days. For a second opinion on whether your site is built for any of this, our roundup of [the best AI search agencies in Australia](/blog/best-ai-search-agency-australia) sets the bar, or [book a 30-minute call](/contact) and we'll go through it with you.
+**You can, not perfectly, but well enough to steer.** There's no Search Console for Perplexity, so the practical method is a recurring check: run your priority questions in Perplexity yourself, note which pages it cites and whether yours appears, and log it monthly. It takes about 20 minutes a month. Add a referral-traffic filter for `perplexity.ai` in your analytics, since a share of cited pages do pull direct visits. Tools that monitor brand mentions across answer engines are starting to land, but a disciplined manual pass (same questions, same day each month) catches most of what you need. If a citation disappears, the usual cause is a competitor publishing something fresher, so the fix is republishing with a newer date and a sharper answer. In our experience the swap-back often lands inside 14 days. For a second opinion on whether your site is built for any of this, our roundup of [the best AI search agencies in Australia](/blog/au-seo-agencies-ai-search-audit) sets the bar, or [book a 30-minute call](/contact) and we'll go through it with you.
 
 ## Perplexity SEO vs ChatGPT SEO: Where the Lists Diverge
 
@@ -160,7 +160,7 @@ Almost always because someone published something fresher or better-structured o
 - [How to Rank in ChatGPT Search](/blog/how-to-rank-in-chatgpt-search): the other half of the AI-search split, and why a ChatGPT win doesn't carry to Perplexity.
 - [AI Search vs Traditional SEO in Australia](/blog/ai-search-vs-traditional-search-australia-2026): what changes when answer engines, not blue links, decide who gets seen.
 - [The AI Search Visibility Hub for Australia](/blog/cluster/seo-ai-visibility): the full map of getting cited across ChatGPT, Perplexity and Google AI Overviews.
-- [How to Compare AI Search Agencies in Australia](/blog/best-ai-search-agency-australia): what to actually check before you hand [AEO](/glossary/what-is-answer-engine-optimisation) work to an outside team.
+- [How to Compare AI Search Agencies in Australia](/blog/au-seo-agencies-ai-search-audit): what to actually check before you hand AEO work to an outside team.
 - [How a Buyers Agency Ranked on AI Search in Melbourne](/blog/how-to-rank-buyers-agency-ai-search-melbourne): a worked example of cadence and structure beating a bigger competitor.
 
 ## Sources

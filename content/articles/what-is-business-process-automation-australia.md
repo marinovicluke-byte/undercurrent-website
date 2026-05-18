@@ -162,7 +162,7 @@ The tools you use depend on what you're automating and what systems you already 
 **Automation platforms:**
 - **[n8n](https://n8n.io)** - Open-source, self-hosted. Very flexible. No recurring fees if you host it yourself. Steeper learning curve but way more powerful than Zapier once you get the hang of it.
 - **[Zapier](https://zapier.com)** - Easiest to use. Connects 5,000+ apps. Good for beginners. Gets expensive fast if you run a lot of tasks.
-- **[Make](https://make.com)** (formerly Integromat) - More visual than Zapier. Better for complex workflows. Pricing is middle ground.
+- **[Make](https://www.make.com/en)** (formerly Integromat) - More visual than Zapier. Better for complex workflows. Pricing is middle ground.
 
 **Core business systems (the things you're connecting):**
 - **[Xero](https://www.xero.com/au/)** - The default accounting software for Australian small businesses. Has a robust API for automation.

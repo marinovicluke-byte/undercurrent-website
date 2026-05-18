@@ -6,7 +6,6 @@ import { execSync } from 'node:child_process'
 import Link from 'next/link'
 import SectionEyebrow from '@/components/ui/SectionEyebrow'
 import PillCTA from '@/components/ui/PillCTA'
-import Breadcrumb from '@/components/layout/Breadcrumb'
 import { DOMAIN, PROVIDER, AREAS_SERVED, LOCATIONS } from '@/lib/data/seo'
 
 // Default "last reviewed" date for service pages, ISO 8601 (YYYY-MM-DD).
@@ -207,17 +206,7 @@ export default function ServicePage({ service }) {
       <section style={{ ...S.heroBand, padding: '0 var(--page-pad)' }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
 
-          <div style={{ padding: '40px 0 0' }}>
-            <Breadcrumb
-              items={[
-                { label: 'Home', href: '/' },
-                { label: 'Services', href: '/services' },
-                { label: serviceTitleCase(service) },
-              ]}
-            />
-          </div>
-
-          <div style={{ display: 'grid', gap: 72, gridTemplateColumns: 'minmax(0, 1.25fr) minmax(0, 1fr)', padding: '20px 0 96px' }} className="uc-hero-grid">
+          <div style={{ display: 'grid', gap: 72, gridTemplateColumns: 'minmax(0, 1.25fr) minmax(0, 1fr)', padding: '60px 0 96px' }} className="uc-hero-grid">
             <div>
               <div style={{ marginBottom: 28 }}>
                 <SectionEyebrow n={service.index} label={`Service · ${displaySc}`} />

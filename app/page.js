@@ -13,20 +13,20 @@ import JsonLd from '@/components/ui/JsonLd'
 const DOMAIN = 'https://undercurrentautomations.com'
 
 export const metadata = {
-  title: { absolute: 'AI Automation Agency Melbourne | UnderCurrent Automations' },
-  description: 'UnderCurrent Automations is a Melbourne AI automation agency for Australian small businesses. SEO and AI search, custom websites, AI integrations, AI training.',
+  title: { absolute: 'AI Search and Automation Agency Australia | UnderCurrent Automations' },
+  description: 'AI search and automation agency for Australian small business. SEO and AI visibility, custom workflows, websites and integrations. Built in Melbourne, working Australia-wide.',
   alternates: { canonical: DOMAIN },
   openGraph: {
-    title: 'AI Automation Agency Melbourne | UnderCurrent Automations',
-    description: 'UnderCurrent Automations is a Melbourne AI automation agency for Australian small businesses. SEO and AI search, custom websites, AI integrations, AI training.',
+    title: 'AI Search and Automation Agency Australia | UnderCurrent Automations',
+    description: 'AI search and automation agency for Australian small business. SEO and AI visibility, custom workflows, websites and integrations. Built in Melbourne, working Australia-wide.',
     url: DOMAIN,
     type: 'website',
     images: ['/brand/og-card.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Automation Agency Melbourne | UnderCurrent Automations',
-    description: 'UnderCurrent Automations is a Melbourne AI automation agency for Australian small businesses. SEO and AI search, custom websites, AI integrations, AI training.',
+    title: 'AI Search and Automation Agency Australia | UnderCurrent Automations',
+    description: 'AI search and automation agency for Australian small business. SEO, AI visibility, automation, websites and integrations.',
   },
 }
 
@@ -35,8 +35,8 @@ const webPageSchema = {
   '@type': 'WebPage',
   '@id': `${DOMAIN}#webpage`,
   url: DOMAIN,
-  name: 'UnderCurrent Automations — AI Automation Agency for Australian Small Businesses',
-  description: 'Melbourne AI automation agency serving Australia-wide.',
+  name: 'UnderCurrent Automations — AI Search and Automation Agency for Australian Small Business',
+  description: 'AI search and automation agency for Australian small business. Built in Melbourne, working Australia-wide.',
   isPartOf: { '@id': `${DOMAIN}#website` },
   about: { '@id': `${DOMAIN}#organization` },
   inLanguage: 'en-AU',

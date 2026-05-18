@@ -38,7 +38,12 @@ export default function Hero({
         paddingBottom: 'clamp(80px, 14vh, 160px)',
         overflow: 'hidden',
         minHeight: 'calc(100vh - 80px - 90px)',
-        background: 'var(--charcoal-deep)',
+        backgroundColor: 'var(--charcoal-deep)',
+        // Stack a semi-transparent dark overlay over the poster so the H1 stays
+        // readable. Mirrors the desktop look where the video sits at 0.26 opacity.
+        backgroundImage: 'linear-gradient(rgba(14,14,12,0.55), rgba(14,14,12,0.55)), url(/hero-poster.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
       }}
     >
       {/* Background video — dimmed over black. Hidden for reduced-motion. */}
@@ -82,6 +87,9 @@ export default function Hero({
           -webkit-appearance: none;
         }
         @media (max-width: 780px) {
+          /* Mobile: drop the autoplaying video entirely. Section keeps the
+             same look via the CSS background-image (hero-poster.jpg). */
+          .uc-hero-video { display: none !important; }
           .uc-hero {
             justify-content: flex-start !important;
             min-height: auto !important;

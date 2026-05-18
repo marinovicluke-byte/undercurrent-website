@@ -4,11 +4,11 @@ import JsonLd from '@/components/ui/JsonLd'
 const FAQS = [
   {
     q: 'What is UnderCurrent Automations?',
-    a: 'UnderCurrent Automations is a Melbourne-based AI automation agency that builds custom workflow systems for Australian small businesses. We plug into the tools your team already uses (Xero, HubSpot, Gmail, Notion, Slack, Google Workspace, n8n) and automate the repetitive work behind them: lead follow-up, invoice chasing, review requests, inbox triage, reporting. You keep working the way you always have. The admin runs itself underneath.',
+    a: 'UnderCurrent Automations is a Melbourne-based AI search and automation agency for Australian small businesses. We do four things. We rank you higher on Google and AI engines (ChatGPT, Perplexity, Gemini, Copilot) using our own method. We build custom AI implementation and integrations into the tools you already run. We run business AI workshops for your team. We build custom websites that rank from day one. Search is the front door. Everything else compounds from there.',
   },
   {
     q: 'Will this work for my type of business?',
-    a: 'We work with service-based businesses across four verticals: tradies (plumbers, electricians, builders, landscapers), business services (accountants, agencies, bookkeepers), consultants (coaches, strategists, advisors), and allied health practitioners (physio, chiro, psychology, dental). If your team does repetitive work and has customers, there’s a system inside it that can run itself. The free audit shows you which parts first.',
+    a: 'We work with service-based businesses across four verticals: tradies (plumbers, electricians, builders, landscapers), business services (accountants, agencies, bookkeepers), consultants (coaches, strategists, advisors), and allied health practitioners (physios, chiros, osteos, podiatrists). If your team does repetitive work and has customers, there’s a system inside it that can run itself. The free audit shows you which parts first.',
   },
   {
     q: 'I’m not tech-savvy. Will I be able to manage it?',
@@ -16,15 +16,15 @@ const FAQS = [
   },
   {
     q: 'How does this work with the tools we already use?',
-    a: 'We connect directly into the software your team already runs. Xero or MYOB for invoicing, HubSpot or Salesforce for CRM, Cliniko or Halaxy for allied health bookings, Shopify for retail. Gmail, Outlook, Slack, Notion, and ClickUp for the daily grind. Nothing changes about how your team works. The automations sit underneath, so the results land without anyone pushing a button.',
+    a: 'We work with the tools your team already runs. For AI automation, we plug into your CRM, accounting, scheduling, and inbox (HubSpot, Pipedrive, Xero, MYOB, Cliniko, Halaxy, Gmail, Outlook, Slack, Notion). For search, we publish into your existing site, your Google Business Profile, and the schema layer that AI engines like ChatGPT, Perplexity, Gemini and Copilot crawl. For websites, we rebuild on Next.js and Vercel and carry your domain across. Nothing changes about how your team works.',
   },
   {
     q: 'What does it cost?',
-    a: 'Flat pricing, no hourly billing. Starter project builds start at $1,500 for a single workflow. The Growth retainer starts at $1,200 a month for ongoing builds and optimisation. Done-with-you guidance starts at $500 a month if your team wants to drive the work. Every quote is fixed before you commit. The free audit shows which option fits and the projected return against the build cost.',
+    a: 'Everything starts from $1,000 a month. SEO and AI search runs as a tiered package. Custom AI automation, implementation, and business AI workshops also start at $1,000 a month. Custom websites are quoted as fixed builds. Every quote locks before you commit. The free audit shows which mix fits and the projected return against the spend.',
   },
   {
     q: 'How long until we see results?',
-    a: 'Most clients notice the first automations running inside two weeks. Full systems typically go live in 4 to 6 weeks once requirements lock, depending on the integrations involved. We’ve built these workflows before, the wiring isn’t from scratch. The audit maps out what ships first, what ships second, and when each piece starts paying back.',
+    a: 'Automations and websites usually go live inside two weeks. Search is a longer game. Ranking on Google and AI engines builds over months as content and authority compound. The audit maps what ships first, what ships second, and when each piece starts paying back.',
   },
   {
     q: 'What if it doesn’t save me as much time as you say?',

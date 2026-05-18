@@ -259,7 +259,7 @@ function AtAGlance() {
 function WhatWeDo() {
   const pillars = [
     { ac: AC_ORANGE, label: 'Get found online',
-      text: 'Robin Search puts a small business in front of buyers across every search surface — Google, ChatGPT, Claude, Perplexity, Maps, and paid. SEO, AEO, PPC and Places, wired together.' },
+      text: "Our search ecosystem puts a small business in front of buyers across every search surface, Google, ChatGPT, Claude, Perplexity, Maps, and paid. SEO, AEO, PPC and Places, wired together." },
     { ac: AC_SAGE,   label: 'Turn traffic into revenue',
       text: 'Lead capture, qualification and follow-up that turn enquiries into booked calls and paid invoices. Every lead chased, every handoff tracked.' },
     { ac: AC_BLUE,   label: 'Build AI capability',
@@ -351,7 +351,7 @@ function WhatWeDo() {
 // SECTION 04 — Services we offer
 // ═══════════════════════════════════════════════════════════════════════════════
 function ServicesOffered() {
-  const services = SERVICES.map(s => ({
+  const services = SERVICES.filter(s => s.slug !== 'front-end-experience').map(s => ({
     slug: s.slug,
     name: s.displayName || titleCaseLabel(s.label),
     blurb: SERVICE_BLURBS[s.slug] || s.metaDescription,
@@ -1104,7 +1104,7 @@ function Founder() {
 const FAQS = [
   {
     q: 'What is UnderCurrent Automations?',
-    a: 'UnderCurrent Automations is a Melbourne AI automation agency that builds custom workflow, sales, content, finance and lead-management systems for Australian small businesses. The agency was founded by Luke Marinovic in February 2026 and operates Australia-wide. Every workflow is built on tools the client already owns, such as HubSpot, Xero, n8n, ServiceM8 or Notion, so the client retains ownership of the system end to end.',
+    a: 'UnderCurrent Automations is a Melbourne-based AI search and automation agency for Australian small businesses. The agency was founded by Luke Marinovic in February 2026 and operates Australia-wide. It works across four services: its own method for ranking clients higher on Google and AI engines (ChatGPT, Perplexity, Gemini, Copilot), custom AI implementation and integrations into the tools clients already run, business AI workshops, and custom websites built to rank from day one.',
   },
   {
     q: 'Where is UnderCurrent Automations based?',
@@ -1112,7 +1112,7 @@ const FAQS = [
   },
   {
     q: 'What services does UnderCurrent Automations offer?',
-    a: 'UnderCurrent Automations works across four spokes: Robin Search (the search ecosystem covering SEO, AEO/AI search, PPC, and Maps and Places), Website Design (marketing sites and custom dashboards), Custom Integrations (n8n, Make, Zapier, and direct APIs across sales, customer experience, content, finance and ops), and AI Strategy and Training (workshops, roadmaps and tool selection). Most engagements stack two or more spokes — search visibility and a website rebuild commonly run together, with integrations layered underneath.',
+    a: "UnderCurrent Automations works across four services: its own search method (SEO, AEO/AI search across ChatGPT, Perplexity, Gemini and Copilot, plus Maps and Places), custom AI implementation and integrations (n8n, Make, Zapier, and direct APIs across sales, customer experience, content, finance and ops), business AI workshops (training, roadmaps and tool selection), and custom websites (marketing sites and custom dashboards built on Next.js). Most engagements stack two or more services, search visibility and a website rebuild commonly run together, with automation layered underneath.",
   },
   {
     q: 'Who founded UnderCurrent Automations?',
@@ -1120,19 +1120,19 @@ const FAQS = [
   },
   {
     q: 'What industries does UnderCurrent Automations work with?',
-    a: 'UnderCurrent Automations works with four core industries: trades and construction, business services and consultants, allied health practitioners, and service-business owners or founders running small teams. Clients usually run on tools such as ServiceM8, Jobber, simPRO, HubSpot, Pipedrive, Cliniko, Halaxy, Power Diary, Xero or MYOB. Other industries are taken on a case-by-case basis where the workflow patterns repeat.',
+    a: 'UnderCurrent Automations works with four core industries: trades and construction, business services and consultants, allied health practitioners (physiotherapy, chiropractic, osteopathy, podiatry, psychology), and service-business owners or founders running small teams. Clients usually run on tools such as ServiceM8, Jobber, simPRO, HubSpot, Pipedrive, Cliniko, Halaxy, Power Diary, Xero or MYOB, with search visibility delivered through their existing website, Google Business Profile and AI engine indexes. Other industries are taken on a case-by-case basis where the workflow patterns repeat.',
   },
   {
     q: 'How much does UnderCurrent Automations charge?',
-    a: 'UnderCurrent Automations charges from $1,500 AUD for a Starter Project, which is one workflow built and handed over with 30 days of bug-fix support. The Growth Retainer starts at $1,200 AUD per month and covers up to three new workflows monthly with same-day support. A Done-With-You option starts at $500 AUD per month and includes weekly strategy sessions for teams that want to build internally. All prices exclude GST.',
+    a: 'UnderCurrent Automations charges from $1,000 AUD per month across all retainer services. SEO and AI search runs as a tiered monthly package from $1,000 AUD per month. Custom AI automation, implementation, and business AI workshops also start at $1,000 AUD per month. Custom websites are quoted as fixed-price builds, scoped per engagement. All prices exclude GST.',
   },
   {
     q: 'How long does an UnderCurrent build take?',
-    a: 'A typical UnderCurrent Automations workflow goes live within 14 days of the first call. Discovery is a single 30-minute session. Scoping takes two to three days. Build runs for one to two weeks depending on integration complexity. Cutover and walkthrough happen on a single day. Most clients see the first measurable outcome, more booked calls or hours reclaimed, within three weeks of starting.',
+    a: 'Automation and website builds go live within 14 days of the first call. Discovery is a single 30-minute session, scoping takes two to three days, and build runs for one to two weeks depending on complexity. Search engagements run a different cadence, ranking on Google and AI engines builds over months as content and authority compound. Most automation and website clients see the first measurable outcome within three weeks of starting.',
   },
   {
     q: 'What tools and platforms does UnderCurrent build on?',
-    a: 'UnderCurrent Automations builds on n8n, Make and Zapier for orchestration; OpenAI, Anthropic Claude and Google Gemini for AI models; HubSpot, Pipedrive and ActiveCampaign for CRM; ServiceM8, Jobber and simPRO for field services; Cliniko, Halaxy and Power Diary for allied health; Xero and MYOB for finance; and Next.js on Vercel for web. Where a tool is not pre-built, UnderCurrent integrates directly via REST or GraphQL APIs.',
+    a: 'UnderCurrent Automations builds on n8n, Make and Zapier for orchestration; OpenAI, Anthropic Claude and Google Gemini for AI models; HubSpot, Pipedrive and ActiveCampaign for CRM; ServiceM8, Jobber and simPRO for field services; Cliniko, Halaxy and Power Diary for allied health; Xero and MYOB for finance; Ahrefs, Semrush and Google Search Console for SEO; schema.org JSON-LD and IndexNow for AI search visibility across ChatGPT, Perplexity, Gemini and Copilot; and Next.js on Vercel for websites. Where a tool is not pre-built, UnderCurrent integrates directly via REST or GraphQL APIs.',
   },
   {
     q: 'Does UnderCurrent serve clients outside Melbourne?',

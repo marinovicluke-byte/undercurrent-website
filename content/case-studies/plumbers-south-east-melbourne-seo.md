@@ -108,7 +108,7 @@ The audit broke down 8 dimensions:
 
 Most Australian small businesses don't fail at SEO because they're lazy. They fail because they don't know what "good" looks like, and agencies oversell tactics without explaining fundamentals. This is one of the core [mistakes contractors make with SEO in 2026](https://core6.marketing/blog/what-contractors-get-wrong-about-seo-in-2026/), prioritising tactics over technical foundations.
 
-According to the [Australian Small Business and Family Enterprise Ombudsman's 2024 report](https://www.asbfeo.gov.au/resources), 68% of Australian SMBs cite "lack of digital capability" as a top-3 constraint to growth. This business wasn't unusual. It was typical.
+According to the [Australian Small Business and Family Enterprise Ombudsman's 2024 report](https://www.asbfeo.gov.au/resources-tools-centre), 68% of Australian SMBs cite "lack of digital capability" as a top-3 constraint to growth. This business wasn't unusual. It was typical.
 
 ---
 
@@ -209,7 +209,7 @@ There's no hard threshold, but sites scoring under 40/105 rarely break page 1 fo
 
 ### How long does it take to see results from fixing SEO on a trades business website?
 
-Technical fixes (SSL, page speed, sitemap) show ranking improvements in 2-4 weeks once Google recrawls your site. Content publishing takes longer. New articles typically take 4-6 weeks to rank, but compound over time. In this case study, the business hit page 1 for 6 keywords by week 8 and 14 keywords by week 12. Timeline depends on competition density and how broken your site was to start. If you're starting from a 13/105 score like this business, expect 8-12 weeks to see meaningful lead volume from organic search. According to [Ahrefs' 2024 study on ranking timeframes](https://ahrefs.com/blog/how-long-does-it-take-to-rank/), only 5.7% of newly published pages rank in the top 10 within a year, making consistent publishing and technical optimisation critical. [Get in touch](/contact) to scope what a rebuild timeline would look like for your business.
+Technical fixes (SSL, page speed, sitemap) show ranking improvements in 2-4 weeks once Google recrawls your site. Content publishing takes longer. New articles typically take 4-6 weeks to rank, but compound over time. In this case study, the business hit page 1 for 6 keywords by week 8 and 14 keywords by week 12. Timeline depends on competition density and how broken your site was to start. If you're starting from a 13/105 score like this business, expect 8-12 weeks to see meaningful lead volume from organic search. According to [Ahrefs' 2024 study on ranking timeframes](https://ahrefs.com/blog/how-long-does-it-take-to-rank-in-google-and-how-old-are-top-ranking-pages/), only 5.7% of newly published pages rank in the top 10 within a year, making consistent publishing and technical optimisation critical. [Get in touch](/contact) to scope what a rebuild timeline would look like for your business.
 
 ### Can a plumber rank on page 1 without paying for ads or an SEO agency?
 
@@ -217,7 +217,7 @@ Yes, but it requires either internal capability or automation. The rebuild in th
 
 ### What's the ROI on fixing SEO for a small plumbing business in Melbourne?
 
-If you're losing 3 jobs/week to competitors ranking above you, and the average job is worth $850, that's $2,550/week or $132,600/year in missed revenue. The rebuild in this case study cost ~$10,000 upfront and generated $26,350 in direct revenue from organic search in the first 12 weeks. Payback period was under 4 weeks. Ongoing cost is $600-$900/month for content publishing, which generates 15-20 qualified leads/month after the first 3 months. According to [MYOB's Business Monitor 2024](https://www.myob.com/au/about/news), Australian trades businesses typically see 3-5x ROI within 6 months from investing in content systems. Use [our ROI calculator](/roi) to model what this would look like for your business.
+If you're losing 3 jobs/week to competitors ranking above you, and the average job is worth $850, that's $2,550/week or $132,600/year in missed revenue. The rebuild in this case study cost ~$10,000 upfront and generated $26,350 in direct revenue from organic search in the first 12 weeks. Payback period was under 4 weeks. Ongoing cost is $600-$900/month for content publishing, which generates 15-20 qualified leads/month after the first 3 months. According to [MYOB's Business Monitor 2024](https://www.myob.com/au/press-releases), Australian trades businesses typically see 3-5x ROI within 6 months from investing in content systems. Use [our ROI calculator](/roi) to model what this would look like for your business.
 
 ### Who can build an SEO and content automation system like this for my plumbing business in Melbourne?
 

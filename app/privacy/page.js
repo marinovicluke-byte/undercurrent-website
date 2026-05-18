@@ -41,7 +41,7 @@ export default function PrivacyPage() {
         <div className={sectionStyle}>
           <h2 className={h2Class}>1. Who We Are</h2>
           <p className={pClass}>
-            UnderCurrent (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) is an AI automation studio based in Melbourne, Australia. We build custom workflow automation systems for small businesses. This policy explains how we collect, use, and protect your personal information when you visit our website at {DOMAIN} or engage our services.
+            UnderCurrent Automations (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) is an AI automation studio based in Melbourne, Australia. We build custom workflow automation systems for small businesses. This policy explains how we collect, use, and protect your personal information when you visit our website at {DOMAIN} or engage our services.
           </p>
         </div>
 

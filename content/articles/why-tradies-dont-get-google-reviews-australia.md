@@ -88,7 +88,7 @@ A Google review isn't just social proof. It's a ranking signal, a conversion dri
 - **Recency**: When your last review was posted (fresh reviews signal an active business)
 - **Velocity**: How often you get new reviews (steady flow beats sporadic bursts)
 
-According to [Moz's Local Search Ranking Factors study](https://moz.com/local-search-ranking-factors), review signals make up **15.44% of local pack ranking factors**. That's higher than link signals (6.47%) or social signals (1.24%).
+According to [Moz's Local Search Ranking Factors study](https://moz.com/learn/seo/local-ranking-factors), review signals make up **15.44% of local pack ranking factors**. That's higher than link signals (6.47%) or social signals (1.24%).
 
 Translation: a plumber in Parramatta with 50 reviews posted in the last 6 months will outrank a plumber with 10 reviews from 2 years ago, even if the second plumber has better on-page SEO.
 
@@ -153,7 +153,7 @@ Here's how it works in practice:
 
 **Step 4: If they don't respond, send one follow-up 3 days later** (optional, but increases response rate by 15-20%)
 
-You can set this up with tools like [Zapier](https://zapier.com), [Make](https://make.com), or n8n (our preferred option for Australian businesses because it's self-hosted and cost-effective). Connect your job management system or CRM to an SMS provider like [MessageMedia](https://messagemedia.com) or [ClickSend](https://clicksend.com), and the whole thing runs in the background.
+You can set this up with tools like [Zapier](https://zapier.com), [Make](https://www.make.com/en), or n8n (our preferred option for Australian businesses because it's self-hosted and cost-effective). Connect your job management system or CRM to an SMS provider like [MessageMedia](https://messagemedia.com/au) or [ClickSend](https://www.clicksend.com), and the whole thing runs in the background.
 
 You don't have to remember. You don't have to ask in person. You don't have to feel awkward. The system does it for you. Our [automation services](/services) include building review request systems like this for trade businesses across Melbourne, Sydney, and Brisbane.
 

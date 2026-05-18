@@ -61,7 +61,7 @@ Takeaway: keep doing SEO, add AEO discipline, treat GEO as the new top layer. Ou
 
 GEO targets the engines that generate prose answers rather than list links: ChatGPT, Google's AI Overviews and Gemini, Perplexity, and Microsoft Copilot, and the thing they share is that they pull live web pages to ground what they say.
 
-An AI Overview is the summary box Google now shows above the blue links for many questions, written by Gemini and stitched together from pages it retrieves. Google has expanded AI Overviews to more than 100 countries since the 2024 US launch; [Google's Search blog](https://blog.google/products/search/) has the rollout history. [Gartner expects search engine volume to fall around 25% by 2026](https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents) as people lean on AI chatbots, so being one of the pages they retrieve is now its own job.
+An AI Overview is the summary box Google now shows above the blue links for many questions, written by Gemini and stitched together from pages it retrieves. Google has expanded AI Overviews to more than 100 countries since the 2024 US launch; [Google's Search blog](https://blog.google/products-and-platforms/products/search/) has the rollout history. [Gartner expects search engine volume to fall around 25% by 2026](https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents) as people lean on AI chatbots, so being one of the pages they retrieve is now its own job.
 
 Where they ground their answers matters for GEO. ChatGPT and Copilot run live web searches and cite the pages they used. Perplexity is built around showing its sources. Gemini powers AI Overviews and Google's AI Mode. Claude can browse the web and read pages too. The common pattern under the hood: a search step, a retrieval step, then a generation step that quotes a few of the retrieved pages. Optimise for that pattern and you're optimising for all of them at once. For the wider view across these channels, our [AI search optimisation guide for Australia](/blog/what-is-ai-search-optimisation-australia) covers the lot.
 
@@ -148,7 +148,7 @@ No, the two reinforce each other. The things that make a page quotable by AI eng
 
 ## Sources
 
-1. [Google Search blog on AI in Search](https://blog.google/products/search/)
+1. [Google Search blog on AI in Search](https://blog.google/products-and-platforms/products/search/)
 2. [Google Search Central: AI features and your site](https://developers.google.com/search/docs/appearance/ai-features)
 3. [Schema.org Article type](https://schema.org/Article)
 4. [Schema.org FAQPage type](https://schema.org/FAQPage)

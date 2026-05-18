@@ -1,9 +1,10 @@
 // Server wrapper for location pages.
 // JSON-LD is rendered here (guaranteed server-side), then the content
-// renderer is mounted below. Emits LocalBusiness + FAQPage + HowTo +
-// BreadcrumbList + Service schemas, bound back to the sitewide Organization
-// node via @id so AI crawlers can resolve the entity graph.
-// See docs/seo-aio-audit-2026-04-20.md — P0-03.
+// renderer is mounted below. Emits Service + Person + FAQPage + HowTo +
+// BreadcrumbList, bound back to the sitewide Organization node via @id.
+// No per-city LocalBusiness — we don't have offices in those cities, and
+// emitting one LocalBusiness per location page confuses entity resolution.
+// The single Melbourne LocalBusiness lives in app/layout.js sitewide.
 
 import JsonLd from '@/components/ui/JsonLd'
 import LocationPageClient from './LocationPageClient'
@@ -38,38 +39,6 @@ function buildLocationJsonLd(location) {
   return [
     {
       '@context': 'https://schema.org',
-      '@type': 'LocalBusiness',
-      '@id': `${url}#business`,
-      name: `UnderCurrent Automations, ${location.city}`,
-      description: location.metaDescription,
-      url,
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: isNational ? 'Melbourne' : location.city,
-        addressRegion: isNational ? 'VIC' : location.region,
-        addressCountry: 'AU',
-      },
-      areaServed: isNational
-        ? { '@type': 'Country', name: 'Australia' }
-        : [
-            { '@type': 'City', name: location.city },
-            { '@type': 'Country', name: 'Australia' },
-          ],
-      serviceType: [
-        'AI Business Automation',
-        'Workflow Automation',
-        'Business Process Automation',
-        'Lead Generation Automation',
-        'Sales Automation',
-      ],
-      parentOrganization: { '@id': `${DOMAIN}#organization` },
-      provider: { '@id': `${DOMAIN}#organization` },
-      priceRange: 'AUD',
-      telephone: '+61438780815',
-      email: 'luke@undercurrentautomations.com',
-    },
-    {
-      '@context': 'https://schema.org',
       '@type': 'Service',
       '@id': `${url}#service`,
       name: `AI Automation for ${location.city} Businesses`,
@@ -94,6 +63,20 @@ function buildLocationJsonLd(location) {
           description: 'Value-based pricing, scoped per engagement after a free workflow review.',
         },
       },
+      ...(location.dateModified ? { dateModified: location.dateModified } : {}),
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': `${url}#practitioner`,
+      name: 'Luke Marinovic',
+      jobTitle: 'Founder, UnderCurrent Automations',
+      worksFor: { '@id': `${DOMAIN}#organization` },
+      url: `${DOMAIN}/about`,
+      sameAs: [
+        'https://www.linkedin.com/in/lukemarinovic/',
+        'https://x.com/UC_Automations',
+      ],
     },
     {
       '@context': 'https://schema.org',
