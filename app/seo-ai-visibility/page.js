@@ -1,6 +1,6 @@
 // Bespoke SEO & AI Visibility service page — overrides app/[slug] catch-all at /seo-ai-visibility.
 // Preserves all copy and schema from lib/data/services.js entry slug:'seo-ai-visibility'.
-// Product branding: Robin Signal by UnderCurrent.
+// SEO Melbourne — primary keyword page. Hub for Local SEO, National SEO, AI Search sub-pages.
 
 import Link from 'next/link'
 import PillCTA from '@/components/ui/PillCTA'
@@ -124,7 +124,7 @@ function BrowserMockup({ label, url, height = 460 }) {
           display: 'flex', alignItems: 'center', paddingLeft: 10,
         }}>
           <span style={{ fontSize: 11, color: 'rgba(250,249,245,0.28)', fontFamily: 'var(--font-body)' }}>
-            {url || 'robin.undercurrentautomations.com / dashboard'}
+            {url || 'undercurrentautomations.com / dashboard'}
           </span>
         </div>
       </div>
@@ -150,7 +150,7 @@ function BrowserMockup({ label, url, height = 460 }) {
             fontFamily: 'var(--font-display)', fontWeight: 500,
             margin: '0 0 6px',
           }}>
-            Robin Signal
+            UnderCurrent Search
           </p>
           <p style={{
             color: 'rgba(250,249,245,0.16)', fontSize: 12,
@@ -195,31 +195,14 @@ export default function SeoAiVisibilityPage() {
             textAlign: 'center',
             padding: '60px 0 52px',
           }}>
-            {/* Robin Signal product pill */}
-            <div style={{
-              display: 'inline-flex', alignItems: 'center', gap: 8,
-              padding: '6px 16px',
-              border: `1px solid rgba(${BLUE_RGB},0.35)`,
-              borderRadius: 999, marginBottom: 36,
-            }}>
-              <span style={{ width: 6, height: 6, borderRadius: 3, background: BLUE }} />
-              <span style={{
-                fontFamily: 'var(--font-display)', fontSize: 12, fontWeight: 500,
-                letterSpacing: '0.1em', color: BLUE, textTransform: 'uppercase',
-              }}>
-                Robin Signal — by UnderCurrent
-              </span>
-            </div>
-
             <h1 style={{
               fontFamily: 'var(--font-display)', fontWeight: 500,
-              fontSize: 'clamp(44px, 6vw, 84px)', lineHeight: 0.97,
+              fontSize: 'clamp(40px, 5.5vw, 78px)', lineHeight: 0.97,
               letterSpacing: '-0.04em', color: OFF_WHITE,
               margin: '0 0 28px',
             }}>
-              Rank in Google.<br />
-              <span style={{ color: BLUE }}>Cited in ChatGPT.</span><br />
-              Both.
+              Real Results Driven<br />
+              SEO Agency in <span style={{ color: BLUE }}>Melbourne.</span>
             </h1>
 
             <p style={{
@@ -227,7 +210,7 @@ export default function SeoAiVisibilityPage() {
               color: SECONDARY, margin: '0 auto 40px',
               maxWidth: 580,
             }}>
-              {SVC.metaDescription}
+              We build the organic rankings and AI search citations that compound over time. Google, ChatGPT, Perplexity — one system, one team, one brief.
             </p>
 
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 28 }}>
@@ -264,7 +247,7 @@ export default function SeoAiVisibilityPage() {
             <BrowserMockup
               height={480}
               label="Full dashboard view — screenshot coming soon"
-              url="robin.undercurrentautomations.com / overview"
+              url="undercurrentautomations.com / dashboard"
             />
           </div>
         </div>
@@ -328,7 +311,7 @@ export default function SeoAiVisibilityPage() {
             fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.65,
             color: SECONDARY, margin: '0 0 52px', maxWidth: 520,
           }}>
-            Traditional SEO retainers chase blue-link rankings. Robin Signal covers the whole discovery surface — Google, AI Overviews, ChatGPT, and Perplexity — as one compounding system.
+            Traditional SEO retainers chase blue-link rankings. We cover the whole discovery surface — Google, AI Overviews, ChatGPT, and Perplexity — as one compounding system.
           </p>
 
           <div className="seo-diff-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 18 }}>
@@ -396,7 +379,7 @@ export default function SeoAiVisibilityPage() {
       {/* ── 04 HOW IT WORKS (interactive tabs) ───────────────────────────── */}
       <section style={{ background: CHARCOAL, padding: '96px var(--page-pad)', borderTop: `1px solid ${FAINT}` }}>
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
-          <div style={{ marginBottom: 24 }}><SectionEyebrow n="03" label="How Robin Signal works" /></div>
+          <div style={{ marginBottom: 24 }}><SectionEyebrow n="03" label="How it works" /></div>
           <H2 style={{ marginBottom: 56 }}>
             Audit, architect, publish.<br />
             <span style={{ color: BLUE }}>Then it compounds.</span>
@@ -439,7 +422,7 @@ export default function SeoAiVisibilityPage() {
                       color: i === 0 ? BLUE : MUTED,
                       borderBottom: i === 0 ? `2px solid ${BLUE}` : 'none',
                     }}>
-                      {i === 0 ? 'Robin Signal ✦' : col}
+                      {i === 0 ? 'UnderCurrent ✦' : col}
                     </th>
                   ))}
                 </tr>
@@ -482,7 +465,7 @@ export default function SeoAiVisibilityPage() {
             fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.65,
             color: SECONDARY, margin: '0 0 52px', maxWidth: 520,
           }}>
-            Robin Signal runs local SEO and national AI search visibility as a single system — not two separate retainers.
+            We run local SEO and national AI search visibility as a single system — not two separate retainers.
           </p>
 
           <div className="seo-coverage-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
@@ -776,8 +759,8 @@ export default function SeoAiVisibilityPage() {
           {/* Report mockup */}
           <BrowserMockup
             height={440}
-            label="Monthly Robin Signal report — screenshot coming soon"
-            url="robin.undercurrentautomations.com / report / may-2026"
+            label="Monthly search report — screenshot coming soon"
+            url="undercurrentautomations.com / report / may-2026"
           />
         </div>
       </section>
@@ -794,7 +777,7 @@ export default function SeoAiVisibilityPage() {
               fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.65,
               color: SECONDARY, margin: '0 0 32px',
             }}>
-              Straight answers on how Robin Signal works, what it costs, and when you see results.
+              Straight answers on how we work, what it costs, and when you see results.
             </p>
             <PillCTA label="Ask us directly" href="https://cal.com/luke-marinovic-aqeosc/30min" tone="blue" />
           </div>
