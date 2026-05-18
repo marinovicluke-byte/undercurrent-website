@@ -52,6 +52,10 @@ export default function BlogV4() {
   const caseStudies = getAllCaseStudies()
   const grouped = groupByCluster(articles)
 
+  const latestArticles = [...articles]
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 4)
+
   const latestUpdate =
     [...articles, ...caseStudies]
       .map(x => x.dateModified || x.date)
@@ -339,6 +343,100 @@ export default function BlogV4() {
           </div>
         </section>
       )}
+
+      {/* ═══ LATEST ARTICLES ═══ */}
+      {latestArticles.length > 0 && (
+        <section style={{ padding: '80px var(--page-pad)', background: 'var(--charcoal)', borderTop: '1px solid var(--text-faint)' }}>
+          <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
+            <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 16, marginBottom: 32, paddingBottom: 16, borderBottom: '1px solid var(--text-faint)' }}>
+              <div>
+                <Eyebrow label="Latest" />
+                <h2 style={{ margin: '12px 0 0', fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 'clamp(28px, 3.2vw, 40px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: 'var(--off-white)' }}>
+                  Latest articles
+                </h2>
+              </div>
+              <Link href="/blog" style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--text-secondary)', textDecoration: 'none', whiteSpace: 'nowrap' }} className="hover:text-blue transition-colors">
+                View all →
+              </Link>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, alignItems: 'start' }}>
+              {/* Featured — most recent */}
+              <Link href={`/blog/${latestArticles[0].slug}`} className="latest-featured">
+                <p style={{ margin: '0 0 16px', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--blue-light)' }}>
+                  {CLUSTERS[latestArticles[0].cluster]?.label || 'Article'}
+                  {latestArticles[0].date && ` · ${formatDate(latestArticles[0].date)}`}
+                </p>
+                <h3 style={{ margin: '0 0 14px', fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 'clamp(20px, 2vw, 26px)', lineHeight: 1.25, letterSpacing: '-0.02em', color: 'var(--text-primary)', transition: 'color 0.15s ease' }}>
+                  {latestArticles[0].title}
+                </h3>
+                {(latestArticles[0].summary || latestArticles[0].description) && (
+                  <p style={{ margin: '0 0 24px', fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.6, color: 'var(--text-secondary)', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                    {latestArticles[0].summary || latestArticles[0].description}
+                  </p>
+                )}
+                {latestArticles[0].readingTime && (
+                  <p style={{ margin: 0, fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-muted)' }}>
+                    {latestArticles[0].readingTime} min read
+                  </p>
+                )}
+              </Link>
+
+              {/* Rows — next 3 */}
+              <div>
+                {latestArticles.slice(1).map((article, i) => (
+                  <Link key={article.slug} href={`/blog/${article.slug}`} className="latest-row" style={{ borderBottom: i < 2 ? '1px solid var(--text-faint)' : 'none' }}>
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-muted)', paddingTop: 3, flexShrink: 0, width: 20 }}>
+                      0{i + 2}
+                    </span>
+                    <div>
+                      {CLUSTERS[article.cluster]?.label && (
+                        <p style={{ margin: '0 0 4px', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--blue-light)', opacity: 0.7 }}>
+                          {CLUSTERS[article.cluster].label}
+                        </p>
+                      )}
+                      <h3 style={{ margin: '0 0 4px', fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 16, lineHeight: 1.35, letterSpacing: '-0.015em', color: 'var(--text-primary)', transition: 'color 0.15s ease' }}>
+                        {article.title}
+                      </h3>
+                      {(article.summary || article.description) && (
+                        <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 13, lineHeight: 1.5, color: 'var(--text-muted)', display: '-webkit-box', WebkitLineClamp: 1, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                          {article.summary || article.description}
+                        </p>
+                      )}
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      <style>{`
+        .latest-featured {
+          display: block;
+          padding: 32px;
+          border-radius: 14px;
+          background: var(--charcoal-deep, #161614);
+          border: 1px solid var(--text-faint);
+          border-left: 3px solid var(--blue);
+          text-decoration: none;
+          transition: transform 160ms cubic-bezier(.2,.7,.3,1), box-shadow 160ms cubic-bezier(.2,.7,.3,1);
+        }
+        .latest-featured:hover {
+          transform: translate(-3px, -3px);
+          box-shadow: 6px 6px 0 0 var(--blue);
+        }
+        .latest-featured:hover h3 { color: var(--blue-light); }
+        .latest-row {
+          display: flex;
+          align-items: flex-start;
+          gap: 16px;
+          padding: 18px 0;
+          text-decoration: none;
+        }
+        .latest-row:hover h3 { color: var(--blue); }
+      `}</style>
 
       {/* ═══ TOPIC CLUSTERS ═══ */}
       <section style={{ padding: '40px var(--page-pad) 120px', background: 'var(--charcoal)' }}>
