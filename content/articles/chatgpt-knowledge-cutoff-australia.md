@@ -8,6 +8,19 @@ keyword: "chatgpt knowledge cutoff australia"
 author: "Luke"
 level: "intermediate"
 readingTime: 10
+faqs:
+  - q: How long does it take ChatGPT to know about a new Australian business?
+    a: Around 6 to 12 months for a new business to appear in a model's training data, assuming at least three tier-one mentions in that window. Live search can surface the business inside a week of getting indexed by Bing and Google, but only on specific queries that trigger a search. Most Australian SMBs see partial live-search visibility within 30 days and baked-in model visibility on the next major release cycle, not before.
+  - q: Can ChatGPT see my website if I just launched it?
+    a: Yes, but only through the live web search layer, not from training data. Submit the sitemap to Bing Webmaster Tools first, ChatGPT's web search runs on Bing's index. Add schema markup, an llms.txt file, and FAQ blocks to the core pages. Inside a few days of indexation, ChatGPT can retrieve those pages when users ask specific, intent-led questions. Generic queries will still pull from training data, which will not include the new site yet.
+  - q: Do all AI models have the same knowledge cutoff?
+    a: No, each model is different. GPT-5.5 has a December 2025 cutoff. Claude Opus 4.7 has a January 2026 cutoff. Gemini 3 has a January 2025 cutoff. Older models still in production carry earlier cutoffs, sometimes by over a year. The same query asked of three chatbots returns three different versions of "what's recent" depending on which model and version is actually serving the answer at that moment.
+  - q: What is an llms.txt file and do I need one in Australia?
+    a: An llms.txt is a markdown file placed at a domain's root that gives AI crawlers a curated map of your highest-value pages, proposed by Answer.AI in 2024 as the AI equivalent of robots.txt for SEO. It uses an H1 site name, a blockquote summary, and H2 sections of linked pages. Australian businesses serious about ChatGPT visibility should add one inside the first retrieval sprint. Cross-reference OpenAI's release notes for related crawler conventions.
+  - q: Does ChatGPT update its knowledge in real time?
+    a: No, ChatGPT does not update its training data in real time. The model's "memory" is fixed at training cutoff. What feels like real-time updating is the live web search layer, which runs at query time and fetches fresh information from Bing for that conversation only. The retrieved information disappears after the conversation ends and does not enter the model's training data. Real-time-feeling answers come from retrieval, not learning.
+  - q: How often do major language models retrain?
+    a: Major versions ship roughly every 6 to 12 months, with each release a fresh training run on data up to a fixed cutoff date. GPT-5 launched in August 2025 with an October 2024 cutoff. GPT-5.5 launched in April 2026 with a December 2025 cutoff. That cadence has been tightening, with cutoff-to-release gaps now under 6 months. Assume one major training cycle every 6 months and time the earned-media calendar against the next expected release.
 ---
 # ChatGPT Knowledge Cutoff Australia: Audit Your Visibility
 
@@ -157,7 +170,7 @@ Practical sequence for an Australian SMB pursuing both tracks of [AI search opti
 
 For Australian SMBs already running [business process automation](/blog/what-is-business-process-automation-australia) workflows, the same compounding logic applies. Our [AI search audit](/audit) covers both tracks in one report.
 
-## FAQ
+## Frequently asked questions
 
 **How long does it take ChatGPT to know about a new Australian business?**
 
