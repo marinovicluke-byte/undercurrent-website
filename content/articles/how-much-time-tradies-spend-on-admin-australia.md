@@ -78,7 +78,7 @@ Add it up and you are at 8 to 12 hours a week before you have turned a single sc
 
 **Invoicing and chasing payments takes the average tradie 2 to 3 hours a week.** Writing the invoice is the quick part. Chasing the late ones is the slow part, and it never really ends.
 
-[Xero's Late Payment Report](https://www.xero.com) found 44% of Australian small business invoices get paid late. That means follow-up calls, reminder emails, and bank reconciliation work for almost half of every job you ever do. We have written more on [how overdue invoices hurt Australian SME cash flow](/blog/how-overdue-invoices-hurt-australian-sme-cash-flow) if you want the deeper read.
+Xero's [Small Business Insights](https://www.xero.com/au/small-business-insights/) data shows 44% of Australian small business invoices get paid late. That means follow-up calls, reminder emails, and bank reconciliation work for almost half of every job you ever do. We have written more on [how overdue invoices hurt Australian SME cash flow](/blog/how-overdue-invoices-hurt-australian-sme-cash-flow) if you want the deeper read.
 
 If you do five jobs a week and two get paid late, that is two extra phone calls, two extra emails, and two awkward "any update mate?" texts. Multiply by 50 working weeks and you have done that loop 200 times in a year. None of it billable.
 
@@ -141,6 +141,13 @@ Here is what the main trades break down to in 2024:
   </g>
   <text x="320" y="285" text-anchor="middle" font-size="13" font-weight="600" fill="#F7F3ED">AUD per hour billable, 2024</text>
 </svg>
+
+| Trade | Hourly rate range (AUD) | Source |
+|---|---|---|
+| Plumber | $90 to $120 | Fair Work Commission 2024 |
+| Sparkie (electrician) | $95 to $130 | Electrical Contracting Award 2024 |
+| Residential builder | $60 to $90 | IBISWorld construction 2024 |
+| HVAC technician / roofer | $85 to $120 | Industry rate, 2024 |
 
 The $90 figure is a fair middle for any trade with a ute and a licence. Use it as your back-of-the-truck cost calculator when you read the rest of this article.
 
