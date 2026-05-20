@@ -37,6 +37,9 @@
 - **Wiki routes don't exist on-site.** `WIKI_REFS` defined in `lib/data/seo.js` but deliberately not rendered in the Further Reading section because `/wiki/ai-search` and `/wiki/seo` return 404. Reinstate if those routes are ever built.
 - **2026-04-20 Title template doubling on service pages.** `app/layout.js` sets `title.template: '%s | UnderCurrent Automations'`. Several service entries in `lib/data/services.js` had `metaTitle` already ending in `| UnderCurrent` (or `| UnderCurrent Automations`), producing a doubled brand in rendered `<title>`. Fix for each service entry: make `metaTitle` the page-specific prefix only, no brand suffix. Applied to `seo-ai-visibility` on 2026-04-20. Potential lesson: when the layout defines a title template, page `metaTitle` values should be unique prefixes only, never include brand.
 
+## Frontmatter conventions
+- **2026-05-20 Article "last updated" frontmatter field is `dateModified`, NOT `updated`.** The live App Router route `app/blog/[slug]/page.js` reads `fm.dateModified` for both the OpenGraph `modifiedTime` (line 44) and the Article JSON-LD `dateModified` (line 155); it falls back to `fm.date` if absent. The legacy SPA component `src/views/Article.jsx` used `article.updated` — that field name is dead on the production route. Adding `updated:` to article frontmatter is a silent no-op: the schema keeps showing the original publish date. Fix is to use `dateModified: "YYYY-MM-DD"`. Potential lesson: when bumping an article's freshness signal, set `dateModified` in frontmatter and verify the live JSON-LD flipped via `curl … | grep dateModified` — don't trust the field name from the older component.
+
 ## Performance
 - (none yet)
 
