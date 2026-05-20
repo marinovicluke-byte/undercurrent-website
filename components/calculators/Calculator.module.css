@@ -1,0 +1,252 @@
+/* Calculator callout — scoped styles for components/calculators/*.
+   Rendered inside .article-prose, so selectors are kept class-based and the
+   title rule is compounded under .calculator to out-specify the global
+   .article-prose h3 / p rules from the blog template. */
+
+.calculator {
+  margin: 2.75rem 0;
+  padding: clamp(20px, 4vw, 32px);
+  background: var(--bg-card);
+  border: 1px solid rgba(143, 175, 159, 0.35);
+  border-radius: 16px;
+  box-shadow: 6px 6px 0 0 rgba(143, 175, 159, 0.12);
+  font-family: var(--font-body);
+}
+
+/* --- header --- */
+.head { margin-bottom: 1.6rem; }
+
+.eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage-light);
+}
+
+.calculator .title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--off-white);
+}
+
+.intro {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* --- inputs --- */
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.labelText {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.badge {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  color: var(--sage-light);
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* range slider — native input, custom track + thumb, no JS lib */
+.slider {
+  flex: 1;
+  min-width: 0;
+  height: 44px; /* 44px touch target */
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--sage) var(--pct, 50%),
+    rgba(250, 249, 245, 0.12) var(--pct, 50%)
+  );
+}
+.slider::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(250, 249, 245, 0.12);
+}
+.slider::-moz-range-progress {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--sage);
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  margin-top: -10px; /* centre the 26px thumb on the 6px track */
+  border-radius: 50%;
+  background: var(--off-white);
+  border: 3px solid var(--sage);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+.slider::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--off-white);
+  border: 3px solid var(--sage);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+.slider:focus-visible {
+  outline: none;
+}
+.slider:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px rgba(143, 175, 159, 0.45);
+}
+.slider:focus-visible::-moz-range-thumb {
+  box-shadow: 0 0 0 4px rgba(143, 175, 159, 0.45);
+}
+
+/* number input — bound to the slider */
+.number {
+  width: 80px;
+  flex-shrink: 0;
+  padding: 9px 10px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--off-white);
+  background: var(--charcoal);
+  border: 1px solid var(--text-faint);
+  border-radius: 8px;
+}
+.number:focus-visible {
+  outline: none;
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px rgba(143, 175, 159, 0.3);
+}
+
+/* --- outputs --- */
+.outputs {
+  margin-top: 1.8rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--text-faint);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.rowLabel {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.rowValue {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.primary {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 4px 0;
+  padding: 16px 18px;
+  background: var(--tint-warning);
+  border-radius: 12px;
+}
+.primaryLabel {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.primaryValue {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(30px, 7vw, 40px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--orange-light);
+}
+
+.recovery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 1rem;
+  padding: 14px 18px;
+  background: var(--tint-positive);
+  border-radius: 12px;
+}
+.recoveryLabel {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--text-primary);
+}
+.recoveryValue {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+  white-space: nowrap;
+  color: var(--sage-light);
+}
+
+@media (max-width: 640px) {
+  .inputRow {
+    flex-wrap: wrap;
+  }
+  .number {
+    width: 100%;
+  }
+  .recovery {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

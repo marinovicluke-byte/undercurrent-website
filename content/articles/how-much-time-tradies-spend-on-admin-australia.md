@@ -161,6 +161,8 @@ You could have taken 13 weeks off. Or you could have worked those 520 hours on t
 
 This is the hidden cost no tradie ever puts on a quote, but every tradie pays.
 
+<!-- calc:tradie-admin -->
+
 ## Which side of the Tradie Admin Triangle should you automate first?
 
 **Start with the invoice side. It is the biggest time sink and the fastest to fix.** Most tradies save 2 to 3 hours a week inside the first month, with no change to the rest of how they work.
