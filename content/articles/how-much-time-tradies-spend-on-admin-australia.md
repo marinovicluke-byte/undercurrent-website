@@ -99,7 +99,7 @@ This is the second side of the triangle. Receipts in, receipts out, all year rou
 
 Quoting is the slow killer. Materials. Labour. Travel. Contingency. Format it so the client gets it. Send it. Then a three-week wait while the lead goes cold and the client gets quotes from two other blokes. There is more on [why tradies lose jobs before quoting](/blog/why-tradies-lose-jobs-before-quoting-australia) if that pattern sounds familiar.
 
-Scheduling looks easy until it is not. Clients call wanting updates. Materials show up late. Subbies move. Emergency callouts cut straight through the day. Every interruption is twenty minutes you do not get back.
+Scheduling looks easy until it is not. Clients call wanting updates. Materials show up late. Subbies move. Emergency callouts cut through the day.
 
 [Fair Work Commission](https://www.fwc.gov.au) rules on pay slips, leave and record-keeping add another layer if you have anyone on the payroll. None of it bills, all of it has to be right.
 
@@ -113,6 +113,33 @@ Here is what the main trades break down to in 2024:
 - **Sparkies:** $95 to $130 AUD an hour, per the Electrical, Electronic and Communications Contracting Award.
 - **Residential builders:** $60 to $90 AUD an hour, per [IBISWorld](https://www.ibisworld.com) construction data. Custom Sydney work can hit $120+.
 - **HVAC and roofers:** $85 to $120 AUD an hour, depending on certification and call-out distance.
+
+<svg width="100%" viewBox="0 0 640 300" role="img" aria-label="Australian tradie billable rates 2024 in AUD per hour. Plumbers 90 to 120. Sparkies 95 to 130. Builders 60 to 90. HVAC and roofers 85 to 120.">
+  <title>Australian tradie billable rates (2024)</title>
+  <desc>Horizontal bar chart of AUD per hour billable rates. Plumber 90 to 120. Sparkie 95 to 130. Builder 60 to 90. HVAC 85 to 120.</desc>
+  <g font-size="14" fill="#F7F3ED" font-family="sans-serif">
+    <text x="10" y="50">Plumber</text>
+    <rect x="372" y="36" width="84" height="20" fill="#8FAF9F"/>
+    <text x="465" y="50">$90 to $120</text>
+    <text x="10" y="100">Sparkie</text>
+    <rect x="386" y="86" width="98" height="20" fill="#5B7A9F"/>
+    <text x="493" y="100">$95 to $130</text>
+    <text x="10" y="150">Builder</text>
+    <rect x="288" y="136" width="84" height="20" fill="#D89B6D"/>
+    <text x="381" y="150">$60 to $90</text>
+    <text x="10" y="200">HVAC</text>
+    <rect x="358" y="186" width="98" height="20" fill="#8FAF9F"/>
+    <text x="465" y="200">$85 to $120</text>
+  </g>
+  <line x1="120" y1="230" x2="540" y2="230" stroke="#F7F3ED" stroke-width="1" opacity="0.4"/>
+  <g font-size="12" fill="#F7F3ED" opacity="0.7">
+    <text x="116" y="250">$0</text>
+    <text x="236" y="250">$50</text>
+    <text x="376" y="250">$100</text>
+    <text x="500" y="250">$150</text>
+  </g>
+  <text x="320" y="285" text-anchor="middle" font-size="13" font-weight="600" fill="#F7F3ED">AUD per hour billable, 2024</text>
+</svg>
 
 The $90 figure is a fair middle for any trade with a ute and a licence. Use it as your back-of-the-truck cost calculator when you read the rest of this article.
 
@@ -128,17 +155,17 @@ This is the hidden cost no tradie ever puts on a quote, but every tradie pays.
 
 ## Which side of the Tradie Admin Triangle should you automate first?
 
-**Start with the invoice side. It is the biggest time sink and the fastest to fix.** Most Australian tradies save 2 to 3 hours a week inside the first month, with no change to the rest of how they work.
+**Start with the invoice side. It is the biggest time sink and the fastest to fix.** Most tradies save 2 to 3 hours a week inside the first month, with no change to the rest of how they work.
 
 The order matters because the wins compound. Do the three sides in this order:
 
-1. **Invoice side first.** Biggest pain, biggest payback, cash in the bank faster.
-2. **Expense side second.** Steady weekly drag, easy to plug, makes BAS painless.
-3. **Schedule side third.** Quality-of-life fix once the cash side is sorted.
+1. **Invoice side first.** Biggest pain, fastest payback, cash in the bank.
+2. **Expense side second.** Steady weekly drag, makes BAS painless.
+3. **Schedule side third.** Quality-of-life fix once the cash is sorted.
 
-If you only fix one side, fix the invoice side. If you fix all three, you have got the triangle and your weekends back.
+Fix one side and you get hours back. Fix all three and you have got the triangle. See the wider list of [simplest small business automation tasks](/blog/simplest-small-business-automation-tasks-australia-2026) for a broader view.
 
-Curious how much time you are losing right now? [Get a free business audit](/audit) — ten minutes, just a clear read of where your hours are going.
+Curious how much time you are losing now? [Get a free business audit](/audit) — ten minutes, a clear read of where your hours go.
 
 ## How does invoicing automation work for a tradie?
 
@@ -180,13 +207,13 @@ A Geelong sparkie we set up got 7 hours back a week. He used 4 of them to take a
 
 ## When does automation not help a trade business?
 
-**Automation helps least when every job is bespoke and never repeats.** It also helps less when you do under three jobs a week, because there is not enough volume for the time-savings maths to work yet.
+**Automation helps least when every job is bespoke and never repeats.** It also helps less under three jobs a week, because there is not enough volume for the time-savings maths to work yet.
 
-Honest read: a high-end custom builder doing two huge jobs a year will see smaller weekly wins than a plumber doing 30 jobs a week. The triangle still works for the custom builder. The payback is just slower, and the wins lean toward expense and compliance rather than invoicing.
+A custom builder doing two huge jobs a year sees smaller weekly wins than a plumber doing 30 jobs a week. The triangle still works for the custom builder. The payback is slower, and the wins lean toward expense and compliance.
 
-It also will not fix the work you actually want to keep doing yourself. Quoting a tricky job, talking to a difficult client, deciding what to charge the regular who keeps you afloat — that is your call, not the system's.
+It will not fix the work you want to keep doing yourself either. Quoting a tricky job, talking to a difficult client, deciding what to charge the regular who keeps you afloat — that is your call, not the system's.
 
-Automation runs the boring stuff so you can do the human stuff. That is the whole point.
+Automation runs the boring stuff so you can do the human stuff. See [how to use AI to optimise a tradie business](/blog/how-to-use-ai-to-optimise-tradie-business-australia) when you are ready to layer AI on top.
 
 ## What is the real cost of doing nothing?
 
