@@ -41,23 +41,37 @@ If you want to skip the math and just see where your hours are going, [book a fr
 
 Most of it is invisible. You do not clock in to write an invoice. You do it after dinner, on the weekend, or between jobs. So the hours never feel like work, even though they cost you the same.
 
-A plumber in Geelong told us he does the books every Sunday afternoon. That is 3 to 4 hours every weekend. A Brisbane sparkie said he stays up until 11pm doing invoices because he does not want to lose tomorrow's work to paperwork.
+A plumber in Geelong (name changed for privacy, like every anecdote below) told us he does the books every Sunday afternoon. That is 3 to 4 hours every weekend. A Brisbane sparkie said he stays up until 11pm doing invoices because he does not want to lose tomorrow's work to paperwork.
 
 That is not a job. That is a second shift, and it costs your family the time you cannot get back.
 
 ## What admin tasks eat the most time?
 
-**Three tasks soak up most of the time: invoicing, bookkeeping, and scheduling. We call it the Tradie Admin Triangle.** Each side of the triangle is its own time sink. Fix all three and you get most of your week back. Fix one and you still get hours.
+**Three tasks soak up most of the time: invoicing, bookkeeping, and scheduling. We call it the Tradie Admin Triangle.** Each side is its own time sink. Fix all three and you get most of your week back. Fix one and you still get hours.
 
-The triangle is the same shape for every trade. Plumbers, sparkies, builders, roofers, HVAC, painters, landscapers, tilers, the lot. Same three buckets.
+<svg width="100%" viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Tradie Admin Triangle: three sides of weekly admin work. Invoice side 2 to 3 hours per week, expense side 2 to 4 hours per week, schedule side 1 to 2 hours per week.">
+  <title>The Tradie Admin Triangle</title>
+  <desc>Diagram of the three sides of weekly admin work for Australian tradies: invoice (2 to 3 hours), expense (2 to 4 hours), schedule (1 to 2 hours).</desc>
+  <polygon points="320,60 600,330 40,330" fill="none" stroke="#8FAF9F" stroke-width="3"/>
+  <text x="320" y="205" text-anchor="middle" font-size="22" font-weight="700" fill="#F7F3ED">Tradie Admin</text>
+  <text x="320" y="232" text-anchor="middle" font-size="22" font-weight="700" fill="#F7F3ED">Triangle</text>
+  <text x="320" y="38" text-anchor="middle" font-size="17" font-weight="600" fill="#F7F3ED">Invoice side</text>
+  <text x="320" y="55" text-anchor="middle" font-size="13" fill="#F7F3ED" opacity="0.8">2 to 3 hrs/wk</text>
+  <text x="20" y="357" font-size="17" font-weight="600" fill="#F7F3ED">Expense side</text>
+  <text x="20" y="374" font-size="13" fill="#F7F3ED" opacity="0.8">2 to 4 hrs/wk</text>
+  <text x="620" y="357" text-anchor="end" font-size="17" font-weight="600" fill="#F7F3ED">Schedule side</text>
+  <text x="620" y="374" text-anchor="end" font-size="13" fill="#F7F3ED" opacity="0.8">1 to 2 hrs/wk</text>
+</svg>
+
+Same shape for every trade. Plumbers, sparkies, builders, roofers, HVAC, painters, landscapers, tilers, the lot. Three buckets:
 
 - **Invoice side:** writing quotes, sending invoices, chasing late payments.
 - **Expense side:** receipts, fuel, materials, BAS prep, tax time.
 - **Schedule side:** booking jobs, client texts, "when are you coming?" calls.
 
-On top of the triangle sit two smaller jobs that still bite: quotes and compliance paperwork. We will get to those next.
+On top sit two smaller jobs that still bite: quotes and compliance paperwork. We will get to those next.
 
-Add the triangle up and you are at 8 to 12 hours a week before you have turned a single screw or laid a single brick.
+Add it up and you are at 8 to 12 hours a week before you have turned a single screw or laid a single brick.
 
 ## How much time does invoicing eat each week?
 
@@ -67,7 +81,7 @@ Add the triangle up and you are at 8 to 12 hours a week before you have turned a
 
 If you do five jobs a week and two get paid late, that is two extra phone calls, two extra emails, and two awkward "any update mate?" texts. Multiply by 50 working weeks and you have done that loop 200 times in a year. None of it billable.
 
-This is the first side of the Tradie Admin Triangle, and the fastest to fix.
+This is the first side of the triangle, and the fastest to fix.
 
 ## How much time does bookkeeping eat each week?
 
@@ -77,11 +91,11 @@ The ABS says 68% of sole traders still do this by hand. Spreadsheets, shoeboxes,
 
 If you do this on a Friday night you are losing prime family time. If you do it monthly you have lost the receipts. If you do it quarterly you have lost the plot, and your accountant charges you to fix the mess.
 
-This is the second side of the Tradie Admin Triangle. Receipts in, receipts out, all year round.
+This is the second side of the triangle. Receipts in, receipts out, all year round.
 
 ## How much time does quoting and scheduling eat?
 
-**Quoting takes 1 to 2 hours a week and scheduling takes another 1 to 2 hours.** Add compliance paperwork at the same rate and you have 3 to 6 extra hours sitting on top of the Tradie Admin Triangle.
+**Quoting takes 1 to 2 hours a week and scheduling takes another 1 to 2 hours.** Add compliance paperwork at the same rate and you have 3 to 6 extra hours sitting on top of the triangle.
 
 Quoting is the slow killer. Materials. Labour. Travel. Contingency. Format it so the client gets it. Send it. Then a three-week wait while the lead goes cold and the client gets quotes from two other blokes. There is more on [why tradies lose jobs before quoting](/blog/why-tradies-lose-jobs-before-quoting-australia) if that pattern sounds familiar.
 
@@ -114,9 +128,9 @@ This is the hidden cost no tradie ever puts on a quote, but every tradie pays.
 
 ## Which side of the Tradie Admin Triangle should you automate first?
 
-**Start with the invoice side of the Tradie Admin Triangle. It is the biggest time sink and the fastest to fix.** Most Australian tradies save 2 to 3 hours a week inside the first month, with no change to the rest of how they work.
+**Start with the invoice side. It is the biggest time sink and the fastest to fix.** Most Australian tradies save 2 to 3 hours a week inside the first month, with no change to the rest of how they work.
 
-The order matters because the wins compound. The triangle has three sides, and you do them in this order:
+The order matters because the wins compound. Do the three sides in this order:
 
 1. **Invoice side first.** Biggest pain, biggest payback, cash in the bank faster.
 2. **Expense side second.** Steady weekly drag, easy to plug, makes BAS painless.
@@ -124,7 +138,7 @@ The order matters because the wins compound. The triangle has three sides, and y
 
 If you only fix one side, fix the invoice side. If you fix all three, you have got the triangle and your weekends back.
 
-Curious how much time you are losing right now? [Get a free business audit](/audit) — ten minutes, no sales pitch, just a clear read of your hours.
+Curious how much time you are losing right now? [Get a free business audit](/audit) — ten minutes, just a clear read of where your hours are going.
 
 ## How does invoicing automation work for a tradie?
 
@@ -142,19 +156,19 @@ That is one side of the triangle gone, and BAS time gets quieter at the same tim
 
 ## How does expense and scheduling automation work?
 
-**Expense and scheduling automation means receipts get logged the moment you photograph them, and clients get updates without you sending a text.** Two sides of the Tradie Admin Triangle, two simple tools each.
+**Expense and scheduling automation means receipts get logged the moment you photograph them, and clients get updates without you sending a text.** Two sides of the triangle, two simple tools each.
 
 For expenses: **Dext** (used to be Receipt Bank) or the built-in receipt scanner in **Xero**. Snap a photo at the till, the system reads the amount, the date and the supplier, drops it in the right category. A Sydney builder we work with cut his Friday receipt sort from 90 minutes to 10.
 
 For scheduling: **Simpro** or **ServiceM8**. Clients book straight into your calendar. Auto-confirmations fire on booking. "On my way" texts go out automatically when you are 30 minutes away. A Melbourne plumber cut his weekly "when are you coming?" calls from 15 to zero.
 
-Triangle: complete. The three biggest sides of the Tradie Admin Triangle now run themselves.
+Triangle: complete. The three biggest sides now run themselves.
 
 ## How much time does automation actually save a tradie?
 
 **Properly built automation claws back 6 to 8 hours a week for the average Australian tradie.** That is $540 a week or $25,920 a year at $90 AUD an hour, based on the trade builds UnderCurrent Automations runs in Melbourne, Brisbane and Sydney.
 
-The numbers in plain English, depending on how much of the Tradie Admin Triangle you fix:
+The numbers in plain English, depending on how many sides of the triangle you fix:
 
 | Setup | Hours per week on admin | Annual cost at $90 AUD/hr |
 |---|---|---|
@@ -168,7 +182,7 @@ A Geelong sparkie we set up got 7 hours back a week. He used 4 of them to take a
 
 **Automation helps least when every job is bespoke and never repeats.** It also helps less when you do under three jobs a week, because there is not enough volume for the time-savings maths to work yet.
 
-Honest read: a high-end custom builder doing two huge jobs a year will see smaller weekly wins than a plumber doing 30 jobs a week. The Tradie Admin Triangle still works for the custom builder. The payback is just slower, and the wins lean toward expense and compliance rather than invoicing.
+Honest read: a high-end custom builder doing two huge jobs a year will see smaller weekly wins than a plumber doing 30 jobs a week. The triangle still works for the custom builder. The payback is just slower, and the wins lean toward expense and compliance rather than invoicing.
 
 It also will not fix the work you actually want to keep doing yourself. Quoting a tricky job, talking to a difficult client, deciding what to charge the regular who keeps you afloat — that is your call, not the system's.
 
