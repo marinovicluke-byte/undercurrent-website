@@ -2,7 +2,7 @@
 title: "How Much Time Australian Tradies Spend on Admin"
 description: "Australian tradies lose 8-12 hours per week to admin. The real hourly cost using ABS, Xero and Fair Work data, and what automation gets back."
 date: "2026-03-31"
-updated: "2026-05-20"
+dateModified: "2026-05-20"
 slug: "how-much-time-tradies-spend-on-admin-australia"
 cluster: "foundations"
 keyword: "how much time tradies spend on admin australia"
