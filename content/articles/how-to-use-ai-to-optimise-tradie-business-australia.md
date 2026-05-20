@@ -137,13 +137,15 @@ Add a payment button while you are at it. Xero says invoices with a "Pay Now" bu
 | Payment chase | Calls and texts on every late one | Auto reminders at 7, 14 and 30 days | 5-10 min |
 | **Per job** | **35-55 minutes** | **2-3 minutes** | **33-52 min** |
 
-Run that across 60 jobs a month and you have shifted most of a working day off the kitchen table, back onto the tools or back to your family.
+Run that across 60 jobs a month and you have shifted most of a working day off the kitchen table, back onto the tools or back to your family. The minutes look small on a single job. It is the repetition that adds up: the same five-minute task, done 60 times a month, every month of the year.
 
 Not sure which links of your Job Chain are leaking the most time? [A free 30-minute audit](/audit) maps it for you in plain numbers.
 
 ## What tools do Australian tradies use, and what do they cost?
 
-**Most Australian tradies do not need an expensive "all-in-one" platform. They need two or three proven tools, connected: a job-management app, accounting software, and a connector only if those two do not already talk to each other.** Here is the real pricing, as of May 2026:
+**Most Australian tradies do not need an expensive "all-in-one" platform. They need two or three proven tools, connected: a job-management app, accounting software, and a connector only if those two do not already talk to each other.**
+
+Around two in three Australian businesses have no employees at all, the [Australian Bureau of Statistics](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release) reports. Most trade businesses are lean by nature, not enterprise, and the software should match. Here is the real pricing, as of May 2026:
 
 - **Job management:** [ServiceM8](https://www.servicem8.com/au/pricing) (from $29 AUD a month), [Tradify](https://www.tradifyhq.com/au/pricing) (from about $48 AUD per user a month), [Fergus](https://fergus.com/au/pricing/) (from about $48 AUD a month, stronger for bigger teams).
 - **Accounting:** [Xero](https://www.xero.com/au/pricing-plans/) (from $35 AUD a month excluding GST, the most widely used in Australia) or [MYOB](https://www.myob.com/au/pricing) (from about $26 AUD a month excluding GST).
@@ -186,7 +188,7 @@ The trap is the $400-a-month all-in-one platform marketed hard to tradies. A con
 
 **The honest way to size up the return is hours saved times your hourly rate, minus what the tools cost. It is not some wild percentage you could never defend at the pub.** Ignore anyone selling you "3,000% ROI". Here is the real sum.
 
-A connected Job Chain claws back roughly 6 to 8 hours a week for most trade businesses. That is UnderCurrent's experience across the builds we run, and it lines up with [how much time tradies lose to admin](/blog/how-much-time-tradies-spend-on-admin-australia) in the first place.
+A connected Job Chain claws back roughly 6 to 8 hours a week for most trade businesses. That is UnderCurrent's experience across the trade builds we run, from inner-city Melbourne to regional Victoria, and it lines up with [how much time tradies lose to admin](/blog/how-much-time-tradies-spend-on-admin-australia) in the first place.
 
 Run the numbers. Six hours a week at a $90 AUD billable rate is $540 a week. Across a 48-week working year, that is about $25,900 AUD of your time back on the tools. The software to do it costs roughly $1,000 to $1,800 AUD a year.
 
@@ -201,13 +203,13 @@ One more bit of upside. Your software subscriptions are a normal tax-deductible 
 - **Bespoke or heritage work.** If you quote one restoration a month and every one is different, quote templates have no pattern to lock onto. Automate the invoicing, skip the quoting tool.
 - **Very low volume.** Under about three jobs a week, the time you would save does not yet cover the setup. Revisit it when you are busier.
 - **A client base that wants the phone.** Some older or regional customers want to hear your voice, not get a booking link. Read the room. You can automate the back office without forcing the front of it on anyone.
-- **Patchy mobile coverage.** If you work where reception drops out, build in a manual fallback rather than trusting the cloud blindly.
+- **Patchy mobile coverage.** Out past the city fringe, or on rural and regional jobs where reception drops out, build in a manual fallback rather than trusting the cloud blindly.
 
 And automation never replaces the parts that are actually your trade: pricing a tricky build, reading a difficult customer, deciding what to charge the regular who keeps you afloat. It runs the boring stuff so you have the time and head space for that.
 
 ## What mistakes do tradies make automating their business?
 
-**The most common mistake is automating a process that is already broken. Bad pricing or messy scheduling just happens faster once a machine is running it.** Consulting firm McKinsey has reported that a large share of automation projects fall short of what was promised, and a broken starting point is a common reason why. Five traps to dodge:
+**The most common mistake is automating a process that is already broken. Bad pricing or messy scheduling just happens faster once a machine is running it.** When an automation push disappoints, the technology is rarely the reason. It is almost always a process that was never sorted out before the software went on top. Five traps to dodge:
 
 - **Buying before mapping.** Write down every step from enquiry to payment first. Automate the friction points, not the whole thing blind.
 - **Tools that do not connect.** If your quote tool will not sync to your accounting software, you are just doing double admin. Confirm the integration before you pay.
