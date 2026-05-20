@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation'
 import JsonLd from '@/components/ui/JsonLd'
 import AuthorBio from '@/components/ui/AuthorBio'
 import HeroCta from '@/components/article/HeroCta'
+import TradieAdminCalculator from '@/components/calculators/TradieAdminCalculator'
 import { getAllArticles, getArticleBySlug } from '@/lib/articles'
 import { getAllCaseStudies } from '@/lib/caseStudies'
 import { CLUSTERS } from '@/lib/clusters'
@@ -106,6 +107,13 @@ export default async function ArticlePage({ params }) {
   const fm = article.frontmatter
   const faqs = extractFaqs(fm, article.html)
   const { quickAnswer, bodyHtml } = extractQuickAnswer(article.html)
+  // Inline calculator embed: an article opts in by placing the literal
+  // `<!-- calc:tradie-admin -->` token in its markdown. The token survives the
+  // remark pipeline as a raw HTML comment; we split the body around it and
+  // render the React component at that position. Articles without the token
+  // render exactly as before.
+  const CALC_TOKEN = '<!-- calc:tradie-admin -->'
+  const calcAt = bodyHtml.indexOf(CALC_TOKEN)
   const clusterLabel = fm.cluster && CLUSTERS[fm.cluster]?.label
   const clusterSlug = fm.cluster
 
@@ -300,11 +308,19 @@ export default async function ArticlePage({ params }) {
       {/* Article body */}
       <article style={{ padding: '40px var(--page-pad) 80px', background: 'var(--charcoal)' }}>
         <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-          <div
-            className="article-prose"
-            style={{ maxWidth: TEXT_MAX }}
-            dangerouslySetInnerHTML={{ __html: bodyHtml }}
-          />
+          {calcAt >= 0 ? (
+            <div className="article-prose" style={{ maxWidth: TEXT_MAX }}>
+              <div dangerouslySetInnerHTML={{ __html: bodyHtml.slice(0, calcAt) }} />
+              <TradieAdminCalculator />
+              <div dangerouslySetInnerHTML={{ __html: bodyHtml.slice(calcAt + CALC_TOKEN.length) }} />
+            </div>
+          ) : (
+            <div
+              className="article-prose"
+              style={{ maxWidth: TEXT_MAX }}
+              dangerouslySetInnerHTML={{ __html: bodyHtml }}
+            />
+          )}
         </div>
       </article>
 
