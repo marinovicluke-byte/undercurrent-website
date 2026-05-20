@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SEO Pricing — 3 Variations</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap">
+<style>
+  :root {
+    --deep:         #121210;
+    --charcoal:     #1C1C1A;
+    --charcoal2:    #232320;
+    --charcoal3:    #2A2A28;
+    --off-white:    #FAF9F5;
+    --blue:         #6A8DAD;
+    --blue-rgb:     106, 141, 173;
+    --sage:         #8FAF9F;
+    --sage-rgb:     143, 175, 159;
+    --orange:       #E07A55;
+    --text-primary:   rgba(250,249,245,0.92);
+    --text-secondary: rgba(250,249,245,0.58);
+    --text-muted:     rgba(250,249,245,0.38);
+    --faint:          rgba(250,249,245,0.08);
+    --font-display: 'Space Grotesk', ui-sans-serif, sans-serif;
+    --font-body:    'Satoshi', ui-sans-serif, sans-serif;
+    --font-hand:    'Caveat', cursive;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--deep);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── label ── */
+  .var-label {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--blue);
+    text-align: center;
+    padding: 56px 0 8px;
+  }
+  .var-title {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: var(--off-white);
+    text-align: center;
+    padding-bottom: 4px;
+  }
+  .var-desc {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--text-muted);
+    text-align: center;
+    padding-bottom: 48px;
+  }
+  hr.divider {
+    border: none;
+    border-top: 1px solid var(--faint);
+    margin: 8px 56px 0;
+  }
+
+  /* shared check icon */
+  .chk { flex: 0 0 auto; }
+
+  /* ================================================================
+     V1 — STAGGERED PYRAMID + HARD OFFSET SHADOW
+     ================================================================ */
+  .v1 { padding: 0 56px 80px; }
+
+  .v1__head { text-align: center; margin-bottom: 48px; }
+  .v1__eyebrow {
+    font-family: var(--font-display); font-size: 11px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.12em; color: var(--blue);
+    margin-bottom: 14px;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .v1__eyebrow::before {
+    content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue);
+  }
+  .v1__h2 {
+    font-family: var(--font-display); font-weight: 500; font-size: 38px;
+    letter-spacing: -0.03em; color: var(--off-white); margin-bottom: 14px;
+  }
+  .v1__sub {
+    font-size: 15px; line-height: 1.6; color: var(--text-secondary);
+    max-width: 520px; margin: 0 auto;
+  }
+
+  .v1__row {
+    display: flex;
+    gap: 0;
+    align-items: flex-end;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .v1__card {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+    background: var(--charcoal);
+    border: 1px solid rgba(250,249,245,0.09);
+    border-radius: 16px;
+    padding: 28px 26px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    transition: transform 0.2s ease;
+  }
+  /* stagger: side cards pushed down */
+  .v1__card:first-child  { transform: translateY(40px); margin-right: -12px; z-index: 1; }
+  .v1__card:nth-child(2) { transform: translateY(20px); margin-right: -12px; z-index: 2; }
+  .v1__card:nth-child(4) { transform: translateY(20px); margin-left:  -12px; z-index: 2; }
+  .v1__card:last-child   { transform: translateY(40px); margin-left:  -12px; z-index: 1; }
+
+  .v1__card--featured {
+    background: var(--charcoal2);
+    border-color: rgba(var(--blue-rgb), 0.45);
+    border-top: 3px solid rgba(var(--blue-rgb), 0.7);
+    padding: 36px 30px 40px;
+    z-index: 10;
+    box-shadow: 8px 8px 0 0 rgba(var(--blue-rgb), 0.28);
+  }
+
+  .v1__card-head {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px; margin-bottom: 10px;
+  }
+  .v1__name {
+    font-family: var(--font-display); font-weight: 600; font-size: 20px;
+    letter-spacing: -0.02em; color: var(--off-white); line-height: 1.1;
+  }
+  .v1__card--featured .v1__name { font-size: 24px; }
+  .v1__tagline { font-size: 12px; color: var(--text-secondary); margin-top: 5px; line-height: 1.4; }
+
+  .v1__badge {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: rgba(var(--blue-rgb), 0.1);
+    border: 1px solid rgba(var(--blue-rgb), 0.35);
+    display: flex; align-items: center; justify-content: center; flex: 0 0 auto;
+  }
+
+  .v1__price-row {
+    display: flex; align-items: baseline; gap: 4px; margin-bottom: 24px;
+  }
+  .v1__price {
+    font-family: var(--font-display); font-weight: 700; font-size: 44px;
+    letter-spacing: -0.04em; color: var(--off-white); line-height: 1;
+  }
+  .v1__card--featured .v1__price { font-size: 52px; color: var(--blue); }
+  .v1__suffix { font-size: 13px; color: var(--text-muted); margin-bottom: 4px; }
+
+  .v1__divider { height: 1px; background: var(--faint); margin-bottom: 16px; }
+
+  .v1__features { list-style: none; display: flex; flex-direction: column; gap: 0; }
+  .v1__feature {
+    display: flex; gap: 12px; align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(250,249,245,0.05);
+    font-size: 13px; color: var(--text-primary); line-height: 1.4;
+  }
+  .v1__feature:last-child { border-bottom: none; }
+
+  .v1__cta {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 100%; margin-top: 24px; padding: 11px 20px;
+    border-radius: 999px; border: 1px solid rgba(250,249,245,0.15);
+    background: transparent; color: var(--off-white);
+    font-family: var(--font-display); font-size: 13px; font-weight: 500;
+    letter-spacing: -0.01em; cursor: pointer; text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .v1__cta:hover { border-color: rgba(var(--blue-rgb), 0.5); background: rgba(var(--blue-rgb), 0.06); }
+  .v1__card--featured .v1__cta {
+    background: rgba(var(--blue-rgb), 0.15);
+    border-color: rgba(var(--blue-rgb), 0.5);
+    color: var(--off-white);
+  }
+  .v1__card--featured .v1__cta:hover { background: rgba(var(--blue-rgb), 0.25); }
+
+  /* handwritten annotation */
+  .v1__annotation {
+    position: absolute;
+    top: -78px; right: -52px;
+    width: 210px;
+    pointer-events: none;
+    color: var(--off-white);
+    opacity: 0.88;
+    transform: rotate(-4deg);
+  }
+  .v1__annotation-text {
+    font-family: var(--font-hand); font-weight: 600; font-size: 26px;
+    line-height: 1.1; text-align: right; padding-right: 22px;
+    color: var(--off-white);
+  }
+
+  /* ================================================================
+     V2 — STAGGERED ARC + FEATURED BORDER + GLYPH BULLETS (no CTA)
+     ================================================================ */
+  .v2 { padding: 0 56px 120px; }
+
+  .v2__head { text-align: center; margin-bottom: 56px; }
+  .v2__eyebrow {
+    font-family: var(--font-display); font-size: 11px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.12em; color: var(--blue);
+    margin-bottom: 14px;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .v2__eyebrow::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
+  .v2__h2 {
+    font-family: var(--font-display); font-weight: 500; font-size: 38px;
+    letter-spacing: -0.03em; color: var(--off-white); margin-bottom: 14px;
+  }
+  .v2__sub { font-size: 15px; line-height: 1.6; color: var(--text-secondary); max-width: 520px; margin: 0 auto; }
+
+  .v2__row {
+    display: flex; gap: 0; align-items: flex-start;
+    max-width: 1240px; margin: 0 auto;
+  }
+
+  .v2__card {
+    position: relative; flex: 1 1 0; min-width: 0;
+    background: var(--charcoal);
+    border: 1.5px solid rgba(250,249,245,0.09);
+    border-radius: 18px;
+    padding: 30px 28px 34px;
+    display: flex; flex-direction: column;
+    box-shadow: 0 24px 48px -16px rgba(0,0,0,0.6);
+  }
+  /* staggered arc — featured peaks, neighbours step down, edges kiss */
+  .v2__card:nth-child(1) { margin-top: 130px; margin-right: -16px; z-index: 1; }
+  .v2__card:nth-child(2) { margin-top: 64px;  margin-right: -16px; z-index: 2; }
+  .v2__card:nth-child(4) { margin-top: 96px;  margin-left:  -16px; z-index: 2; }
+
+  .v2__card--featured {
+    margin-top: 0;
+    background: var(--charcoal2);
+    border: 2px solid #3D7FD6;
+    padding: 38px 30px 42px;
+    box-shadow: 0 32px 60px -14px rgba(0,0,0,0.72);
+    z-index: 10;
+  }
+
+  .v2__badge {
+    position: absolute; top: 30px; right: 30px;
+    width: 38px; height: 38px; border-radius: 50%;
+    background: rgba(61,127,214,0.12);
+    border: 1px solid rgba(61,127,214,0.42);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .v2__name {
+    font-family: var(--font-display); font-weight: 700; font-size: 26px;
+    letter-spacing: -0.02em; color: var(--off-white); margin-bottom: 4px;
+  }
+  .v2__card--featured .v2__name { font-size: 30px; }
+  .v2__tagline { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.4; }
+
+  .v2__price-row { display: flex; align-items: baseline; gap: 5px; margin-bottom: 22px; }
+  .v2__price {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: clamp(44px, 4.5vw, 60px);
+    letter-spacing: -0.04em; line-height: 1; color: var(--off-white);
+  }
+  .v2__card--featured .v2__price { font-size: clamp(52px, 5.5vw, 70px); }
+  .v2__suffix { font-size: 14px; color: var(--text-muted); align-self: flex-end; padding-bottom: 6px; }
+  .v2__card--featured .v2__suffix { font-size: 16px; padding-bottom: 9px; }
+
+  .v2__divider { height: 1px; background: rgba(250,249,245,0.08); margin-bottom: 8px; }
+
+  .v2__features { list-style: none; display: flex; flex-direction: column; }
+  .v2__feature {
+    display: flex; gap: 13px; align-items: center;
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(250,249,245,0.07);
+    font-size: 14px; color: rgba(250,249,245,0.86); line-height: 1.4; font-family: var(--font-body);
+  }
+  .v2__feature:last-child { border-bottom: none; padding-bottom: 0; }
+  .v2__bullet { flex: 0 0 auto; }
+
+  /* ================================================================
+     V3 — OVERLAPPING DECK (negative margin fan)
+     ================================================================ */
+  .v3 { padding: 0 56px 120px; }
+
+  .v3__head { text-align: center; margin-bottom: 48px; }
+  .v3__eyebrow {
+    font-family: var(--font-display); font-size: 11px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.12em; color: var(--blue);
+    margin-bottom: 14px;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .v3__eyebrow::before {
+    content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue);
+  }
+  .v3__h2 {
+    font-family: var(--font-display); font-weight: 500; font-size: 38px;
+    letter-spacing: -0.03em; color: var(--off-white); margin-bottom: 14px;
+  }
+  .v3__sub {
+    font-size: 15px; line-height: 1.6; color: var(--text-secondary);
+    max-width: 520px; margin: 0 auto;
+  }
+
+  .v3__scene {
+    position: relative; max-width: 1280px; margin: 0 auto;
+    /* enough height for the tallest card + annotation */
+    height: 620px;
+  }
+
+  .v3__card {
+    position: absolute;
+    width: 280px;
+    background: var(--charcoal);
+    border: 1px solid rgba(250,249,245,0.09);
+    border-radius: 18px;
+    padding: 28px 26px 32px;
+    display: flex; flex-direction: column;
+    box-shadow: 4px 4px 0 0 rgba(0,0,0,0.35);
+  }
+
+  /* Position each card absolutely within the scene */
+  .v3__c1 { left: 0;    top: 80px;  z-index: 1; opacity: 0.72; }
+  .v3__c2 { left: 22%;  top: 40px;  z-index: 2; opacity: 0.88; }
+  .v3__c3 { /* featured */
+    left: 50%; transform: translateX(-50%);
+    top: 0; z-index: 10; width: 310px;
+    background: var(--charcoal2);
+    border-color: rgba(var(--blue-rgb), 0.45);
+    border-top: 3px solid var(--blue);
+    box-shadow: 8px 8px 0 0 rgba(var(--blue-rgb), 0.32);
+    padding: 36px 30px 40px;
+    opacity: 1;
+  }
+  .v3__c4 { right: 22%; top: 40px;  z-index: 2; opacity: 0.88; }
+  .v3__c5 { right: 0;   top: 80px;  z-index: 1; opacity: 0.72; }
+
+  .v3__name {
+    font-family: var(--font-display); font-weight: 600; font-size: 20px;
+    letter-spacing: -0.02em; color: var(--off-white); margin-bottom: 4px;
+  }
+  .v3__c3 .v3__name { font-size: 24px; }
+  .v3__tagline { font-size: 12px; color: var(--text-secondary); margin-bottom: 16px; }
+
+  .v3__price-row { display: flex; align-items: baseline; gap: 4px; margin-bottom: 20px; }
+  .v3__price {
+    font-family: var(--font-display); font-weight: 700; font-size: 40px;
+    letter-spacing: -0.04em; line-height: 1; color: var(--off-white);
+  }
+  .v3__c3 .v3__price { font-size: 48px; color: var(--blue); }
+  .v3__suffix { font-size: 13px; color: var(--text-muted); align-self: flex-end; margin-bottom: 4px; }
+
+  .v3__divider { height: 1px; background: var(--faint); margin-bottom: 14px; }
+  .v3__features { list-style: none; display: flex; flex-direction: column; }
+  .v3__feature {
+    display: flex; gap: 10px; align-items: center;
+    padding: 8px 0; border-bottom: 1px solid rgba(250,249,245,0.05);
+    font-size: 12.5px; color: var(--text-primary); line-height: 1.4;
+  }
+  .v3__feature:last-child { border-bottom: none; }
+
+  .v3__cta {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 100%; margin-top: 20px; padding: 10px 18px;
+    border-radius: 999px; border: 1px solid rgba(250,249,245,0.14);
+    background: transparent; color: var(--off-white);
+    font-family: var(--font-display); font-size: 12px; font-weight: 500;
+    cursor: pointer; text-decoration: none;
+  }
+  .v3__c3 .v3__cta {
+    background: rgba(var(--blue-rgb),0.16); border-color: rgba(var(--blue-rgb),0.5);
+  }
+
+  /* annotation */
+  .v3__annotation {
+    position: absolute; top: -20px; left: 56%;
+    width: 200px; pointer-events: none;
+    color: var(--off-white); opacity: 0.88;
+    transform: rotate(-5deg);
+    z-index: 20;
+  }
+  .v3__annotation-text {
+    font-family: var(--font-hand); font-weight: 600; font-size: 24px;
+    line-height: 1.1; text-align: left; padding-left: 18px;
+    color: var(--off-white);
+  }
+
+  /* badge */
+  .badge-circle {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(var(--blue-rgb),0.12);
+    border: 1px solid rgba(var(--blue-rgb),0.38);
+    display: flex; align-items: center; justify-content: center;
+    flex: 0 0 auto;
+  }
+
+  /* ── Shared check SVG colours ── */
+  .chk-sage { stroke: var(--sage); }
+  .chk-blue { stroke: var(--blue); }
+
+  /* ── Most Popular tag ── */
+  .popular-tag {
+    display: inline-flex; align-items: center;
+    font-family: var(--font-display); font-size: 10px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: #5A9FE0;
+    background: rgba(61,127,214,0.12);
+    border: 1px solid rgba(61,127,214,0.38);
+    border-radius: 100px;
+    padding: 3px 10px;
+    margin-bottom: 10px;
+  }
+
+  /* ── No lock-in strip ── */
+  .no-lock {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    font-family: var(--font-display); font-size: 12px; font-weight: 500;
+    color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase;
+    margin-top: 36px;
+  }
+  .no-lock::before, .no-lock::after {
+    content: ''; flex: 1; height: 1px; background: var(--faint); max-width: 120px;
+  }
+
+  @media (max-width: 960px) {
+    .v1, .v2, .v3 { padding-left: 24px; padding-right: 24px; }
+    .v1__row { flex-direction: column; align-items: stretch; gap: 16px; }
+    .v1__card { transform: none !important; margin: 0 !important; }
+    .v1__annotation { display: none; }
+    .v2__row { flex-direction: column; align-items: stretch; gap: 16px; }
+    .v2__card { transform: none !important; margin: 0 !important; }
+    .v3__scene { height: auto; position: static; display: flex; flex-direction: column; gap: 14px; }
+    .v3__card { position: static; width: 100%; opacity: 1 !important; }
+    .v3__annotation { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─────────────────────────────────────────────────────────────────
+     V1 — Staggered Pyramid + Hard Offset Shadow
+     ───────────────────────────────────────────────────────────────── -->
+
+<div class="var-label">Variation 1</div>
+<div class="var-title">Staggered Pyramid — Hard Offset Shadow</div>
+<div class="var-desc">Side cards sink behind the featured. UC signature offset shadow on the hero card.</div>
+
+<section class="v1">
+  <header class="v1__head">
+    <div class="v1__eyebrow">Pricing</div>
+    <h2 class="v1__h2">Transparent pricing.<br>No surprises.</h2>
+    <p class="v1__sub">Every engagement starts with a scoping call. Pricing is agreed before work starts. No lock-in contracts, cancel any month.</p>
+  </header>
+
+  <div class="v1__row">
+
+    <!-- Foundation -->
+    <article class="v1__card">
+      <div class="v1__card-head">
+        <div>
+          <div class="v1__name">Foundation</div>
+          <div class="v1__tagline">Get found, get started</div>
+        </div>
+      </div>
+      <div class="v1__price-row">
+        <div class="v1__price">$1,000</div>
+        <div class="v1__suffix">/mo</div>
+      </div>
+      <div class="v1__divider"></div>
+      <ul class="v1__features">
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          Technical SEO audit
+        </li>
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          On-page optimisation
+        </li>
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          Main service page + location page
+        </li>
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          2 articles / month
+        </li>
+      </ul>
+      <a href="https://cal.com/luke-marinovic-aqeosc/30min" class="v1__cta">Book a call →</a>
+    </article>
+
+    <!-- Growth -->
+    <article class="v1__card">
+      <div class="v1__card-head">
+        <div>
+          <div class="v1__name">Growth</div>
+          <div class="v1__tagline">Local SEO with content velocity</div>
+        </div>
+      </div>
+      <div class="v1__price-row">
+        <div class="v1__price">$2,000</div>
+        <div class="v1__suffix">/mo</div>
+      </div>
+      <div class="v1__divider"></div>
+      <ul class="v1__features">
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          Everything in Foundation
+        </li>
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          4 articles / month
+        </li>
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          2 location pages + 1 comparison page
+        </li>
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          AI search optimised
+        </li>
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          Monthly strategy + keyword review
+        </li>
+      </ul>
+      <a href="https://cal.com/luke-marinovic-aqeosc/30min" class="v1__cta">Book a call →</a>
+    </article>
+
+    <!-- Authority (featured) -->
+    <article class="v1__card v1__card--featured">
+      <div class="popular-tag">Most Popular</div>
+      <!-- handwritten annotation -->
+      <div class="v1__annotation">
+        <div class="v1__annotation-text">Most clients<br>choose this ↓</div>
+        <svg width="200" height="60" viewBox="0 0 200 60">
+          <path d="M 170 6 C 130 18, 80 28, 42 54"
+                stroke="currentColor" stroke-width="1.5" fill="none"
+                stroke-linecap="round" opacity="0.7"/>
+          <path d="M 42 54 L 54 46 M 42 54 L 50 60"
+                stroke="currentColor" stroke-width="1.5" fill="none"
+                stroke-linecap="round" opacity="0.7"/>
+        </svg>
+      </div>
+
+      <div class="v1__card-head">
+        <div>
+          <div class="v1__name">Authority</div>
+          <div class="v1__tagline">Dominate Google + AI search</div>
+        </div>
+        <div class="badge-circle">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8.5l3 3 7-7" stroke="var(--blue)" stroke-width="2" stroke-linecap="square"/>
+          </svg>
+        </div>
+      </div>
+      <div class="v1__price-row">
+        <div class="v1__price">$4,000</div>
+        <div class="v1__suffix">/mo</div>
+      </div>
+      <div class="v1__divider"></div>
+      <ul class="v1__features">
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-blue" stroke-width="2" stroke-linecap="square"/></svg>
+          Everything in Growth
+        </li>
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-blue" stroke-width="2" stroke-linecap="square"/></svg>
+          12 articles / month
+        </li>
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-blue" stroke-width="2" stroke-linecap="square"/></svg>
+          4 location pages + 1 comparison page
+        </li>
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-blue" stroke-width="2" stroke-linecap="square"/></svg>
+          GBP management + Google Places
+        </li>
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-blue" stroke-width="2" stroke-linecap="square"/></svg>
+          1 campaign / month + multi-location ready
+        </li>
+      </ul>
+      <a href="https://cal.com/luke-marinovic-aqeosc/30min" class="v1__cta">Book a call →</a>
+    </article>
+
+    <!-- Enterprise -->
+    <article class="v1__card">
+      <div class="v1__card-head">
+        <div>
+          <div class="v1__name">Enterprise</div>
+          <div class="v1__tagline">Multi-location, national scale</div>
+        </div>
+      </div>
+      <div class="v1__price-row">
+        <div class="v1__price" style="font-size:36px;">Custom</div>
+      </div>
+      <div class="v1__divider"></div>
+      <ul class="v1__features">
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          Everything in Authority
+        </li>
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          Multi-location landing pages
+        </li>
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          Weekly check-ins + custom reports
+        </li>
+        <li class="v1__feature">
+          <svg class="chk" width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          Dedicated senior strategist
+        </li>
+      </ul>
+      <a href="https://cal.com/luke-marinovic-aqeosc/30min" class="v1__cta">Talk to us →</a>
+    </article>
+
+  </div>
+  <div class="no-lock">No lock-in contracts · Cancel any month</div>
+</section>
+
+<hr class="divider">
+
+<!-- ─────────────────────────────────────────────────────────────────
+     V2 — Bold Price-First + Solid Featured Border + Overlap
+     ───────────────────────────────────────────────────────────────── -->
+
+<div class="var-label">Variation 2</div>
+<div class="var-title">Staggered Arc — Featured Border, Glyph Bullets</div>
+<div class="var-desc">Cards fan into an arc, featured peaks. Edges kiss, no content hidden. UC wave glyph as the bullet. No CTAs on the card.</div>
+
+<section class="v2">
+  <header class="v2__head">
+    <div class="v2__eyebrow">Pricing</div>
+    <h2 class="v2__h2">Transparent pricing.<br>No surprises.</h2>
+    <p class="v2__sub">Every engagement starts with a scoping call. Pricing agreed before work starts. No lock-in.</p>
+  </header>
+
+  <div class="v2__row">
+
+    <!-- Foundation -->
+    <article class="v2__card">
+      <div class="v2__name">Foundation</div>
+      <div class="v2__tagline">Get found, get started</div>
+      <div class="v2__price-row">
+        <div class="v2__price">$1,000</div>
+        <div class="v2__suffix">/mo</div>
+      </div>
+      <div class="v2__divider"></div>
+      <ul class="v2__features">
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          Technical SEO audit
+        </li>
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          On-page optimisation
+        </li>
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          Main service page + location page
+        </li>
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          2 articles / month
+        </li>
+      </ul>
+    </article>
+
+    <!-- Growth -->
+    <article class="v2__card">
+      <div class="v2__name">Growth</div>
+      <div class="v2__tagline">Local SEO with content velocity</div>
+      <div class="v2__price-row">
+        <div class="v2__price">$2,000</div>
+        <div class="v2__suffix">/mo</div>
+      </div>
+      <div class="v2__divider"></div>
+      <ul class="v2__features">
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          Everything in Foundation
+        </li>
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          4 articles / month
+        </li>
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          2 location pages + 1 comparison page
+        </li>
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          AI search optimised
+        </li>
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          Monthly strategy + keyword review
+        </li>
+      </ul>
+    </article>
+
+    <!-- Authority (featured) -->
+    <article class="v2__card v2__card--featured">
+      <div class="popular-tag">Most Popular</div>
+      <div class="v2__badge" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 96 96" fill="none" stroke="#5A9FE0" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+      </div>
+      <div class="v2__name">Authority</div>
+      <div class="v2__tagline">Dominate Google + AI search</div>
+      <div class="v2__price-row">
+        <div class="v2__price">$4,000</div>
+        <div class="v2__suffix">/mo</div>
+      </div>
+      <div class="v2__divider"></div>
+      <ul class="v2__features">
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          Everything in Growth
+        </li>
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          12 articles / month
+        </li>
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          4 location pages + 1 comparison page
+        </li>
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          GBP management + Google Places
+        </li>
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          1 campaign / month
+        </li>
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          Multi-location ready
+        </li>
+      </ul>
+    </article>
+
+    <!-- Enterprise -->
+    <article class="v2__card">
+      <div class="v2__name">Enterprise</div>
+      <div class="v2__tagline">Multi-location, national scale</div>
+      <div class="v2__price-row">
+        <div class="v2__price" style="font-size:34px; letter-spacing:-0.03em;">Custom</div>
+      </div>
+      <div class="v2__divider"></div>
+      <ul class="v2__features">
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          Everything in Authority
+        </li>
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          Multi-location landing pages
+        </li>
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          Weekly check-ins + custom reports
+        </li>
+        <li class="v2__feature">
+          <svg class="v2__bullet" width="17" height="17" viewBox="0 0 96 96" fill="none" stroke="#FAF9F5" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 35 C 24.2 28, 37.8 28, 48 35 S 71.8 42, 82 35"/><path d="M14 48 C 24.2 41, 37.8 41, 48 48 S 71.8 55, 82 48"/><path d="M14 61 C 24.2 54, 37.8 54, 48 61 S 71.8 68, 82 61"/></svg>
+          Dedicated senior strategist
+        </li>
+      </ul>
+    </article>
+
+  </div>
+  <div class="no-lock">No lock-in contracts · Cancel any month</div>
+</section>
+
+<hr class="divider">
+
+<!-- ─────────────────────────────────────────────────────────────────
+     V3 — Overlapping Fan / Deck Layout
+     ───────────────────────────────────────────────────────────────── -->
+
+<div class="var-label">Variation 3</div>
+<div class="var-title">Overlapping Deck — Fan Layout</div>
+<div class="var-desc">Cards fan out from centre. Side cards visually recede. Featured sits front and tallest.</div>
+
+<section class="v3">
+  <header class="v3__head">
+    <div class="v3__eyebrow">Pricing</div>
+    <h2 class="v3__h2">Transparent pricing.<br>No surprises.</h2>
+    <p class="v3__sub">Every engagement starts with a scoping call. Pricing agreed before work starts. No lock-in.</p>
+  </header>
+
+  <div class="v3__scene">
+
+    <!-- annotation -->
+    <div class="v3__annotation">
+      <div class="v3__annotation-text">Most clients<br>choose this</div>
+      <svg width="140" height="55" viewBox="0 0 140 55">
+        <path d="M 20 8 C 50 20, 90 32, 118 50"
+              stroke="currentColor" stroke-width="1.5" fill="none"
+              stroke-linecap="round" opacity="0.7"/>
+        <path d="M 118 50 L 106 44 M 118 50 L 112 58"
+              stroke="currentColor" stroke-width="1.5" fill="none"
+              stroke-linecap="round" opacity="0.7"/>
+      </svg>
+    </div>
+
+    <!-- Card 1: Foundation (far left) -->
+    <article class="v3__card v3__c1">
+      <div class="v3__name">Foundation</div>
+      <div class="v3__tagline">Get found, get started</div>
+      <div class="v3__price-row">
+        <div class="v3__price" style="font-size:32px;">$1,000</div>
+        <div class="v3__suffix">/mo</div>
+      </div>
+      <div class="v3__divider"></div>
+      <ul class="v3__features">
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          Technical SEO audit
+        </li>
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          On-page optimisation
+        </li>
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          Main service page + location page
+        </li>
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          2 articles / month
+        </li>
+      </ul>
+      <a href="#" class="v3__cta">Book a call →</a>
+    </article>
+
+    <!-- Card 2: Growth (left-centre) -->
+    <article class="v3__card v3__c2">
+      <div class="v3__name">Growth</div>
+      <div class="v3__tagline">Local SEO with content velocity</div>
+      <div class="v3__price-row">
+        <div class="v3__price" style="font-size:36px;">$2,000</div>
+        <div class="v3__suffix">/mo</div>
+      </div>
+      <div class="v3__divider"></div>
+      <ul class="v3__features">
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          Everything in Foundation
+        </li>
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          4 articles / month
+        </li>
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          2 location pages + 1 comparison page
+        </li>
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          AI search optimised
+        </li>
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          Monthly strategy + keyword review
+        </li>
+      </ul>
+      <a href="#" class="v3__cta">Book a call →</a>
+    </article>
+
+    <!-- Card 3: Authority FEATURED (centre) -->
+    <article class="v3__card v3__c3">
+      <div class="popular-tag">Most Popular</div>
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:6px;">
+        <div>
+          <div class="v3__name">Authority</div>
+          <div class="v3__tagline">Dominate Google + AI search</div>
+        </div>
+        <div class="badge-circle">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8.5l3 3 7-7" stroke="var(--blue)" stroke-width="2" stroke-linecap="square"/>
+          </svg>
+        </div>
+      </div>
+      <div class="v3__price-row">
+        <div class="v3__price">$4,000</div>
+        <div class="v3__suffix">/mo</div>
+      </div>
+      <div class="v3__divider"></div>
+      <ul class="v3__features">
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-blue" stroke-width="2" stroke-linecap="square"/></svg>
+          Everything in Growth
+        </li>
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-blue" stroke-width="2" stroke-linecap="square"/></svg>
+          12 articles / month
+        </li>
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-blue" stroke-width="2" stroke-linecap="square"/></svg>
+          4 location pages + 1 comparison page
+        </li>
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-blue" stroke-width="2" stroke-linecap="square"/></svg>
+          GBP management + Google Places
+        </li>
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-blue" stroke-width="2" stroke-linecap="square"/></svg>
+          1 campaign / month + multi-location ready
+        </li>
+      </ul>
+      <a href="#" class="v3__cta">Book a call →</a>
+    </article>
+
+    <!-- Card 4: Enterprise left (right-centre) -->
+    <article class="v3__card v3__c4">
+      <div class="v3__name">Enterprise</div>
+      <div class="v3__tagline">Multi-location, national scale</div>
+      <div class="v3__price-row">
+        <div class="v3__price" style="font-size:30px; letter-spacing:-0.03em;">Custom</div>
+      </div>
+      <div class="v3__divider"></div>
+      <ul class="v3__features">
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          Everything in Authority
+        </li>
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          Multi-location pages
+        </li>
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          Weekly check-ins
+        </li>
+        <li class="v3__feature">
+          <svg class="chk" width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3 7-7" class="chk-sage" stroke-width="2" stroke-linecap="square"/></svg>
+          Dedicated strategist
+        </li>
+      </ul>
+      <a href="#" class="v3__cta">Talk to us →</a>
+    </article>
+
+  </div>
+  <div class="no-lock" style="margin-top: 16px;">No lock-in contracts · Cancel any month</div>
+</section>
+
+</body>
+</html>

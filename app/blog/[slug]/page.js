@@ -32,7 +32,7 @@ export async function generateMetadata({ params }) {
   const heroImageUrl = `${SITE_URL}/articles/${slug}/hero.jpg`
 
   return {
-    title: fm.title,
+    title: { absolute: fm.title },
     description: fm.description || fm.summary,
     alternates: { canonical: `${SITE_URL}/blog/${slug}` },
     openGraph: {

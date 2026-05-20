@@ -72,7 +72,7 @@ You're on the tools. You've got back-to-back jobs. You're the person doing the q
 
 Here's the other reason: **hidden leaks of time.** You think you're responding quickly. But by the time you finish the job you're on, drive to the next one, grab lunch, and finally sit down to return calls, it's been 4 hours. In the customer's mind, you're not interested. They've already booked someone else.
 
-The [Australian Small Business and Family Enterprise Ombudsman (ASBFEO)](https://www.asbfeo.gov.au) reports that small businesses lose an average of 11 hours per week on admin tasks that could be automated. For tradies, a big chunk of that is lead follow-up and quoting. Those 11 hours are costing you jobs.
+The [Australian Small Business and Family Enterprise Ombudsman (ASBFEO)](https://www.asbfeo.gov.au) reports that small businesses lose an average of 11 hours per week on admin tasks that could be automated. For tradies, a big chunk of that is lead follow-up and quoting — see our full breakdown of [how much time Australian tradies spend on admin](/blog/how-much-time-tradies-spend-on-admin-australia). Those 11 hours are costing you jobs.
 
 Most tradies don't realise how fast their competitors are moving. You assume everyone's in the same boat. They're not. The tradie who set up an [automated lead response system](/services) last month is now getting 60% more quote requests than you. Same market. Same customer base. Different response time.
 

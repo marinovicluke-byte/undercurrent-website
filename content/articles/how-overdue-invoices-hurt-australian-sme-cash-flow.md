@@ -79,7 +79,7 @@ Sarah runs a digital agency in Melbourne with 8 staff. Every Monday, she spends 
 
 ### Opportunity Cost
 
-If you're spending 6 hours a week chasing invoices, you're not spending 6 hours quoting new jobs, training apprentices, or improving your service. According to IBISWorld, Australian SMEs that reduce admin time by 30% report revenue growth 2.1x higher than peers still drowning in paperwork.
+If you're spending 6 hours a week chasing invoices, you're not spending 6 hours quoting new jobs, training apprentices, or improving your service. For tradies specifically, this is the invoice side of the wider [admin-time problem we break down here](/blog/how-much-time-tradies-spend-on-admin-australia). According to IBISWorld, Australian SMEs that reduce admin time by 30% report revenue growth 2.1x higher than peers still drowning in paperwork.
 
 Here's the compounding effect: late payments force you to delay paying suppliers, which damages those relationships and kills early payment discounts. You delay hiring because you're not sure if cash will be there next month. You turn down big jobs because you can't afford materials upfront.
 

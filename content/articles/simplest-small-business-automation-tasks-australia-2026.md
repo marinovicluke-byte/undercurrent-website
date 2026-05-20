@@ -73,7 +73,7 @@ Here's the fix. Connect your form to Zapier or Make. When someone submits, the t
 
 That's it. Ten minutes. Now every lead hits your inbox instantly.
 
-We've seen tradies in Geelong set this up and cut their response time from 4 hours to 4 minutes. That's the difference between winning the job and losing it to someone faster.
+We've seen tradies in Geelong set this up and cut their response time from 4 hours to 4 minutes. That's the difference between winning the job and losing it to someone faster. Trade businesses in particular bleed time here — full picture of [how much time Australian tradies spend on admin](/blog/how-much-time-tradies-spend-on-admin-australia) if you want the numbers.
 
 ## Automation Win #2: Automatic Invoice Payment Reminders
 
