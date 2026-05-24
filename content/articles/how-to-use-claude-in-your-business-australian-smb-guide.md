@@ -7,7 +7,7 @@ cluster: "seo-ai-visibility"
 keyword: "how to use claude in my business"
 author: "Luke"
 level: "intermediate"
-readingTime: 9
+readingTime: 11
 faqs:
   - q: "How much does Claude cost for an Australian small business in 2026?"
     a: "Claude pricing for Australian SMBs ranges from free (Claude.ai basic) to roughly $70 per seat per month for the Claude for Small Business plan, with Claude Code at $30 to $100 per month for individual use and Cowork at around $45 per seat for teams. Most SMBs land between $30 and $250 a month total. Pricing is in US dollars on Anthropic's site, so add roughly 50% for the AUD equivalent before card surcharges."
@@ -54,6 +54,8 @@ These six survive the three-month "is this still being used" test in client buil
 - **Research and decisions**, competitor scans, supplier comparisons, sizing a new service line, [SEO planning](/blog/seo-for-small-business).
 - **Content and ads**, first drafts of blog posts, social captions, [Google Ads variants](/blog/google-ads-cost-australian-small-business).
 
+All six are now augmented by [Claude's native Connectors](https://www.anthropic.com/news/integrations), direct integrations into Intuit QuickBooks, PayPal, HubSpot, Canva, Docusign, [Slack](https://www.anthropic.com/news/claude-and-slack), Google Workspace, and Microsoft 365, so Claude reads and writes inside your stack without custom plumbing.
+
 The ones that don't survive: anything client-facing without human review (legal, medical). For trades, our [tradie AI guide](/blog/hidden-cost-manual-trade-business-australia) covers the same six.
 
 ## How do you set up Claude Code without being a developer?
@@ -82,6 +84,48 @@ Output: subject line + 3-paragraph email body, sign off as [OWNER FIRST NAME].
 
 Most owners give up between step 4 and step 5, the gap our [AI training](/blog/ai-training-australia-small-business-guide) and [done-for-you builds at UnderCurrent Automations](/contact) close.
 
+## Behind the chat: a Claude architecture for production
+
+**Once Claude is doing real work in your business, it's no longer a chat window, it's a service running between your stack and your customers, and the architecture matters more than the prompt.**
+
+Here's the shape of a typical production Claude workflow for an Australian SMB:
+
+```
+[Inbound lead/email] → [n8n or Make trigger]
+       → [Claude (Cowork or API) + Supabase context store]
+              → [CRM: drafted reply + tagged task + follow-up scheduled]
+```
+
+Each box is a checkpoint, not a black box. The trigger fires deterministically. Claude operates as an un-monitored microservice with a locked system prompt. Supabase (or any vector store) supplies the context Claude needs without you re-pasting it into every chat. The CRM receives a structured output, not a wall of prose.
+
+A production-grade system prompt looks more like this than the quote-follow-up sample above:
+
+```
+You are a sales-ops assistant for [Business Name], an Australian [vertical] business.
+
+ROLE: triage inbound leads, draft a first-touch reply, log the lead to the CRM.
+
+CONTEXT (pulled from Supabase per lead):
+- Lead source, industry, size, original enquiry text
+- Past interactions if any
+- Active offers + capacity for the next 14 days
+
+FORMAT:
+- Subject line under 60 chars
+- 3-paragraph email body, plain text, no markdown
+- Sign off as [Owner First Name], [Business Name]
+- Currency in AUD, dates DD/MM/YYYY, times in AEST
+
+CONSTRAINTS:
+- Never invent past interactions
+- Never quote a price or guarantee a delivery date
+- If a context field is empty, write "[needs input]" rather than guess
+
+OUTPUT: JSON with keys subject, body_text, crm_tag, follow_up_in_days.
+```
+
+The CONSTRAINTS block is what stops hallucinated promises. The OUTPUT schema is what makes the result safe to wire into a CRM API.
+
 ## What are Australian businesses actually doing with Claude?
 
 **Australians use Claude harder than almost anyone else on earth, per the [Anthropic How Australia Uses Claude report](https://www.anthropic.com/research/how-australia-uses-claude), but the mix is office, sales, and management work, not coding.**
@@ -100,7 +144,9 @@ The ACSC's working rules for SMBs using Claude (and any cloud AI):
 - **Train your staff first.** Most breaches are people, not platforms.
 - **Have an incident process.** What if someone pastes a customer list into a free account?
 
-Government engagement with Anthropic doesn't equal blanket approval, per [business.gov.au's AI advice](https://business.gov.au/online-and-digital/artificial-intelligence). Your obligations sit on you. Pair with our [service area business explainer](/glossary/what-is-a-service-area-business) if you're remote-first.
+**One nuance most SMB guides miss:** SMBs under $3M turnover (not health-service or data-trading) are technically exempt from the Privacy Act 1988, per the [OAIC's commercially-available-AI guide](https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products). But the [Privacy Amendment Act 2024](https://www.oaic.gov.au/privacy/australian-privacy-principles) brings automated-decision-making rules in on 10 December 2026, so plan as if they apply.
+
+Government engagement with Anthropic isn't blanket approval (per [business.gov.au](https://business.gov.au/online-and-digital/artificial-intelligence)). Your obligations sit on you. Pair with our [service area business explainer](/glossary/what-is-a-service-area-business) if you're remote-first.
 
 ## What's the real ROI on Claude for an Australian SMB?
 
@@ -126,7 +172,7 @@ No team rollout, no consultants, no software shopping. Just you, Claude.ai, and 
 3. **Week 3, turn the working prompts into a saved "project" on Claude.ai (or a skill if you've upgraded to Code).** Add context once, reuse forever.
 4. **Week 4, decide.** Stay on Claude.ai, upgrade to Claude Code, or get help via [UnderCurrent Automations](/contact).
 
-If you can't carve four hours a week, skip to a workshop. That's a signal. The same playbook scales for [tradie operators](/blog/hidden-cost-manual-trade-business-australia) and [service-area firms losing time to manual work](/blog/hidden-cost-manual-trade-business-australia).
+If you can't carve four hours a week, skip to a workshop. That's a signal. The same playbook scales for [tradie operators](/blog/hidden-cost-manual-trade-business-australia) and [service-area firms losing time to manual work](/blog/how-much-are-manual-processes-costing-your-business).
 
 ## What we learned auditing 199 articles on AI in business
 
@@ -158,7 +204,7 @@ Most owners try DIY first, hit the wall at skill 3, then choose between a worksh
 - **Workshop** (accelerates the walk), team of 2-15 needing the same mental model. Two-day session, your real workflows, three skills shipped. Cost: a few thousand.
 - **Done-for-you** (gets you to run faster), buy the outcome. We scope, build the skills, train your team, monitor month one. Cost: setup fee plus the Claude plan.
 
-No wrong path, only the wrong path for your situation. [Book a chat with UnderCurrent Automations](/contact) and we'll tell you straight, including when DIY is smarter, consistent with [Anthropic's autonomy data](https://www.anthropic.com/research/how-australia-uses-claude). Worst outcome: a $5k build no one uses.
+**Not sure which fits?** [Book the free 30-min UnderCurrent AI Workflow Audit](/contact) and Luke will personally map your two-to-three highest-ROI Claude wins on the call, plus tell you straight when DIY is the smarter call (consistent with [Anthropic's autonomy data](https://www.anthropic.com/research/how-australia-uses-claude)). Worst outcome: a $5k build no one uses. Best outcome: a costed path to your first compounding skill inside the month.
 
 ## Frequently asked questions
 
