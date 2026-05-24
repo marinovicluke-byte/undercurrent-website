@@ -1,7 +1,7 @@
 ---
 slug: what-is-a-webhook
 term: Webhook
-shortDefinition: An HTTP request an application sends to a URL you control the instant something happens, so your system reacts in real time instead of polling for changes.
+shortDefinition: An HTTP request an application sends to a URL you control the instant something happens. Default implementations from no-code tools ship unsigned and non-idempotent, which is where automation quietly breaks.
 category: tool
 relatedServices: [/custom-integrations]
 relatedTerms: [what-is-business-process-automation, what-is-ai-automation]
@@ -11,14 +11,14 @@ sources:
   - { title: "Webhooks (Xero Developer)", url: "https://developer.xero.com/documentation/guides/webhooks/overview/" }
 faqs:
   - q: "What's the difference between a webhook and an API call?"
-    a: "Direction. An API call is your system asking another system for data, you call them. A webhook is the other system calling you the moment something happens. Same underlying HTTP, opposite direction. Webhooks are push, APIs are pull."
-  - q: "Why are webhooks faster than scheduled polling?"
-    a: "Polling means asking every minute or every five minutes whether anything changed. Most of those checks return nothing, and the worst case is a five-minute delay. A webhook fires within a second of the event. Less load, less delay, less cost."
-  - q: "Are webhooks secure?"
-    a: "They can be, with two practices. First, validate the signature header that providers like Stripe and Xero send so you know the request actually came from them. Second, accept webhooks only on HTTPS endpoints. A webhook URL with no signature check is an open door, treat it the same as any public API endpoint."
+    a: "Direction. An API call is your system asking another system for data. A webhook is the other system calling you the moment something happens. Same underlying HTTP, opposite direction. Webhooks are push, APIs are pull."
+  - q: "Why is the default n8n or Zapier webhook insecure?"
+    a: "Because the no-code defaults ship with no signature validation. A public webhook URL with no HMAC check accepts any POST payload, which means a competitor or a bored teenager who knows the URL can fire fake events into your CRM. Stripe, Xero and GitHub all sign their payloads but it is on the receiver to verify the signature. UnderCurrent Automations treats this check as non-optional on production."
+  - q: "What is webhook idempotency and why does it matter?"
+    a: "Most providers retry on a non-200 response and sometimes retry quietly on timeout even when the original request succeeded. The result is duplicate events: a 'payment received' webhook arriving twice, the workflow running twice, the customer getting charged twice. The fix is storing the event ID on first receipt and dropping duplicates. Stripe documents the pattern, almost no SMB tutorial mentions it."
 author: Luke Marinovic
 datePublished: 2026-05-24
-dateModified: 2026-05-24
+dateModified: 2026-05-25
 complianceNote: null
 ai-assisted: true
 source: claude-code
@@ -26,12 +26,16 @@ source: claude-code
 
 # Webhook
 
-**A webhook is an HTTP request an application sends to a URL you control the instant something happens, so your system reacts in real time instead of polling for changes.**
+**A webhook is an HTTP request an application sends to a URL you control the instant something happens, so your system reacts in real time instead of polling. Default implementations from SaaS vendors and no-code tools ship unsigned and non-idempotent, which is where most "automated" systems quietly break.**
 
-The dial tone of automation. Almost every modern automation runs on either webhooks or scheduled polling, and webhooks are the better answer almost every time. The difference is who calls whom. With polling, your system asks every minute, "anything new?" Most of the time the answer is no. With a webhook, the other system calls you the moment the event happens, no asking, no waiting.
+Direction is the easy part. A polling integration asks a third-party API every few minutes whether anything new has happened. A webhook is the third-party calling you the moment the event fires. Cheaper and faster, with no wasted traffic when nothing is happening. [Stripe's webhook documentation](https://stripe.com/docs/webhooks) is the reference implementation most other vendors copy, and [GitHub's webhook docs](https://docs.github.com/en/webhooks/about-webhooks) plus [Xero's webhook overview](https://developer.xero.com/documentation/guides/webhooks/overview/) follow the same pattern.
 
-The canonical reference implementation is Stripe. The [Stripe webhooks documentation](https://stripe.com/docs/webhooks) is the doc most developers learn webhooks from, and the patterns there, event types, signed payloads, idempotency keys, retry policies, are the ones every other vendor copies. [GitHub's webhook docs](https://docs.github.com/en/webhooks/about-webhooks) cover the same shape for code events. In the Australian SMB stack, [Xero's webhooks](https://developer.xero.com/documentation/guides/webhooks/overview/) cover invoices, contacts and bank transactions.
+The part most teams skip is the contract.
 
-Here is one concrete reproducible example. A small business uses Xero for accounting and HubSpot for CRM. They want a thank-you email and a status update the moment a client pays an invoice. Without webhooks, an automation runs every five minutes asking Xero "any invoices marked paid in the last five minutes?", twelve queries an hour, mostly empty. With a webhook, Xero fires a POST request to a URL on the business's automation platform the instant the invoice status changes. The payload, a small JSON object with the invoice ID and the event type, hits an n8n workflow. The workflow updates the deal stage in HubSpot, fires the thank-you email, and logs the payment in Slack. Total delay from "paid" to "thank-you sent", under two seconds. Zero polling, zero wasted calls.
+A webhook URL is public attack surface. Anyone who knows the URL can POST any payload they want. Stripe, Xero and GitHub all sign their payloads with a shared secret so the receiver can verify the request came from them. n8n, Make and Zapier all ship default webhook receivers with no signature check enabled. Ship the no-code default and a competitor (or a bored teenager) with the URL can fire fake "invoice paid" events into your CRM and trigger refund flows you never authorised. The fix is one HMAC validation step before processing. It is non-optional on any production build.
 
-Two practical notes. Validate the signature header providers send so you know the request is genuine, Stripe, Xero and GitHub all sign their payloads. And design the endpoint to be idempotent, the same webhook may arrive twice if the provider's retry kicks in. Webhooks are the connective tissue under most [business process automation](/glossary/what-is-business-process-automation) and the trigger that lets [AI automation](/glossary/what-is-ai-automation) react in real time. They're the default first piece UnderCurrent Automations reaches for on any [Custom Integrations](/custom-integrations) build.
+The second contract is idempotency. Most webhook providers retry on a non-200 response, and many retry quietly on timeout even when the original request succeeded. The result: the same "payment received" event arrives twice, the workflow runs twice, the thank-you email sends twice, and in the worst case the customer is charged twice. The fix is storing each event ID on first receipt and dropping duplicates on the retry. Stripe documents this pattern, almost no SMB automation tutorial mentions it.
+
+A concrete reproducible example. A small business runs Xero for accounting and HubSpot for CRM. Xero fires a webhook to an n8n workflow when an invoice is marked paid. The workflow validates the Xero signature header, checks an Upstash Redis store for the event ID, then updates the HubSpot deal stage, fires the thank-you email and logs to Slack. Two seconds end to end. Zero polling, zero replay risk.
+
+Webhooks are the connective tissue under [business process automation](/glossary/what-is-business-process-automation) and the trigger that lets [AI automation](/glossary/what-is-ai-automation) react in real time. UnderCurrent Automations treats every webhook on a [Custom Integrations](/custom-integrations) build as a two-part contract: signature validation and idempotency, both required before the workflow runs. Skip either and the system works until the day it doesn't, usually on the support ticket six months later.
