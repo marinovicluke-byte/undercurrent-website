@@ -202,16 +202,6 @@ Most owners try DIY first, hit the wall at skill 3, then choose between a worksh
 
 No wrong path, only the wrong path for your situation. [Book a chat with UnderCurrent Automations](/contact) and we'll tell you straight, including when DIY is smarter, consistent with [Anthropic's autonomy data](https://www.anthropic.com/research/how-australia-uses-claude). Worst outcome: a $5k build no one uses.
 
-## Related Reading
-
-- [Top 5 small business automation tools for 2026](/blog/top-5-small-business-automation-tools-2026)
-- [What is business process automation in Australia](/blog/what-is-business-process-automation-australia)
-- [AI training for small business in Australia](/blog/ai-training-australia-small-business-guide)
-- [e-Invoicing for Australian small business](/blog/einvoicing-small-business-australia-guide)
-- [Hidden cost of manual processes in a trade business](/blog/hidden-cost-manual-trade-business-australia)
-- [How to use AI to improve a tradie business in Australia](/blog/hidden-cost-manual-trade-business-australia)
-- [How much manual processes are costing your business](/blog/how-much-are-manual-processes-costing-your-business)
-
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" role="img" aria-label="Traditional SEO compared with AI search optimisation for Australian businesses" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>Traditional SEO compared with AI search optimisation for Australian businesses</title>
@@ -267,3 +257,13 @@ Australia ranks 11th globally for Claude.ai usage and uses Claude at more than 4
 **What's the fastest way to start using Claude in a business that's never used AI before?**
 
 Sign up for a Claude Pro subscription, pick one recurring weekly task that takes you over an hour (quote follow-ups, weekly report prep, customer email triage), and use Claude.ai to do only that one task for two weeks before adding anything else. After two weeks you'll know whether the productivity lift is real, and you'll have learned enough to make the next call: stay on Claude.ai, upgrade to Code, or bring in UnderCurrent Automations.
+
+## Related Reading
+
+- [Top 5 small business automation tools for 2026](/blog/top-5-small-business-automation-tools-2026)
+- [What is business process automation in Australia](/blog/what-is-business-process-automation-australia)
+- [AI training for small business in Australia](/blog/ai-training-australia-small-business-guide)
+- [e-Invoicing for Australian small business](/blog/einvoicing-small-business-australia-guide)
+- [Hidden cost of manual processes in a trade business](/blog/hidden-cost-manual-trade-business-australia)
+- [How much manual processes are costing your business](/blog/how-much-are-manual-processes-costing-your-business)
+- [Google Ads cost for Australian small business](/blog/google-ads-cost-australian-small-business)
