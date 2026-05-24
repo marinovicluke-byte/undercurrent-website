@@ -26,48 +26,6 @@ faqs:
 
 > **Quick Answer:** Using [Claude](https://www.anthropic.com/news/claude-for-small-business) in your business means picking the right product (Claude.ai for chat, Claude Code for real work, Claude Cowork for teams, Claude for Small Business as the packaged plan), then wiring it into the work that drains your week. Australians already use Claude at over 4× the global per-capita rate, but most stop at asking questions instead of giving it real jobs. DIY setup takes a weekend. The compound benefit takes months. Pick one task, start tomorrow.
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
-<title>AI search optimisation workflow for Australian businesses in five steps</title>
-<rect width="1120" height="290" fill="#121210"/>
-<text x="560" y="46" text-anchor="middle" font-size="25" font-weight="600" fill="#FAF9F5">How AI Search Optimisation Works</text>
-<text x="560" y="72" text-anchor="middle" font-size="13" fill="#D4C9B0">From content to citation in 5 steps</text>
-<rect x="40" y="100" width="180" height="140" rx="8" fill="#1C1C1A" stroke="#6A8DAD" stroke-width="1.5"/>
-<text x="56" y="132" font-size="13" font-weight="600" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">01</text>
-<text x="56" y="162" font-size="13" font-weight="600" fill="#FAF9F5">Write direct answers</text>
-<text x="56" y="188" font-size="10.5" fill="#D4C9B0">lead every section with</text>
-<text x="56" y="202" font-size="10.5" fill="#D4C9B0">the answer</text>
-<line x1="224" y1="170" x2="244" y2="170" stroke="#8FAF9F" stroke-width="1.5"/>
-<polygon points="244,166 244,174 251,170" fill="#8FAF9F"/>
-<rect x="255" y="100" width="180" height="140" rx="8" fill="#1C1C1A" stroke="#6A8DAD" stroke-width="1.5"/>
-<text x="271" y="132" font-size="13" font-weight="600" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">02</text>
-<text x="271" y="162" font-size="13" font-weight="600" fill="#FAF9F5">Add schema markup</text>
-<text x="271" y="188" font-size="10.5" fill="#D4C9B0">JSON-LD for FAQ and</text>
-<text x="271" y="202" font-size="10.5" fill="#D4C9B0">article</text>
-<line x1="439" y1="170" x2="459" y2="170" stroke="#8FAF9F" stroke-width="1.5"/>
-<polygon points="459,166 459,174 466,170" fill="#8FAF9F"/>
-<rect x="470" y="100" width="180" height="140" rx="8" fill="#1C1C1A" stroke="#6A8DAD" stroke-width="1.5"/>
-<text x="486" y="132" font-size="13" font-weight="600" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">03</text>
-<text x="486" y="162" font-size="13" font-weight="600" fill="#FAF9F5">Cite tier-1 sources</text>
-<text x="486" y="188" font-size="10.5" fill="#D4C9B0">hyperlink claims to</text>
-<text x="486" y="202" font-size="10.5" fill="#D4C9B0">authority</text>
-<line x1="654" y1="170" x2="674" y2="170" stroke="#8FAF9F" stroke-width="1.5"/>
-<polygon points="674,166 674,174 681,170" fill="#8FAF9F"/>
-<rect x="685" y="100" width="180" height="140" rx="8" fill="#1C1C1A" stroke="#6A8DAD" stroke-width="1.5"/>
-<text x="701" y="132" font-size="13" font-weight="600" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">04</text>
-<text x="701" y="162" font-size="13" font-weight="600" fill="#FAF9F5">AI engines crawl</text>
-<text x="701" y="188" font-size="10.5" fill="#D4C9B0">Perplexity, ChatGPT,</text>
-<text x="701" y="202" font-size="10.5" fill="#D4C9B0">Gemini index</text>
-<line x1="869" y1="170" x2="889" y2="170" stroke="#8FAF9F" stroke-width="1.5"/>
-<polygon points="889,166 889,174 896,170" fill="#8FAF9F"/>
-<rect x="900" y="100" width="180" height="140" rx="8" fill="#1C1C1A" stroke="#6A8DAD" stroke-width="1.5"/>
-<text x="916" y="132" font-size="13" font-weight="600" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">05</text>
-<text x="916" y="162" font-size="13" font-weight="600" fill="#FAF9F5">Cited in answers</text>
-<text x="916" y="188" font-size="10.5" fill="#D4C9B0">your business becomes</text>
-<text x="916" y="202" font-size="10.5" fill="#D4C9B0">the source</text>
-<text x="560" y="266" text-anchor="middle" font-size="9" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">UnderCurrent Automations · AI Search Workflow · 2026</text>
-</svg>
-
-
 ## What is Claude, and what are the four product lines?
 
 **Claude is the AI assistant built by [Anthropic](https://www.anthropic.com/news/claude-for-small-business), and as of 2026 it ships in four product lines that confuse almost every Australian SMB owner.**
@@ -201,36 +159,6 @@ Most owners try DIY first, hit the wall at skill 3, then choose between a worksh
 - **Done-for-you** (gets you to run faster), buy the outcome. We scope, build the skills, train your team, monitor month one. Cost: setup fee plus the Claude plan.
 
 No wrong path, only the wrong path for your situation. [Book a chat with UnderCurrent Automations](/contact) and we'll tell you straight, including when DIY is smarter, consistent with [Anthropic's autonomy data](https://www.anthropic.com/research/how-australia-uses-claude). Worst outcome: a $5k build no one uses.
-
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" role="img" aria-label="Traditional SEO compared with AI search optimisation for Australian businesses" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
-<title>Traditional SEO compared with AI search optimisation for Australian businesses</title>
-<rect width="900" height="430" fill="#121210"/>
-<text x="450" y="46" text-anchor="middle" font-size="25" font-weight="600" fill="#FAF9F5">Traditional SEO vs AI Search</text>
-<text x="450" y="72" text-anchor="middle" font-size="13" fill="#D4C9B0">Why the old playbook isn't enough</text>
-<line x1="450" y1="96" x2="450" y2="388" stroke="#2E2E2B" stroke-width="1"/>
-<rect x="40" y="96" width="380" height="42" rx="8" fill="#1C1C1A" stroke="#D4C9B0" stroke-width="1.5"/>
-<text x="230" y="123" text-anchor="middle" font-size="12" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">TRADITIONAL SEO</text>
-<rect x="480" y="96" width="380" height="42" rx="8" fill="#1C1C1A" stroke="#8FAF9F" stroke-width="1.5"/>
-<text x="670" y="123" text-anchor="middle" font-size="12" fill="#8FAF9F" font-family="ui-monospace,SF Mono,monospace">AI SEARCH OPTIMISATION</text>
-<text x="450" y="122" text-anchor="middle" font-size="11" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">VS</text>
-<rect x="40" y="152" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#D4C9B0" stroke-width="1"/>
-<text x="60" y="191" font-size="12.5" fill="#D4C9B0">Keyword density tuning</text>
-<rect x="480" y="152" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#8FAF9F" stroke-width="1"/>
-<circle cx="498" cy="187" r="4" fill="#8FAF9F"/>
-<text x="514" y="191" font-size="12.5" fill="#FAF9F5">Direct answer extraction</text>
-<rect x="40" y="232" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#D4C9B0" stroke-width="1"/>
-<text x="60" y="271" font-size="12.5" fill="#D4C9B0">Backlink quantity focus</text>
-<rect x="480" y="232" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#8FAF9F" stroke-width="1"/>
-<circle cx="498" cy="267" r="4" fill="#8FAF9F"/>
-<text x="514" y="271" font-size="12.5" fill="#FAF9F5">Entity-rich citations</text>
-<rect x="40" y="312" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#D4C9B0" stroke-width="1"/>
-<text x="60" y="351" font-size="12.5" fill="#D4C9B0">Page rank position obsession</text>
-<rect x="480" y="312" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#8FAF9F" stroke-width="1"/>
-<circle cx="498" cy="347" r="4" fill="#8FAF9F"/>
-<text x="514" y="351" font-size="12.5" fill="#FAF9F5">AI-cited authority signals</text>
-<text x="450" y="414" text-anchor="middle" font-size="9" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">UnderCurrent Automations · SEO Comparison · 2026</text>
-</svg>
 
 ## Frequently asked questions
 
