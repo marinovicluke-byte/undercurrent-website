@@ -54,7 +54,7 @@ These six survive the three-month "is this still being used" test in client buil
 - **Research and decisions**, competitor scans, supplier comparisons, sizing a new service line, [SEO planning](/blog/seo-for-small-business).
 - **Content and ads**, first drafts of blog posts, social captions, [Google Ads variants](/blog/google-ads-cost-australian-small-business).
 
-All six are now augmented by [Claude's native Connectors](https://www.anthropic.com/news/integrations), direct integrations into Intuit QuickBooks, PayPal, HubSpot, Canva, Docusign, [Slack](https://www.anthropic.com/news/claude-and-slack), Google Workspace, and Microsoft 365, so Claude reads and writes inside your stack without custom plumbing.
+All six are now augmented by [Claude's native Connectors](https://claude.com/blog/integrations), direct integrations into Intuit QuickBooks, PayPal, HubSpot, Canva, Docusign, [Slack](https://claude.com/blog/claude-and-slack), Google Workspace, and Microsoft 365, so Claude reads and writes inside your stack without custom plumbing.
 
 The ones that don't survive: anything client-facing without human review (legal, medical). For trades, our [tradie AI guide](/blog/hidden-cost-manual-trade-business-australia) covers the same six.
 

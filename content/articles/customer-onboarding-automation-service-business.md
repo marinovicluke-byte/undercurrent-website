@@ -232,7 +232,7 @@ Want this built on your CRM and Xero, usually live within a week? Book a [free a
 
 ## Sources
 
-1. Visa, *Digital Banking Onboarding Research* , https://usa.visa.com/visa-everywhere/security/digital-banking-onboarding.html
+1. Visa, *Digital Banking Onboarding Research*
 2. SundaySky, *Customer Onboarding Statistics 2026* , https://sundaysky.com/blog/customer-onboarding-statistics/
 3. GetContrast, *Automate Client Onboarding* , https://www.getcontrast.io/learn/automate-client-onboarding
 4. Akita, *Customer Onboarding Statistics* , https://akitaapp.com/blog/customer-onboarding-statistics/

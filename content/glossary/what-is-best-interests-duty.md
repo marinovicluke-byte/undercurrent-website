@@ -1,7 +1,7 @@
 ---
 slug: what-is-best-interests-duty
 term: Best Interests Duty (BID)
-shortDefinition: The legal duty on mortgage brokers and other credit assistance providers, commenced 1 January 2021, to act in the consumer's best interests and prioritise consumer interests in any conflict, enforced by ASIC under the National Consumer Credit Protection Act 2009.
+shortDefinition: ASIC duty on mortgage brokers and credit assistance providers, since 1 January 2021, to act in the consumer's best interests under the NCCP Act 2009.
 category: regulator
 relatedServices: [/seo-ai-visibility]
 relatedTerms: [what-is-asic, what-is-australian-credit-licence, what-is-afca]

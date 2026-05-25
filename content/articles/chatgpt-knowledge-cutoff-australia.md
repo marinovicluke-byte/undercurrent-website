@@ -36,7 +36,7 @@ Below are the verified cutoff dates for every major model in production today, t
 
 When you ask ChatGPT a question, two things happen. The model retrieves what it learned during pre-training, capped at its cutoff. If the query triggers it, ChatGPT also runs a live web search through Bing for fresh information. The retrieved result sits in the context window for that conversation only, then disappears. That is not the same as the model "knowing" something.
 
-Independent testing by researcher [Matt Mazur](https://mattmazur.com/2023/11/14/exploring-chatgpts-knowledge-cutoff/), alongside [Anthropic's published model card for Claude Opus](https://www.anthropic.com/claude/opus), shows recall decays well before the stated cutoff. Mazur's celebrity-death dataset returned 91.7% accuracy at January 2022 and dropped to 44% by March 2023. Knowledge near the edge is patchy.
+Independent testing by researcher [Matt Mazur](https://mattmazur.com/2023/11/14/exploring-chatgpts-knowledge-cutoff/), alongside [Anthropic's published model card for Claude Opus](https://claude.com/product/overview/opus), shows recall decays well before the stated cutoff. Mazur's celebrity-death dataset returned 91.7% accuracy at January 2022 and dropped to 44% by March 2023. Knowledge near the edge is patchy.
 
 ### What this means for an Australian business
 
@@ -44,7 +44,7 @@ If a business launched a service or earned a press mention in the last 6 months,
 
 ## ChatGPT knowledge cutoff dates for every current model
 
-**Every model in production carries a different cutoff**, made explicit in vendor docs from [OpenAI](https://help.openai.com/en/articles/6825453-chatgpt-release-notes), [Anthropic](https://www.anthropic.com/claude/opus), and [Google](https://developers.google.com/). Here are the dates as of May 2026.
+**Every model in production carries a different cutoff**, made explicit in vendor docs from [OpenAI](https://help.openai.com/en/articles/6825453-chatgpt-release-notes), [Anthropic](https://claude.com/product/overview/opus), and [Google](https://developers.google.com/). Here are the dates as of May 2026.
 
 | Model | Knowledge cutoff | Released |
 |---|---|---|
@@ -88,7 +88,7 @@ Live search runs through Bing for ChatGPT, through Google for Gemini, and throug
 
 ## The 6-month coverage-to-training-data gap rule
 
-**Coverage earned today is usually invisible to AI models for around 6 months**, based on cutoff-to-release patterns visible in [OpenAI's release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) and [Anthropic's Claude Opus documentation](https://www.anthropic.com/claude/opus). If a tier-one mention lands today, expect it inside the next major model in roughly 6 to 12 months.
+**Coverage earned today is usually invisible to AI models for around 6 months**, based on cutoff-to-release patterns visible in [OpenAI's release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) and [Anthropic's Claude Opus documentation](https://claude.com/product/overview/opus). If a tier-one mention lands today, expect it inside the next major model in roughly 6 to 12 months.
 
 ### Worked example
 
@@ -134,7 +134,7 @@ Only around 1 in 4 Australian agency sites carry an llms.txt today, based on our
 
 ## The earned-media calendar for ChatGPT cutoff timing
 
-**The earned-media calendar is the slow play that compounds across the 6 to 12 month gap between model cutoff and release.** This is the work that gets a brand into the next model's training data, not just its retrieval index. The [Anthropic Claude product overview](https://www.anthropic.com/claude) frames the same retrieval-vs-training split from the model-vendor side.
+**The earned-media calendar is the slow play that compounds across the 6 to 12 month gap between model cutoff and release.** This is the work that gets a brand into the next model's training data, not just its retrieval index. The [Anthropic Claude product overview](https://claude.com/product/overview) frames the same retrieval-vs-training split from the model-vendor side.
 
 - Map the next 12 months of tier-one mention opportunities, awards, journalist queries, podcasts, conference talks.
 - Maintain a Wikipedia, Reddit, and review-site presence (G2, Capterra, ProductReview Australia).

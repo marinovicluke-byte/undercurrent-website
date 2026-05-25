@@ -69,7 +69,7 @@ export default async function ClusterPage({ params }) {
     url: `${SITE_URL}/blog/cluster/${slug}`,
     inLanguage: 'en-AU',
     isPartOf: { '@type': 'WebSite', name: 'UnderCurrent Automations', url: SITE_URL },
-    hasPart: {
+    mainEntity: {
       '@type': 'ItemList',
       name: cluster.label,
       numberOfItems: articles.length,

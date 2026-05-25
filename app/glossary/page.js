@@ -12,18 +12,20 @@ const CONTENT_MAX = 1280
 export const metadata = {
   title: 'Glossary',
   description:
-    'Plain-English definitions for AI search, automation, and the regulators that shape Australian service businesses — SEO, AEO, GEO, AI agents, ASIC Best Interests Duty and more. Built by Luke at UnderCurrent Automations.',
+    'Plain-English definitions for AI search, automation, and the regulators shaping Australian service businesses: SEO, AEO, GEO, AI agents and more.',
   alternates: { canonical: `${SITE_URL}/glossary` },
   openGraph: {
     title: 'Glossary — UnderCurrent Automations',
     description: 'Plain-English definitions for AI search, automation, and Australian compliance.',
     type: 'website',
     url: `${SITE_URL}/glossary`,
+    images: [{ url: `${SITE_URL}/brand/og-card.png`, width: 1200, height: 630, alt: 'UnderCurrent Automations Glossary' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Glossary — UnderCurrent Automations',
     description: 'Plain-English definitions for AI search, automation, and Australian compliance.',
+    images: [`${SITE_URL}/brand/og-card.png`],
   },
 }
 

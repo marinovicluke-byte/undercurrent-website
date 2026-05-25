@@ -70,7 +70,7 @@ export default function BlogV4() {
     url: `${SITE_URL}/blog`,
     inLanguage: 'en-AU',
     isPartOf: { '@type': 'WebSite', name: 'UnderCurrent Automations', url: SITE_URL },
-    hasPart: [
+    mainEntity: [
       ...CLUSTER_ORDER.map(key => ({
         '@type': 'ItemList',
         name: `${CLUSTERS[key].label} — Automation Guides`,

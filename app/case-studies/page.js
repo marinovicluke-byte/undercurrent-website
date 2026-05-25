@@ -43,7 +43,7 @@ export default function CaseStudiesIndex() {
     url: `${SITE_URL}/case-studies`,
     inLanguage: 'en-AU',
     isPartOf: { '@type': 'WebSite', name: 'UnderCurrent Automations', url: SITE_URL },
-    hasPart: {
+    mainEntity: {
       '@type': 'ItemList',
       name: 'Automation Case Studies',
       numberOfItems: caseStudies.length,

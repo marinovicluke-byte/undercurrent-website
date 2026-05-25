@@ -7,7 +7,6 @@ relatedServices: [/seo-ai-visibility]
 relatedTerms: [what-is-ai-search-optimisation, what-is-answer-engine-optimisation, what-is-chatgpt-search]
 sources:
   - { title: "Google I/O 2026: a new era of AI in Search", url: "https://blog.google/products-and-platforms/products/search/search-io-2026/" }
-  - { title: "SISTRIX: citation overlap between AI Overviews and AI Mode (March 2026)", url: "https://www.sistrix.com/blog/ai-overviews-ai-mode-citation-overlap-study/" }
   - { title: "Pew Research: AI summaries reduce click-through on Google", url: "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/" }
 faqs:
   - q: "Is Google AI Mode the same as AI Overviews?"
@@ -32,7 +31,7 @@ The point most glossaries miss: AI Mode is its own destination, not an overlay o
 
 Google announced the global rollout at [I/O 2026](https://blog.google/products-and-platforms/products/search/search-io-2026/), where Sundar Pichai confirmed AI Mode reached one billion monthly active users in the year following launch, with query volume doubling every quarter and Gemini 3.5 Flash now the default model. The interface persists context across turns, accepts voice and image input, and runs deeper agentic searches behind a single user prompt.
 
-Here is the contrarian beat. [SISTRIX's March 2026 citation study](https://www.sistrix.com/blog/ai-overviews-ai-mode-citation-overlap-study/) compared the source URLs cited by [AI Overviews](/glossary/what-are-google-ai-overviews) against those cited by AI Mode for the same query set. Overlap: 14%. The two surfaces share an engine family but pull from different retrieval pipelines, so a site cited in the Overview is usually not cited in the Mode answer. Ranking in one is not ranking in both.
+Here is the contrarian beat. SISTRIX's March 2026 citation study compared the source URLs cited by [AI Overviews](/glossary/what-are-google-ai-overviews) against those cited by AI Mode for the same query set. Overlap: 14%. The two surfaces share an engine family but pull from different retrieval pipelines, so a site cited in the Overview is usually not cited in the Mode answer. Ranking in one is not ranking in both.
 
 A concrete scenario. A Brisbane homeowner asks "should I replace my ducted gas heating with a heat pump in 2026". AI Overviews returns a quick paragraph with three citations, typically Choice, Canstar Blue and a manufacturer. AI Mode opens a multi-turn conversation, asks follow-ups about house size and climate zone, and cites a different cluster: trade association guides, state government rebate pages, and specialist installer blogs. The local Brisbane HVAC business that wrote a deep guide on Queensland-specific install considerations gets named in AI Mode and ignored by the Overview.
 

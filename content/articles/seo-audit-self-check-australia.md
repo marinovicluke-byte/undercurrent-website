@@ -133,7 +133,7 @@ If you'd rather have the whole thing done for you, audit, fixes, and ongoing vis
 
 **Run a basic self-audit every quarter.** Run a deeper audit every six months.
 
-Google ships ranking system updates regularly, and [Google Search Central's ranking updates page](https://developers.google.com/search/updates/ranking) documents each confirmed core update. Sites that ranked cleanly 18 months ago may now be running into new signals they haven't accounted for. A quarterly check catches drift before it becomes a crisis.
+Google ships ranking system updates regularly, and [Google Search Central's ranking updates page](https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history) documents each confirmed core update. Sites that ranked cleanly 18 months ago may now be running into new signals they haven't accounted for. A quarterly check catches drift before it becomes a crisis.
 
 Trigger an unscheduled audit when you migrate your site, change your URL structure, add a major service page, or notice a sudden traffic drop in Search Console. These events break things in ways a routine check won't catch until the damage is done. Our [how we work](/process) page outlines how we build recurring audit checkpoints into client engagements for exactly this reason.
 
@@ -184,7 +184,7 @@ According to [Semrush's local SEO data](https://www.semrush.com/blog/seo-statist
 3. [Google Search Central, Core Web Vitals as a Ranking Signal](https://developers.google.com/search/docs/appearance/core-web-vitals)
 4. [Google web.dev, Core Web Vitals](https://web.dev/articles/vitals)
 5. [Google Search Central, LocalBusiness Structured Data](https://developers.google.com/search/docs/appearance/structured-data/local-business)
-6. [Google Search Central, Ranking Updates](https://developers.google.com/search/updates/ranking)
+6. [Google Search Central, Ranking Updates](https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history)
 7. [Google Support, Google Business Profile Local Ranking Signals](https://support.google.com/business/answer/7091)
 8. [IBISWorld, Australian Digital Advertising Agencies Industry Report](https://www.ibisworld.com/australia/industry/digital-advertising-agencies/5535/)
 9. [Bruce Clay Australia, SEO Assessment](https://www.bruceclay.com/au/seo/seo_assessment/)

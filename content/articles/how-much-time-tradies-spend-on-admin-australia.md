@@ -30,7 +30,7 @@ faqs:
 
 It is 5pm. The kids are home. You are still at the kitchen table doing paperwork.
 
-This is not a one-off. [Xero Small Business Insights 2024](https://www.xero.com/au/small-business-insights/) says Australian small business owners spend 10.5 hours a week on admin. For tradies the number sits at the top of that range. Plumbers, sparkies, builders, HVAC techs all push paper job by job, with extra weight from compliance and vehicle paperwork.
+This is not a one-off. [Xero Small Business Insights 2024](https://www.xero.com/au/resources/small-business-insights/) says Australian small business owners spend 10.5 hours a week on admin. For tradies the number sits at the top of that range. Plumbers, sparkies, builders, HVAC techs all push paper job by job, with extra weight from compliance and vehicle paperwork.
 
 The [Australian Bureau of Statistics](https://www.abs.gov.au) says sole traders and small business owners with one to four staff work 44 hours a week. Eight to twelve of those hours do not earn a cent. They keep the business alive.
 
@@ -78,7 +78,7 @@ Add it up and you are at 8 to 12 hours a week before you have turned a single sc
 
 **Invoicing and chasing payments takes the average tradie 2 to 3 hours a week.** Writing the invoice is the quick part. Chasing the late ones is the slow part, and it never really ends.
 
-Xero's [Small Business Insights](https://www.xero.com/au/small-business-insights/) data shows 44% of Australian small business invoices get paid late. That means follow-up calls, reminder emails, and bank reconciliation work for almost half of every job you ever do. We have written more on [how overdue invoices hurt Australian SME cash flow](/blog/how-overdue-invoices-hurt-australian-sme-cash-flow) if you want the deeper read.
+Xero's [Small Business Insights](https://www.xero.com/au/resources/small-business-insights/) data shows 44% of Australian small business invoices get paid late. That means follow-up calls, reminder emails, and bank reconciliation work for almost half of every job you ever do. We have written more on [how overdue invoices hurt Australian SME cash flow](/blog/how-overdue-invoices-hurt-australian-sme-cash-flow) if you want the deeper read.
 
 If you do five jobs a week and two get paid late, that is two extra phone calls, two extra emails, and two awkward "any update mate?" texts. Multiply by 50 working weeks and you have done that loop 200 times in a year. None of it billable.
 

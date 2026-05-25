@@ -6,7 +6,7 @@ category: discipline
 relatedServices: [/seo-ai-visibility]
 relatedTerms: [what-is-schema-markup, what-is-faq-schema, what-is-entity-seo]
 sources:
-  - { title: "W3C: Semantic Web and structured data", url: "https://www.w3.org/standards/semanticweb/data" }
+  - { title: "W3C: Semantic Web and structured data", url: "https://www.w3.org/2001/sw/" }
   - { title: "Google Search Central: intro to structured data markup", url: "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" }
   - { title: "schema.org: Getting started", url: "https://schema.org/docs/gs.html" }
 faqs:
@@ -30,7 +30,7 @@ source: claude-code
 
 The hierarchy first, then the prescription.
 
-Structured data is the broad concept, defined in [W3C's Semantic Web work](https://www.w3.org/standards/semanticweb/data). It is any markup that lets a machine understand what a piece of content is, rather than just how to display it. A vocabulary is the agreed list of types and properties: schema.org for web content, OpenGraph for social previews, Dublin Core for documents. A format is how the vocabulary gets written into the page: JSON-LD, Microdata, RDFa, or meta tags.
+Structured data is the broad concept, defined in [W3C's Semantic Web work](https://www.w3.org/2001/sw/). It is any markup that lets a machine understand what a piece of content is, rather than just how to display it. A vocabulary is the agreed list of types and properties: schema.org for web content, OpenGraph for social previews, Dublin Core for documents. A format is how the vocabulary gets written into the page: JSON-LD, Microdata, RDFa, or meta tags.
 
 Most explainers walk through all five formats as live options. They are not.
 

@@ -12,7 +12,7 @@ const LAST_UPDATED = '7 May 2026'
 export const metadata = {
   title: 'Company Information',
   description:
-    'Company information for UnderCurrent Automations. Melbourne AI automation agency founded by Luke Marinovic in 2026. Trading details, services, locations served, pricing, founder, contact, hours, and FAQ.',
+    'UnderCurrent Automations: Melbourne AI automation agency founded by Luke Marinovic in 2026. Trading details, services, pricing, contact, hours, FAQ.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Company Information | UnderCurrent Automations',

@@ -7,7 +7,6 @@ relatedServices: [/seo-ai-visibility]
 relatedTerms: [what-is-agentic-search, what-is-google-business-profile, what-is-local-seo]
 sources:
   - { title: "Google I/O 2026: Search announcements and Agentic Calling", url: "https://blog.google/products-and-platforms/products/search/search-io-2026/" }
-  - { title: "Add a booking link to your Business Profile (Google support)", url: "https://support.google.com/business/answer/9172420" }
   - { title: "What does Google I/O 2026 mean for SEO (Stan Ventures)", url: "https://www.stanventures.com/news/what-does-google-i-o-2026-mean-for-seo-your-rankings-7321/" }
 faqs:
   - q: "How does Agentic Booking actually reach a business?"
@@ -30,7 +29,7 @@ source: claude-code
 
 Picture a Brunswick resident on a Saturday morning with a leaking hot-water system. They open Gemini and say "book me a plumber for this morning in Brunswick." The agent does not return a list of links. It pulls three local plumbers, checks each for a Google Business Profile booking action, and where none exists, it places a phone call using [Agentic Calling, announced at Google I/O 2026](https://blog.google/products-and-platforms/products/search/search-io-2026/). The plumber that answers and has a visible slot wins the job. The two that go to voicemail are skipped before they ever knew the query existed.
 
-Strip the request to first principles. If the agent is making a phone call or hitting an API to book, the business needs three things: a claimed [Google Business Profile](/glossary/what-is-google-business-profile) with accurate hours, a machine-readable booking surface (Reserve with Google, a [GBP booking action](https://support.google.com/business/answer/9172420), Booksy for beauty, Hicaps-integrated portals for allied health, or a plain Calendly link), and a phone that gets answered. Everything else, the brand video, the hero image, the testimonial slider, is downstream of those three.
+Strip the request to first principles. If the agent is making a phone call or hitting an API to book, the business needs three things: a claimed [Google Business Profile](/glossary/what-is-google-business-profile) with accurate hours, a machine-readable booking surface (Reserve with Google, a GBP booking action, Booksy for beauty, Hicaps-integrated portals for allied health, or a plain Calendly link), and a phone that gets answered. Everything else, the brand video, the hero image, the testimonial slider, is downstream of those three.
 
 The contrarian load-bearing point: presentation is dead, transactability wins. [Industry analysis of the I/O 2026 announcements](https://www.stanventures.com/news/what-does-google-i-o-2026-mean-for-seo-your-rankings-7321/) frames this as the shift from "rank me" to "book me." The Australian SMB categories most exposed are the ones UnderCurrent Automations works in daily: plumbers, electricians, physios, hair and beauty, mobile dog groomers. The mobile groomer with three Sunday slots published through Booksy beats the groomer with the better website and a contact form.
 

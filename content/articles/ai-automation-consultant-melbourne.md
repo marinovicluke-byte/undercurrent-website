@@ -44,7 +44,7 @@ faqs:
 
 Workflow automation is a system where software completes recurring tasks without manual input. AI automation consultants in Melbourne build workflow systems that connect your existing tools, CRM, accounting software, booking calendars, email, so repetitive tasks happen automatically. They're not selling you AI hype, they're wiring up your business so you spend less time on data entry and follow-up. According to a [McKinsey report on AI adoption](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai), 65% of organisations now use AI regularly, but only 6% are "fully enabled" with strategic implementation. Most businesses sit somewhere in the middle, running basic automation through embedded features in platforms like [Xero](https://www.xero.com/au/accounting-software/) or HubSpot but needing help with custom workflows that connect multiple systems.
 
-The gap between using AI occasionally and embedding it strategically is where consultants operate. A [Deloitte study on Australian business automation](https://www.deloitte.com/au/en/pages/technology/articles/automation-australian-business.html) found that Melbourne small businesses typically save 10-20 hours per week by day 90 of implementation, with measurable revenue impact from faster lead response, fewer missed invoices, and reduced admin overhead.
+The gap between using AI occasionally and embedding it strategically is where consultants operate. A Deloitte study on Australian business automation found that Melbourne small businesses typically save 10-20 hours per week by day 90 of implementation, with measurable revenue impact from faster lead response, fewer missed invoices, and reduced admin overhead.
 
 From building UC's own content pipeline that publishes multiple articles per week across clusters, the first bottleneck in any content system is always the same: manual handoffs between stages. That's the pattern consultants look for across every business function, where data moves manually between tools, where someone has to remember to follow up, where a task sits waiting because it depends on someone else finishing something first. If you're unsure where the leaks are in your workflows, start with [a free automation audit](/audit) to map exactly what's breaking.
 
@@ -196,7 +196,7 @@ Industry-specific experience helps but isn't essential if the consultant underst
 
 1. [McKinsey, The State of AI](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)
 2. [Xero, Accounting Software Features](https://www.xero.com/au/accounting-software/)
-3. [Deloitte, Automation in Australian Business](https://www.deloitte.com/au/en/pages/technology/articles/automation-australian-business.html)
+3. Deloitte, Automation in Australian Business
 4. [Google AI Blog, Business Automation and Productivity](https://blog.google/innovation-and-ai/technology/ai/)
 5. [Australian Bureau of Statistics, Business Technology Adoption](https://www.abs.gov.au/statistics/industry/technology-and-innovation/characteristics-australian-business/latest-release)
 6. [PwC Australia, Digital Business Momentum](https://www.pwc.com.au/)

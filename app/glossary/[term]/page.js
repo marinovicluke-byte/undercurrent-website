@@ -37,11 +37,13 @@ export async function generateMetadata({ params }) {
       publishedTime: fm.datePublished,
       modifiedTime: fm.dateModified || fm.datePublished,
       authors: [fm.author || 'Luke Marinovic'],
+      images: [{ url: `${SITE_URL}/brand/og-card.png`, width: 1200, height: 630, alt: fm.term }],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${fm.term} — UnderCurrent Glossary`,
       description: fm.shortDefinition,
+      images: [`${SITE_URL}/brand/og-card.png`],
     },
   }
 }

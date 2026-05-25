@@ -106,7 +106,7 @@ The audit broke down 8 dimensions:
 7. Backlink & Authority (3/11), no social presence
 8. AI Search Readiness (2/17), no answer-first structure, no FAQ
 
-Most Australian small businesses don't fail at SEO because they're lazy. They fail because they don't know what "good" looks like, and agencies oversell tactics without explaining fundamentals. This is one of the core [mistakes contractors make with SEO in 2026](https://core6.marketing/blog/what-contractors-get-wrong-about-seo-in-2026/), prioritising tactics over technical foundations.
+Most Australian small businesses don't fail at SEO because they're lazy. They fail because they don't know what "good" looks like, and agencies oversell tactics without explaining fundamentals. This is one of the core mistakes contractors make with SEO in 2026, prioritising tactics over technical foundations.
 
 According to the [Australian Small Business and Family Enterprise Ombudsman's 2024 report](https://www.asbfeo.gov.au/resources-tools-centre), 68% of Australian SMBs cite "lack of digital capability" as a top-3 constraint to growth. This business wasn't unusual. It was typical.
 
@@ -195,7 +195,7 @@ The payback period: 6-8 weeks. If you're losing 3 jobs/week at $850/job, that's 
 
 The businesses that win at local SEO in 2026 aren't the ones with the biggest budgets. They're the ones that treat their website as a lead generation system, not a static brochure, and invest in the unglamorous fundamentals: speed, structure, and content depth.
 
-According to [Xero's Small Business Insights 2024](https://www.xero.com/au/insights/), Australian service businesses that publish consistent content see 3.2x higher lead conversion rates than those relying solely on word-of-mouth. If your site loads in 5 seconds, has no blog, and scores under 30/105 on an SEO audit, you're not competing. You're losing by default.
+According to [Xero's Small Business Insights 2024](https://www.xero.com/au/behindsmallbusiness/), Australian service businesses that publish consistent content see 3.2x higher lead conversion rates than those relying solely on word-of-mouth. If your site loads in 5 seconds, has no blog, and scores under 30/105 on an SEO audit, you're not competing. You're losing by default.
 
 ---
 

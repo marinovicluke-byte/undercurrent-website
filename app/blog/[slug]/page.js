@@ -34,11 +34,11 @@ export async function generateMetadata({ params }) {
 
   return {
     title: { absolute: fm.title },
-    description: fm.description || fm.summary,
+    description: fm.metaDescription || fm.description || fm.summary,
     alternates: { canonical: `${SITE_URL}/blog/${slug}` },
     openGraph: {
       title: fm.title,
-      description: fm.description || fm.summary,
+      description: fm.metaDescription || fm.description || fm.summary,
       type: 'article',
       publishedTime: fm.date,
       modifiedTime: fm.dateModified || fm.date,
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }) {
     twitter: {
       card: 'summary_large_image',
       title: fm.title,
-      description: fm.description || fm.summary,
+      description: fm.metaDescription || fm.description || fm.summary,
       images: [heroImageUrl],
     },
   }
@@ -150,7 +150,7 @@ export default async function ArticlePage({ params }) {
         '@type': 'Article',
         '@id': `${SITE_URL}/blog/${slug}#article`,
         headline: fm.title,
-        description: fm.description || fm.summary,
+        description: fm.metaDescription || fm.description || fm.summary,
         datePublished: fm.date,
         dateModified: fm.dateModified || fm.date,
         author: { '@id': `${SITE_URL}/about#luke` },

@@ -106,7 +106,7 @@ First, the bottom 18 (Weak band, 30-59) had clean schema and decent meta tags. T
 
 Second, the top 19 (Strong band, 80+) shared one pattern: most carried at least one stat or claim other publishers could quote, which means they were designed for re-publication, not just for [SEO](/glossary/what-is-seo). That's the citation-bait pattern.
 
-Third, even strong articles struggled with [internal link density](/blog/ai-search-vs-traditional-seo-australia). Average internal-link count sat below the floor for a pillar article.
+Third, even strong articles struggled with [internal link density](/blog/au-seo-agencies-ai-search-audit). Average internal-link count sat below the floor for a pillar article.
 
 ## How does ChatGPT search change your AEO mix?
 
@@ -171,8 +171,7 @@ It overlaps heavily but the centre of gravity is different. Traditional [SEO](/g
 - [AEO vs SEO vs GEO](/blog/aeo-vs-seo-vs-geo) , the three optimisation jobs and how they differ
 - [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo) , practical setup checklist
 - [How to rank in ChatGPT Search](/blog/how-to-rank-in-chatgpt-search) , retrieval-path specifics
-- [AI search vs traditional SEO in Australia](/blog/ai-search-vs-traditional-seo-australia) , local context
-- [How to compare AI search agencies in Australia](/blog/how-to-compare-ai-search-agencies-australia) , what to look for
+- [How to choose an AI search agency in Australia](/blog/best-aeo-agencies-australia) , what to look for
 - [AI search vs traditional search Australia 2026](/blog/ai-search-vs-traditional-search-australia-2026) , the bigger picture
 - [What is AI search optimisation in Australia](/blog/what-is-ai-search-optimisation-australia) , local primer
 

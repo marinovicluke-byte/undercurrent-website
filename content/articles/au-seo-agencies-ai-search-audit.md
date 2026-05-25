@@ -1,6 +1,7 @@
 ---
 title: "Why Most AU SEO Agencies Fail at AI Search"
 description: "We audited 86 articles across 22 Australian SEO agency domains using the UnderCurrent Article Reviewer. The data shows a 25.5-point quality gap and a structural reason most agencies are getting away with average AI-search content."
+metaDescription: "We audited 86 articles across 22 Australian SEO agency domains. The data shows a 25.5-point quality gap and the structural reason most are average."
 date: "2026-05-07"
 slug: "au-seo-agencies-ai-search-audit"
 cluster: "seo-ai-visibility"

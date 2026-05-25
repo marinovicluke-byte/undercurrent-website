@@ -1,6 +1,7 @@
 ---
 title: "How to Rank a Melbourne Buyers Agency on AI Search"
 description: "Melbourne buyers agencies average 45/100 on our AI search and SEO rubric. Six structural fixes — quick-answer block, schema with sameAs, tier-1 sources, comparison tables, valid llms.txt — to rank in AI search across ChatGPT, Perplexity, and Google AI Overviews."
+metaDescription: "Melbourne buyers agencies average 45/100 on our AI search rubric. Six structural fixes to rank in ChatGPT, Perplexity, and Google AI Overviews."
 date: "2026-05-08"
 slug: "how-to-rank-buyers-agency-ai-search-melbourne"
 cluster: "seo-ai-visibility"

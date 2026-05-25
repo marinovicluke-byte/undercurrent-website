@@ -78,11 +78,11 @@ If you want a quick read on where your own site stands first, you can [run a fre
 
 **SEO for tradies is the work of making a trade business the first name a nearby customer sees when they search for a job they need done.** It blends three jobs into one: ranking in Google's local map pack, ranking in the standard blue-link results, and getting named by AI assistants , the Three-Layer Trade Search Stack. Each layer targets a different moment in the customer's search, and together they cover the full surface area of local trade demand. For trades, [local SEO](/glossary/what-is-local-seo) carries most of the load, because nearly every job is tied to a place and a postcode. Google's own [SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) is the baseline, and the trade-specific layer sits on top.
 
-The demand is steady and large. Safari Digital's 2026 local search analysis found [97% of people search online to find a local business](https://www.safaridigital.com.au/blog/local-seo-statistics), and 12% do it every single day. Australia had 2,729,648 actively trading businesses at 30 June 2025, with 437,150 new ones entering that year ([ABS counts of Australian businesses](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release)), and the [overwhelming majority are small businesses](https://www.asbfeo.gov.au/small-business-data-portal). It's crowded. The trade that owns the search owns the job.
+The demand is steady and large. Safari Digital's 2026 local search analysis found [97% of people search online to find a local business](https://www.safaridigital.com.au/blog/local-seo-statistics/), and 12% do it every single day. Australia had 2,729,648 actively trading businesses at 30 June 2025, with 437,150 new ones entering that year ([ABS counts of Australian businesses](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release)), and the [overwhelming majority are small businesses](https://www.asbfeo.gov.au/small-business-data-portal). It's crowded. The trade that owns the search owns the job.
 
 ## How do tradie customers actually search for a trade?
 
-**Tradie customers search in three distinct modes, and each one needs its own page waiting to catch it.** The first is emergency: "burst pipe", "no hot water", "emergency electrician". This searcher is stressed, on a phone, and ringing the first credible result. The second is research: "how much to rewire a house", "cost to clear a blocked drain". They're comparing before they commit. The third is near-me and suburb intent: "plumber near me", "electrician Frankston", the mode where [trade-specific SEO is really won](https://www.safaridigital.com.au/seo-for-tradies).
+**Tradie customers search in three distinct modes, and each one needs its own page waiting to catch it.** The first is emergency: "burst pipe", "no hot water", "emergency electrician". This searcher is stressed, on a phone, and ringing the first credible result. The second is research: "how much to rewire a house", "cost to clear a blocked drain". They're comparing before they commit. The third is near-me and suburb intent: "plumber near me", "electrician Frankston", the mode where [trade-specific SEO is really won](https://www.safaridigital.com.au/seo-for-tradies/).
 
 That third mode decides most jobs. Around [46% of all Google searches carry local intent](https://www.rankmax.com.au/articles/local-seo-statistics), and 24.4% of clicks on a local search go to the very first result. Against the 2,729,648 businesses trading in Australia ([ABS](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release)), the top three map slots are tight space. Your customer rarely scrolls. They tap the top of the pack, skim two reviews, and call.
 
@@ -252,12 +252,12 @@ Yes, and arguably it matters more. Emergency searches like "burst pipe" or "no p
 
 ## Sources
 
-1. [Safari Digital , Local SEO statistics](https://www.safaridigital.com.au/blog/local-seo-statistics)
+1. [Safari Digital , Local SEO statistics](https://www.safaridigital.com.au/blog/local-seo-statistics/)
 2. [ABS , Counts of Australian Businesses](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release)
 3. [ASBFEO , Small Business Data Portal](https://www.asbfeo.gov.au/small-business-data-portal)
 4. [Google , SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)
 5. [RankMax , Local SEO statistics](https://www.rankmax.com.au/articles/local-seo-statistics)
-6. [Safari Digital , SEO for tradies](https://www.safaridigital.com.au/seo-for-tradies)
+6. [Safari Digital , SEO for tradies](https://www.safaridigital.com.au/seo-for-tradies/)
 7. [Google , LocalBusiness structured data](https://developers.google.com/search/docs/appearance/structured-data/local-business)
 8. [Schema.org , LocalBusiness](https://schema.org/LocalBusiness)
 9. [Google , FAQ structured data](https://developers.google.com/search/docs/appearance/structured-data/faqpage)

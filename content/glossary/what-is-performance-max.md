@@ -1,7 +1,7 @@
 ---
 slug: what-is-performance-max
 term: Performance Max (PMax)
-shortDefinition: Performance Max is a Google Ads campaign type where you supply conversion goals, creative assets and audience signals, and Google's AI runs targeting, bidding and placement across every Google surface.
+shortDefinition: A Google Ads campaign type where you supply goals, assets and audience signals; Google's AI runs targeting, bidding and placement across every surface.
 category: workflow
 relatedServices: [/seo-ai-visibility]
 relatedTerms: [what-is-ppc, what-are-negative-keywords, what-is-quality-score]

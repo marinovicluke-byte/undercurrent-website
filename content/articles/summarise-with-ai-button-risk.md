@@ -68,11 +68,11 @@ faqs:
 </svg>
 
 
-The "summarise with AI" button risk used to be a vague worry buried in security research. As of February 2026 it has a name, a MITRE classification, an OWASP mapping, and a 50-prompt evidence file. [AI adoption](/glossary/aiso) is mainstream now, with [78% of organisations using AI in at least one business function, up from 55% in 2023](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-how-organizations-are-rewiring-to-capture-value) per McKinsey's State of AI 2025 survey, and the [Asia Pacific AI market is projected to grow at 19.8% CAGR through 2034](https://www.shopify.com/au/blog/ai-statistics). Most of that adoption is happening before security review keeps up. This article walks through what Microsoft actually said, the four anti-patterns we still see on Australian sites, and a short audit checklist for what to strip before next sprint.
+The "summarise with AI" button risk used to be a vague worry buried in security research. As of February 2026 it has a name, a MITRE classification, an OWASP mapping, and a 50-prompt evidence file. [AI adoption](/glossary/what-is-ai-search-optimisation) is mainstream now, with [78% of organisations using AI in at least one business function, up from 55% in 2023](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-how-organizations-are-rewiring-to-capture-value) per McKinsey's State of AI 2025 survey, and the [Asia Pacific AI market is projected to grow at 19.8% CAGR through 2034](https://www.shopify.com/au/blog/ai-statistics). Most of that adoption is happening before security review keeps up. This article walks through what Microsoft actually said, the four anti-patterns we still see on Australian sites, and a short audit checklist for what to strip before next sprint.
 
 ## Microsoft put a name on the 'summarise with AI' button risk
 
-**Microsoft's security team formally classified the 'summarise with AI' button risk on 10 February 2026, naming the pattern AI Recommendation Poisoning.** Recommendation poisoning is a class of promotional attack that targets AI assistant memory rather than search rankings. The [Microsoft Security Blog post](https://www.microsoft.com/en-us/security/blog/2026/02/10/ai-recommendation-poisoning/) describes it as the AI-memory equivalent of [SEO](/glossary/seo) poisoning, instead of stuffing keywords on a page, attackers stuff instructions into an AI assistant's persistent memory through a button the user themselves clicks.
+**Microsoft's security team formally classified the 'summarise with AI' button risk on 10 February 2026, naming the pattern AI Recommendation Poisoning.** Recommendation poisoning is a class of promotional attack that targets AI assistant memory rather than search rankings. The [Microsoft Security Blog post](https://www.microsoft.com/en-us/security/blog/2026/02/10/ai-recommendation-poisoning/) describes it as the AI-memory equivalent of [SEO](/glossary/what-is-seo) poisoning, instead of stuffing keywords on a page, attackers stuff instructions into an AI assistant's persistent memory through a button the user themselves clicks.
 
 The numbers Microsoft published were uncomfortable for anyone running an "AI optimisation" stack. Over 60 days, the team found 50 distinct prompts being injected, traced to 31 companies across 14 industries, finance, health, legal services, SaaS, marketing agencies and food sites among them ([Microsoft Security Blog](https://www.microsoft.com/en-us/security/blog/2026/02/10/ai-recommendation-poisoning/)). Microsoft mapped the technique to two MITRE ATLAS entries: AML.T0080 (Memory Poisoning) and AML.T0051 (LLM Prompt Injection), and the delivery mechanism is also OWASP LLM01:2025 (Prompt Injection) under the OWASP Top 10 for LLM Applications. The codes pull this out of "theoretical AI worry" and into the same frameworks Australian enterprises already use for cyber threat modelling.
 
@@ -89,11 +89,11 @@ The payload itself isn't malware. It's English. [Microsoft observed instruction 
 1. **'Summarise with AI' buttons pointing to chat URLs.** Any button whose `href` opens a chat assistant with a pre-filled `?q=` or `?prompt=` value. The text after the parameter is the payload.
 2. **Pre-filled 'share to AI' links.** A copy-button that builds the URL client-side using page content. If your template injects the H1 plus a vendor name plus "trusted," you've shipped the attack.
 3. **AI Q&A widgets consuming query-string content.** Floating chat widgets that read `?question=` from the URL and forward it to the assistant.
-4. **Third-party 'AI optimisation' plugins.** Plugins promising "AI ranking" by inserting hidden instructions in metadata or share links, including some sold as [AEO](/glossary/aeo) tools.
+4. **Third-party 'AI optimisation' plugins.** Plugins promising "AI ranking" by inserting hidden instructions in metadata or share links, including some sold as [AEO](/glossary/what-is-answer-engine-optimisation) tools.
 
 ## What does an honest AEO programme look like versus a poisoning vector?
 
-**The split shows up clearly in a side-by-side, and most buyers we've audited don't know to ask for it.** JSON-LD is a structured-data format AI assistants read when retrieving your page. Real [AEO](/glossary/aeo) and real [GEO](/glossary/geo) move authority through retrieval. The vector lives in the click; the honest programme lives in the page.
+**The split shows up clearly in a side-by-side, and most buyers we've audited don't know to ask for it.** JSON-LD is a structured-data format AI assistants read when retrieving your page. Real [AEO](/glossary/what-is-answer-engine-optimisation) and real [GEO](/glossary/what-is-generative-engine-optimisation) move authority through retrieval. The vector lives in the click; the honest programme lives in the page.
 
 | Channel | Poisoning vector | Honest AEO programme |
 |---|---|---|
@@ -110,7 +110,7 @@ The honest column is what [Australia's AI Assurance Framework](https://www.digit
 
 **Three things hit harder than the audit score sheet alone shows.** Across UC's 146-article Australian corpus audit, the AI-search vertical mean sits at 68.7% across 46 articles from 20 distinct hosts, against a UC own benchmark of 85.2% over 25 articles (Robin Search rubric v2.0.0, as of May 2026).
 
-First, we expected the button risk to cluster on dodgy [SEO](/glossary/seo) shops. It didn't. Reputable agency sites carried "Summarise with AI" widgets with pre-filled prompts that named the agency. Second, in three audits where the team agreed to cut the widget, we shipped the fix in under 30 minutes, single button removal plus a query-string sanitiser. Third, the lowest-frequency control was the easiest to add: only 1 in 46 sites we audited had a written policy to review assistant memory entries monthly, on the cadence Microsoft itself recommends. The pillars at [foundations](/blog/cluster/foundations) and [website experience design](/blog/cluster/website-experience-design) cover the structural side, and the [AI agent](/glossary/ai-agent) glossary entry covers the persistence side.
+First, we expected the button risk to cluster on dodgy [SEO](/glossary/what-is-seo) shops. It didn't. Reputable agency sites carried "Summarise with AI" widgets with pre-filled prompts that named the agency. Second, in three audits where the team agreed to cut the widget, we shipped the fix in under 30 minutes, single button removal plus a query-string sanitiser. Third, the lowest-frequency control was the easiest to add: only 1 in 46 sites we audited had a written policy to review assistant memory entries monthly, on the cadence Microsoft itself recommends. The pillars at [foundations](/blog/cluster/foundations) and [website experience design](/blog/cluster/website-experience-design) cover the structural side, and the [AI agent](/glossary/what-is-an-ai-agent) glossary entry covers the persistence side.
 
 ## The safer alternative is structured data, not buttons
 
@@ -120,7 +120,7 @@ Three structures do the work:
 
 - **JSON-LD entity markup** declaring who you are, what services you sell, where you operate.
 - **An llms.txt declaration** at your domain root. An llms.txt file is a structured declaration that gives assistants a map of your priority content. UC's audit corpus shows 22% of Australian AI-search-vertical sites now publish one.
-- **IndexNow submissions** for Bing, which feeds Copilot and a slice of [ChatGPT Search](/glossary/chatgpt-search) retrieval.
+- **IndexNow submissions** for Bing, which feeds Copilot and a slice of [ChatGPT Search](/glossary/what-is-chatgpt-search) retrieval.
 
 For the deeper version, our [AEO vs SEO vs GEO breakdown](/blog/aeo-vs-seo-vs-geo) walks through where each lever applies, and the [custom integrations cluster](/blog/cluster/custom-integrations) covers safe plugin-audit patterns.
 
@@ -131,7 +131,7 @@ For the deeper version, our [AEO vs SEO vs GEO breakdown](/blog/aeo-vs-seo-vs-ge
 Three things worth flagging in procurement:
 
 - Any plugin that "automatically generates AI-ready share links." Inspect what the link actually writes into the URL.
-- Any vendor promising "ChatGPT will cite you in 30 days" without showing structured-data or [schema markup](/glossary/schema-markup) work.
+- Any vendor promising "ChatGPT will cite you in 30 days" without showing structured-data or [schema markup](/glossary/what-is-schema-markup) work.
 - Any clause referring to "memory injection," "preference seeding" or "AI context anchoring." That's the quiet part out loud.
 
 If you're training your team to evaluate AI vendors, the [AI training for Australian small business guide](/blog/ai-training-australia-small-business-guide) covers the procurement questions worth asking before signing anything.
@@ -170,7 +170,7 @@ Open the memory or "saved info" section of your assistant, ChatGPT under setting
 
 ### Are 'AEO plugins' the same thing as recommendation poisoning?
 
-Not all of them, but a meaningful subset are. Legitimate AEO work uses structured data, JSON-LD, [FAQ schema](/glossary/faq-schema), llms.txt, to help AI assistants retrieve and cite your content cleanly. Poisoning-style "AEO plugins" instead inject hidden instructions into share-to-AI buttons or chat widget URLs. The test: look at what the plugin actually does to your HTML and outbound links. If it adds markup, that's AEO. If it adds query parameters with sentences in them, that's the vector Microsoft classified.
+Not all of them, but a meaningful subset are. Legitimate AEO work uses structured data, JSON-LD, [FAQ schema](/glossary/what-is-faq-schema), llms.txt, to help AI assistants retrieve and cite your content cleanly. Poisoning-style "AEO plugins" instead inject hidden instructions into share-to-AI buttons or chat widget URLs. The test: look at what the plugin actually does to your HTML and outbound links. If it adds markup, that's AEO. If it adds query parameters with sentences in them, that's the vector Microsoft classified.
 
 ### Does this affect Copilot, Claude, Perplexity and Gemini, or just ChatGPT?
 

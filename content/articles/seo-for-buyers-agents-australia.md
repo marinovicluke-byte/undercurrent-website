@@ -47,7 +47,7 @@ A buyer in Hawthorn does not search "best buyers agency". They search "buyers ag
 
 ## The Four Search Surfaces, And Which One You're Losing
 
-**Every serious buyer enquiry now passes through four search surfaces, and most buyers-agent sites are winning on zero of them.** Google organic still carries most of the volume, but the map pack, AI Overviews, and ChatGPT now sit between the search and the click. [Search Engine Journal's AI Overviews coverage](https://www.searchenginejournal.com/google-ai-overviews/) shows that summary box appearing on a fast-growing share of queries.
+**Every serious buyer enquiry now passes through four search surfaces, and most buyers-agent sites are winning on zero of them.** Google organic still carries most of the volume, but the map pack, AI Overviews, and ChatGPT now sit between the search and the click. [Search Engine Journal's AI Overviews coverage](https://www.searchenginejournal.com/google-ai-overviews-advertising/517049/) shows that summary box appearing on a fast-growing share of queries.
 
 | Surface | What rewards you | Common failure |
 |---|---|---|
@@ -175,7 +175,7 @@ Then start the citable-content and structured-data work for AI-engine visibility
 2. [Real Estate Business, New research reveals what buyers want and where agents fit in](https://www.realestatebusiness.com.au/sales/30432-new-research-reveals-what-buyers-want-and-where-agents-fit-in)
 3. [Backlinko, Google CTR statistics: organic click-through rates by position](https://backlinko.com/google-ctr-stats)
 5. [Australian Bureau of Statistics, Lending indicators, latest release](https://www.abs.gov.au/statistics/economy/finance/lending-indicators/latest-release)
-6. [Search Engine Journal, Google AI Overviews coverage](https://www.searchenginejournal.com/google-ai-overviews/)
+6. [Search Engine Journal, Google AI Overviews coverage](https://www.searchenginejournal.com/google-ai-overviews-advertising/517049/)
 7. [Google Search Central, Local business structured data](https://developers.google.com/search/docs/appearance/structured-data/local-business)
 8. [Schema.org, RealEstateAgent type](https://schema.org/RealEstateAgent)
 9. [One Egg, Generative SEO pricing in Australia](https://www.oneegg.com.au/blog/generative-seo-pricing-australia/)

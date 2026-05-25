@@ -7,8 +7,7 @@ relatedServices: [/seo-ai-visibility]
 relatedTerms: [what-is-cost-per-click, what-are-negative-keywords, what-is-ppc]
 sources:
   - { title: "About Quality Score for Search campaigns (Google Ads Help)", url: "https://support.google.com/google-ads/answer/6167118" }
-  - { title: "Check your Quality Score (Google Ads Help)", url: "https://support.google.com/google-ads/answer/2454010" }
-  - { title: "About Ad Rank (Google Ads Help)", url: "https://support.google.com/google-ads/answer/1722122" }
+    - { title: "About Ad Rank (Google Ads Help)", url: "https://support.google.com/google-ads/answer/1722122" }
 faqs:
   - { q: "Does Quality Score affect my CPC?", a: "Indirectly. Quality Score itself is a diagnostic number, and Google says it is not used directly in the live auction. But the same relevance signals it reports, expected click-through rate, ad relevance and landing page experience, are calculated in real time at auction, and stronger relevance generally lowers what you pay for a given position." }
   - { q: "What is a good Quality Score?", a: "On the 1-to-10 scale, 7 and above is healthy for most keywords, 8 to 10 is strong, and anything below 5 points to a real problem, usually a landing page that does not match the ad or an ad group that is too broad. Treat it as a warning light, not a target to chase for its own sake." }
@@ -29,7 +28,7 @@ Most glossaries describe Quality Score as the dial that sets your cost-per-click
 
 That distinction tells you how to use the number. Quality Score is built from three components, each reported as below average, average or above average. Expected click-through rate is how likely your ad is to be clicked when it shows. Ad relevance is how closely the ad matches the intent behind the search. Landing page experience is how relevant and useful the page is once someone clicks. Read together, they point at where a keyword is weak.
 
-What good looks like: on the 1-to-10 [scale](https://support.google.com/google-ads/answer/2454010), 7 and above is healthy, 8 to 10 is strong, and below 5 is a problem worth stopping for. A low score almost always traces to one of two things, an ad group so broad that no single ad can be relevant to all of it, or a landing page that does not answer the search. Neither is fixed by raising your bid.
+What good looks like: on the 1-to-10 scale, 7 and above is healthy, 8 to 10 is strong, and below 5 is a problem worth stopping for. A low score almost always traces to one of two things, an ad group so broad that no single ad can be relevant to all of it, or a landing page that does not answer the search. Neither is fixed by raising your bid.
 
 A concrete example. A Melbourne buyers agent runs one ad group holding "buyers agent", "buyers advocate" and "property negotiator", served by a single generic ad. No ad can mirror three different searches at once, so ad relevance sits at below average and the cost per click drifts up. Split them into three tight ad groups, each with an ad that uses the actual search term and a page built for it, and ad relevance climbs. The same position now costs less, because Google rewards the match. That is the real mechanism, even though [Ad Rank](https://support.google.com/google-ads/answer/1722122), not the Quality Score number itself, does the work.
 

@@ -73,7 +73,7 @@ The blocker wasn't the AI model, it was the quality gate. Without a deterministi
 
 We needed a trust boundary. The writer model had to be separate from the quality checker, so it couldn't game the criteria. That meant building a scorer that evaluated articles against 19 specific criteria without the writer knowing what those criteria were.
 
-Most Australian SMBs using AI for content in 2025-2026 are running single-shot prompts through ChatGPT or similar tools. According to a [Scale Suite survey](https://www.scalesuite.com.au/news/ai-adoption-australia-2025), 37-68% of Australian businesses have adopted AI, but most are using it for one-off tasks, not deterministic workflows. The difference between "write me an article" and "write, score, rewrite until it passes 19 checks" is the difference between content that ranks and content that gets ignored.
+Most Australian SMBs using AI for content in 2025-2026 are running single-shot prompts through ChatGPT or similar tools. According to a Scale Suite survey, 37-68% of Australian businesses have adopted AI, but most are using it for one-off tasks, not deterministic workflows. The difference between "write me an article" and "write, score, rewrite until it passes 19 checks" is the difference between content that ranks and content that gets ignored.
 
 We also needed to solve the research problem. Human writers spend 1-2 hours per article finding sources and statistics. If the AI couldn't find real, verifiable Australian data, the articles would be thin and untrustworthy.
 
@@ -126,7 +126,7 @@ For a digital marketing agency with 5-10 clients, this system could handle all c
 
 The cost structure flips from labour-based to compute-based. Instead of paying $150 per article for a freelancer or $62,000+ per year in opportunity cost, you're paying $2,400 per year in API calls and hosting. That's a 96% cost reduction.
 
-According to the same [Scale Suite survey](https://www.scalesuite.com.au/news/ai-adoption-australia-2025), 37-68% of Australian businesses have adopted AI in some form by 2026. But adoption and effective use are different. Most businesses are using ChatGPT for one-off tasks. The businesses that pull ahead are the ones building deterministic workflows that run unattended.
+According to the same Scale Suite survey, 37-68% of Australian businesses have adopted AI in some form by 2026. But adoption and effective use are different. Most businesses are using ChatGPT for one-off tasks. The businesses that pull ahead are the ones building deterministic workflows that run unattended.
 
 The second-order effect is consistency. Publishing 3 times per week on a fixed schedule builds topical authority faster than publishing sporadically. Google's algorithms reward publishing frequency and cluster depth. A pipeline that runs every Monday, Wednesday, and Friday builds that frequency without the manual grind.
 

@@ -6,7 +6,7 @@ category: workflow
 relatedServices: [/seo-ai-visibility]
 relatedTerms: [what-is-local-seo, what-is-google-business-profile, what-is-the-local-3-pack]
 sources:
-  - { title: "What is NAP in Local SEO? (BrightLocal)", url: "https://www.brightlocal.com/learn/local-citations/nap-data-accuracy/nap-consistency/" }
+  - { title: "What is NAP in Local SEO? (BrightLocal)", url: "https://www.brightlocal.com/learn/local-citations/nap-data-accuracy" }
   - { title: "Improve your local ranking on Google (Google Business Profile Help)", url: "https://support.google.com/business/answer/7091" }
 faqs:
   - { q: "What does NAP stand for?", a: "Name, Address and Phone number, the three core contact details of a business. In local SEO, NAP is shorthand for that set of details, and NAP consistency means presenting them identically everywhere they appear online." }
@@ -26,7 +26,7 @@ source: claude-code
 
 NAP stands for Name, Address, Phone. A citation is any place online those three details appear, a directory entry, a review site, a social profile, an industry association page. NAP consistency is the discipline of making every one of those mentions identical. Not similar. Identical.
 
-It matters because of how Google decides a business is real. Google does not take a single listing on trust. It cross-checks the same business across dozens of sources, and when the details agree, it gains confidence that the business exists, is singular, and is safe to show to searchers. [BrightLocal puts it plainly](https://www.brightlocal.com/learn/local-citations/nap-data-accuracy/nap-consistency/): consistent NAP data helps search engines connect every listing to the same real business. When the details disagree, an old phone number here, "Suite 2" missing there, "St" instead of "Street", Google's confidence drops, and in the worst case it splits one business into two weak, competing entities in its index. [Google's local ranking guidance](https://support.google.com/business/answer/7091) leans on exactly this kind of corroboration.
+It matters because of how Google decides a business is real. Google does not take a single listing on trust. It cross-checks the same business across dozens of sources, and when the details agree, it gains confidence that the business exists, is singular, and is safe to show to searchers. [BrightLocal puts it plainly](https://www.brightlocal.com/learn/local-citations/nap-data-accuracy): consistent NAP data helps search engines connect every listing to the same real business. When the details disagree, an old phone number here, "Suite 2" missing there, "St" instead of "Street", Google's confidence drops, and in the worst case it splits one business into two weak, competing entities in its index. [Google's local ranking guidance](https://support.google.com/business/answer/7091) leans on exactly this kind of corroboration.
 
 It works in three steps, and like most local SEO work the third is ongoing.
 

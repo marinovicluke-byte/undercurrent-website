@@ -146,7 +146,7 @@ The honest caveat: it's not worth it for one-off or wildly variable work. If eve
 
 **The common 2026 stack is three layers: a workflow engine to move data, a model layer for the thinking, and the business software you already run.** Most owners already pay for half of it.
 
-**Workflow engines** are the connective tissue. Make and n8n are cheapest at scale; Zapier is friendliest to start but gets dear as volume grows, the [n8n vs Zapier comparison](/blog/n8n-vs-zapier-australia-small-business) covers the trade-off. **Model layers** add the judgement: drafting replies, sorting enquiries, pulling job details from free text. OpenAI and Anthropic cover most of it. **Business software** is where it plugs in: ServiceM8, Tradify, simPRO and AroFlo fire webhooks on a status change, and Xero and MYOB take the invoice and the reminder. [MYOB's small-business research](https://www.myob.com/au/about/media-centre/myob-reports) keeps finding owners losing hours a week to financial admin.
+**Workflow engines** are the connective tissue. Make and n8n are cheapest at scale; Zapier is friendliest to start but gets dear as volume grows, the [n8n vs Zapier comparison](/blog/n8n-vs-zapier-australia-small-business) covers the trade-off. **Model layers** add the judgement: drafting replies, sorting enquiries, pulling job details from free text. OpenAI and Anthropic cover most of it. **Business software** is where it plugs in: ServiceM8, Tradify, simPRO and AroFlo fire webhooks on a status change, and Xero and MYOB take the invoice and the reminder. [MYOB's small-business research](https://www.myob.com/au/media/myob-reports) keeps finding owners losing hours a week to financial admin.
 
 A [free 30-minute automation audit](/audit) maps your first three workflows to the tools you already run. We also cover [Sydney](/ai-automation-sydney), [Brisbane](/ai-automation-brisbane), [Perth](/ai-automation-perth), [Adelaide](/ai-automation-adelaide) and [the rest of Australia](/ai-automation-australia); the [Melbourne automation consultant](/blog/ai-automation-consultant-melbourne) explainer covers what to expect from one.
 
@@ -201,7 +201,7 @@ A [free 30-minute automation audit](/audit) maps your first three workflows to t
 3. [KPMG Australia, Australia Leads World on Responsible AI, Lags Productivity Gains (April 2026)](https://kpmg.com/au/en/media/media-releases/2026/04/australia-leads-world-on-responsible-ai-lags-productivity-gains.html)
 4. [Harvard Business Review, The Short Life of Online Sales Leads (Oldroyd et al.)](https://hbr.org/2011/03/the-short-life-of-online-sales-leads)
 5. [Xero, Small Business Insights](https://www.xero.com/au/resources/small-business-insights/)
-6. [MYOB, Small Business Research Reports](https://www.myob.com/au/about/media-centre/myob-reports)
+6. [MYOB, Small Business Research Reports](https://www.myob.com/au/media/myob-reports)
 7. [ASBFEO, Small Business Technology Guidance](https://www.asbfeo.gov.au/resources-tools-centre)
 8. [Spam Act 2003 (Federal Register of Legislation)](https://www.legislation.gov.au/Details/C2004A01214)
 9. [Privacy Act 1988 and the Australian Privacy Principles (OAIC)](https://www.oaic.gov.au/privacy/privacy-legislation/the-privacy-act)

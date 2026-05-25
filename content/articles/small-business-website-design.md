@@ -136,7 +136,7 @@ One rule keeps you safe: only mark up content that's visible on the page. Search
 
 ## How much does small business website design cost in Australia?
 
-**Professional small business website design in Australia typically costs between AUD$5,000 and AUD$15,000, with feature-rich builds running AUD$10,000 to AUD$20,000.** Those [Australian website cost benchmarks](https://www.rockingweb.com.au/website-costs-australia) track scope, not magic: design, copywriting, structured data and speed work all take real hours.
+**Professional small business website design in Australia typically costs between AUD$5,000 and AUD$15,000, with feature-rich builds running AUD$10,000 to AUD$20,000.** Those [Australian website cost benchmarks](https://www.rockingweb.com.au/website-costs-australia/) track scope, not magic: design, copywriting, structured data and speed work all take real hours.
 
 | Website tier | Typical price (AUD) | What you get |
 |---|---|---|

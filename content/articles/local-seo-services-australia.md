@@ -86,7 +86,7 @@ If you would rather not assemble this yourself, [UnderCurrent's local search ser
 
 The scale is easy to underrate. The [Australian Bureau of Statistics](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release) recorded 2,729,648 actively trading businesses at 30 June 2025, with 437,150 new entries that year, and most are small and local. Against that backdrop, [Digital Nomads HQ](https://digitalnomadshq.com.au/blog/complete-guide-to-local-seo/) reports Australian businesses will spend more than $1.5 billion on search in 2025, up 12% on the year before. The competition is already paying for visibility you may be giving away.
 
-Customer behaviour explains the urgency. [BrightLocal](https://www.brightlocal.com/resources/local-seo-statistics/) found 72% of consumers use [Google](https://www.google.com/business/) to find a local business, and 46% say they "always" or "often" add "near me" to a search. If you sell to a defined area, good [SEO for a small business](/blog/seo-for-small-business) starts local, not national.
+Customer behaviour explains the urgency. [BrightLocal](https://www.brightlocal.com/resources/local-seo-statistics/) found 72% of consumers use [Google](https://business.google.com/en-all/business-profile/en-all/business-profile/) to find a local business, and 46% say they "always" or "often" add "near me" to a search. If you sell to a defined area, good [SEO for a small business](/blog/seo-for-small-business) starts local, not national.
 
 ## How does the Google local pack pick who ranks?
 
@@ -208,7 +208,7 @@ One-off jobs are priced apart: initial profile setup runs roughly AUD 400 to AUD
 
 Speed depends on your starting point. An unclaimed or barely-touched profile can jump quickly once it is properly set up, because the foundation work has immediate effect. A business already visible but stuck at position four or five is a slower grind, since it competes on reviews, citations and content depth that compound over months.
 
-[Safari Digital](https://www.safaridigital.com.au/blog/local-seo-statistics/) reports an average of 4.76 months to reach a positive return on local SEO, which is a reasonable benchmark to hold a provider to. Profile and listings work pays back fastest, review velocity and content depth pay back slowest, and the slow parts hold a ranking once you have it.
+[Safari Digital](https://www.safaridigital.com.au/blog/local-seo-statistics//) reports an average of 4.76 months to reach a positive return on local SEO, which is a reasonable benchmark to hold a provider to. Profile and listings work pays back fastest, review velocity and content depth pay back slowest, and the slow parts hold a ranking once you have it.
 
 ## What is the difference between local SEO, organic SEO and AI search?
 

@@ -73,7 +73,6 @@ function buildServiceJsonLd(service) {
   const nameLc       = serviceDisplayName(service)
   const location     = serviceLocation(service)
   const orgRef       = { '@id': `${DOMAIN}#organization` }
-  const dateModified = service.dateModified || DEFAULT_SERVICE_DATE_MODIFIED
 
   const breadcrumb = {
     '@context': 'https://schema.org',
@@ -93,7 +92,6 @@ function buildServiceJsonLd(service) {
     serviceType: `${name} for Australian small businesses`,
     description: service.metaDescription,
     url,
-    dateModified,
     provider: orgRef,
     areaServed: AREAS_SERVED.map(a => ({ '@type': 'Place', name: a })),
     audience: {

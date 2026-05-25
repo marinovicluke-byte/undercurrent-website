@@ -55,7 +55,7 @@ According to [Google's Search Central documentation on AI-generated content](htt
 
 Across UC's automation audits for Australian service businesses, the most common bottleneck is content written for Google's crawlers instead of AI language models. Pages that rank well in traditional search often don't get cited by ChatGPT because they bury the answer under three paragraphs of [SEO](/glossary/what-is-seo) filler. AI engines extract the first substantive paragraph, so if your first 60 words don't directly answer the query, you're out. We cover [how we work through content audits](/process) as part of our automation assessments.
 
-ChatGPT relies on Bing's index and Google's index for newer content, plus its training data for entity recognition. That means your crawlability matters. If you're blocking GPTBot or ClaudeBot in your robots.txt file, you're invisible. If your sitemap isn't submitted to [Bing Webmaster Tools](https://www.bing.com/toolbox/webmaster/), ChatGPT might not know your business exists.
+ChatGPT relies on Bing's index and Google's index for newer content, plus its training data for entity recognition. That means your crawlability matters. If you're blocking GPTBot or ClaudeBot in your robots.txt file, you're invisible. If your sitemap isn't submitted to [Bing Webmaster Tools](https://www.bing.com/webmasters/about), ChatGPT might not know your business exists.
 
 A Perth-based HVAC company saw zero AI citations until they submitted their sitemap to Bing, implemented FAQ schema on their service pages, and rewrote their content with answer-first structure. Within six weeks, they started appearing in ChatGPT responses for "best HVAC service Perth" and "how much does ducted heating cost." The same [process automation](/blog) that freed up their admin time also gave them capacity to fix their content strategy.
 
@@ -147,7 +147,7 @@ If you're only mentioned on your own website, you're a weak entity. If you're me
 
 For Australian service businesses, the key entity sources are your Google Business Profile, industry associations like Master Plumbers or HIA, and major directories like True Local or Yellow Pages. Getting listed in these places isn't just about backlinks, it's about entity verification. This is part of what we assess when you [work with UnderCurrent](/about).
 
-Start with your [Google Business Profile](https://business.google.com/). Make sure your name, address, phone, service areas, and categories are accurate. Add photos, respond to reviews, post updates. Google's entity data feeds into multiple AI models, including ChatGPT's knowledge graph.
+Start with your [Google Business Profile](https://business.google.com/en-all/business-profile/). Make sure your name, address, phone, service areas, and categories are accurate. Add photos, respond to reviews, post updates. Google's entity data feeds into multiple AI models, including ChatGPT's knowledge graph.
 
 Next, get listed on industry-specific directories. If you're a tradie, get on Master Plumbers, Master Electricians, or HIA member directories. If you're a consultant, get on CPA Australia or a relevant professional body. These are authority signals AI engines trust.
 
@@ -163,7 +163,7 @@ Start by auditing your top 5-10 service pages. Check if they lead with a direct 
 
 Next, add an FAQ section to each service page. Pick the 5-7 questions customers actually ask you, write 60-80 word answers, and wrap them in FAQPage schema. Use [Google's Rich Results Test](https://search.google.com/test/rich-results) to validate. This alone will get you into AI citation contention for those queries.
 
-Then, submit your sitemap to [Bing Webmaster Tools](https://www.bing.com/toolbox/webmaster/). ChatGPT uses Bing's index for newer content. If Bing hasn't crawled you, ChatGPT doesn't know you exist. Check your robots.txt file and make sure you're not blocking GPTBot or ClaudeBot. [Google's Search Console documentation](https://support.google.com/webmasters/answer/9128668) covers the technical setup.
+Then, submit your sitemap to [Bing Webmaster Tools](https://www.bing.com/webmasters/about). ChatGPT uses Bing's index for newer content. If Bing hasn't crawled you, ChatGPT doesn't know you exist. Check your robots.txt file and make sure you're not blocking GPTBot or ClaudeBot. [Google's Search Console documentation](https://support.google.com/webmasters/answer/9128668) covers the technical setup.
 
 Finally, claim and set up your Google Business Profile. Add your service areas in kilometres, upload photos with alt text describing your location and service, and link it in your Organization schema. This is your entity anchor for AI search.
 
@@ -229,7 +229,7 @@ Set up UTM parameters in Google Analytics for chat.openai.com and perplexity.ai 
 7. [Red Search, ChatGPT Statistics Australia Global](https://www.redsearch.com.au/resources/chatgpt-statistics-australia-global/)
 8. [ROI, AI Usage Adoption Statistics in Australia 2026](https://roi.com.au/blog/stats/ai-usage-adoption-statistics-in-australia-2026-18-dec-2025)
 9. [Google Developers, Search Central Documentation](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
-10. [Bing Webmaster Tools](https://www.bing.com/toolbox/webmaster/)
+10. [Bing Webmaster Tools](https://www.bing.com/webmasters/about)
 11. [Schema.org, Structured Data Documentation](https://schema.org/docs/documents.html)
 12. [Google, About Knowledge Graph and Knowledge Panels](https://blog.google/products-and-platforms/products/search/about-knowledge-graph-and-knowledge-panels/)
 13. [Schema.org, Organization Schema](https://schema.org/Organization)

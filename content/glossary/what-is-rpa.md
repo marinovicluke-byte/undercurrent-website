@@ -6,7 +6,7 @@ category: tool
 relatedServices: [/custom-integrations]
 relatedTerms: [what-is-business-process-automation, what-is-ai-automation, what-is-an-ai-agent]
 sources:
-  - { title: "What is robotic process automation (RPA)? (IBM)", url: "https://www.ibm.com/topics/rpa" }
+  - { title: "What is robotic process automation (RPA)? (IBM)", url: "https://www.ibm.com/think/topics/rpa" }
   - { title: "UiPath: what is RPA? (UiPath)", url: "https://www.uipath.com/rpa/robotic-process-automation" }
   - { title: "The state of AI in 2025 (McKinsey)", url: "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" }
 faqs:
@@ -28,7 +28,7 @@ source: claude-code
 
 **Robotic Process Automation is software bots that perform rules-based tasks by clicking through user interfaces the way a person would, used to automate legacy systems with no API access.**
 
-Three layers sit on top of each other in the automation stack, and RPA is the oldest. At the bottom, RPA bots from UiPath, Blue Prism and Automation Anywhere, the big three, drive applications through the user interface. They click buttons, copy fields, tab between windows, exactly like a person, just faster and without lunch breaks. [IBM's RPA explainer](https://www.ibm.com/topics/rpa) and [UiPath's own definition](https://www.uipath.com/rpa/robotic-process-automation) both anchor on this UI-layer behaviour, that is what makes RPA RPA.
+Three layers sit on top of each other in the automation stack, and RPA is the oldest. At the bottom, RPA bots from UiPath, Blue Prism and Automation Anywhere, the big three, drive applications through the user interface. They click buttons, copy fields, tab between windows, exactly like a person, just faster and without lunch breaks. [IBM's RPA explainer](https://www.ibm.com/think/topics/rpa) and [UiPath's own definition](https://www.uipath.com/rpa/robotic-process-automation) both anchor on this UI-layer behaviour, that is what makes RPA RPA.
 
 The middle layer is iPaaS, integration-platform-as-a-service. n8n, Make and Zapier sit here. They talk to applications through APIs, the official structured interface, not the user interface. This is faster, cheaper and far more reliable, the API doesn't move buttons around in a Tuesday update. iPaaS is what 95% of [business process automation](/glossary/what-is-business-process-automation) work in an Australian SMB actually uses. It is not RPA, calling it RPA is the most common confusion in the market and worth being precise about.
 

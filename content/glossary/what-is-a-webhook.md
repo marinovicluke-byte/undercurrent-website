@@ -1,12 +1,12 @@
 ---
 slug: what-is-a-webhook
 term: Webhook
-shortDefinition: An HTTP request an application sends to a URL you control the instant something happens. Default implementations from no-code tools ship unsigned and non-idempotent, which is where automation quietly breaks.
+shortDefinition: An HTTP request an app sends to a URL you control when something happens. No-code defaults ship unsigned and non-idempotent, where automation breaks.
 category: tool
 relatedServices: [/custom-integrations]
 relatedTerms: [what-is-business-process-automation, what-is-ai-automation]
 sources:
-  - { title: "Webhooks overview (Stripe)", url: "https://stripe.com/docs/webhooks" }
+  - { title: "Webhooks overview (Stripe)", url: "https://docs.stripe.com/webhooks" }
   - { title: "About webhooks (GitHub Docs)", url: "https://docs.github.com/en/webhooks/about-webhooks" }
   - { title: "Webhooks (Xero Developer)", url: "https://developer.xero.com/documentation/guides/webhooks/overview/" }
 faqs:
@@ -28,7 +28,7 @@ source: claude-code
 
 **A webhook is an HTTP request an application sends to a URL you control the instant something happens, so your system reacts in real time instead of polling. Default implementations from SaaS vendors and no-code tools ship unsigned and non-idempotent, which is where most "automated" systems quietly break.**
 
-Direction is the easy part. A polling integration asks a third-party API every few minutes whether anything new has happened. A webhook is the third-party calling you the moment the event fires. Cheaper and faster, with no wasted traffic when nothing is happening. [Stripe's webhook documentation](https://stripe.com/docs/webhooks) is the reference implementation most other vendors copy, and [GitHub's webhook docs](https://docs.github.com/en/webhooks/about-webhooks) plus [Xero's webhook overview](https://developer.xero.com/documentation/guides/webhooks/overview/) follow the same pattern.
+Direction is the easy part. A polling integration asks a third-party API every few minutes whether anything new has happened. A webhook is the third-party calling you the moment the event fires. Cheaper and faster, with no wasted traffic when nothing is happening. [Stripe's webhook documentation](https://docs.stripe.com/webhooks) is the reference implementation most other vendors copy, and [GitHub's webhook docs](https://docs.github.com/en/webhooks/about-webhooks) plus [Xero's webhook overview](https://developer.xero.com/documentation/guides/webhooks/overview/) follow the same pattern.
 
 The part most teams skip is the contract.
 
