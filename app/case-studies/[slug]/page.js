@@ -11,6 +11,7 @@ import { getAllCaseStudies, getCaseStudyBySlug } from '@/lib/caseStudies'
 import { getAllArticles } from '@/lib/articles'
 import { CLUSTERS } from '@/lib/clusters'
 import { LUKE_PERSON } from '@/lib/schema/person'
+import { probeImageDimensions } from '@/lib/imageDimensions'
 
 const SITE_URL = 'https://undercurrentautomations.com'
 const CONTENT_MAX = 1280
@@ -103,6 +104,9 @@ export default async function CaseStudyPage({ params }) {
   const fm = cs.frontmatter
   const faqs = extractFaqs(fm, cs.html)
   const { quickAnswer, bodyHtml } = extractQuickAnswer(cs.html)
+  // Probe hero dimensions at build time so the rendered <img> ships explicit
+  // width/height. Falls back to 3:2 (matches OG card convention) on miss.
+  const heroDims = fm.heroImage ? (await probeImageDimensions(fm.heroImage)) || { width: 1536, height: 1024 } : null
   const clusterLabel = fm.relatedCluster && CLUSTERS[fm.relatedCluster]?.label
   const clusterSlug = fm.relatedCluster
 
@@ -214,7 +218,8 @@ export default async function CaseStudyPage({ params }) {
         </div>
       </section>
 
-      {/* Hero image */}
+      {/* Hero image — explicit width/height (not fill) so crawlers see dimension
+          attrs. The container's aspectRatio + objectFit:cover preserves the visual crop. */}
       {fm.heroImage && (
         <section style={{ padding: '48px var(--page-pad) 0', background: 'var(--charcoal)', borderTop: '1px solid var(--text-faint)' }}>
           <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
@@ -222,10 +227,11 @@ export default async function CaseStudyPage({ params }) {
               <Image
                 src={fm.heroImage}
                 alt={fm.heroImageAlt || fm.title}
-                fill
+                width={heroDims.width}
+                height={heroDims.height}
                 priority
-                style={{ objectFit: 'cover' }}
                 sizes="(max-width: 768px) 100vw, 1000px"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
           </div>

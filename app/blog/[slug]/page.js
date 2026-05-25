@@ -12,6 +12,7 @@ import { getAllArticles, getArticleBySlug } from '@/lib/articles'
 import { getAllCaseStudies } from '@/lib/caseStudies'
 import { CLUSTERS } from '@/lib/clusters'
 import { LUKE_PERSON } from '@/lib/schema/person'
+import { probeImageDimensions } from '@/lib/imageDimensions'
 
 const SITE_URL = 'https://undercurrentautomations.com'
 const CONTENT_MAX = 1280
@@ -107,6 +108,11 @@ export default async function ArticlePage({ params }) {
   const fm = article.frontmatter
   const faqs = extractFaqs(fm, article.html)
   const { quickAnswer, bodyHtml } = extractQuickAnswer(article.html)
+  // Probe hero dimensions at build time so the rendered <img> ships explicit
+  // width/height attrs — eliminates Screaming Frog "missing size attributes"
+  // flag and gives crawlers an intrinsic ratio. Falls back to 3:2 (1536×1024,
+  // matches the OG image convention) if the file is missing/unreadable.
+  const heroDims = fm.heroImage ? (await probeImageDimensions(fm.heroImage)) || { width: 1536, height: 1024 } : null
   // Inline calculator embed: an article opts in by placing the literal
   // `<!-- calc:tradie-admin -->` token in its markdown. The token survives the
   // remark pipeline as a raw HTML comment; we split the body around it and
@@ -260,7 +266,9 @@ export default async function ArticlePage({ params }) {
         </div>
       </section>
 
-      {/* Hero image */}
+      {/* Hero image — explicit width/height (not fill) so the rendered <img>
+          carries dimension attrs that crawlers see. Visual 21/9 crop is preserved
+          by the sized container + objectFit: cover. */}
       {fm.heroImage && (
         <section style={{ padding: '48px var(--page-pad) 0', background: 'var(--charcoal)', borderTop: '1px solid var(--text-faint)' }}>
           <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
@@ -268,10 +276,11 @@ export default async function ArticlePage({ params }) {
               <Image
                 src={fm.heroImage}
                 alt={fm.heroImageAlt || fm.title}
-                fill
+                width={heroDims.width}
+                height={heroDims.height}
                 priority
-                style={{ objectFit: 'cover' }}
                 sizes="(max-width: 768px) 100vw, 1000px"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
           </div>
