@@ -1,7 +1,7 @@
 ---
 slug: what-is-ai-automation
 term: AI Automation
-shortDefinition: Software that uses an AI model to run repetitive business work autonomously, lead replies, scheduling, invoice chasing, that would otherwise need a person reading the input and deciding what to do.
+shortDefinition: Software that uses an AI model to run repetitive business work, lead replies, scheduling, invoice chasing, that would otherwise need a person.
 category: discipline
 relatedServices: [/ai-automation-melbourne]
 relatedTerms: [what-is-business-process-automation, what-is-an-ai-agent, what-is-marketing-automation]

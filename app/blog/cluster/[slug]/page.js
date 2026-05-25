@@ -156,6 +156,19 @@ export default async function ClusterPage({ params }) {
         }
       `}</style>
 
+      {/* Cluster intro — optional prose section for clusters that warrant a longer
+          framing than the hero one-liner. Adds genuine SEO weight to otherwise
+          thin pillar pages without changing the design law. */}
+      {cluster.intro && (
+        <section style={{ padding: '40px var(--page-pad) 20px', background: 'var(--charcoal)', borderTop: '1px solid var(--text-faint)' }}>
+          <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
+            <p style={{ margin: 0, maxWidth: 760, fontFamily: 'var(--font-body)', fontSize: 17, lineHeight: 1.65, color: 'var(--text-secondary)' }}>
+              {cluster.intro}
+            </p>
+          </div>
+        </section>
+      )}
+
       {/* Related case studies */}
       {relatedCaseStudies.length > 0 && (
         <section style={{ padding: '60px var(--page-pad) 20px', background: 'var(--charcoal)', borderTop: '1px solid var(--text-faint)' }}>

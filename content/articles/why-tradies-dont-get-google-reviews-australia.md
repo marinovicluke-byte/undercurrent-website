@@ -131,7 +131,7 @@ And that's just the direct search traffic. There's also:
 - **Referral friction**: Happy customers who *would* refer you, but when their mate Googles your business and sees almost no reviews, the referral dies
 - **Price pressure**: Without social proof, you can't justify premium pricing. You end up competing on price because you haven't built trust
 
-The hidden cost of not getting reviews compounds every month. You can use our [ROI calculator](/roi) to see what better local rankings are actually worth to your business based on your average job value and close rate.
+The hidden cost of not getting reviews compounds every month. You can use our [automation audit](/audit) to see what better local rankings are actually worth to your business based on your average job value and close rate.
 
 ## The One System That Actually Works for Australian Tradies
 

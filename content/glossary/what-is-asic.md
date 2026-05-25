@@ -1,6 +1,7 @@
 ---
 slug: what-is-asic
 term: ASIC (Australian Securities & Investments Commission)
+titleShort: ASIC
 shortDefinition: Australia's corporate, markets, financial services and credit regulator; grants the licences mortgage brokers and financial planners operate under.
 category: regulator
 relatedServices: [/seo-ai-visibility]

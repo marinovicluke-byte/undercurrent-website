@@ -151,7 +151,7 @@ The honest answer: it depends. But here's the breakdown so you can estimate.
 
 The ROI calculation is simple. Calculate how many hours per week the automation saves. Multiply by your team's hourly rate. Multiply by 52 weeks. That's your annual saving. If it's more than the setup cost, it pays for itself in year one. After that, it's pure profit.
 
-Use our [ROI calculator](/roi) to work out your specific numbers. Plug in the tasks you want to automate and it'll show you the payback period.
+Use our [automation audit](/audit) to work out your specific numbers. Plug in the tasks you want to automate and it'll show you the payback period.
 
 Most Australian small businesses see payback in 3-6 months. A Melbourne bookkeeper we worked with saved 8 hours a week on invoice generation and payment follow-ups. At $60/hour, that's $480/week or $24,960/year. Setup cost was $4,200. Paid back in 8.75 weeks.
 

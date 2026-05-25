@@ -1,6 +1,6 @@
 ---
 title: "The Hidden Cost of Running a Trade Business Without Automation"
-description: "Calculate the real dollar cost of running your trade business manually in Australia. Fair Work data + ABS hours + Xero insights = the number you need to see."
+description: "Calculate the real dollar cost of running your Australian trade business manually. Fair Work + ABS hours + Xero insights = the number you need to see."
 date: "2026-03-31"
 slug: "hidden-cost-manual-trade-business-australia"
 cluster: "foundations"

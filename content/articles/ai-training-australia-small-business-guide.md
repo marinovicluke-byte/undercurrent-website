@@ -1,6 +1,6 @@
 ---
 title: "AI Training Won't Teach Your Team to Work Smarter"
-description: "Short AI training sessions outperform long courses for small business owners. UnderCurrent Automations shows why a 90-minute framework delivers real results."
+description: "Short AI training sessions outperform long courses for small business owners. Why a 90-minute framework delivers real results for Australian SMBs."
 date: "2026-05-03"
 slug: "ai-training-australia-small-business-guide"
 cluster: "foundations"
@@ -47,7 +47,7 @@ According to the [ABS, business AI R&D expenditure reached $668.3 million in 202
 
 **AI upskilling** is the practical subset of AI training focused on applying existing tools to real tasks, writing prompts, configuring no-code automations, or reviewing AI-generated outputs before they go to clients. **No-code automation** refers to workflow tools like Make, Zapier, or n8n that connect your apps without writing a line of code. Both terms get used interchangeably in course listings, which causes a lot of confusion for buyers.
 
-What most training programs don't cover: the specific tools your business already uses. A Xero user learning generic "AI for accounting" theory is getting theory. A Xero user learning to auto-reconcile and trigger overdue invoice reminders is getting a system. That distinction is the whole article. If you want to understand the cost of staying manual, the [ROI calculator](/roi) will show you what that's worth in your specific situation.
+What most training programs don't cover: the specific tools your business already uses. A Xero user learning generic "AI for accounting" theory is getting theory. A Xero user learning to auto-reconcile and trigger overdue invoice reminders is getting a system. That distinction is the whole article. If you want to understand the cost of staying manual, the [automation audit](/audit) will show you what that's worth in your specific situation.
 
 ---
 

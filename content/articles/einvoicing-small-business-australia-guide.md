@@ -202,7 +202,7 @@ Some business owners think they need to change platforms to get eInvoicing. Unle
 
 eInvoicing gets your invoice into their system faster. But it doesn't automatically follow up on late payments, reconcile transactions, or update your CRM. A lot of businesses stop at basic eInvoicing and leave money on the table.
 
-**Fix:** Once eInvoicing is running, layer on workflow automation. Auto-send reminders. Auto-reconcile payments. Auto-update deal stages in your CRM when invoices are paid. We build these workflows for clients using tools like n8n and Make. You can learn more about our approach on our [automation services](/services) page, or use our [ROI calculator](/roi) to see what these time savings add up to.
+**Fix:** Once eInvoicing is running, layer on workflow automation. Auto-send reminders. Auto-reconcile payments. Auto-update deal stages in your CRM when invoices are paid. We build these workflows for clients using tools like n8n and Make. You can learn more about our approach on our [automation services](/services) page, or use our [automation audit](/audit) to see what these time savings add up to.
 
 **Mistake 5: Not testing with a friendly customer first**
 

@@ -1,6 +1,6 @@
 ---
 title: "How to Use AI to Optimise Your Tradie Business"
-description: "A practical guide to automating quoting, scheduling and invoicing for Australian trade businesses. The real tools, the real AUD costs, and what the numbers honestly add up to."
+description: "Practical guide to automating quoting, scheduling and invoicing for Australian trade businesses. Real tools, real AUD costs, honest payback numbers."
 date: "2026-04-15"
 dateModified: "2026-05-20"
 slug: "how-to-use-ai-to-optimise-tradie-business-australia"

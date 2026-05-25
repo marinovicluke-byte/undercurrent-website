@@ -114,7 +114,7 @@ For self-hosting on [AWS Sydney (ap-southeast-2)](https://aws.amazon.com/ec2/pri
 
 The crossover point, where n8n becomes clearly cheaper, sits around 1,000–2,000 monthly workflow runs for most small businesses. Below that, the difference is small enough that Zapier's ease of use justifies the slight premium.
 
-Working daily on automation systems for Australian service businesses, the price inflection point catches owners off guard. They start on Zapier's free plan, add complexity, and suddenly face a 3x bill increase before they've had a chance to evaluate alternatives. Use the [ROI calculator](/roi) to run your own numbers before committing to either platform.
+Working daily on automation systems for Australian service businesses, the price inflection point catches owners off guard. They start on Zapier's free plan, add complexity, and suddenly face a 3x bill increase before they've had a chance to evaluate alternatives. Use the [automation audit](/audit) to run your own numbers before committing to either platform.
 
 ---
 

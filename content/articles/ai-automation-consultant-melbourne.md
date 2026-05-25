@@ -74,7 +74,7 @@ If your processes are manual and repetitive, start with [workflow automation ser
 
 Australian SMBs achieve 3-4x ROI in the first month from automation costing $500/month, saving 50-80 hours at $45/hour labour rates for a net $1,750/month gain. A Melbourne plumbing firm saved 45 hours monthly and recovered $12,000 in previously lost quotes for a $350/month automation cost. A Brisbane clinic reduced no-shows by 40%, saving $4,200/month at a $280/month system cost.
 
-The ROI calculation is straightforward: how many hours does this task take per month, what's the hourly cost (your wage or staff wage), how much does the automation cost. If you're spending 20 hours a month on manual invoicing at $50/hour, that's $1,000 of labour. An automation system costing $3,000 upfront and $200/month pays for itself in 3 months, then saves you $800/month after that. Use the [ROI calculator](/roi) to run your own numbers before committing to any project.
+The ROI calculation is straightforward: how many hours does this task take per month, what's the hourly cost (your wage or staff wage), how much does the automation cost. If you're spending 20 hours a month on manual invoicing at $50/hour, that's $1,000 of labour. An automation system costing $3,000 upfront and $200/month pays for itself in 3 months, then saves you $800/month after that. Use the [automation audit](/audit) to run your own numbers before committing to any project.
 
 Ongoing maintenance typically runs $500-1,500/month depending on system complexity. Some consultants bundle maintenance into the initial build cost for the first 6 months. Others charge separately. Ask upfront.
 

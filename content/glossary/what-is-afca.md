@@ -1,7 +1,7 @@
 ---
 slug: what-is-afca
 term: AFCA (Australian Financial Complaints Authority)
-shortDefinition: The single external dispute resolution scheme for financial services and credit complaints in Australia, established 1 November 2018, with binding decision authority up to current monetary caps.
+shortDefinition: Australia's single external dispute resolution scheme for financial services and credit complaints, established 1 November 2018, with binding authority.
 category: regulator
 relatedServices: [/seo-ai-visibility]
 relatedTerms: [what-is-asic, what-is-australian-credit-licence, what-is-best-interests-duty]

@@ -1,6 +1,6 @@
 ---
 title: "Small Business Website Design: Build One That Ranks in 2026"
-description: "Small business website design in 2026 comes down to speed, schema and AI-search readiness. Here is why a custom build beats a template for ranking and trust."
+description: "Small business website design in 2026 comes down to speed, schema and AI-search readiness. Why a custom build beats a template for ranking and trust."
 date: "2026-05-21"
 slug: "small-business-website-design"
 cluster: "website-experience-design"

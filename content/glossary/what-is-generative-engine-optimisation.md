@@ -1,6 +1,7 @@
 ---
 slug: what-is-generative-engine-optimisation
 term: Generative Engine Optimisation (GEO)
+titleShort: Generative Engine Optimisation
 shortDefinition: Getting your business named and cited inside AI-generated answers from tools like ChatGPT, Perplexity and Google AI Overviews, instead of ranked as a blue link.
 category: discipline
 relatedServices: [/seo-ai-visibility]

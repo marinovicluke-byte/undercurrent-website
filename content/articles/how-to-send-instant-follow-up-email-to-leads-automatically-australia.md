@@ -236,7 +236,7 @@ Most platforms show you these metrics in dashboards. HubSpot's dashboard breaks 
 
 If your metrics look good but you're not winning more work, the problem is elsewhere. Your pricing, your quote quality, or your brand reputation. Automation fixes slow follow-up, not bad service.
 
-For more on how automation impacts your bottom line, check out our [free ROI calculator](/roi) that shows exactly how much revenue faster follow-up can generate.
+For more on how automation impacts your bottom line, check out our [free automation audit](/audit) that shows exactly how much revenue faster follow-up can generate.
 
 ## What Should You Automate Next After Instant Follow-Up Emails?
 

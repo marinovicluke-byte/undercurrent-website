@@ -86,7 +86,7 @@ Google's [local-business structured data guide](https://developers.google.com/se
 
 **A specialist real estate SEO retainer in Australia typically runs $2,000 to $3,000 a month, and a buyers agent should expect to sit at the top of that band in Sydney or Melbourne.** Small businesses across the board budget around $1,200 a month for SEO, per [Local Digital's 2025 figures](https://www.localdigital.com.au/blog/australian-seo-and-content-marketing-statistics-for-2025); buyers agents in competitive metros need more, because the suburb-page work is heavier. [One Egg's Australian pricing breakdown](https://www.oneegg.com.au/blog/generative-seo-pricing-australia/) puts AI-engine work in a similar band.
 
-A buyers agent's fee on a single purchase usually clears five figures, so one extra engagement a quarter covers a year of retainer with room to spare. Run the numbers with our [ROI calculator](/roi); for an exact starting point, our [free four-surface visibility audit](/audit) sends back the patch list, and our [case studies](/case-studies) show what consistent suburb-page work compounds into.
+A buyers agent's fee on a single purchase usually clears five figures, so one extra engagement a quarter covers a year of retainer with room to spare. Run the numbers with our [automation audit](/audit); for an exact starting point, our [free four-surface visibility audit](/audit) sends back the patch list, and our [case studies](/case-studies) show what consistent suburb-page work compounds into.
 
 | Spend tier | Monthly cost | What you should get |
 |---|---|---|

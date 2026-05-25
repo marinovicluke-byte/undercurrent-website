@@ -124,7 +124,7 @@ A sequence like this takes a couple of days to set up and then runs without you.
 | Job / field software | ServiceM8, Tradify, AroFlo | $50-$150 |
 | **Total** | | **$180-$850** |
 
-In the audits we run, most stacks pay the setup back inside two to three months from time saved alone, before you count a single extra job won from faster replies. The [ROI calculator](/roi) gives you a rough figure from your own admin hours, and the [case studies](/case-studies) page shows what it looks like in practice.
+In the audits we run, most stacks pay the setup back inside two to three months from time saved alone, before you count a single extra job won from faster replies. The [automation audit](/audit) gives you a rough figure from your own admin hours, and the [case studies](/case-studies) page shows what it looks like in practice.
 
 ---
 

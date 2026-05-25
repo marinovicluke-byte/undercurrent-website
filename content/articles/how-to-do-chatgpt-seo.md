@@ -1,6 +1,6 @@
 ---
 title: "How to Do ChatGPT SEO in 30 Minutes"
-description: "ChatGPT SEO is how you become the business ChatGPT recommends. A practical 30-minute walkthrough for Australian service owners, from UnderCurrent Automations."
+description: "ChatGPT SEO is how you become the business ChatGPT recommends. A 30-minute walkthrough for Australian service owners, from UnderCurrent Automations."
 date: "2026-05-13"
 slug: "how-to-do-chatgpt-seo"
 cluster: "seo-ai-visibility"

@@ -99,7 +99,7 @@ Schema markup is metadata you add to your page's HTML that tells search engines 
 
 FAQPage schema tells AI engines that your page contains question-answer pairs. HowTo schema signals step-by-step instructions. Organization schema connects your business entity to your content. If you're not using at least one of these, you're making it harder for ChatGPT to understand what you do.
 
-For most Australian tradies, agencies, and consultants, **FAQPage schema** is the highest-impact option. It maps directly to how people ask questions in AI search. If you have an FAQ section on your page, wrap it in FAQPage schema. If you don't have an FAQ section, add one. We help businesses [calculate the ROI](/roi) of getting this technical foundation right.
+For most Australian tradies, agencies, and consultants, **FAQPage schema** is the highest-impact option. It maps directly to how people ask questions in AI search. If you have an FAQ section on your page, wrap it in FAQPage schema. If you don't have an FAQ section, add one. We help businesses [run our automation audit](/audit) of getting this technical foundation right.
 
 **HowTo schema** works for process-based content. If you're writing "How to Get Your Solar Rebate in Victoria" or "How to Quote a Commercial Plumbing Job," use HowTo schema. AI engines extract the steps and cite them as discrete units.
 

@@ -1,7 +1,7 @@
 ---
 slug: what-is-nap-consistency
 term: NAP Consistency
-shortDefinition: NAP consistency means a business's Name, Address and Phone number appear in exactly the same format everywhere online, so search engines can confirm every listing belongs to the same business.
+shortDefinition: A business's Name, Address and Phone appearing in identical format across the web, so search engines confirm every listing belongs to the same business.
 category: workflow
 relatedServices: [/seo-ai-visibility]
 relatedTerms: [what-is-local-seo, what-is-google-business-profile, what-is-the-local-3-pack]

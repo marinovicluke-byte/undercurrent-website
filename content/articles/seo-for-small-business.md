@@ -1,6 +1,6 @@
 ---
 title: "SEO for Small Business: Pick What's Worth Paying For"
-description: "What SEO for a small business is actually worth paying for in 2026: the four line items that move enquiries, the three to skip, and where DIY beats an agency."
+description: "What SEO is worth paying for in 2026: the four line items that move enquiries, three to skip, and where DIY beats an agency for Australian SMBs."
 date: "2026-05-17"
 slug: "seo-for-small-business"
 cluster: "seo-ai-visibility"

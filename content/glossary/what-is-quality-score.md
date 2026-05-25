@@ -7,7 +7,7 @@ relatedServices: [/seo-ai-visibility]
 relatedTerms: [what-is-cost-per-click, what-are-negative-keywords, what-is-ppc]
 sources:
   - { title: "About Quality Score for Search campaigns (Google Ads Help)", url: "https://support.google.com/google-ads/answer/6167118" }
-    - { title: "About Ad Rank (Google Ads Help)", url: "https://support.google.com/google-ads/answer/1722122" }
+  - { title: "About Ad Rank (Google Ads Help)", url: "https://support.google.com/google-ads/answer/1722122" }
 faqs:
   - { q: "Does Quality Score affect my CPC?", a: "Indirectly. Quality Score itself is a diagnostic number, and Google says it is not used directly in the live auction. But the same relevance signals it reports, expected click-through rate, ad relevance and landing page experience, are calculated in real time at auction, and stronger relevance generally lowers what you pay for a given position." }
   - { q: "What is a good Quality Score?", a: "On the 1-to-10 scale, 7 and above is healthy for most keywords, 8 to 10 is strong, and anything below 5 points to a real problem, usually a landing page that does not match the ad or an ad group that is too broad. Treat it as a warning light, not a target to chase for its own sake." }

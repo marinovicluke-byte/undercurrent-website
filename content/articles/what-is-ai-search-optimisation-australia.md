@@ -1,6 +1,6 @@
 ---
 title: "How to Do AI Search Optimisation in Australia"
-description: "AI search optimisation means structuring your website so that tools like ChatGPT, Perplexity, and Google AI Overviews cite your business when customers ask q..."
+description: "AI search optimisation structures your site so ChatGPT, Perplexity, and Google AI Overviews cite your business when Australian customers ask questions."
 date: "2026-05-14"
 slug: "what-is-ai-search-optimisation-australia"
 cluster: "foundations"

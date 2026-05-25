@@ -1,6 +1,6 @@
 ---
 title: "How Much Does SEO Pricing Australia Cost in 2026?"
-description: "SEO packages Australia 2026,UnderCurrent's $2,800-$9,500/mo fixed packages, hours×rate breakdown per tier, plus an audit of the 10 ranking AU pricing pages."
+description: "SEO packages Australia 2026: UnderCurrent's $1,000-$9,500/mo fixed tiers with hours×rate math, plus an audit of the 10 ranking AU pricing pages."
 date: "2026-05-16"
 slug: "seo-pricing-australia-2026"
 cluster: "seo-ai-visibility"
@@ -10,7 +10,7 @@ level: "intermediate"
 readingTime: 19
 faqs:
   - q: "How much does SEO actually cost in Australia in 2026?"
-    a: "For most Australian small and medium businesses, expect $1,200-$5,000/mo on a real campaign per Australian Bureau of Statistics business spending data. Below $1,000/mo the work is offshored or automated and rarely produces results. UnderCurrent's packages: Tier 1 Local at $2,800/mo, Tier 2 Regional at $5,500/mo, Tier 3 National at $9,500/mo. One-off setup $1,200-$3,500 by tier. Quarterly performance bonus capped between $400 and $2,500 by tier when results trigger."
+    a: "For most Australian small and medium businesses, expect $1,000-$9,500/mo on a real campaign per Australian Bureau of Statistics business spending data. Below $1,000/mo the work is offshored or automated and rarely produces results. UnderCurrent publishes five fixed tiers: Foundation at $1,000/mo, SEO-only at $1,500/mo (articles + service pages, no paid media), Local with PPC at $2,800/mo, Regional at $5,500/mo, and National at $9,500/mo. One-off setup ranges from scope-dependent up to $3,500. Quarterly performance bonus capped between $400 and $2,500 by tier when results trigger."
   - q: "Why do most Australian SEO agencies hide their pricing?"
     a: "Hedged pricing lets the agency anchor low (\"from $1,500/mo\") then quote higher on the discovery call. Our audit of the top 10 ranking pages in May 2026 found 90% publish ranges only, 10% publish tiered packages, and 0% publish a fixed retainer. Even the #1 and #2 ranking agencies give you bands, not numbers. It's a sales pattern, not transparency. UnderCurrent publishes the number so you can compare offers before booking a call."
   - q: "What happens if I cancel after the minimum term?"
@@ -20,17 +20,17 @@ faqs:
   - q: "Why charge a base retainer AND a performance bonus?"
     a: "Pure performance creates cash-flow instability and pure retainers misalign incentives. Base covers production work regardless of result variance: content, technical, reporting. Bonus rewards the outcomes you actually buy SEO for: traffic, rankings, qualified leads. The flat retainer with no upside is still the dominant model, but hybrid retainer-plus-bonus is the fastest-growing alternative. We chose hybrid from the start because it ties what we earn to what you actually buy SEO for."
   - q: "How does UnderCurrent compare to StudioHawk or Safari Digital on price?"
-    a: "StudioHawk frames pricing as three open-ended ranges. Safari Digital frames it as a sliding scale by business size, from sub-$2k to five-figure. UnderCurrent publishes three fixed packages at $2,800, $5,500, and $9,500/mo with full deliverables per tier. UC Tier 1 sits at the upper end of StudioHawk's mid band; Tier 3 sits roughly at their top-band floor. The difference is we publish line items, bundle methodology, contract terms, the step-up rule, and the performance bonus structure on the same page."
-  - q: "How long until I see results from SEO at $2,800-$9,500/mo?"
-    a: "Tier 1 typically shows movement on long-tail keywords within 60-90 days. Material organic traffic growth and competitive head-term ranking shifts usually need 6-9 months because Google's ranking signals compound slowly per its own Search Central documentation. Tier 3 sees faster compounding because the content cadence is higher and technical depth is deeper, but the head-term curve still follows roughly the same shape. Anyone promising 90-day top-3 rankings on competitive AU head terms at Tier 1 pricing is selling something the algorithm will punish."
+    a: "StudioHawk frames pricing as three open-ended ranges. Safari Digital frames it as a sliding scale by business size, from sub-$2k to five-figure. UnderCurrent publishes five fixed tiers from $1,000/mo Foundation through to $9,500/mo National, with full deliverables per tier. UC's SEO-only tier at $1,500/mo sits right inside StudioHawk's mid band; the $2,800/mo Local + PPC tier covers paid media too; Tier 3 sits roughly at their top-band floor. The difference is we publish line items, bundle methodology, contract terms, the step-up rule, and the performance bonus structure on the same page."
+  - q: "How long until I see results from SEO at $1,000-$9,500/mo?"
+    a: "Foundation and SEO-only tiers usually show movement on long-tail keywords within 90-120 days because content cadence is lower. The $2,800/mo Local with PPC tier moves faster on long-tail because paid traffic primes the organic feedback loop. Material organic traffic growth and competitive head-term ranking shifts still need 6-9 months at any tier because Google's ranking signals compound slowly per its own Search Central documentation. Tier 3 sees the fastest compounding because content cadence is higher and technical depth is deeper. Anyone promising 90-day top-3 rankings on competitive AU head terms at entry pricing is selling something the algorithm will punish."
   - q: "Is a monthly SEO retainer worth it compared to project-based pricing?"
     a: "For ongoing organic growth, retainers outperform projects almost every time. SEO is a compounding discipline: content cadence, internal linking, technical maintenance, and authority building all benefit from continuity. A one-off SEO project ships a snapshot that decays within 6-12 months as the SERP shifts. A retainer keeps the work current. Project pricing makes sense for one-time audits, technical migrations, or schema implementation, but not for the ongoing content + AI search programme our Tier 1-3 packages cover."
   - q: "How does UnderCurrent's pricing compare to US or UK SEO agencies?"
-    a: "US agencies typically charge 30-50% more than their AU equivalents on like-for-like scope: a Tier 1-equivalent US retainer runs US$3,500-US$5,500/mo against UC's AUD $2,800. UK agencies usually sit 10-20% below AU pricing because the GBP freelance market is deeper. UC's AUD $2,800-$9,500/mo packages map roughly to US$1,850-US$6,300/mo at recent exchange rates, putting us below typical US mid-tier and around UK mid-tier on absolute price, with comparable scope and stronger transparency than either market norm."
+    a: "US agencies typically charge 30-50% more than their AU equivalents on like-for-like scope: a Tier 1-equivalent US retainer runs US$3,500-US$5,500/mo against UC's AUD $2,800. UK agencies usually sit 10-20% below AU pricing because the GBP freelance market is deeper. UC's AUD $1,000-$9,500/mo tiers map roughly to US$660-US$6,300/mo at recent exchange rates, putting us below typical US mid-tier and around UK mid-tier on absolute price, with comparable scope and stronger transparency than either market norm."
 ---
 # How Much Does SEO Pricing Australia Cost in 2026?
 
-> **Quick Answer:** Australian SEO pricing runs from $500 to $20,000+ a month, across five price bands. UnderCurrent starts with a $1,000/mo Foundation package for businesses just getting started, then three fixed tiers at $2,800, $5,500, and $9,500/mo, plus a $3,000 custom website build. You can also pick one service at a time instead of a whole package. We checked the 10 top-ranking "seo pricing australia" pages in May 2026. None of them show how the price is worked out. We do.
+> **Quick Answer:** Australian SEO pricing runs from $500 to $20,000+ a month, across five price bands. UnderCurrent publishes five fixed tiers: $1,000/mo Foundation for businesses just getting started, $1,500/mo SEO-only (articles + service pages, no paid media), $2,800/mo Local with PPC, $5,500/mo Regional, and $9,500/mo National. Plus a $3,000 custom website build. You can also pick one service at a time instead of a whole package. We checked the 10 top-ranking "seo pricing australia" pages in May 2026. None of them show how the price is worked out. We do.
 
 ## What does an SEO packages Australia comparison reveal in 2026?
 
@@ -97,18 +97,19 @@ Sweet spot for serious growth SMEs is the $2-$3.5k band: enough budget for real 
 
 ## What does each UnderCurrent SEO package actually include?
 
-**UnderCurrent lists a $1,000/mo Foundation package plus three fixed tiers at $2,800, $5,500, and $9,500/mo, with every part of the work shown for each tier.** Foundation costs less than Tier 1 Local, so a smaller business can still start with us.
+**UnderCurrent lists five fixed tiers, from a $1,000/mo Foundation through to a $9,500/mo National package, with every part of the work shown for each tier.** Foundation is the entry tier for businesses just getting started. SEO-only at $1,500/mo adds article + service-page production without any paid media. The three main tiers from $2,800/mo upwards bundle PPC alongside the organic work.
 
-| Deliverable | Foundation | Tier 1 Local | Tier 2 Regional | Tier 3 National |
-|---|---|---|---|---|
-| Monthly retainer | $1,000 | $2,800 | $5,500 | $9,500 |
-| Setup fee | Scope-dependent | $1,200 | $2,000 | $3,500 |
-| Articles per month | 2 | 8 | 12 | 18 |
-| Service / location pages per month | 2 | 4 | 6 | 8 |
-| [GBP](/glossary/what-is-google-business-profile) + Apple Business | Not included | 1 location | 1-3 locations | Up to 10 |
-| [AI search optimisation](/glossary/what-is-ai-search-optimisation) | Schema fixes | [FAQ schema](/glossary/what-is-faq-schema) + entity | Full + Peec AI monitoring | Full + Rankability |
-| Link building | Not included | Add-on | Active outreach | 4-6 high-DR/mo |
-| Strategy calls | Onboarding only | Onboarding only | Quarterly | Bi-weekly |
+| Deliverable | Foundation | SEO-only | Tier 1 Local + PPC | Tier 2 Regional | Tier 3 National |
+|---|---|---|---|---|---|
+| Monthly retainer | $1,000 | $1,500 | $2,800 | $5,500 | $9,500 |
+| Setup fee | Scope-dependent | $800 | $1,200 | $2,000 | $3,500 |
+| Articles per month | 2 | 4 | 8 | 12 | 18 |
+| Service / location pages per month | 2 | 3 | 4 | 6 | 8 |
+| Google Ads / PPC | Not included | Not included | Included | Included | Included |
+| [GBP](/glossary/what-is-google-business-profile) + Apple Business | Not included | 1 location | 1 location | 1-3 locations | Up to 10 |
+| [AI search optimisation](/glossary/what-is-ai-search-optimisation) | Schema fixes | [FAQ schema](/glossary/what-is-faq-schema) + entity | [FAQ schema](/glossary/what-is-faq-schema) + entity | Full + Peec AI monitoring | Full + Rankability |
+| Link building | Not included | Not included | Add-on | Active outreach | 4-6 high-DR/mo |
+| Strategy calls | Onboarding only | Onboarding only | Onboarding only | Quarterly | Bi-weekly |
 
 Apple Business Connect launched in Australia on 14 April 2026 and is included from May 2026.
 
@@ -333,7 +334,7 @@ We save 4 to 6 hours per engagement on sales calls that go nowhere. The leads th
 
 ### How much does SEO actually cost in Australia in 2026?
 
-For most Australian small and medium businesses, expect $1,200-$5,000/mo on a real campaign per [Australian Bureau of Statistics business spending data](https://www.abs.gov.au/articles/insights-government-finance-statistics-annual-2024-25). Below $1,000/mo the work is offshored or automated and rarely produces results. UnderCurrent's packages: Tier 1 Local at $2,800/mo, Tier 2 Regional at $5,500/mo, Tier 3 National at $9,500/mo. One-off setup $1,200-$3,500 by tier. Quarterly performance bonus capped between $400 and $2,500 by tier when results trigger.
+For most Australian small and medium businesses, expect $1,000-$9,500/mo on a real campaign per [Australian Bureau of Statistics business spending data](https://www.abs.gov.au/articles/insights-government-finance-statistics-annual-2024-25). Below $1,000/mo the work is offshored or automated and rarely produces results. UnderCurrent publishes five fixed tiers: Foundation at $1,000/mo, SEO-only at $1,500/mo (articles + service pages, no paid media), Local with PPC at $2,800/mo, Regional at $5,500/mo, and National at $9,500/mo. Setup ranges from scope-dependent to $3,500. Quarterly performance bonus capped between $400 and $2,500 by tier when results trigger.
 
 ### Why do most Australian SEO agencies hide their pricing?
 
@@ -353,11 +354,11 @@ Pure performance creates cash-flow instability and pure retainers misalign incen
 
 ### How does UnderCurrent compare to StudioHawk or Safari Digital on price?
 
-StudioHawk frames pricing as three open-ended ranges. Safari Digital frames it as a sliding scale by business size, from sub-$2k to five-figure. UnderCurrent publishes three fixed packages at $2,800, $5,500, and $9,500/mo with full deliverables per tier. UC Tier 1 sits at the upper end of StudioHawk's mid band; Tier 3 sits roughly at their top-band floor. The difference is we publish line items, bundle methodology, contract terms, the step-up rule, and the performance bonus structure on the same page.
+StudioHawk frames pricing as three open-ended ranges. Safari Digital frames it as a sliding scale by business size, from sub-$2k to five-figure. UnderCurrent publishes five fixed tiers from $1,000/mo Foundation through to $9,500/mo National, with full deliverables per tier. UC's SEO-only tier at $1,500/mo sits right inside StudioHawk's mid band; the $2,800/mo Local + PPC tier covers paid media too; Tier 3 sits roughly at their top-band floor. The difference is we publish line items, bundle methodology, contract terms, the step-up rule, and the performance bonus structure on the same page.
 
-### How long until I see results from SEO at $2,800-$9,500/mo?
+### How long until I see results from SEO at $1,000-$9,500/mo?
 
-Tier 1 typically shows movement on long-tail keywords within 60-90 days. Material organic traffic growth and competitive head-term ranking shifts usually need 6-9 months because Google's ranking signals compound slowly per its own Search Central documentation. Tier 3 sees faster compounding because the content cadence is higher and technical depth is deeper, but the head-term curve still follows roughly the same shape. Anyone promising 90-day top-3 rankings on competitive AU head terms at Tier 1 pricing is selling something the algorithm will punish.
+Foundation and SEO-only tiers usually show movement on long-tail keywords within 90-120 days because content cadence is lower. The $2,800/mo Local with PPC tier moves faster on long-tail because paid traffic primes the organic feedback loop. Material organic traffic growth and competitive head-term ranking shifts still need 6-9 months at any tier because Google's ranking signals compound slowly per its own Search Central documentation. Tier 3 sees the fastest compounding because content cadence is higher and technical depth is deeper. Anyone promising 90-day top-3 rankings on competitive AU head terms at entry pricing is selling something the algorithm will punish.
 
 ### Is a monthly SEO retainer worth it compared to project-based pricing?
 
@@ -365,7 +366,7 @@ For ongoing organic growth, retainers outperform projects almost every time. SEO
 
 ### How does UnderCurrent's pricing compare to US or UK SEO agencies?
 
-US agencies typically charge 30-50% more than their AU equivalents on like-for-like scope: a Tier 1-equivalent US retainer runs US$3,500-US$5,500/mo against UC's AUD $2,800. UK agencies usually sit 10-20% below AU pricing because the GBP freelance market is deeper. UC's AUD $2,800-$9,500/mo packages map roughly to US$1,850-US$6,300/mo at recent exchange rates, putting us below typical US mid-tier and around UK mid-tier on absolute price, with comparable scope and stronger transparency than either market norm.
+US agencies typically charge 30-50% more than their AU equivalents on like-for-like scope: a Tier 1-equivalent US retainer runs US$3,500-US$5,500/mo against UC's AUD $2,800. UK agencies usually sit 10-20% below AU pricing because the GBP freelance market is deeper. UC's AUD $1,000-$9,500/mo tiers map roughly to US$660-US$6,300/mo at recent exchange rates, putting us below typical US mid-tier and around UK mid-tier on absolute price, with comparable scope and stronger transparency than either market norm.
 
 ## Related Reading
 

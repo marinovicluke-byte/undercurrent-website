@@ -188,7 +188,7 @@ Here's a breakdown:
 
 Your $400/month software cost pays for itself in the first three days.
 
-Use our [ROI calculator](/roi) to see what the numbers look like for your practice specifically.
+Use our [automation audit](/audit) to see what the numbers look like for your practice specifically.
 
 ## Can You Build Client Onboarding Automation Yourself, or Do You Need Help?
 

@@ -120,7 +120,7 @@ Now say you start responding within 5 minutes. Your conversion rate jumps to 60-
 
 That's double the work. From the same number of enquiries. Just by responding faster.
 
-If your average job is worth $2,000, that's an extra $6,000-$8,000 a month. Nearly $100,000 a year. From one change. Use our [ROI calculator](/roi) to see what faster response time is worth for your business.
+If your average job is worth $2,000, that's an extra $6,000-$8,000 a month. Nearly $100,000 a year. From one change. Use our [automation audit](/audit) to see what faster response time is worth for your business.
 
 The tradies who figure this out early are the ones who scale past the one-person-on-the-tools stage. They're not working harder. They're just responding faster.
 

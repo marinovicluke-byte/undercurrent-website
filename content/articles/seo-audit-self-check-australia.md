@@ -1,6 +1,6 @@
 ---
 title: "Is Your Website Broken? Run a 30-Min SEO Audit"
-description: "Run a free 30-minute SEO audit on your Australian service business website with these 8 checks — no agency required. Spot what's broken before you spend a cent."
+description: "Run a free 30-minute SEO audit on your Australian service business website. 8 checks, no agency required. Spot whats broken before you spend a cent."
 date: "2026-05-06"
 slug: "seo-audit-self-check-australia"
 cluster: "foundations"
@@ -137,7 +137,7 @@ Google ships ranking system updates regularly, and [Google Search Central's rank
 
 Trigger an unscheduled audit when you migrate your site, change your URL structure, add a major service page, or notice a sudden traffic drop in Search Console. These events break things in ways a routine check won't catch until the damage is done. Our [how we work](/process) page outlines how we build recurring audit checkpoints into client engagements for exactly this reason.
 
-According to [Semrush's local SEO data](https://www.semrush.com/blog/seo-statistics/), most local businesses run an SEO audit at some point, but far fewer do it on a regular cadence. [The ABS counts more than 2.5 million actively trading businesses in Australia](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release), and the majority have no recurring SEO monitoring in place. The competitive advantage isn't in running one audit, it's in running one every quarter when your competitors don't. If you want to see what that's worth in actual traffic terms, our [ROI calculator](/roi) can run the numbers for your market.
+According to [Semrush's local SEO data](https://www.semrush.com/blog/seo-statistics/), most local businesses run an SEO audit at some point, but far fewer do it on a regular cadence. [The ABS counts more than 2.5 million actively trading businesses in Australia](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release), and the majority have no recurring SEO monitoring in place. The competitive advantage isn't in running one audit, it's in running one every quarter when your competitors don't. If you want to see what that's worth in actual traffic terms, our [automation audit](/audit) can run the numbers for your market.
 
 ---
 

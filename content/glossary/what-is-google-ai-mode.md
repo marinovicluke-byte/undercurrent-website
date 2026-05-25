@@ -1,7 +1,7 @@
 ---
 slug: what-is-google-ai-mode
 term: Google AI Mode
-shortDefinition: Google AI Mode is Google's standalone conversational search destination, separate from AI Overviews, powered by Gemini that handles multi-step queries with persistent context and multimodal input.
+shortDefinition: Google's standalone Gemini-powered conversational search destination. Separate from AI Overviews, with persistent context and multimodal input.
 category: tool
 relatedServices: [/seo-ai-visibility]
 relatedTerms: [what-is-ai-search-optimisation, what-is-answer-engine-optimisation, what-is-chatgpt-search]

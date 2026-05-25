@@ -190,7 +190,7 @@ Here's the order that works for most Australian SMEs:
 
 Start with number one. Most businesses lose 20-30% of their leads because they don't have a reliable system for capturing enquiries and getting them into a follow-up process. Fix that first. The rest can wait.
 
-If you're not sure where you're losing leads or time, our [ROI calculator](/roi) helps you map out which automations will save you the most time and generate the most revenue.
+If you're not sure where you're losing leads or time, our [automation audit](/audit) helps you map out which automations will save you the most time and generate the most revenue.
 
 ## Manual vs Automated: What Marketing Tasks Should You Hand Off?
 

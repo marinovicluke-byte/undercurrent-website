@@ -1,7 +1,7 @@
 ---
 slug: what-is-seo
 term: SEO (Search Engine Optimisation)
-shortDefinition: The discipline of making your site understandable to search engines and worth visiting to users, now applied across Google's blue links, AI Overviews, ChatGPT citations and answer engines.
+shortDefinition: Making your site understandable to search engines and worth visiting to users, now spanning Google's blue links, AI Overviews and ChatGPT citations.
 category: discipline
 relatedServices: [/seo-ai-visibility]
 relatedTerms: [what-is-local-seo, what-is-ai-search-optimisation, what-is-answer-engine-optimisation]

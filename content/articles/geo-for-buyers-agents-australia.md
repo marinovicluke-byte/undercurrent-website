@@ -289,7 +289,7 @@ Anything quantitative and reproducible. Median gap to reserve across your last 5
 - [About UnderCurrent](/about) and [our process page](/process)
 - [The main blog archive](/blog)
 
-For a structural audit of your buyers-agency site against the five GEO pillars, book a [free automation audit](/audit) or [reach out via the contact page](/contact). Full UC catalogue: [services overview](/services), [case studies](/case-studies), [ROI calculator](/roi). Adelaide buyers agents can also dig into [the Adelaide automation hub](/ai-automation-adelaide).
+For a structural audit of your buyers-agency site against the five GEO pillars, book a [free automation audit](/audit) or [reach out via the contact page](/contact). Full UC catalogue: [services overview](/services), [case studies](/case-studies), [automation audit](/audit). Adelaide buyers agents can also dig into [the Adelaide automation hub](/ai-automation-adelaide).
 
 ## Sources
 

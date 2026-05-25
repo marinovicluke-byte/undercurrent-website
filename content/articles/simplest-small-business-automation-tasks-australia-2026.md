@@ -228,7 +228,7 @@ That's the real ROI. Not the 30 minutes you saved. The shift in mindset that mak
 
 If you're in Melbourne, Sydney, Brisbane, or anywhere in Australia and you're ready to start, we'd love to help. We offer a [free business audit](/audit) where we walk through your current processes and show you exactly which tasks are eating your time and how to automate them.
 
-And if you want to calculate the actual dollar value of the time you're losing to manual tasks, try our [ROI calculator](/roi). It's surprisingly depressing how much time adds up.
+And if you want to calculate the actual dollar value of the time you're losing to manual tasks, try our [automation audit](/audit). It's surprisingly depressing how much time adds up.
 
 ## Frequently Asked Questions
 

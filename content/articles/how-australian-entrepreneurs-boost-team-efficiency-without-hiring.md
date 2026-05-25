@@ -239,7 +239,7 @@ Pick one strategy from this article. Just one. Here's exactly what to do:
 
 Most Australian service businesses can recover 10-15 hours per week within 30 days of implementing their first efficiency strategy. At $100/hour average billable rate, that's $52,000-$78,000 in annual capacity without hiring a single person.
 
-Want to see how much revenue you're leaving on the table? Use our [ROI calculator](/roi) to quantify the value of the hours you're currently spending on tasks a system could handle.
+Want to see how much revenue you're leaving on the table? Use our [automation audit](/audit) to quantify the value of the hours you're currently spending on tasks a system could handle.
 
 The best time to build efficient systems was when you started your business. The second-best time is Monday morning.
 

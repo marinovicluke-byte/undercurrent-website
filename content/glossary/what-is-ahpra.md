@@ -1,7 +1,7 @@
 ---
 slug: what-is-ahpra
 term: AHPRA (Australian Health Practitioner Regulation Agency)
-shortDefinition: The national agency that registers and regulates 16 health professions in Australia under the Health Practitioner Regulation National Law, with 959,838 registered practitioners as of June 2025.
+shortDefinition: Australia's national agency registering and regulating 16 health professions under the Health Practitioner Regulation National Law (959,838 registered).
 category: regulator
 relatedServices: [/seo-ai-visibility]
 relatedTerms: [what-is-schema-markup, what-is-faq-schema]

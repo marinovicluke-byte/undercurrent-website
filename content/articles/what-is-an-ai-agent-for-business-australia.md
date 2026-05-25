@@ -101,7 +101,7 @@ According to [Xero's Small Business Insights](https://www.xero.com/au/guides/), 
 
 Absolutely. An invoice-chasing agent connects to Xero or MYOB, monitors overdue balances, sends personalised payment reminders at set intervals (7 days, 14 days, 30 days), escalates the tone appropriately, and flags persistently overdue accounts for your attention. You review the exceptions. The agent handles the volume.
 
-MYOB's Business Monitor consistently shows late payments as a top-five issue for Australian SMEs, with trade businesses among the hardest hit, many carrying 30–60 days of outstanding invoices at any point. Based on typical outcomes from our automation audits, a trade business in Joondalup with six staff was spending roughly five hours a week manually following up on overdue invoices. After connecting an AI agent to their Xero account with a tiered reminder sequence, that dropped to under an hour, a 15-minute review of flagged accounts instead of a Friday afternoon of phone calls. You can run your own numbers using the [UnderCurrent ROI calculator](/roi).
+MYOB's Business Monitor consistently shows late payments as a top-five issue for Australian SMEs, with trade businesses among the hardest hit, many carrying 30–60 days of outstanding invoices at any point. Based on typical outcomes from our automation audits, a trade business in Joondalup with six staff was spending roughly five hours a week manually following up on overdue invoices. After connecting an AI agent to their Xero account with a tiered reminder sequence, that dropped to under an hour, a 15-minute review of flagged accounts instead of a Friday afternoon of phone calls. You can run your own numbers using the [UnderCurrent automation audit](/audit).
 
 ### What About Scheduling, Dispatch, and Job Management?
 
@@ -139,7 +139,7 @@ For a business considering a custom AI agent build, a $50,000 investment has a n
 
 [McKinsey's analysis of automation ROI](https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai) estimates that AI and automation deployments in service businesses typically reach payback within 6–18 months, with faster returns for high-volume, repetitive workflows. For Australian SMEs in trades and professional services, where admin load is high and margins are squeezed, that window is often 2–4 months when the agent targets lead response or invoice chasing specifically.
 
-A Footscray wholesale distributor with 12 staff reduced inventory holding by 18%, freed $125,000 in cash, and cut receipt processing from four hours to 45 minutes per week, with an annual tool cost of $7,044 and a net benefit of $136,320. If you want to run your own numbers before committing, the [UnderCurrent ROI calculator](/roi) gives you a rough figure based on your current hours and hourly rate. More detailed build outcomes are documented in the [case studies](/case-studies) section.
+A Footscray wholesale distributor with 12 staff reduced inventory holding by 18%, freed $125,000 in cash, and cut receipt processing from four hours to 45 minutes per week, with an annual tool cost of $7,044 and a net benefit of $136,320. If you want to run your own numbers before committing, the [UnderCurrent automation audit](/audit) gives you a rough figure based on your current hours and hourly rate. More detailed build outcomes are documented in the [case studies](/case-studies) section.
 
 ---
 

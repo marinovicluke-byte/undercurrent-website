@@ -1,7 +1,7 @@
 ---
 slug: what-is-a-google-core-update
 term: Google Core Update
-shortDefinition: A broad recalibration of Google's ranking systems, shipped two to four times a year, that re-weighs how the algorithm reads quality, expertise and answer extractability across the whole index.
+shortDefinition: A broad recalibration of Google's ranking systems shipped 2-4 times a year, re-weighing how the algorithm reads quality, expertise and answer extractability.
 category: workflow
 relatedServices: [/seo-ai-visibility]
 relatedTerms: [what-is-eeat, what-is-topical-authority, what-is-seo]

@@ -25,12 +25,16 @@ export async function generateMetadata({ params }) {
   const entry = await getGlossaryTermBySlug(term)
   if (!entry) return {}
   const fm = entry.frontmatter
+  // SEO title: drop the "— Glossary" suffix that pushed every entry past the
+  // 60-char SERP cutoff (the URL path already signals glossary). Long term names
+  // (ASIC's full parenthetical, GEO) opt into a tighter title via `titleShort`.
+  const seoTitle = fm.titleShort || fm.term
   return {
-    title: `${fm.term} — Glossary`,
+    title: seoTitle,
     description: fm.shortDefinition,
     alternates: { canonical: `${SITE_URL}/glossary/${entry.slug}` },
     openGraph: {
-      title: `${fm.term} — UnderCurrent Glossary`,
+      title: `${seoTitle} — UnderCurrent Glossary`,
       description: fm.shortDefinition,
       type: 'article',
       url: `${SITE_URL}/glossary/${entry.slug}`,
@@ -41,7 +45,7 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${fm.term} — UnderCurrent Glossary`,
+      title: `${seoTitle} — UnderCurrent Glossary`,
       description: fm.shortDefinition,
       images: [`${SITE_URL}/brand/og-card.png`],
     },

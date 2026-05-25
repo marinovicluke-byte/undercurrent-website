@@ -1,7 +1,7 @@
 ---
 slug: what-is-an-ai-agent
 term: AI Agent
-shortDefinition: An AI system that decides its own next step, picks the right tool, and runs a multi-step task on a person's behalf, like booking a meeting or chasing an invoice, without being scripted step-by-step.
+shortDefinition: An AI system that picks its own next step and runs a multi-step task on your behalf, like booking a meeting or chasing an invoice, unscripted.
 category: tool
 relatedServices: [/ai-strategy-training]
 relatedTerms: [what-is-ai-automation, what-is-business-process-automation, what-is-chatgpt-search]
