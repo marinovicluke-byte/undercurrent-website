@@ -409,7 +409,7 @@ export default function ServicePage({ service }) {
               </div>
               <p style={{ ...S.h2, fontSize: 20, marginBottom: 20 }}>Related services and source material.</p>
               <div style={{ borderTop: '1px solid rgba(250,249,245,0.1)' }}>
-                {service.internalLinks.map(l => ({ label: l.label, href: l.path, kind: 'Service' })).map((r, i) => (
+                {service.internalLinks.map(l => ({ label: l.label, href: l.path, kind: l.kind || 'Service' })).map((r, i) => (
                   <Link key={i} href={r.href} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20, padding: '14px 0', borderBottom: '1px solid var(--text-faint)', textDecoration: 'none' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 16, minWidth: 0 }}>
                       <span style={{ ...S.label, color: 'var(--sage-light)', width: 64, flexShrink: 0 }}>{r.kind}</span>

@@ -7,25 +7,42 @@ import { CLUSTER_ORDER } from '@/lib/clusters'
 
 const BASE = 'https://undercurrentautomations.com'
 
+// Last substantive content edit to the static, location and service pages.
+// Bump manually when one of those pages actually changes. Using the build
+// timestamp made every deploy claim every page changed, which teaches
+// crawlers to ignore our lastmod.
+const STATIC_LASTMOD = new Date('2026-06-10')
+
+const newestDate = items =>
+  items.length
+    ? new Date(Math.max(...items.map(i => +new Date(i.dateModified || i.datePublished || i.date))))
+    : STATIC_LASTMOD
+
 export default function sitemap() {
+  const allArticles = getAllArticles()
+  const allCaseStudies = getAllCaseStudies()
+  const allGlossary = getAllGlossaryTerms()
+
   const staticPages = [
     '', '/about', '/services', '/process', '/contact',
     '/audit',
-    '/blog', '/case-studies', '/glossary',
     '/company-information',
     '/privacy', '/terms',
   ].map(path => ({
     url: `${BASE}${path}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly',
-    priority: path === '' ? 1.0 : 0.7,
+    lastModified: STATIC_LASTMOD,
   }))
+
+  // Index pages change when their newest item does.
+  const indexPages = [
+    { url: `${BASE}/blog`, lastModified: newestDate(allArticles) },
+    { url: `${BASE}/case-studies`, lastModified: newestDate(allCaseStudies) },
+    { url: `${BASE}/glossary`, lastModified: newestDate(allGlossary) },
+  ]
 
   const locationPages = LOCATIONS.map(l => ({
     url: `${BASE}/${l.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly',
-    priority: 0.8,
+    lastModified: STATIC_LASTMOD,
   }))
 
   // Slugs excluded from the sitemap. Pages still render via the [slug] dispatcher
@@ -37,42 +54,33 @@ export default function sitemap() {
     .filter(s => !SITEMAP_EXCLUDED.has(s.slug))
     .map(s => ({
       url: `${BASE}/${s.slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      lastModified: STATIC_LASTMOD,
     }))
 
-  // Topic cluster pillar pages — high SEO priority (topical authority hubs)
+  // Topic cluster pillar pages — change when their newest article does.
   const clusterPages = CLUSTER_ORDER.map(slug => ({
     url: `${BASE}/blog/cluster/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 0.8,
+    lastModified: newestDate(allArticles.filter(a => a.cluster === slug)),
   }))
 
-  const articles = getAllArticles().map(a => ({
+  const articles = allArticles.map(a => ({
     url: `${BASE}/blog/${a.slug}`,
     lastModified: new Date(a.dateModified || a.date),
-    changeFrequency: 'weekly',
-    priority: 0.6,
   }))
 
-  const caseStudies = getAllCaseStudies().map(c => ({
+  const caseStudies = allCaseStudies.map(c => ({
     url: `${BASE}/case-studies/${c.slug}`,
     lastModified: new Date(c.dateModified || c.date),
-    changeFrequency: 'monthly',
-    priority: 0.7,
   }))
 
-  const glossaryPages = getAllGlossaryTerms().map(t => ({
+  const glossaryPages = allGlossary.map(t => ({
     url: `${BASE}/glossary/${t.slug}`,
-    lastModified: new Date(t.dateModified || t.datePublished || Date.now()),
-    changeFrequency: 'monthly',
-    priority: 0.5,
+    lastModified: new Date(t.dateModified || t.datePublished || STATIC_LASTMOD),
   }))
 
   return [
     ...staticPages,
+    ...indexPages,
     ...locationPages,
     ...servicePages,
     ...clusterPages,
