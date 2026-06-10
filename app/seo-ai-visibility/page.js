@@ -825,7 +825,28 @@ export default function SeoAiVisibilityPage() {
         </div>
       </section>
 
-      {/* ── 10 CLOSING CTA ───────────────────────────────────────────────── */}
+      {/* ── 10 FURTHER READING ───────────────────────────────────────────── */}
+      <section style={{ padding: '0 var(--page-pad) 96px' }}>
+        <div style={{ maxWidth: 1280, margin: '0 auto' }}>
+          <div style={{ marginBottom: 24 }}><SectionEyebrow n="09" label="Further reading" /></div>
+          <H2 style={{ fontSize: 'clamp(26px, 2.6vw, 38px)', marginBottom: 24 }}>
+            From the blog.
+          </H2>
+          <div style={{ borderTop: `1px solid ${FAINT}` }}>
+            {SVC.internalLinks.filter(l => l.kind === 'Article').map((l, i) => (
+              <Link key={i} href={l.path} style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20,
+                padding: '14px 0', borderBottom: `1px solid ${FAINT}`, textDecoration: 'none',
+              }}>
+                <span style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: OFF_WHITE }}>{l.label}</span>
+                <span aria-hidden style={{ fontSize: 13, color: MUTED }}>→</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 11 CLOSING CTA ───────────────────────────────────────────────── */}
       <section style={{ padding: '120px var(--page-pad)', position: 'relative', overflow: 'hidden', background: CHARCOAL, borderTop: `1px solid ${FAINT}` }}>
         <div aria-hidden style={{
           position: 'absolute', top: '50%', left: '50%',
@@ -835,7 +856,7 @@ export default function SeoAiVisibilityPage() {
           pointerEvents: 'none',
         }} />
         <div style={{ maxWidth: 700, margin: '0 auto', textAlign: 'center', position: 'relative' }}>
-          <div style={{ marginBottom: 24 }}><SectionEyebrow n="09" label="Get started" /></div>
+          <div style={{ marginBottom: 24 }}><SectionEyebrow n="10" label="Get started" /></div>
           <H2 style={{ fontSize: 'clamp(32px, 3.8vw, 58px)', maxWidth: 700, marginBottom: 20, margin: '0 auto 20px' }}>
             {SVC.ctaHeadline}
           </H2>
