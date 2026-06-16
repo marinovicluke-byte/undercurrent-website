@@ -1,13 +1,13 @@
 ---
 title: "How to Do SEO for Dog Groomers in Australia"
 description: "SEO for dog groomers in Australia: rank in Maps, organic and AI search. What our local-pack research found about reviews, proximity and fixable profile gaps."
-date: "2026-06-15"
+date: "2026-06-16"
 slug: "seo-for-dog-groomers"
 cluster: "seo-ai-visibility"
 keyword: "seo for dog groomers"
 author: "Luke"
 level: "intermediate"
-readingTime: 12
+readingTime: 11
 faqs:
   - q: "Does SEO actually work for a small dog grooming business?"
     a: "Yes, and it tends to pay back well for groomers because the business-facing competition online is thin. Pet owners search constantly for local grooming, so a complete Google Business Profile, a fast website with service and suburb pages, and a steady flow of reviews put you in front of ready-to-book customers. Results build over months rather than days, but the work compounds and the leads cost nothing per click once you rank."
@@ -33,48 +33,6 @@ faqs:
 > Fix the profile first. It moves the needle fastest.
 
 When we measured grooming businesses across Melbourne local packs, the result surprised us: review count barely predicted who ranked. The best-reviewed groomer in one pack, 70 five-star reviews and zero negatives, never cracked the top three in any of the 120 searches we ran. So before you chase another batch of reviews, read what actually moves a grooming business up the page.
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
-<title>AI search optimisation workflow for Australian businesses in five steps</title>
-<rect width="1120" height="290" fill="#121210"/>
-<text x="560" y="46" text-anchor="middle" font-size="25" font-weight="600" fill="#FAF9F5">How AI Search Optimisation Works</text>
-<text x="560" y="72" text-anchor="middle" font-size="13" fill="#D4C9B0">From content to citation in 5 steps</text>
-<rect x="40" y="100" width="180" height="140" rx="8" fill="#1C1C1A" stroke="#6A8DAD" stroke-width="1.5"/>
-<text x="56" y="132" font-size="13" font-weight="600" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">01</text>
-<text x="56" y="162" font-size="13" font-weight="600" fill="#FAF9F5">Write direct answers</text>
-<text x="56" y="188" font-size="10.5" fill="#D4C9B0">lead every section with</text>
-<text x="56" y="202" font-size="10.5" fill="#D4C9B0">the answer</text>
-<line x1="224" y1="170" x2="244" y2="170" stroke="#8FAF9F" stroke-width="1.5"/>
-<polygon points="244,166 244,174 251,170" fill="#8FAF9F"/>
-<rect x="255" y="100" width="180" height="140" rx="8" fill="#1C1C1A" stroke="#6A8DAD" stroke-width="1.5"/>
-<text x="271" y="132" font-size="13" font-weight="600" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">02</text>
-<text x="271" y="162" font-size="13" font-weight="600" fill="#FAF9F5">Add schema markup</text>
-<text x="271" y="188" font-size="10.5" fill="#D4C9B0">JSON-LD for FAQ and</text>
-<text x="271" y="202" font-size="10.5" fill="#D4C9B0">article</text>
-<line x1="439" y1="170" x2="459" y2="170" stroke="#8FAF9F" stroke-width="1.5"/>
-<polygon points="459,166 459,174 466,170" fill="#8FAF9F"/>
-<rect x="470" y="100" width="180" height="140" rx="8" fill="#1C1C1A" stroke="#6A8DAD" stroke-width="1.5"/>
-<text x="486" y="132" font-size="13" font-weight="600" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">03</text>
-<text x="486" y="162" font-size="13" font-weight="600" fill="#FAF9F5">Cite tier-1 sources</text>
-<text x="486" y="188" font-size="10.5" fill="#D4C9B0">hyperlink claims to</text>
-<text x="486" y="202" font-size="10.5" fill="#D4C9B0">authority</text>
-<line x1="654" y1="170" x2="674" y2="170" stroke="#8FAF9F" stroke-width="1.5"/>
-<polygon points="674,166 674,174 681,170" fill="#8FAF9F"/>
-<rect x="685" y="100" width="180" height="140" rx="8" fill="#1C1C1A" stroke="#6A8DAD" stroke-width="1.5"/>
-<text x="701" y="132" font-size="13" font-weight="600" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">04</text>
-<text x="701" y="162" font-size="13" font-weight="600" fill="#FAF9F5">AI engines crawl</text>
-<text x="701" y="188" font-size="10.5" fill="#D4C9B0">Perplexity, ChatGPT,</text>
-<text x="701" y="202" font-size="10.5" fill="#D4C9B0">Gemini index</text>
-<line x1="869" y1="170" x2="889" y2="170" stroke="#8FAF9F" stroke-width="1.5"/>
-<polygon points="889,166 889,174 896,170" fill="#8FAF9F"/>
-<rect x="900" y="100" width="180" height="140" rx="8" fill="#1C1C1A" stroke="#6A8DAD" stroke-width="1.5"/>
-<text x="916" y="132" font-size="13" font-weight="600" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">05</text>
-<text x="916" y="162" font-size="13" font-weight="600" fill="#FAF9F5">Cited in answers</text>
-<text x="916" y="188" font-size="10.5" fill="#D4C9B0">your business becomes</text>
-<text x="916" y="202" font-size="10.5" fill="#D4C9B0">the source</text>
-<text x="560" y="266" text-anchor="middle" font-size="9" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">UnderCurrent Automations · AI Search Workflow · 2026</text>
-</svg>
-
 
 This guide sits inside our wider [pet grooming marketing in Australia](/blog/pet-grooming-marketing-australia) playbook, and under our [local search and AI visibility](/seo-ai-visibility) work. It is built for the owner doing the books between dogs, not for an agency.
 
@@ -112,23 +70,23 @@ Here is the finding that reframes everything else. Among the Melbourne groomers 
 
 ## What Is SEO for Dog Groomers?
 
-**SEO for dog groomers is the practice of getting your business to appear when pet owners search for local grooming, across organic results, the Maps pack and AI answers.** [Search engine optimisation](/glossary/what-is-seo) means structuring your online presence so search engines understand what you do, where, and who you serve, then rank you for the right queries. For a groomer that spans three surfaces: your [Google Business Profile](/blog/google-business-profile-optimisation) for the map, your website for organic search, and the AI tools now answering "best dog groomer near me". The trade is real and crowded but rarely marketed well online. The [Australian Bureau of Statistics classifies it as occupation 461433, Pet Groomer](https://www.abs.gov.au/statistics/classifications/osca-occupation-standard-classification-australia/2024-version-1-0/browse-classification/4/46/461/4614/461433), with the [Australian Government Jobs and Skills profile](https://www.jobsandskills.gov.au/data/occupation-and-industry-profiles/occupations/361113-pet-groomers) counting roughly 5,700 working groomers nationally, 87% of them women, 65% working part-time, at a median age of 38. It is largely a small, owner-run trade, which is exactly why so few do their own marketing well. That gap is your opening, and our [local SEO checklist](/blog/local-seo-checklist) is a good companion here.
+**SEO for dog groomers is the practice of getting your business to appear when pet owners search for local grooming, across organic results, the Maps pack and AI answers.** [Search engine optimisation](/glossary/what-is-seo) means structuring your online presence so search engines understand what you do, where, and who you serve. For a groomer that spans three surfaces: your [Google Business Profile](/blog/google-business-profile-optimisation) for the map, your website for organic search, and the AI tools now answering "best dog groomer near me". The trade is real and crowded but rarely marketed well online. The [Australian Bureau of Statistics classifies it as occupation 461433, Pet Groomer](https://www.abs.gov.au/statistics/classifications/osca-occupation-standard-classification-australia/2024-version-1-0/browse-classification/4/46/461/4614/461433), and the [Australian Government Jobs and Skills profile](https://www.jobsandskills.gov.au/data/occupation-and-industry-profiles/occupations/361113-pet-groomers) counts roughly 5,700 working groomers nationally, 87% of them women, 65% part-time. It is largely a small, owner-run trade, which is exactly why so few do their own marketing well. That gap is your opening, and our [local SEO checklist](/blog/local-seo-checklist) is a good companion here.
 
-## Why Does SEO Matter So Much for Dog Groomers in 2026?
+## What Are the Best Keywords for a Dog Grooming Business?
 
-**Pet owners search for grooming constantly, yet almost no groomer competes properly for that attention, which makes ranking cheaper and faster than in most trades.** Demand is heavy: "dog grooming near me" pulls roughly 40,500 searches a month in Australia and "dog grooming" another 22,200. Behind that sits a growing market, with [IBISWorld counting 4,053 pet-services businesses](https://www.ibisworld.com/australia/number-of-businesses/pet-sitting-services/5699/) as of 2026, up 8.2% on the year, set against the [2,729,648 actively trading businesses the ABS recorded at June 2025](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release), which logged 437,150 new entries that year at a 16.4% entry rate. New salons keep arriving, so the local pack only gets more contested. The catch most groomers miss is that showing up is mechanical, not magical. Get the profile and proximity-relevant content right and you appear; leave them half-built and you stay invisible while a less-loved competitor gets the call. Because so few groomers do the basics, the bar to clear is low and the leads cost nothing per click once you rank. The wider local playbook is in our guide to [SEO for small business](/blog/seo-for-small-business).
+**The high-volume terms are "dog grooming near me" and "dog grooming", but the queries that convert are suburb-and-service specific, where competition is thin and proximity decides the winner.** Demand is heavy: "dog grooming near me" pulls roughly 40,500 searches a month in Australia and "dog grooming" another 22,200. Behind that sits a growing market, with [IBISWorld counting 4,053 pet-services businesses](https://www.ibisworld.com/australia/number-of-businesses/pet-sitting-services/5699/) as of 2026, up 8.2% on the year, set against the [2,729,648 actively trading businesses the ABS recorded at June 2025](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release). The head terms are fiercely contested and proximity-driven, so do not stake everything on them. Target the long tail instead: "dog grooming Frankston", "mobile dog grooming Bayside", "puppy first groom", "cat de-shedding". Each maps cleanly to one page on your site, faces less competition, and pulls owners who are ready to book rather than just browsing. The wider local playbook is in our guide to [SEO for small business](/blog/seo-for-small-business).
 
-## What Did Our Local-Pack Research Reveal About Reviews?
+## Why Do Competitors With Fewer Reviews Outrank You?
 
-**When we measured grooming businesses across local search grids, review count did not predict map-pack rank, which upends the most common advice groomers are given.** A grid checks your rank from dozens of points across a suburb, so you see a heat map rather than one ranking. Across the businesses we measured, the link between review count and average position was flat to slightly negative. The clearest case was a Chelsea dog and cat groomer we audited with 70 five-star reviews and zero negatives, the best-reviewed in its pack. It ranked outside the top three in all 120 searches we ran, best position fourth, and was beaten in 43 of those cells by a rival holding just 7 reviews. Reviews still matter for trust, [Semrush reports the top-three local results average 561 reviews and a 4.8 rating](https://www.semrush.com/blog/local-seo-statistics/), but treating them as your rank lever is the wrong bet. Two grooming businesses can carry near-identical reputations and rank a dozen places apart.
+**Across the grooming grids we measured, review count did not predict map-pack rank, which upends the most common advice groomers are given.** A grid checks your rank from dozens of points across a suburb, so you see a heat map rather than one ranking. Across the businesses we measured, the link between review count and average position was flat to slightly negative. The clearest case was a Chelsea dog and cat groomer we audited with 70 five-star reviews and zero negatives, the best-reviewed in its pack. It ranked outside the top three in all 120 searches we ran, best position fourth, and was beaten in 43 of those cells by a rival holding just 7 reviews. Reviews still matter for trust, [Semrush reports the top-three local results average 561 reviews and a 4.8 rating](https://www.semrush.com/blog/local-seo-statistics/), but treating them as your rank lever is the wrong bet. Two grooming businesses can carry near-identical reputations and rank a dozen places apart, because the things that separated them were proximity and a fully built profile.
 
-## How Does Google Actually Rank a Grooming Business Locally?
+## How Does Google Rank a Dog Grooming Business Locally?
 
 **Google ranks local results on three stated factors, relevance, distance and prominence, and for groomers distance does more heavy lifting than owners expect.** [Google's own local ranking guidance](https://support.google.com/business/answer/7091?hl=en) names all three, and they are the backbone of [local SEO](/glossary/what-is-local-seo) for any service business. Relevance is how well your profile matches the search, set by your category, services and description. Distance is how far you sit from the searcher. Prominence is how known you are, built from reviews, links and web presence. In the grooming grids we measured, of the businesses holding top-three spots, roughly 4 in 5 sat within 3km of the searcher and about 19 in 20 within 5km. A mobile groomer covering Bayside appeared in under half the grid and vanished in suburbs it actively services, like Mentone and Frankston, because the van was too far from those grid points at measurement. You cannot move your salon, so the play is to maximise the two levers you control, relevance and prominence, while accepting proximity sets the ceiling for any single spot.
 
-## Which Google Business Profile Settings Matter Most?
+## How Do You Optimise a Google Business Profile for Dog Grooming?
 
-**Your primary category is the single strongest relevance signal on the whole profile, and the most common grooming mistake we found was getting it wrong.** Set it to "Pet groomer", not a near-miss like "Pet store" or "Dog day care center", each of which drops you out of grooming searches. In the profiles we audited this error showed up repeatedly, including a five-star groomer with zero secondary categories despite offering four-plus services. Add every secondary category that applies, fill the services list, and lock down your NAP, your name, address and phone, so they match across Google, your website and every directory. Use real photos, not stock. Our [Google Business Profile optimisation](/blog/google-business-profile-optimisation) guide covers each setting, and [Google Maps SEO](/blog/google-maps-seo) covers the map.
+**Your primary category is the single strongest relevance signal on the whole profile, and the most common grooming mistake we found was getting it wrong.** Set it to "Pet groomer", not a near-miss like "Pet store" or "Dog day care center" that drops you out of grooming searches. We saw this repeatedly, including a five-star groomer with no secondary categories despite offering four-plus services. Add every secondary category that applies, fill the services list, and lock down your NAP, name, address and phone, so they match across Google, your website and every directory. Use real photos, not stock. Our [Google Business Profile optimisation](/blog/google-business-profile-optimisation) guide covers each setting, and [Google Maps SEO](/blog/google-maps-seo) covers the map.
 
 | Profile area | Groomer mistake | What ranks |
 |---|---|---|
@@ -141,43 +99,23 @@ Here is the finding that reframes everything else. Among the Melbourne groomers 
 
 ## How Do You Build a Grooming Website That Ranks?
 
-**A grooming website earns organic rankings by giving Google a fast, crawlable page for each service and suburb you serve, which a social profile cannot do.** One pattern we kept finding: groomers pointing their profile's website field at an Instagram page or a [MoeGo](https://www.moego.pet/) booking link rather than an owned site, leaving Google nothing to crawl for organic and entity signals. Fix that first. Then build the structure: a clear homepage, a page per service (full groom, puppy first groom, de-shedding, nail clipping), and a page per suburb you genuinely service. Speed matters, since [Semrush notes 57% of local searches happen on mobile](https://www.semrush.com/blog/local-seo-statistics/) and [HubSpot finds 63% of consumers prefer mobile for product and brand information](https://www.hubspot.com/marketing-statistics), so slow phone pages lose both rankings and bookings. Make the booking call-to-action obvious on every page. This service-and-suburb structure is the same approach we use for other local trades, in [SEO for tradies](/blog/seo-for-tradies), [SEO for electricians](/blog/seo-for-electricians) and [SEO for dentists](/blog/seo-for-dentists). Done well the site ranks for searches the map pack never shows, and feeds the entity that AI tools read.
+**A grooming website earns organic rankings by giving Google a fast, crawlable page for each service and suburb you serve, which a social profile cannot do.** One pattern we kept finding: groomers pointing their profile's website field at an Instagram page or a [MoeGo](https://www.moego.pet/) booking link rather than an owned site, leaving Google nothing to crawl. Fix that first. Then build the structure: a clear homepage, a page per service (full groom, puppy first groom, de-shedding, nail clipping), and a page per suburb you genuinely service. Speed matters, since [Semrush notes 57% of local searches happen on mobile](https://www.semrush.com/blog/local-seo-statistics/) and [HubSpot finds 63% of consumers prefer mobile for product and brand information](https://www.hubspot.com/marketing-statistics), so slow phone pages lose both rankings and bookings. Make the booking call-to-action obvious on every page. This service-and-suburb structure is the same approach we use for other local trades, in [SEO for tradies](/blog/seo-for-tradies), [SEO for electricians](/blog/seo-for-electricians) and [SEO for dentists](/blog/seo-for-dentists). Done well the site ranks for searches the map pack never shows, and feeds the entity that AI tools read. Our [pet grooming website design](/blog/pet-grooming-website-design) guide covers the layout in full.
 
 ## How Do Reviews and Photos Help if They Don't Set Your Rank?
 
-**Reviews and photos win the click and the booking even when they aren't moving your map position, so they are worth doing well, just for the right reason.** Once a searcher sees the pack, the profile with recent, specific, replied-to reviews and real photos gets tapped. [Semrush reports every 10 new reviews lifts a profile's conversion rate by 2.8%](https://www.semrush.com/blog/local-seo-statistics/), responding to 25% of reviews adds another 4.1%, and a one-star rating bump drives 44% more calls, clicks and direction requests. So velocity and replies both pay at the decision point. Aim for two to four genuine reviews a week, and reply to every one. When a client mentions the job in their own words, "great puppy groom in Brighton", you tie that service and suburb to your profile. The grooming profiles we audited often had glowing reviews on a half-finished listing: one scored 55 out of 100 on our profile rubric despite a perfect rating, with no services listed, no posts detected and photos roughly six months stale. Reviews bought the trust; the empty profile threw away the rank. Automating the review request from your booking software keeps the flow steady, covered in [AI automation for pet grooming](/blog/ai-automation-for-pet-grooming).
+**Reviews and photos win the click and the booking even when they aren't moving your map position, so they are worth doing well, just for the right reason.** Once a searcher sees the pack, the profile with recent, specific, replied-to reviews and real photos gets tapped. [Semrush reports every 10 new reviews lifts a profile's conversion rate by 2.8%](https://www.semrush.com/blog/local-seo-statistics/), and a one-star rating bump drives 44% more calls, clicks and direction requests. So velocity and replies both pay at the decision point. Aim for two to four genuine reviews a week, and reply to every one. When a client names the job in their own words, "great puppy groom in Brighton", you tie that service and suburb to your profile. The profiles we audited often had glowing reviews on a half-finished listing: one scored 55 out of 100 on our rubric despite a perfect rating, with no services listed, no posts and photos six months stale. Reviews bought the trust; the empty profile threw away the rank. Automating the review request from your booking software keeps the flow steady, covered in [AI automation for pet grooming](/blog/ai-automation-for-pet-grooming).
 
 ## How Do You Get Recommended by ChatGPT and AI Search?
 
-**To get cited by AI tools when someone asks for a groomer, you feed the same engines a consistent, structured entity across your profile, website and the wider web.** When a pet owner asks ChatGPT, Perplexity or Google's AI Overviews for the "best dog groomer near me", those tools assemble an answer from structured local data, reviews and third-party mentions, not from whoever bought the most ads. The groomers most likely to be named are the ones whose name, address, services and category line up everywhere, who have a crawlable website, and who carry recent reviews. Add [schema markup](/glossary/what-is-entity-seo) to your site so machines read your details cleanly, the same [LocalBusiness entity from schema.org](https://schema.org/LocalBusiness) that Google already holds in your profile. Most groomers have done none of this, so the field is wide open. We go deep on it in [AI search for pet grooming](/blog/ai-search-for-pet-grooming) and on tracking it in [how to measure AI search visibility](/blog/how-to-measure-ai-search-visibility). Here is a starting point you can drop into your site's head:
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Your Grooming Salon",
-  "description": "Dog and cat grooming in Frankston and Bayside Melbourne",
-  "telephone": "+61 3 0000 0000",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Frankston",
-    "addressRegion": "VIC",
-    "postalCode": "3199",
-    "addressCountry": "AU"
-  },
-  "areaServed": ["Frankston", "Mentone", "Brighton"],
-  "openingHours": "Tu-Sa 08:30-17:00",
-  "sameAs": ["https://www.google.com/maps/place/your-profile"]
-}
-```
+**To get cited by AI tools when someone asks for a groomer, you feed the same engines a consistent, structured entity across your profile, website and the wider web.** When a pet owner asks ChatGPT, Perplexity or Google's AI Overviews for the "best dog groomer near me", those tools assemble an answer from structured local data, reviews and third-party mentions, not from whoever bought the most ads. The groomers most likely to be named are the ones whose name, address, services and category line up everywhere, who have a crawlable website, and who carry recent reviews. Add [schema markup](/glossary/what-is-entity-seo) to your site so machines read your details cleanly, the same [LocalBusiness entity from schema.org](https://schema.org/LocalBusiness) Google already holds in your profile. In practice that is a LocalBusiness block in your site's head listing your name, telephone, full address, the suburbs in areaServed, opening hours and a sameAs link back to your Google profile. Most groomers have done none of this, so the field is wide open. We go deep on it in [AI search for pet grooming](/blog/ai-search-for-pet-grooming) and on tracking it in [how to measure AI search visibility](/blog/how-to-measure-ai-search-visibility).
 
 ## What Surprised Us Auditing Grooming Businesses?
 
 **The thing that stuck with us was how often a five-star reputation sat on a broken profile, and how easily a tiny competitor walked past it.** We went in expecting reviews to roughly track rank, the way most guides imply. They didn't. The Chelsea groomer with 70 spotless reviews was beaten in 43 of 120 cells by a business with 7, while a 1-review rival held first place elsewhere in the same market. The pattern repeated: a salon with 394 reviews sitting at 7th, another with 327 down at 14th, while low-review locals held top spots because they were closer and more completely set up. The cheapest fixes were the ones nobody had done, an accurate primary category, a filled-out services list, a few fresh photos, work that takes an afternoon. That is the opportunity, and a competitor cannot copy it from a template, because it is your real profile, your real photos and your real proximity.
 
-## What Should a Groomer Do First, and What Can Wait?
+## What Should a Dog Groomer Do First, and What Can Wait?
 
-**Start where the payback is fastest and free, the Google Business Profile, then layer the website and AI-search work on over the following months.** You have limited hours between dogs, so sequencing matters. Fix the category and complete the profile this week, set up an automatic review request, then build service and suburb pages, then add schema. The table sorts the work by effort against impact. For SEO versus paid, see [SEO vs Google Ads for grooming](/blog/seo-vs-google-ads-dog-grooming) and [SEO pricing in Australia](/blog/seo-pricing-australia-2026).
+**Start where the payback is fastest and free, the Google Business Profile, then layer the website and AI-search work on over the following months.** You have limited hours between dogs, so sequencing matters. The table sorts the work by effort against impact: fix the category and complete the profile this week, then build service and suburb pages, then add schema. For paid versus organic, see [SEO vs Google Ads for grooming](/blog/seo-vs-google-ads-dog-grooming) and [SEO pricing in Australia](/blog/seo-pricing-australia-2026).
 
 | Task | Effort | Impact | When |
 |---|---|---|---|
@@ -190,36 +128,6 @@ Here is the finding that reframes everything else. Among the Melbourne groomers 
 | Chase AI-search citations | Medium | Growing | Ongoing |
 
 Want to know which of these gaps is costing you bookings? Start with a [free 30-minute search audit](/audit).
-
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" role="img" aria-label="Traditional SEO compared with AI search optimisation for Australian businesses" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
-<title>Traditional SEO compared with AI search optimisation for Australian businesses</title>
-<rect width="900" height="430" fill="#121210"/>
-<text x="450" y="46" text-anchor="middle" font-size="25" font-weight="600" fill="#FAF9F5">Traditional SEO vs AI Search</text>
-<text x="450" y="72" text-anchor="middle" font-size="13" fill="#D4C9B0">Why the old playbook isn't enough</text>
-<line x1="450" y1="96" x2="450" y2="388" stroke="#2E2E2B" stroke-width="1"/>
-<rect x="40" y="96" width="380" height="42" rx="8" fill="#1C1C1A" stroke="#D4C9B0" stroke-width="1.5"/>
-<text x="230" y="123" text-anchor="middle" font-size="12" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">TRADITIONAL SEO</text>
-<rect x="480" y="96" width="380" height="42" rx="8" fill="#1C1C1A" stroke="#8FAF9F" stroke-width="1.5"/>
-<text x="670" y="123" text-anchor="middle" font-size="12" fill="#8FAF9F" font-family="ui-monospace,SF Mono,monospace">AI SEARCH OPTIMISATION</text>
-<text x="450" y="122" text-anchor="middle" font-size="11" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">VS</text>
-<rect x="40" y="152" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#D4C9B0" stroke-width="1"/>
-<text x="60" y="191" font-size="12.5" fill="#D4C9B0">Keyword density tuning</text>
-<rect x="480" y="152" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#8FAF9F" stroke-width="1"/>
-<circle cx="498" cy="187" r="4" fill="#8FAF9F"/>
-<text x="514" y="191" font-size="12.5" fill="#FAF9F5">Direct answer extraction</text>
-<rect x="40" y="232" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#D4C9B0" stroke-width="1"/>
-<text x="60" y="271" font-size="12.5" fill="#D4C9B0">Backlink quantity focus</text>
-<rect x="480" y="232" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#8FAF9F" stroke-width="1"/>
-<circle cx="498" cy="267" r="4" fill="#8FAF9F"/>
-<text x="514" y="271" font-size="12.5" fill="#FAF9F5">Entity-rich citations</text>
-<rect x="40" y="312" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#D4C9B0" stroke-width="1"/>
-<text x="60" y="351" font-size="12.5" fill="#D4C9B0">Page rank position obsession</text>
-<rect x="480" y="312" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#8FAF9F" stroke-width="1"/>
-<circle cx="498" cy="347" r="4" fill="#8FAF9F"/>
-<text x="514" y="351" font-size="12.5" fill="#FAF9F5">AI-cited authority signals</text>
-<text x="450" y="414" text-anchor="middle" font-size="9" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">UnderCurrent Automations · SEO Comparison · 2026</text>
-</svg>
 
 ## Frequently Asked Questions
 
