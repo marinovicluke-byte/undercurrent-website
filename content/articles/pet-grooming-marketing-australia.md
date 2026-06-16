@@ -1,13 +1,13 @@
 ---
 title: "How to Do Dog Grooming Marketing in Australia"
 description: "A 2026 guide to dog grooming marketing in Australia: win the Google local pack, get cited by AI search, build a booking site, and automate reviews."
-date: "2026-06-15"
+date: "2026-06-16"
 slug: "pet-grooming-marketing-australia"
 cluster: "industry-guides"
 keyword: "dog grooming marketing"
 author: "Luke"
 level: "intermediate"
-readingTime: 13
+readingTime: 20
 faqs:
   - q: "How do I market my dog grooming business in Australia?"
     a: "Start with the free, compounding channels before you spend a cent on ads. Claim and fully complete your Google Business Profile, build a real booking website rather than just a social page, then automate review requests and reminders so the work runs itself. Pet owners search constantly in Australia, so a complete local presence captures most of the demand. Layer Google Ads on top only for a new salon, quiet days or a fresh service area."
@@ -19,6 +19,8 @@ faqs:
     a: "It ranges from almost nothing to a few hundred dollars a month, depending on how much you do yourself. Claiming and optimising your Google profile is free. A booking website and automation tools are modest monthly costs. Google Ads is pay-per-click, so you control the spend. The smart move is to exhaust the free channels first, since a complete profile and a fast site often outperform paid ads for an established grooming business that's playing the long game."
   - q: "Should I run Google Ads for my dog grooming business?"
     a: "Run Google Ads in specific moments, not as a default. They make sense for a brand-new salon with no organic presence, to fill quiet midweek days, or when a mobile groomer expands into new suburbs. The catch is they stop the moment you pause spending, while local SEO compounds and keeps working. For most established groomers, fix the Google profile and website first, then use ads to fill the gaps while the organic foundation builds."
+  - q: "Is marketing a cat grooming business different from dog grooming?"
+    a: "The channels are identical, the wording changes. Cat owners search \"cat groomer near me\" and \"mobile cat grooming\", so if you groom both, list cat grooming as its own service, add the relevant secondary category, and write a dedicated page rather than burying it under dogs. Many of the businesses we audited were dog and cat groomers, and the same proximity-and-profile rules decided their rank. Name the cat services explicitly and you capture a search pool most dog-led salons ignore."
   - q: "Can AI search like ChatGPT recommend my grooming business?"
     a: "Yes, and increasingly it does. When owners ask ChatGPT, Perplexity or Google's AI Overviews for the best groomer nearby, those tools pull from your Google profile, website schema, reviews and third-party mentions to build an answer. To get named, keep your business details identical everywhere, run an owned website with clean structured data, and maintain a steady review flow. The same work that wins the Google local pack also makes you the business the AI tools cite."
 ---
@@ -72,53 +74,13 @@ faqs:
 <text x="560" y="266" text-anchor="middle" font-size="9" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">UnderCurrent Automations · Pet Grooming Marketing · 2026</text>
 </svg>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
-<title>AI search optimisation workflow for Australian businesses in five steps</title>
-<rect width="1120" height="290" fill="#121210"/>
-<text x="560" y="46" text-anchor="middle" font-size="25" font-weight="600" fill="#FAF9F5">How AI Search Optimisation Works</text>
-<text x="560" y="72" text-anchor="middle" font-size="13" fill="#D4C9B0">From content to citation in 5 steps</text>
-<rect x="40" y="100" width="180" height="140" rx="8" fill="#1C1C1A" stroke="#6A8DAD" stroke-width="1.5"/>
-<text x="56" y="132" font-size="13" font-weight="600" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">01</text>
-<text x="56" y="162" font-size="13" font-weight="600" fill="#FAF9F5">Write direct answers</text>
-<text x="56" y="188" font-size="10.5" fill="#D4C9B0">lead every section with</text>
-<text x="56" y="202" font-size="10.5" fill="#D4C9B0">the answer</text>
-<line x1="224" y1="170" x2="244" y2="170" stroke="#8FAF9F" stroke-width="1.5"/>
-<polygon points="244,166 244,174 251,170" fill="#8FAF9F"/>
-<rect x="255" y="100" width="180" height="140" rx="8" fill="#1C1C1A" stroke="#6A8DAD" stroke-width="1.5"/>
-<text x="271" y="132" font-size="13" font-weight="600" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">02</text>
-<text x="271" y="162" font-size="13" font-weight="600" fill="#FAF9F5">Add schema markup</text>
-<text x="271" y="188" font-size="10.5" fill="#D4C9B0">JSON-LD for FAQ and</text>
-<text x="271" y="202" font-size="10.5" fill="#D4C9B0">article</text>
-<line x1="439" y1="170" x2="459" y2="170" stroke="#8FAF9F" stroke-width="1.5"/>
-<polygon points="459,166 459,174 466,170" fill="#8FAF9F"/>
-<rect x="470" y="100" width="180" height="140" rx="8" fill="#1C1C1A" stroke="#6A8DAD" stroke-width="1.5"/>
-<text x="486" y="132" font-size="13" font-weight="600" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">03</text>
-<text x="486" y="162" font-size="13" font-weight="600" fill="#FAF9F5">Cite tier-1 sources</text>
-<text x="486" y="188" font-size="10.5" fill="#D4C9B0">hyperlink claims to</text>
-<text x="486" y="202" font-size="10.5" fill="#D4C9B0">authority</text>
-<line x1="654" y1="170" x2="674" y2="170" stroke="#8FAF9F" stroke-width="1.5"/>
-<polygon points="674,166 674,174 681,170" fill="#8FAF9F"/>
-<rect x="685" y="100" width="180" height="140" rx="8" fill="#1C1C1A" stroke="#6A8DAD" stroke-width="1.5"/>
-<text x="701" y="132" font-size="13" font-weight="600" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">04</text>
-<text x="701" y="162" font-size="13" font-weight="600" fill="#FAF9F5">AI engines crawl</text>
-<text x="701" y="188" font-size="10.5" fill="#D4C9B0">Perplexity, ChatGPT,</text>
-<text x="701" y="202" font-size="10.5" fill="#D4C9B0">Gemini index</text>
-<line x1="869" y1="170" x2="889" y2="170" stroke="#8FAF9F" stroke-width="1.5"/>
-<polygon points="889,166 889,174 896,170" fill="#8FAF9F"/>
-<rect x="900" y="100" width="180" height="140" rx="8" fill="#1C1C1A" stroke="#6A8DAD" stroke-width="1.5"/>
-<text x="916" y="132" font-size="13" font-weight="600" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">05</text>
-<text x="916" y="162" font-size="13" font-weight="600" fill="#FAF9F5">Cited in answers</text>
-<text x="916" y="188" font-size="10.5" fill="#D4C9B0">your business becomes</text>
-<text x="916" y="202" font-size="10.5" fill="#D4C9B0">the source</text>
-<text x="560" y="266" text-anchor="middle" font-size="9" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">UnderCurrent Automations · AI Search Workflow · 2026</text>
-</svg>
-
-
 Most dog grooming marketing advice online is a recycled listicle: post on Instagram, run a loyalty card, hand out flyers. It skips the part that actually decides whether a phone rings. When we mapped real grooming businesses across Melbourne, the thing owners obsess over, their review count, barely moved their position in Google's local pack. Proximity did. A complete profile did. The right channel mix did. This is the full Australian playbook, built around what our own research found, with each section routing you down to the deep guide on that channel. If you only fix one thing this month, start with [local search](/blog/seo-for-dog-groomers).
 
-## Why Does Dog Grooming Marketing Work Differently in Australia?
+This guide is the hub. Eight deep guides sit under it, one per channel: [SEO for dog groomers](/blog/seo-for-dog-groomers), [Google Business Profile for pet grooming](/blog/google-business-profile-for-pet-grooming), [AI search for pet grooming](/blog/ai-search-for-pet-grooming), [pet grooming website design](/blog/pet-grooming-website-design), [AI automation for pet grooming](/blog/ai-automation-for-pet-grooming), [AI tools for a dog grooming business](/blog/ai-tools-for-dog-grooming-business), [Google Ads for dog grooming](/blog/google-ads-for-dog-grooming), and [SEO vs Google Ads for dog grooming](/blog/seo-vs-google-ads-dog-grooming). Read this page for the strategy and the order, then go deep on whichever channel is your weakest. The 30-day plan, checklist and content calendar near the end turn the whole thing into a week-by-week to-do list.
 
-**Dog grooming marketing in Australia sits on top of a big, hungry market with almost no business-side competition for attention.** Pet grooming is a recognised trade here, the [ABS lists Pet Groomer as occupation 461433](https://www.abs.gov.au/statistics/classifications/osca-occupation-standard-classification-australia/2024-version-1-0/browse-classification/4/46/461/4614/461433), and around [73% of Australian households now own a pet](https://petboost.com.au/business/blog/australian-pet-services-industry-2025-market-snapshot/), roughly 7.7 million homes spending about $2.2 billion a year on pet services like grooming, boarding and daycare, a figure [up 30% since 2021 with grooming growing around 9.1% a year](https://petboost.com.au/business/blog/australian-pet-services-industry-2025-market-snapshot/). Demand is not your problem. The problem is that pet owners search constantly while groomers do almost no structured marketing, so the few who get the basics right take a lopsided share of the bookings. That gap is the whole opportunity, and it shows up clearest in [local search](/blog/seo-for-dog-groomers), where most profiles are half-finished. This guide sits inside our wider [search and AI visibility](/seo-ai-visibility) work, and every channel below points back to it.
+## What Is Dog Grooming Marketing in Australia?
+
+**Dog grooming marketing is the mix of local search, AI search, an owned website, paid ads and automation that turns nearby pet owners into booked, repeat clients.** It sits on top of a big, hungry market with almost no business-side competition for attention. Pet grooming is a recognised trade here, the [ABS lists Pet Groomer as occupation 461433](https://www.abs.gov.au/statistics/classifications/osca-occupation-standard-classification-australia/2024-version-1-0/browse-classification/4/46/461/4614/461433), and around [73% of Australian households now own a pet](https://petboost.com.au/business/blog/australian-pet-services-industry-2025-market-snapshot/), roughly 7.7 million homes spending about $2.2 billion a year on pet services like grooming, boarding and daycare, a figure [up 30% since 2021 with grooming growing around 9.1% a year](https://petboost.com.au/business/blog/australian-pet-services-industry-2025-market-snapshot/). Demand is not your problem. The problem is that pet owners search constantly while groomers do almost no structured marketing, so the few who get the basics right take a lopsided share of the bookings. That gap is the whole opportunity, and it shows up clearest in [local search](/blog/seo-for-dog-groomers), where most profiles are half-finished. This guide sits inside our wider [search and AI visibility](/seo-ai-visibility) work, and every channel below points back to it.
 
 ## What Actually Wins the Google Local Pack for Groomers?
 
@@ -131,6 +93,18 @@ Most dog grooming marketing advice online is a recycled listicle: post on Instag
 ## What Does a Grooming Website Need to Convert?
 
 **A grooming website has to do two jobs at once, book the visitor in and give Google an entity to crawl.** The grooming search results are full of template galleries and Instagram links, which look fine to a human and tell Google almost nothing. When we audited grooming businesses, several had pointed their Google "website" field at a social page or a [MoeGo](https://www.moego.pet/blog/pet-grooming-marketing) booking widget rather than an owned, crawlable site, leaving organic search and AI tools nothing to index. A site that converts has an obvious booking action, a clear services list with prices or ranges, the suburbs you serve, fast load on a phone, and `LocalBusiness` schema so machines read your details cleanly. Australians spend around [$2.2 billion a year on pet services like grooming](https://petboost.com.au/business/blog/australian-pet-services-industry-2025-market-snapshot/), and a chunk of that decision happens on a phone, so a site that lists services and books online removes the back-and-forth that loses busy owners. We cover the full build, including the booking and schema setup, in [pet grooming website design](/blog/pet-grooming-website-design) and our [website design](/website-design) service.
+
+## What Are the Best Platforms to Advertise a Dog Grooming Business?
+
+**The platforms that matter for a grooming business are Google (Search, Maps and AI answers) first, your own website second, and a light presence on Instagram or Facebook third, in that order of return.** Most grooming "advertising" advice starts with social, which is backwards. Discovery for a local service happens where people search with intent, and that is Google: the [local pack](/blog/seo-for-dog-groomers), [Maps](/blog/google-business-profile-for-pet-grooming) and increasingly [AI answers](/blog/ai-search-for-pet-grooming). Your website is the one asset you own outright, so it anchors every other channel. Social is real, but it is proof and engagement, not discovery, a happy customer checks your Instagram after Google sent them, rarely the other way around. Paid ads belong where organic has gaps, covered in [Google Ads for dog grooming](/blog/google-ads-for-dog-grooming). Here is how the platforms stack up for a groomer.
+
+| Platform | What it's for | Buyer intent | Where to start |
+|---|---|---|---|
+| Google Search + Maps | Discovery, the local pack | Very high | [Google Business Profile](/blog/google-business-profile-for-pet-grooming) |
+| AI answers (ChatGPT, Overviews) | Being named the recommendation | High, growing | [AI search for pet grooming](/blog/ai-search-for-pet-grooming) |
+| Your own website | The asset that anchors everything | High | [Website design](/blog/pet-grooming-website-design) |
+| Google Ads | Filling gaps fast | High, but rented | [Google Ads](/blog/google-ads-for-dog-grooming) |
+| Instagram / Facebook | Proof and re-engagement | Low for discovery | Before-and-afters, reviews |
 
 ## Which Automations Pay Back for a Grooming Salon?
 
@@ -179,39 +153,68 @@ If you're established and patient, lead with [SEO and your Google profile](/blog
 
 **The grooming market is growing fast while the business-side marketing space stays wide open, which is rare.** Australia had [2,729,648 actively trading businesses at 30 June 2025](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release), with 437,150 new entries that year, and the [Australian Small Business and Family Enterprise Ombudsman](https://www.asbfeo.gov.au/small-business-data-portal) counts small businesses as 98% of all businesses. The [ATO points groomers to business code 95399, animal beauty parlour operation](https://community.ato.gov.au/s/question/a0JRF0000034rjx/p-00365420), so it's a formal trade with its own tax category. The Australian pet grooming services market was worth roughly [106 million US dollars in 2024](https://www.techsciresearch.com/report/australia-pet-grooming-market/1700.html) and keeps climbing. So the demand is documented, the trade is formalised, and yet, as our own research showed, most groomers haven't claimed the cheap ground in search. Get the basics right and you're competing with very few who have. Start with the [local SEO checklist](/blog/local-seo-checklist) and our wider [SEO for small business](/blog/seo-for-small-business) playbook.
 
+## What Are the Best Dog Grooming Marketing Ideas That Get More Clients?
+
+**The grooming marketing ideas that actually move bookings are the unglamorous ones our research backed, not the flyers-and-loyalty-cards advice you'll find everywhere else.** Each idea below is tied to the deep guide that shows you how, so treat this as the shortlist, not the manual.
+
+- **Fix your primary category and fill the profile.** The single highest-return hour in grooming marketing. A half-built profile is why a five-star salon loses to a closer rival, see [Google Business Profile for pet grooming](/blog/google-business-profile-for-pet-grooming).
+- **Ask for a review after every groom, automatically.** Steady velocity beats a big stale total, and an automated request keeps it flowing, see [AI automation for pet grooming](/blog/ai-automation-for-pet-grooming).
+- **Book the next appointment at checkout.** Grooming runs on a six-to-eight-week cycle, so rebooking on the spot turns a one-off into a recurring client.
+- **Write one page per service and suburb.** These suburb-and-service queries convert and almost nobody else writes them, see [SEO for dog groomers](/blog/seo-for-dog-groomers).
+- **Get named by AI assistants.** A consistent, structured entity gets you cited when owners ask ChatGPT for a groomer, see [AI search for pet grooming](/blog/ai-search-for-pet-grooming).
+- **Post before-and-afters as proof, not for reach.** A clear gallery and recent photos win the click once Google has sent the searcher, and feed your [website](/blog/pet-grooming-website-design).
+- **Keep your details identical across every listing.** Matching name, address and phone on Google, your site and any directory is what lets both Google and AI assistants trust you enough to recommend, see [AI search for pet grooming](/blog/ai-search-for-pet-grooming).
+
+The ideas are simple. The reason they work is that so few groomers do them, which is exactly what our [grid research](/blog/google-business-profile-for-pet-grooming) kept showing.
+
+## Your 30-Day Dog Grooming Marketing Plan
+
+**This plan front-loads the free, compounding work, so by day 30 your profile, website and review flow are doing the marketing while you groom.** Spend an hour or two a week on it, in this order. Each week routes to the guide that walks the detail.
+
+| Week | Focus | The moves | Guide |
+|---|---|---|---|
+| Week 1 | Google Business Profile | Claim and verify, set primary category to "Pet groomer", add every secondary category and service, upload real photos, make name, address and phone identical everywhere | [GBP for pet grooming](/blog/google-business-profile-for-pet-grooming) |
+| Week 2 | Website + reviews | Point your Google "website" field at an owned, crawlable site with booking, services, suburbs and LocalBusiness schema; switch on an automatic review request after every groom | [Website design](/blog/pet-grooming-website-design) |
+| Week 3 | AI search + content | Make your entity identical across every platform, write one service-and-suburb page, then test "best dog groomer in [your suburb]" in ChatGPT and Google's AI Overview to see if you're named | [AI search for pet grooming](/blog/ai-search-for-pet-grooming) |
+| Week 4 | Automation + ads + measure | Turn on reminders and rebooking, draft replies and posts with [AI tools](/blog/ai-tools-for-dog-grooming-business), and optionally run a tight [Google Ads](/blog/google-ads-for-dog-grooming) campaign for quiet days or new suburbs | [AI automation](/blog/ai-automation-for-pet-grooming) |
+
+By the end of the month the order has done its job: a complete profile makes any ads cheaper, a fast site makes AI citations more likely, and automation keeps the reviews flowing so the profile stays strong. If you want a second set of eyes on where the gaps are, [book a free 30-minute audit](/audit).
+
+## The Dog Grooming Marketing Checklist
+
+**Work down this checklist channel by channel, ticking what's done, and the gaps you find are usually the cheapest bookings you're leaving on the table.** It's the same checklist we run when we audit a grooming business, condensed.
+
+| Channel | Done when | Deep guide |
+|---|---|---|
+| Google Business Profile | Primary category "Pet groomer", all services listed, secondary categories filled, real recent photos, NAP consistent, posting monthly | [GBP for pet grooming](/blog/google-business-profile-for-pet-grooming) |
+| Reviews | Automatic request after every groom, you reply to every review, two to four genuine reviews a week | [AI automation](/blog/ai-automation-for-pet-grooming) |
+| Website | Owned and crawlable, obvious booking action, services and price ranges, suburb pages, fast on mobile, LocalBusiness schema | [Website design](/blog/pet-grooming-website-design) |
+| AI search | Entity identical everywhere, schema in place, you've checked whether assistants name you | [AI search for pet grooming](/blog/ai-search-for-pet-grooming) |
+| Local SEO | A page per service and suburb you serve, internal links between them | [SEO for dog groomers](/blog/seo-for-dog-groomers) |
+| Automation | Online booking, no-show reminders, rebooking at checkout all running without you | [AI automation](/blog/ai-automation-for-pet-grooming) |
+| Paid ads | Only on for a reason, tight geo-targeting, tracking bookings not clicks | [Google Ads for dog grooming](/blog/google-ads-for-dog-grooming) |
+
+## A Simple Grooming Content Calendar
+
+**You don't need to post daily, you need a light, repeatable rhythm that keeps your profile and reviews looking alive, which is what Google and AI engines read as a live business.** A busy groomer can run the whole thing in under an hour a week, and the [AI tools guide](/blog/ai-tools-for-dog-grooming-business) gives you the prompts to draft most of it in minutes.
+
+| Cadence | Do this | Why it works |
+|---|---|---|
+| After each groom | Send the review request, reply to any new reviews | Steady review velocity is what the local pack rewards |
+| Weekly | One before-and-after photo to your profile and Instagram | Fresh photos signal a live business and win the click |
+| Fortnightly | One Google Post: an opening, a seasonal offer, a breed tip | Posts keep the profile active and surface in Search |
+| Monthly | Check your rank for "groomer in [suburb]", refresh one service page | Catches drift early and keeps content current |
+| Seasonally | A timely post (summer de-shedding, pre-holiday booking rush) | Matches what owners are actually searching that month |
+
+Keep it boring and consistent. The groomers who win aren't posting more, they're posting steadily while everyone else posts in bursts and then goes quiet for three months.
+
+## How Do You Know Your Grooming Marketing Is Working?
+
+**You judge grooming marketing on bookings and the signals that lead to them, not on vanity metrics like follower counts or impressions.** A busy owner has no time for dashboards, so track a handful of things that actually move money. Watch your Google Business Profile insights for calls, direction requests and website clicks, since most local discovery ends with a tap there. Check your rank for "dog groomer in [your suburb]" once a month from a logged-out phone, and note who sits above you and why. Test the AI assistants the same way, asking ChatGPT and Google's AI Overview for a groomer in your area to see whether you're named, walked through in [how to measure AI search visibility](/blog/how-to-measure-ai-search-visibility). Then tie it back to the diary: are new clients mentioning they found you on Google, and is your rebooking rate climbing? Demand context helps you read the numbers, "dog grooming near me" draws roughly 40,500 searches a month in Australia and "dog grooming" around 22,200, so the audience is large and local. If the bookings aren't following the work, the gap is usually a half-built profile or a site Google can't read, and a [free audit](/audit) will find it fast.
+
 ## How Should You Sequence Your Grooming Marketing?
 
 **Fix the free, compounding channels first, then layer paid and automation on top once the foundation holds.** The order matters because spending on ads before your profile and site are right just sends clicks to a leaky bucket. A sensible Australian sequence is: claim and complete your Google profile, then build a real booking website, then turn on review and reminder automation, then test Google Ads for the gaps. Marketing automation is the system that handles repetitive customer touches, like reminders and review requests, without you doing them by hand, and the rebooking flow often pays back faster than any ad. If you're starting the business itself, [business.gov.au sets out how to register and run a small business](https://business.gov.au/planning/business-plans) before you market it. Each step feeds the next: a complete profile makes your ads cheaper, a fast site makes your AI citations more likely, automation keeps reviews flowing so the profile stays strong. This mirrors how we sequence work for local service businesses, including the approach in our [plumbing local SEO case study](/case-studies/plumbers-south-east-melbourne-seo). When you're ready, the deepest single lever is still [local search](/blog/seo-for-dog-groomers).
-
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" role="img" aria-label="Traditional SEO compared with AI search optimisation for Australian businesses" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
-<title>Traditional SEO compared with AI search optimisation for Australian businesses</title>
-<rect width="900" height="430" fill="#121210"/>
-<text x="450" y="46" text-anchor="middle" font-size="25" font-weight="600" fill="#FAF9F5">Traditional SEO vs AI Search</text>
-<text x="450" y="72" text-anchor="middle" font-size="13" fill="#D4C9B0">Why the old playbook isn't enough</text>
-<line x1="450" y1="96" x2="450" y2="388" stroke="#2E2E2B" stroke-width="1"/>
-<rect x="40" y="96" width="380" height="42" rx="8" fill="#1C1C1A" stroke="#D4C9B0" stroke-width="1.5"/>
-<text x="230" y="123" text-anchor="middle" font-size="12" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">TRADITIONAL SEO</text>
-<rect x="480" y="96" width="380" height="42" rx="8" fill="#1C1C1A" stroke="#8FAF9F" stroke-width="1.5"/>
-<text x="670" y="123" text-anchor="middle" font-size="12" fill="#8FAF9F" font-family="ui-monospace,SF Mono,monospace">AI SEARCH OPTIMISATION</text>
-<text x="450" y="122" text-anchor="middle" font-size="11" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">VS</text>
-<rect x="40" y="152" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#D4C9B0" stroke-width="1"/>
-<text x="60" y="191" font-size="12.5" fill="#D4C9B0">Keyword density tuning</text>
-<rect x="480" y="152" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#8FAF9F" stroke-width="1"/>
-<circle cx="498" cy="187" r="4" fill="#8FAF9F"/>
-<text x="514" y="191" font-size="12.5" fill="#FAF9F5">Direct answer extraction</text>
-<rect x="40" y="232" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#D4C9B0" stroke-width="1"/>
-<text x="60" y="271" font-size="12.5" fill="#D4C9B0">Backlink quantity focus</text>
-<rect x="480" y="232" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#8FAF9F" stroke-width="1"/>
-<circle cx="498" cy="267" r="4" fill="#8FAF9F"/>
-<text x="514" y="271" font-size="12.5" fill="#FAF9F5">Entity-rich citations</text>
-<rect x="40" y="312" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#D4C9B0" stroke-width="1"/>
-<text x="60" y="351" font-size="12.5" fill="#D4C9B0">Page rank position obsession</text>
-<rect x="480" y="312" width="380" height="70" rx="6" fill="#1C1C1A" stroke="#8FAF9F" stroke-width="1"/>
-<circle cx="498" cy="347" r="4" fill="#8FAF9F"/>
-<text x="514" y="351" font-size="12.5" fill="#FAF9F5">AI-cited authority signals</text>
-<text x="450" y="414" text-anchor="middle" font-size="9" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">UnderCurrent Automations · SEO Comparison · 2026</text>
-</svg>
 
 ## Frequently Asked Questions
 
@@ -234,6 +237,10 @@ It ranges from almost nothing to a few hundred dollars a month, depending on how
 ### Should I run Google Ads for my dog grooming business?
 
 Run Google Ads in specific moments, not as a default. They make sense for a brand-new salon with no organic presence, to fill quiet midweek days, or when a mobile groomer expands into new suburbs. The catch is they stop the moment you pause spending, while local SEO compounds and keeps working. For most established groomers, fix the Google profile and website first, then use ads to fill the gaps while the organic foundation builds.
+
+### Is marketing a cat grooming business different from dog grooming?
+
+The channels are identical, the wording changes. Cat owners search "cat groomer near me" and "mobile cat grooming", so if you groom both, list cat grooming as its own service, add the relevant secondary category, and write a dedicated page rather than burying it under dogs. Many of the businesses we audited were dog and cat groomers, and the same proximity-and-profile rules decided their rank. Name the cat services explicitly and you capture a search pool most dog-led salons ignore.
 
 ### Can AI search like ChatGPT recommend my grooming business?
 
