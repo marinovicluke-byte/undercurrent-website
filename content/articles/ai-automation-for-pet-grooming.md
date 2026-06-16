@@ -1,5 +1,5 @@
 ---
-title: "Use AI Automation for Pet Grooming in 2026"
+title: "How to Use AI Automation in a Pet Grooming Business"
 description: "A practical 2026 guide to AI automation for pet grooming in Australia: what to automate first, which software fits, and how to set it up so it saves you hours."
 date: "2026-06-16"
 slug: "ai-automation-for-pet-grooming"
@@ -22,7 +22,7 @@ faqs:
   - q: "Do I need technical skills to set up grooming automation?"
     a: "No. Most grooming platforms have the common automations, reminders, rebooking and review requests, built in and switched on with a toggle. For anything custom, no-code connectors like Zapier and Make let you wire tools together with simple trigger-and-action rules. The harder part is deciding which workflow to build first, not building it. If you'd rather skip the setup, an automation specialist can configure the whole stack for you in a few hours."
 ---
-# Use AI Automation for Pet Grooming in 2026
+# How to Use AI Automation in a Pet Grooming Business
 
 > **Quick Answer:** AI automation for pet grooming is software that runs the repetitive admin around your appointments, so you stay at the table instead of on the phone.
 > - Automate in this order: booking and rebooking, no-show reminders, then review requests.
