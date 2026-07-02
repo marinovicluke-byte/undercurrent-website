@@ -12,10 +12,10 @@ sources:
 faqs:
   - { q: "Who actually needs an Australian Credit Licence?", a: "Anyone engaging in a 'credit activity' as defined in section 6 of the National Consumer Credit Protection Act 2009. That covers providing credit under credit contracts and consumer leases, benefiting from mortgages or guarantees tied to those contracts, and providing credit services like finance broking. There are two legal routes to operate, hold the licence yourself, or be authorised as a credit representative of an existing licensee." }
   - { q: "Is being a credit representative the same as holding an ACL?", a: "No. A credit representative operates under someone else's licence, which means the licensee, not the representative, carries the primary obligations and supervision. The representative still has to act compliantly, but the regulatory ceiling sits on the licensee. Brokers often start as credit representatives of an aggregator's licence and apply for their own ACL only when scale or independence justifies it." }
-  - { q: "What happens if a business provides credit without a licence?", a: "Section 29 of the National Consumer Credit Protection Act 2009 makes engaging in credit activities without a licence an offence. ASIC publishes the penalty regime for related offences in penalty units, with maximum imprisonment of two years for the most serious breaches, alongside civil penalties that can run to thousands of penalty units. The pragmatic risk is that any contract written outside a licensed authorisation is at the licensee's exposure, not the consumer's." }
+  - { q: "What happens if a business provides credit without a licence?", a: "Section 29 of the National Consumer Credit Protection Act 2009 makes engaging in credit activities without a licence an offence. ASIC publishes the penalty regime for related offences in penalty units, with maximum imprisonment of two years for the most serious breaches, alongside civil penalties that can run to thousands of penalty units — since 1 July 2026, $364 per penalty unit, with the next CPI indexation due 1 July 2029. The pragmatic risk is that any contract written outside a licensed authorisation is at the licensee's exposure, not the consumer's." }
 author: Luke Marinovic
 datePublished: 2026-05-13
-dateModified: 2026-05-13
+dateModified: 2026-07-02
 complianceNote: "Information only, not legal or financial advice. Confirm your licensing obligations with ASIC or a qualified professional before relying on this for compliance decisions."
 ai-assisted: true
 source: claude-code
