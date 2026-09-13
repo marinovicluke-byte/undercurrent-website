@@ -225,7 +225,7 @@ body.wm-open{overflow:hidden}
   .tm cite{grid-column:2}
 }
 .tm .ph{aspect-ratio:var(--tmr,4/3)}
-[data-frame="43"]{--tmr:4/3}[data-frame="11"]{--tmr:1/1}[data-frame="34"]{--tmr:3/4}
+:root{--tmr:4/3}
 .tm blockquote{margin-top:26px;font-size:18px;line-height:1.45;letter-spacing:-.01em}
 .tm cite{display:block;margin-top:22px;font-style:normal;font-size:13px;color:var(--ink-2)}
 .tm cite b{display:block;font-weight:500;color:var(--ink)}
@@ -244,7 +244,7 @@ body.wm-open{overflow:hidden}
 
 /* ---------- who it's for: the industries as a grid or a marquee, data-ind on html ---------- */
 .ind{display:none;margin-top:clamp(40px,5vw,72px)}
-[data-ind=grid] .ind--grid{display:grid}[data-ind=marquee] .ind--marquee{display:block}
+.ind--grid{display:grid}
 .ind--grid{--cols:4}
 .ig{display:flex;align-items:center;justify-content:center;text-align:center;min-height:clamp(120px,10vw,150px);padding:24px 20px;font-size:17px;font-weight:500;letter-spacing:-.01em}
 /* marquee: two rows drifting opposite ways, a dot in the service colour between names, hairlines the whole width, hard cut at the screen edge. pauses on hover */

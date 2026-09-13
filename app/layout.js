@@ -171,7 +171,7 @@ const siteJsonLd = [
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-AU" className={inter.variable}>
+    <html lang="en-AU" className={inter.variable} suppressHydrationWarning>
       <head>
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
         {/* the reveal is gated on .js so a fetcher that runs no script reads every line (transfer note 2) */}

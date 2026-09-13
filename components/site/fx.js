@@ -82,6 +82,9 @@ export function fillWorkHome(wm, c) {
 }
 
 export function fillWorkService(wm, c) {
+  /* the website page's cards carry a site screenshot for the sheet's head */
+  wm.className = 'wm' + (c.dataset.shot ? ' wm--shot wm--' + c.dataset.shot : '')
+  $('.wm__head', wm).style.setProperty('--shot', c.dataset.shot ? `url(/assets/work-${c.dataset.shot}.jpg)` : 'none')
   $('.wm__client', wm).textContent = c.dataset.client
   $('#wm-title', wm).innerHTML = $('h3', c).innerHTML
   $('.wm__stat', wm).innerHTML = $('.cell__stat', c).innerHTML
@@ -91,7 +94,9 @@ export function fillWorkService(wm, c) {
 
 /* testimonials: the slide carousel, one at a time. drag on the phone, keyboard arrows, dots under */
 export function initTestimonials() {
-  const tmSec = $('#testimonials'), tms = $('.tms', tmSec), track = $('.tms__track', tms), cards = [...track.children], dots = $('.tm-dots', tmSec)
+  const tmSec = $('#testimonials'), tms = tmSec && $('.tms', tmSec), track = tms && $('.tms__track', tms)
+  if (!track) return () => {} /* the seo page carries one static card, no carousel */
+  const cards = [...track.children], dots = $('.tm-dots', tmSec)
   let idx = 0, x0 = null
   const per = () => parseInt(getComputedStyle(tms).getPropertyValue('--per')) || 1
   function go(i) {
@@ -132,6 +137,51 @@ export function initShare() {
   if (x) x.href = 'https://twitter.com/intent/tweet?url=' + url + '&text=' + ttl
   $$('[data-copy]').forEach(b => b.onclick = async () => { try { await navigator.clipboard.writeText(decodeURIComponent(url)); b.textContent = 'Copied'; setTimeout(() => b.textContent = 'Copy link', 1600) } catch (e) {} })
   return () => {}
+}
+
+/* article rail: the current section is the last block whose top has passed 140px; the rail slides so its label stays in view */
+export function initRail() {
+  const blocks = $$('.blk[id]'), links = $$('.rail__in a')
+  if (!blocks.length || !links.length) return () => {}
+  let curId = ''
+  const setActive = () => {
+    let cur = blocks[0]; for (const b of blocks) { if (b.getBoundingClientRect().top <= 140) cur = b; else break }
+    if (cur.id === curId) return; curId = cur.id
+    links.forEach(a => { const on = a.getAttribute('href') === '#' + curId; a.classList.toggle('on', on); if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current') })
+    const r = $('.rail__in a.on'); if (r) { const rail = r.parentElement; rail.scrollTo({ left: r.offsetLeft - rail.clientWidth / 2 + r.offsetWidth / 2 - parseFloat(getComputedStyle(rail).paddingLeft), behavior: 'smooth' }) }
+  }
+  addEventListener('scroll', setActive, { passive: true }); setActive()
+  return () => removeEventListener('scroll', setActive)
+}
+
+/* blog categories: four rows shown, the rest behind Show more, six a tap */
+export function initMore(step = 6) {
+  const secs = $$('.cat')
+  const hs = secs.map(sec => {
+    const rows = $$('.post', sec), shown = $('[data-shown]', sec), btn = $('[data-more]', sec)
+    if (!btn) return null
+    const update = () => { const v = rows.filter(r => !r.hidden).length; shown.textContent = `${v} of ${rows.length}`; btn.hidden = v >= rows.length }
+    const h = () => { rows.filter(r => r.hidden).slice(0, step).forEach(r => r.hidden = false); update() }
+    btn.addEventListener('click', h); update(); return [btn, h]
+  })
+  return () => hs.forEach(x => x && x[0].removeEventListener('click', x[1]))
+}
+
+/* glossary find: only hides rows already in the page. no script, no filter, every term still reads */
+export function initFind() {
+  const q = $('#q'), found = $('[data-found]'), empty = $('.empty'), rows = $$('.terms .t'), groups = $$('.grp')
+  if (!q) return () => {}
+  const norm = s => s.toLowerCase().replace(/[^a-z0-9 ]/g, ' ')
+  rows.forEach(r => r.dataset.s = norm(r.textContent))
+  const filter = () => {
+    const v = norm(q.value).trim(); let n = 0
+    rows.forEach(r => { const hit = !v || v.split(/\s+/).every(w => r.dataset.s.includes(w)); r.hidden = !hit; if (hit) n++ })
+    groups.forEach(g => { g.hidden = !$$('.t:not([hidden])', g).length })
+    found.textContent = v ? n + ' of ' + rows.length : ''
+    empty.hidden = n > 0
+  }
+  q.addEventListener('input', filter); filter()
+  return () => q.removeEventListener('input', filter)
 }
 
 /* run a list of inits from one effect, tear them all down together */
