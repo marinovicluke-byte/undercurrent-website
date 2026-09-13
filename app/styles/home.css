@@ -1,0 +1,336 @@
+:root{
+  --white:#fff; --off:#f6f6f6; --ink:#141414; --ink-2:#6b6b6b; --line:rgba(20,20,20,.14);
+  --font:var(--font-inter),Inter,"Noto Sans JP",system-ui,-apple-system,sans-serif;
+  --pad:clamp(20px,4vw,56px); --max:1320px;
+  --ease:cubic-bezier(.22,.8,.2,1);
+  --noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='280'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  --noise-coarse:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.32' numOctaves='1' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  /* hard grit for the work cells: fine noise quantised to four levels, alpha forced to 1 so opacity is the only dial */
+  --noise-hard:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='280'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/><feComponentTransfer><feFuncR type='discrete' tableValues='0 .3 .6 1'/><feFuncG type='discrete' tableValues='0 .3 .6 1'/><feFuncB type='discrete' tableValues='0 .3 .6 1'/><feFuncA type='table' tableValues='1 1'/></feComponentTransfer></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  /* the five project colours, all already on the page: hero teal and the four service tiles. bright for static on dark, deep for static on light */
+  --teal:hsl(196 60% 45%); --teal-0:hsl(200 45% 32%); --green:hsl(160 45% 40%); --green-0:#0b3b31; --orange:#ff8a1f; --orange-0:#b8480a; --red:#d42222; --red-0:#7e0c0c; --plum:hsl(300 35% 46%); --plum-0:#25102b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+
+/* ---------- reveal: soft wipe, left to right ---------- */
+.js .rv{opacity:0;transform:translateX(-16px);
+  -webkit-mask:linear-gradient(90deg,#000 42%,transparent 58%) 100% 0/300% 100% no-repeat;
+  mask:linear-gradient(90deg,#000 42%,transparent 58%) 100% 0/300% 100% no-repeat}
+.js .in .rv{animation:rv 1.5s var(--ease) forwards;animation-delay:calc(var(--i,0)*150ms)}
+@keyframes rv{to{opacity:1;transform:none;-webkit-mask-position:0 0;mask-position:0 0}}
+/* mark reveal, top down: a hard edge travels down the mark so the scanlines switch on one after another. left to right is the normal wipe */
+.js .hero h1.rv{transform:none;-webkit-mask:linear-gradient(#000 50%,transparent 50%) 0 100%/100% 200% no-repeat;mask:linear-gradient(#000 50%,transparent 50%) 0 100%/100% 200% no-repeat}
+.js .hero.in h1.rv{animation-name:rvd;animation-duration:1.3s}
+@keyframes rvd{to{opacity:1;-webkit-mask-position:0 0;mask-position:0 0}}
+
+/* ---------- grain, shared ---------- */
+@keyframes grain{to{transform:translate(-84px,-60px)}}
+@keyframes jit{to{background-position:-84px -60px}}
+@keyframes breathe{to{opacity:.55}}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:22px 0;color:#fff;transition:background .4s,color .4s,box-shadow .4s}
+.nav__in{display:flex;align-items:center;justify-content:space-between}
+.nav.scrolled{background:var(--white);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.nav__brand{display:flex;align-items:center;gap:12px;line-height:1}
+/* nav mark (decided 2026-09-06, evening): the ink strokes, the sumi-e three waves from the stats section at 26px, cut from the wide-spaced render (the tightened one stayed on the section, "really close together" at nav size). white over the hero, the site ink once the nav turns white, the favicon the same strokes on the hero teal tile. the plain three-wave svg was that morning's pick and lost to the ink the same night; a stacked lockup, UnderCurrent over three long strokes, was tried and out. once the nav turns white the lockup, UnderCurrent with AUTOMATIONS under it, slides in top-down beside the mark */
+.wm-lock{display:flex;flex-direction:column;gap:4px;clip-path:inset(0 0 100% 0);opacity:0;transition:clip-path .7s var(--ease),opacity .5s var(--ease)}
+.wm-lock b{font-weight:600;font-size:15px;letter-spacing:-.01em}
+.wm-lock small{font-size:9px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;opacity:.8}
+.nav.scrolled .wm-lock{clip-path:inset(0);opacity:1}
+.mk-ink{display:block;position:relative;width:26px;flex:none}
+.mk-ink img{display:block;width:100%;height:auto}
+.mk-ink .dk{position:absolute;inset:0;opacity:0;transition:opacity .4s}
+.nav.scrolled .mk-ink .dk{opacity:1}.menu-open .mk-ink .dk{opacity:0}
+.burger{position:relative;width:26px;height:14px}
+.burger::before,.burger::after{content:"";position:absolute;left:0;right:0;height:1.5px;background:currentColor;transition:transform .45s var(--ease),top .45s var(--ease),bottom .45s var(--ease)}
+.burger::before{top:0}.burger::after{bottom:0}
+.menu-open .burger::before{top:6px;transform:rotate(45deg)}.menu-open .burger::after{bottom:6px;transform:rotate(-45deg)}
+.menu-open .nav{background:transparent;color:#fff;box-shadow:none}
+.menu{position:fixed;inset:0;z-index:45;background:var(--ink);color:#fff;display:flex;padding:80px var(--pad);overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}
+.menu-open .menu{opacity:1;visibility:visible}
+.menu>div{width:100%;max-width:var(--max);margin:auto}
+.menu a{display:block;font-size:clamp(32px,5vw,64px);font-weight:500;letter-spacing:-.02em;line-height:1.15;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.16);opacity:0;transform:translateX(-16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.menu-open .menu a{opacity:1;transform:none}
+.menu-open .menu a:nth-child(2){transition-delay:.06s}.menu-open .menu a:nth-child(3){transition-delay:.12s}.menu-open .menu a:nth-child(4){transition-delay:.18s}.menu-open .menu a:nth-child(5){transition-delay:.24s}
+/* mockup options, live in the menu so they work on the phone. not part of the design */
+.opts{margin-top:clamp(28px,5vh,56px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);opacity:0;transition:opacity .6s var(--ease) .24s}
+.menu-open .opts{opacity:1}
+.opts__row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;padding:9px 0}
+.opts__row span{flex:0 0 116px}
+.opts button{padding:3px 0;color:#fff;opacity:.4;border-bottom:1px solid transparent}
+.opts button.on{opacity:1;border-bottom-color:#fff}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;isolation:isolate;background:#111417;color:#fff;display:flex;min-height:62vh}
+.hero__layer{position:absolute;inset:0;pointer-events:none}
+.hero__grain{inset:-120px;background:var(--noise) 0 0/280px 280px;mix-blend-mode:overlay;opacity:.75;animation:grain .9s steps(6) infinite}
+
+/* look: photo. Luke's motion-blur photo under the static, pulled into the palette with a colour blend. cover crop on every screen */
+.hero__photo{background:url(/assets/hero.jpg) center 28%/cover no-repeat;filter:saturate(.5) brightness(.42) contrast(1.08) blur(1px)}
+.hero{background:#121416}
+.hero__glow.a{opacity:1;animation:none;background:hsl(200 45% 32%);mix-blend-mode:color}
+.hero__glow.b{opacity:1;animation:none;background:linear-gradient(to bottom,rgba(18,20,22,.25),rgba(18,20,22,.05) 40%,rgba(18,20,22,.7) 100%)}
+.hero__grain{opacity:.6}
+
+/* static frame under the photo */
+/* old signal. coarse grain, faint scanlines, a slow rolling bar of teal, vignette */
+.hero__static{inset:-120px;background:linear-gradient(hsl(196 60% 45% / .6),hsl(196 60% 45% / .6)),var(--noise-coarse) 0 0/220px 220px;background-blend-mode:multiply;mix-blend-mode:screen;opacity:.18;animation:grain .6s steps(4) infinite}
+
+.hero__inner{position:relative;z-index:2;width:100%;max-width:var(--max);margin:0 auto;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:120px var(--pad) clamp(48px,8vh,104px)}
+.hero h1{font-weight:500;font-size:clamp(40px,6.4vw,92px);line-height:1;letter-spacing:-.03em}
+.hero h1{font-size:clamp(34px,4.4vw,64px)}
+/* hero title options. Title only is the text. The scanline marks are Claude Design exports keyed to white on transparent, shown as plain images so every browser draws them the same */
+.uc-mark{display:none;width:100%;height:auto}
+.uc-text{display:none}
+.hero h1{width:min(100%,clamp(300px,42vw,620px))}
+.uc-mark--l{display:block}
+
+/* ---------- sections ---------- */
+.sec{padding:clamp(72px,9vw,128px) 0}
+.sec--off{background:var(--off)}
+.sec--dark{background:var(--ink);color:#fff;--line:rgba(255,255,255,.16);--ink-2:rgba(255,255,255,.6)}
+.sec__head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding-top:20px;border-top:1px solid var(--line);margin-bottom:clamp(40px,5vw,72px)}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.eyebrow b{font-weight:500;color:inherit;margin-right:12px}
+.sec--dark .eyebrow b,.sec--dark .eyebrow{color:rgba(255,255,255,.6)}
+h2{font-weight:500;letter-spacing:-.02em;font-size:clamp(28px,3.2vw,44px);line-height:1.12}
+.link{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding-bottom:6px;border-bottom:1px solid currentColor}
+.btn{display:inline-block;padding:18px 30px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;background:var(--ink);color:#fff}
+.sec--dark .btn{background:#fff;color:var(--ink)}
+
+/* who we are */
+.intro{padding-top:clamp(72px,9vw,120px)}
+.lead{font-size:clamp(26px,3.4vw,50px);line-height:1.16;letter-spacing:-.022em;max-width:26ch;font-weight:400}
+
+/* clients (decided 2026-09-06): six logos cut to one ink, sized by --h so unlike marks read the same weight. three by two inside the wrap, the cells alternating off-white and white, a small cross wherever an inner vertical meets a hairline, in the hero teal with the coarse static running through it (two literal gradient masks, no custom property, after the Safari lesson). hover, or a tap on the phone, eases the logo up 5% and cross-fades the ink to the brand's own colour. the phone is two by three with the stacked Intelligentle lockup */
+#clients{padding:clamp(56px,6vw,88px) 0}
+.logos{--k:1px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.logo{position:relative;display:flex;align-items:center;justify-content:center;padding:28px 20px;min-height:clamp(120px,10vw,150px);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.logo[data-l=lyso],.logo[data-l=aspirant],.logo[data-l=ajm]{background:var(--off)}
+.logo[data-l=aspirant],.logo[data-l=ipl]{border-right:0}
+.logo[data-l=aso],.logo[data-l=ajm],.logo[data-l=ipl]{border-bottom:0}
+.logo::before,.logo::after{content:none;position:absolute;right:-7px;width:13px;height:13px;z-index:1;background:linear-gradient(hsl(200 45% 36%),hsl(200 45% 36%)),var(--noise-coarse) 0 0/220px 220px;background-blend-mode:multiply;-webkit-mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;animation:jit .6s steps(4) infinite}
+.logo::before{top:-7px}.logo::after{bottom:-7px}
+.logo[data-l=lyso]::before,.logo[data-l=ih]::before,.logo[data-l=lyso]::after,.logo[data-l=ih]::after,.logo[data-l=aso]::after,.logo[data-l=ajm]::after{content:""}
+.lg{position:relative;display:block;max-width:88%;transition:transform .6s var(--ease)}
+.ih-v{display:none}
+.lg img{display:block;height:calc(var(--h,40)*var(--k));width:auto;max-width:100%;object-fit:contain;opacity:.85;transition:opacity .6s var(--ease)}
+.lg .col{position:absolute;inset:0;width:100%;height:100%;opacity:0}
+.lg b{display:block;font-weight:500;font-size:calc(16*var(--k));letter-spacing:-.01em;line-height:1.25;text-align:center;opacity:.85;transition:opacity .6s var(--ease)}
+.logo:hover .lg,.logo.on .lg{transform:scale(1.05)}
+.logo:hover img,.logo:hover b,.logo.on img,.logo.on b{opacity:1}
+.logo:hover .lg:has(.col) img:not(.col),.logo.on .lg:has(.col) img:not(.col){opacity:0}
+@media (prefers-reduced-motion:reduce){.logo:hover .lg,.logo.on .lg{transform:none}}
+
+/* services */
+.svcs{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.svc{display:flex;flex-direction:column;min-height:480px;border-bottom:1px solid var(--line)}
+.band{position:relative;height:96px;overflow:hidden;isolation:isolate;background:var(--b0)}
+.band::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(90% 140% at 28% 120%,var(--b1),transparent 70%),
+  radial-gradient(70% 90% at 92% -10%,var(--b2),transparent 70%);animation:breathe 12s ease-in-out infinite alternate}
+.band::after{content:"";position:absolute;inset:-100px;background:var(--noise) 0 0/240px 240px;mix-blend-mode:overlay;opacity:.7;animation:grain 1s steps(6) infinite}
+.svc--green{--b0:#0b3b31;--b1:hsl(165 50% 30%);--b2:hsl(150 40% 42% / .85)}
+.svc--orange{--b0:#b8480a;--b1:#ff8a1f;--b2:hsl(28 100% 62% / .85)}
+.svc--red{--b0:#7e0c0c;--b1:#d42222;--b2:hsl(0 80% 56% / .85)}
+.svc--plum{--b0:#25102b;--b1:#5c2a62;--b2:hsl(300 35% 42% / .85)}
+.svc__body{padding:28px 0 32px;display:flex;flex-direction:column;flex:1}
+.svc h3{font-size:20px;font-weight:500;letter-spacing:-.01em}
+.svc p{margin-top:12px;color:var(--ink-2);font-size:15px;max-width:34ch}
+.svc__toggle{margin-top:28px;align-self:flex-start;font-size:12px;letter-spacing:.14em;text-transform:uppercase;display:flex;gap:12px;align-items:center;padding-bottom:6px;border-bottom:1px solid var(--ink)}
+.svc__body .svc__toggle{margin-top:auto;padding-top:28px}
+
+.svc{position:relative;background:var(--b0);color:#fff;border-bottom:0;min-height:460px}
+.band{position:absolute;inset:0;height:auto}
+.band::before{background:radial-gradient(90% 70% at 25% 100%,var(--b1),transparent 70%),radial-gradient(60% 50% at 95% 0%,var(--b2),transparent 70%)}
+.svc__body{position:relative;z-index:1;padding:32px 28px;justify-content:flex-end}
+.svc h3{margin-top:auto}
+.svc__body .svc__toggle{margin-top:28px}
+/* the mockup carried a dangling ".svc p," before a desktop min-height rule, so that rule never parsed and never applied. left out on purpose */
+.svc__toggle{border-color:#fff}
+
+/* placeholder tiles, and the real portraits */
+.ph{position:relative;overflow:hidden;isolation:isolate;background:#1a1d20}
+.ph::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 90% at 70% 100%,rgba(255,255,255,.14),transparent 70%)}
+.ph::after{content:"";position:absolute;inset:-100px;background:var(--noise) 0 0/240px 240px;mix-blend-mode:overlay;opacity:.6}
+.ph--light{background:#e4e4e4}.ph--light::before{background:radial-gradient(80% 90% at 30% 0%,rgba(255,255,255,.9),transparent 70%)}
+.ph--photo{background:#e4e4e4 var(--img) var(--x,50%) var(--y,30%)/cover no-repeat}.ph--photo::before,.ph--photo::after{display:none}
+
+/* work: static cells (decided 2026-09-05). five hairline cells, three over two, one colour each, the result as a figure. the picture is our own static, tinted, dying out before the words. menu dials: data-wmode dark|light, data-wstatic sand|field, data-wangle same|mirror|fall, data-wlayout grid|carousel (desktop; the phone is always a carousel) */
+.sec--work{position:relative;isolation:isolate;overflow:hidden;background:var(--ink);color:#fff;--line:rgba(255,255,255,.16);--ink-2:rgba(255,255,255,.6);--cbg:var(--ink);--f1:rgba(20,20,20,.7);--f2:rgba(20,20,20,.6)}
+/* deep: the same grey-black, but the hero's teal falls into it from the top with the footer's static and grain, so the section reads as ours and not a black slab. cells stay opaque */
+.sec--work .wrap{position:relative;z-index:1}
+.sec--work>.hero__layer{display:none}
+.work__base{background:linear-gradient(to bottom,hsl(202 40% 21%),hsl(204 32% 14%) 55%,#141414 92%)}
+.sec--work .eyebrow,.sec--work .eyebrow b{color:var(--ink-2)}
+.sec--work h2{margin:-12px 0 clamp(36px,4.5vw,64px);max-width:22ch}
+.cells{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.cell{position:relative;isolation:isolate;overflow:hidden;background:var(--cbg);min-height:clamp(260px,25vw,360px);padding:24px 28px 28px;display:flex;flex-direction:column;border-right:1px solid var(--line);border-bottom:1px solid var(--line);grid-column:span 2;--gx:100%;--fx:to right}
+.cell:nth-child(n+4){grid-column:span 3}
+.cell>*:not(i):not(.cell__plus){position:relative;z-index:1}
+.cell[data-client]{cursor:pointer}
+.cell__plus{position:absolute;z-index:1;right:22px;bottom:20px;font-size:20px;font-weight:300;line-height:1;color:var(--ink-2)}
+.cell__sig,.cell__glow,.cell__fade{position:absolute;inset:0;z-index:0;pointer-events:none}
+/* sand: hard grit tinted with the project colour, screened on dark. on light the colour is screened with the grit and multiplied onto the cell, so only the coloured grains survive */
+.cell__sig{background:linear-gradient(var(--c),var(--c)),var(--noise-hard) 0 0/280px 280px;background-blend-mode:multiply;mix-blend-mode:screen;opacity:.5;animation:jit .6s steps(4) infinite}
+.cell__glow{background:radial-gradient(70% 80% at var(--gx) 0%,var(--c),transparent 68%);opacity:.3}
+.cell__fade{background:linear-gradient(to top,var(--cbg) 34%,var(--f1) 52%,transparent 78%),linear-gradient(var(--fx),var(--cbg) 4%,var(--f2) 26%,transparent 62%)}
+/* field: the whole cell textured, nothing fades, the words sit on the grain */
+.cell__sig{opacity:.24}
+.cell__fade{display:none}
+.cell__glow{opacity:.42}
+/* angle: where the colour comes in. same, every cell top right. mirror flips every second cell so colour meets colour across the shared hairline. fall, straight down from the top edge, no corner */
+.cell__glow{background:linear-gradient(to bottom,var(--c),transparent 70%);opacity:.26}
+.cell__fade{background:linear-gradient(to top,var(--cbg) 40%,var(--f1) 56%,transparent 84%)}
+.cell .eyebrow{font-size:11px}
+.cell h3{margin-top:18px;font-size:clamp(22px,1.9vw,26px);font-weight:400;letter-spacing:-.02em;line-height:1.15}
+.cell__desc{margin-top:10px;font-size:14px;line-height:1.5;color:var(--ink-2);max-width:36ch}
+.cell__stat{margin-top:auto;padding-top:28px;font-size:clamp(30px,2.6vw,40px);font-weight:500;letter-spacing:-.03em;line-height:1}
+.cell__stat small{display:block;margin-top:8px;font-size:13px;font-weight:400;letter-spacing:0;color:var(--ink-2)}
+.c-teal{--c:var(--teal);--c0:var(--teal-0)}.c-green{--c:var(--green);--c0:var(--green-0)}.c-orange{--c:var(--orange);--c0:var(--orange-0)}.c-red{--c:var(--red);--c0:var(--red-0)}.c-plum{--c:var(--plum);--c0:var(--plum-0)}
+/* carousel: the phone always, the desktop by choice (data-wlayout). cards bleed to the screen edge and snap, the first lines up with the text. the class is set from js because it depends on the width and the menu */
+.cells--scroll{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:0 var(--pad) 2px;margin:0 calc(-1*var(--pad));scroll-padding-left:var(--pad);border:0;scrollbar-width:none}
+.cells--scroll::-webkit-scrollbar{display:none}
+.cells--scroll .cell,.cells--scroll .cell:nth-child(n+4){flex:0 0 clamp(320px,31%,420px);grid-column:auto;scroll-snap-align:start;border:1px solid var(--line)}
+.w-dots{display:none;gap:10px;margin-top:28px;justify-content:center}
+.cells--scroll~.w-dots{display:flex}
+.w-dots button{width:6px;height:6px;border-radius:50%;background:var(--line);padding:0;transition:background .3s}
+.w-dots button.on{background:currentColor}
+/* the sheet: tap a card and it opens over the page, the page blurred behind. the head is a cell (the same static, client and title), the body is the figure, the story, the result. full screen on the phone, a 720px panel on desktop */
+.wm{position:fixed;inset:0;margin:auto;border:0;padding:0;width:min(100%,720px);max-height:min(90vh,840px);overflow:auto;background:var(--cbg);color:inherit;scrollbar-width:none}
+.wm::-webkit-scrollbar{display:none}
+.wm::backdrop{background:rgba(20,20,20,.5);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+.wm[open]{animation:wm-in .5s var(--ease)}
+@keyframes wm-in{from{opacity:0;transform:translateY(18px)}}
+.wm__head{min-height:min(46vh,300px);border:0;grid-column:auto;justify-content:flex-end;padding:28px;cursor:default}
+.wm__head h3{margin-top:12px;font-size:clamp(26px,3vw,34px)}
+.wm__close{position:absolute;top:12px;right:18px;z-index:2;font-size:32px;font-weight:300;line-height:1;color:inherit;opacity:.85}
+.wm__close:focus{outline:0}.wm__close:focus-visible{outline:1px solid currentColor;outline-offset:4px}
+.wm__body{padding:28px 28px 40px}
+.wm__body .cell__stat{margin-top:0;padding-top:0}
+.wm__text{margin-top:26px;font-size:16px;line-height:1.6;max-width:56ch}
+.wm__text p+p{margin-top:14px}
+.wm__res{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:var(--ink-2)}
+body.wm-open{overflow:hidden}
+
+/* testimonials: a carousel. three cards per view on desktop, two on tablet, one on mobile. drag, arrows, prev/next */
+.tms{--per:3;--gap:32px;position:relative;overflow:hidden;container-type:inline-size}
+.tms:focus-visible{outline:1px solid var(--line)}
+.tms__track{display:flex;gap:var(--gap);transition:transform .8s var(--ease);touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.tm{flex:0 0 calc((100% - (var(--per) - 1)*var(--gap))/var(--per));display:flex;flex-direction:column;border-bottom:1px solid var(--line);padding-bottom:28px}
+.tm-dots{display:flex;gap:10px;margin-top:28px}
+.tm-dots[hidden]{display:none}
+.tm-dots button{width:6px;height:6px;border-radius:50%;background:var(--line);padding:0;transition:background .3s}
+.tm-dots button.on{background:var(--ink)}
+/* variant fade: one card at a time, crossfade. above mobile the card lays out photo left, quote right, so one card can carry the row */
+@media (min-width:641px){
+}
+.tm .ph{aspect-ratio:var(--tmr,4/3)}
+/* photo frame, from the menu. the portraits are portrait, so 3:4 shows the whole photo where 4:3 kept the top half */
+:root{--tmr:4/3;--tmh:75cqw}
+.tm blockquote{margin-top:26px;font-size:18px;line-height:1.45;letter-spacing:-.01em}
+.tm cite{display:block;margin-top:22px;font-style:normal;font-size:13px;color:var(--ink-2)}
+.tm cite b{display:block;font-weight:500;color:var(--ink)}
+
+/* stats (decided 2026-09-06): the TDS numbers page in our frame. the hero treatment is the whole background, plain (the footer gradient) or the photo (still open, a new photo is coming). the mark is a sumi-e render of the three waves (Higgsfield nano_banana_pro, white on black, keyed to alpha and tightened in PIL), a plain img like the hero marks: left column on desktop with the paragraph centred beside it, in flow above the paragraph on the phone. four numbers across on one hairline, columns sized to their number the way TDS does it, thin numerals. tried and out the same day: Centre and Grid layouts, a Layer ground under the numbers, Waves, Brush, Scan and Ink faded marks, Regular and Medium numerals, the eyebrow, the static inside the stroke */
+.sec--stats{position:relative;isolation:isolate;overflow:hidden;background:#121416;color:#fff;--line:rgba(255,255,255,.2);--ink-2:rgba(255,255,255,.6);display:flex;flex-direction:column;min-height:clamp(600px,88vh,900px)}
+.sec--stats .wrap{position:relative;width:100%;flex:1;display:flex;flex-direction:column}
+.sec--stats .hero__photo{background-position:center 70%}
+.st-b,.st-p{display:none}
+.st-b{display:block}
+.st-top{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:clamp(32px,5vw,72px);margin-bottom:clamp(56px,9vw,128px)}
+.st-lead{grid-column:2;font-size:clamp(19px,1.6vw,22px);line-height:1.45;letter-spacing:-.01em;max-width:44ch;color:rgba(255,255,255,.9)}
+.st-mark{grid-column:1;width:min(32vw,440px)}
+.st-ink{display:block;width:100%;height:auto}
+.stats{position:relative;margin-top:auto;display:flex;justify-content:space-between;gap:32px;border-top:1px solid var(--line);padding-top:clamp(28px,3.4vw,48px)}
+.stat b{display:block;font-weight:300;font-size:clamp(46px,5.8vw,84px);line-height:1;letter-spacing:-.02em}
+.stat span{display:block;margin-top:8px;font-size:clamp(18px,1.5vw,22px);font-weight:500;letter-spacing:-.01em;color:#fff}
+
+/* about */
+.about{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,96px);align-items:start}
+.about .ph{aspect-ratio:4/5}
+.about p{margin-top:24px;color:var(--ink-2);font-size:17px;max-width:56ch}
+.about p:first-of-type{margin-top:32px;color:var(--ink)}
+
+
+/* the who card (Luke, 2026-09-13, from a reference card: the name and role bottom-left over the photo, the footer's three social glyphs under them). one class on the homepage About photo and the article bio. the scrim is one straight gradient off the bottom, ink at .7 dying out before the face. a clean shot like the testimonials, no grain, no desaturation, no signature (Luke, 2026-09-13) */
+.who{position:relative;overflow:hidden;isolation:isolate;background:#e4e4e4}
+.who__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.ph.who::after{display:none}
+.who::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(20,20,20,.72),rgba(20,20,20,.28) 22%,rgba(20,20,20,0) 48%)}
+.who__c{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:var(--whop,24px);color:#fff}
+.who__n{display:block;font-size:var(--whon,16px);font-weight:500;letter-spacing:-.01em;line-height:1.2}
+.who__n small{display:block;margin-top:5px;font-size:var(--whor,13px);font-weight:400;letter-spacing:0;color:rgba(255,255,255,.62)}
+.who__s{display:flex;gap:12px;margin-top:14px}
+.who__s a{display:block;width:18px;height:18px;color:rgba(255,255,255,.66);transition:color .3s}.who__s a:hover{color:#fff}
+.who__s svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* contact */
+.contact h2{max-width:22ch;font-size:clamp(32px,4.2vw,60px)}
+.cta{display:flex;gap:36px;align-items:center;margin-top:48px;flex-wrap:wrap}
+
+/* faq */
+.faq{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,96px)}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 0;font-size:18px;font-weight:500;letter-spacing:-.01em;cursor:pointer}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;font-weight:300;color:var(--ink-2);flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq details p{padding:0 0 26px;color:var(--ink-2);max-width:56ch}
+
+/* footer (decided 2026-09-06, night): Title, expanded with the grid on desktop. the hero treatment without the photo, teal at the top falling into the dark, the same static and grain over it. brand column with the descriptor, Melbourne, email and one hairline button, Let's chat, three link columns beside it, then the hero's own close: the scanline title bottom-left at the hero's size with the three social glyphs on its baseline, a hairline, the bar. Row, Ink and Grid out the same night */
+footer{position:relative;overflow:hidden;isolation:isolate;background:#121416;padding:clamp(96px,12vw,160px) 0 40px;font-size:13px;color:rgba(255,255,255,.6);--line:rgba(255,255,255,.2)}
+.foot__base{background:linear-gradient(to bottom,hsl(200 42% 27%),hsl(204 32% 15%) 65%,#121416)}
+footer .wrap{position:relative;z-index:1}
+footer b{color:#fff;font-weight:500}
+footer a{transition:color .3s,border-color .3s}footer a:hover{color:#fff}
+.ft__cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px 32px}
+.ft__brand p{margin-top:12px;max-width:30ch;font-size:14px;line-height:1.5}
+.ft__brand address{font-style:normal;margin-top:18px;font-size:14px;line-height:1.7}
+.ft__cta{display:flex;gap:8px;margin-top:28px;flex-wrap:wrap}
+.ft__cta a{padding:13px 20px;border:1px solid var(--line);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+.ft__cta a:hover{border-color:#fff}
+.ft__col h4{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px}
+.ft__col a{display:block;font-size:14px;padding:5px 0;color:rgba(255,255,255,.85)}
+.ft__sign{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-top:clamp(80px,10vw,160px)}
+.ft__uca{display:block;width:min(100%,clamp(300px,42vw,620px));height:auto}
+.ft__uca--c{display:none}
+/* the only icons on the site: three hairline glyphs at 22px, the same 1.5px stroke as the burger */
+.ft__soc{display:flex;gap:22px;padding-bottom:6px}
+.ft__soc a{display:block;width:22px;height:22px;color:rgba(255,255,255,.7)}
+.ft__soc svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ft__bar{display:flex;justify-content:space-between;gap:12px 32px;flex-wrap:wrap;margin-top:32px;padding-top:18px;border-top:1px solid var(--line)}
+.ft__chat{display:none}
+.ft__meta{display:flex;gap:28px}
+
+@media (max-width:1000px){.svcs{grid-template-columns:1fr 1fr}.cells{grid-template-columns:1fr 1fr}.cell,.cell:nth-child(n+4){grid-column:auto}.cell:last-child{grid-column:span 2}.tms{--per:2}.stats{flex-wrap:wrap;row-gap:56px}.stat{flex:0 0 calc(50% - 16px)}}
+@media (max-width:640px){.svc{min-height:380px}.svcs,.about,.faq{grid-template-columns:1fr}.tms{--per:1}
+  /* phone: the work is a carousel, cards four fifths of the screen so the next one shows, short description held back for the sheet */
+  .cells--scroll .cell,.cells--scroll .cell:nth-child(n+4){flex-basis:min(80vw,340px);min-height:300px;padding:22px 22px 24px}.cells--scroll .cell__desc{display:none}.cell h3{margin-top:16px}.cell__stat{padding-top:36px}
+  .wm{width:100%;height:100dvh;max-height:none}.wm__head{min-height:29dvh}.wm__body{padding:26px 22px 40px}
+  /* phone: dots centred in the gap under the photo. the photo is full card width, so its bottom edge is its ratio in cqw (75 for 4:3, 133 for 3:4) */
+  .tm blockquote{margin-top:46px}.tm-dots{position:absolute;left:0;right:0;top:calc(var(--tmh,75cqw) + 20px);margin:0;justify-content:center}
+  .logos{grid-template-columns:1fr 1fr}.logo[data-l]{min-height:140px;padding:24px 16px;border-right:0;border-bottom:1px solid var(--line);background:var(--white)}.logo[data-l=lyso],.logo[data-l=aspirant],.logo[data-l=ajm]{border-right:1px solid var(--line)}.logo[data-l=ajm],.logo[data-l=ipl]{border-bottom:0}.logo[data-l=lyso],.logo[data-l=aso],.logo[data-l=ajm]{background:var(--off)}.logo[data-l]::before,.logo[data-l]::after{content:none}.logo[data-l=lyso]::before,.logo[data-l=lyso]::after,.logo[data-l=aspirant]::after,.logo[data-l=ajm]::after{content:""}.ih-h{display:none}.ih-v{display:block}  /* mobile hero: 70svh sits between Pace (64) and the first cut (72vh). crop centred so the chair and legs stay in, title tucked under the lampshade, intro padding trimmed so the whole who-we-are line is on the first screen */
+  .hero{min-height:70vh;min-height:70svh}.hero__photo{background-position:center 50%}.hero__inner{padding-bottom:72px}.intro{padding-top:48px}
+  /* marks: left on desktop, centred on the phone (Luke, 2026-09-05). the phone uses the centre export for the Automations line */
+  .hero h1{width:100%}.hero__inner{align-items:center;text-align:center}
+  .uc-mark--l{display:none}.uc-mark--c{display:block}
+  /* stats on the phone: natural height, the mark 80% wide with the paragraph right under it, the numbers centred one under another at the TDS phone size (46px, 19px label, 44px between) */
+  .sec--stats{min-height:0}.st-top{grid-template-columns:1fr;gap:0;margin-bottom:48px}.st-lead{grid-column:1;line-height:1.4}
+  .stats{flex-direction:column;align-items:center;text-align:center;gap:44px;border-top:0;padding-top:0}
+  .stat b{font-size:46px}.stat span{margin-top:6px;font-size:19px}.st-mark{width:80%;margin:0 0 6px}
+  .opts__row span{flex:0 0 100%}
+  /* footer on the phone, flipped (Luke, 2026-09-06 night): the sign first, centred like the hero with the glyphs under it, one full-width Let's chat button, then the link columns two across, the bar last. the brand block (name, one-liner, Melbourne, email) is desktop only */
+  footer .wrap{display:flex;flex-direction:column}.ft__brand{display:none}
+  .ft__sign{order:1;flex-direction:column;align-items:center;gap:28px;margin-top:0}.ft__uca--l{display:none}.ft__uca--c{display:block;width:100%}
+  .ft__chat{order:2;display:block;margin-top:40px;padding:15px 20px;border:1px solid var(--line);text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+  .ft__cols{order:3;grid-template-columns:1fr 1fr;gap:36px 24px;margin-top:64px}
+  .ft__bar{order:4;flex-direction:column;align-items:center;text-align:center;gap:10px;margin-top:48px}}
+@media (prefers-reduced-motion:reduce){.rv,.in .rv{animation:none;opacity:1;transform:none;mask:none;-webkit-mask:none}.hero__grain,.hero__static,.band::before,.band::after,.cell__sig{animation:none}.tms__track,.tm{transition:none}}

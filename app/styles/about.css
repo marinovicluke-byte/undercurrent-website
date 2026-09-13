@@ -1,0 +1,224 @@
+:root{
+  --white:#fff; --off:#f6f6f6; --ink:#141414; --ink-2:#6b6b6b; --line:rgba(20,20,20,.14);
+  --font:var(--font-inter),Inter,"Noto Sans JP",system-ui,-apple-system,sans-serif;
+  --pad:clamp(20px,4vw,56px); --max:1320px; --navh:72px;
+  --ease:cubic-bezier(.22,.8,.2,1);
+  --noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='280'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  --noise-coarse:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.32' numOctaves='1' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  --teal:hsl(196 60% 45%); --teal-0:hsl(200 45% 32%);
+  /* the page's one colour is the hero teal: the crosses in the grids (--sc0, the clients grid's value) */
+  --sc0:hsl(200 45% 36%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+
+/* ---------- reveal: soft wipe, left to right ---------- */
+.js .rv{opacity:0;transform:translateX(-16px);
+  -webkit-mask:linear-gradient(90deg,#000 42%,transparent 58%) 100% 0/300% 100% no-repeat;
+  mask:linear-gradient(90deg,#000 42%,transparent 58%) 100% 0/300% 100% no-repeat}
+.js .in .rv{animation:rv 1.5s var(--ease) forwards;animation-delay:calc(var(--i,0)*150ms)}
+@keyframes rv{to{opacity:1;transform:none;-webkit-mask-position:0 0;mask-position:0 0}}
+
+/* ---------- grain, shared ---------- */
+@keyframes grain{to{transform:translate(-84px,-60px)}}
+@keyframes jit{to{background-position:-84px -60px}}
+@keyframes breathe{to{opacity:.55}}
+
+/* ---------- nav (as the homepage) ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:22px 0;color:#fff;transition:background .4s,color .4s,box-shadow .4s}
+.nav__in{display:flex;align-items:center;justify-content:space-between}
+.nav.scrolled{background:var(--white);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.nav__brand{display:flex;align-items:center;gap:12px;line-height:1}
+.wm-lock{display:flex;flex-direction:column;gap:4px;clip-path:inset(0 0 100% 0);opacity:0;transition:clip-path .7s var(--ease),opacity .5s var(--ease)}
+.wm-lock b{font-weight:600;font-size:15px;letter-spacing:-.01em}
+.wm-lock small{font-size:9px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;opacity:.8}
+.nav.scrolled .wm-lock{clip-path:inset(0);opacity:1}
+.mk-ink{display:block;position:relative;width:26px;flex:none}
+.mk-ink img{display:block;width:100%;height:auto}
+.mk-ink .dk{position:absolute;inset:0;opacity:0;transition:opacity .4s}
+.nav.scrolled .mk-ink .dk{opacity:1}.menu-open .mk-ink .dk{opacity:0}
+.burger{position:relative;width:26px;height:14px}
+.burger::before,.burger::after{content:"";position:absolute;left:0;right:0;height:1.5px;background:currentColor;transition:transform .45s var(--ease),top .45s var(--ease),bottom .45s var(--ease)}
+.burger::before{top:0}.burger::after{bottom:0}
+.menu-open .burger::before{top:6px;transform:rotate(45deg)}.menu-open .burger::after{bottom:6px;transform:rotate(-45deg)}
+.menu-open .nav{background:transparent;color:#fff;box-shadow:none}
+.menu{position:fixed;inset:0;z-index:45;background:var(--ink);color:#fff;display:flex;padding:80px var(--pad);overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}
+.menu-open .menu{opacity:1;visibility:visible}
+.menu>div{width:100%;max-width:var(--max);margin:auto}
+.menu a{display:block;font-size:clamp(32px,5vw,64px);font-weight:500;letter-spacing:-.02em;line-height:1.15;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.16);opacity:0;transform:translateX(-16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.menu-open .menu a{opacity:1;transform:none}
+.menu-open .menu a:nth-child(2){transition-delay:.06s}.menu-open .menu a:nth-child(3){transition-delay:.12s}.menu-open .menu a:nth-child(4){transition-delay:.18s}.menu-open .menu a:nth-child(5){transition-delay:.24s}
+/* mockup options, live in the menu so they work on the phone. not part of the design */
+.opts{margin-top:clamp(28px,5vh,56px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);opacity:0;transition:opacity .6s var(--ease) .24s}
+.menu-open .opts{opacity:1}
+.opts__row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;padding:9px 0}
+.opts__row span{flex:0 0 116px}
+.opts button{padding:3px 0;color:#fff;opacity:.4;border-bottom:1px solid transparent}
+.opts button.on{opacity:1;border-bottom-color:#fff}
+
+/* ---------- the layer stack: the homepage hero's photo treatment ---------- */
+.hero__layer{position:absolute;inset:0;pointer-events:none}
+.hero__photo{background:url(/assets/about-hero-2.jpg) center 44%/cover no-repeat;filter:saturate(.5) brightness(.42) contrast(1.08) blur(1px)}
+.hero__glow.a{background:hsl(200 45% 32%);mix-blend-mode:color}
+/* the hero photo (decided 2026-09-13): Banner 2 from the shoot, the chair side on, portrait. Banner 1 (the sofa), Banner 4 (the chair and lamp, plain and tall) and the homepage photo were on the dial and are out, commit 2f6a1c3 has them. no line under the title, the page says Melbourne and the clients twice already */
+.hero__glow.b{background:linear-gradient(to bottom,rgba(18,20,22,.25),rgba(18,20,22,.05) 40%,rgba(18,20,22,.7) 100%)}
+.hero__static{inset:-120px;background:linear-gradient(var(--sc),var(--sc)),var(--noise-coarse) 0 0/220px 220px;background-blend-mode:multiply;mix-blend-mode:screen;opacity:.18;animation:grain .6s steps(4) infinite}
+.hero__grain{inset:-120px;background:var(--noise) 0 0/280px 280px;mix-blend-mode:overlay;opacity:.6;animation:grain .9s steps(6) infinite}
+
+/* ---------- hero: the homepage story. a photo of Luke under the teal, the static and the grain (the homepage photo stands in, cropped higher, until the new one exists). About as the title in the service pages' scanline treatment (Luke, 2026-09-07: "not sure why about doesn't have the same h1 design as the rest of the website"), one line under it, bottom-left ---------- */
+.hero{position:relative;overflow:hidden;isolation:isolate;background:#121416;color:#fff;display:flex;min-height:58vh;--sc:hsl(196 60% 45% / .6)}
+.hero__inner{position:relative;z-index:2;width:100%;max-width:var(--max);margin:0 auto;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:120px var(--pad) clamp(48px,7vh,88px)}
+/* the service pages' title: real Inter text with 1:2 stripes cut through it, .014em on over a .043em period, a 24% body under them, 50px on the phone, 92px on desktop, arriving top down over 1.3s like the homepage mark */
+.hero h1{font-weight:500;font-size:clamp(50px,6.4vw,92px);line-height:1;letter-spacing:-.03em;color:transparent;-webkit-text-fill-color:transparent;background:repeating-linear-gradient(to bottom,#fff 0 .014em,transparent .014em .043em),linear-gradient(rgba(255,255,255,.24),rgba(255,255,255,.24));-webkit-background-clip:text;background-clip:text}
+.js .hero h1.rv{transform:none;-webkit-mask:linear-gradient(#000 50%,transparent 50%) 0 100%/100% 200% no-repeat;mask:linear-gradient(#000 50%,transparent 50%) 0 100%/100% 200% no-repeat}
+.js .hero.in h1.rv{animation-name:rvd;animation-duration:1.3s}
+@keyframes rvd{to{opacity:1;-webkit-mask-position:0 0;mask-position:0 0}}
+
+/* ---------- sections ---------- */
+.sec{padding:clamp(72px,9vw,128px) 0}
+.sec--off{background:var(--off)}
+.sec--dark{background:var(--ink);color:#fff;--line:rgba(255,255,255,.16);--ink-2:rgba(255,255,255,.6)}
+.sec__head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding-top:20px;border-top:1px solid var(--line);margin-bottom:clamp(40px,5vw,72px)}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.sec--dark .eyebrow{color:rgba(255,255,255,.6)}
+h2{font-weight:500;letter-spacing:-.02em;font-size:clamp(28px,3.2vw,44px);line-height:1.12}
+.link{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding-bottom:6px;border-bottom:1px solid currentColor}
+.btn{display:inline-block;padding:18px 30px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;background:var(--ink);color:#fff}
+.sec--dark .btn{background:#fff;color:var(--ink)}
+.two{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,96px);align-items:start}
+.two p{color:var(--ink-2);font-size:17px;max-width:48ch}
+.two h2+p{margin-top:28px}
+
+/* ---------- made in Melbourne: the reference's one-paragraph block in our frame. the eyebrow, the coordinates out (Luke, 2026-09-13), the company in four sentences between the homepage's lead size and body ---------- */
+.intro{padding-top:clamp(64px,8vw,104px)}
+.lead{font-size:clamp(22px,2.5vw,36px);line-height:1.22;letter-spacing:-.018em;max-width:32ch;font-weight:400}
+
+/* ---------- the two stories: the person, then the company. Bands (decided 2026-09-07): edge to edge, the photo half the screen and touching the edge, the text in the other half with its outer edge on the wrap's edge, the second band flipped. Wrap (the same two inside the wrap, the service page's About section twice) was on the dial and is out, commit 2330e0b has it ---------- */
+.story__in{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.story__ph{min-height:min(50vw,860px)} /* square, capped (2026-09-13): at 1900px wide the old 780px band went landscape and cut the desk shot at the laptop */
+.story__tx{display:flex;flex-direction:column;justify-content:center;padding:clamp(56px,8vw,120px) max(var(--pad),calc((100vw - var(--max))/2 + var(--pad))) clamp(56px,8vw,120px) clamp(40px,6vw,96px)}
+.story--flip .story__ph{order:2}
+.story--flip .story__tx{padding-left:max(var(--pad),calc((100vw - var(--max))/2 + var(--pad)));padding-right:clamp(40px,6vw,96px)}
+.story__tx h2{margin-top:20px;max-width:16ch}
+.story__tx p{margin-top:22px;color:var(--ink-2);font-size:17px;max-width:46ch}
+.story__tx p.lead-p{margin-top:28px;color:var(--ink)}
+.story--vals .story__tx{padding-top:clamp(48px,6vw,88px);padding-bottom:clamp(48px,6vw,88px)}
+.story--vals h2{max-width:20ch}
+.story__tx .xg{margin-top:36px}
+
+/* placeholder tiles, and the real portraits */
+.ph{position:relative;overflow:hidden;isolation:isolate;background:#1a1d20}
+.ph::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 90% at 70% 100%,rgba(255,255,255,.14),transparent 70%)}
+.ph::after{content:"";position:absolute;inset:-100px;background:var(--noise) 0 0/240px 240px;mix-blend-mode:overlay;opacity:.6}
+.ph--light{background:#e4e4e4}.ph--light::before{background:radial-gradient(80% 90% at 30% 0%,rgba(255,255,255,.9),transparent 70%)}
+.ph--photo{background:#e4e4e4 var(--img) var(--x,50%) var(--y,30%)/cover no-repeat}.ph--photo::before,.ph--photo::after{display:none}
+.ph--img::before,.ph--img::after{display:none}
+.ph--img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--x,50%) var(--y,50%)}
+.ph--tag{display:flex;align-items:flex-end;padding:18px 20px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(20,20,20,.45)}
+
+/* ---------- how we think about the work: the third band (Luke, 2026-09-13: "make that section the same as the other sections above but just put the grid below the heading text"), the photo half, the eyebrow, the heading and the grid in the text half, the paragraph out. the grid itself is the four-card reference as the site's grid (decided 2026-09-07). two by two, the hairline grid with the teal crosses where the inner vertical meets a hairline, a number, a title, one line. Rows (four hairline rows with the band sweeping in on hover, the service page's steps) was on the dial and is out, commit 2330e0b has it ---------- */
+.xg{display:grid;grid-template-columns:repeat(var(--cols,2),1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.xc{position:relative;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white)}
+.xc--off{background:var(--off)}
+.xc--end{border-right:0}
+.xc--last{border-bottom:0}
+.xc::before,.xc::after{content:none;position:absolute;right:-7px;width:13px;height:13px;z-index:1;background:linear-gradient(var(--sc0),var(--sc0)),var(--noise-coarse) 0 0/220px 220px;background-blend-mode:multiply;-webkit-mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;animation:jit .6s steps(4) infinite}
+.xc::before{top:-7px}.xc::after{bottom:-7px}
+.xc--x::after{content:""}
+.xc--xt::before{content:""}
+.vc{min-height:clamp(200px,17vw,250px);padding:24px 28px 28px;display:flex;flex-direction:column}
+.vc .eyebrow{font-size:11px}
+.vc h3{margin-top:auto;padding-top:24px;font-size:clamp(19px,1.6vw,22px);font-weight:500;letter-spacing:-.015em;line-height:1.2}
+.vc p{margin-top:10px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:32ch}
+
+/* ---------- brands we work with: the homepage clients grid as decided. six marks cut to one ink, sized by --h, three by two, the cells alternating, the teal crosses with the static through them. hover or a tap eases the mark up and fades in the brand's own colour ---------- */
+.logos{--k:1px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:clamp(48px,6vw,88px)}
+.logo{position:relative;display:flex;align-items:center;justify-content:center;padding:28px 20px;min-height:clamp(120px,10vw,150px);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.logo[data-l=lyso],.logo[data-l=aspirant],.logo[data-l=ajm]{background:var(--off)}
+.logo[data-l=aspirant],.logo[data-l=ipl]{border-right:0}
+.logo[data-l=aso],.logo[data-l=ajm],.logo[data-l=ipl]{border-bottom:0}
+.logo::before,.logo::after{content:none;position:absolute;right:-7px;width:13px;height:13px;z-index:1;background:linear-gradient(var(--sc0),var(--sc0)),var(--noise-coarse) 0 0/220px 220px;background-blend-mode:multiply;-webkit-mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;animation:jit .6s steps(4) infinite}
+.logo::before{top:-7px}.logo::after{bottom:-7px}
+.logo[data-l=lyso]::before,.logo[data-l=ih]::before,.logo[data-l=lyso]::after,.logo[data-l=ih]::after,.logo[data-l=aso]::after,.logo[data-l=ajm]::after{content:""}
+.lg{position:relative;display:block;max-width:88%;transition:transform .6s var(--ease)}
+.ih-v{display:none}
+.lg img{display:block;height:calc(var(--h,40)*var(--k));width:auto;max-width:100%;object-fit:contain;opacity:.85;transition:opacity .6s var(--ease)}
+.lg .col{position:absolute;inset:0;width:100%;height:100%;opacity:0}
+.lg b{display:block;font-weight:500;font-size:calc(16*var(--k));letter-spacing:-.01em;line-height:1.25;text-align:center;opacity:.85;transition:opacity .6s var(--ease)}
+.logo:hover .lg,.logo.on .lg{transform:scale(1.05)}
+.logo:hover img,.logo:hover b,.logo.on img,.logo.on b{opacity:1}
+.logo:hover .lg:has(.col) img:not(.col),.logo.on .lg:has(.col) img:not(.col){opacity:0}
+
+/* ---------- in numbers: the service pages' stats section on the homepage's plain ground, the footer's teal falling into the dark with the static and grain, the ink mark left, the four numbers on one hairline ---------- */
+.sec--stats{position:relative;isolation:isolate;overflow:hidden;background:#121416;color:#fff;--line:rgba(255,255,255,.2);--ink-2:rgba(255,255,255,.6);--sc:var(--teal);display:flex;flex-direction:column;min-height:clamp(600px,88vh,900px)}
+.sec--stats .wrap{position:relative;width:100%;flex:1;display:flex;flex-direction:column}
+.foot__base{background:linear-gradient(to bottom,hsl(200 42% 27%),hsl(204 32% 15%) 65%,#121416)}
+.st-top{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:clamp(32px,5vw,72px);margin-bottom:clamp(56px,9vw,128px)}
+.st-lead{grid-column:2;font-size:clamp(19px,1.6vw,22px);line-height:1.45;letter-spacing:-.01em;max-width:44ch;color:rgba(255,255,255,.9)}
+.st-mark{grid-column:1;width:min(32vw,440px)}
+.st-ink{display:block;width:100%;height:auto}
+.stats{position:relative;margin-top:auto;display:flex;justify-content:space-between;gap:32px;border-top:1px solid var(--line);padding-top:clamp(28px,3.4vw,48px)}
+.stat b{display:block;font-weight:300;font-size:clamp(46px,5.8vw,84px);line-height:1;letter-spacing:-.02em}
+.stat span{display:block;margin-top:8px;font-size:clamp(18px,1.5vw,22px);font-weight:500;letter-spacing:-.01em;color:#fff}
+
+/* ---------- contact ---------- */
+.contact h2{max-width:22ch;font-size:clamp(32px,4.2vw,60px)}
+.cta{display:flex;gap:36px;align-items:center;margin-top:48px;flex-wrap:wrap}
+
+/* ---------- footer (the homepage's, decided) ---------- */
+footer{position:relative;overflow:hidden;isolation:isolate;background:#121416;padding:clamp(96px,12vw,160px) 0 40px;font-size:13px;color:rgba(255,255,255,.6);--line:rgba(255,255,255,.2);--sc:var(--teal)}
+footer .hero__glow.b{background:linear-gradient(to bottom,rgba(18,20,22,.25),rgba(18,20,22,.05) 40%,rgba(18,20,22,.7) 100%)}
+footer .wrap{position:relative;z-index:1}
+footer b{color:#fff;font-weight:500}
+footer a{transition:color .3s,border-color .3s}footer a:hover{color:#fff}
+.ft__cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px 32px}
+.ft__brand p{margin-top:12px;max-width:30ch;font-size:14px;line-height:1.5}
+.ft__brand address{font-style:normal;margin-top:18px;font-size:14px;line-height:1.7}
+.ft__cta{display:flex;gap:8px;margin-top:28px;flex-wrap:wrap}
+.ft__cta a{padding:13px 20px;border:1px solid var(--line);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+.ft__cta a:hover{border-color:#fff}
+.ft__col h4{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px}
+.ft__col a{display:block;font-size:14px;padding:5px 0;color:rgba(255,255,255,.85)}
+.ft__sign{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-top:clamp(80px,10vw,160px)}
+.ft__uca{display:block;width:min(100%,clamp(300px,42vw,620px));height:auto}
+.ft__uca--c{display:none}
+.ft__soc{display:flex;gap:22px;padding-bottom:6px}
+.ft__soc a{display:block;width:22px;height:22px;color:rgba(255,255,255,.7)}
+.ft__soc svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ft__bar{display:flex;justify-content:space-between;gap:12px 32px;flex-wrap:wrap;margin-top:32px;padding-top:18px;border-top:1px solid var(--line)}
+.ft__chat{display:none}
+.ft__meta{display:flex;gap:28px}
+
+@media (max-width:1000px){.ft__cols{grid-template-columns:1fr 1fr}.stats{flex-wrap:wrap;row-gap:56px}.stat{flex:0 0 calc(50% - 16px)}}
+@media (max-width:640px){
+  .hero{min-height:62vh;min-height:62svh}.hero__photo{background-position:center 40%}.hero__inner{padding-bottom:48px}
+  .hero__photo{background-image:url(/assets/about-hero-2-900.jpg);background-position:center 40%}
+  .two{grid-template-columns:1fr;gap:28px}
+  .sec__head{margin-bottom:36px}.intro{padding-top:56px}
+  /* the stories on the phone: the photo on top, full width and 4:5, the text under it */
+  .story__in{grid-template-columns:1fr}.story__ph{min-height:0;height:auto;order:0}.story--flip .story__ph{order:0}
+  /* the photos in flow on the phone, the file's own ratio sets the height (2026-09-13: Luke saw no photos on the phone, the absolute img in an aspect-ratio grid cell) */
+  .ph--img img{position:static;display:block;width:100%;height:auto}
+  .story__tx,.story--flip .story__tx{padding:32px var(--pad) 56px}
+  /* the values stack in one column, no crosses, the fills alternating */
+  .xg{--cols:1}.xg .xc{border-right:0;border-bottom:1px solid var(--line);background:var(--white)}.xg .xc:last-child{border-bottom:0}.xg .xc:nth-child(even){background:var(--off)}
+  .xg .xc::before,.xg .xc::after{content:none}
+  .vc{min-height:0;padding:22px 20px 24px}.vc h3{padding-top:20px}
+  /* the brands two by three with the stacked Intelligentle lockup, as the homepage */
+  .logos{grid-template-columns:1fr 1fr;margin-top:40px}.logo[data-l]{min-height:140px;padding:24px 16px;border-right:0;border-bottom:1px solid var(--line);background:var(--white)}.logo[data-l=lyso],.logo[data-l=aspirant],.logo[data-l=ajm]{border-right:1px solid var(--line)}.logo[data-l=ajm],.logo[data-l=ipl]{border-bottom:0}.logo[data-l=lyso],.logo[data-l=aso],.logo[data-l=ajm]{background:var(--off)}.logo[data-l]::before,.logo[data-l]::after{content:none}.logo[data-l=lyso]::before,.logo[data-l=lyso]::after,.logo[data-l=aspirant]::after,.logo[data-l=ajm]::after{content:""}.ih-h{display:none}.ih-v{display:block}
+  /* stats on the phone, as the homepage: natural height, the mark 80% wide, the numbers centred one under another */
+  .sec--stats{min-height:0}.st-top{grid-template-columns:1fr;gap:0;margin-bottom:48px}.st-lead{grid-column:1;line-height:1.4}
+  .stats{flex-direction:column;align-items:center;text-align:center;gap:44px;border-top:0;padding-top:0}
+  .stat b{font-size:46px}.stat span{margin-top:6px;font-size:19px}.st-mark{width:80%;margin:0 0 6px}
+  /* footer on the phone, flipped, as the homepage */
+  footer .wrap{display:flex;flex-direction:column}.ft__brand{display:none}
+  .ft__sign{order:1;flex-direction:column;align-items:center;gap:28px;margin-top:0}.ft__uca--l{display:none}.ft__uca--c{display:block;width:100%}
+  .ft__chat{order:2;display:block;margin-top:40px;padding:15px 20px;border:1px solid var(--line);text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+  .ft__cols{order:3;grid-template-columns:1fr 1fr;gap:36px 24px;margin-top:64px}
+  .ft__bar{order:4;flex-direction:column;align-items:center;text-align:center;gap:10px;margin-top:48px}
+  .opts__row span{flex:0 0 100%}}
+@media (prefers-reduced-motion:reduce){.rv,.in .rv{animation:none;opacity:1;transform:none;mask:none;-webkit-mask:none}.hero__grain,.hero__static,.xc::before,.xc::after,.logo::before,.logo::after{animation:none}.logo:hover .lg,.logo.on .lg{transform:none}}

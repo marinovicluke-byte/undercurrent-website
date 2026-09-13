@@ -1,0 +1,248 @@
+:root{
+  --white:#fff; --off:#f6f6f6; --ink:#141414; --ink-2:#6b6b6b; --line:rgba(20,20,20,.14);
+  --font:var(--font-inter),Inter,"Noto Sans JP",system-ui,-apple-system,sans-serif;
+  --pad:clamp(20px,4vw,56px); --max:1320px; --navh:72px;
+  --ease:cubic-bezier(.22,.8,.2,1);
+  --noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='280'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  --noise-coarse:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.32' numOctaves='1' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  --teal:hsl(196 60% 45%); --teal-0:hsl(200 45% 32%);
+}
+/* the glossary is one colour, the hero teal. the blog's five service colours stay the blog's */
+.c-gloss{--c:var(--teal);--c0:hsl(200 45% 32%);--b0:#12303d;--b1:hsl(200 45% 32%);--b2:hsl(196 60% 45% / .85)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+
+/* ---------- reveal, gated on .js: a fetcher that runs no script reads the page at full opacity ---------- */
+.js .rv{opacity:0;transform:translateX(-16px);
+  -webkit-mask:linear-gradient(90deg,#000 42%,transparent 58%) 100% 0/300% 100% no-repeat;
+  mask:linear-gradient(90deg,#000 42%,transparent 58%) 100% 0/300% 100% no-repeat}
+.js .in .rv{animation:rv 1.5s var(--ease) forwards;animation-delay:calc(var(--i,0)*150ms)}
+@keyframes rv{to{opacity:1;transform:none;-webkit-mask-position:0 0;mask-position:0 0}}
+@keyframes grain{to{transform:translate(-84px,-60px)}}
+@keyframes breathe{to{opacity:.55}}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:22px 0;color:#fff;transition:background .4s,color .4s,box-shadow .4s}
+.nav__in{display:flex;align-items:center;justify-content:space-between}
+.nav.scrolled{background:var(--white);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.nav__brand{display:flex;align-items:center;gap:12px;line-height:1}
+.wm-lock{display:flex;flex-direction:column;gap:4px;clip-path:inset(0 0 100% 0);opacity:0;transition:clip-path .7s var(--ease),opacity .5s var(--ease)}
+.wm-lock b{font-weight:600;font-size:15px;letter-spacing:-.01em}
+.wm-lock small{font-size:9px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;opacity:.8}
+.nav.scrolled .wm-lock{clip-path:inset(0);opacity:1}
+.mk-ink{display:block;position:relative;width:26px;flex:none}
+.mk-ink img{display:block;width:100%;height:auto}
+.mk-ink .dk{position:absolute;inset:0;opacity:0;transition:opacity .4s}
+.nav.scrolled .mk-ink .dk{opacity:1}.menu-open .mk-ink .dk{opacity:0}
+.burger{position:relative;width:26px;height:14px}
+.burger::before,.burger::after{content:"";position:absolute;left:0;right:0;height:1.5px;background:currentColor;transition:transform .45s var(--ease),top .45s var(--ease),bottom .45s var(--ease)}
+.burger::before{top:0}.burger::after{bottom:0}
+.menu-open .burger::before{top:6px;transform:rotate(45deg)}.menu-open .burger::after{bottom:6px;transform:rotate(-45deg)}
+.menu-open .nav{background:transparent;color:#fff;box-shadow:none}
+.menu{position:fixed;inset:0;z-index:45;background:var(--ink);color:#fff;display:flex;padding:80px var(--pad);overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}
+.menu-open .menu{opacity:1;visibility:visible}
+.menu>div{width:100%;max-width:var(--max);margin:auto}
+.menu a{display:block;font-size:clamp(32px,5vw,64px);font-weight:500;letter-spacing:-.02em;line-height:1.15;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.16);opacity:0;transform:translateX(-16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.menu-open .menu a{opacity:1;transform:none}
+.menu-open .menu a:nth-child(2){transition-delay:.06s}.menu-open .menu a:nth-child(3){transition-delay:.12s}.menu-open .menu a:nth-child(4){transition-delay:.18s}.menu-open .menu a:nth-child(5){transition-delay:.24s}
+.opts{margin-top:clamp(28px,5vh,56px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);opacity:0;transition:opacity .6s var(--ease) .24s}
+.menu-open .opts{opacity:1}
+.opts__row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;padding:9px 0}
+.opts__row span{flex:0 0 116px}
+.opts button{padding:3px 0;color:#fff;opacity:.4;border-bottom:1px solid transparent}
+.opts button.on{opacity:1;border-bottom-color:#fff}
+
+/* ---------- the layer stack ---------- */
+.hero__layer{position:absolute;inset:0;pointer-events:none}
+.hero__glow.b{background:linear-gradient(to bottom,rgba(18,20,22,.3),rgba(18,20,22,.08) 40%,rgba(18,20,22,.7) 100%)}
+.hero__static{inset:-120px;background:linear-gradient(var(--sc),var(--sc)),var(--noise-coarse) 0 0/220px 220px;background-blend-mode:multiply;mix-blend-mode:screen;opacity:.18;animation:grain .6s steps(4) infinite}
+.hero__grain{inset:-120px;background:var(--noise) 0 0/280px 280px;mix-blend-mode:overlay;opacity:.6;animation:grain .9s steps(6) infinite}
+.band{position:absolute;inset:0;overflow:hidden;isolation:isolate;background:var(--b0)}
+.band::before{content:"";position:absolute;inset:0;background:radial-gradient(90% 70% at 25% 100%,var(--b1),transparent 70%),radial-gradient(60% 50% at 95% 0%,var(--b2),transparent 70%);animation:breathe 12s ease-in-out infinite alternate}
+.band::after{content:"";position:absolute;inset:-100px;background:var(--noise) 0 0/240px 240px;mix-blend-mode:overlay;opacity:.7;animation:grain 1s steps(6) infinite}
+
+/* ---------- hero: the article's Ground in the glossary teal. the breadcrumb is real markup, the two links a bot follows back up. no sub, the definition does that job below ---------- */
+.hero{position:relative;overflow:hidden;isolation:isolate;background:var(--b0);color:#fff;display:flex;min-height:48vh;--sc:var(--c)}
+.hero__inner{position:relative;z-index:2;width:100%;max-width:var(--max);margin:0 auto;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:140px var(--pad) clamp(44px,6vh,80px)}
+.crumb{display:flex;flex-wrap:wrap;align-items:baseline;color:rgba(255,255,255,.7);margin-bottom:22px}
+.crumb a{border-bottom:1px solid transparent;transition:color .3s,border-color .3s}
+.crumb a:hover{color:#fff;border-bottom-color:rgba(255,255,255,.5)}
+.crumb em{font-style:normal;margin:0 10px}
+/* the site's title, the service and about pages' verbatim (Luke, 2026-09-07). real Inter text with 1:2 stripes cut through it, .014em on over a .043em period, a 24% body under, 50px on the phone, 92px on desktop, arriving top down. a long term wraps, the way the service page's long title does */
+.hero h1{font-weight:500;font-size:clamp(50px,6.4vw,92px);line-height:1;letter-spacing:-.03em;color:transparent;-webkit-text-fill-color:transparent;background:repeating-linear-gradient(to bottom,#fff 0 .014em,transparent .014em .043em),linear-gradient(rgba(255,255,255,.24),rgba(255,255,255,.24));-webkit-background-clip:text;background-clip:text}
+/* the wipe is gated on .js with the rest of the reveal, so a fetcher that runs no script gets the whole title, not its top half */
+.js .hero h1.rv{transform:none;-webkit-mask:linear-gradient(#000 50%,transparent 50%) 0 100%/100% 200% no-repeat;mask:linear-gradient(#000 50%,transparent 50%) 0 100%/100% 200% no-repeat}
+.js .hero.in h1.rv{animation-name:rvd;animation-duration:1.3s}
+@keyframes rvd{to{opacity:1;-webkit-mask-position:0 0;mask-position:0 0}}
+
+/* ---------- the definition: the article's Quick answer slot, the first thing under the title, so the sentence an engine quotes is the first thing it reads ---------- */
+.def{padding-top:clamp(40px,5vw,64px)}
+.def__t{margin-top:16px;font-size:clamp(21px,1.9vw,27px);line-height:1.4;font-weight:500;letter-spacing:-.015em;max-width:34ch}
+.def__x{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);font-size:16px;line-height:1.55;color:var(--ink-2);max-width:56ch}
+.def__x b{font-weight:500;color:var(--ink)}
+
+/* ---------- the column, on the wrap's left edge, the article's decided one ---------- */
+.art{padding:clamp(40px,5vw,64px) 0 clamp(72px,9vw,128px)}
+.art__col{max-width:760px}
+.meta{padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);line-height:1.5;display:grid;grid-template-columns:44px 1fr auto;align-items:center;column-gap:14px}
+.meta em{font-style:normal;margin:0 10px}
+.meta b{font-weight:400;color:var(--ink)}
+.meta__ph{display:block;width:44px;height:44px}
+.meta__ph img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(.7)}
+.meta__name b{display:block}
+.meta__name small{display:block;margin-top:2px;font-size:11px;letter-spacing:.14em}
+.meta__d{text-align:right;white-space:nowrap}
+
+/* ---------- the body, the article's ---------- */
+.body{font-size:18px;line-height:1.65}
+.body p{margin-top:22px}
+.body p a{text-decoration:underline;text-decoration-color:var(--line);text-decoration-thickness:1px;text-underline-offset:4px;transition:text-decoration-color .3s}
+.body p a:hover{text-decoration-color:var(--c0)}
+.body strong{font-weight:500}
+.blk{scroll-margin-top:calc(var(--navh) + 24px)}
+.body h2{font-size:clamp(24px,2.2vw,30px);font-weight:500;letter-spacing:-.02em;line-height:1.2;margin-top:clamp(44px,5vw,64px);max-width:26ch}
+.body h2+p{margin-top:16px}
+.intro{margin-top:clamp(32px,4vw,44px)}
+.intro>p:first-child{margin-top:0}
+
+/* the worked example as the service page's numbered strip: what the agent actually does, in order. every term entry carries one of these, so the mechanism is drawn, not described */
+.flow{margin-top:36px;padding:24px 0 18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.flow ol{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:24px;counter-reset:f}
+.flow li::before{counter-increment:f;content:counter(f,decimal-leading-zero);display:block;font-weight:300;font-size:22px;letter-spacing:-.02em;line-height:1;margin-bottom:14px}
+.flow li b{display:block;font-weight:500;font-size:15px;letter-spacing:-.01em;line-height:1.3}
+.flow li span{display:block;margin-top:4px;font-size:13px;line-height:1.4;color:var(--ink-2)}
+.flow__src{display:block;margin-top:22px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+
+/* faq, the article's accordion. open in the markup, so the answers are read whether or not the reader taps */
+.faq{margin-top:20px}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;font-size:18px;font-weight:500;letter-spacing:-.01em;line-height:1.3;cursor:pointer}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;font-weight:300;color:var(--ink-2);flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq p{margin:0 0 22px;font-size:16px;line-height:1.6;color:var(--ink-2);max-width:60ch}
+
+/* sources: where each claim came from, numbered on hairlines. a glossary entry that cites is a glossary entry that gets cited */
+.src{list-style:none;margin-top:20px;border-top:1px solid var(--line);counter-reset:s}
+.src li{border-bottom:1px solid var(--line)}
+.src a{display:grid;grid-template-columns:44px minmax(0,auto) minmax(0,1fr);align-items:baseline;padding:16px 0;font-size:16px;line-height:1.45}
+.src a::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-size:12px;letter-spacing:.14em;color:var(--ink-2)}
+.src b{font-weight:500;transition:color .3s}
+.src span{color:var(--ink-2);margin-left:20px}
+.src a:hover b{color:var(--c0)}
+
+/* ---------- the end row, the share, the author: the article's, unchanged ---------- */
+.end{display:flex;justify-content:space-between;align-items:baseline;gap:14px 32px;flex-wrap:wrap;margin-top:clamp(48px,6vw,80px);padding-top:18px;border-top:1px solid var(--line);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);line-height:1.6}
+.end b{font-weight:400;color:var(--ink)}
+.share{display:flex;flex-wrap:wrap;gap:12px 22px}
+.share a,.share button{font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding-bottom:5px;border-bottom:1px solid var(--line);color:var(--ink);transition:border-color .3s}
+.share a:hover,.share button:hover{border-color:var(--ink)}
+.author{margin-top:clamp(48px,6vw,80px);padding-top:clamp(32px,4vw,48px);border-top:1px solid var(--line)}
+.author__g{display:grid;grid-template-columns:300px 1fr;column-gap:48px;align-items:stretch}
+.author__ph{position:relative;min-height:300px}
+.author__ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(.7)}
+
+/* the who card (Luke, 2026-09-13): the homepage About card on the bio photo, the name and role bottom-left, X and LinkedIn. the scrim is one straight gradient off the bottom, ink at .7 dying out before the face. a clean shot like the testimonials, no grain, no desaturation, no signature (Luke, 2026-09-13) */
+.who{position:relative;overflow:hidden;isolation:isolate;background:#e4e4e4}
+.who__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.who::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(20,20,20,.72),rgba(20,20,20,.28) 22%,rgba(20,20,20,0) 48%)}
+.who__c{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:var(--whop,24px);color:#fff}
+.who__n{display:block;font-size:var(--whon,16px);font-weight:500;letter-spacing:-.01em;line-height:1.2}
+.who__n small{display:block;margin-top:5px;font-size:var(--whor,13px);font-weight:400;letter-spacing:0;color:rgba(255,255,255,.62)}
+.who__s{display:flex;gap:12px;margin-top:14px}
+.who__s a{display:block;width:18px;height:18px;color:rgba(255,255,255,.66);transition:color .3s}.who__s a:hover{color:#fff}
+.who__s svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.author__ph.who{--whop:18px;--whon:14px;--whor:12px}
+.author__ph.who .who__img{position:absolute}
+.author__t{display:flex;flex-direction:column;justify-content:center}
+.author h2{font-size:clamp(26px,2.4vw,32px);font-weight:500;letter-spacing:-.02em;line-height:1.15}
+.author__p{margin-top:26px;font-size:18px;line-height:1.55;color:var(--ink-2);max-width:48ch}
+.author__p+.author__p{margin-top:22px}
+.author__p a{text-decoration:underline;text-decoration-color:var(--line);text-decoration-thickness:1px;text-underline-offset:4px;transition:text-decoration-color .3s}.author__p a:hover{text-decoration-color:var(--c0)}
+
+/* ---------- sections ---------- */
+.sec{padding:clamp(72px,9vw,128px) 0}
+.sec--off{background:var(--off)}
+.sec__head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding-top:20px;border-top:1px solid var(--line);margin-bottom:clamp(32px,4vw,56px)}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+h2{font-weight:500;letter-spacing:-.02em;font-size:clamp(28px,3.2vw,44px);line-height:1.12}
+.link{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding-bottom:6px;border-bottom:1px solid currentColor}
+
+/* related terms: the index's row, three across, no thumbnail, because a word has no photograph */
+.rel{display:grid;grid-template-columns:repeat(3,1fr);gap:0 clamp(32px,4vw,56px);border-top:1px solid var(--line)}
+.rel a{display:block;padding:24px 0 28px;border-bottom:1px solid var(--line)}
+.rel h3{font-size:clamp(19px,1.7vw,23px);font-weight:500;letter-spacing:-.015em;line-height:1.2;transition:color .35s}
+.rel a:hover h3{color:var(--c0)}
+.rel p{margin-top:10px;font-size:15px;line-height:1.5;color:var(--ink-2)}
+.svc{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap;padding-top:22px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+
+/* previous and next: every entry sits in one chain, so no term in the glossary is more than one link from another */
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:24px clamp(32px,4vw,56px);margin-top:clamp(48px,6vw,72px);border-top:1px solid var(--line)}
+.pn a{display:block;padding:22px 0 24px}
+.pn a+a{text-align:right}
+.pn span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.pn b{display:block;margin-top:8px;font-size:clamp(17px,1.5vw,20px);font-weight:500;letter-spacing:-.015em;line-height:1.25;transition:color .3s}
+.pn a:hover b{color:var(--c0)}
+
+/* ---------- the close: a hairline row, as the index. the glossary's one colour is spent on the hero, the footer already wears it ---------- */
+.cta{padding:clamp(56px,7vw,96px) 0}
+.cta__in{display:flex;justify-content:space-between;align-items:baseline;gap:24px 48px;flex-wrap:wrap;padding-top:26px;border-top:1px solid var(--line)}
+.cta h2{font-size:clamp(26px,3vw,44px);max-width:22ch}
+
+/* ---------- footer (decided) ---------- */
+footer{position:relative;overflow:hidden;isolation:isolate;background:#121416;padding:clamp(96px,12vw,160px) 0 40px;font-size:13px;color:rgba(255,255,255,.6);--line:rgba(255,255,255,.2);--sc:var(--teal)}
+.foot__base{background:linear-gradient(to bottom,hsl(200 42% 27%),hsl(204 32% 15%) 65%,#121416)}
+footer .hero__glow.b{background:linear-gradient(to bottom,rgba(18,20,22,.25),rgba(18,20,22,.05) 40%,rgba(18,20,22,.7) 100%)}
+footer .wrap{position:relative;z-index:1}
+footer b{color:#fff;font-weight:500}
+footer a{transition:color .3s,border-color .3s}footer a:hover{color:#fff}
+.ft__cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px 32px}
+.ft__brand p{margin-top:12px;max-width:30ch;font-size:14px;line-height:1.5}
+.ft__brand address{font-style:normal;margin-top:18px;font-size:14px;line-height:1.7}
+.ft__cta{display:flex;gap:8px;margin-top:28px;flex-wrap:wrap}
+.ft__cta a{padding:13px 20px;border:1px solid var(--line);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+.ft__cta a:hover{border-color:#fff}
+.ft__col h3{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px}
+.ft__col a{display:block;font-size:14px;padding:5px 0;color:rgba(255,255,255,.85)}
+.ft__sign{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-top:clamp(80px,10vw,160px)}
+.ft__uca{display:block;width:min(100%,clamp(300px,42vw,620px));height:auto}
+.ft__uca--c{display:none}
+.ft__soc{display:flex;gap:22px;padding-bottom:6px}
+.ft__soc a{display:block;width:22px;height:22px;color:rgba(255,255,255,.7)}
+.ft__soc svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ft__bar{display:flex;justify-content:space-between;gap:12px 32px;flex-wrap:wrap;margin-top:32px;padding-top:18px;border-top:1px solid var(--line)}
+.ft__chat{display:none}
+.ft__meta{display:flex;gap:28px}
+
+@media (max-width:1000px){.ft__cols{grid-template-columns:1fr 1fr}}
+@media (max-width:960px){
+  .rel{grid-template-columns:1fr}
+  .flow ol{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .hero{min-height:44vh;min-height:44svh}.hero__inner{padding-top:110px;padding-bottom:40px}.crumb{margin-bottom:18px}
+  .crumb{font-size:11px}
+  .def__t{font-size:21px;max-width:none}
+  .body{font-size:17px;line-height:1.6}
+  .body h2{font-size:24px;margin-top:44px}
+  .flow ol{grid-template-columns:1fr;gap:0}.flow li{display:grid;grid-template-columns:40px 1fr;padding:12px 0;border-top:1px solid var(--line)}
+  .flow li::before{grid-row:1/3;margin:0;font-size:15px;font-weight:400;letter-spacing:0;line-height:1.3}.flow li span{grid-column:2}
+  .flow{padding-top:0}.flow ol{border-top:0}.flow li:first-child{border-top:0}
+  .src a{grid-template-columns:28px 1fr;font-size:15px}.src span{grid-column:2;margin:2px 0 0}
+  .author__g{grid-template-columns:1fr;row-gap:22px}.author__ph{min-height:0}.author__ph.who .who__img{position:static;display:block;width:100%;height:auto} /* in flow on the phone, the file's own 4:5 sets the height (2026-09-13: Safari collapsed the aspect-ratio grid cell, Luke saw no photo) */.author h2{font-size:26px}.author__p{font-size:17px}
+  .meta{grid-template-columns:44px 1fr;row-gap:2px}.meta .meta__ph{grid-row:1/3}.meta__name small{display:none}.meta .meta__d{grid-column:2;text-align:left;white-space:normal;font-size:11px}
+  .pn{grid-template-columns:1fr;gap:0}.pn a{padding:18px 0}.pn a+a{text-align:left;border-top:1px solid var(--line)}
+  .cta__in{flex-direction:column;align-items:flex-start}
+  .sec__head{margin-bottom:28px}
+  footer .wrap{display:flex;flex-direction:column}.ft__brand{display:none}
+  .ft__sign{order:1;flex-direction:column;align-items:center;gap:28px;margin-top:0}.ft__uca--l{display:none}.ft__uca--c{display:block;width:100%}
+  .ft__chat{order:2;display:block;margin-top:40px;padding:15px 20px;border:1px solid var(--line);text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+  .ft__cols{order:3;grid-template-columns:1fr 1fr;gap:36px 24px;margin-top:64px}
+  .ft__bar{order:4;flex-direction:column;align-items:center;text-align:center;gap:10px;margin-top:48px}
+  .opts__row span{flex:0 0 100%}}
+@media (prefers-reduced-motion:reduce){.js .rv,.js .in .rv,.js .hero h1.rv{animation:none;opacity:1;transform:none;mask:none;-webkit-mask:none}.hero__grain,.hero__static,.band::before,.band::after{animation:none}}

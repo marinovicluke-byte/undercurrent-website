@@ -1,0 +1,175 @@
+:root{
+  --white:#fff; --off:#f6f6f6; --ink:#141414; --ink-2:#6b6b6b; --line:rgba(20,20,20,.14);
+  --font:var(--font-inter),Inter,"Noto Sans JP",system-ui,-apple-system,sans-serif;
+  --pad:clamp(20px,4vw,56px); --max:1320px; --navh:72px;
+  --ease:cubic-bezier(.22,.8,.2,1);
+  --noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='280'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  --noise-coarse:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.32' numOctaves='1' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  --teal:hsl(196 60% 45%); --teal-0:hsl(200 45% 32%);
+}
+/* the glossary is one colour, the hero teal, the site's own. the blog's five service colours stay the blog's, so red still means SEO & AI Search wherever a reader meets it (decided 2026-09-07) */
+.c-gloss{--c:var(--teal);--c0:hsl(200 45% 32%);--b0:#12303d;--b1:hsl(200 45% 32%);--b2:hsl(196 60% 45% / .85)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+
+/* ---------- reveal, gated on .js so a fetcher that runs no script reads the page at full opacity. the terms are in the markup either way ---------- */
+.js .rv{opacity:0;transform:translateX(-16px);
+  -webkit-mask:linear-gradient(90deg,#000 42%,transparent 58%) 100% 0/300% 100% no-repeat;
+  mask:linear-gradient(90deg,#000 42%,transparent 58%) 100% 0/300% 100% no-repeat}
+.js .in .rv{animation:rv 1.5s var(--ease) forwards;animation-delay:calc(var(--i,0)*150ms)}
+@keyframes rv{to{opacity:1;transform:none;-webkit-mask-position:0 0;mask-position:0 0}}
+@keyframes grain{to{transform:translate(-84px,-60px)}}
+@keyframes breathe{to{opacity:.55}}
+
+/* ---------- nav (as the blog) ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:22px 0;color:#fff;transition:background .4s,color .4s,box-shadow .4s}
+.nav__in{display:flex;align-items:center;justify-content:space-between}
+.nav.scrolled{background:var(--white);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.nav__brand{display:flex;align-items:center;gap:12px;line-height:1}
+.wm-lock{display:flex;flex-direction:column;gap:4px;clip-path:inset(0 0 100% 0);opacity:0;transition:clip-path .7s var(--ease),opacity .5s var(--ease)}
+.wm-lock b{font-weight:600;font-size:15px;letter-spacing:-.01em}
+.wm-lock small{font-size:9px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;opacity:.8}
+.nav.scrolled .wm-lock{clip-path:inset(0);opacity:1}
+.mk-ink{display:block;position:relative;width:26px;flex:none}
+.mk-ink img{display:block;width:100%;height:auto}
+.mk-ink .dk{position:absolute;inset:0;opacity:0;transition:opacity .4s}
+.nav.scrolled .mk-ink .dk{opacity:1}.menu-open .mk-ink .dk{opacity:0}
+.burger{position:relative;width:26px;height:14px}
+.burger::before,.burger::after{content:"";position:absolute;left:0;right:0;height:1.5px;background:currentColor;transition:transform .45s var(--ease),top .45s var(--ease),bottom .45s var(--ease)}
+.burger::before{top:0}.burger::after{bottom:0}
+.menu-open .burger::before{top:6px;transform:rotate(45deg)}.menu-open .burger::after{bottom:6px;transform:rotate(-45deg)}
+.menu-open .nav{background:transparent;color:#fff;box-shadow:none}
+.menu{position:fixed;inset:0;z-index:45;background:var(--ink);color:#fff;display:flex;padding:80px var(--pad);overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}
+.menu-open .menu{opacity:1;visibility:visible}
+.menu>div{width:100%;max-width:var(--max);margin:auto}
+.menu a{display:block;font-size:clamp(32px,5vw,64px);font-weight:500;letter-spacing:-.02em;line-height:1.15;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.16);opacity:0;transform:translateX(-16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.menu-open .menu a{opacity:1;transform:none}
+.menu-open .menu a:nth-child(2){transition-delay:.06s}.menu-open .menu a:nth-child(3){transition-delay:.12s}.menu-open .menu a:nth-child(4){transition-delay:.18s}.menu-open .menu a:nth-child(5){transition-delay:.24s}
+.opts{margin-top:clamp(28px,5vh,56px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);opacity:0;transition:opacity .6s var(--ease) .24s}
+.menu-open .opts{opacity:1}
+.opts__row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;padding:9px 0}
+.opts__row span{flex:0 0 116px}
+.opts button{padding:3px 0;color:#fff;opacity:.4;border-bottom:1px solid transparent}
+.opts button.on{opacity:1;border-bottom-color:#fff}
+
+/* ---------- the layer stack, shared ---------- */
+.hero__layer{position:absolute;inset:0;pointer-events:none}
+.hero__photo{background:url(/assets/glossary-hero.jpg) center 45%/cover no-repeat;filter:saturate(.5) brightness(.42) contrast(1.08) blur(1px)}
+.hero__glow.a{background:hsl(200 45% 32%);mix-blend-mode:color}
+.hero__glow.b{background:linear-gradient(to bottom,rgba(18,20,22,.25),rgba(18,20,22,.05) 40%,rgba(18,20,22,.7) 100%)}
+.hero__static{inset:-120px;background:linear-gradient(var(--sc),var(--sc)),var(--noise-coarse) 0 0/220px 220px;background-blend-mode:multiply;mix-blend-mode:screen;opacity:.18;animation:grain .6s steps(4) infinite}
+.hero__grain{inset:-120px;background:var(--noise) 0 0/280px 280px;mix-blend-mode:overlay;opacity:.6;animation:grain .9s steps(6) infinite}
+.band{position:absolute;inset:0;overflow:hidden;isolation:isolate;background:var(--b0)}
+.band::before{content:"";position:absolute;inset:0;background:radial-gradient(90% 70% at 25% 100%,var(--b1),transparent 70%),radial-gradient(60% 50% at 95% 0%,var(--b2),transparent 70%);animation:breathe 12s ease-in-out infinite alternate}
+.band::after{content:"";position:absolute;inset:-100px;background:var(--noise) 0 0/240px 240px;mix-blend-mode:overlay;opacity:.7;animation:grain 1s steps(6) infinite}
+
+/* ---------- hero: the blog index's, the same photo cropped higher again so the wall carries it. an index page gets the photograph, a single entry gets the colour ground ---------- */
+.hero{position:relative;overflow:hidden;isolation:isolate;background:#121416;color:#fff;display:flex;min-height:52vh;--sc:hsl(196 60% 45% / .6)}
+.hero__inner{position:relative;z-index:2;width:100%;max-width:var(--max);margin:0 auto;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:120px var(--pad) clamp(48px,7vh,88px)}
+/* the site's title, the service and about pages' verbatim (Luke, 2026-09-07: "the h1s on the page aren't like the rest of the website h1's and there's subtext there which we don't really do either"). real Inter text with 1:2 stripes cut through it, .014em on over a .043em period, a 24% body under, 50px on the phone, 92px on desktop, arriving top down over 1.3s like the homepage mark. no eyebrow, no sub */
+.hero h1{font-weight:500;font-size:clamp(50px,6.4vw,92px);line-height:1;letter-spacing:-.03em;color:transparent;-webkit-text-fill-color:transparent;background:repeating-linear-gradient(to bottom,#fff 0 .014em,transparent .014em .043em),linear-gradient(rgba(255,255,255,.24),rgba(255,255,255,.24));-webkit-background-clip:text;background-clip:text}
+/* the wipe is gated on .js with the rest of the reveal, so a fetcher that runs no script gets the whole title, not its top half */
+.js .hero h1.rv{transform:none;-webkit-mask:linear-gradient(#000 50%,transparent 50%) 0 100%/100% 200% no-repeat;mask:linear-gradient(#000 50%,transparent 50%) 0 100%/100% 200% no-repeat}
+.js .hero.in h1.rv{animation-name:rvd;animation-duration:1.3s}
+@keyframes rvd{to{opacity:1;-webkit-mask-position:0 0;mask-position:0 0}}
+
+/* ---------- sections ---------- */
+.sec{padding:clamp(72px,9vw,128px) 0}
+.sec--off{background:var(--off)}
+.sec__head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding-top:20px;border-top:1px solid var(--line);margin-bottom:clamp(40px,5vw,72px)}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+h2{font-weight:500;letter-spacing:-.02em;font-size:clamp(28px,3.2vw,44px);line-height:1.12}
+.link{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding-bottom:6px;border-bottom:1px solid currentColor}
+.two{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,96px);align-items:start}
+.two p{color:var(--ink-2);font-size:17px;max-width:48ch}
+.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--c0);margin-right:10px;flex:none}
+
+/* ---------- find a term: one hairline, no box, no icon. it only hides rows, every term is in the markup before a script runs ---------- */
+.find{display:none;margin-top:clamp(40px,5vw,64px);grid-template-columns:1fr auto;align-items:end;gap:12px 24px;border-bottom:1px solid var(--ink);padding-bottom:10px;max-width:640px}
+.find label{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin-bottom:10px}
+.find input{width:100%;font:inherit;font-size:clamp(19px,1.7vw,24px);font-weight:500;letter-spacing:-.015em;color:var(--ink);background:none;border:0;outline:0;padding:0}
+.find input::placeholder{color:rgba(20,20,20,.28);font-weight:400}
+.find__n{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);white-space:nowrap;padding-bottom:4px}
+.js .find{display:grid}
+.find[hidden]{display:none}
+.empty{margin-top:32px;font-size:17px;color:var(--ink-2)}
+.empty[hidden]{display:none}
+
+/* ---------- the six groups as a row of links with counts, which jump down the page. the blog index's row ---------- */
+.jump{display:flex;flex-wrap:wrap;gap:0 40px;margin-top:clamp(32px,4vw,48px);border-top:1px solid var(--line)}
+.jump a{display:flex;align-items:center;padding:22px 0;font-size:16px;font-weight:500;letter-spacing:-.01em;transition:color .3s}
+.jump a:hover{color:var(--c0)}
+.jump a span{margin-left:12px;font-size:12px;font-weight:400;letter-spacing:.14em;color:var(--ink-2)}
+
+/* ---------- a group's head: the blog index's decided Bleed strip, full width edge to edge, the type on the wrap (Luke, 2026-09-07: "just like in the blog we had each section have a bleed band colour so it's important"). six of them in the one glossary teal, punctuating the page the way the blog's five colours do ---------- */
+.ghead{position:relative;isolation:isolate;overflow:hidden;color:#fff;--sc:var(--c);margin-bottom:clamp(40px,5vw,64px)}
+.ghead>*:not(.hero__layer){position:relative}
+.ghead .hero__glow.b{background:linear-gradient(to bottom,rgba(18,20,22,.42),rgba(18,20,22,.3) 40%,rgba(18,20,22,.74) 100%)}
+.ghead__in{display:flex;justify-content:space-between;align-items:baseline;gap:24px;max-width:var(--max);margin:0 auto;padding:22px var(--pad)}
+.ghead .eyebrow{color:rgba(255,255,255,.88)}.ghead .eyebrow+.eyebrow{color:rgba(255,255,255,.6)}
+.grp{padding-top:0}
+
+/* ---------- the terms: a definition list, the term left, the definition right, one hairline a row. the whole row is the tap on the phone ---------- */
+.terms{border-top:1px solid var(--line)}
+.terms .t{display:grid;grid-template-columns:5fr 7fr;gap:8px clamp(32px,5vw,72px);padding:20px 0;border-bottom:1px solid var(--line)}
+.terms .t[hidden]{display:none}
+.terms dt{font-size:clamp(18px,1.5vw,21px);font-weight:500;letter-spacing:-.015em;line-height:1.25}
+.terms dt a{display:inline-block;border-bottom:1px solid transparent;transition:color .3s,border-color .3s}
+.terms dt a:hover{color:var(--c0);border-bottom-color:var(--c0)}
+.terms dd{font-size:16px;line-height:1.55;color:var(--ink-2);max-width:60ch}
+.tag{display:inline-block;margin-left:12px;font-style:normal;font-size:11px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);vertical-align:2px}
+mark{background:none;color:var(--c0)}
+
+/* ---------- the close: a hairline row, not a colour band. the glossary is one colour and the footer is already wearing it, so a teal band above a teal footer read as a seam ---------- */
+.cta{padding:clamp(56px,7vw,96px) 0}
+.cta__in{display:flex;justify-content:space-between;align-items:baseline;gap:24px 48px;flex-wrap:wrap;padding-top:26px;border-top:1px solid var(--line)}
+.cta h2{font-size:clamp(26px,3vw,44px);max-width:22ch}
+
+/* ---------- footer (decided) ---------- */
+footer{position:relative;overflow:hidden;isolation:isolate;background:#121416;padding:clamp(96px,12vw,160px) 0 40px;font-size:13px;color:rgba(255,255,255,.6);--line:rgba(255,255,255,.2);--sc:var(--teal)}
+.foot__base{background:linear-gradient(to bottom,hsl(200 42% 27%),hsl(204 32% 15%) 65%,#121416)}
+footer .hero__glow.b{background:linear-gradient(to bottom,rgba(18,20,22,.25),rgba(18,20,22,.05) 40%,rgba(18,20,22,.7) 100%)}
+footer .wrap{position:relative;z-index:1}
+footer b{color:#fff;font-weight:500}
+footer a{transition:color .3s,border-color .3s}footer a:hover{color:#fff}
+.ft__cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px 32px}
+.ft__brand p{margin-top:12px;max-width:30ch;font-size:14px;line-height:1.5}
+.ft__brand address{font-style:normal;margin-top:18px;font-size:14px;line-height:1.7}
+.ft__cta{display:flex;gap:8px;margin-top:28px;flex-wrap:wrap}
+.ft__cta a{padding:13px 20px;border:1px solid var(--line);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+.ft__cta a:hover{border-color:#fff}
+.ft__col h4{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px}
+.ft__col a{display:block;font-size:14px;padding:5px 0;color:rgba(255,255,255,.85)}
+.ft__sign{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-top:clamp(80px,10vw,160px)}
+.ft__uca{display:block;width:min(100%,clamp(300px,42vw,620px));height:auto}
+.ft__uca--c{display:none}
+.ft__soc{display:flex;gap:22px;padding-bottom:6px}
+.ft__soc a{display:block;width:22px;height:22px;color:rgba(255,255,255,.7)}
+.ft__soc svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ft__bar{display:flex;justify-content:space-between;gap:12px 32px;flex-wrap:wrap;margin-top:32px;padding-top:18px;border-top:1px solid var(--line)}
+.ft__chat{display:none}
+.ft__meta{display:flex;gap:28px}
+
+@media (max-width:1000px){.ft__cols{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){
+  .hero{min-height:58vh;min-height:58svh}.hero__photo{background-image:url(/assets/glossary-hero-1200.jpg);background-position:70% 45%}.hero__inner{padding-bottom:44px}
+  .two{grid-template-columns:1fr;gap:20px}
+  .sec__head{margin-bottom:36px}#browse{padding-top:48px}
+  .find{margin-top:32px;max-width:none}.find input{font-size:19px}
+  .jump{flex-direction:column;gap:0;margin-top:28px}.jump a{justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line)}.jump a span{margin-left:auto}.jump .dot{margin-right:12px}.jump a b{display:flex;align-items:center;font-weight:500}
+  .ghead{margin-bottom:28px}.ghead__in{padding:18px var(--pad)}
+  .terms .t{grid-template-columns:1fr;gap:6px;padding:18px 0}
+  .terms dt{font-size:18px}.terms dd{font-size:15px}
+  .tag{display:block;margin:6px 0 0}
+  .cta__in{flex-direction:column;align-items:flex-start}
+  footer .wrap{display:flex;flex-direction:column}.ft__brand{display:none}
+  .ft__sign{order:1;flex-direction:column;align-items:center;gap:28px;margin-top:0}.ft__uca--l{display:none}.ft__uca--c{display:block;width:100%}
+  .ft__chat{order:2;display:block;margin-top:40px;padding:15px 20px;border:1px solid var(--line);text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+  .ft__cols{order:3;grid-template-columns:1fr 1fr;gap:36px 24px;margin-top:64px}
+  .ft__bar{order:4;flex-direction:column;align-items:center;text-align:center;gap:10px;margin-top:48px}
+  .opts__row span{flex:0 0 100%}}
+@media (prefers-reduced-motion:reduce){.js .rv,.js .in .rv,.js .hero h1.rv{animation:none;opacity:1;transform:none;mask:none;-webkit-mask:none}.hero__grain,.hero__static,.band::before,.band::after{animation:none}}

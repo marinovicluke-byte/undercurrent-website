@@ -1,28 +1,20 @@
-// app/layout.js
-import { Space_Grotesk } from 'next/font/google'
-import localFont from 'next/font/local'
+// app/layout.js — the root shell for the 2026 design. Inter via next/font, the
+// sitewide JSON-LD, analytics. Nav and Footer are the sandbox's, on every page.
+// Each page imports its own stylesheet (app/styles/*.css) and links are plain
+// anchors, so a page's sheet never leaks into the next one.
+import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script'
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
-import './globals.css'
+import Nav from '@/components/site/Nav'
+import Footer from '@/components/site/Footer'
 
-const spaceGrotesk = Space_Grotesk({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-space-grotesk',
+  variable: '--font-inter',
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
-})
-
-const satoshi = localFont({
-  src: [
-    { path: '../public/fonts/Satoshi-Variable.woff2', style: 'normal', weight: '300 900' },
-    { path: '../public/fonts/Satoshi-VariableItalic.woff2', style: 'italic', weight: '300 900' },
-  ],
-  variable: '--font-satoshi',
-  display: 'swap',
+  weight: ['300', '400', '500', '600'],
 })
 
 export const metadata = {
@@ -179,9 +171,11 @@ const siteJsonLd = [
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${spaceGrotesk.variable} ${satoshi.variable}`}>
+    <html lang="en-AU" className={inter.variable}>
       <head>
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+        {/* the reveal is gated on .js so a fetcher that runs no script reads every line (transfer note 2) */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         {siteJsonLd.map((obj, i) => (
           <script
             key={i}
@@ -198,8 +192,8 @@ export default function RootLayout({ children }) {
         )}
       </head>
       <body>
-        <Header />
-        <main>{children}</main>
+        <Nav />
+        {children}
         <Footer />
         <Analytics />
         <SpeedInsights />
