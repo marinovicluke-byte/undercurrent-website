@@ -1,108 +1,51 @@
-// app/blog-v4/page.js — Evolved v1: black hero + charcoal body, case-studies strip,
-// top-5 per cluster with pillar-page "view all" links. Full SEO/AEO schema stack
-// per vault wiki: nextjs-ai-search-framework, article-optimisation-2026, case-study-production-framework.
-// Design: matches homepage — var(--page-pad), maxWidth: 1280, left-aligned, rounded cards (12px).
-import Link from 'next/link'
+// app/blog/page.js — the blog index, the sandbox's blog-index skeleton poured
+// with the live articles. Recent four, then the five categories, four rows each
+// and the rest behind Show more.
+import '@/app/styles/blog.css'
+import PageFx from '@/components/site/PageFx'
 import JsonLd from '@/components/ui/JsonLd'
-import SectionEyebrow from '@/components/ui/SectionEyebrow'
+import { Thumb, PostRow, Mins } from '@/components/site/Post'
 import { getAllArticles } from '@/lib/articles'
-import { getAllCaseStudies } from '@/lib/caseStudies'
-import { CLUSTERS, CLUSTER_ORDER, groupByCluster } from '@/lib/clusters'
+import { CATEGORIES, CATEGORY_ORDER, categoryOf } from '@/lib/categories'
 
-const TOP_N_PER_CLUSTER = 5
 const SITE_URL = 'https://undercurrentautomations.com'
-const CONTENT_MAX = 1280
+const SHOW = 4
 
 export const metadata = {
-  title: 'Automation Blog',
-  description:
-    'Topic-clustered automation guides and case studies for Australian SMEs. Getting started, admin time, leads and sales, and industry workflows.',
+  title: 'Blog',
+  description: 'Notes from the work. Guides on AI search, automation, websites and strategy for Australian small business, filed under the service each one belongs to.',
   alternates: { canonical: `${SITE_URL}/blog` },
   openGraph: {
-    title: 'Automation Blog for Australian Small Business',
-    description:
-      'Topic-clustered automation guides and case studies for Australian SMEs.',
+    title: 'Blog | UnderCurrent Automations',
+    description: 'Guides on AI search, automation, websites and strategy for Australian small business.',
     type: 'website',
     url: `${SITE_URL}/blog`,
     images: ['/brand/og-card.png'],
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Automation Blog for Australian Small Business',
-    description:
-      'Topic-clustered automation guides and case studies for Australian SMEs.',
-  },
 }
 
-function formatDate(d) {
-  if (!d) return null
-  return new Date(d).toLocaleDateString('en-AU', {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-  })
-}
-
-function Eyebrow({ number, label }) {
-  return <SectionEyebrow n={number} label={label} />
-}
-
-export default function BlogV4() {
+export default function BlogIndex() {
   const articles = getAllArticles()
-  const caseStudies = getAllCaseStudies()
-  const grouped = groupByCluster(articles)
+  const byCat = Object.fromEntries(CATEGORY_ORDER.map(k => [k, articles.filter(a => categoryOf(a.cluster).key === k)]))
+  const cats = CATEGORY_ORDER.filter(k => byCat[k].length)
+  const [feat, ...rest] = articles
+  const fc = categoryOf(feat.cluster)
 
-  const latestArticles = [...articles]
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 4)
-
-  const latestUpdate =
-    [...articles, ...caseStudies]
-      .map(x => x.dateModified || x.date)
-      .filter(Boolean)
-      .sort((a, b) => new Date(b) - new Date(a))[0] || null
-
-  const collectionSchema = {
+  const schema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'UnderCurrent Blog — Automation Guides for Australian Small Business',
-    description: metadata.description,
+    name: 'UnderCurrent Blog',
     url: `${SITE_URL}/blog`,
-    inLanguage: 'en-AU',
-    isPartOf: { '@type': 'WebSite', name: 'UnderCurrent Automations', url: SITE_URL },
-    mainEntity: [
-      ...CLUSTER_ORDER.map(key => ({
-        '@type': 'ItemList',
-        name: `${CLUSTERS[key].label} — Automation Guides`,
-        description: CLUSTERS[key].description,
-        url: `${SITE_URL}/blog/cluster/${key}`,
-        numberOfItems: grouped[key].length,
-        itemListElement: grouped[key].map((a, j) => ({
-          '@type': 'ListItem',
-          position: j + 1,
-          url: `${SITE_URL}/blog/${a.slug}`,
-          name: a.title,
-          description: a.description || a.summary,
-        })),
-      })),
-      {
-        '@type': 'ItemList',
-        name: 'Case Studies',
-        description: 'Real-world automation case studies from UnderCurrent.',
-        url: `${SITE_URL}/case-studies`,
-        numberOfItems: caseStudies.length,
-        itemListElement: caseStudies.map((c, j) => ({
-          '@type': 'ListItem',
-          position: j + 1,
-          url: `${SITE_URL}/case-studies/${c.slug}`,
-          name: c.title,
-          description: c.description || c.summary,
-        })),
-      },
-    ],
+    description: metadata.description,
+    isPartOf: { '@id': `${SITE_URL}#website` },
+    hasPart: cats.map(k => ({
+      '@type': 'ItemList',
+      name: CATEGORIES[k].label,
+      numberOfItems: byCat[k].length,
+      itemListElement: byCat[k].map((a, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE_URL}/blog/${a.slug}`, name: a.title })),
+    })),
   }
-
-  const breadcrumbSchema = {
+  const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
@@ -113,434 +56,63 @@ export default function BlogV4() {
 
   return (
     <>
-      <JsonLd schema={collectionSchema} />
-      <JsonLd schema={breadcrumbSchema} />
+      <PageFx more />
+      <JsonLd schema={schema} />
+      <JsonLd schema={breadcrumb} />
 
-      {/* ═══ HERO — near-black ═══ */}
-      <section
-        style={{
-          position: 'relative',
-          padding: '120px var(--page-pad) 80px',
-          background: 'var(--bg-deep)',
-        }}
-      >
-        <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-          <div style={{ marginBottom: 20 }}>
-            <Eyebrow
-              label={`Knowledge Base · ${articles.length} articles · ${caseStudies.length} case ${caseStudies.length === 1 ? 'study' : 'studies'}`}
-            />
+      <section className="hero" id="top" data-reveal="">
+        <div className="hero__layer hero__photo"></div>
+        <div className="hero__layer hero__glow a"></div>
+        <div className="hero__layer hero__glow b"></div>
+        <div className="hero__layer hero__static"></div>
+        <div className="hero__layer hero__grain"></div>
+        <div className="hero__inner">
+          <h1 className="rv">Blog</h1>
+          <p className="hero__sub rv" style={{ '--i': '1' }}>Notes from the work.</p>
+        </div>
+      </section>
+      <div id="content"></div>
+
+      <section className="sec" id="recent" data-reveal="">
+        <div className="wrap">
+          <div className="sec__head"><span className="eyebrow">Recent</span><span className="eyebrow">{articles.length} articles</span></div>
+          <div className="feat">
+            <a className={`fp c-${fc.key} rv`} href={`/blog/${feat.slug}`}>
+              <Thumb slug={feat.slug} big />
+              <span className="pmeta"><b className="pcat">{fc.label}</b><span className="pm-d"><em>·</em><Mins a={feat} /></span></span>
+              <h3>{feat.title}</h3>
+              <p>{feat.description || feat.summary}</p>
+              <span className="pdate"><Mins a={feat} /></span>
+            </a>
+            <div className="posts">{rest.slice(0, 3).map((a, i) => <PostRow key={a.slug} a={a} i={i + 1} ex />)}</div>
           </div>
+        </div>
+      </section>
 
-          <h1
-            style={{
-              margin: 0,
-              fontFamily: 'var(--font-display)',
-              fontWeight: 500,
-              fontSize: 'clamp(40px, 5.4vw, 80px)',
-              lineHeight: 1.04,
-              letterSpacing: '-0.035em',
-              color: 'var(--off-white)',
-              textWrap: 'balance',
-            }}
-          >
-            Automation playbooks for{' '}
-            <span className="uc-glow-word uc-glow-word--blue">Australian small business</span>.
-          </h1>
-
-          <p
-            style={{
-              margin: '28px 0 0',
-              fontFamily: 'var(--font-body)',
-              fontSize: 18,
-              lineHeight: 1.55,
-              color: 'var(--text-secondary)',
-              maxWidth: 640,
-            }}
-          >
-            Every article answers a specific question. Every case study shows a real system with real numbers. Organised by topic cluster so AI search, Google, and you can all find what you need fast.
-          </p>
-
-          {/* Author byline — text only, no avatar */}
-          <div
-            style={{
-              marginTop: 32,
-              paddingTop: 20,
-              borderTop: '1px solid var(--text-faint)',
-            }}
-          >
-            <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--text-primary)' }}>
-              Written by <strong style={{ color: 'var(--off-white)' }}>Luke</strong>, Founder of UnderCurrent Automations · Melbourne
-              {latestUpdate && ` · Updated ${formatDate(latestUpdate)}`}
-            </p>
+      <section className="sec sec--off" id="by-service" data-reveal="">
+        <div className="wrap">
+          <div className="sec__head"><span className="eyebrow">By service</span></div>
+          <div className="two">
+            <h2 className="rv">Filed under the service it belongs to.</h2>
+            <p className="rv" style={{ '--i': '1' }}>Every article sits under one of the five things we do, so you can read your way through one problem at a time.</p>
           </div>
-
-          {/* Topic cluster nav — pill buttons */}
-          <nav aria-label="Topic clusters" style={{ marginTop: 40 }}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-              {CLUSTER_ORDER.map(key => (
-                <a
-                  key={key}
-                  href={`#${key}`}
-                  className="blog-v4-pill"
-                >
-                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, opacity: 0.6 }}>{CLUSTERS[key].num}</span>
-                  <span>{CLUSTERS[key].label}</span>
-                </a>
-              ))}
-              {caseStudies.length > 0 && (
-                <a href="#case-studies" className="blog-v4-pill blog-v4-pill--accent">
-                  Case Studies
-                </a>
-              )}
-            </div>
+          <nav className="jump rv" style={{ '--i': '1' }}>
+            {cats.map(k => <a key={k} className={`c-${k}`} href={`#cat-${k}`}><b><i className="dot"></i>{CATEGORIES[k].label}</b><span>{byCat[k].length}</span></a>)}
           </nav>
         </div>
       </section>
 
-      <style>{`
-        .blog-v4-pill {
-          display: inline-flex;
-          align-items: center;
-          gap: 10px;
-          padding: 10px 18px;
-          border-radius: 999px;
-          background: rgba(250,249,245,0.03);
-          border: 1px solid var(--text-faint);
-          color: var(--text-secondary);
-          font-family: var(--font-body);
-          font-size: 13px;
-          text-decoration: none;
-          transition: all 0.15s ease;
-        }
-        .blog-v4-pill:hover {
-          background: rgba(106,141,173,0.08);
-          border-color: var(--blue);
-          color: var(--blue);
-        }
-        .blog-v4-pill--accent {
-          background: rgba(106,141,173,0.08);
-          border-color: rgba(106,141,173,0.4);
-          color: var(--blue);
-        }
-        .blog-v4-row {
-          display: flex;
-          align-items: flex-start;
-          justify-content: space-between;
-          gap: 40px;
-          padding: 20px 16px;
-          margin: 0 -16px;
-          border-radius: 12px;
-          text-decoration: none;
-          transition: background 0.15s ease;
-        }
-        .blog-v4-row:hover {
-          background: rgba(250,249,245,0.02);
-        }
-        .blog-v4-row:hover h3 { color: var(--blue); }
-        .blog-v4-case {
-          display: block;
-          padding: 24px;
-          border-radius: 14px;
-          background: var(--charcoal);
-          border: 1px solid var(--text-faint);
-          border-left: 3px solid var(--blue);
-          text-decoration: none;
-          transition: transform 160ms cubic-bezier(.2,.7,.3,1), box-shadow 160ms cubic-bezier(.2,.7,.3,1);
-        }
-        .blog-v4-case:hover {
-          transform: translate(-3px, -3px);
-          box-shadow: 6px 6px 0 0 var(--blue);
-        }
-        .blog-v4-case:hover h3 { color: var(--blue-light); }
-      `}</style>
-
-      {/* ═══ CASE STUDIES STRIP ═══ */}
-      {caseStudies.length > 0 && (
-        <section
-          id="case-studies"
-          style={{
-            padding: '80px var(--page-pad)',
-            background: 'var(--charcoal)',
-            borderTop: '1px solid var(--text-faint)',
-            scrollMarginTop: 96,
-          }}
-        >
-          <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'flex-end',
-                justifyContent: 'space-between',
-                gap: 16,
-                marginBottom: 32,
-                paddingBottom: 16,
-                borderBottom: '1px solid var(--text-faint)',
-              }}
-            >
-              <div>
-                <Eyebrow label="Proof · Real systems" />
-                <h2
-                  style={{
-                    margin: '12px 0 4px',
-                    fontFamily: 'var(--font-display)',
-                    fontWeight: 500,
-                    fontSize: 'clamp(28px, 3.2vw, 40px)',
-                    lineHeight: 1.1,
-                    letterSpacing: '-0.025em',
-                    color: 'var(--off-white)',
-                  }}
-                >
-                  Case Studies
-                </h2>
-                <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 15, color: 'var(--text-muted)', maxWidth: 560 }}>
-                  Automation builds with before/after numbers and the tools used.
-                </p>
-              </div>
-              {caseStudies.length > 3 && (
-                <Link
-                  href="/case-studies"
-                  style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--text-secondary)', textDecoration: 'none', whiteSpace: 'nowrap' }}
-                  className="hover:text-blue transition-colors"
-                >
-                  View all {caseStudies.length} →
-                </Link>
-              )}
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
-              {caseStudies.slice(0, 3).map(cs => (
-                <Link key={cs.slug} href={`/case-studies/${cs.slug}`} className="blog-v4-case">
-                  <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--blue-light)' }}>
-                    {cs.industry || 'Case study'}
-                    {cs.location && ` · ${cs.location}`}
-                  </p>
-                  <h3 style={{ margin: '12px 0 0', fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 18, lineHeight: 1.3, color: 'var(--text-primary)', letterSpacing: '-0.015em' }}>
-                    {cs.title}
-                  </h3>
-                  {cs.outcomeHeadline && (
-                    <p style={{ margin: '12px 0 0', fontFamily: 'var(--font-display)', fontSize: 13, fontWeight: 600, color: 'var(--sage-light)', letterSpacing: '-0.01em' }}>
-                      → {cs.outcomeHeadline}
-                    </p>
-                  )}
-                  {cs.summary && (
-                    <p style={{ margin: '14px 0 0', fontFamily: 'var(--font-body)', fontSize: 14, lineHeight: 1.55, color: 'var(--text-muted)', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                      {cs.summary}
-                    </p>
-                  )}
-                  <div style={{ marginTop: 16, paddingTop: 12, borderTop: '1px solid var(--text-faint)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontFamily: 'var(--font-body)', fontSize: 12, color: 'var(--text-muted)' }}>
-                      {formatDate(cs.date)}
-                    </span>
-                    {cs.readingTime && (
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-muted)' }}>
-                        {cs.readingTime} min
-                      </span>
-                    )}
-                  </div>
-                </Link>
-              ))}
-            </div>
+      {cats.map((k, i) => (
+        <section key={k} className={`sec cat c-${k}${i % 2 ? ' sec--off' : ''}`} id={`cat-${k}`} data-reveal="">
+          <div className="chead rv"><div className="hero__layer band"></div><div className="hero__layer hero__glow b"></div><div className="hero__layer hero__static"></div><div className="hero__layer hero__grain"></div>
+            <div className="chead__in"><span className="eyebrow">{CATEGORIES[k].label}</span><span className="eyebrow">{byCat[k].length} articles</span></div>
+          </div>
+          <div className="wrap">
+            <div className="posts plist">{byCat[k].map((a, j) => <PostRow key={a.slug} a={a} i={j + 1} cat={false} hidden={j >= SHOW} />)}</div>
+            <div className="more rv" style={{ '--i': '2' }}><span data-shown=""></span><button className="link" data-more="">Show more</button></div>
           </div>
         </section>
-      )}
-
-      {/* ═══ LATEST ARTICLES ═══ */}
-      {latestArticles.length > 0 && (
-        <section style={{ padding: '80px var(--page-pad)', background: 'var(--charcoal)', borderTop: '1px solid var(--text-faint)' }}>
-          <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-            <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 16, marginBottom: 32, paddingBottom: 16, borderBottom: '1px solid var(--text-faint)' }}>
-              <div>
-                <Eyebrow label="Latest" />
-                <h2 style={{ margin: '12px 0 0', fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 'clamp(28px, 3.2vw, 40px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: 'var(--off-white)' }}>
-                  Latest articles
-                </h2>
-              </div>
-              <Link href="/blog" style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--text-secondary)', textDecoration: 'none', whiteSpace: 'nowrap' }} className="hover:text-blue transition-colors">
-                View all →
-              </Link>
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, alignItems: 'start' }}>
-              {/* Featured — most recent */}
-              <Link href={`/blog/${latestArticles[0].slug}`} className="latest-featured">
-                <p style={{ margin: '0 0 16px', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--blue-light)' }}>
-                  {CLUSTERS[latestArticles[0].cluster]?.label || 'Article'}
-                  {latestArticles[0].date && ` · ${formatDate(latestArticles[0].date)}`}
-                </p>
-                <h3 style={{ margin: '0 0 14px', fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 'clamp(20px, 2vw, 26px)', lineHeight: 1.25, letterSpacing: '-0.02em', color: 'var(--text-primary)', transition: 'color 0.15s ease' }}>
-                  {latestArticles[0].title}
-                </h3>
-                {(latestArticles[0].summary || latestArticles[0].description) && (
-                  <p style={{ margin: '0 0 24px', fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.6, color: 'var(--text-secondary)', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                    {latestArticles[0].summary || latestArticles[0].description}
-                  </p>
-                )}
-                {latestArticles[0].readingTime && (
-                  <p style={{ margin: 0, fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-muted)' }}>
-                    {latestArticles[0].readingTime} min read
-                  </p>
-                )}
-              </Link>
-
-              {/* Rows — next 3 */}
-              <div>
-                {latestArticles.slice(1).map((article, i) => (
-                  <Link key={article.slug} href={`/blog/${article.slug}`} className="latest-row" style={{ borderBottom: i < 2 ? '1px solid var(--text-faint)' : 'none' }}>
-                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-muted)', paddingTop: 3, flexShrink: 0, width: 20 }}>
-                      0{i + 2}
-                    </span>
-                    <div>
-                      {CLUSTERS[article.cluster]?.label && (
-                        <p style={{ margin: '0 0 4px', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--blue-light)', opacity: 0.7 }}>
-                          {CLUSTERS[article.cluster].label}
-                        </p>
-                      )}
-                      <h3 style={{ margin: '0 0 4px', fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 16, lineHeight: 1.35, letterSpacing: '-0.015em', color: 'var(--text-primary)', transition: 'color 0.15s ease' }}>
-                        {article.title}
-                      </h3>
-                      {(article.summary || article.description) && (
-                        <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 13, lineHeight: 1.5, color: 'var(--text-muted)', display: '-webkit-box', WebkitLineClamp: 1, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                          {article.summary || article.description}
-                        </p>
-                      )}
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      <style>{`
-        .latest-featured {
-          display: block;
-          padding: 32px;
-          border-radius: 14px;
-          background: var(--charcoal-deep, #161614);
-          border: 1px solid var(--text-faint);
-          border-left: 3px solid var(--blue);
-          text-decoration: none;
-          transition: transform 160ms cubic-bezier(.2,.7,.3,1), box-shadow 160ms cubic-bezier(.2,.7,.3,1);
-        }
-        .latest-featured:hover {
-          transform: translate(-3px, -3px);
-          box-shadow: 6px 6px 0 0 var(--blue);
-        }
-        .latest-featured:hover h3 { color: var(--blue-light); }
-        .latest-row {
-          display: flex;
-          align-items: flex-start;
-          gap: 16px;
-          padding: 18px 0;
-          text-decoration: none;
-        }
-        .latest-row:hover h3 { color: var(--blue); }
-      `}</style>
-
-      {/* ═══ TOPIC CLUSTERS ═══ */}
-      <section style={{ padding: '40px var(--page-pad) 120px', background: 'var(--charcoal)' }}>
-        <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-          {CLUSTER_ORDER.map(key => {
-            const clusterArticles = grouped[key]
-            if (!clusterArticles.length) return null
-            const cluster = CLUSTERS[key]
-            const top = clusterArticles.slice(0, TOP_N_PER_CLUSTER)
-            const remaining = clusterArticles.length - top.length
-
-            return (
-              <section key={key} id={key} style={{ paddingTop: 80, scrollMarginTop: 96 }}>
-                <div
-                  style={{
-                    display: 'flex',
-                    alignItems: 'flex-end',
-                    justifyContent: 'space-between',
-                    gap: 16,
-                    marginBottom: 32,
-                    paddingBottom: 16,
-                    borderBottom: '1px solid var(--text-faint)',
-                  }}
-                >
-                  <div style={{ maxWidth: 720 }}>
-                    <Eyebrow number={cluster.num} label={`${clusterArticles.length} ${clusterArticles.length === 1 ? 'article' : 'articles'}`} />
-                    <h2
-                      style={{
-                        margin: '12px 0 8px',
-                        fontFamily: 'var(--font-display)',
-                        fontWeight: 500,
-                        fontSize: 'clamp(28px, 3.2vw, 40px)',
-                        lineHeight: 1.1,
-                        letterSpacing: '-0.025em',
-                        color: 'var(--off-white)',
-                      }}
-                    >
-                      {cluster.label}
-                    </h2>
-                    <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 15, lineHeight: 1.55, color: 'var(--text-muted)' }}>
-                      {cluster.description}
-                    </p>
-                  </div>
-                  <Link
-                    href={`/blog/cluster/${key}`}
-                    style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--text-secondary)', textDecoration: 'none', whiteSpace: 'nowrap', flexShrink: 0 }}
-                    className="hover:text-blue transition-colors"
-                  >
-                    View all →
-                  </Link>
-                </div>
-
-                <div>
-                  {top.map((article, i) => (
-                    <Link key={article.slug} href={`/blog/${article.slug}`} className="blog-v4-row" style={{ borderBottom: i < top.length - 1 ? '1px solid var(--text-faint)' : 'none', borderRadius: 0 }}>
-                      <div style={{ flex: 1, minWidth: 0 }}>
-                        <h3 style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 17, lineHeight: 1.35, letterSpacing: '-0.015em', color: 'var(--text-primary)', transition: 'color 0.15s ease' }}>
-                          {article.title}
-                        </h3>
-                        {(article.summary || article.description) && (
-                          <p style={{ margin: '6px 0 0', fontFamily: 'var(--font-body)', fontSize: 14, lineHeight: 1.55, color: 'var(--text-muted)', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                            {article.summary || article.description}
-                          </p>
-                        )}
-                      </div>
-                      <div style={{ flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 6, paddingTop: 2 }}>
-                        {article.readingTime && (
-                          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--text-muted)' }}>
-                            {article.readingTime} min
-                          </span>
-                        )}
-                        {article.level && (
-                          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--sage-light)', opacity: 0.8 }}>
-                            {article.level}
-                          </span>
-                        )}
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-
-                {remaining > 0 && (
-                  <div style={{ marginTop: 16, paddingTop: 16, borderTop: '1px solid var(--text-faint)' }}>
-                    <Link href={`/blog/cluster/${key}`} style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--text-secondary)', textDecoration: 'none' }} className="hover:text-blue transition-colors">
-                      View all {clusterArticles.length} articles in {cluster.label} →
-                    </Link>
-                  </div>
-                )}
-              </section>
-            )
-          })}
-
-          {/* Footer */}
-          <div style={{ marginTop: 96, paddingTop: 32, borderTop: '1px solid var(--text-faint)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 12, color: 'var(--text-muted)' }}>
-              {articles.length} articles · {caseStudies.length} case {caseStudies.length === 1 ? 'study' : 'studies'}
-              {latestUpdate && ` · Updated ${formatDate(latestUpdate)}`}
-            </p>
-            <a href="#" style={{ fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)', textDecoration: 'none' }} className="hover:text-blue transition-colors">
-              ↑ Back to top
-            </a>
-          </div>
-        </div>
-      </section>
+      ))}
     </>
   )
 }

@@ -1,23 +1,21 @@
-// app/blog/[slug]/page.js — Blog article detail.
-// Full Article + FAQPage + Person + BreadcrumbList JSON-LD per wiki.
-// Mirrors /case-studies/[slug] design: Hero → image → Quick Answer → body (with tables) → related → CTA.
-import Link from 'next/link'
-import Image from 'next/image'
+// app/blog/[slug]/page.js — the article, the sandbox's Ground skeleton poured
+// with the live markdown. Category ground hero, the rail, the quick answer
+// strip, the byline with the photo, the body in blocks, FAQ from front-matter,
+// the end row, the who card, Read next, the closing band. Schema as before.
+import '@/app/styles/article.css'
 import { notFound } from 'next/navigation'
+import PageFx from '@/components/site/PageFx'
 import JsonLd from '@/components/ui/JsonLd'
-import AuthorBio from '@/components/ui/AuthorBio'
-import HeroCta from '@/components/article/HeroCta'
 import TradieAdminCalculator from '@/components/calculators/TradieAdminCalculator'
+import { SocialLinks, EMAIL } from '@/components/site/Footer'
+import { PostRow, hasCover } from '@/components/site/Post'
 import { getAllArticles, getArticleBySlug } from '@/lib/articles'
-import { getAllCaseStudies } from '@/lib/caseStudies'
-import { CLUSTERS } from '@/lib/clusters'
 import { LUKE_PERSON } from '@/lib/schema/person'
-import { probeImageDimensions } from '@/lib/imageDimensions'
+import { categoryOf, CLOSE_LINES, fmtDate, isoDate } from '@/lib/categories'
+import { extractQuickAnswer, stripSection, splitBlocks, decorate } from '@/lib/articleBody'
 
 const SITE_URL = 'https://undercurrentautomations.com'
-const CONTENT_MAX = 1280
-const TEXT_MAX = 880
-const HERO_IMG_MAX = 1000
+const CALC_TOKEN = '<!-- calc:tradie-admin -->'
 
 export const dynamicParams = false
 
@@ -29,540 +27,194 @@ export async function generateMetadata({ params }) {
   const { slug } = await params
   const article = await getArticleBySlug(slug)
   if (!article) return {}
-
   const fm = article.frontmatter
-  const heroImageUrl = `${SITE_URL}/articles/${slug}/hero.jpg`
-
+  const heroImageUrl = hasCover(slug) ? `${SITE_URL}/articles/${slug}/hero.jpg` : `${SITE_URL}/brand/og-card.png`
+  const description = fm.metaDescription || fm.description || fm.summary
   return {
     title: { absolute: fm.title },
-    description: fm.metaDescription || fm.description || fm.summary,
+    description,
     alternates: { canonical: `${SITE_URL}/blog/${slug}` },
     openGraph: {
-      title: fm.title,
-      description: fm.metaDescription || fm.description || fm.summary,
-      type: 'article',
-      publishedTime: fm.date,
-      modifiedTime: fm.dateModified || fm.date,
-      url: `${SITE_URL}/blog/${slug}`,
-      authors: [fm.author || 'Luke Marinovic'],
+      title: fm.title, description, type: 'article',
+      publishedTime: isoDate(fm.date), modifiedTime: isoDate(fm.dateModified || fm.date),
+      url: `${SITE_URL}/blog/${slug}`, authors: [fm.author || 'Luke Marinovic'],
       images: [{ url: heroImageUrl, width: 1536, height: 1024, alt: fm.title }],
     },
-    twitter: {
-      card: 'summary_large_image',
-      title: fm.title,
-      description: fm.metaDescription || fm.description || fm.summary,
-      images: [heroImageUrl],
-    },
+    twitter: { card: 'summary_large_image', title: fm.title, description, images: [heroImageUrl] },
   }
 }
 
-function formatDate(d) {
-  if (!d) return null
-  return new Date(d).toLocaleDateString('en-AU', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  })
+function faqsOf(fm) {
+  if (!Array.isArray(fm?.faqs)) return []
+  return fm.faqs.map(f => ({ question: (f.q || f.question || '').trim(), answer: (f.a || f.answer || '').trim() })).filter(f => f.question && f.answer)
 }
 
-// Prefer structured frontmatter faqs over HTML regex extraction.
-// Frontmatter shape: `faqs: [{ q: '...', a: '...' }, ...]` — direct and reliable.
-// Regex fallback is kept for existing articles that haven't migrated yet;
-// new articles should always use frontmatter so FAQPage schema matches
-// visible content one-to-one (framework rule).
-function extractFaqs(frontmatter, html) {
-  if (Array.isArray(frontmatter?.faqs) && frontmatter.faqs.length > 0) {
-    return frontmatter.faqs
-      .map(f => ({
-        question: (f.q || f.question || '').trim(),
-        answer: (f.a || f.answer || '').trim(),
-      }))
-      .filter(f => f.question && f.answer)
-  }
-  const faqStart = html.indexOf('Frequently Asked Questions')
-  if (faqStart < 0) return []
-  const faqSection = html.slice(faqStart)
-  const faqs = []
-  const regex = /<h3[^>]*>(.*?)<\/h3>\s*<p[^>]*>(.*?)<\/p>/gis
-  let match
-  while ((match = regex.exec(faqSection)) !== null) {
-    const question = match[1].replace(/<[^>]+>/g, '').trim()
-    const answer = match[2].replace(/<[^>]+>/g, '').trim()
-    if (question && answer) faqs.push({ question, answer })
-  }
-  return faqs
-}
-
-function extractQuickAnswer(html) {
-  const regex = /<blockquote>\s*<p>\s*<strong>\s*Quick Answer:?\s*<\/strong>\s*([\s\S]*?)<\/p>\s*<\/blockquote>/i
-  const match = html.match(regex)
-  if (!match) return { quickAnswer: null, bodyHtml: html }
-  return { quickAnswer: match[1].trim(), bodyHtml: html.replace(match[0], '') }
+// the body html, with the calculator component dropped in where its token sits
+function Body({ html }) {
+  const at = html.indexOf(CALC_TOKEN)
+  if (at < 0) return <div dangerouslySetInnerHTML={{ __html: html }} />
+  return (
+    <>
+      <div dangerouslySetInnerHTML={{ __html: html.slice(0, at) }} />
+      <TradieAdminCalculator />
+      <div dangerouslySetInnerHTML={{ __html: html.slice(at + CALC_TOKEN.length) }} />
+    </>
+  )
 }
 
 export default async function ArticlePage({ params }) {
   const { slug } = await params
   const article = await getArticleBySlug(slug)
   if (!article) return notFound()
-
   const fm = article.frontmatter
-  const faqs = extractFaqs(fm, article.html)
-  const { quickAnswer, bodyHtml } = extractQuickAnswer(article.html)
-  // Probe hero dimensions at build time so the rendered <img> ships explicit
-  // width/height attrs — eliminates Screaming Frog "missing size attributes"
-  // flag and gives crawlers an intrinsic ratio. Falls back to 3:2 (1536×1024,
-  // matches the OG image convention) if the file is missing/unreadable.
-  const heroDims = fm.heroImage ? (await probeImageDimensions(fm.heroImage)) || { width: 1536, height: 1024 } : null
-  // Inline calculator embed: an article opts in by placing the literal
-  // `<!-- calc:tradie-admin -->` token in its markdown. The token survives the
-  // remark pipeline as a raw HTML comment; we split the body around it and
-  // render the React component at that position. Articles without the token
-  // render exactly as before.
-  const CALC_TOKEN = '<!-- calc:tradie-admin -->'
-  const calcAt = bodyHtml.indexOf(CALC_TOKEN)
-  const clusterLabel = fm.cluster && CLUSTERS[fm.cluster]?.label
-  const clusterSlug = fm.cluster
+  const cat = categoryOf(fm.cluster)
+  const faqs = faqsOf(fm)
 
-  // Related: 3 other articles from same cluster (excluding this one)
-  const related = clusterSlug
-    ? getAllArticles()
-        .filter(a => a.cluster === clusterSlug && a.slug !== slug)
-        .slice(0, 3)
-    : []
+  const { qa, html: afterQa } = extractQuickAnswer(article.html)
+  const body = faqs.length ? stripSection(afterQa, 'Frequently Asked Questions') : afterQa
+  const { intro, blocks } = splitBlocks(body)
+  const rail = [...blocks.map(b => ({ id: b.id, label: b.toc })), ...(faqs.length ? [{ id: 'faq', label: 'FAQ' }] : [])]
 
-  // Related case studies from same cluster
-  const relatedCaseStudies = clusterSlug
-    ? getAllCaseStudies().filter(c => c.relatedCluster === clusterSlug).slice(0, 2)
-    : []
+  const all = getAllArticles()
+  const related = [
+    ...all.filter(a => a.slug !== slug && categoryOf(a.cluster).key === cat.key),
+    ...all.filter(a => a.slug !== slug && categoryOf(a.cluster).key !== cat.key),
+  ].slice(0, 3)
 
-  // about: primary semantic entities the article covers. Auto-fall-back to
-  // cluster + Australia as Place so every post emits coverage signals; writer
-  // can override or extend via `about:` frontmatter array of {name, type?}.
-  // mentions: secondary entities (tools, frameworks). Optional, frontmatter only.
+  const updated = fm.dateModified || fm.date
+  const url = `${SITE_URL}/blog/${slug}`
   const aboutEntities = (Array.isArray(fm.about) && fm.about.length > 0)
     ? fm.about.map(e => ({ '@type': e.type || 'Thing', name: e.name || e }))
-    : [
-        ...(clusterLabel ? [{ '@type': 'Thing', name: clusterLabel }] : []),
-        { '@type': 'Place', name: 'Australia' },
-      ]
+    : [{ '@type': 'Thing', name: cat.label }, { '@type': 'Place', name: 'Australia' }]
   const mentionEntities = Array.isArray(fm.mentions) && fm.mentions.length > 0
-    ? fm.mentions.map(e => ({ '@type': e.type || 'Thing', name: e.name || e }))
-    : null
+    ? fm.mentions.map(e => ({ '@type': e.type || 'Thing', name: e.name || e })) : null
 
   const pageSchema = {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'Article',
-        '@id': `${SITE_URL}/blog/${slug}#article`,
-        headline: fm.title,
+        '@type': 'Article', '@id': `${url}#article`, headline: fm.title,
         description: fm.metaDescription || fm.description || fm.summary,
-        datePublished: fm.date,
-        dateModified: fm.dateModified || fm.date,
-        author: { '@id': `${SITE_URL}/about#luke` },
-        publisher: { '@id': `${SITE_URL}#organization` },
-        mainEntityOfPage: `${SITE_URL}/blog/${slug}`,
-        ...(clusterLabel && { articleSection: clusterLabel }),
-        keywords: [fm.keyword, clusterLabel, fm.level].filter(Boolean).join(', '),
-        inLanguage: 'en-AU',
-        about: aboutEntities,
-        ...(mentionEntities && { mentions: mentionEntities }),
-        image: `${SITE_URL}/articles/${slug}/hero.jpg`,
+        datePublished: isoDate(fm.date), dateModified: isoDate(updated),
+        author: { '@id': `${SITE_URL}/about#luke` }, publisher: { '@id': `${SITE_URL}#organization` },
+        mainEntityOfPage: url, articleSection: cat.label,
+        keywords: [fm.keyword, cat.label, fm.level].filter(Boolean).join(', '),
+        inLanguage: 'en-AU', about: aboutEntities, ...(mentionEntities && { mentions: mentionEntities }),
+        ...(hasCover(slug) && { image: `${SITE_URL}/articles/${slug}/hero.jpg` }),
       },
       LUKE_PERSON,
     ],
   }
-
   const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
       { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
-      ...(clusterSlug && clusterLabel ? [{
-        '@type': 'ListItem',
-        position: 3,
-        name: clusterLabel,
-        item: `${SITE_URL}/blog/cluster/${clusterSlug}`,
-      }] : []),
-      {
-        '@type': 'ListItem',
-        position: clusterSlug ? 4 : 3,
-        name: fm.title,
-        item: `${SITE_URL}/blog/${slug}`,
-      },
+      { '@type': 'ListItem', position: 3, name: cat.label, item: `${SITE_URL}/blog#cat-${cat.key}` },
+      { '@type': 'ListItem', position: 4, name: fm.title, item: url },
     ],
   }
-
-  const faqSchema = faqs.length > 0 ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map(f => ({
-      '@type': 'Question',
-      name: f.question,
-      acceptedAnswer: { '@type': 'Answer', text: f.answer },
-    })),
+  const faqSchema = faqs.length ? {
+    '@context': 'https://schema.org', '@type': 'FAQPage',
+    mainEntity: faqs.map(f => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
   } : null
 
   return (
-    <>
+    <div className={`c-${cat.key}`}>
+      <PageFx share rail />
       <JsonLd schema={pageSchema} />
       <JsonLd schema={breadcrumbSchema} />
       {faqSchema && <JsonLd schema={faqSchema} />}
 
-      {/* Hero */}
-      <section style={{ padding: '120px var(--page-pad) 60px', background: 'var(--bg-deep)' }}>
-        <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 12, marginBottom: 20 }}>
-            <span
-              style={{
-                display: 'inline-flex', alignItems: 'center',
-                padding: '6px 14px', borderRadius: 999,
-                background: 'var(--blue)', color: 'var(--charcoal-deep)',
-                fontFamily: 'var(--font-display)', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase',
-              }}
-            >
-              Article
-            </span>
-            {clusterLabel && clusterSlug && (
-              <Link
-                href={`/blog/cluster/${clusterSlug}`}
-                style={{ fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 12, color: 'var(--text-muted)', textDecoration: 'none' }}
-                className="hover:text-blue transition-colors"
-              >
-                · {clusterLabel} →
-              </Link>
-            )}
-            {fm.level && (
-              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 12, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
-                · {fm.level}
-              </span>
-            )}
-          </div>
+      <main>
+        <article>
+          <header className="hero" id="top" data-reveal="">
+            <div className="hero__layer band"></div>
+            <div className="hero__layer hero__glow b"></div>
+            <div className="hero__layer hero__static"></div>
+            <div className="hero__layer hero__grain"></div>
+            <div className="hero__inner">
+              <a className="eyebrow hero__cat rv" href={`/blog#cat-${cat.key}`}>{cat.label}</a>
+              <h1 className="rv" style={{ '--i': '1' }}>{fm.title}</h1>
+              {fm.description && <p className="hero__sub rv" style={{ '--i': '2' }}>{fm.description}</p>}
+            </div>
+          </header>
+          <div id="content"></div>
 
-          <h1 style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 'clamp(32px, 5vw, 64px)', lineHeight: 1.08, letterSpacing: '-0.03em', color: 'var(--off-white)', textWrap: 'balance' }}>
-            {fm.title}
-          </h1>
-
-          {fm.description && (
-            <p style={{ margin: '24px 0 0', fontFamily: 'var(--font-body)', fontSize: 18, lineHeight: 1.55, color: 'var(--text-secondary)', maxWidth: 720 }}>
-              {fm.description}
-            </p>
+          {rail.length > 0 && (
+            <nav className="rail" aria-label="On this page"><div className="wrap"><div className="rail__in">
+              {rail.map(r => <a key={r.id} href={`#${r.id}`}>{r.label}</a>)}
+            </div></div></nav>
           )}
 
-          {/* Byline */}
-          <div style={{ marginTop: 32, paddingTop: 20, borderTop: '1px solid var(--text-faint)' }}>
-            <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--text-primary)' }}>
-              Written by <strong style={{ color: 'var(--off-white)' }}>{fm.author || 'Luke Marinovic'}</strong>
-              {fm.authorTitle ? `, ${fm.authorTitle}` : ', Founder of UnderCurrent Automations'} · Melbourne
-            </p>
-            <p style={{ margin: '4px 0 0', fontFamily: 'var(--font-body)', fontSize: 12, color: 'var(--text-muted)' }}>
-              Published {formatDate(fm.date)}
-              {fm.dateModified && fm.dateModified !== fm.date && ` · Updated ${formatDate(fm.dateModified)}`}
-              {fm.readingTime && ` · ${fm.readingTime} min read`}
-            </p>
-            <HeroCta />
-          </div>
-        </div>
-      </section>
-
-      {/* Hero image — explicit width/height (not fill) so the rendered <img>
-          carries dimension attrs that crawlers see. Visual 21/9 crop is preserved
-          by the sized container + objectFit: cover. */}
-      {fm.heroImage && (
-        <section style={{ padding: '48px var(--page-pad) 0', background: 'var(--charcoal)', borderTop: '1px solid var(--text-faint)' }}>
-          <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-            <div style={{ position: 'relative', width: '100%', maxWidth: HERO_IMG_MAX, aspectRatio: '21 / 9', overflow: 'hidden', borderRadius: 16 }}>
-              <Image
-                src={fm.heroImage}
-                alt={fm.heroImageAlt || fm.title}
-                width={heroDims.width}
-                height={heroDims.height}
-                priority
-                sizes="(max-width: 768px) 100vw, 1000px"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Quick Answer */}
-      {quickAnswer && (
-        <section style={{ padding: '60px var(--page-pad) 20px', background: 'var(--charcoal)', borderTop: fm.heroImage ? 'none' : '1px solid var(--text-faint)' }}>
-          <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-            <div
-              style={{
-                maxWidth: TEXT_MAX,
-                padding: '32px 36px',
-                borderRadius: 14,
-                background: 'var(--charcoal)',
-                border: '1px solid var(--text-faint)',
-                borderLeft: '3px solid var(--blue)',
-                boxShadow: '6px 6px 0 0 var(--blue)',
-              }}
-            >
-              <p style={{ margin: '0 0 12px', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--blue-light)' }}>
-                Quick Answer
-              </p>
-              <p
-                style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 17, lineHeight: 1.6, color: 'var(--text-primary)' }}
-                dangerouslySetInnerHTML={{ __html: quickAnswer }}
-              />
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Article body */}
-      <article style={{ padding: '40px var(--page-pad) 80px', background: 'var(--charcoal)' }}>
-        <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-          {calcAt >= 0 ? (
-            <div className="article-prose" style={{ maxWidth: TEXT_MAX }}>
-              <div dangerouslySetInnerHTML={{ __html: bodyHtml.slice(0, calcAt) }} />
-              <TradieAdminCalculator />
-              <div dangerouslySetInnerHTML={{ __html: bodyHtml.slice(calcAt + CALC_TOKEN.length) }} />
-            </div>
-          ) : (
-            <div
-              className="article-prose"
-              style={{ maxWidth: TEXT_MAX }}
-              dangerouslySetInnerHTML={{ __html: bodyHtml }}
-            />
+          {qa && (
+            <section className="qa" data-reveal="" aria-label="Quick answer"><div className="wrap"><div className="qa__in">
+              <p className="eyebrow rv">Quick answer</p>
+              <p className="qa__lead rv" style={{ '--i': '1' }} dangerouslySetInnerHTML={{ __html: qa.lead }} />
+              {qa.items.length > 0 && (
+                <ol className="qa__cells rv" style={{ '--i': '2' }}>
+                  {qa.items.map((it, i) => <li key={i} dangerouslySetInnerHTML={{ __html: it }} />)}
+                </ol>
+              )}
+              {qa.close.map((c, i) => <p key={i} className="qa__close rv" style={{ '--i': '3' }} dangerouslySetInnerHTML={{ __html: c }} />)}
+            </div></div></section>
           )}
-        </div>
-      </article>
 
-      {/* Author bio */}
-      <section style={{ padding: '0 var(--page-pad) 72px', background: 'var(--charcoal)' }}>
-        <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-          <AuthorBio />
-        </div>
-      </section>
-
-      <style>{`
-        .article-prose h2 {
-          font-family: var(--font-display);
-          font-weight: 500;
-          color: var(--off-white);
-          font-size: clamp(22px, 2.4vw, 30px);
-          letter-spacing: -0.025em;
-          margin-top: 3rem;
-          margin-bottom: 1rem;
-          line-height: 1.15;
-        }
-        .article-prose h3 {
-          font-family: var(--font-display);
-          font-weight: 500;
-          color: var(--off-white);
-          font-size: 18px;
-          letter-spacing: -0.015em;
-          margin-top: 2rem;
-          margin-bottom: 0.75rem;
-          line-height: 1.3;
-        }
-        .article-prose p {
-          color: var(--text-secondary);
-          font-family: var(--font-body);
-          font-size: 17px;
-          line-height: 1.65;
-          margin-bottom: 1.25rem;
-        }
-        .article-prose ul, .article-prose ol {
-          color: var(--text-secondary);
-          font-family: var(--font-body);
-          font-size: 17px;
-          line-height: 1.65;
-          padding-left: 1.5rem;
-          margin-bottom: 1.25rem;
-        }
-        .article-prose li { margin-bottom: 0.5rem; }
-        .article-prose a {
-          color: var(--blue);
-          text-decoration: underline;
-          text-decoration-color: rgba(106,141,173,0.4);
-          text-underline-offset: 3px;
-        }
-        .article-prose a:hover { text-decoration-color: var(--blue); }
-        .article-prose strong { color: var(--off-white); font-weight: 600; }
-        .article-prose blockquote {
-          border-left: 3px solid var(--blue);
-          padding: 1rem 1.25rem;
-          margin: 1.5rem 0;
-          background: rgba(106,141,173,0.05);
-          border-radius: 0 12px 12px 0;
-        }
-        .article-prose blockquote p { color: var(--text-primary); margin: 0; }
-        .article-prose table {
-          width: 100%;
-          border-collapse: separate;
-          border-spacing: 0;
-          margin: 1.5rem 0;
-          font-size: 14px;
-          border-radius: 12px;
-          overflow: hidden;
-          border: 1px solid var(--text-faint);
-          background: rgba(255,255,255,0.015);
-        }
-        @media (max-width: 700px) {
-          .article-prose table {
-            display: block;
-            overflow-x: auto;
-            max-width: 100%;
-            -webkit-overflow-scrolling: touch;
-          }
-        }
-        .article-prose th, .article-prose td {
-          padding: 0.85rem 1rem;
-          text-align: left;
-          color: var(--text-secondary);
-          font-family: var(--font-body);
-          border-bottom: 1px solid rgba(250,249,245,0.08);
-        }
-        .article-prose tr:last-child td {
-          border-bottom: none;
-        }
-        .article-prose tbody tr:nth-child(even) td {
-          background: rgba(255,255,255,0.018);
-        }
-        .article-prose tbody tr:hover td {
-          background: rgba(106,141,173,0.06);
-        }
-        .article-prose th {
-          background: rgba(250,249,245,0.04);
-          color: var(--off-white);
-          font-family: var(--font-display);
-          font-weight: 500;
-          font-size: 12px;
-          letter-spacing: 0.05em;
-          text-transform: uppercase;
-          border-bottom: 1px solid var(--text-faint);
-        }
-        .article-prose pre {
-          background: rgba(255,255,255,0.04);
-          border: 1px solid var(--text-faint);
-          border-radius: 10px;
-          padding: 1.25rem 1.5rem;
-          overflow-x: auto;
-          max-width: 100%;
-          margin: 1.5rem 0;
-          -webkit-overflow-scrolling: touch;
-        }
-        .article-prose pre code {
-          font-family: 'SF Mono', ui-monospace, 'Cascadia Code', monospace;
-          font-size: 13px;
-          line-height: 1.6;
-          color: var(--text-primary);
-          background: none;
-          padding: 0;
-          border-radius: 0;
-          white-space: pre;
-        }
-        .article-prose code {
-          font-family: 'SF Mono', ui-monospace, 'Cascadia Code', monospace;
-          font-size: 13px;
-          background: rgba(255,255,255,0.06);
-          padding: 2px 6px;
-          border-radius: 4px;
-          color: var(--blue-light);
-        }
-      `}</style>
-
-      {/* Related case studies (if any) */}
-      {relatedCaseStudies.length > 0 && (
-        <section style={{ padding: '40px var(--page-pad)', background: 'var(--charcoal)', borderTop: '1px solid var(--text-faint)' }}>
-          <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-            <p style={{ margin: '0 0 20px', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--blue-light)' }}>
-              See the system in action · Case {relatedCaseStudies.length === 1 ? 'study' : 'studies'}
-            </p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 16, maxWidth: TEXT_MAX }}>
-              {relatedCaseStudies.map(cs => (
-                <Link
-                  key={cs.slug}
-                  href={`/case-studies/${cs.slug}`}
-                  className="article-case-card"
-                  style={{
-                    display: 'block', padding: 20, borderRadius: 14,
-                    background: 'var(--charcoal)',
-                    border: '1px solid var(--text-faint)',
-                    borderLeft: '3px solid var(--blue)',
-                    textDecoration: 'none',
-                    transition: 'transform 160ms cubic-bezier(.2,.7,.3,1), box-shadow 160ms cubic-bezier(.2,.7,.3,1)',
-                  }}
-                >
-                  <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--blue-light)' }}>
-                    Case study
-                  </p>
-                  <h3 style={{ margin: '8px 0 0', fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 16, lineHeight: 1.3, letterSpacing: '-0.015em', color: 'var(--text-primary)' }}>
-                    {cs.title}
-                  </h3>
-                  {cs.outcomeHeadline && (
-                    <p style={{ margin: '10px 0 0', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 13, color: 'var(--sage-light)', letterSpacing: '-0.01em' }}>
-                      → {cs.outcomeHeadline}
-                    </p>
-                  )}
-                </Link>
+          <div className="art"><div className="wrap"><div className="art__col">
+            <div className="meta meta--photo">
+              <a className="meta__ph" href="#author"><img src="/assets/luke-sq.jpg" width="600" height="600" decoding="async" alt="" /></a>
+              <a className="meta__name" href="#author" rel="author"><b>Luke Marinovic</b><small>Founder, UnderCurrent Automations</small></a>
+              <span className="meta__d">Updated <time dateTime={isoDate(updated)}>{fmtDate(updated)}</time><em>·</em>{fm.readingTime || 5} min read</span>
+            </div>
+            <div className="body">
+              {intro && <div className="blk intro" data-reveal=""><Body html={decorate(intro, { lead: true })} /></div>}
+              {blocks.map(b => (
+                <div key={b.id} className="blk" data-reveal="" id={b.id}>
+                  <h2 className="rv" data-toc={b.toc} dangerouslySetInnerHTML={{ __html: b.title }} />
+                  <Body html={decorate(b.html)} />
+                </div>
               ))}
+              {faqs.length > 0 && (
+                <div className="blk" data-reveal="" id="faq">
+                  <h2 className="rv" data-toc="FAQ">Frequently asked questions</h2>
+                  <div className="faq rv" style={{ '--i': '1' }}>
+                    {faqs.map((f, i) => <details key={i}><summary>{f.question}</summary><p>{f.answer}</p></details>)}
+                  </div>
+                </div>
+              )}
             </div>
-          </div>
+            <div className="end"><span className="eyebrow">Published <time dateTime={isoDate(fm.date)}>{fmtDate(fm.date)}</time></span><div className="share"><a data-share="li" href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noopener">LinkedIn</a><a data-share="x" href="https://twitter.com/intent/tweet" target="_blank" rel="noopener">X</a><button data-copy="">Copy link</button></div></div>
+            <div id="author">
+              <section className="author" data-reveal="">
+                <div className="author__g">
+                  <figure className="author__ph who rv"><img className="who__img" src="/assets/luke-800.jpg" srcSet="/assets/luke-800.jpg 800w, /assets/luke.jpg 1600w" sizes="(max-width:640px) 100vw, 300px" width="800" height="1000" loading="lazy" decoding="async" alt="Luke Marinovic" /><figcaption className="who__c">
+                    <span className="who__n">Luke Marinovic<small>Founder, UnderCurrent Automations</small>
+                      <span className="who__s"><SocialLinks /></span>
+                    </span>
+                  </figcaption></figure>
+                  <div className="author__t rv" style={{ '--i': '1' }}>
+                    <h3>Hey, I’m Luke, founder of UnderCurrent Automations.</h3>
+                    <p className="author__p">I started UnderCurrent after watching Australian small businesses grind through work they didn’t have to. Now I build the systems that take it off their plate, from lead follow-up and invoicing to the search work that gets a business named by Google and ChatGPT, with most builds live in 14 days.</p>
+                    <p className="author__p">At UnderCurrent, we build with purpose. We care how something looks, but more about whether it keeps working when nobody’s watching. If your business has outgrown its admin and you want a partner who gets it, <a href={`mailto:${EMAIL}`}>let’s talk</a>.</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div></div></div>
+        </article>
+
+        {related.length > 0 && (
+          <section className="sec sec--off related" id="related" data-reveal=""><div className="wrap">
+            <div className="sec__head"><span className="eyebrow">Read next</span><a className="link" href="/blog">All articles</a></div>
+            <div className="rel">{related.map((a, i) => <PostRow key={a.slug} a={a} i={i + 1} />)}</div>
+          </div></section>
+        )}
+
+        <section className="cband" data-reveal="">
+          <div className="hero__layer band"></div><div className="hero__layer hero__glow b"></div><div className="hero__layer hero__static"></div><div className="hero__layer hero__grain"></div>
+          <div className="wrap cband__in"><h2 className="rv">{CLOSE_LINES[cat.key]}</h2><a className="link rv" style={{ '--i': '1' }} href={`mailto:${EMAIL}`}>Let&apos;s chat</a></div>
         </section>
-      )}
-
-      <style>{`
-        .article-case-card:hover {
-          transform: translate(-3px, -3px);
-          box-shadow: 6px 6px 0 0 var(--blue);
-        }
-        .article-case-card:hover h3 { color: var(--blue-light); }
-      `}</style>
-
-      {/* Related articles + CTA */}
-      <section style={{ padding: '60px var(--page-pad) 120px', background: 'var(--charcoal)', borderTop: '1px solid var(--text-faint)' }}>
-        <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-          {clusterSlug && related.length > 0 && (
-            <>
-              <p style={{ margin: '0 0 20px', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--blue-light)' }}>
-                Read next · {clusterLabel}
-              </p>
-              <div style={{ marginBottom: 48, maxWidth: TEXT_MAX }}>
-                {related.map((r, i) => (
-                  <Link
-                    key={r.slug}
-                    href={`/blog/${r.slug}`}
-                    style={{
-                      display: 'block',
-                      padding: '16px 0',
-                      borderBottom: i < related.length - 1 ? '1px solid var(--text-faint)' : 'none',
-                      color: 'var(--text-primary)',
-                      textDecoration: 'none',
-                      transition: 'color 0.15s ease',
-                    }}
-                    className="hover:text-blue"
-                  >
-                    <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 500, letterSpacing: '-0.015em' }}>
-                      {r.title}
-                    </p>
-                    {r.summary && (
-                      <p style={{ margin: '4px 0 0', fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--text-muted)', display: '-webkit-box', WebkitLineClamp: 1, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                        {r.summary}
-                      </p>
-                    )}
-                  </Link>
-                ))}
-              </div>
-            </>
-          )}
-
-          <div style={{ paddingTop: 24, borderTop: '1px solid var(--text-faint)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
-            <Link href="/blog" style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--text-secondary)', textDecoration: 'none' }} className="hover:text-blue transition-colors">
-              ← All articles
-            </Link>
-            <Link href="/audit" style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--text-secondary)', textDecoration: 'none' }} className="hover:text-blue transition-colors">
-              Get a free audit →
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
+      </main>
+    </div>
   )
 }

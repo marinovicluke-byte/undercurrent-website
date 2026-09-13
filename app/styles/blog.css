@@ -99,6 +99,7 @@ h2{font-weight:500;letter-spacing:-.02em;font-size:clamp(28px,3.2vw,44px);line-h
 .thumb__ph{position:absolute;inset:0;background:url(/assets/hero.jpg) var(--px,50%) var(--py,50%)/cover no-repeat;filter:saturate(.4) brightness(.55) contrast(1.08)}
 .thumb__ph::after{content:"";position:absolute;inset:0;background:var(--b1);mix-blend-mode:color}
 .thumb .hero__grain{opacity:.45}
+.thumb__ph--img{background:none}.thumb__ph--img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .thumb__icon{position:absolute;left:50%;top:50%;width:62%;height:auto;transform:translate(-50%,-50%);opacity:.95}
 
 /* ---------- an article row: the thumb left, the meta line, the title, an excerpt where there is room. inside a category section the category is left off the meta, the head already says it ---------- */

@@ -104,12 +104,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .art{padding:clamp(48px,6vw,80px) 0 clamp(72px,9vw,128px)}
 /* the column, two ways on the dial (Luke, 2026-09-06: "not sure if all font should be left aligned or the quick answer should be aligned like the rest"). Left: the 760px column on the wrap's left edge, so the hero title, the rail, the quick answer, the meta, the body and the bio share one edge. Centre: the column centred and the quick answer narrowed to it, the cells two by two */
 .art__col{max-width:760px;margin:0 auto}
-[data-col=left] .art__col{margin-left:0}
+.art__col{margin-left:0}
 @media (min-width:961px){
-  [data-col=centre] .qa__in{max-width:760px;margin:0 auto}
-  [data-col=centre] .qa__cells{grid-template-columns:1fr 1fr}
-  [data-col=centre] .qa__cells li:nth-child(3){padding-left:0;border-left:0}
-  [data-col=centre] .qa__cells li:nth-child(n+3){border-top:1px solid var(--line)}
 }
 
 /* ---------- meta row, two ways on the dial. Photo: the photo, the name and role, the date and read time, one grid so the phone stacks the name over the date beside the photo. Name: text only ---------- */
@@ -123,7 +119,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .meta__name small{display:block;margin-top:2px;font-size:11px;letter-spacing:.14em}
 .meta__d{text-align:right;white-space:nowrap}
 .meta--name{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 32px}
-[data-byline=photo] .meta--name,[data-byline=name] .meta--photo{display:none}
+.meta--name{display:none}
 
 /* ---------- the body: 18px at 1.65 on a 720px measure, h2 at 30px 500 with 64px above, hairline links ---------- */
 .body{font-size:18px;line-height:1.65}
@@ -149,7 +145,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 /* the table as hairline rows, stacked on the phone with the column names in front */
 .tbl{margin-top:32px;border-top:1px solid var(--line);font-size:15px;line-height:1.4}
-.tbl__h,.tbl__r{display:grid;grid-template-columns:1.1fr 1.4fr 1.4fr;gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.tbl__h,.tbl__r{display:grid;grid-template-columns:var(--tcols,1.1fr 1.4fr 1.4fr);gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}
 .tbl__h{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);padding:12px 0}
 .tbl__r b{font-weight:500}
 .tbl__r span{color:var(--ink-2)}
@@ -230,6 +226,7 @@ h2{font-weight:500;letter-spacing:-.02em;font-size:clamp(28px,3.2vw,44px);line-h
 .thumb__ph{position:absolute;inset:0;background:url(/assets/hero.jpg) var(--px,50%) var(--py,50%)/cover no-repeat;filter:saturate(.4) brightness(.55) contrast(1.08)}
 .thumb__ph::after{content:"";position:absolute;inset:0;background:var(--b1);mix-blend-mode:color}
 .thumb .hero__grain{opacity:.45}
+.thumb__ph--img{background:none}.thumb__ph--img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .thumb__icon{position:absolute;left:50%;top:50%;width:62%;height:auto;transform:translate(-50%,-50%);opacity:.95}
 .post{display:grid;grid-template-columns:128px 1fr;column-gap:24px;padding:22px 0;border-bottom:1px solid var(--line)}
 .post .thumb{align-self:start}
@@ -301,3 +298,21 @@ footer a{transition:color .3s,border-color .3s}footer a:hover{color:#fff}
   .ft__bar{order:4;flex-direction:column;align-items:center;text-align:center;gap:10px;margin-top:48px}
   .opts__row span{flex:0 0 100%}}
 @media (prefers-reduced-motion:reduce){.js .rv,.js .in .rv{animation:none;opacity:1;transform:none;mask:none;-webkit-mask:none}.hero__grain,.hero__static,.band::before,.band::after{animation:none}}
+
+/* the live markdown carries lists, h3s, images, inline SVG diagrams and code the mockup did not. same voice: hairlines, 18px, the ink-2 grey */
+.body ul,.body ol{margin-top:18px;padding-left:22px}
+.body li{margin-top:10px}
+.body li::marker{color:var(--ink-2)}
+.body li a,.body td a{text-decoration:underline;text-decoration-color:var(--line);text-decoration-thickness:1px;text-underline-offset:4px;transition:text-decoration-color .3s}
+.body li a:hover{text-decoration-color:var(--c0)}
+.body h3{font-size:clamp(20px,1.7vw,23px);font-weight:500;letter-spacing:-.015em;line-height:1.25;margin-top:36px;max-width:30ch}
+.body h3+p{margin-top:12px}
+.body img,.body svg{display:block;max-width:100%;height:auto;margin-top:32px}
+.body p>img{margin-top:0}
+.body pre{margin-top:24px;padding:18px 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px;line-height:1.5;overflow-x:auto;background:var(--off)}
+.body code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
+.body p code,.body li code{background:var(--off);padding:1px 5px}
+.body hr{border:0;border-top:1px solid var(--line);margin-top:40px}
+.body table{width:100%;border-collapse:collapse;margin-top:32px;font-size:15px}
+.body th,.body td{text-align:left;padding:12px 16px 12px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.body th{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:400;color:var(--ink-2)}

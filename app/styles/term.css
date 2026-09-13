@@ -246,3 +246,19 @@ footer a{transition:color .3s,border-color .3s}footer a:hover{color:#fff}
   .ft__bar{order:4;flex-direction:column;align-items:center;text-align:center;gap:10px;margin-top:48px}
   .opts__row span{flex:0 0 100%}}
 @media (prefers-reduced-motion:reduce){.js .rv,.js .in .rv,.js .hero h1.rv{animation:none;opacity:1;transform:none;mask:none;-webkit-mask:none}.hero__grain,.hero__static,.band::before,.band::after{animation:none}}
+
+/* the live markdown carries lists, h3s, images, inline SVG diagrams and code the mockup did not. same voice: hairlines, 18px, the ink-2 grey */
+.body ul,.body ol{margin-top:18px;padding-left:22px}
+.body li{margin-top:10px}
+.body li::marker{color:var(--ink-2)}
+.body li a,.body td a{text-decoration:underline;text-decoration-color:var(--line);text-decoration-thickness:1px;text-underline-offset:4px;transition:text-decoration-color .3s}
+.body li a:hover{text-decoration-color:var(--c0)}
+.body h3{font-size:clamp(20px,1.7vw,23px);font-weight:500;letter-spacing:-.015em;line-height:1.25;margin-top:36px;max-width:30ch}
+.body h3+p{margin-top:12px}
+.body img,.body svg{display:block;max-width:100%;height:auto;margin-top:32px}
+.body p>img{margin-top:0}
+.body pre{margin-top:24px;padding:18px 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px;line-height:1.5;overflow-x:auto;background:var(--off)}
+.body code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
+.body p code,.body li code{background:var(--off);padding:1px 5px}
+.body hr{border:0;border-top:1px solid var(--line);margin-top:40px}
+

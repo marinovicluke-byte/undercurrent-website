@@ -1,51 +1,40 @@
-// app/glossary/page.js — Glossary hub. Categorised index of definitional entries.
-// DefinedTermSet + BreadcrumbList JSON-LD. Visual system matches /blog (var(--page-pad),
-// maxWidth 1280, left-aligned, near-black hero → charcoal body, rounded rows).
-import Link from 'next/link'
+// app/glossary/page.js — the glossary index, the sandbox skeleton poured with
+// the live terms. Every term in the markup, grouped; the find box only hides
+// rows that are already there.
+import '@/app/styles/glossary.css'
+import PageFx from '@/components/site/PageFx'
 import JsonLd from '@/components/ui/JsonLd'
-import SectionEyebrow from '@/components/ui/SectionEyebrow'
 import { getAllGlossaryTerms, getGlossaryTermsByCategory } from '@/lib/glossary'
+import { EMAIL } from '@/components/site/Footer'
+import { GROUP_IDS } from '@/lib/glossaryGroups'
 
 const SITE_URL = 'https://undercurrentautomations.com'
-const CONTENT_MAX = 1280
 
 export const metadata = {
   title: 'Glossary',
-  description:
-    'Plain-English definitions for AI search, automation, and the regulators shaping Australian service businesses: SEO, AEO, GEO, AI agents and more.',
+  description: 'Plain-English definitions for AI search, automation, and the regulators shaping Australian service businesses: SEO, AEO, GEO, AI agents and more.',
   alternates: { canonical: `${SITE_URL}/glossary` },
   openGraph: {
-    title: 'Glossary — UnderCurrent Automations',
+    title: 'Glossary | UnderCurrent Automations',
     description: 'Plain-English definitions for AI search, automation, and Australian compliance.',
     type: 'website',
     url: `${SITE_URL}/glossary`,
-    images: [{ url: `${SITE_URL}/brand/og-card.png`, width: 1200, height: 630, alt: 'UnderCurrent Automations Glossary' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Glossary — UnderCurrent Automations',
-    description: 'Plain-English definitions for AI search, automation, and Australian compliance.',
-    images: [`${SITE_URL}/brand/og-card.png`],
+    images: ['/brand/og-card.png'],
   },
 }
 
-export default function GlossaryHub() {
+export default function GlossaryIndex() {
   const all = getAllGlossaryTerms()
-  const byCategory = getGlossaryTermsByCategory()
+  const groups = getGlossaryTermsByCategory()
 
-  const definedTermSet = {
+  const termSet = {
     '@context': 'https://schema.org',
     '@type': 'DefinedTermSet',
-    name: 'UnderCurrent Automations Glossary',
+    '@id': `${SITE_URL}/glossary`,
+    name: 'UnderCurrent Glossary',
     description: metadata.description,
     url: `${SITE_URL}/glossary`,
-    inLanguage: 'en-AU',
-    hasDefinedTerm: all.map(t => ({
-      '@type': 'DefinedTerm',
-      name: t.term,
-      description: t.shortDefinition,
-      url: `${SITE_URL}/glossary/${t.slug}`,
-    })),
+    hasDefinedTerm: all.map(t => ({ '@type': 'DefinedTerm', name: t.term, description: t.shortDefinition, url: `${SITE_URL}/glossary/${t.slug}` })),
   }
   const breadcrumb = {
     '@context': 'https://schema.org',
@@ -57,98 +46,56 @@ export default function GlossaryHub() {
   }
 
   return (
-    <>
-      <JsonLd schema={definedTermSet} />
+    <div className="c-gloss">
+      <PageFx find />
+      <JsonLd schema={termSet} />
       <JsonLd schema={breadcrumb} />
-
-      {/* ═══ HERO — near-black ═══ */}
-      <section style={{ position: 'relative', padding: '120px var(--page-pad) 64px', background: 'var(--bg-deep)' }}>
-        <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-          <div style={{ marginBottom: 20 }}>
-            <SectionEyebrow label={`Glossary · ${all.length} ${all.length === 1 ? 'term' : 'terms'}`} />
+      <main>
+        <section className="hero" id="top" data-reveal="">
+          <div className="hero__layer hero__photo"></div>
+          <div className="hero__layer hero__glow a"></div>
+          <div className="hero__layer hero__glow b"></div>
+          <div className="hero__layer hero__static"></div>
+          <div className="hero__layer hero__grain"></div>
+          <div className="hero__inner">
+            <h1 className="rv">Glossary</h1>
           </div>
-          <h1 style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 'clamp(40px, 5.4vw, 80px)', lineHeight: 1.04, letterSpacing: '-0.035em', color: 'var(--off-white)', textWrap: 'balance' }}>
-            The <span className="uc-glow-word uc-glow-word--blue">words</span> behind AI search & automation.
-          </h1>
-          <p style={{ margin: '28px 0 0', fontFamily: 'var(--font-body)', fontSize: 18, lineHeight: 1.55, color: 'var(--text-secondary)', maxWidth: 660 }}>
-            Plain definitions for the terms we use with clients — search disciplines, automation tools, the workflows that save the hours, and the Australian regulators that set the rules. Every entry is one screen, with sources.
-          </p>
-          {byCategory.length > 1 && (
-            <nav aria-label="Glossary categories" style={{ marginTop: 36 }}>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-                {byCategory.map(c => (
-                  <a key={c.key} href={`#${c.key}`} className="uc-glossary-pill">
-                    <span>{c.label}</span>
-                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, opacity: 0.6 }}>{c.terms.length}</span>
-                  </a>
-                ))}
-              </div>
+        </section>
+        <div id="content"></div>
+
+        <section className="sec" id="browse" data-reveal="">
+          <div className="wrap">
+            <div className="sec__head"><span className="eyebrow">Browse</span><span className="eyebrow" data-count="">{all.length} terms</span></div>
+            <div className="two">
+              <h2 className="rv">Every entry is one screen, with sources.</h2>
+              <p className="rv" style={{ '--i': '1' }}>Plain definitions for the words we use with clients. Search, automation, the workflows that save the hours, and the Australian regulators that set the rules. If a word costs a business owner ten minutes on a call, it belongs here.</p>
+            </div>
+            <div className="find rv" style={{ '--i': '1' }}>
+              <div><label htmlFor="q">Find a term</label><input id="q" type="search" autoComplete="off" placeholder="Type a word, say schema, or agent" /></div>
+              <span className="find__n" data-found=""></span>
+            </div>
+            <nav className="jump rv" style={{ '--i': '2' }} aria-label="Groups">
+              {groups.map(g => <a key={g.key} href={`#${GROUP_IDS[g.key]}`}><b>{g.label}</b><span>{g.terms.length}</span></a>)}
             </nav>
-          )}
-        </div>
-      </section>
-
-      <style>{`
-        .uc-glossary-pill { display:inline-flex; align-items:center; gap:10px; padding:10px 18px; border-radius:999px; background:rgba(250,249,245,0.03); border:1px solid var(--text-faint); color:var(--text-secondary); font-family:var(--font-body); font-size:13px; text-decoration:none; transition:all .15s ease; }
-        .uc-glossary-pill:hover { background:rgba(106,141,173,0.08); border-color:var(--blue); color:var(--blue); }
-        .uc-glossary-row { display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:18px 16px; margin:0 -16px; border-radius:12px; text-decoration:none; transition:background .15s ease; }
-        .uc-glossary-row:hover { background:rgba(250,249,245,0.02); }
-        .uc-glossary-row:hover .uc-glossary-term { color:var(--blue); }
-      `}</style>
-
-      {/* ═══ TERMS BY CATEGORY ═══ */}
-      <section style={{ padding: '40px var(--page-pad) 120px', background: 'var(--charcoal)' }}>
-        <div style={{ maxWidth: CONTENT_MAX, margin: 0, width: '100%' }}>
-          {byCategory.length === 0 && (
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: 16, color: 'var(--text-muted)', paddingTop: 40 }}>
-              No glossary entries published yet.
-            </p>
-          )}
-          {byCategory.map(c => (
-            <section key={c.key} id={c.key} style={{ paddingTop: 72, scrollMarginTop: 96 }}>
-              <div style={{ marginBottom: 24, paddingBottom: 16, borderBottom: '1px solid var(--text-faint)' }}>
-                <SectionEyebrow label={`${c.terms.length} ${c.terms.length === 1 ? 'term' : 'terms'}`} />
-                <h2 style={{ margin: '12px 0 0', fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 'clamp(28px, 3.2vw, 40px)', lineHeight: 1.1, letterSpacing: '-0.025em', color: 'var(--off-white)' }}>
-                  {c.label}
-                </h2>
-              </div>
-              <div>
-                {c.terms.map((t, i) => (
-                  <Link
-                    key={t.slug}
-                    href={`/glossary/${t.slug}`}
-                    className="uc-glossary-row"
-                    style={{ borderBottom: i < c.terms.length - 1 ? '1px solid var(--text-faint)' : 'none', borderRadius: 0 }}
-                  >
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <h3 className="uc-glossary-term" style={{ margin: 0, fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 17, lineHeight: 1.35, letterSpacing: '-0.015em', color: 'var(--text-primary)', transition: 'color .15s ease' }}>
-                        {t.term}
-                      </h3>
-                      <p style={{ margin: '6px 0 0', fontFamily: 'var(--font-body)', fontSize: 14, lineHeight: 1.55, color: 'var(--text-muted)', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                        {t.shortDefinition}
-                      </p>
-                    </div>
-                    {t.complianceNote && (
-                      <span style={{ flexShrink: 0, fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--sage-light)', opacity: 0.8, paddingTop: 4 }}>
-                        Compliance
-                      </span>
-                    )}
-                  </Link>
-                ))}
-              </div>
-            </section>
-          ))}
-
-          <div style={{ marginTop: 88, paddingTop: 32, borderTop: '1px solid var(--text-faint)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: 12, color: 'var(--text-muted)' }}>
-              {all.length} {all.length === 1 ? 'term' : 'terms'}
-            </p>
-            <Link href="/blog" style={{ fontFamily: 'var(--font-display)', fontWeight: 500, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--text-muted)', textDecoration: 'none' }} className="hover:text-blue transition-colors">
-              Browse the blog →
-            </Link>
+            <p className="empty" hidden>Nothing under that word yet. Try a shorter one, or <a href={`mailto:${EMAIL}`} style={{ borderBottom: '1px solid var(--line)' }}>ask us</a>.</p>
           </div>
-        </div>
-      </section>
-    </>
+        </section>
+
+        {groups.map((g, i) => (
+          <section key={g.key} className={`sec grp${i % 2 ? '' : ' sec--off'}`} id={GROUP_IDS[g.key]} data-reveal="">
+            <div className="ghead rv"><div className="hero__layer band"></div><div className="hero__layer hero__glow b"></div><div className="hero__layer hero__static"></div><div className="hero__layer hero__grain"></div>
+              <div className="ghead__in"><h2 className="eyebrow">{g.label}</h2><span className="eyebrow">{g.terms.length} terms</span></div>
+            </div>
+            <div className="wrap"><dl className="terms rv" style={{ '--i': '1' }}>
+              {g.terms.map(t => <div key={t.slug} className="t"><dt><a href={`/glossary/${t.slug}`}>{t.term}</a></dt><dd>{t.shortDefinition}</dd></div>)}
+            </dl></div>
+          </section>
+        ))}
+
+        <section className="sec--off cta" data-reveal="">
+          <div className="wrap"><div className="cta__in"><h2 className="rv">Not sure which of these your business actually needs?</h2><a className="link rv" style={{ '--i': '1' }} href={`mailto:${EMAIL}`}>Let&apos;s chat</a></div></div>
+        </section>
+      </main>
+    </div>
   )
 }
