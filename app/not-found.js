@@ -1,24 +1,13 @@
-// app/not-found.js
-import Link from 'next/link'
+// app/not-found.js — the 404 on the plain text template
+import PlainPage from '@/components/site/PlainPage'
 
-export const metadata = {
-  title: 'Page Not Found',
-}
+export const metadata = { title: 'Page not found' }
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-6 text-center">
-      <p className="text-sm font-body text-orange uppercase tracking-widest">404</p>
-      <h1 className="mt-4 font-display text-5xl font-bold text-charcoal">Page not found</h1>
-      <p className="mt-6 max-w-sm text-muted">
-        That page doesn&apos;t exist. It may have moved, or the URL might be wrong.
-      </p>
-      <Link
-        href="/"
-        className="mt-8  bg-charcoal px-6 py-3 text-sm font-body text-white hover:bg-orange transition-colors"
-      >
-        Back to Home
-      </Link>
-    </div>
+    <PlainPage title="Not found">
+      <p>That page doesn&apos;t exist. It may have moved, or the address might be wrong.</p>
+      <p><a href="/">Back to the homepage</a>, or <a href="/blog">read the blog</a>.</p>
+    </PlainPage>
   )
 }

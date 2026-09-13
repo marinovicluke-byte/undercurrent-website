@@ -30,12 +30,12 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/audit/report'],
+        disallow: ['/api/'],
       },
       ...searchBots.map((agent) => ({
         userAgent: agent,
         allow: '/',
-        disallow: ['/api/', '/audit/report'],
+        disallow: ['/api/'],
       })),
       ...aiBots.map((agent) => ({
         userAgent: agent,

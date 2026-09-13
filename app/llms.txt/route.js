@@ -1,42 +1,33 @@
-import { SERVICES } from '@/lib/data/services'
-import { SERVICES_V2 } from '@/lib/data/services-v2'
 import { LOCATIONS } from '@/lib/data/locations'
 import { getAllArticles } from '@/lib/articles'
 import { getAllGlossaryTerms } from '@/lib/glossary'
 
 const BASE = 'https://undercurrentautomations.com'
 
-// Slugs that are still rendered for SEO continuity but are not part of the
-// primary 4-spoke IA. Listed under "Specific automations" so AI crawlers
-// can still find them, just below the spokes.
-const SPOKE_SLUGS = new Set(SERVICES_V2.map(s => s.slug))
-const HIDDEN_FROM_LLMS_TXT = new Set(['front-end-experience'])
+const SERVICES = [
+  ['AI Automation', '/automation', 'Repetitive work handed to systems. Bookings, follow-ups, reporting, the jobs that eat your week.'],
+  ['Website Design', '/website', 'Sites that load fast, read clearly, and turn visitors into enquiries.'],
+  ['Google & AI Search', '/seo', 'Being found when people look, on Google and inside AI answers.'],
+  ['Consulting', '/consulting', 'A clear plan for what to automate first, what to leave alone, and why.'],
+]
 
 export async function GET() {
   const articles = getAllArticles()
   const glossary = getAllGlossaryTerms()
 
-  const spokeServices = SERVICES_V2
-    .map(s => SERVICES.find(x => x.slug === s.slug))
-    .filter(Boolean)
-  const orphanServices = SERVICES.filter(
-    s => !SPOKE_SLUGS.has(s.slug) && !HIDDEN_FROM_LLMS_TXT.has(s.slug),
-  )
-
-  const renderService = s =>
-    `- [${s.displayName || s.label}](${BASE}/${s.slug}): ${s.metaDescription}`
-
   const content = `# UnderCurrent Automations
 
-> AI automation for Australian small businesses. We build custom workflows that save 15+ hours a week.
+> AI automation, digital growth and business consulting for service businesses. Built in Melbourne, working Australia-wide.
 
 ## Services
 
-${spokeServices.map(renderService).join('\n')}
+${SERVICES.map(([name, path, desc]) => `- [${name}](${BASE}${path}): ${desc}`).join('\n')}
 
-## Specific automations
+## Company
 
-${orphanServices.map(renderService).join('\n')}
+- [About](${BASE}/about)
+- [Contact](${BASE}/contact)
+- [Company information](${BASE}/company-information)
 
 ## Locations
 
@@ -51,7 +42,5 @@ ${glossary.map(t => `- [${t.term}](${BASE}/glossary/${t.slug}): ${t.shortDefinit
 ${articles.map(a => `- [${a.title}](${BASE}/blog/${a.slug})`).join('\n')}
 `
 
-  return new Response(content, {
-    headers: { 'Content-Type': 'text/plain; charset=utf-8' },
-  })
+  return new Response(content, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } })
 }

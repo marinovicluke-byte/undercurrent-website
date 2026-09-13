@@ -1,4 +1,7 @@
 import Link from 'next/link'
+// old body under the new shell until this page is redesigned (see docs/transfer.md in the sandbox)
+import '@/app/styles/home.css'
+import '@/app/globals.css'
 import PillCTA from '@/components/ui/PillCTA'
 import SectionEyebrow from '@/components/ui/SectionEyebrow'
 import { SERVICES } from '@/lib/data/services'
