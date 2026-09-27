@@ -118,7 +118,7 @@ export default function Automation() {
     <div className="two">
       <div>
         <h2 className="rv">Built with you, not delivered to you.</h2>
-        <div className="ph ph--light ph--tag rv" style={{"--i":"1",marginTop:"32px"}}>Photo of Luke</div>
+        <div className="ph ph--photo rv" role="img" aria-label="Luke Marinovic" style={{"--i":"1",marginTop:"32px","--img":"url(/assets/about4-800.jpg)","--y":"40%"}}></div>
       </div>
       <ol className="steps rv" style={{"--i":"1"}}>
         <li className="rowb"><div><h3>Talk</h3><p>How the work moves today, and what a good week looks like once it doesn't need you.</p></div></li>
@@ -286,11 +286,11 @@ export default function Automation() {
   <div className="wrap">
     <div className="sec__head"><span className="eyebrow">About</span></div>
     <div className="two about">
-      <div className="ph ph--light ph--tag rv">Photo of Luke</div>
+      <div className="ph ph--photo rv" role="img" aria-label="Luke Marinovic" style={{"--img":"url(/assets/luke-800.jpg)","--y":"30%"}}></div>
       <div>
         <h2 className="rv">The person you'll deal with.</h2>
         <p className="lead-p rv" style={{"--i":"1"}}>UnderCurrent is run by Luke Marinovic out of Melbourne. Strategy, design, code and automation under one roof, so nothing gets lost between the person who understands the problem and the person building the fix.</p>
-        <p className="rv" style={{"--i":"2"}}>Placeholder paragraph. Two or three sentences on the philosophy: why automation, what we won't automate, and how we decide what's worth building. Replace with the real story.</p>
+        <p className="rv" style={{"--i":"2"}}>We automate the boring, repeated work: the quoting, the chasing, the copying from one screen to another. We won't automate the part where you talk to your customer. We pick what to build with one test: how many hours a week it gives back.</p>
         <a className="link rv" style={{"--i":"3",marginTop:"36px"}} href="/about">More about us</a>
       </div>
     </div>
@@ -303,11 +303,11 @@ export default function Automation() {
     <div className="two faq">
       <h2 className="rv">Questions before the email.</h2>
       <div className="rv" style={{"--i":"1"}}>
-        <details><summary>How long until something is running?</summary><p>Placeholder answer. The first process is usually live in two to four weeks. Bigger systems are built in stages, each one running before the next starts.</p></details>
-        <details><summary>Will it work with the software we already use?</summary><p>Placeholder answer. Almost always. Most of the work connects what you have: your accounting software, your CRM, your inbox, your calendar.</p></details>
-        <details><summary>Do I need to be technical?</summary><p>Placeholder answer. No. You need to know how the work moves through your business. We handle the rest and show you how to change things.</p></details>
-        <details><summary>What does it cost?</summary><p>Placeholder answer. A fixed price per process, agreed before we start, with the hours it saves written next to it.</p></details>
-        <details><summary>What happens when something breaks?</summary><p>Placeholder answer. It's built to tell us before it tells you. Support after handover is optional.</p></details>
+        <details><summary>How long until something is running?</summary><p>The first process is usually live in two to four weeks. Bigger systems are built in stages, each one running before the next starts.</p></details>
+        <details><summary>Will it work with the software we already use?</summary><p>Almost always. Most of the work connects what you have: your accounting software, your CRM, your inbox, your calendar.</p></details>
+        <details><summary>Do I need to be technical?</summary><p>No. You need to know how the work moves through your business. We handle the rest and show you how to change things.</p></details>
+        <details><summary>What does it cost?</summary><p>A fixed price per process, agreed before we start, with the hours it saves written next to it.</p></details>
+        <details><summary>What happens when something breaks?</summary><p>It's built to tell us before it tells you. Support after handover is optional.</p></details>
       </div>
     </div>
   </div>

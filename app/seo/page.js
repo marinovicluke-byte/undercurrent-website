@@ -118,7 +118,7 @@ export default function Seo() {
     <div className="two">
       <div>
         <h2 className="rv">Built with you, not delivered to you.</h2>
-        <div className="ph ph--light ph--tag rv" style={{"--i":"1",marginTop:"32px"}}>Photo of Luke</div>
+        <div className="ph ph--photo rv" role="img" aria-label="Luke Marinovic" style={{"--i":"1",marginTop:"32px","--img":"url(/assets/about4-800.jpg)","--y":"40%"}}></div>
       </div>
       <ol className="steps rv" style={{"--i":"1"}}>
         <li className="rowb"><div><h3>Talk</h3><p>What you do, where you do it, and who you want ringing you.</p></div></li>
@@ -180,7 +180,7 @@ export default function Seo() {
         <div className="cell__case" hidden>
           <div><h4>Before</h4><p>A trade that only comes up when you already know the name. The work is good. The people looking for the job never get that far.</p></div>
           <div><h4>What we built</h4><p>The Google page filled in and kept up to date. A page for each job they do. Pages that answer what people ask before they call. And the fixes underneath, so Google can read the site.</p></div>
-          <div><h4>Result</h4><p>Result to confirm. What we watch is simple. How often they come up on the map, and how many calls come out of it.</p></div>
+          <div><h4>Result</h4><p>What we watch is simple. How often they come up on the map, and how many calls come out of it.</p></div>
         </div>
         <ol className="cell__flow" hidden>
           <li><small>Start</small>Someone searches for the job, not the business name</li>
@@ -259,11 +259,11 @@ export default function Seo() {
   <div className="wrap">
     <div className="sec__head"><span className="eyebrow">About</span></div>
     <div className="two about">
-      <div className="ph ph--light ph--tag rv">Photo of Luke</div>
+      <div className="ph ph--photo rv" role="img" aria-label="Luke Marinovic" style={{"--img":"url(/assets/luke-800.jpg)","--y":"30%"}}></div>
       <div>
         <h2 className="rv">The person you'll deal with.</h2>
         <p className="lead-p rv" style={{"--i":"1"}}>UnderCurrent is run by Luke Marinovic out of Melbourne. Strategy, design, code and automation under one roof, so nothing gets lost between the person who understands the problem and the person building the fix.</p>
-        <p className="rv" style={{"--i":"2"}}>Placeholder paragraph. Two or three sentences on the philosophy: why we do search this way, what we won't do to get a spot, and how we pick what to write about. Replace with the real story.</p>
+        <p className="rv" style={{"--i":"2"}}>We write pages that answer the question a customer actually asks, in plain words, and we keep your Google profile honest and current. We won't buy links or churn out pages nobody reads. We pick topics by what your customers already type in, not by what is easy to rank for.</p>
         <a className="link rv" style={{"--i":"3",marginTop:"36px"}} href="/about">More about us</a>
       </div>
     </div>
@@ -276,11 +276,11 @@ export default function Seo() {
     <div className="two faq">
       <h2 className="rv">Questions before the email.</h2>
       <div className="rv" style={{"--i":"1"}}>
-        <details><summary>How long until I see a change?</summary><p>Placeholder answer. Your Google page can move in a few weeks. The rest takes longer, usually three to six months before you feel it in the calls.</p></details>
-        <details><summary>What does it cost?</summary><p>Placeholder answer. A set price each month, agreed before we start, with what you get written next to it.</p></details>
-        <details><summary>Do I need a new website?</summary><p>Placeholder answer. Usually not. Most of the time we add pages to the site you have and fix what's already there.</p></details>
-        <details><summary>What is AI search, and does it matter for a business like mine?</summary><p>Placeholder answer. It means people asking ChatGPT, or reading Google's AI answer instead of clicking through to a website. It matters, because that answer names two or three businesses and you want to be one of them.</p></details>
-        <details><summary>What do you actually do each month?</summary><p>Placeholder answer. Write pages, keep your Google page fresh, fix what's broken, and send you one page saying what moved.</p></details>
+        <details><summary>How long until I see a change?</summary><p>Your Google page can move in a few weeks. The rest takes longer, usually three to six months before you feel it in the calls.</p></details>
+        <details><summary>What does it cost?</summary><p>A set price each month, agreed before we start, with what you get written next to it.</p></details>
+        <details><summary>Do I need a new website?</summary><p>Usually not. Most of the time we add pages to the site you have and fix what's already there.</p></details>
+        <details><summary>What is AI search, and does it matter for a business like mine?</summary><p>It means people asking ChatGPT, or reading Google's AI answer instead of clicking through to a website. It matters, because that answer names two or three businesses and you want to be one of them.</p></details>
+        <details><summary>What do you actually do each month?</summary><p>Write pages, keep your Google page fresh, fix what's broken, and send you one page saying what moved.</p></details>
       </div>
     </div>
   </div>

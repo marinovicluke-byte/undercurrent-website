@@ -116,7 +116,7 @@ export default function Home() {
         <span className="cell__plus" aria-hidden="true">+</span>
         <div className="cell__long" hidden><p>A healthcare provider's invoicing meant retyping the same job details after every shift, then hunting for the right template.</p><p>Now the job is spoken, the invoice writes itself, and it lands formatted and ready to send. Corrections are spoken too.</p></div>
       </article>
-      <article className="cell c-orange rv" style={{"--i":"3"}} tabIndex="0" role="button" data-client="Construction" data-res="Live. Result to confirm."><i className="cell__sig"></i><i className="cell__glow"></i><i className="cell__fade"></i>
+      <article className="cell c-orange rv" style={{"--i":"3"}} tabIndex="0" role="button" data-client="Construction" data-res="Live. Site and UI speaking the same language."><i className="cell__sig"></i><i className="cell__glow"></i><i className="cell__fade"></i>
         <span className="eyebrow">Construction</span>
         <h3>Web + UI Design</h3>
         <p className="cell__desc">Premium website and UI design with an animated scroll-through.</p>
@@ -132,7 +132,7 @@ export default function Home() {
         <span className="cell__plus" aria-hidden="true">+</span>
         <div className="cell__long" hidden><p>An alternative medicine clinic needed to be found by people searching locally, and increasingly by people asking an AI instead of Google.</p><p>Local SEO, a service page for every treatment, and content written to answer the questions patients actually ask, in the shape both Google and AI answers can use.</p></div>
       </article>
-      <article className="cell c-plum rv" style={{"--i":"5"}} tabIndex="0" role="button" data-client="Photography" data-res="Leads captured and followed up automatically. Result to confirm."><i className="cell__sig"></i><i className="cell__glow"></i><i className="cell__fade"></i>
+      <article className="cell c-plum rv" style={{"--i":"5"}} tabIndex="0" role="button" data-client="Photography" data-res="Live. Leads captured and followed up automatically."><i className="cell__sig"></i><i className="cell__glow"></i><i className="cell__fade"></i>
         <span className="eyebrow">Photography</span>
         <h3>Campaign Automation</h3>
         <p className="cell__desc">A raffle campaign built to drive engagement, with automated lead management running behind it.</p>
@@ -205,7 +205,7 @@ export default function Home() {
       <div>
         <h2 className="rv">A small studio that cares how the work is done.</h2>
         <p className="rv" style={{"--i":"1"}}>UnderCurrent is run by Luke Marinovic out of Melbourne. Strategy, design, code and automation under one roof, so nothing gets lost between the person who understands the problem and the person building the fix.</p>
-        <p className="rv" style={{"--i":"2"}}>Placeholder paragraph. Two or three sentences on how we work, who we work with, and what we won't do. Replace with the real story.</p>
+        <p className="rv" style={{"--i":"2"}}>We work with small businesses that already run well and want to run better. We start with the job that eats the most time, fix that first, and only build more once the first fix has paid for itself. We won't sell you a tool you don't need.</p>
         <a className="link rv" style={{"--i":"3",marginTop:"36px"}} href="/about">Read the full story</a>
       </div>
     </div>
@@ -229,11 +229,11 @@ export default function Home() {
     <div className="faq">
       <h2 className="rv">Questions we get asked most.</h2>
       <div className="rv" style={{"--i":"1"}}>
-        <details><summary>What kind of businesses do you work with?</summary><p>Placeholder answer. Small and mid-sized service businesses that already have a process worth improving.</p></details>
-        <details><summary>How long does a typical project take?</summary><p>Placeholder answer. A first automation is usually live in two to four weeks. Larger systems are scoped in stages.</p></details>
-        <details><summary>Do we need to change our software?</summary><p>Placeholder answer. Rarely. Most of the work connects what you already use.</p></details>
-        <details><summary>What does it cost?</summary><p>Placeholder answer. Fixed price per project, agreed before we start.</p></details>
-        <details><summary>What happens after it's built?</summary><p>Placeholder answer. Documentation, a handover session, and an optional support arrangement.</p></details>
+        <details><summary>What kind of businesses do you work with?</summary><p>Small and mid-sized service businesses that already have a process worth improving.</p></details>
+        <details><summary>How long does a typical project take?</summary><p>A first automation is usually live in two to four weeks. Larger systems are scoped in stages.</p></details>
+        <details><summary>Do we need to change our software?</summary><p>Rarely. Most of the work connects what you already use.</p></details>
+        <details><summary>What does it cost?</summary><p>Fixed price per project, agreed before we start.</p></details>
+        <details><summary>What happens after it's built?</summary><p>Documentation, a handover session, and an optional support arrangement.</p></details>
       </div>
     </div>
   </div>

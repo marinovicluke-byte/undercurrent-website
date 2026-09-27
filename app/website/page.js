@@ -118,7 +118,7 @@ export default function WebsiteDesignPage() {
     <div className="two">
       <div>
         <h2 className="rv">Built with you, not delivered to you.</h2>
-        <div className="ph ph--light ph--tag rv" style={{"--i":"1",marginTop:"32px"}}>Photo of Luke</div>
+        <div className="ph ph--photo rv" role="img" aria-label="Luke Marinovic" style={{"--i":"1",marginTop:"32px","--img":"url(/assets/about4-800.jpg)","--y":"40%"}}></div>
       </div>
       <ol className="steps rv" style={{"--i":"1"}}>
         <li className="rowb"><div><h3>Talk</h3><p>What you do, who you want to hear from, and what you want them to do on the site.</p></div></li>
@@ -192,24 +192,24 @@ export default function WebsiteDesignPage() {
           <li><small>Live</small>The page live, entries coming through it</li>
         </ol>
       </article>
-      <article className="cell cell--noshot rv" style={{"--i":"3"}} tabIndex="0" role="button" data-client="Placeholder"><i className="cell__sig"></i><i className="cell__glow"></i>
+      <article className="cell cell--noshot rv" style={{"--i":"3"}} tabIndex="0" role="button" data-client="Aspirant Projects"><i className="cell__sig"></i><i className="cell__glow"></i>
         <div className="cell__screen"><i className="cell__shot"></i><i className="cell__tv"></i></div>
-        <span className="eyebrow">Placeholder</span>
+        <span className="eyebrow">New site</span>
         <h3>Aspirant Projects</h3>
-        <p className="cell__desc">A new site for Aspirant Projects. The screenshot and the story go here once they land.</p>
-        <p className="cell__stat"><span>Live</span><small>site, details to come</small></p>
+        <p className="cell__desc">A new site for Aspirant Projects, drawn page by page and built for the phone first.</p>
+        <p className="cell__stat"><span>Live</span><small>new site</small></p>
         <span className="cell__plus" aria-hidden="true">+</span>
         <div className="cell__case" hidden>
-          <div><h4>Before</h4><p>Placeholder. What the old site was like, in Luke's words.</p></div>
-          <div><h4>What we built</h4><p>Placeholder. What the new site does and how it was made.</p></div>
-          <div><h4>Result</h4><p>Placeholder. What changed once it went live. To confirm.</p></div>
+          <div><h4>Before</h4><p>Work worth showing, and no site that showed it.</p></div>
+          <div><h4>What we built</h4><p>A new site, every page drawn before it was built, made for the phone first.</p></div>
+          <div><h4>Result</h4><p>The site is live. One link to send people to.</p></div>
         </div>
         <ol className="cell__flow" hidden>
-          <li><small>Start</small>Placeholder</li>
-          <li><small>Step</small>Placeholder</li>
-          <li><small>Step</small>Placeholder</li>
-          <li><small>Step</small>Placeholder</li>
-          <li><small>Live</small>Placeholder</li>
+          <li><small>Start</small>A business with no site to send people to</li>
+          <li><small>Step</small>The pages drawn, one job each</li>
+          <li><small>Step</small>Built for the phone first</li>
+          <li><small>Step</small>Checked on real phones before it went out</li>
+          <li><small>Live</small>The site live</li>
         </ol>
       </article>
     </div>
@@ -289,11 +289,11 @@ export default function WebsiteDesignPage() {
   <div className="wrap">
     <div className="sec__head"><span className="eyebrow">About</span></div>
     <div className="two about">
-      <div className="ph ph--light ph--tag rv">Photo of Luke</div>
+      <div className="ph ph--photo rv" role="img" aria-label="Luke Marinovic" style={{"--img":"url(/assets/luke-800.jpg)","--y":"30%"}}></div>
       <div>
         <h2 className="rv">The person you'll deal with.</h2>
         <p className="lead-p rv" style={{"--i":"1"}}>UnderCurrent is run by Luke Marinovic out of Melbourne. Strategy, design, code and automation under one roof, so nothing gets lost between the person who understands the problem and the person building the fix.</p>
-        <p className="rv" style={{"--i":"2"}}>Placeholder paragraph. Two or three sentences on the philosophy: why we design this way, what we won't put on a site, and how we decide what each page is for. Replace with the real story.</p>
+        <p className="rv" style={{"--i":"2"}}>Every page gets one job before it gets a design. If a page can't say what it's for in one sentence, it doesn't go up. No stock photos, no sliders, no words that could be about any business.</p>
         <a className="link rv" style={{"--i":"3",marginTop:"36px"}} href="/about">More about us</a>
       </div>
     </div>
@@ -306,11 +306,11 @@ export default function WebsiteDesignPage() {
     <div className="two faq">
       <h2 className="rv">Questions before the email.</h2>
       <div className="rv" style={{"--i":"1"}}>
-        <details><summary>How long does a site take?</summary><p>Placeholder answer. Most small sites go live in four to six weeks. Bigger ones go up in stages, a few pages at a time.</p></details>
-        <details><summary>What does it cost?</summary><p>Placeholder answer. A fixed price, agreed before we start. You see what's in it and what isn't.</p></details>
-        <details><summary>Can I change it myself?</summary><p>Placeholder answer. Yes. Text and photos you can edit yourself. We show you how and write it down.</p></details>
-        <details><summary>What happens to my old site and my spot on Google?</summary><p>Placeholder answer. We point every old page address at the new one, so Google and your links don't lose you.</p></details>
-        <details><summary>Do you write the words?</summary><p>Placeholder answer. Yes. We draft every page. You read it and tell us what doesn't sound like you.</p></details>
+        <details><summary>How long does a site take?</summary><p>Most small sites go live in four to six weeks. Bigger ones go up in stages, a few pages at a time.</p></details>
+        <details><summary>What does it cost?</summary><p>A fixed price, agreed before we start. You see what's in it and what isn't.</p></details>
+        <details><summary>Can I change it myself?</summary><p>Yes. Text and photos you can edit yourself. We show you how and write it down.</p></details>
+        <details><summary>What happens to my old site and my spot on Google?</summary><p>We point every old page address at the new one, so Google and your links don't lose you.</p></details>
+        <details><summary>Do you write the words?</summary><p>Yes. We draft every page. You read it and tell us what doesn't sound like you.</p></details>
       </div>
     </div>
   </div>

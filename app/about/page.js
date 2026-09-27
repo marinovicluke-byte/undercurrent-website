@@ -67,7 +67,7 @@ export default function AboutPage() {
       <span className="eyebrow rv" style={{"--i":"1"}}>The person</span>
       <h2 className="rv" style={{"--i":"1"}}>The person you'll deal with.</h2>
       <p className="lead-p rv" style={{"--i":"2"}}>UnderCurrent is run by Luke Marinovic. Strategy, design, code and automation, done by the same person, so nothing gets lost between the one who understands the problem and the one building the fix.</p>
-      <p className="rv" style={{"--i":"3"}}>Placeholder. Two sentences on Luke: what he did before this, and why he started UnderCurrent.</p>
+      <p className="rv" style={{"--i":"3"}}>Before UnderCurrent, Luke spent years inside businesses watching good people lose their days to admin a computer should be doing. He started UnderCurrent to fix that for small businesses, one process at a time.</p>
     </div>
   </div>
 </section>

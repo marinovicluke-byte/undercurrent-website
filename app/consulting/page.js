@@ -117,7 +117,7 @@ export default function Consulting() {
     <div className="two">
       <div>
         <h2 className="rv">Built with you, not delivered to you.</h2>
-        <div className="ph ph--light ph--tag rv" style={{"--i":"1",marginTop:"32px"}}>Photo of Luke</div>
+        <div className="ph ph--photo rv" role="img" aria-label="Luke Marinovic" style={{"--i":"1",marginTop:"32px","--img":"url(/assets/about4-800.jpg)","--y":"40%"}}></div>
       </div>
       <ol className="steps rv" style={{"--i":"1"}}>
         <li className="rowb"><div><h3>Talk</h3><p>What is working, what is not, and what you want a normal week to look like.</p></div></li>
@@ -266,11 +266,11 @@ export default function Consulting() {
   <div className="wrap">
     <div className="sec__head"><span className="eyebrow">About</span></div>
     <div className="two about">
-      <div className="ph ph--light ph--tag rv">Photo of Luke</div>
+      <div className="ph ph--photo rv" role="img" aria-label="Luke Marinovic" style={{"--img":"url(/assets/luke-800.jpg)","--y":"30%"}}></div>
       <div>
         <h2 className="rv">The person you'll deal with.</h2>
         <p className="lead-p rv" style={{"--i":"1"}}>UnderCurrent is run by Luke Marinovic out of Melbourne. Strategy, design, code and automation under one roof, so nothing gets lost between the person who understands the problem and the person building the fix.</p>
-        <p className="rv" style={{"--i":"2"}}>Placeholder paragraph. Two or three sentences on the philosophy: why the plan comes before the build, what we tell people not to do, and how we decide what is worth fixing first. Replace with the real story.</p>
+        <p className="rv" style={{"--i":"2"}}>The plan comes first, because building the wrong thing well is the most expensive mistake there is. We tell people not to buy software until they can name the job it does. We fix the thing that costs the most hours first, and we say so when the answer is to do nothing.</p>
         <a className="link rv" style={{"--i":"3",marginTop:"36px"}} href="/about">More about us</a>
       </div>
     </div>
@@ -283,11 +283,11 @@ export default function Consulting() {
     <div className="two faq">
       <h2 className="rv">Questions before the email.</h2>
       <div className="rv" style={{"--i":"1"}}>
-        <details><summary>What do I get at the end?</summary><p>Placeholder answer. A short plan you can read in one sitting. What to fix first, what it costs, and what it should be worth.</p></details>
-        <details><summary>How long does it take?</summary><p>Placeholder answer. The short look is about two weeks. The longer one runs month by month, for as long as it is useful.</p></details>
-        <details><summary>What does it cost?</summary><p>Placeholder answer. A fixed price for the short look, agreed before we start. The longer one is a monthly fee.</p></details>
-        <details><summary>Do I have to build it with you?</summary><p>Placeholder answer. No. The plan is yours. Take it to anyone you like, or do it yourself.</p></details>
-        <details><summary>What if the answer is to do nothing?</summary><p>Placeholder answer. Then we say so. Sometimes the fix is dropping a tool, not buying another one.</p></details>
+        <details><summary>What do I get at the end?</summary><p>A short plan you can read in one sitting. What to fix first, what it costs, and what it should be worth.</p></details>
+        <details><summary>How long does it take?</summary><p>The short look is about two weeks. The longer one runs month by month, for as long as it is useful.</p></details>
+        <details><summary>What does it cost?</summary><p>A fixed price for the short look, agreed before we start. The longer one is a monthly fee.</p></details>
+        <details><summary>Do I have to build it with you?</summary><p>No. The plan is yours. Take it to anyone you like, or do it yourself.</p></details>
+        <details><summary>What if the answer is to do nothing?</summary><p>Then we say so. Sometimes the fix is dropping a tool, not buying another one.</p></details>
       </div>
     </div>
   </div>
