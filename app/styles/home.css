@@ -150,6 +150,7 @@ h2{font-weight:500;letter-spacing:-.02em;font-size:clamp(28px,3.2vw,44px);line-h
 .band{position:absolute;inset:0;height:auto}
 .band::before{background:radial-gradient(90% 70% at 25% 100%,var(--b1),transparent 70%),radial-gradient(60% 50% at 95% 0%,var(--b2),transparent 70%)}
 .svc__body{position:relative;z-index:1;padding:32px 28px;justify-content:flex-end}
+.svc p{color:#fff} /* the subtext read too dark on the colour ground (2026-09-27) */
 .svc h3{margin-top:auto}
 .svc__body .svc__toggle{margin-top:28px}
 /* the mockup carried a dangling ".svc p," before a desktop min-height rule, so that rule never parsed and never applied. left out on purpose */
