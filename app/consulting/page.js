@@ -74,7 +74,6 @@ export default function Consulting() {
       <div className="rv" style={{"--i":"3"}}><b>1 in 3</b><span>of the ones not using it say they don't know where to start</span></div>
       <div className="rv" style={{"--i":"4"}}><b>30%</b><span>say the tech they bought last year made them more money</span></div>
     </div>
-    <p className="src rv" style={{"--i":"5"}}>Sources: Australian Bureau of Statistics, Characteristics of Australian Business 2024-25, released June 2026, nearly 7,000 businesses. Deloitte Australia, The AI edge for small business, November 2025, more than 1,000 Australian small and medium businesses. CPA Australia Asia-Pacific Small Business Survey 2025-26, more than 4,100 small businesses across 11 markets.</p>
   </div>
 </section>
 

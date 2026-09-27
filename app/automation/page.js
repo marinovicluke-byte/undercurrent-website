@@ -75,7 +75,6 @@ export default function Automation() {
       <div className="rv" style={{"--i":"3"}}><b>5.6 hrs</b><span>saved a week, per worker, once AI is in the routine</span></div>
       <div className="rv" style={{"--i":"4"}}><b>$209k</b><span>average revenue lift for Australian businesses running AI</span></div>
     </div>
-    <p className="src rv" style={{"--i":"5"}}>Sources: MYOB, April 2026, aggregated data from hundreds of thousands of Australian SMEs. Business.com 2026 Small Business AI Outlook, 1,009 respondents. Intuit QuickBooks AI Impact Report, Australia 2026, 3,790 businesses. Salesforce SMB Trends, 6th edition, 3,350 SMB leaders.</p>
   </div>
 </section>
 

@@ -75,7 +75,6 @@ export default function WebsiteDesignPage() {
       <div className="rv" style={{"--i":"3"}}><b>8.4%</b><span>more sales after a phone site got a tenth of a second faster</span></div>
       <div className="rv" style={{"--i":"4"}}><b>3 in 4</b><span>Australians trust a business more when its website ends in .au</span></div>
     </div>
-    <p className="src rv" style={{"--i":"5"}}>Sources: ABS, Characteristics of Australian Business, year ended 30 June 2025, a random sample of about 7,000 employing businesses. 44.6% of businesses with 0 to 4 people had their own website or app. Google, Deloitte Digital and fifty-five, Milliseconds Make Millions, 2020, 37 retail, travel, luxury and lead generation brands in Europe and the US, four weeks of site data. auDA, Why .au?, research by Sagacity Research, March 2024, 840 Australian consumers.</p>
   </div>
 </section>
 

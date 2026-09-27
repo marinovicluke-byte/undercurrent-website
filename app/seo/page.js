@@ -75,7 +75,6 @@ export default function Seo() {
       <div className="rv" style={{"--i":"3"}}><b>12%</b><span>of Australians say an AI tool is now their main way of finding things online, up from 5%</span></div>
       <div className="rv" style={{"--i":"4"}}><b>Half</b><span>as many clicks on websites when Google puts its own AI answer on top</span></div>
     </div>
-    <p className="src rv" style={{"--i":"5"}}>Sources: IAB Australia, Commerce and Discovery Report 2026, released July 2026, 1,079 Australians aged 18 to 70 who shop online, run with Pureprofile. Telsyte Australian Artificial Intelligence Study 2026, 2,023 Australians aged 16 and over, surveyed April to May 2026. Pew Research Center, July 2025, browsing data from 900 US adults across March 2025.</p>
   </div>
 </section>
 
