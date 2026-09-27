@@ -211,7 +211,7 @@ export default function Seo() {
       <div className="tm">
         <div className="ph ph--photo" role="img" aria-label="Edward" style={{"--img":"url(/assets/tm-edward.jpg)","--y":"28%"}}></div>
         <blockquote>We came for one automation and ended up with a system we actually understand. The team runs it themselves now.</blockquote>
-        <cite><b>Edward</b>Practice manager, Business</cite>
+        <cite><b>Edward Bun</b>Director, Lyso</cite>
       </div>
     </div>
   </div>
