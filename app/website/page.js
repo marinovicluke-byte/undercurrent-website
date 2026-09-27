@@ -232,14 +232,14 @@ export default function WebsiteDesignPage() {
     <div className="tms rv" tabIndex="0">
       <div className="tms__track">
         <div className="tm">
+          <div className="ph ph--photo" role="img" aria-label="Allyjana" style={{"--img":"url(/assets/tm-allyjana.jpg)","--x":"47%","--y":"18%"}}></div>
+          <blockquote>Before working with Luke we didn't have a website at all. Since then we've seen our demand increase 3x, and it's saved me hours of work every week because it's all automated and nothing falls through the cracks now.</blockquote>
+          <cite><b>Allyjana</b>Director, Allyjana Marie Creative</cite>
+        </div>
+        <div className="tm">
           <div className="ph ph--photo" role="img" aria-label="Edward" style={{"--img":"url(/assets/tm-edward.jpg)","--y":"28%"}}></div>
           <blockquote>We came for one automation and ended up with a system we actually understand. The team runs it themselves now.</blockquote>
           <cite><b>Edward</b>Practice manager, Business</cite>
-        </div>
-        <div className="tm">
-          <div className="ph ph--photo" role="img" aria-label="Allyjana" style={{"--img":"url(/assets/tm-allyjana.jpg)","--x":"47%","--y":"18%"}}></div>
-          <blockquote>Before that we didn't have a website at all. Since then we've seen our demand increase 3x, and it's saved me hours of work every week because it's all automated and nothing falls through the cracks now.</blockquote>
-          <cite><b>Allyjana</b>Director, Allyjana Marie Creative</cite>
         </div>
       </div>
       <div className="tm-dots" aria-label="Choose testimonial"></div>

@@ -156,14 +156,14 @@ export default function Home() {
     <div className="tms rv" tabIndex="0">
       <div className="tms__track">
         <div className="tm">
-          <div className="ph ph--photo" role="img" aria-label="Vildan" style={{"--img":"url(/assets/tm-vildan.jpg)","--y":"30%"}}></div>
-          <blockquote>They took a process that used to take our office two days a week and made it disappear. We didn't notice how much time we'd lost until we got it back.</blockquote>
-          <cite><b>Vildan</b>Owner, Business</cite>
+          <div className="ph ph--photo" role="img" aria-label="Allyjana" style={{"--img":"url(/assets/tm-allyjana.jpg)","--x":"47%","--y":"18%"}}></div>
+          <blockquote>Before working with Luke we didn't have a website at all. Since then we've seen our demand increase 3x, and it's saved me hours of work every week because it's all automated and nothing falls through the cracks now.</blockquote>
+          <cite><b>Allyjana</b>Director, Allyjana Marie Creative</cite>
         </div>
         <div className="tm">
-          <div className="ph ph--photo" role="img" aria-label="Allyjana" style={{"--img":"url(/assets/tm-allyjana.jpg)","--x":"47%","--y":"18%"}}></div>
-          <blockquote>Before that we didn't have a website at all. Since then we've seen our demand increase 3x, and it's saved me hours of work every week because it's all automated and nothing falls through the cracks now.</blockquote>
-          <cite><b>Allyjana</b>Director, Allyjana Marie Creative</cite>
+          <div className="ph ph--photo" role="img" aria-label="Vildan" style={{"--img":"url(/assets/tm-vildan.jpg)","--y":"30%"}}></div>
+          <blockquote>They took a process that used to take our office two days a week and made it disappear. We didn't notice how much time we'd lost until we got it back.</blockquote>
+          <cite><b>Vildan</b>Owner, Intelligentle Healing</cite>
         </div>
         <div className="tm">
           <div className="ph ph--photo" role="img" aria-label="Edward" style={{"--img":"url(/assets/tm-edward.jpg)","--y":"28%"}}></div>
