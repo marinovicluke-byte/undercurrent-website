@@ -230,7 +230,7 @@ export default function Automation() {
       <div className="tms__track">
         <div className="tm">
           <div className="ph ph--photo" role="img" aria-label="Allyjana" style={{"--img":"url(/assets/tm-allyjana.jpg)","--x":"47%","--y":"18%"}}></div>
-          <blockquote>Clear about what they'd do, clear about what it would cost, and it worked the way they said it would. That's rarer than it should be.</blockquote>
+          <blockquote>Before that we didn't have a website at all. Since then we've seen our demand increase 3x, and it's saved me hours of work every week because it's all automated and nothing falls through the cracks now.</blockquote>
           <cite><b>Allyjana</b>Director, Allyjana Marie Creative</cite>
         </div>
         <div className="tm">
