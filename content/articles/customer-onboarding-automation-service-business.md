@@ -7,7 +7,7 @@ cluster: "foundations"
 keyword: "customer onboarding automation"
 author: "Luke"
 level: "intermediate"
-readingTime: "14 min read"
+readingTime: 14
 summary: "Customer onboarding automation for service businesses, what to automate, what to keep human, and how to get a client signed and paying inside a week."
 faqs:
   - q: "What does onboarding automation include for a service business?"

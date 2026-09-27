@@ -7,7 +7,7 @@ cluster: "foundations"
 keyword: "ai search optimisation"
 author: "Luke"
 level: "intermediate"
-readingTime: "11 min read"
+readingTime: 11
 summary: "AI search optimisation means structuring your website so that tools like ChatGPT, Perplexity, and Google AI Overviews cite your business when customers ask q..."
 faqs:
   - q: "How long does it take to see results from AI search optimisation?"

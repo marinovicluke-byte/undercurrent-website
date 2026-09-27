@@ -1,7 +1,8 @@
 // components/site/Post.js — the blog row and its thumbnail, as the index and the
-// article's Read next use them. A real cover (public/articles/<slug>/hero.jpg,
-// 3:2) is treated in the category colour like the mockup's photo; without one
-// the ink mark stands in.
+// article's Read next use them. Every thumb wears the category colour and the
+// ink mark. The old hero posters (public/articles/<slug>/hero.jpg) read as dark
+// tiles with tiny type in the thumb, so they stay out (Luke, 2026-09-27). They
+// still serve as the article's OG image and schema image, via hasCover.
 import fs from 'node:fs'
 import path from 'node:path'
 import { categoryOf, fmtDate } from '@/lib/categories'
@@ -12,11 +13,7 @@ export function hasCover(slug) {
   return covers.get(slug)
 }
 
-export function Thumb({ slug, big = false }) {
-  if (hasCover(slug)) {
-    const src = `/_next/image?url=${encodeURIComponent(`/articles/${slug}/hero.jpg`)}&w=${big ? 828 : 384}&q=75`
-    return <span className="thumb"><span className="thumb__ph thumb__ph--img"><img src={src} alt="" loading="lazy" decoding="async" width="1536" height="1024" /></span><i className="hero__layer hero__grain"></i></span>
-  }
+export function Thumb() {
   return <span className="thumb"><i className="hero__layer band"></i><i className="hero__layer hero__glow b"></i><i className="hero__layer hero__grain"></i><img className="thumb__icon" src="/assets/mark-ink.png" alt="" /></span>
 }
 
