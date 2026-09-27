@@ -41,10 +41,6 @@ export const metadata = {
     card: 'summary_large_image',
     images: ['/brand/og-card.png'],
   },
-  icons: {
-    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
-    apple: [{ url: '/apple-touch-icon.svg', sizes: '180x180', type: 'image/svg+xml' }],
-  },
   robots: {
     index: true,
     follow: true,
