@@ -25,6 +25,7 @@ main{max-width:1520px;margin:0 auto;padding:0 var(--pad) 120px}
 .intro{max-width:76ch;padding:clamp(48px,6vw,88px) 0 0}
 .intro h1{font-size:clamp(32px,4.4vw,60px);font-weight:500;letter-spacing:-.035em;line-height:1.04}
 .intro p{margin-top:18px;font-size:17px;line-height:1.6;color:var(--ink-2)}
+.intro p:first-child{margin:0 0 32px;padding-bottom:18px;border-bottom:1px solid var(--line);color:var(--ink)}
 .intro p b{font-weight:500;color:var(--ink)}
 .intro code,.look code{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--ink-2)}
 .fam{margin-top:clamp(72px,8vw,120px);padding-top:20px;border-top:1px solid var(--line)}
@@ -51,7 +52,7 @@ body.desk iframe{width:1440px}
 </style>
 </head>
 <body>
-<header class="bar"><b>Article blocks, round 3</b>
+<header class="bar"><b>Article blocks, round 3, the record</b>
   <nav class="jump" aria-label="Families"><a href="#steps">Steps</a><a href="#pair">Pair</a><a href="#data">Data table</a><a href="#qa">Quick Answer</a><a href="#workings">Workings</a></nav>
   <div class="toggle" role="group" aria-label="Frame width">
     <button type="button" data-mode="phone" aria-pressed="true">Phone 390</button>
@@ -60,10 +61,11 @@ body.desk iframe{width:1440px}
 </header>
 <main>
 <section class="intro">
+  <p><b>Locked 2 October 2026.</b> Luke picked Fill, Weight, Rail, Deck and Worked, and those five are the only looks the site ships. This board is the record of the round: frozen, on its own stylesheet, the other fourteen kept only here.</p>
   <h1>19 looks, five blocks, cut from the live site</h1>
   <p>Round 2 dressed the blocks in BRAND.md. This round takes undercurrentautomations.com as the design (<code>docs/blocks-design-notes.md</code>): Inter, the one hairline, square corners, the grain cross, the hero's striped lettering, colour only at the size of a mark. Every look is new and rests on its own idea, written under its name. Swap a look's wrapper for another's and the idea still has to be different.</p>
   <p><b>What Ledger, Ramp and Pills had in common:</b> nothing boxed, the hairline as the only structure, and the type (a numeral, a label) carrying the order and the verdict. Every look here starts from that.</p>
-  <p>Each frame is the article page's own CSS around copy lifted from live UC articles, run through the real transform. A look is one class on the article: <code>BLOCK_LOOKS</code> in <code>app/blog/[slug]/page.js</code>. Real <code>&lt;ol&gt;</code>, <code>&lt;table&gt;</code> and <code>&lt;p&gt;&lt;strong&gt;</code> in every look, phone and desktop by CSS alone, nothing hidden behind a tap.</p>
+  <p>Each frame is the article page's own CSS around copy lifted from live UC articles, run through the real transform. The frames were rendered by the round 3 transform and are kept as they were. Real <code>&lt;ol&gt;</code>, <code>&lt;table&gt;</code> and <code>&lt;p&gt;&lt;strong&gt;</code> in every look, phone and desktop by CSS alone, nothing hidden behind a tap.</p>
 </section>
 
 <section class="fam" id="steps">
