@@ -5,49 +5,53 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Article Blocks Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-@font-face{font-family:'Satoshi';src:url(/fonts/Satoshi-Variable.woff2) format('woff2');font-weight:300 900;font-display:swap}
-@font-face{font-family:'Switzer';src:url(/fonts/switzer-400.woff2) format('woff2');font-weight:400;font-display:swap}
-@font-face{font-family:'Switzer';src:url(/fonts/switzer-600.woff2) format('woff2');font-weight:600;font-display:swap}
-:root{--paper:#FCFCFC;--card:#fff;--soft:#F4F4F2;--charcoal:#262624;--ink-strong:#1C1C1A;--ink:#333;--ink-soft:#525252;--rule:#D8D8D4;--hair:rgba(38,38,36,.14);--blue:#2563EB;--b50:#F1F6FF;--b700:#1B47A0;--r:16px;--pp:10px;--shadow:0 1px 8px -2px rgba(0,0,0,.12);--pad:clamp(16px,4vw,56px)}
+:root{--white:#fff;--off:#f6f6f6;--ink:#141414;--ink-2:#6b6b6b;--line:rgba(20,20,20,.14);--c0:hsl(160 45% 34%);--pad:clamp(16px,4vw,56px);
+  --noise-coarse:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.32' numOctaves='1' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Switzer,system-ui,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.5}
-::selection{background:#DEEAFF;color:var(--ink-strong)}
-h1,h2,h3,.bar b{font-family:Satoshi,system-ui,sans-serif;font-weight:700;color:var(--ink-strong)}
-.bar{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding:12px var(--pad);background:var(--charcoal);color:#FAF9F5}
-.bar b{font-size:16px;letter-spacing:-.01em;color:#FAF9F5}
-.jump{display:flex;flex-wrap:wrap;gap:6px}
-.jump a{font-size:13px;color:rgba(250,249,245,.72);text-decoration:none;padding:4px 10px;border-radius:999px}
-.jump a:hover{color:#fff;background:rgba(250,249,245,.08)}
-.toggle{display:flex;gap:4px;padding:4px;border-radius:999px;background:rgba(250,249,245,.08)}
-.toggle button{font:inherit;font-size:13px;font-weight:600;padding:7px 14px;min-height:36px;border:0;border-radius:999px;background:transparent;color:rgba(250,249,245,.72);cursor:pointer}
-.toggle button[aria-pressed=true]{background:#fff;color:var(--ink-strong)}
-.toggle button:focus-visible,.jump a:focus-visible{outline:2px solid #5E8EEC;outline-offset:2px}
-main{max-width:1520px;margin:0 auto;padding:0 var(--pad) 96px}
-.intro{max-width:70ch;padding:44px 0 8px}
-.intro h1{font-size:clamp(30px,4vw,52px);letter-spacing:-.03em;line-height:1.05}
-.intro p{margin-top:14px;font-size:16px;color:var(--ink-soft)}
-.intro code,.look code{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--ink-soft);background:var(--soft);padding:2px 6px;border-radius:6px}
-.fam{margin-top:48px;padding:var(--pp);border-radius:calc(var(--r) + var(--pp));background:var(--soft)}
-.fam__head{display:flex;align-items:center;gap:12px;padding:18px 14px 0}
-.fam h2{font-size:clamp(24px,2.6vw,34px);letter-spacing:-.03em}
-.chip{display:inline-block;font-size:13px;line-height:1.6;padding:1px 10px;border-radius:999px;background:var(--card);color:var(--ink-soft)}
-.chip--on{background:var(--blue);color:#fff;font-weight:600}
-.what{max-width:80ch;padding:8px 14px 16px;font-size:15px;color:var(--ink-soft)}
-.looks{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--pp)}
-.look{display:flex;flex-direction:column;min-width:0;padding:16px;border-radius:var(--r);background:var(--card);box-shadow:var(--shadow)}
-.look__head{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
-.look h3{font-size:19px;letter-spacing:-.02em;margin-right:auto}
-.stage{margin-top:12px;border-radius:10px;overflow:hidden;background:#fff;box-shadow:inset 0 0 0 1px var(--hair)}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;line-height:1.5}
+::selection{background:hsl(160 45% 34% / .2)}
+a{color:inherit;text-decoration:none}
+.bar{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 28px;padding:16px var(--pad);background:var(--white);box-shadow:0 1px 0 var(--line)}
+.bar b{font-size:15px;font-weight:500;letter-spacing:-.01em}
+.jump,.toggle{display:flex;flex-wrap:wrap;gap:4px 22px}
+.jump a,.toggle button{font:inherit;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);padding:6px 0;border:0;border-bottom:1px solid transparent;background:none;cursor:pointer;transition:color .3s,border-color .3s}
+.jump a:hover,.toggle button:hover{color:var(--ink)}
+.toggle button[aria-pressed=true]{color:var(--ink);border-bottom-color:var(--c0)}
+:focus-visible{outline:1px solid var(--ink);outline-offset:4px}
+main{max-width:1520px;margin:0 auto;padding:0 var(--pad) 120px}
+.intro{max-width:76ch;padding:clamp(48px,6vw,88px) 0 0}
+.intro h1{font-size:clamp(32px,4.4vw,60px);font-weight:500;letter-spacing:-.035em;line-height:1.04}
+.intro p{margin-top:18px;font-size:17px;line-height:1.6;color:var(--ink-2)}
+.intro p b{font-weight:500;color:var(--ink)}
+.intro code,.look code{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--ink-2)}
+.fam{margin-top:clamp(72px,8vw,120px);padding-top:20px;border-top:1px solid var(--line)}
+.label{display:flex;gap:14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.fam h2{margin-top:clamp(28px,3vw,44px);font-size:clamp(30px,3.4vw,46px);font-weight:500;letter-spacing:-.03em;line-height:1.08}
+.what{margin-top:14px;max-width:80ch;font-size:16px;line-height:1.6;color:var(--ink-2)}
+.pick{margin-top:14px;max-width:80ch;font-size:16px;line-height:1.6}
+.pick b{font-weight:500}
+.looks{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));margin-top:clamp(32px,4vw,48px);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.look{position:relative;display:flex;flex-direction:column;min-width:0;padding:22px 22px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.look:nth-child(even){background:var(--off)}
+.look__head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.look h3{font-size:22px;font-weight:500;letter-spacing:-.02em;margin-right:auto}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.tag::before{content:"";width:11px;height:11px;background:linear-gradient(var(--c0),var(--c0)),var(--noise-coarse) 0 0/220px 220px;background-blend-mode:multiply;-webkit-mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat}
+.look code{flex-basis:100%}
+.idea{margin-top:12px;font-size:15px;line-height:1.5}
+.stage{margin-top:16px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--line)}
 iframe{display:block;border:0;width:390px;height:400px;transform-origin:0 0}
-.honest{margin-top:12px;font-size:14px;line-height:1.5;color:var(--ink-soft)}
-.honest b{font-weight:600;color:var(--ink-strong)}
+.honest{margin-top:14px;font-size:14px;line-height:1.5;color:var(--ink-2)}
+.honest b{font-weight:500;color:var(--ink)}
 body.desk .looks{grid-template-columns:1fr}
 body.desk iframe{width:1440px}
 </style>
 </head>
 <body>
-<header class="bar"><b>Article blocks, round 2</b>
+<header class="bar"><b>Article blocks, round 3</b>
   <nav class="jump" aria-label="Families"><a href="#steps">Steps</a><a href="#pair">Pair</a><a href="#data">Data table</a><a href="#qa">Quick Answer</a><a href="#workings">Workings</a></nav>
   <div class="toggle" role="group" aria-label="Frame width">
     <button type="button" data-mode="phone" aria-pressed="true">Phone 390</button>
@@ -56,113 +60,123 @@ body.desk iframe{width:1440px}
 </header>
 <main>
 <section class="intro">
-  <h1>19 looks across five blocks, on BRAND.md</h1>
-  <p>Every frame is the live article page's own CSS around copy lifted from live UC articles and run through the real transform, so what you see is what ships. A look is one class on the article: change <code>BLOCK_LOOKS</code> in <code>app/blog/[slug]/page.js</code>. Each block follows BRAND.md: one blue, a blue ramp for data, never red or green, Satoshi and Switzer, rounded tiles. The page around them is still the September design.</p>
-  <p>The scrape rule holds in every look: an ordered list stays an <code>&lt;ol&gt;</code>, a table stays a <code>&lt;table&gt;</code>, the Quick Answer sentence is a <code>&lt;p&gt;&lt;strong&gt;</code> first, phone and desktop are CSS only, nothing hidden or duplicated, nothing behind a tap or a script.</p>
+  <h1>19 looks, five blocks, cut from the live site</h1>
+  <p>Round 2 dressed the blocks in BRAND.md. This round takes undercurrentautomations.com as the design (<code>docs/blocks-design-notes.md</code>): Inter, the one hairline, square corners, the grain cross, the hero's striped lettering, colour only at the size of a mark. Every look is new and rests on its own idea, written under its name. Swap a look's wrapper for another's and the idea still has to be different.</p>
+  <p><b>What Ledger, Ramp and Pills had in common:</b> nothing boxed, the hairline as the only structure, and the type (a numeral, a label) carrying the order and the verdict. Every look here starts from that.</p>
+  <p>Each frame is the article page's own CSS around copy lifted from live UC articles, run through the real transform. A look is one class on the article: <code>BLOCK_LOOKS</code> in <code>app/blog/[slug]/page.js</code>. Real <code>&lt;ol&gt;</code>, <code>&lt;table&gt;</code> and <code>&lt;p&gt;&lt;strong&gt;</code> in every look, phone and desktop by CSS alone, nothing hidden behind a tap.</p>
 </section>
 
 <section class="fam" id="steps">
-  <div class="fam__head"><h2>Steps</h2><span class="chip">four looks</span></div>
-  <p class="what">An ordered list under a bold title. A trailing bold is the step's timing, shown as a chip. Copy: the ranking window (does-chatgpt-search-the-web) and the proof article's three steps.</p>
+  <p class="label"><span>01</span>Steps, four looks</p>
+  <h2>Steps</h2>
+  <p class="what">An ordered list under a bold title; a trailing bold is the step's timing. Copy: the proof article's three steps, then the ranking window (does-chatgpt-search-the-web), the only steps on the site with timings.</p>
+  <p class="pick"><b>Pick: Fill.</b> It keeps what you liked in Ledger and Ramp, a numeral column on hairlines and order you can see, and draws it in the hero's own lettering. No other site has that numeral.</p>
   <div class="looks">
-    <article class="look">
-      <div class="look__head"><h3>Ledger</h3><span class="chip chip--on">On the proof</span><code>ucb-steps--ledger</code></div>
-      <div class="stage"><iframe title="Steps, Ledger" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+    <article class="look look--pick">
+      <div class="look__head"><h3>Fill</h3><span class="tag">Pick</span><code>ucb-steps--fill</code></div>
+      <p class="idea">The numerals are the hero's striped lettering, and each fills from the foot in the article's colour as far as the run has gone: a third full at step one of three, solid at the last.</p>
+      <div class="stage"><iframe title="Steps, Fill" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
 &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ledger ucb-pairs--panel ucb-data--fit ucb-qa--plain ucb-work--receipt c-auto&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb ucb--steps&quot; role=&quot;group&quot; aria-label=&quot;Your ranking window&quot;>&lt;p class=&quot;ucb__title&quot;>Your ranking window&lt;/p>&lt;ol class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Publish window&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>May 2026&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Indexation&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Jun-Jul&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Citation accumulation&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Aug-Oct&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Training cutoff&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Likely Nov 2026&lt;/span>&lt;/li>
-&lt;/ol>&lt;p class=&quot;ucb__note&quot;>Earned mentions on Reddit/Wikipedia/PR weight heaviest in this window. Schema tweaks weight near-zero. Crawler accessibility is table stakes.&lt;/p>&lt;/div>
-
-&lt;div class=&quot;ucb ucb--steps&quot; role=&quot;group&quot; aria-label=&quot;Find your first job in three steps&quot;>&lt;p class=&quot;ucb__title&quot;>Find your first job in three steps&lt;/p>&lt;ol class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>List every admin task you did last week and how long it took.&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Circle the one that repeats weekly and follows the same steps.&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Time it for two weeks, so you know what &quot;better&quot; means later.&lt;/span>&lt;/li>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--fill ucb-pairs--weight ucb-data--rail ucb-qa--deck ucb-work--worked&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb ucb--steps&quot; role=&quot;group&quot; aria-label=&quot;Find your first job in three steps&quot;>&lt;p class=&quot;ucb__title&quot;>Find your first job in three steps&lt;/p>&lt;ol class=&quot;ucb__list&quot; role=&quot;list&quot; style=&quot;--of:3&quot;>
+&lt;li style=&quot;--n:1&quot;>&lt;span class=&quot;ucb__text&quot;>List every admin task you did last week and how long it took.&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot;>&lt;span class=&quot;ucb__text&quot;>Circle the one that repeats weekly and follows the same steps.&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:3&quot;>&lt;span class=&quot;ucb__text&quot;>Time it for two weeks, so you know what &quot;better&quot; means later.&lt;/span>&lt;/li>
 &lt;/ol>&lt;/div>
-&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> The quietest of the four; it reads as part of the page more than as a feature.</p>
+
+&lt;div class=&quot;ucb ucb--steps&quot; role=&quot;group&quot; aria-label=&quot;Your ranking window&quot;>&lt;p class=&quot;ucb__title&quot;>Your ranking window&lt;/p>&lt;ol class=&quot;ucb__list&quot; role=&quot;list&quot; style=&quot;--of:4&quot;>
+&lt;li style=&quot;--n:1&quot;>&lt;span class=&quot;ucb__text&quot;>Publish window&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>May 2026&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot;>&lt;span class=&quot;ucb__text&quot;>Indexation&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Jun-Jul&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:3&quot;>&lt;span class=&quot;ucb__text&quot;>Citation accumulation&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Aug-Oct&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:4&quot;>&lt;span class=&quot;ucb__text&quot;>Training cutoff&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Likely Nov 2026&lt;/span>&lt;/li>
+&lt;/ol>&lt;p class=&quot;ucb__note&quot;>Earned mentions on Reddit/Wikipedia/PR weight heaviest in this window. Schema tweaks weight near-zero. Crawler accessibility is table stakes.&lt;/p>&lt;/div>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> The colour is the biggest on the paper after the hero; past eight steps the fills differ by a sliver.</p>
     </article>
     <article class="look">
-      <div class="look__head"><h3>Track</h3><code>ucb-steps--track</code></div>
-      <div class="stage"><iframe title="Steps, Track" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+      <div class="look__head"><h3>Relay</h3><code>ucb-steps--relay</code></div>
+      <p class="idea">The steps are the service page's problem grid read left to right, the grain cross on the hairline where one step hands to the next.</p>
+      <div class="stage"><iframe title="Steps, Relay" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
 &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--track ucb-pairs--panel ucb-data--fit ucb-qa--plain ucb-work--receipt c-auto&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb ucb--steps&quot; role=&quot;group&quot; aria-label=&quot;Your ranking window&quot;>&lt;p class=&quot;ucb__title&quot;>Your ranking window&lt;/p>&lt;ol class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Publish window&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>May 2026&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Indexation&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Jun-Jul&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Citation accumulation&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Aug-Oct&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Training cutoff&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Likely Nov 2026&lt;/span>&lt;/li>
-&lt;/ol>&lt;p class=&quot;ucb__note&quot;>Earned mentions on Reddit/Wikipedia/PR weight heaviest in this window. Schema tweaks weight near-zero. Crawler accessibility is table stakes.&lt;/p>&lt;/div>
-
-&lt;div class=&quot;ucb ucb--steps&quot; role=&quot;group&quot; aria-label=&quot;Find your first job in three steps&quot;>&lt;p class=&quot;ucb__title&quot;>Find your first job in three steps&lt;/p>&lt;ol class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>List every admin task you did last week and how long it took.&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Circle the one that repeats weekly and follows the same steps.&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Time it for two weeks, so you know what &quot;better&quot; means later.&lt;/span>&lt;/li>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--relay ucb-pairs--weight ucb-data--rail ucb-qa--deck ucb-work--worked&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb ucb--steps&quot; role=&quot;group&quot; aria-label=&quot;Find your first job in three steps&quot;>&lt;p class=&quot;ucb__title&quot;>Find your first job in three steps&lt;/p>&lt;ol class=&quot;ucb__list&quot; role=&quot;list&quot; style=&quot;--of:3&quot;>
+&lt;li style=&quot;--n:1&quot;>&lt;span class=&quot;ucb__text&quot;>List every admin task you did last week and how long it took.&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot;>&lt;span class=&quot;ucb__text&quot;>Circle the one that repeats weekly and follows the same steps.&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:3&quot;>&lt;span class=&quot;ucb__text&quot;>Time it for two weeks, so you know what &quot;better&quot; means later.&lt;/span>&lt;/li>
 &lt;/ol>&lt;/div>
-&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> The lit last node says &quot;done&quot;, which is decoration on a list with no finish; runs across only up to five steps.</p>
+
+&lt;div class=&quot;ucb ucb--steps&quot; role=&quot;group&quot; aria-label=&quot;Your ranking window&quot;>&lt;p class=&quot;ucb__title&quot;>Your ranking window&lt;/p>&lt;ol class=&quot;ucb__list&quot; role=&quot;list&quot; style=&quot;--of:4&quot;>
+&lt;li style=&quot;--n:1&quot;>&lt;span class=&quot;ucb__text&quot;>Publish window&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>May 2026&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot;>&lt;span class=&quot;ucb__text&quot;>Indexation&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Jun-Jul&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:3&quot;>&lt;span class=&quot;ucb__text&quot;>Citation accumulation&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Aug-Oct&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:4&quot;>&lt;span class=&quot;ucb__text&quot;>Training cutoff&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Likely Nov 2026&lt;/span>&lt;/li>
+&lt;/ol>&lt;p class=&quot;ucb__note&quot;>Earned mentions on Reddit/Wikipedia/PR weight heaviest in this window. Schema tweaks weight near-zero. Crawler accessibility is table stakes.&lt;/p>&lt;/div>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> The idea lives on a wide screen. On a phone the cells stack and it is a numbered list with crosses on its rules.</p>
     </article>
     <article class="look">
-      <div class="look__head"><h3>Tiles</h3><code>ucb-steps--tiles</code></div>
-      <div class="stage"><iframe title="Steps, Tiles" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+      <div class="look__head"><h3>Command</h3><code>ucb-steps--command</code></div>
+      <p class="idea">Each step is set as a headline and its number shrinks to a mark in the margin, so a short run reads as orders, not a list.</p>
+      <div class="stage"><iframe title="Steps, Command" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
 &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--tiles ucb-pairs--panel ucb-data--fit ucb-qa--plain ucb-work--receipt c-auto&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb ucb--steps&quot; role=&quot;group&quot; aria-label=&quot;Your ranking window&quot;>&lt;p class=&quot;ucb__title&quot;>Your ranking window&lt;/p>&lt;ol class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Publish window&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>May 2026&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Indexation&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Jun-Jul&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Citation accumulation&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Aug-Oct&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Training cutoff&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Likely Nov 2026&lt;/span>&lt;/li>
-&lt;/ol>&lt;p class=&quot;ucb__note&quot;>Earned mentions on Reddit/Wikipedia/PR weight heaviest in this window. Schema tweaks weight near-zero. Crawler accessibility is table stakes.&lt;/p>&lt;/div>
-
-&lt;div class=&quot;ucb ucb--steps&quot; role=&quot;group&quot; aria-label=&quot;Find your first job in three steps&quot;>&lt;p class=&quot;ucb__title&quot;>Find your first job in three steps&lt;/p>&lt;ol class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>List every admin task you did last week and how long it took.&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Circle the one that repeats weekly and follows the same steps.&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Time it for two weeks, so you know what &quot;better&quot; means later.&lt;/span>&lt;/li>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--command ucb-pairs--weight ucb-data--rail ucb-qa--deck ucb-work--worked&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb ucb--steps&quot; role=&quot;group&quot; aria-label=&quot;Find your first job in three steps&quot;>&lt;p class=&quot;ucb__title&quot;>Find your first job in three steps&lt;/p>&lt;ol class=&quot;ucb__list&quot; role=&quot;list&quot; style=&quot;--of:3&quot;>
+&lt;li style=&quot;--n:1&quot;>&lt;span class=&quot;ucb__text&quot;>List every admin task you did last week and how long it took.&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot;>&lt;span class=&quot;ucb__text&quot;>Circle the one that repeats weekly and follows the same steps.&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:3&quot;>&lt;span class=&quot;ucb__text&quot;>Time it for two weeks, so you know what &quot;better&quot; means later.&lt;/span>&lt;/li>
 &lt;/ol>&lt;/div>
-&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> The most BRAND of the four and the tallest on a phone; five steps leave an orphan tile on the second row.</p>
+
+&lt;div class=&quot;ucb ucb--steps&quot; role=&quot;group&quot; aria-label=&quot;Your ranking window&quot;>&lt;p class=&quot;ucb__title&quot;>Your ranking window&lt;/p>&lt;ol class=&quot;ucb__list&quot; role=&quot;list&quot; style=&quot;--of:4&quot;>
+&lt;li style=&quot;--n:1&quot;>&lt;span class=&quot;ucb__text&quot;>Publish window&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>May 2026&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot;>&lt;span class=&quot;ucb__text&quot;>Indexation&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Jun-Jul&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:3&quot;>&lt;span class=&quot;ucb__text&quot;>Citation accumulation&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Aug-Oct&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:4&quot;>&lt;span class=&quot;ucb__text&quot;>Training cutoff&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Likely Nov 2026&lt;/span>&lt;/li>
+&lt;/ol>&lt;p class=&quot;ucb__note&quot;>Earned mentions on Reddit/Wikipedia/PR weight heaviest in this window. Schema tweaks weight near-zero. Crawler accessibility is table stakes.&lt;/p>&lt;/div>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> Built for steps of one line. The longer recipe steps on the site would turn into walls of big type.</p>
     </article>
     <article class="look">
-      <div class="look__head"><h3>Ramp</h3><code>ucb-steps--ramp</code></div>
-      <div class="stage"><iframe title="Steps, Ramp" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+      <div class="look__head"><h3>Signal</h3><code>ucb-steps--signal</code></div>
+      <p class="idea">No numerals at all: every step carries the whole run as the carousel's dots, the ones behind it in ink, its own in the colour, the ones ahead in grey.</p>
+      <div class="stage"><iframe title="Steps, Signal" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
 &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ramp ucb-pairs--panel ucb-data--fit ucb-qa--plain ucb-work--receipt c-auto&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb ucb--steps&quot; role=&quot;group&quot; aria-label=&quot;Your ranking window&quot;>&lt;p class=&quot;ucb__title&quot;>Your ranking window&lt;/p>&lt;ol class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Publish window&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>May 2026&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Indexation&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Jun-Jul&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Citation accumulation&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Aug-Oct&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Training cutoff&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Likely Nov 2026&lt;/span>&lt;/li>
-&lt;/ol>&lt;p class=&quot;ucb__note&quot;>Earned mentions on Reddit/Wikipedia/PR weight heaviest in this window. Schema tweaks weight near-zero. Crawler accessibility is table stakes.&lt;/p>&lt;/div>
-
-&lt;div class=&quot;ucb ucb--steps&quot; role=&quot;group&quot; aria-label=&quot;Find your first job in three steps&quot;>&lt;p class=&quot;ucb__title&quot;>Find your first job in three steps&lt;/p>&lt;ol class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>List every admin task you did last week and how long it took.&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Circle the one that repeats weekly and follows the same steps.&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Time it for two weeks, so you know what &quot;better&quot; means later.&lt;/span>&lt;/li>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--signal ucb-pairs--weight ucb-data--rail ucb-qa--deck ucb-work--worked&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb ucb--steps&quot; role=&quot;group&quot; aria-label=&quot;Find your first job in three steps&quot;>&lt;p class=&quot;ucb__title&quot;>Find your first job in three steps&lt;/p>&lt;ol class=&quot;ucb__list&quot; role=&quot;list&quot; style=&quot;--of:3&quot;>
+&lt;li style=&quot;--n:1&quot;>&lt;span class=&quot;ucb__text&quot;>List every admin task you did last week and how long it took.&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot;>&lt;span class=&quot;ucb__text&quot;>Circle the one that repeats weekly and follows the same steps.&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:3&quot;>&lt;span class=&quot;ucb__text&quot;>Time it for two weeks, so you know what &quot;better&quot; means later.&lt;/span>&lt;/li>
 &lt;/ol>&lt;/div>
-&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> The early numerals are pale blue, so the colour carries order, not meaning; with two steps the ramp barely shows.</p>
+
+&lt;div class=&quot;ucb ucb--steps&quot; role=&quot;group&quot; aria-label=&quot;Your ranking window&quot;>&lt;p class=&quot;ucb__title&quot;>Your ranking window&lt;/p>&lt;ol class=&quot;ucb__list&quot; role=&quot;list&quot; style=&quot;--of:4&quot;>
+&lt;li style=&quot;--n:1&quot;>&lt;span class=&quot;ucb__text&quot;>Publish window&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>May 2026&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot;>&lt;span class=&quot;ucb__text&quot;>Indexation&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Jun-Jul&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:3&quot;>&lt;span class=&quot;ucb__text&quot;>Citation accumulation&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Aug-Oct&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:4&quot;>&lt;span class=&quot;ucb__text&quot;>Training cutoff&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__time&quot;>Likely Nov 2026&lt;/span>&lt;/li>
+&lt;/ol>&lt;p class=&quot;ucb__note&quot;>Earned mentions on Reddit/Wikipedia/PR weight heaviest in this window. Schema tweaks weight near-zero. Crawler accessibility is table stakes.&lt;/p>&lt;/div>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> You can't say &quot;step three&quot; out loud, and past seven steps the dots run long on a phone.</p>
     </article>
   </div>
 </section>
 
 <section class="fam" id="pair">
-  <div class="fam__head"><h2>Pair</h2><span class="chip">four looks</span></div>
-  <p class="what">Two titled lists in a row. When the titles say before and after, works and doesn't, do and don't, the better side takes the blue. Free and Paid are equals and get no verdict. Side by side from 641px.</p>
+  <p class="label"><span>02</span>Pair, four looks</p>
+  <h2>Pair</h2>
+  <p class="what">Two titled lists in a row. When the titles say before and after, works and doesn't, do and don't, one side is the better side. Free and Paid are equals and get no verdict. Copy: overdue invoices (a verdict), then eInvoicing options (equals).</p>
+  <p class="pick"><b>Pick: Weight.</b> The verdict comes from the type alone, so it reads in a glance with nothing boxed; both sides stay true and legible, and a pair of equals stays equal. Pills, minus the pills.</p>
   <div class="looks">
     <article class="look">
-      <div class="look__head"><h3>Panel</h3><span class="chip chip--on">On the proof</span><code>ucb-pairs--panel</code></div>
-      <div class="stage"><iframe title="Pair, Panel" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+      <div class="look__head"><h3>Strike</h3><code>ucb-pairs--strike</code></div>
+      <p class="idea">The worse side is crossed out like an edit and the better side is left standing, so the verdict is in the text, not in a colour.</p>
+      <div class="stage"><iframe title="Pair, Strike" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
 &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ledger ucb-pairs--panel ucb-data--fit ucb-qa--plain ucb-work--receipt c-auto&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb-pair ucb-pair--contrast&quot;>&lt;div class=&quot;ucb ucb--list ucb--minus&quot; role=&quot;group&quot; aria-label=&quot;Current state&quot;>&lt;p class=&quot;ucb__title&quot;>Current state&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--fill ucb-pairs--strike ucb-data--rail ucb-qa--deck ucb-work--worked&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb-pair ucb-pair--contrast&quot; style=&quot;--rows:8&quot;>&lt;div class=&quot;ucb ucb--list ucb--minus&quot; role=&quot;group&quot; aria-label=&quot;Current state&quot;>&lt;p class=&quot;ucb__title&quot;>Current state&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Cash tied up in overdue invoices: $56,000 (1.4 months of revenue)&lt;/span>&lt;/li>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Time spent on collections: 312 hours/year&lt;/span>&lt;/li>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Lost billable income: $37,440/year&lt;/span>&lt;/li>
@@ -177,7 +191,7 @@ body.desk iframe{width:1440px}
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Net gain: $71,173 in year one&lt;/span>&lt;/li>
 &lt;/ul>&lt;/div>&lt;/div>
 
-&lt;div class=&quot;ucb-pair&quot;>&lt;div class=&quot;ucb ucb--list&quot; role=&quot;group&quot; aria-label=&quot;Free options&quot;>&lt;p class=&quot;ucb__title&quot;>Free options&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
+&lt;div class=&quot;ucb-pair&quot; style=&quot;--rows:4&quot;>&lt;div class=&quot;ucb ucb--list&quot; role=&quot;group&quot; aria-label=&quot;Free options&quot;>&lt;p class=&quot;ucb__title&quot;>Free options&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Xero includes eInvoicing in all paid plans (no extra cost)&lt;/span>&lt;/li>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>MYOB includes eInvoicing in AccountRight and Essentials plans&lt;/span>&lt;/li>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>QuickBooks Online includes eInvoicing in most plans&lt;/span>&lt;/li>
@@ -186,16 +200,51 @@ body.desk iframe{width:1440px}
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Standalone Access Point providers charge $20-$50/month for businesses sending high volumes or needing advanced features&lt;/span>&lt;/li>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Enterprise eInvoicing platforms start at $50/month but include workflow automation and multi-currency support&lt;/span>&lt;/li>
 &lt;/ul>&lt;/div>&lt;/div>
-&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> The verdict is only a blue title and blue ticks, easy to miss at a glance.</p>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> Struck text is slower to read, and the &quot;before&quot; list is still worth reading.</p>
+    </article>
+    <article class="look look--pick">
+      <div class="look__head"><h3>Weight</h3><span class="tag">Pick</span><code>ucb-pairs--weight</code></div>
+      <p class="idea">The verdict is the type: the better side set large in ink and given more of the width, the other dropped to small grey.</p>
+      <div class="stage"><iframe title="Pair, Weight" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--fill ucb-pairs--weight ucb-data--rail ucb-qa--deck ucb-work--worked&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb-pair ucb-pair--contrast&quot; style=&quot;--rows:8&quot;>&lt;div class=&quot;ucb ucb--list ucb--minus&quot; role=&quot;group&quot; aria-label=&quot;Current state&quot;>&lt;p class=&quot;ucb__title&quot;>Current state&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>Cash tied up in overdue invoices: $56,000 (1.4 months of revenue)&lt;/span>&lt;/li>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>Time spent on collections: 312 hours/year&lt;/span>&lt;/li>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>Lost billable income: $37,440/year&lt;/span>&lt;/li>
+&lt;/ul>&lt;/div>&lt;div class=&quot;ucb ucb--list ucb--plus&quot; role=&quot;group&quot; aria-label=&quot;After automation&quot;>&lt;p class=&quot;ucb__title&quot;>After automation&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>Average payment time drops to 14 days (industry average with automated reminders, per Xero data)&lt;/span>&lt;/li>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>Cash tied up: $18,667 (0.47 months of revenue)&lt;/span>&lt;/li>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>Cash freed up: $37,333&lt;/span>&lt;/li>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>Time spent on collections: 30 hours/year (just handling exceptions)&lt;/span>&lt;/li>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>Time saved: 282 hours&lt;/span>&lt;/li>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>Recovered billable income: $33,840/year&lt;/span>&lt;/li>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>Cost of automation: $600/year (invoicing software + Zapier)&lt;/span>&lt;/li>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>Net gain: $71,173 in year one&lt;/span>&lt;/li>
+&lt;/ul>&lt;/div>&lt;/div>
+
+&lt;div class=&quot;ucb-pair&quot; style=&quot;--rows:4&quot;>&lt;div class=&quot;ucb ucb--list&quot; role=&quot;group&quot; aria-label=&quot;Free options&quot;>&lt;p class=&quot;ucb__title&quot;>Free options&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>Xero includes eInvoicing in all paid plans (no extra cost)&lt;/span>&lt;/li>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>MYOB includes eInvoicing in AccountRight and Essentials plans&lt;/span>&lt;/li>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>QuickBooks Online includes eInvoicing in most plans&lt;/span>&lt;/li>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>Australian Taxation Office offers a free eInvoicing service for very small businesses sending low volumes&lt;/span>&lt;/li>
+&lt;/ul>&lt;/div>&lt;div class=&quot;ucb ucb--list&quot; role=&quot;group&quot; aria-label=&quot;Paid options&quot;>&lt;p class=&quot;ucb__title&quot;>Paid options&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>Standalone Access Point providers charge $20-$50/month for businesses sending high volumes or needing advanced features&lt;/span>&lt;/li>
+&lt;li>&lt;span class=&quot;ucb__text&quot;>Enterprise eInvoicing platforms start at $50/month but include workflow automation and multi-currency support&lt;/span>&lt;/li>
+&lt;/ul>&lt;/div>&lt;/div>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> The small side is genuinely small at 14px; with equals it is two plain lists.</p>
     </article>
     <article class="look">
-      <div class="look__head"><h3>Offset</h3><code>ucb-pairs--offset</code></div>
-      <div class="stage"><iframe title="Pair, Offset" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+      <div class="look__head"><h3>Across</h3><code>ucb-pairs--across</code></div>
+      <p class="idea">Read line against line: the two lists share one set of rows, so each line sits beside its counterpart, on a phone too.</p>
+      <div class="stage"><iframe title="Pair, Across" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
 &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ledger ucb-pairs--offset ucb-data--fit ucb-qa--plain ucb-work--receipt c-auto&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb-pair ucb-pair--contrast&quot;>&lt;div class=&quot;ucb ucb--list ucb--minus&quot; role=&quot;group&quot; aria-label=&quot;Current state&quot;>&lt;p class=&quot;ucb__title&quot;>Current state&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--fill ucb-pairs--across ucb-data--rail ucb-qa--deck ucb-work--worked&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb-pair ucb-pair--contrast&quot; style=&quot;--rows:8&quot;>&lt;div class=&quot;ucb ucb--list ucb--minus&quot; role=&quot;group&quot; aria-label=&quot;Current state&quot;>&lt;p class=&quot;ucb__title&quot;>Current state&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Cash tied up in overdue invoices: $56,000 (1.4 months of revenue)&lt;/span>&lt;/li>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Time spent on collections: 312 hours/year&lt;/span>&lt;/li>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Lost billable income: $37,440/year&lt;/span>&lt;/li>
@@ -210,7 +259,7 @@ body.desk iframe{width:1440px}
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Net gain: $71,173 in year one&lt;/span>&lt;/li>
 &lt;/ul>&lt;/div>&lt;/div>
 
-&lt;div class=&quot;ucb-pair&quot;>&lt;div class=&quot;ucb ucb--list&quot; role=&quot;group&quot; aria-label=&quot;Free options&quot;>&lt;p class=&quot;ucb__title&quot;>Free options&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
+&lt;div class=&quot;ucb-pair&quot; style=&quot;--rows:4&quot;>&lt;div class=&quot;ucb ucb--list&quot; role=&quot;group&quot; aria-label=&quot;Free options&quot;>&lt;p class=&quot;ucb__title&quot;>Free options&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Xero includes eInvoicing in all paid plans (no extra cost)&lt;/span>&lt;/li>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>MYOB includes eInvoicing in AccountRight and Essentials plans&lt;/span>&lt;/li>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>QuickBooks Online includes eInvoicing in most plans&lt;/span>&lt;/li>
@@ -219,16 +268,17 @@ body.desk iframe{width:1440px}
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Standalone Access Point providers charge $20-$50/month for businesses sending high volumes or needing advanced features&lt;/span>&lt;/li>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Enterprise eInvoicing platforms start at $50/month but include workflow automation and multi-currency support&lt;/span>&lt;/li>
 &lt;/ul>&lt;/div>&lt;/div>
-&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> Borrows the featured-card offset, so a pair now looks like the pricing table's pick.</p>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> Lines that don't correspond still sit side by side as if they did, and on a phone each column is 160px wide.</p>
     </article>
     <article class="look">
-      <div class="look__head"><h3>Deep</h3><code>ucb-pairs--deep</code></div>
-      <div class="stage"><iframe title="Pair, Deep" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+      <div class="look__head"><h3>Signed</h3><code>ucb-pairs--signed</code></div>
+      <p class="idea">Every line carries a sign, the grain cross for the side that helps and a dash for the side that costs, so one line quoted alone still says which side it was on.</p>
+      <div class="stage"><iframe title="Pair, Signed" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
 &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ledger ucb-pairs--deep ucb-data--fit ucb-qa--plain ucb-work--receipt c-auto&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb-pair ucb-pair--contrast&quot;>&lt;div class=&quot;ucb ucb--list ucb--minus&quot; role=&quot;group&quot; aria-label=&quot;Current state&quot;>&lt;p class=&quot;ucb__title&quot;>Current state&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--fill ucb-pairs--signed ucb-data--rail ucb-qa--deck ucb-work--worked&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb-pair ucb-pair--contrast&quot; style=&quot;--rows:8&quot;>&lt;div class=&quot;ucb ucb--list ucb--minus&quot; role=&quot;group&quot; aria-label=&quot;Current state&quot;>&lt;p class=&quot;ucb__title&quot;>Current state&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Cash tied up in overdue invoices: $56,000 (1.4 months of revenue)&lt;/span>&lt;/li>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Time spent on collections: 312 hours/year&lt;/span>&lt;/li>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Lost billable income: $37,440/year&lt;/span>&lt;/li>
@@ -243,7 +293,7 @@ body.desk iframe{width:1440px}
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Net gain: $71,173 in year one&lt;/span>&lt;/li>
 &lt;/ul>&lt;/div>&lt;/div>
 
-&lt;div class=&quot;ucb-pair&quot;>&lt;div class=&quot;ucb ucb--list&quot; role=&quot;group&quot; aria-label=&quot;Free options&quot;>&lt;p class=&quot;ucb__title&quot;>Free options&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
+&lt;div class=&quot;ucb-pair&quot; style=&quot;--rows:4&quot;>&lt;div class=&quot;ucb ucb--list&quot; role=&quot;group&quot; aria-label=&quot;Free options&quot;>&lt;p class=&quot;ucb__title&quot;>Free options&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Xero includes eInvoicing in all paid plans (no extra cost)&lt;/span>&lt;/li>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>MYOB includes eInvoicing in AccountRight and Essentials plans&lt;/span>&lt;/li>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>QuickBooks Online includes eInvoicing in most plans&lt;/span>&lt;/li>
@@ -252,164 +302,32 @@ body.desk iframe{width:1440px}
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Standalone Access Point providers charge $20-$50/month for businesses sending high volumes or needing advanced features&lt;/span>&lt;/li>
 &lt;li>&lt;span class=&quot;ucb__text&quot;>Enterprise eInvoicing platforms start at $50/month but include workflow automation and multi-currency support&lt;/span>&lt;/li>
 &lt;/ul>&lt;/div>&lt;/div>
-&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> A solid blue tile spends the one accent loudly; more than one per article and it stops meaning anything.</p>
-    </article>
-    <article class="look">
-      <div class="look__head"><h3>Pills</h3><code>ucb-pairs--pills</code></div>
-      <div class="stage"><iframe title="Pair, Pills" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
-&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
-&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
-&lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ledger ucb-pairs--pills ucb-data--fit ucb-qa--plain ucb-work--receipt c-auto&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb-pair ucb-pair--contrast&quot;>&lt;div class=&quot;ucb ucb--list ucb--minus&quot; role=&quot;group&quot; aria-label=&quot;Current state&quot;>&lt;p class=&quot;ucb__title&quot;>Current state&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Cash tied up in overdue invoices: $56,000 (1.4 months of revenue)&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Time spent on collections: 312 hours/year&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Lost billable income: $37,440/year&lt;/span>&lt;/li>
-&lt;/ul>&lt;/div>&lt;div class=&quot;ucb ucb--list ucb--plus&quot; role=&quot;group&quot; aria-label=&quot;After automation&quot;>&lt;p class=&quot;ucb__title&quot;>After automation&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Average payment time drops to 14 days (industry average with automated reminders, per Xero data)&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Cash tied up: $18,667 (0.47 months of revenue)&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Cash freed up: $37,333&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Time spent on collections: 30 hours/year (just handling exceptions)&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Time saved: 282 hours&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Recovered billable income: $33,840/year&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Cost of automation: $600/year (invoicing software + Zapier)&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Net gain: $71,173 in year one&lt;/span>&lt;/li>
-&lt;/ul>&lt;/div>&lt;/div>
-
-&lt;div class=&quot;ucb-pair&quot;>&lt;div class=&quot;ucb ucb--list&quot; role=&quot;group&quot; aria-label=&quot;Free options&quot;>&lt;p class=&quot;ucb__title&quot;>Free options&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Xero includes eInvoicing in all paid plans (no extra cost)&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>MYOB includes eInvoicing in AccountRight and Essentials plans&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>QuickBooks Online includes eInvoicing in most plans&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Australian Taxation Office offers a free eInvoicing service for very small businesses sending low volumes&lt;/span>&lt;/li>
-&lt;/ul>&lt;/div>&lt;div class=&quot;ucb ucb--list&quot; role=&quot;group&quot; aria-label=&quot;Paid options&quot;>&lt;p class=&quot;ucb__title&quot;>Paid options&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Standalone Access Point providers charge $20-$50/month for businesses sending high volumes or needing advanced features&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Enterprise eInvoicing platforms start at $50/month but include workflow automation and multi-currency support&lt;/span>&lt;/li>
-&lt;/ul>&lt;/div>&lt;/div>
-&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> No tiles, so the two sides lean on the hairline; on a phone it reads as two lists, not a contrast.</p>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> The sign is drawn, not written, so an engine quoting a line gets the words without the sign.</p>
     </article>
   </div>
 </section>
 
 <section class="fam" id="data">
-  <div class="fam__head"><h2>Data table</h2><span class="chip">four looks</span></div>
-  <p class="what">Always a real &lt;table>: row headers, labelled cells, the wrapper a focusable scroller. Copy: the proof article's comparison (four columns) and the model cutoffs (three columns, nine rows).</p>
+  <p class="label"><span>03</span>Data table, four looks</p>
+  <h2>Data table</h2>
+  <p class="what">Always a real &lt;table>: row headers, labelled cells, the wrapper a focusable scroller, every view CSS only. Copy: the proof article's comparison (its pick, AI automation, set in bold in the markdown) and the model cutoffs (nine rows).</p>
+  <p class="pick"><b>Pick: Rail.</b> The snap rail you asked for, done the other way round: the row names stay put and the options snap past, so a four-column table reads on a phone with nothing squeezed.</p>
   <div class="looks">
-    <article class="look">
-      <div class="look__head"><h3>Fit</h3><span class="chip chip--on">On the proof</span><code>ucb-data--fit</code></div>
-      <div class="stage"><iframe title="Data table, Fit" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
-&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
-&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
-&lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ledger ucb-pairs--panel ucb-data--fit ucb-qa--plain ucb-work--receipt c-auto&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb-data&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Table: By hand, Normal automation, AI automation&quot; style=&quot;--rows:4;--cols:4&quot;>&lt;table role=&quot;table&quot;>
-&lt;thead>
-&lt;tr role=&quot;row&quot;>
-&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>&lt;/th>
-&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>By hand&lt;/th>
-&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>Normal automation&lt;/th>
-&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>AI automation&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr role=&quot;row&quot;>
-&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>What it can read&lt;/th>
-&lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>Anything&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Forms and tidy data only&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot;>Emails, PDFs, photos, voice notes&lt;/td>
-&lt;/tr>
-&lt;tr role=&quot;row&quot;>
-&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Who decides what it means&lt;/th>
-&lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>You&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Nobody, it follows the rule&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot;>The AI model, and you check it&lt;/td>
-&lt;/tr>
-&lt;tr role=&quot;row&quot;>
-&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>What breaks it&lt;/th>
-&lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>A busy week&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Anything out of the usual shape&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot;>Rare cases it hasn't seen before&lt;/td>
-&lt;/tr>
-&lt;tr role=&quot;row&quot;>
-&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Your time per enquiry&lt;/th>
-&lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>Minutes each&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Seconds, if the form was used&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot;>Seconds, however it arrived&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>&lt;/div>
-
-&lt;div class=&quot;ucb-data&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Table: Model, Knowledge cutoff, Released&quot; style=&quot;--rows:9;--cols:3&quot;>&lt;table role=&quot;table&quot;>
-&lt;thead>
-&lt;tr role=&quot;row&quot;>
-&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>Model&lt;/th>
-&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>Knowledge cutoff&lt;/th>
-&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>Released&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr role=&quot;row&quot;>
-&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>GPT-5.5&lt;/th>
-&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>December 2025&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>23 April 2026&lt;/td>
-&lt;/tr>
-&lt;tr role=&quot;row&quot;>
-&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>GPT-5.2&lt;/th>
-&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>31 August 2025&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>January 2026&lt;/td>
-&lt;/tr>
-&lt;tr role=&quot;row&quot;>
-&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>GPT-5&lt;/th>
-&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>October 2024&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>August 2025&lt;/td>
-&lt;/tr>
-&lt;tr role=&quot;row&quot;>
-&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>GPT-4o&lt;/th>
-&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>October 2023&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>May 2024&lt;/td>
-&lt;/tr>
-&lt;tr role=&quot;row&quot;>
-&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Claude Opus 4.7&lt;/th>
-&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>January 2026&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>16 April 2026&lt;/td>
-&lt;/tr>
-&lt;tr role=&quot;row&quot;>
-&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Claude Sonnet 4.6&lt;/th>
-&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>August 2025&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>February 2026&lt;/td>
-&lt;/tr>
-&lt;tr role=&quot;row&quot;>
-&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Claude Haiku 4.5&lt;/th>
-&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>February 2025&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>October 2025&lt;/td>
-&lt;/tr>
-&lt;tr role=&quot;row&quot;>
-&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Gemini 3.0&lt;/th>
-&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>January 2025&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>18 November 2025&lt;/td>
-&lt;/tr>
-&lt;tr role=&quot;row&quot;>
-&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Gemini 2.5 Pro&lt;/th>
-&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>31 January 2025&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>March 2025&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>&lt;/div>
-&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> The same as Rail on a phone; on desktop it is a table again, except at five columns or more.</p>
-    </article>
-    <article class="look">
-      <div class="look__head"><h3>Rail</h3><code>ucb-data--rail</code></div>
+    <article class="look look--pick">
+      <div class="look__head"><h3>Rail</h3><span class="tag">Pick</span><code>ucb-data--rail</code></div>
+      <p class="idea">On a phone the row names hold still and the options snap past one column at a time, each column numbered, a hairline filling as you swipe.</p>
       <div class="stage"><iframe title="Data table, Rail" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
 &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ledger ucb-pairs--panel ucb-data--rail ucb-qa--plain ucb-work--receipt c-auto&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb-data&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Table: By hand, Normal automation, AI automation&quot; style=&quot;--rows:4;--cols:4&quot;>&lt;table role=&quot;table&quot;>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--fill ucb-pairs--weight ucb-data--rail ucb-qa--deck ucb-work--worked&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb-data&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Table: By hand, Normal automation, AI automation&quot; style=&quot;--rows:4;--cols:4;--opts:3&quot;>&lt;table role=&quot;table&quot;>
 &lt;thead>
 &lt;tr role=&quot;row&quot;>
 &lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>&lt;/th>
 &lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>By hand&lt;/th>
 &lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>Normal automation&lt;/th>
-&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>AI automation&lt;/th>
+&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot; class=&quot;ucb__pick&quot;>&lt;strong>AI automation&lt;/strong>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
@@ -417,30 +335,30 @@ body.desk iframe{width:1440px}
 &lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>What it can read&lt;/th>
 &lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>Anything&lt;/td>
 &lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Forms and tidy data only&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot;>Emails, PDFs, photos, voice notes&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot; class=&quot;ucb__pick&quot;>Emails, PDFs, photos, voice notes&lt;/td>
 &lt;/tr>
 &lt;tr role=&quot;row&quot;>
 &lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Who decides what it means&lt;/th>
 &lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>You&lt;/td>
 &lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Nobody, it follows the rule&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot;>The AI model, and you check it&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot; class=&quot;ucb__pick&quot;>The AI model, and you check it&lt;/td>
 &lt;/tr>
 &lt;tr role=&quot;row&quot;>
 &lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>What breaks it&lt;/th>
 &lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>A busy week&lt;/td>
 &lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Anything out of the usual shape&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot;>Rare cases it hasn't seen before&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot; class=&quot;ucb__pick&quot;>Rare cases it hasn't seen before&lt;/td>
 &lt;/tr>
 &lt;tr role=&quot;row&quot;>
 &lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Your time per enquiry&lt;/th>
 &lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>Minutes each&lt;/td>
 &lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Seconds, if the form was used&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot;>Seconds, however it arrived&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot; class=&quot;ucb__pick&quot;>Seconds, however it arrived&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>&lt;/div>
 
-&lt;div class=&quot;ucb-data&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Table: Model, Knowledge cutoff, Released&quot; style=&quot;--rows:9;--cols:3&quot;>&lt;table role=&quot;table&quot;>
+&lt;div class=&quot;ucb-data&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Table: Model, Knowledge cutoff, Released&quot; style=&quot;--rows:9;--cols:3;--opts:2&quot;>&lt;table role=&quot;table&quot;>
 &lt;thead>
 &lt;tr role=&quot;row&quot;>
 &lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>Model&lt;/th>
@@ -496,22 +414,23 @@ body.desk iframe{width:1440px}
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>&lt;/div>
-&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> The CSS-only snap rail on every screen, the one you liked; on desktop it shows three of nine rows and hides the rest sideways.</p>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> You compare one option at a time on a phone, never two side by side; from 761px it is the plain table.</p>
     </article>
     <article class="look">
-      <div class="look__head"><h3>Stack</h3><code>ucb-data--stack</code></div>
-      <div class="stage"><iframe title="Data table, Stack" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+      <div class="look__head"><h3>Ledger</h3><code>ucb-data--ledger</code></div>
+      <p class="idea">Read it as an account book: figures in tabular numerals and right-aligned, a rule down every column, a double rule to close, on the grain like paper.</p>
+      <div class="stage"><iframe title="Data table, Ledger" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
 &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ledger ucb-pairs--panel ucb-data--stack ucb-qa--plain ucb-work--receipt c-auto&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb-data&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Table: By hand, Normal automation, AI automation&quot; style=&quot;--rows:4;--cols:4&quot;>&lt;table role=&quot;table&quot;>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--fill ucb-pairs--weight ucb-data--ledger ucb-qa--deck ucb-work--worked&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb-data&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Table: By hand, Normal automation, AI automation&quot; style=&quot;--rows:4;--cols:4;--opts:3&quot;>&lt;table role=&quot;table&quot;>
 &lt;thead>
 &lt;tr role=&quot;row&quot;>
 &lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>&lt;/th>
 &lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>By hand&lt;/th>
 &lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>Normal automation&lt;/th>
-&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>AI automation&lt;/th>
+&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot; class=&quot;ucb__pick&quot;>&lt;strong>AI automation&lt;/strong>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
@@ -519,30 +438,30 @@ body.desk iframe{width:1440px}
 &lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>What it can read&lt;/th>
 &lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>Anything&lt;/td>
 &lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Forms and tidy data only&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot;>Emails, PDFs, photos, voice notes&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot; class=&quot;ucb__pick&quot;>Emails, PDFs, photos, voice notes&lt;/td>
 &lt;/tr>
 &lt;tr role=&quot;row&quot;>
 &lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Who decides what it means&lt;/th>
 &lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>You&lt;/td>
 &lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Nobody, it follows the rule&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot;>The AI model, and you check it&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot; class=&quot;ucb__pick&quot;>The AI model, and you check it&lt;/td>
 &lt;/tr>
 &lt;tr role=&quot;row&quot;>
 &lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>What breaks it&lt;/th>
 &lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>A busy week&lt;/td>
 &lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Anything out of the usual shape&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot;>Rare cases it hasn't seen before&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot; class=&quot;ucb__pick&quot;>Rare cases it hasn't seen before&lt;/td>
 &lt;/tr>
 &lt;tr role=&quot;row&quot;>
 &lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Your time per enquiry&lt;/th>
 &lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>Minutes each&lt;/td>
 &lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Seconds, if the form was used&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot;>Seconds, however it arrived&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot; class=&quot;ucb__pick&quot;>Seconds, however it arrived&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>&lt;/div>
 
-&lt;div class=&quot;ucb-data&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Table: Model, Knowledge cutoff, Released&quot; style=&quot;--rows:9;--cols:3&quot;>&lt;table role=&quot;table&quot;>
+&lt;div class=&quot;ucb-data&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Table: Model, Knowledge cutoff, Released&quot; style=&quot;--rows:9;--cols:3;--opts:2&quot;>&lt;table role=&quot;table&quot;>
 &lt;thead>
 &lt;tr role=&quot;row&quot;>
 &lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>Model&lt;/th>
@@ -598,22 +517,23 @@ body.desk iframe{width:1440px}
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>&lt;/div>
-&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> Nothing hides sideways, but nine rows make a long scroll on a phone.</p>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> Only earns its keep on figures; the cutoffs table is all dates and words. Scrolls sideways on a phone.</p>
     </article>
     <article class="look">
-      <div class="look__head"><h3>Pinned</h3><code>ucb-data--pinned</code></div>
-      <div class="stage"><iframe title="Data table, Pinned" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+      <div class="look__head"><h3>Pick</h3><code>ucb-data--pick</code></div>
+      <p class="idea">One column is the answer. A bold header in the markdown marks it, it reads in full ink under the colour's underline while the rest recede, and on a phone the pick leads every row.</p>
+      <div class="stage"><iframe title="Data table, Pick" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
 &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ledger ucb-pairs--panel ucb-data--pinned ucb-qa--plain ucb-work--receipt c-auto&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb-data&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Table: By hand, Normal automation, AI automation&quot; style=&quot;--rows:4;--cols:4&quot;>&lt;table role=&quot;table&quot;>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--fill ucb-pairs--weight ucb-data--pick ucb-qa--deck ucb-work--worked&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb-data&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Table: By hand, Normal automation, AI automation&quot; style=&quot;--rows:4;--cols:4;--opts:3&quot;>&lt;table role=&quot;table&quot;>
 &lt;thead>
 &lt;tr role=&quot;row&quot;>
 &lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>&lt;/th>
 &lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>By hand&lt;/th>
 &lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>Normal automation&lt;/th>
-&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>AI automation&lt;/th>
+&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot; class=&quot;ucb__pick&quot;>&lt;strong>AI automation&lt;/strong>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
@@ -621,30 +541,30 @@ body.desk iframe{width:1440px}
 &lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>What it can read&lt;/th>
 &lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>Anything&lt;/td>
 &lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Forms and tidy data only&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot;>Emails, PDFs, photos, voice notes&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot; class=&quot;ucb__pick&quot;>Emails, PDFs, photos, voice notes&lt;/td>
 &lt;/tr>
 &lt;tr role=&quot;row&quot;>
 &lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Who decides what it means&lt;/th>
 &lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>You&lt;/td>
 &lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Nobody, it follows the rule&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot;>The AI model, and you check it&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot; class=&quot;ucb__pick&quot;>The AI model, and you check it&lt;/td>
 &lt;/tr>
 &lt;tr role=&quot;row&quot;>
 &lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>What breaks it&lt;/th>
 &lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>A busy week&lt;/td>
 &lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Anything out of the usual shape&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot;>Rare cases it hasn't seen before&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot; class=&quot;ucb__pick&quot;>Rare cases it hasn't seen before&lt;/td>
 &lt;/tr>
 &lt;tr role=&quot;row&quot;>
 &lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Your time per enquiry&lt;/th>
 &lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>Minutes each&lt;/td>
 &lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Seconds, if the form was used&lt;/td>
-&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot;>Seconds, however it arrived&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot; class=&quot;ucb__pick&quot;>Seconds, however it arrived&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>&lt;/div>
 
-&lt;div class=&quot;ucb-data&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Table: Model, Knowledge cutoff, Released&quot; style=&quot;--rows:9;--cols:3&quot;>&lt;table role=&quot;table&quot;>
+&lt;div class=&quot;ucb-data&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Table: Model, Knowledge cutoff, Released&quot; style=&quot;--rows:9;--cols:3;--opts:2&quot;>&lt;table role=&quot;table&quot;>
 &lt;thead>
 &lt;tr role=&quot;row&quot;>
 &lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>Model&lt;/th>
@@ -700,142 +620,284 @@ body.desk iframe{width:1440px}
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>&lt;/div>
-&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> The grid stays a grid on a phone, but only the cut-off column says there is more to the right.</p>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> Needs the writer to bold the pick. A table without one gets the phone stack and no emphasis.</p>
+    </article>
+    <article class="look">
+      <div class="look__head"><h3>Turn</h3><code>ucb-data--turn</code></div>
+      <p class="idea">The column names turn on their side so every column fits a phone: nothing scrolls, nothing hides, the grid stays a grid.</p>
+      <div class="stage"><iframe title="Data table, Turn" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--fill ucb-pairs--weight ucb-data--turn ucb-qa--deck ucb-work--worked&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb-data&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Table: By hand, Normal automation, AI automation&quot; style=&quot;--rows:4;--cols:4;--opts:3&quot;>&lt;table role=&quot;table&quot;>
+&lt;thead>
+&lt;tr role=&quot;row&quot;>
+&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>&lt;/th>
+&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>By hand&lt;/th>
+&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>Normal automation&lt;/th>
+&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot; class=&quot;ucb__pick&quot;>&lt;strong>AI automation&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr role=&quot;row&quot;>
+&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>What it can read&lt;/th>
+&lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>Anything&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Forms and tidy data only&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot; class=&quot;ucb__pick&quot;>Emails, PDFs, photos, voice notes&lt;/td>
+&lt;/tr>
+&lt;tr role=&quot;row&quot;>
+&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Who decides what it means&lt;/th>
+&lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>You&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Nobody, it follows the rule&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot; class=&quot;ucb__pick&quot;>The AI model, and you check it&lt;/td>
+&lt;/tr>
+&lt;tr role=&quot;row&quot;>
+&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>What breaks it&lt;/th>
+&lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>A busy week&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Anything out of the usual shape&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot; class=&quot;ucb__pick&quot;>Rare cases it hasn't seen before&lt;/td>
+&lt;/tr>
+&lt;tr role=&quot;row&quot;>
+&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Your time per enquiry&lt;/th>
+&lt;td role=&quot;cell&quot; data-label=&quot;By hand&quot;>Minutes each&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;Normal automation&quot;>Seconds, if the form was used&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;AI automation&quot; class=&quot;ucb__pick&quot;>Seconds, however it arrived&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>&lt;/div>
+
+&lt;div class=&quot;ucb-data&quot; tabindex=&quot;0&quot; role=&quot;region&quot; aria-label=&quot;Table: Model, Knowledge cutoff, Released&quot; style=&quot;--rows:9;--cols:3;--opts:2&quot;>&lt;table role=&quot;table&quot;>
+&lt;thead>
+&lt;tr role=&quot;row&quot;>
+&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>Model&lt;/th>
+&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>Knowledge cutoff&lt;/th>
+&lt;th role=&quot;columnheader&quot; scope=&quot;col&quot;>Released&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr role=&quot;row&quot;>
+&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>GPT-5.5&lt;/th>
+&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>December 2025&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>23 April 2026&lt;/td>
+&lt;/tr>
+&lt;tr role=&quot;row&quot;>
+&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>GPT-5.2&lt;/th>
+&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>31 August 2025&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>January 2026&lt;/td>
+&lt;/tr>
+&lt;tr role=&quot;row&quot;>
+&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>GPT-5&lt;/th>
+&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>October 2024&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>August 2025&lt;/td>
+&lt;/tr>
+&lt;tr role=&quot;row&quot;>
+&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>GPT-4o&lt;/th>
+&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>October 2023&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>May 2024&lt;/td>
+&lt;/tr>
+&lt;tr role=&quot;row&quot;>
+&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Claude Opus 4.7&lt;/th>
+&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>January 2026&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>16 April 2026&lt;/td>
+&lt;/tr>
+&lt;tr role=&quot;row&quot;>
+&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Claude Sonnet 4.6&lt;/th>
+&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>August 2025&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>February 2026&lt;/td>
+&lt;/tr>
+&lt;tr role=&quot;row&quot;>
+&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Claude Haiku 4.5&lt;/th>
+&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>February 2025&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>October 2025&lt;/td>
+&lt;/tr>
+&lt;tr role=&quot;row&quot;>
+&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Gemini 3.0&lt;/th>
+&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>January 2025&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>18 November 2025&lt;/td>
+&lt;/tr>
+&lt;tr role=&quot;row&quot;>
+&lt;th role=&quot;rowheader&quot; scope=&quot;row&quot;>Gemini 2.5 Pro&lt;/th>
+&lt;td role=&quot;cell&quot; data-label=&quot;Knowledge cutoff&quot;>31 January 2025&lt;/td>
+&lt;td role=&quot;cell&quot; data-label=&quot;Released&quot;>March 2025&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>&lt;/div>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> Long cell text wraps narrow, and past four columns the cells get too thin to read.</p>
     </article>
   </div>
 </section>
 
 <section class="fam" id="qa">
-  <div class="fam__head"><h2>Quick Answer</h2><span class="chip">four looks</span></div>
-  <p class="what">All four are sentence first, then bullets: the label, a &lt;p>&lt;strong>, a &lt;ul>, in that order, nothing behind a tap. Copy: the proof article.</p>
+  <p class="label"><span>04</span>Quick Answer, four looks</p>
+  <h2>Quick Answer</h2>
+  <p class="what">One bold answer sentence, then two to four points, always. In the DOM in every look: the label, a &lt;p>&lt;strong>, a &lt;ul>, in that order, nothing behind a tap. Each frame is the proof article's hero, its answer and its opening.</p>
+  <p class="pick"><b>Pick: Deck.</b> Title and answer are one glance, above the fold, on the grain, and the answer sits straight after the H1 in the HTML, which is where an answer engine wants it. Statement is the safe second.</p>
   <div class="looks">
     <article class="look">
-      <div class="look__head"><h3>Plain</h3><span class="chip chip--on">On the proof</span><code>ucb-qa--plain</code></div>
-      <div class="stage"><iframe title="Quick Answer, Plain" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+      <div class="look__head"><h3>Statement</h3><code>ucb-qa--statement</code></div>
+      <p class="idea">The answer is the biggest sentence on the page after the title, set the way the homepage sets its opening line, with the points as fine print under it.</p>
+      <div class="stage"><iframe title="Quick Answer, Statement" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
 &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ledger ucb-pairs--panel ucb-data--fit ucb-qa--plain ucb-work--receipt c-auto&quot;>&lt;section class=&quot;qa&quot; aria-label=&quot;Quick answer&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;qa__in&quot;>&lt;p class=&quot;eyebrow&quot;>Quick answer&lt;/p>&lt;p class=&quot;qa__lead qa__lead--answer&quot;>&lt;strong>AI automation is software that reads what comes in, decides what it means, and does the next step for you.&lt;/strong>&lt;/p>&lt;ul class=&quot;qa__pts&quot;>&lt;li>Normal automation only follows fixed rules.&lt;/li>&lt;li>AI automation can handle messy things like emails, PDFs and photos.&lt;/li>&lt;li>For a small business, admin gets done without you typing it.&lt;/li>&lt;li>Start with one weekly job.&lt;/li>&lt;/ul>&lt;/div>&lt;/div>&lt;/section>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> Hairlines only; it leans on the bold sentence to stand out from the intro.</p>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--fill ucb-pairs--weight ucb-data--rail ucb-qa--statement ucb-work--worked&quot;>&lt;header class=&quot;hero hero--photo&quot;>&lt;div class=&quot;hero__layer band&quot;>&lt;/div>&lt;div class=&quot;hero__layer hero__glow b&quot;>&lt;/div>&lt;div class=&quot;hero__layer hero__static&quot;>&lt;/div>&lt;div class=&quot;hero__layer hero__grain&quot;>&lt;/div>
+&lt;div class=&quot;hero__inner&quot;>&lt;span class=&quot;eyebrow hero__cat&quot;>AI Automation&lt;/span>&lt;h1>What Is AI Automation? A Plain Guide for Small Business&lt;/h1>&lt;p class=&quot;hero__sub&quot;>What is AI automation? Software that reads your emails and forms, decides what they mean and does the next step. What it costs to wait, and where to start.&lt;/p>&lt;/div>
+&lt;figure class=&quot;hero__fig&quot;>&lt;img src=&quot;/images/luke-2026/luke-marinovic-undercurrent-over-shoulder-laptop-code-melbourne.jpg&quot; alt=&quot;&quot; style=&quot;object-position:50% 55%&quot;>&lt;/figure>&lt;/header>
+&lt;section class=&quot;qa&quot; aria-label=&quot;Quick answer&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;qa__in&quot;>&lt;p class=&quot;eyebrow&quot;>Quick answer&lt;/p>&lt;p class=&quot;qa__lead qa__lead--answer&quot;>&lt;strong>AI automation is software that reads what comes in, decides what it means, and does the next step for you.&lt;/strong>&lt;/p>&lt;ul class=&quot;qa__pts&quot;>&lt;li>Normal automation only follows fixed rules.&lt;/li>&lt;li>AI automation can handle messy things like emails, PDFs and photos.&lt;/li>&lt;li>For a small business, admin gets done without you typing it.&lt;/li>&lt;li>Start with one weekly job.&lt;/li>&lt;/ul>&lt;/div>&lt;/div>&lt;/section>
+&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;meta meta--photo&quot;>&lt;span class=&quot;meta__ph&quot;>&lt;img src=&quot;/assets/luke-sq.jpg&quot; alt=&quot;&quot;>&lt;/span>&lt;span class=&quot;meta__name&quot;>&lt;b>Luke Marinovic&lt;/b>&lt;small>Founder, UnderCurrent Automations&lt;/small>&lt;/span>&lt;span class=&quot;meta__d&quot;>Updated 2 Oct 2026&lt;em>·&lt;/em>6 min read&lt;/span>&lt;/div>
+&lt;div class=&quot;body&quot;>&lt;div class=&quot;intro&quot;>&lt;p class=&quot;lead&quot;>It's 9pm on a Sunday and the invoices still aren't out. You did the jobs, so you know they're finished. If you've asked what is AI automation, that hour of typing is the answer.&lt;/p>
+&lt;p>This guide covers what it is, what waiting costs you, and where to start.&lt;/p>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> A 44px sentence makes the page open slower; it suits answers of one line or two, not three.</p>
+    </article>
+    <article class="look look--pick">
+      <div class="look__head"><h3>Deck</h3><span class="tag">Pick</span><code>ucb-qa--deck</code></div>
+      <p class="idea">The answer is the title's deck: it sits in the hero under the H1 on the category ground, so title and answer are one glance.</p>
+      <div class="stage"><iframe title="Quick Answer, Deck" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--fill ucb-pairs--weight ucb-data--rail ucb-qa--deck ucb-work--worked&quot;>&lt;header class=&quot;hero hero--photo&quot;>&lt;div class=&quot;hero__layer band&quot;>&lt;/div>&lt;div class=&quot;hero__layer hero__glow b&quot;>&lt;/div>&lt;div class=&quot;hero__layer hero__static&quot;>&lt;/div>&lt;div class=&quot;hero__layer hero__grain&quot;>&lt;/div>
+&lt;div class=&quot;hero__inner&quot;>&lt;span class=&quot;eyebrow hero__cat&quot;>AI Automation&lt;/span>&lt;h1>What Is AI Automation? A Plain Guide for Small Business&lt;/h1>&lt;section class=&quot;qa qa--deck&quot; aria-label=&quot;Quick answer&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;qa__in&quot;>&lt;p class=&quot;eyebrow&quot;>Quick answer&lt;/p>&lt;p class=&quot;qa__lead qa__lead--answer&quot;>&lt;strong>AI automation is software that reads what comes in, decides what it means, and does the next step for you.&lt;/strong>&lt;/p>&lt;ul class=&quot;qa__pts&quot;>&lt;li>Normal automation only follows fixed rules.&lt;/li>&lt;li>AI automation can handle messy things like emails, PDFs and photos.&lt;/li>&lt;li>For a small business, admin gets done without you typing it.&lt;/li>&lt;li>Start with one weekly job.&lt;/li>&lt;/ul>&lt;/div>&lt;/div>&lt;/section>&lt;/div>
+&lt;figure class=&quot;hero__fig&quot;>&lt;img src=&quot;/images/luke-2026/luke-marinovic-undercurrent-over-shoulder-laptop-code-melbourne.jpg&quot; alt=&quot;&quot; style=&quot;object-position:50% 55%&quot;>&lt;/figure>&lt;/header>
+
+&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;meta meta--photo&quot;>&lt;span class=&quot;meta__ph&quot;>&lt;img src=&quot;/assets/luke-sq.jpg&quot; alt=&quot;&quot;>&lt;/span>&lt;span class=&quot;meta__name&quot;>&lt;b>Luke Marinovic&lt;/b>&lt;small>Founder, UnderCurrent Automations&lt;/small>&lt;/span>&lt;span class=&quot;meta__d&quot;>Updated 2 Oct 2026&lt;em>·&lt;/em>6 min read&lt;/span>&lt;/div>
+&lt;div class=&quot;body&quot;>&lt;div class=&quot;intro&quot;>&lt;p class=&quot;lead&quot;>It's 9pm on a Sunday and the invoices still aren't out. You did the jobs, so you know they're finished. If you've asked what is AI automation, that hour of typing is the answer.&lt;/p>
+&lt;p>This guide covers what it is, what waiting costs you, and where to start.&lt;/p>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> The hero gets tall, and the description line gives way to it. The page renders the answer in a different place for this look.</p>
     </article>
     <article class="look">
-      <div class="look__head"><h3>BLUF</h3><code>ucb-qa--bluf</code></div>
-      <div class="stage"><iframe title="Quick Answer, BLUF" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+      <div class="look__head"><h3>Margin</h3><code>ucb-qa--margin</code></div>
+      <p class="idea">On a wide screen the answer stands in the margin beside the opening, a note that is there the whole time you read; under 1200px its label runs in ahead of the answer like a newspaper lead-in.</p>
+      <div class="stage"><iframe title="Quick Answer, Margin" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
 &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ledger ucb-pairs--panel ucb-data--fit ucb-qa--bluf ucb-work--receipt c-auto&quot;>&lt;section class=&quot;qa&quot; aria-label=&quot;Quick answer&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;qa__in&quot;>&lt;p class=&quot;eyebrow&quot;>Quick answer&lt;/p>&lt;p class=&quot;qa__lead qa__lead--answer&quot;>&lt;strong>AI automation is software that reads what comes in, decides what it means, and does the next step for you.&lt;/strong>&lt;/p>&lt;ul class=&quot;qa__pts&quot;>&lt;li>Normal automation only follows fixed rules.&lt;/li>&lt;li>AI automation can handle messy things like emails, PDFs and photos.&lt;/li>&lt;li>For a small business, admin gets done without you typing it.&lt;/li>&lt;li>Start with one weekly job.&lt;/li>&lt;/ul>&lt;/div>&lt;/div>&lt;/section>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> The offset card shouts; worth it once per article, wrong on anything else nearby.</p>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--fill ucb-pairs--weight ucb-data--rail ucb-qa--margin ucb-work--worked&quot;>&lt;header class=&quot;hero hero--photo&quot;>&lt;div class=&quot;hero__layer band&quot;>&lt;/div>&lt;div class=&quot;hero__layer hero__glow b&quot;>&lt;/div>&lt;div class=&quot;hero__layer hero__static&quot;>&lt;/div>&lt;div class=&quot;hero__layer hero__grain&quot;>&lt;/div>
+&lt;div class=&quot;hero__inner&quot;>&lt;span class=&quot;eyebrow hero__cat&quot;>AI Automation&lt;/span>&lt;h1>What Is AI Automation? A Plain Guide for Small Business&lt;/h1>&lt;p class=&quot;hero__sub&quot;>What is AI automation? Software that reads your emails and forms, decides what they mean and does the next step. What it costs to wait, and where to start.&lt;/p>&lt;/div>
+&lt;figure class=&quot;hero__fig&quot;>&lt;img src=&quot;/images/luke-2026/luke-marinovic-undercurrent-over-shoulder-laptop-code-melbourne.jpg&quot; alt=&quot;&quot; style=&quot;object-position:50% 55%&quot;>&lt;/figure>&lt;/header>
+&lt;section class=&quot;qa&quot; aria-label=&quot;Quick answer&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;qa__in&quot;>&lt;p class=&quot;eyebrow&quot;>Quick answer&lt;/p>&lt;p class=&quot;qa__lead qa__lead--answer&quot;>&lt;strong>AI automation is software that reads what comes in, decides what it means, and does the next step for you.&lt;/strong>&lt;/p>&lt;ul class=&quot;qa__pts&quot;>&lt;li>Normal automation only follows fixed rules.&lt;/li>&lt;li>AI automation can handle messy things like emails, PDFs and photos.&lt;/li>&lt;li>For a small business, admin gets done without you typing it.&lt;/li>&lt;li>Start with one weekly job.&lt;/li>&lt;/ul>&lt;/div>&lt;/div>&lt;/section>
+&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;meta meta--photo&quot;>&lt;span class=&quot;meta__ph&quot;>&lt;img src=&quot;/assets/luke-sq.jpg&quot; alt=&quot;&quot;>&lt;/span>&lt;span class=&quot;meta__name&quot;>&lt;b>Luke Marinovic&lt;/b>&lt;small>Founder, UnderCurrent Automations&lt;/small>&lt;/span>&lt;span class=&quot;meta__d&quot;>Updated 2 Oct 2026&lt;em>·&lt;/em>6 min read&lt;/span>&lt;/div>
+&lt;div class=&quot;body&quot;>&lt;div class=&quot;intro&quot;>&lt;p class=&quot;lead&quot;>It's 9pm on a Sunday and the invoices still aren't out. You did the jobs, so you know they're finished. If you've asked what is AI automation, that hour of typing is the answer.&lt;/p>
+&lt;p>This guide covers what it is, what waiting costs you, and where to start.&lt;/p>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> Only becomes a margin note from 1200px; on a laptop and a phone it is the run-in.</p>
     </article>
     <article class="look">
-      <div class="look__head"><h3>Split</h3><code>ucb-qa--split</code></div>
-      <div class="stage"><iframe title="Quick Answer, Split" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+      <div class="look__head"><h3>Grid</h3><code>ucb-qa--grid</code></div>
+      <p class="idea">The answer is the lead cell of the service page's crossed grid and every point gets a cell of its own, read at a glance the way the problems are.</p>
+      <div class="stage"><iframe title="Quick Answer, Grid" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
 &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ledger ucb-pairs--panel ucb-data--fit ucb-qa--split ucb-work--receipt c-auto&quot;>&lt;section class=&quot;qa&quot; aria-label=&quot;Quick answer&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;qa__in&quot;>&lt;p class=&quot;eyebrow&quot;>Quick answer&lt;/p>&lt;p class=&quot;qa__lead qa__lead--answer&quot;>&lt;strong>AI automation is software that reads what comes in, decides what it means, and does the next step for you.&lt;/strong>&lt;/p>&lt;ul class=&quot;qa__pts&quot;>&lt;li>Normal automation only follows fixed rules.&lt;/li>&lt;li>AI automation can handle messy things like emails, PDFs and photos.&lt;/li>&lt;li>For a small business, admin gets done without you typing it.&lt;/li>&lt;li>Start with one weekly job.&lt;/li>&lt;/ul>&lt;/div>&lt;/div>&lt;/section>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> Wants a wider measure than the 760px column the rest of the article keeps.</p>
-    </article>
-    <article class="look">
-      <div class="look__head"><h3>Tiles</h3><code>ucb-qa--tiles</code></div>
-      <div class="stage"><iframe title="Quick Answer, Tiles" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
-&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
-&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
-&lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ledger ucb-pairs--panel ucb-data--fit ucb-qa--tiles ucb-work--receipt c-auto&quot;>&lt;section class=&quot;qa&quot; aria-label=&quot;Quick answer&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;qa__in&quot;>&lt;p class=&quot;eyebrow&quot;>Quick answer&lt;/p>&lt;p class=&quot;qa__lead qa__lead--answer&quot;>&lt;strong>AI automation is software that reads what comes in, decides what it means, and does the next step for you.&lt;/strong>&lt;/p>&lt;ul class=&quot;qa__pts&quot;>&lt;li>Normal automation only follows fixed rules.&lt;/li>&lt;li>AI automation can handle messy things like emails, PDFs and photos.&lt;/li>&lt;li>For a small business, admin gets done without you typing it.&lt;/li>&lt;li>Start with one weekly job.&lt;/li>&lt;/ul>&lt;/div>&lt;/div>&lt;/section>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> Four tiles stack tall on a phone, about 1.5 times Plain's height.</p>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--fill ucb-pairs--weight ucb-data--rail ucb-qa--grid ucb-work--worked&quot;>&lt;header class=&quot;hero hero--photo&quot;>&lt;div class=&quot;hero__layer band&quot;>&lt;/div>&lt;div class=&quot;hero__layer hero__glow b&quot;>&lt;/div>&lt;div class=&quot;hero__layer hero__static&quot;>&lt;/div>&lt;div class=&quot;hero__layer hero__grain&quot;>&lt;/div>
+&lt;div class=&quot;hero__inner&quot;>&lt;span class=&quot;eyebrow hero__cat&quot;>AI Automation&lt;/span>&lt;h1>What Is AI Automation? A Plain Guide for Small Business&lt;/h1>&lt;p class=&quot;hero__sub&quot;>What is AI automation? Software that reads your emails and forms, decides what they mean and does the next step. What it costs to wait, and where to start.&lt;/p>&lt;/div>
+&lt;figure class=&quot;hero__fig&quot;>&lt;img src=&quot;/images/luke-2026/luke-marinovic-undercurrent-over-shoulder-laptop-code-melbourne.jpg&quot; alt=&quot;&quot; style=&quot;object-position:50% 55%&quot;>&lt;/figure>&lt;/header>
+&lt;section class=&quot;qa&quot; aria-label=&quot;Quick answer&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;qa__in&quot;>&lt;p class=&quot;eyebrow&quot;>Quick answer&lt;/p>&lt;p class=&quot;qa__lead qa__lead--answer&quot;>&lt;strong>AI automation is software that reads what comes in, decides what it means, and does the next step for you.&lt;/strong>&lt;/p>&lt;ul class=&quot;qa__pts&quot;>&lt;li>Normal automation only follows fixed rules.&lt;/li>&lt;li>AI automation can handle messy things like emails, PDFs and photos.&lt;/li>&lt;li>For a small business, admin gets done without you typing it.&lt;/li>&lt;li>Start with one weekly job.&lt;/li>&lt;/ul>&lt;/div>&lt;/div>&lt;/section>
+&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;meta meta--photo&quot;>&lt;span class=&quot;meta__ph&quot;>&lt;img src=&quot;/assets/luke-sq.jpg&quot; alt=&quot;&quot;>&lt;/span>&lt;span class=&quot;meta__name&quot;>&lt;b>Luke Marinovic&lt;/b>&lt;small>Founder, UnderCurrent Automations&lt;/small>&lt;/span>&lt;span class=&quot;meta__d&quot;>Updated 2 Oct 2026&lt;em>·&lt;/em>6 min read&lt;/span>&lt;/div>
+&lt;div class=&quot;body&quot;>&lt;div class=&quot;intro&quot;>&lt;p class=&quot;lead&quot;>It's 9pm on a Sunday and the invoices still aren't out. You did the jobs, so you know they're finished. If you've asked what is AI automation, that hour of typing is the answer.&lt;/p>
+&lt;p>This guide covers what it is, what waiting costs you, and where to start.&lt;/p>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> The widest look, past the reading column on desktop; with three points one cell sits empty.</p>
     </article>
   </div>
 </section>
 
 <section class="fam" id="workings">
-  <div class="fam__head"><h2>Workings</h2><span class="chip">three looks</span></div>
-  <p class="what">Show your workings: every line ends in a bold value, a line opening &quot;= &quot; is the total. The &quot;=&quot; and the comma stay in the text, so a scraper reads a sum as a sum. Copy: the proof article's two sums and the Google Ads example.</p>
+  <p class="label"><span>05</span>Workings, three looks</p>
+  <h2>Workings</h2>
+  <p class="what">The sum behind a claim: every line ends in a bold value, a line opening &quot;= &quot; is the total. The build works out the sign between the lines from the numbers, writes it into the text, and stops if a sum doesn't hold. The signs are drawn as the site's grain cross. Copy: the proof article's two sums, then the Google Ads example (each line carries its own sum).</p>
+  <p class="pick"><b>Pick: Worked.</b> It holds every shape of sum on the site, chained or self-contained, and reads like a page of workings on a phone as well as a desk. Equation is the louder one and wraps on a phone.</p>
   <div class="looks">
-    <article class="look">
-      <div class="look__head"><h3>Receipt</h3><span class="chip chip--on">On the proof</span><code>ucb-work--receipt</code></div>
-      <div class="stage"><iframe title="Workings, Receipt" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+    <article class="look look--pick">
+      <div class="look__head"><h3>Worked</h3><span class="tag">Pick</span><code>ucb-work--worked</code></div>
+      <p class="idea">The sum set the way you'd do it on paper: figures stacked and right-aligned in light numerals, the sign beside them, a rule under the last line, the answer in the hero's stripes.</p>
+      <div class="stage"><iframe title="Workings, Worked" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
 &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ledger ucb-pairs--panel ucb-data--fit ucb-qa--plain ucb-work--receipt c-auto&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;What doing nothing costs (swap in your own numbers)&quot;>&lt;p class=&quot;ucb__title&quot;>What doing nothing costs &lt;span class=&quot;ucb__meta&quot;>swap in your own numbers&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Admin hours a week&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>10&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Working weeks a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>48&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Your time on the tools&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>$80 an hour&lt;/span>&lt;/li>
-&lt;li class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__text&quot;>= Cost of that admin a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>$38,400&lt;/span>&lt;/li>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--fill ucb-pairs--weight ucb-data--rail ucb-qa--deck ucb-work--worked&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;What doing nothing costs (swap in your own numbers)&quot;>&lt;p class=&quot;ucb__title&quot;>What doing nothing costs &lt;span class=&quot;ucb__meta&quot;>swap in your own numbers&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list ucb__list--chain&quot; role=&quot;list&quot; style=&quot;--of:4&quot;>
+&lt;li style=&quot;--n:1&quot; data-run=&quot;10&quot;>&lt;span class=&quot;ucb__text&quot;>Admin hours a week&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>10&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot; data-run=&quot;480&quot;>&lt;span class=&quot;ucb__op ucb__op--times&quot;>×&lt;/span> &lt;span class=&quot;ucb__text&quot;>Working weeks a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>48&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:3&quot; data-run=&quot;$38,400&quot;>&lt;span class=&quot;ucb__op ucb__op--times&quot;>×&lt;/span> &lt;span class=&quot;ucb__text&quot;>Your time on the tools&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>$80&lt;/span>&lt;span class=&quot;ucb__unit&quot;> an hour&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:4&quot; class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__op ucb__op--eq&quot;>=&lt;/span> &lt;span class=&quot;ucb__text&quot;>Cost of that admin a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>$38,400&lt;/span>&lt;/span>&lt;/li>
 &lt;/ul>&lt;/div>
 
-&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;What the invoice generator handed back (one health business)&quot;>&lt;p class=&quot;ucb__title&quot;>What the invoice generator handed back &lt;span class=&quot;ucb__meta&quot;>one health business&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Invoicing time saved a week&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>about 10 hours&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Weeks in the working year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>48&lt;/span>&lt;/li>
-&lt;li class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__text&quot;>= Hours handed back a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>about 480&lt;/span>&lt;/li>
+&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;What the invoice generator handed back (one health business)&quot;>&lt;p class=&quot;ucb__title&quot;>What the invoice generator handed back &lt;span class=&quot;ucb__meta&quot;>one health business&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list ucb__list--chain&quot; role=&quot;list&quot; style=&quot;--of:3&quot;>
+&lt;li style=&quot;--n:1&quot; data-run=&quot;10&quot;>&lt;span class=&quot;ucb__text&quot;>Invoicing time saved a week&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__pre&quot;>about &lt;/span>&lt;span class=&quot;ucb__fig&quot;>10&lt;/span>&lt;span class=&quot;ucb__unit&quot;> hours&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot; data-run=&quot;480&quot;>&lt;span class=&quot;ucb__op ucb__op--times&quot;>×&lt;/span> &lt;span class=&quot;ucb__text&quot;>Weeks in the working year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>48&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:3&quot; class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__op ucb__op--eq&quot;>=&lt;/span> &lt;span class=&quot;ucb__text&quot;>Hours handed back a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__pre&quot;>about &lt;/span>&lt;span class=&quot;ucb__fig&quot;>480&lt;/span>&lt;/span>&lt;/li>
 &lt;/ul>&lt;/div>
 
-&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;Example (a plumber wanting 30 jobs a month)&quot;>&lt;p class=&quot;ucb__title&quot;>Example &lt;span class=&quot;ucb__meta&quot;>a plumber wanting 30 jobs a month&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>30 leads x $60 AUD per lead&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>$1,800 AUD per month&lt;/span>&lt;/li>
-&lt;li class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__text&quot;>= $1,800 / 30.4&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>about $59 AUD per day&lt;/span>&lt;/li>
+&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;Example (a plumber wanting 30 jobs a month)&quot;>&lt;p class=&quot;ucb__title&quot;>Example &lt;span class=&quot;ucb__meta&quot;>a plumber wanting 30 jobs a month&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list ucb__list--sums&quot; role=&quot;list&quot; style=&quot;--of:2&quot;>
+&lt;li style=&quot;--n:1&quot;>&lt;span class=&quot;ucb__text&quot;>30 leads x $60 AUD per lead&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>$1,800&lt;/span>&lt;span class=&quot;ucb__unit&quot;> AUD per month&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot; class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__op ucb__op--eq&quot;>=&lt;/span> &lt;span class=&quot;ucb__text&quot;>$1,800 / 30.4&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__pre&quot;>about &lt;/span>&lt;span class=&quot;ucb__fig&quot;>$59&lt;/span>&lt;span class=&quot;ucb__unit&quot;> AUD per day&lt;/span>&lt;/span>&lt;/li>
 &lt;/ul>&lt;/div>
-&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> On a phone a long label pushes its value to its own line.</p>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> On a phone a long label wraps to three lines beside its figure.</p>
     </article>
     <article class="look">
-      <div class="look__head"><h3>Tile</h3><code>ucb-work--tile</code></div>
-      <div class="stage"><iframe title="Workings, Tile" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+      <div class="look__head"><h3>Tally</h3><code>ucb-work--tally</code></div>
+      <p class="idea">The result is kept as you go: each line carries the running figure on the right, growing with every line, so you watch 10 become 480 become $38,400.</p>
+      <div class="stage"><iframe title="Workings, Tally" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
 &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ledger ucb-pairs--panel ucb-data--fit ucb-qa--plain ucb-work--tile c-auto&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;What doing nothing costs (swap in your own numbers)&quot;>&lt;p class=&quot;ucb__title&quot;>What doing nothing costs &lt;span class=&quot;ucb__meta&quot;>swap in your own numbers&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Admin hours a week&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>10&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Working weeks a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>48&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Your time on the tools&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>$80 an hour&lt;/span>&lt;/li>
-&lt;li class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__text&quot;>= Cost of that admin a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>$38,400&lt;/span>&lt;/li>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--fill ucb-pairs--weight ucb-data--rail ucb-qa--deck ucb-work--tally&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;What doing nothing costs (swap in your own numbers)&quot;>&lt;p class=&quot;ucb__title&quot;>What doing nothing costs &lt;span class=&quot;ucb__meta&quot;>swap in your own numbers&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list ucb__list--chain&quot; role=&quot;list&quot; style=&quot;--of:4&quot;>
+&lt;li style=&quot;--n:1&quot; data-run=&quot;10&quot;>&lt;span class=&quot;ucb__text&quot;>Admin hours a week&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>10&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot; data-run=&quot;480&quot;>&lt;span class=&quot;ucb__op ucb__op--times&quot;>×&lt;/span> &lt;span class=&quot;ucb__text&quot;>Working weeks a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>48&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:3&quot; data-run=&quot;$38,400&quot;>&lt;span class=&quot;ucb__op ucb__op--times&quot;>×&lt;/span> &lt;span class=&quot;ucb__text&quot;>Your time on the tools&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>$80&lt;/span>&lt;span class=&quot;ucb__unit&quot;> an hour&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:4&quot; class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__op ucb__op--eq&quot;>=&lt;/span> &lt;span class=&quot;ucb__text&quot;>Cost of that admin a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>$38,400&lt;/span>&lt;/span>&lt;/li>
 &lt;/ul>&lt;/div>
 
-&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;What the invoice generator handed back (one health business)&quot;>&lt;p class=&quot;ucb__title&quot;>What the invoice generator handed back &lt;span class=&quot;ucb__meta&quot;>one health business&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Invoicing time saved a week&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>about 10 hours&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Weeks in the working year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>48&lt;/span>&lt;/li>
-&lt;li class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__text&quot;>= Hours handed back a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>about 480&lt;/span>&lt;/li>
+&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;What the invoice generator handed back (one health business)&quot;>&lt;p class=&quot;ucb__title&quot;>What the invoice generator handed back &lt;span class=&quot;ucb__meta&quot;>one health business&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list ucb__list--chain&quot; role=&quot;list&quot; style=&quot;--of:3&quot;>
+&lt;li style=&quot;--n:1&quot; data-run=&quot;10&quot;>&lt;span class=&quot;ucb__text&quot;>Invoicing time saved a week&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__pre&quot;>about &lt;/span>&lt;span class=&quot;ucb__fig&quot;>10&lt;/span>&lt;span class=&quot;ucb__unit&quot;> hours&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot; data-run=&quot;480&quot;>&lt;span class=&quot;ucb__op ucb__op--times&quot;>×&lt;/span> &lt;span class=&quot;ucb__text&quot;>Weeks in the working year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>48&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:3&quot; class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__op ucb__op--eq&quot;>=&lt;/span> &lt;span class=&quot;ucb__text&quot;>Hours handed back a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__pre&quot;>about &lt;/span>&lt;span class=&quot;ucb__fig&quot;>480&lt;/span>&lt;/span>&lt;/li>
 &lt;/ul>&lt;/div>
 
-&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;Example (a plumber wanting 30 jobs a month)&quot;>&lt;p class=&quot;ucb__title&quot;>Example &lt;span class=&quot;ucb__meta&quot;>a plumber wanting 30 jobs a month&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>30 leads x $60 AUD per lead&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>$1,800 AUD per month&lt;/span>&lt;/li>
-&lt;li class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__text&quot;>= $1,800 / 30.4&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>about $59 AUD per day&lt;/span>&lt;/li>
+&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;Example (a plumber wanting 30 jobs a month)&quot;>&lt;p class=&quot;ucb__title&quot;>Example &lt;span class=&quot;ucb__meta&quot;>a plumber wanting 30 jobs a month&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list ucb__list--sums&quot; role=&quot;list&quot; style=&quot;--of:2&quot;>
+&lt;li style=&quot;--n:1&quot;>&lt;span class=&quot;ucb__text&quot;>30 leads x $60 AUD per lead&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>$1,800&lt;/span>&lt;span class=&quot;ucb__unit&quot;> AUD per month&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot; class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__op ucb__op--eq&quot;>=&lt;/span> &lt;span class=&quot;ucb__text&quot;>$1,800 / 30.4&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__pre&quot;>about &lt;/span>&lt;span class=&quot;ucb__fig&quot;>$59&lt;/span>&lt;span class=&quot;ucb__unit&quot;> AUD per day&lt;/span>&lt;/span>&lt;/li>
 &lt;/ul>&lt;/div>
-&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> The blue total tile is the loudest thing in the article, wherever it lands.</p>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> Only a chained sum has a running figure; the Google Ads lines each carry their own sum, so there it is a plain list.</p>
     </article>
     <article class="look">
-      <div class="look__head"><h3>Column</h3><code>ucb-work--column</code></div>
-      <div class="stage"><iframe title="Workings, Column" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+      <div class="look__head"><h3>Equation</h3><code>ucb-work--equation</code></div>
+      <p class="idea">The sum is one line across the column, each figure captioned underneath the way the homepage captions its stats, the answer last in the stripes.</p>
+      <div class="stage"><iframe title="Workings, Equation" loading="lazy" srcdoc="&lt;!doctype html>&lt;html lang=&quot;en-AU&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
 &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;>&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin>
 &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
 &lt;link rel=&quot;stylesheet&quot; href=&quot;/article-blocks-concepts.css&quot;>&lt;/head>
-&lt;body>&lt;article class=&quot;ucb-looks ucb-steps--ledger ucb-pairs--panel ucb-data--fit ucb-qa--plain ucb-work--column c-auto&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;What doing nothing costs (swap in your own numbers)&quot;>&lt;p class=&quot;ucb__title&quot;>What doing nothing costs &lt;span class=&quot;ucb__meta&quot;>swap in your own numbers&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Admin hours a week&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>10&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Working weeks a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>48&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Your time on the tools&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>$80 an hour&lt;/span>&lt;/li>
-&lt;li class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__text&quot;>= Cost of that admin a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>$38,400&lt;/span>&lt;/li>
+&lt;body>&lt;div class=&quot;c-auto&quot;>&lt;article class=&quot;ucb-looks ucb-steps--fill ucb-pairs--weight ucb-data--rail ucb-qa--deck ucb-work--equation&quot;>&lt;div class=&quot;art&quot;>&lt;div class=&quot;wrap&quot;>&lt;div class=&quot;art__col&quot;>&lt;div class=&quot;body&quot;>&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;What doing nothing costs (swap in your own numbers)&quot;>&lt;p class=&quot;ucb__title&quot;>What doing nothing costs &lt;span class=&quot;ucb__meta&quot;>swap in your own numbers&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list ucb__list--chain&quot; role=&quot;list&quot; style=&quot;--of:4&quot;>
+&lt;li style=&quot;--n:1&quot; data-run=&quot;10&quot;>&lt;span class=&quot;ucb__text&quot;>Admin hours a week&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>10&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot; data-run=&quot;480&quot;>&lt;span class=&quot;ucb__op ucb__op--times&quot;>×&lt;/span> &lt;span class=&quot;ucb__text&quot;>Working weeks a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>48&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:3&quot; data-run=&quot;$38,400&quot;>&lt;span class=&quot;ucb__op ucb__op--times&quot;>×&lt;/span> &lt;span class=&quot;ucb__text&quot;>Your time on the tools&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>$80&lt;/span>&lt;span class=&quot;ucb__unit&quot;> an hour&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:4&quot; class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__op ucb__op--eq&quot;>=&lt;/span> &lt;span class=&quot;ucb__text&quot;>Cost of that admin a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>$38,400&lt;/span>&lt;/span>&lt;/li>
 &lt;/ul>&lt;/div>
 
-&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;What the invoice generator handed back (one health business)&quot;>&lt;p class=&quot;ucb__title&quot;>What the invoice generator handed back &lt;span class=&quot;ucb__meta&quot;>one health business&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Invoicing time saved a week&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>about 10 hours&lt;/span>&lt;/li>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>Weeks in the working year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>48&lt;/span>&lt;/li>
-&lt;li class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__text&quot;>= Hours handed back a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>about 480&lt;/span>&lt;/li>
+&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;What the invoice generator handed back (one health business)&quot;>&lt;p class=&quot;ucb__title&quot;>What the invoice generator handed back &lt;span class=&quot;ucb__meta&quot;>one health business&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list ucb__list--chain&quot; role=&quot;list&quot; style=&quot;--of:3&quot;>
+&lt;li style=&quot;--n:1&quot; data-run=&quot;10&quot;>&lt;span class=&quot;ucb__text&quot;>Invoicing time saved a week&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__pre&quot;>about &lt;/span>&lt;span class=&quot;ucb__fig&quot;>10&lt;/span>&lt;span class=&quot;ucb__unit&quot;> hours&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot; data-run=&quot;480&quot;>&lt;span class=&quot;ucb__op ucb__op--times&quot;>×&lt;/span> &lt;span class=&quot;ucb__text&quot;>Weeks in the working year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>48&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:3&quot; class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__op ucb__op--eq&quot;>=&lt;/span> &lt;span class=&quot;ucb__text&quot;>Hours handed back a year&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__pre&quot;>about &lt;/span>&lt;span class=&quot;ucb__fig&quot;>480&lt;/span>&lt;/span>&lt;/li>
 &lt;/ul>&lt;/div>
 
-&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;Example (a plumber wanting 30 jobs a month)&quot;>&lt;p class=&quot;ucb__title&quot;>Example &lt;span class=&quot;ucb__meta&quot;>a plumber wanting 30 jobs a month&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list&quot; role=&quot;list&quot;>
-&lt;li>&lt;span class=&quot;ucb__text&quot;>30 leads x $60 AUD per lead&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>$1,800 AUD per month&lt;/span>&lt;/li>
-&lt;li class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__text&quot;>= $1,800 / 30.4&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>about $59 AUD per day&lt;/span>&lt;/li>
+&lt;div class=&quot;ucb ucb--workings&quot; role=&quot;group&quot; aria-label=&quot;Example (a plumber wanting 30 jobs a month)&quot;>&lt;p class=&quot;ucb__title&quot;>Example &lt;span class=&quot;ucb__meta&quot;>a plumber wanting 30 jobs a month&lt;/span>&lt;/p>&lt;ul class=&quot;ucb__list ucb__list--sums&quot; role=&quot;list&quot; style=&quot;--of:2&quot;>
+&lt;li style=&quot;--n:1&quot;>&lt;span class=&quot;ucb__text&quot;>30 leads x $60 AUD per lead&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__fig&quot;>$1,800&lt;/span>&lt;span class=&quot;ucb__unit&quot;> AUD per month&lt;/span>&lt;/span>&lt;/li>
+&lt;li style=&quot;--n:2&quot; class=&quot;ucb__total&quot;>&lt;span class=&quot;ucb__op ucb__op--eq&quot;>=&lt;/span> &lt;span class=&quot;ucb__text&quot;>$1,800 / 30.4&lt;/span>&lt;span class=&quot;ucb__sep&quot;>, &lt;/span>&lt;span class=&quot;ucb__val&quot;>&lt;span class=&quot;ucb__pre&quot;>about &lt;/span>&lt;span class=&quot;ucb__fig&quot;>$59&lt;/span>&lt;span class=&quot;ucb__unit&quot;> AUD per day&lt;/span>&lt;/span>&lt;/li>
 &lt;/ul>&lt;/div>
-&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/body>&lt;/html>"></iframe></div>
-      <p class="honest"><b>Honest:</b> Wants short numeric values; a value in words, like a formula, goes oversized.</p>
+&lt;/div>&lt;/div>&lt;/div>&lt;/div>&lt;/article>&lt;/div>&lt;/body>&lt;/html>"></iframe></div>
+      <p class="honest"><b>Honest:</b> It wraps on a phone, and a figure with words in it (&quot;$80 an hour&quot;) takes a line to itself.</p>
     </article>
   </div>
 </section>
 </main>
 <script>
-// the board's own behaviour: fit each frame to its content, scale it to its card
+// the board's own behaviour: fit each frame to its content, scale it to its cell
 var frames = [].slice.call(document.querySelectorAll('iframe'));
 function fit(f) {
   var d = f.contentDocument; if (!d || !d.body) return;
@@ -847,7 +909,7 @@ function fit(f) {
   f.style.height = h + 'px';
   f.parentNode.style.height = Math.ceil(h * scale) + 'px';
 }
-frames.forEach(function (f) { f.addEventListener('load', function () { fit(f); setTimeout(function () { fit(f) }, 400) }) });
+frames.forEach(function (f) { f.addEventListener('load', function () { fit(f); setTimeout(function () { fit(f) }, 500) }) });
 function mode(m) {
   document.body.classList.toggle('desk', m === 'desk');
   [].forEach.call(document.querySelectorAll('.toggle button'), function (b) { b.setAttribute('aria-pressed', String(b.dataset.mode === m)) });
