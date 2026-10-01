@@ -21,12 +21,35 @@ import { photoOf } from '@/lib/photos'
 const SITE_URL = 'https://undercurrentautomations.com'
 const CALC_TOKEN = '<!-- calc:tradie-admin -->'
 
-// The looks for the article blocks, one class each (app/styles/article-blocks.css). None yet: the
-// blocks sit on the live site's base styles. Side by side: /article-blocks-concepts.html
-const BLOCK_LOOKS = {}
+// The looks for the article blocks, one class each (app/styles/article-blocks.css): steps
+// fill|relay|command|signal, pairs strike|weight|across|signed, tables rail|ledger|pick|turn, Quick
+// Answer statement|deck|margin|grid, workings worked|tally|equation. Side by side, with the idea
+// behind each: /article-blocks-concepts.html
+const BLOCK_LOOKS = { steps: 'fill', pairs: 'weight', data: 'rail', qa: 'deck', work: 'worked' }
 const LOOKS = `ucb-looks ${Object.entries(BLOCK_LOOKS).map(([k, v]) => `ucb-${k}--${v}`).join(' ')}`
 
 // the share and schema image: the library photo when the article has one, else the old poster, else the brand card
+// the Quick Answer: the label, the answer sentence, the points, in that order wherever it sits
+function QuickAnswer({ qa, className }) {
+  return (
+    <section className={className} data-reveal="" aria-label="Quick answer"><div className="wrap"><div className="qa__in">
+      <p className="eyebrow rv">Quick answer</p>
+      <p className={`qa__lead rv${qa.answer ? ' qa__lead--answer' : ''}`} style={{ '--i': '1' }} dangerouslySetInnerHTML={{ __html: qa.lead }} />
+      {qa.items.length > 0 && !qa.ordered && (
+        <ul className="qa__pts rv" style={{ '--i': '2' }}>
+          {qa.items.map((it, i) => <li key={i} dangerouslySetInnerHTML={{ __html: it }} />)}
+        </ul>
+      )}
+      {qa.items.length > 0 && qa.ordered && (
+        <ol className="qa__cells rv" style={{ '--i': '2' }}>
+          {qa.items.map((it, i) => <li key={i} dangerouslySetInnerHTML={{ __html: it }} />)}
+        </ol>
+      )}
+      {qa.close.map((c, i) => <p key={i} className="qa__close rv" style={{ '--i': '3' }} dangerouslySetInnerHTML={{ __html: c }} />)}
+    </div></div></section>
+  )
+}
+
 function shareImage(slug, fm) {
   const hero = photoOf(fm.photo)
   if (hero) return { url: `${SITE_URL}${hero.path}`, width: hero.width, height: hero.height, alt: fm.photoAlt || hero.alt }
@@ -88,6 +111,8 @@ export default async function ArticlePage({ params }) {
   const faqs = faqsOf(fm)
   const hero = photoOf(fm.photo)
   const heroAlt = hero && (fm.photoAlt || hero.alt)
+  // the Deck look puts the Quick Answer in the hero, under the title, in place of the description
+  const deck = BLOCK_LOOKS.qa === 'deck'
 
   const { qa, html: afterQa } = extractQuickAnswer(article.html)
   const body = faqs.length ? stripSection(afterQa, 'Frequently Asked Questions') : afterQa
@@ -155,7 +180,8 @@ export default async function ArticlePage({ params }) {
             <div className="hero__inner">
               <a className="eyebrow hero__cat rv" href={`/blog#cat-${cat.key}`}>{cat.label}</a>
               <h1 className="rv" style={{ '--i': '1' }}>{fm.title}</h1>
-              {fm.description && <p className="hero__sub rv" style={{ '--i': '2' }}>{fm.description}</p>}
+              {qa && deck ? <QuickAnswer qa={qa} className="qa qa--deck" />
+                : fm.description && <p className="hero__sub rv" style={{ '--i': '2' }}>{fm.description}</p>}
             </div>
             {hero && (
               <figure className="hero__fig">
@@ -172,23 +198,7 @@ export default async function ArticlePage({ params }) {
             </div></div></nav>
           )}
 
-          {qa && (
-            <section className="qa" data-reveal="" aria-label="Quick answer"><div className="wrap"><div className="qa__in">
-              <p className="eyebrow rv">Quick answer</p>
-              <p className={`qa__lead rv${qa.answer ? ' qa__lead--answer' : ''}`} style={{ '--i': '1' }} dangerouslySetInnerHTML={{ __html: qa.lead }} />
-              {qa.items.length > 0 && !qa.ordered && (
-                <ul className="qa__pts rv" style={{ '--i': '2' }}>
-                  {qa.items.map((it, i) => <li key={i} dangerouslySetInnerHTML={{ __html: it }} />)}
-                </ul>
-              )}
-              {qa.items.length > 0 && qa.ordered && (
-                <ol className="qa__cells rv" style={{ '--i': '2' }}>
-                  {qa.items.map((it, i) => <li key={i} dangerouslySetInnerHTML={{ __html: it }} />)}
-                </ol>
-              )}
-              {qa.close.map((c, i) => <p key={i} className="qa__close rv" style={{ '--i': '3' }} dangerouslySetInnerHTML={{ __html: c }} />)}
-            </div></div></section>
-          )}
+          {qa && !deck && <QuickAnswer qa={qa} className="qa" />}
 
           <div className="art"><div className="wrap"><div className="art__col">
             <div className="meta meta--photo">
