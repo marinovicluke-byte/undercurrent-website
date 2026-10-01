@@ -129,22 +129,23 @@ Drop that into the page and you've told Google, Bing and the AI crawlers behind 
 
 Work down the layers and tick what's true. Three ticks per layer is the bar, and be honest with the boxes: a page that loads in 4 seconds doesn't get a tick for "under 2 seconds", and "sort of has schema" is a no.
 
-```text
-LAYER 1: SEO foundations
-  [ ] Does the page show up when you Google your service + suburb?
-  [ ] Does it load in under 2 seconds on a phone?
-  [ ] Does it have a clear title, real headings, and internal links?
+**Layer 1: SEO foundations**
 
-LAYER 2: AEO formatting
-  [ ] Is there a 40-to-60 word answer right under each question heading?
-  [ ] Does the page carry FAQ, Organization and LocalBusiness schema?
-  [ ] Can you copy a clean one-line answer straight off the page?
+- [ ] Does the page show up when you Google your service + suburb?
+- [ ] Does it load in under 2 seconds on a phone?
+- [ ] Does it have a clear title, real headings, and internal links?
 
-LAYER 3: GEO authority
-  [ ] Ask ChatGPT and Perplexity your buyer's question. Are you named?
-  [ ] Do other credible sites mention your business by name?
-  [ ] Are your name, address and phone identical everywhere online?
-```
+**Layer 2: AEO formatting**
+
+- [ ] Is there a 40-to-60 word answer right under each question heading?
+- [ ] Does the page carry FAQ, Organization and LocalBusiness schema?
+- [ ] Can you copy a clean one-line answer straight off the page?
+
+**Layer 3: GEO authority**
+
+- [ ] Ask ChatGPT and Perplexity your buyer's question. Are you named?
+- [ ] Do other credible sites mention your business by name?
+- [ ] Are your name, address and phone identical everywhere online?
 
 The whole sweep takes about 30 minutes. If layer one has gaps, fix that before you touch anything else, because schema on a page nobody can find is just decoration. If you'd rather have someone score all three for you, we run a free SEO, AEO and GEO audit, one report, three layers, no upsell pressure, off our [AI search visibility page](/seo-ai-visibility), or work through [the full self-check walkthrough](/blog/seo-audit-self-check-australia) yourself first.
 

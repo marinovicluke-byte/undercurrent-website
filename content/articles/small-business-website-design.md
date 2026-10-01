@@ -176,15 +176,13 @@ That last one is the whole argument for this guide. Two pages, one subject, and 
 
 **Plan a small business website design project around outcomes first, then design, then code.** A clear plan separates a site that earns its keep from an expensive brochure, and it keeps a custom build from drifting back into template habits.
 
-Work the project in five steps:
+**Work the project in five steps:**
 
-```text
-01  Map the funnel    name the one action each page must drive
-02  Content first     write answer-first copy before any design
-03  Choose custom     pick a custom build over a template to rank
-04  Brief the build   set speed and schema as hard requirements
-05  Measure outcomes  track rankings and enquiries, not just visits
-```
+1. **Map the funnel:** name the one action each page must drive
+2. **Content first:** write answer-first copy before any design
+3. **Choose custom:** pick a custom build over a template to rank
+4. **Brief the build:** set speed and schema as hard requirements
+5. **Measure outcomes:** track rankings and enquiries, not just visits
 
 Brief your designer on speed and structured data as requirements, not nice-to-haves, and agree how you'll measure success before launch day. It also pays to plan the site alongside the rest of your stack. A website that feeds a CRM, a booking tool or an [e-invoicing setup](/blog/einvoicing-small-business-australia-guide) is worth more than one sitting alone, and the right [small business automation tools](/blog/top-5-small-business-automation-tools-2026) take admin off your plate once the leads start arriving. If you'd rather hand the whole build over, that's what our [custom website design service](/website-design) exists for.
 

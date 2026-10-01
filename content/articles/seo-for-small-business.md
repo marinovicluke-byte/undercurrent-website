@@ -96,8 +96,7 @@ If you'd rather build internal capability first, our [AI training for small busi
 
 **A DIY checklist should hit the foundation first, then local, then content, in that order.** The trap small business owners fall into is jumping straight to "write blog posts" before the site is crawlable or the Google Business Profile is even claimed. Fix the order and you get results from work you can do without hiring anyone.
 
-```text
-DIY small business SEO checklist (run top to bottom)
+**DIY small business SEO checklist (run top to bottom)**
 
 1. Claim and complete your Google Business Profile: categories, hours, photos, service areas
 2. Set up Google Search Console and submit your sitemap
@@ -109,7 +108,6 @@ DIY small business SEO checklist (run top to bottom)
 8. Add an FAQ block answering the real questions customers ask you
 9. Earn three relevant local mentions: directories, partners, suppliers, associations
 10. Re-check enquiries (calls, forms) monthly, not rankings weekly
-```
 
 Work that list in order and most small businesses cover the bulk of what an agency would charge for in the first quarter. Once it's done, the same checklist tells you what's left to outsource, and it pairs well with [automating the rest of your business processes](/blog/automating-business-processes-australia-sme-guide) so the admin around enquiries doesn't swallow the new traffic. If you only have one weekend, our pick for [the simplest small business tasks to automate first](/blog/simplest-small-business-automation-tasks-australia-2026) is a good companion read.
 

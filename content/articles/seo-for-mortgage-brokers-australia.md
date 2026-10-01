@@ -179,16 +179,15 @@ One good page does four jobs at once: it ranks in organic search, supports the B
 
 Before anything goes live, run it past this checklist:
 
-```
-Broker SEO go-live checklist
-[ ] Google Business Profile claimed, every service listed
-[ ] Primary category set to "Mortgage broker"
-[ ] One dedicated page for each loan service
-[ ] Every H2 written as a real borrower question
-[ ] FAQPage and LocalBusiness schema in place
-[ ] No interest rate quoted without its comparison rate
-[ ] A review request sent after every settlement
-```
+**Broker SEO go-live checklist**
+
+- [ ] Google Business Profile claimed, every service listed
+- [ ] Primary category set to "Mortgage broker"
+- [ ] One dedicated page for each loan service
+- [ ] Every H2 written as a real borrower question
+- [ ] FAQPage and LocalBusiness schema in place
+- [ ] No interest rate quoted without its comparison rate
+- [ ] A review request sent after every settlement
 
 Miss one line and you are handing a search surface to a competitor. None of it needs a budget, just an afternoon and the discipline to finish the list.
 

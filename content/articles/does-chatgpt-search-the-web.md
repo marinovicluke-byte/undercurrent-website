@@ -76,13 +76,14 @@ The next model, call it GPT-6, will land sometime in the second half of 2026. It
 
 That's your ranking window. Roughly six months from publication to the next major training cutoff. Miss it and you compete only in the retrieval path, which fires on 34.5% of queries and concentrates around 10 domains.
 
-```text
-Publish window  →  Indexation  →  Citation accumulation  →  Training cutoff
-   May 2026        Jun-Jul          Aug-Oct                  Likely Nov 2026
-   ────────────────────────────────────────────────────────────────────────
-   Earned mentions on Reddit/Wikipedia/PR weight heaviest in this window.
-   Schema tweaks weight near-zero. Crawler accessibility is table stakes.
-```
+**Your ranking window**
+
+1. Publish window, **May 2026**
+2. Indexation, **Jun-Jul**
+3. Citation accumulation, **Aug-Oct**
+4. Training cutoff, **Likely Nov 2026**
+
+*Earned mentions on Reddit/Wikipedia/PR weight heaviest in this window. Schema tweaks weight near-zero. Crawler accessibility is table stakes.*
 
 The calendar matters more than the schema.
 

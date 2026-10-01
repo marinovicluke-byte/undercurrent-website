@@ -88,13 +88,12 @@ Most owners give up between step 4 and step 5, the gap our [AI training](/blog/a
 
 **Once Claude is doing real work in your business, it's no longer a chat window, it's a service running between your stack and your customers, and the architecture matters more than the prompt.**
 
-Here's the shape of a typical production Claude workflow for an Australian SMB:
+**Here's the shape of a typical production Claude workflow for an Australian SMB:**
 
-```
-[Inbound lead/email] → [n8n or Make trigger]
-       → [Claude (Cowork or API) + Supabase context store]
-              → [CRM: drafted reply + tagged task + follow-up scheduled]
-```
+1. Inbound lead/email
+2. n8n or Make trigger
+3. Claude (Cowork or API) + Supabase context store
+4. CRM: drafted reply + tagged task + follow-up scheduled
 
 Each box is a checkpoint, not a black box. The trigger fires deterministically. Claude operates as an un-monitored microservice with a locked system prompt. Supabase (or any vector store) supplies the context Claude needs without you re-pasting it into every chat. The CRM receives a structured output, not a wall of prose.
 

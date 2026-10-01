@@ -120,16 +120,15 @@ Most small businesses on a single platform pay a flat retainer. Percentage-of-sp
 
 Run the checklist below when you interview anyone. If an agency dodges the ownership question, that's your answer.
 
-```
-Google Ads agency vetting checklist
-[ ] Account registered to my email, I am the admin
-[ ] Conversion tracking via Google Tag Manager: calls and forms, not page views
-[ ] I keep the account, history and landing pages if I leave
-[ ] Monthly report shows cost per lead and revenue, not just clicks
-[ ] Search-terms report reviewed weekly for the first 90 days
-[ ] Short minimum term, no multi-year lock-in
-[ ] No guarantees of ad position or lead volume
-```
+**Google Ads agency vetting checklist**
+
+- [ ] Account registered to my email, I am the admin
+- [ ] Conversion tracking via Google Tag Manager: calls and forms, not page views
+- [ ] I keep the account, history and landing pages if I leave
+- [ ] Monthly report shows cost per lead and revenue, not just clicks
+- [ ] Search-terms report reviewed weekly for the first 90 days
+- [ ] Short minimum term, no multi-year lock-in
+- [ ] No guarantees of ad position or lead volume
 
 Our [process page](/process) shows how each of these should be handled.
 

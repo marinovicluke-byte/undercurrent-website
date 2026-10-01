@@ -132,16 +132,15 @@ Treat these as gravity, not gospel: your cost depends on your exact keywords and
 
 Here is the maths agencies skip:
 
-```
-Work the budget backwards from leads, not guesswork:
+**Work the budget backwards from leads, not guesswork**
 
-  Monthly ad budget = target leads per month x cost per lead
-  Daily budget      = monthly ad budget / 30.4
+- Monthly ad budget, **target leads per month x cost per lead**
+- Daily budget, **monthly ad budget / 30.4**
 
-  Example (a plumber wanting 30 jobs a month):
-    30 leads x $60 AUD per lead = $1,800 AUD per month
-    $1,800 / 30.4               = about $59 AUD per day
-```
+**Example (a plumber wanting 30 jobs a month)**
+
+- 30 leads x $60 AUD per lead, **$1,800 AUD per month**
+- = $1,800 / 30.4, **about $59 AUD per day**
 
 Your daily budget is an average, not a hard cap: [Google can spend up to twice it on a busy day](https://support.google.com/google-ads/answer/2375420) and less on a slow one. The [hidden cost of guesswork in a trade business](/blog/hidden-cost-manual-trade-business-australia) is usually overspend.
 
