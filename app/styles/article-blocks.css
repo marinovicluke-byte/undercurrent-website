@@ -1,153 +1,304 @@
-/* app/styles/article-blocks.css — the article's blocks (lib/remarkArticleBlocks.js), the
-   quiet Quick Answer, the data rail, the photo hero and figures. Phone first. The page's
-   own language (hairlines, the light numerals, straight edges, the 12px tracked labels),
-   and the one blue from docs/redesign/BRAND.md as a ramp, never red or green for good and
-   bad. The look is a class on the <article>: ucb-steps--ledger|track, ucb-data--fit|rail,
-   ucb-qa--plain|split (BLOCK_LOOKS in app/blog/[slug]/page.js). Board of the looks:
-   /article-blocks-concepts.html */
+/* app/styles/article-blocks.css — the article's blocks (lib/remarkArticleBlocks.js), the Quick
+   Answer, the data table, the photo hero and figures. Phone first. The blocks follow
+   docs/redesign/BRAND.md whatever the page around them does: light greyscale, one blue (#2563EB)
+   as a ramp for data, never red or green, Satoshi for titles and numbers, Switzer for text,
+   rounded tiles, the box-within-box panel. The look is a class on the <article>:
+   ucb-steps--ledger|track|tiles|ramp, ucb-pairs--panel|offset|deep|pills,
+   ucb-data--fit|rail|stack|pinned, ucb-qa--plain|bluf|split|tiles, ucb-work--receipt|tile|column
+   (BLOCK_LOOKS in app/blog/[slug]/page.js). Look selectors go look-first: the class is on
+   <article>, .body is inside it. Board of the looks: /article-blocks-concepts.html */
+
+/* self-hosted, the site's CSP allows fonts from 'self' only (next.config.mjs) */
+@font-face{font-family:'Satoshi';src:url(/fonts/Satoshi-Variable.woff2) format('woff2');font-weight:300 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Switzer';src:url(/fonts/switzer-400.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Switzer';src:url(/fonts/switzer-600.woff2) format('woff2');font-weight:600;font-style:normal;font-display:swap}
 
 .ucb-looks{
+  --ucb-card:#FFFFFF; --ucb-soft:#F4F4F2; --ucb-charcoal:#262624;
+  --ucb-ink-strong:#1C1C1A; --ucb-ink:#333333; --ucb-ink-soft:#525252; --ucb-ink-faint:#909090;
+  --ucb-rule:#D8D8D4; --ucb-hair:rgba(38,38,36,.14);
   --ucb-b50:#F1F6FF; --ucb-b100:#DEEAFF; --ucb-b200:#C3D8FF; --ucb-b400:#6E97F4;
   --ucb-blue:#2563EB; --ucb-b700:#1B47A0;
+  --ucb-r:16px; --ucb-pp:clamp(8px,.85vw,12px); --ucb-r-lg:calc(var(--ucb-r) + var(--ucb-pp));
+  --ucb-gap:clamp(8px,1.1vw,16px); --ucb-cp:clamp(20px,2.4vw,28px);
+  --ucb-shadow:0 1px 8px -2px rgba(0,0,0,.12); --ucb-offset:4px 4px 0 var(--ucb-blue);
+  --ucb-display:'Satoshi',system-ui,-apple-system,sans-serif;
+  --ucb-text:'Switzer',system-ui,-apple-system,sans-serif;
   --ucb-tick:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12.5l4.5 4.5L19 7.5'/></svg>");
 }
-.ucb-looks ::selection{background:var(--ucb-b100);color:var(--ink)}
+.ucb-looks ::selection{background:var(--ucb-b100);color:var(--ucb-ink-strong)}
 
 /* ---------- the block: a title, the list, an optional note ---------- */
+.body .ucb,.body .ucb-pair,.body .ucb-data{font-family:var(--ucb-text);color:var(--ucb-ink)}
 .body .ucb{margin-top:40px}
 .body .ucb p{margin-top:0}
-.body .ucb__title{font-size:18px;font-weight:500;letter-spacing:-.01em;line-height:1.3;max-width:40ch}
-.ucb__meta{display:block;margin-top:5px;font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
-.body .ucb__list{list-style:none;margin:14px 0 0;padding:0;border-top:1px solid var(--line)}
+.body .ucb strong{font-weight:600}
+.body .ucb__title{font-family:var(--ucb-display);font-size:19px;font-weight:700;letter-spacing:-.02em;line-height:1.25;color:var(--ucb-ink-strong);max-width:40ch}
+.ucb__meta{display:block;width:fit-content;margin-top:8px;padding:2px 10px;border-radius:999px;background:var(--ucb-soft);font-family:var(--ucb-text);font-size:13px;font-weight:400;letter-spacing:0;line-height:1.6;color:var(--ucb-ink-soft)}
+.body .ucb__list{list-style:none;margin:14px 0 0;padding:0}
 .body .ucb__list li{margin:0}
-.body .ucb__note{margin-top:14px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:60ch}
+.ucb__list>li{font-size:17px;line-height:1.5}
+.body .ucb__note{margin-top:14px;font-size:15px;line-height:1.55;color:var(--ucb-ink-soft);max-width:60ch}
 /* the comma before a timing or a value stays in the text for screen readers and engines */
 .ucb__sep{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 
-/* ---------- steps, Ledger: the page's own numbered rows, the light numeral beside each step ---------- */
+/* ---------- steps: an <ol> under a bold title, a trailing bold is the step's timing, shown as a chip ---------- */
 .body .ucb--steps .ucb__list{counter-reset:ucb-s}
-.ucb-steps--ledger .ucb--steps .ucb__list>li{counter-increment:ucb-s;display:grid;grid-template-columns:40px minmax(0,1fr);align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line);font-size:17px;line-height:1.45}
-.ucb-steps--ledger .ucb--steps .ucb__list>li::before{content:counter(ucb-s,decimal-leading-zero);font-size:13px;font-weight:400;letter-spacing:.06em;color:var(--ink-2);font-variant-numeric:tabular-nums}
-.ucb-steps--ledger .ucb--steps .ucb__list>li>*{grid-column:2}
-.ucb-steps--ledger .ucb__time{display:block;margin-top:3px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.ucb--steps .ucb__list>li{counter-increment:ucb-s}
+.ucb--steps .ucb__time{display:block;width:fit-content;margin-top:6px;padding:1px 10px;border-radius:999px;background:var(--ucb-soft);font-size:13px;line-height:1.6;color:var(--ucb-ink-soft);font-variant-numeric:tabular-nums}
 
-/* ---------- steps, Track: the run of a workflow, a spine through numbered nodes, the last one lit ---------- */
-.ucb-steps--track .ucb--steps .ucb__list{border-top:0;padding-top:4px}
-.ucb-steps--track .ucb--steps .ucb__list>li{counter-increment:ucb-s;position:relative;padding:0 0 20px 42px;min-height:44px;font-size:17px;line-height:1.45}
-.ucb-steps--track .ucb--steps .ucb__list>li::before{content:counter(ucb-s);position:absolute;left:0;top:0;box-sizing:border-box;width:25px;height:25px;border:1px solid var(--ink);border-radius:50%;background:var(--white);display:grid;place-items:center;font-size:11px;font-weight:500;line-height:1;font-variant-numeric:tabular-nums;color:var(--ink);z-index:1}
-.ucb-steps--track .ucb--steps .ucb__list>li::after{content:"";position:absolute;left:12px;top:25px;bottom:0;width:1px;background:var(--line)}
+/* Ledger: hairline rows on the paper, the numeral in Satoshi, the timing chip to the right on a wide screen */
+.ucb-steps--ledger .body .ucb--steps .ucb__list{border-top:1px solid var(--ucb-rule)}
+.ucb-steps--ledger .ucb--steps .ucb__list>li{display:grid;grid-template-columns:44px minmax(0,1fr);align-items:baseline;padding:14px 0;border-bottom:1px solid var(--ucb-rule)}
+.ucb-steps--ledger .ucb--steps .ucb__list>li::before{content:counter(ucb-s,decimal-leading-zero);grid-row:1/span 2;font-family:var(--ucb-display);font-size:15px;font-weight:700;color:var(--ucb-ink-faint);font-variant-numeric:tabular-nums}
+.ucb-steps--ledger .ucb--steps .ucb__list>li>*{grid-column:2}
+@media (min-width:961px){
+  .ucb-steps--ledger .ucb--steps .ucb__list>li{grid-template-columns:52px minmax(0,1fr) auto;column-gap:16px}
+  .ucb-steps--ledger .ucb--steps .ucb__list>li>.ucb__time{grid-column:3;grid-row:1;margin-top:0}
+}
+
+/* Track: a spine through numbered nodes, the last one lit; five steps or fewer run across on a wide screen */
+.ucb-steps--track .body .ucb--steps .ucb__list{padding-top:2px}
+.ucb-steps--track .ucb--steps .ucb__list>li{position:relative;padding:2px 0 22px 44px}
+.ucb-steps--track .ucb--steps .ucb__list>li::before{content:counter(ucb-s);position:absolute;left:0;top:0;z-index:1;box-sizing:border-box;width:28px;height:28px;border-radius:50%;background:var(--ucb-card);box-shadow:inset 0 0 0 1.5px var(--ucb-ink-strong);display:grid;place-items:center;font-family:var(--ucb-display);font-size:13px;font-weight:700;line-height:1;color:var(--ucb-ink-strong)}
+.ucb-steps--track .ucb--steps .ucb__list>li::after{content:"";position:absolute;left:13px;top:28px;bottom:0;width:2px;background:var(--ucb-rule)}
 .ucb-steps--track .ucb--steps .ucb__list>li:last-child{padding-bottom:0}
 .ucb-steps--track .ucb--steps .ucb__list>li:last-child::after{display:none}
-.ucb-steps--track .ucb--steps .ucb__list>li:last-child::before{background:var(--ucb-blue);border-color:var(--ucb-blue);color:#fff}
-.ucb-steps--track .ucb__time{display:block;margin-top:2px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ucb-b700)}
+.ucb-steps--track .ucb--steps .ucb__list>li:last-child::before{background:var(--ucb-blue);box-shadow:none;color:#fff}
+.ucb-steps--track .ucb--steps .ucb__time{background:var(--ucb-b50);color:var(--ucb-b700)}
+@media (min-width:961px){
+  .ucb-steps--track .body .ucb--steps .ucb__list:not(:has(>li:nth-child(6))){display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);column-gap:20px}
+  .ucb-steps--track .ucb--steps .ucb__list:not(:has(>li:nth-child(6)))>li{padding:44px 0 0;font-size:16px}
+  .ucb-steps--track .ucb--steps .ucb__list:not(:has(>li:nth-child(6)))>li::after{left:36px;right:-12px;top:13px;bottom:auto;width:auto;height:2px}
+}
+
+/* Tiles: the box-within-box, a grey panel of white tiles, one a step; two or three across on a wide screen */
+.ucb-steps--tiles .body .ucb--steps .ucb__list{display:grid;gap:var(--ucb-pp);padding:var(--ucb-pp);border-radius:var(--ucb-r-lg);background:var(--ucb-soft)}
+.ucb-steps--tiles .ucb--steps .ucb__list>li{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:16px 18px 18px;border-radius:var(--ucb-r);background:var(--ucb-card);box-shadow:var(--ucb-shadow)}
+.ucb-steps--tiles .ucb--steps .ucb__list>li::before{content:counter(ucb-s,decimal-leading-zero);font-family:var(--ucb-display);font-size:26px;font-weight:700;letter-spacing:-.03em;line-height:1.1;color:var(--ucb-ink-strong);font-variant-numeric:tabular-nums}
+.ucb-steps--tiles .ucb--steps .ucb__time{margin-top:8px}
+@media (min-width:641px){.ucb-steps--tiles .body .ucb--steps .ucb__list{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}}
+
+/* Ramp: big numerals that warm through the blue ramp to the last step */
+.ucb-steps--ramp .ucb--steps .ucb__list>li{display:grid;grid-template-columns:52px minmax(0,1fr);align-items:start;padding:14px 0}
+.ucb-steps--ramp .ucb--steps .ucb__list>li+li{border-top:1px solid var(--ucb-rule)}
+.ucb-steps--ramp .ucb--steps .ucb__list>li::before{content:counter(ucb-s);grid-row:1/span 2;font-family:var(--ucb-display);font-size:42px;font-weight:700;letter-spacing:-.05em;line-height:.85;color:var(--ucb-b200);font-variant-numeric:tabular-nums}
+.ucb-steps--ramp .ucb--steps .ucb__list>li:nth-last-child(2)::before{color:var(--ucb-b400)}
+.ucb-steps--ramp .ucb--steps .ucb__list>li:last-child::before{color:var(--ucb-blue)}
+.ucb-steps--ramp .ucb--steps .ucb__list>li>*{grid-column:2}
+@media (min-width:961px){
+  .ucb-steps--ramp .ucb--steps .ucb__list>li{grid-template-columns:72px minmax(0,1fr);padding:16px 0}
+  .ucb-steps--ramp .ucb--steps .ucb__list>li::before{font-size:56px}
+}
 
 /* ---------- checklist: real checkboxes on hairline rows, the tick in the blue; nested checks grouped under their name ---------- */
-.ucb__check{border-bottom:1px solid var(--line)}
-.ucb__check label{display:grid;grid-template-columns:30px minmax(0,1fr);align-items:start;padding:12px 0;font-size:17px;line-height:1.45;cursor:pointer}
-.ucb__box{-webkit-appearance:none;appearance:none;box-sizing:border-box;width:18px;height:18px;margin:3px 0 0;border:1.5px solid var(--ink);border-radius:0;background:var(--white);display:grid;place-items:center;cursor:pointer;transition:background-color .2s,border-color .2s}
-.ucb__box::before{content:"";width:12px;height:12px;background:#fff;-webkit-mask:var(--ucb-tick) center/contain no-repeat;mask:var(--ucb-tick) center/contain no-repeat;transform:scale(0);transition:transform .2s var(--ease)}
+.body .ucb--checklist .ucb__list{border-top:1px solid var(--ucb-rule)}
+.ucb__check{border-bottom:1px solid var(--ucb-rule)}
+.ucb__check label{display:grid;grid-template-columns:32px minmax(0,1fr);align-items:start;padding:12px 0;font-size:17px;line-height:1.5;cursor:pointer}
+.ucb__box{-webkit-appearance:none;appearance:none;box-sizing:border-box;width:20px;height:20px;margin:3px 0 0;border:1.5px solid var(--ucb-ink-strong);border-radius:6px;background:var(--ucb-card);display:grid;place-items:center;cursor:pointer;transition:background-color .2s,border-color .2s}
+.ucb__box::before{content:"";width:13px;height:13px;background:#fff;-webkit-mask:var(--ucb-tick) center/contain no-repeat;mask:var(--ucb-tick) center/contain no-repeat;transform:scale(0);transition:transform .2s var(--ease)}
 .ucb__box:checked{background:var(--ucb-blue);border-color:var(--ucb-blue)}
 .ucb__box:checked::before{transform:none}
 .ucb__box:focus-visible{outline:2px solid var(--ucb-blue);outline-offset:3px}
-.ucb__check:has(.ucb__box:checked) .ucb__text{color:var(--ink-2)}
+.ucb__check:has(.ucb__box:checked) .ucb__text{color:var(--ucb-ink-soft)}
 .body .ucb__list:has(>.ucb__grouped){border-top:0;counter-reset:ucb-g}
-.body .ucb__checks{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .ucb__grouped{counter-increment:ucb-g}
-.ucb__group{display:block;padding:20px 0 8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
-.ucb__group strong{font-weight:400}
-ol>.ucb__grouped>.ucb__group::before{content:counter(ucb-g,decimal-leading-zero);margin-right:12px;font-variant-numeric:tabular-nums}
+.ucb__group{display:block;padding:20px 0 8px;font-family:var(--ucb-display);font-size:14px;font-weight:700;color:var(--ucb-ink-strong);border-bottom:1px solid var(--ucb-rule)}
+.ucb__group strong{font-weight:700}
+ol>.ucb__grouped>.ucb__group::before{content:counter(ucb-g,decimal-leading-zero);margin-right:10px;color:var(--ucb-ink-faint);font-variant-numeric:tabular-nums}
 
-/* ---------- list: a drawn dash on hairline rows ---------- */
-.ucb--list .ucb__list>li{position:relative;padding:11px 0 11px 24px;border-bottom:1px solid var(--line);font-size:17px;line-height:1.45}
-.ucb--list .ucb__list>li::before{content:"";position:absolute;left:1px;top:23px;width:9px;height:1px;background:var(--ink)}
+/* ---------- list: a short dash on hairline rows ---------- */
+.ucb--list .ucb__list>li{position:relative;padding:10px 0 10px 22px;border-bottom:1px solid var(--ucb-rule)}
+.ucb--list .ucb__list>li::before{content:"";position:absolute;left:1px;top:22px;width:9px;height:2px;border-radius:2px;background:var(--ucb-ink-faint)}
 
-/* ---------- pair: two lists side by side from a phone's landscape up. A contrast (before and
-   after, works and doesn't, do and don't) in two blues, the deep one for the better side;
-   the titles carry the meaning, the colour only repeats it. Equals sit on two grey panels ---------- */
-.body .ucb-pair{display:grid;gap:10px;margin-top:40px}
-.body .ucb-pair .ucb{margin:0;padding:18px 18px 20px;background:var(--off);box-shadow:inset 0 2px 0 var(--ink)}
-.body .ucb-pair .ucb__list{border-top:0;margin-top:10px}
+/* ---------- pair: two titled lists, side by side from 641px. When the titles say before and after,
+   works and doesn't, do and don't, the better side is ucb--plus and takes the blue; the titles
+   carry the meaning, the colour only repeats it. Equals get no verdict ---------- */
+.body .ucb-pair{display:grid;gap:var(--ucb-gap);margin-top:40px}
+.body .ucb-pair .ucb{margin:0}
 .ucb-pair .ucb--list .ucb__list>li{border-bottom:0;padding:6px 0 6px 24px;font-size:16px}
 .ucb-pair .ucb--list .ucb__list>li::before{top:17px}
-.body .ucb-pair .ucb--plus{background:var(--ucb-b50);box-shadow:inset 0 2px 0 var(--ucb-blue)}
-.body .ucb-pair .ucb--minus{background:var(--white);box-shadow:inset 0 2px 0 var(--ucb-b400),inset 0 0 0 1px var(--line)}
-.body .ucb--plus .ucb__title{color:var(--ucb-b700)}
-.body .ucb--minus .ucb__title{color:var(--ink-2)}
-.ucb-pair .ucb--plus .ucb__list>li::before{width:12px;height:12px;top:12px;background:var(--ucb-blue);-webkit-mask:var(--ucb-tick) center/contain no-repeat;mask:var(--ucb-tick) center/contain no-repeat}
-.ucb-pair .ucb--minus .ucb__list>li::before{background:var(--ucb-b400)}
+.ucb-pair .ucb--plus .ucb__list>li::before{width:13px;height:13px;top:12px;left:0;border-radius:0;background:var(--ucb-blue);-webkit-mask:var(--ucb-tick) center/contain no-repeat;mask:var(--ucb-tick) center/contain no-repeat}
 @media (min-width:641px){.body .ucb-pair{grid-template-columns:1fr 1fr}}
 
-/* ---------- workings: the maths shown, label and value on a dotted leader, the answer under a double rule in the blue ---------- */
-.body .ucb--workings .ucb__list{border-top:1px solid var(--ink);padding-top:4px}
-/* a line that won't fit wraps its value to the next line, right-aligned, the leader running out to the edge */
-.ucb--workings .ucb__list>li{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:10px;row-gap:2px;padding:8px 0;font-size:16px;line-height:1.4}
-.ucb--workings .ucb__text{flex:0 1 auto;color:var(--ink-2)}
-.ucb--workings .ucb__sep{position:static;flex:1 1 24px;min-width:24px;width:auto;height:auto;overflow:hidden;clip-path:none;align-self:center;border-bottom:1px dotted rgba(20,20,20,.32);color:transparent;font-size:0}
-.ucb--workings .ucb__val{flex:0 1 auto;margin-left:auto;text-align:right;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
-.body .ucb--workings .ucb__total{margin-top:8px;padding-top:12px;border-top:3px double var(--ink)}
-.ucb--workings .ucb__total .ucb__text{color:var(--ink);font-weight:500}
-.ucb--workings .ucb__total .ucb__val{font-size:22px;letter-spacing:-.02em;line-height:1.2;color:var(--ucb-blue)}
+/* Panel: the box-within-box, two white tiles in a grey panel; the better side's title in the blue */
+.ucb-pairs--panel .body .ucb-pair{gap:var(--ucb-pp);padding:var(--ucb-pp);border-radius:var(--ucb-r-lg);background:var(--ucb-soft)}
+.ucb-pairs--panel .body .ucb-pair .ucb{padding:18px 18px 14px;border-radius:var(--ucb-r);background:var(--ucb-card);box-shadow:var(--ucb-shadow)}
+.ucb-pairs--panel .body .ucb--plus .ucb__title{color:var(--ucb-blue)}
+.ucb-pairs--panel .body .ucb--minus .ucb__title{color:var(--ucb-ink-soft)}
 
-/* ---------- the data rail: a real <table> shown as a snap rail of one card a row. The base is
-   the rail (the phone); ucb-data--fit gives it back its grid from 961px, ucb-data--rail keeps
-   the rail on every screen, a table of five columns or more is a rail everywhere. No script:
-   the hint counts the rows from --rows, the progress line runs off the scroll where the
-   browser supports scroll-driven animation ---------- */
-.ucb-data{position:relative;margin-top:32px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;margin-right:calc(-1*var(--pad));counter-reset:ucb-rows var(--rows)}
-.ucb-data::-webkit-scrollbar{display:none}
+/* Offset: the better side wears the hard blue offset (BRAND's featured card), the other sits flat in grey */
+.ucb-pairs--offset .body .ucb-pair{gap:14px;margin-right:4px}
+.ucb-pairs--offset .body .ucb-pair .ucb{padding:18px 18px 14px;border-radius:var(--ucb-r);background:var(--ucb-card);box-shadow:var(--ucb-shadow)}
+.ucb-pairs--offset .body .ucb-pair .ucb--plus{border:1px solid var(--ucb-charcoal);padding:17px 17px 13px;box-shadow:var(--ucb-offset)}
+.ucb-pairs--offset .body .ucb-pair .ucb--minus{background:var(--ucb-soft);box-shadow:none}
+.ucb-pairs--offset .ucb-pair .ucb--minus .ucb__list>li{color:var(--ucb-ink-soft)}
+
+/* Deep: the ramp at full strength, the better side solid blue with white type, the other the palest blue */
+.ucb-pairs--deep .body .ucb-pair .ucb{padding:18px 18px 14px;border-radius:var(--ucb-r);background:var(--ucb-soft)}
+.ucb-pairs--deep .body .ucb-pair .ucb--plus{background:var(--ucb-blue);color:#fff}
+.ucb-pairs--deep .body .ucb-pair .ucb--plus :is(.ucb__title,a){color:#fff}
+.ucb-pairs--deep .ucb-pair .ucb--plus .ucb__list>li::before{background:#fff}
+.ucb-pairs--deep .body .ucb-pair .ucb--minus{background:var(--ucb-b50)}
+.ucb-pairs--deep .ucb-pair .ucb--minus .ucb__list>li::before{background:var(--ucb-b400)}
+
+/* Pills: no tiles, two columns split by a hairline, each title a pill; the better side's pill filled blue */
+.ucb-pairs--pills .body .ucb-pair{gap:0;border-top:1px solid var(--ucb-rule);border-bottom:1px solid var(--ucb-rule)}
+.ucb-pairs--pills .body .ucb-pair .ucb{padding:18px 0 14px}
+.ucb-pairs--pills .body .ucb-pair .ucb+.ucb{border-top:1px solid var(--ucb-rule)}
+.ucb-pairs--pills .body .ucb-pair .ucb__title{width:fit-content;max-width:100%;padding:4px 14px;border:1px solid var(--ucb-hair);border-radius:999px;background:var(--ucb-soft);font-size:15px}
+.ucb-pairs--pills .body .ucb-pair .ucb--plus .ucb__title{border-color:var(--ucb-blue);background:var(--ucb-blue);color:#fff}
+.ucb-pairs--pills .body .ucb-pair .ucb--minus .ucb__title{background:var(--ucb-card);color:var(--ucb-ink-soft)}
+@media (min-width:641px){
+  .ucb-pairs--pills .body .ucb-pair .ucb:first-child{padding-right:24px}
+  .ucb-pairs--pills .body .ucb-pair .ucb+.ucb{border-top:0;border-left:1px solid var(--ucb-rule);padding-left:24px}
+}
+
+/* ---------- workings: the maths shown. A list whose every line ends in a bold value; a line opening
+   "= " is the total. The "=" and the comma stay in the text, so a scraper reads a sum as a sum ---------- */
+.ucb--workings .ucb__val{font-family:var(--ucb-display);font-weight:700;color:var(--ucb-ink-strong);font-variant-numeric:tabular-nums}
+
+/* Receipt: label, dotted leader, value; the answer under a double rule in the blue */
+.ucb-work--receipt .body .ucb--workings .ucb__list{border-top:2px solid var(--ucb-ink-strong);padding-top:4px}
+.ucb-work--receipt .ucb--workings .ucb__list>li{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:10px;row-gap:2px;padding:8px 0;font-size:16px;line-height:1.4}
+.ucb-work--receipt .ucb--workings .ucb__text{flex:0 1 auto;color:var(--ucb-ink-soft)}
+.ucb-work--receipt .ucb--workings .ucb__sep{position:static;flex:1 1 24px;min-width:24px;width:auto;height:auto;overflow:hidden;clip-path:none;align-self:center;border-bottom:1px dotted rgba(38,38,36,.38);color:transparent;font-size:0}
+.ucb-work--receipt .ucb--workings .ucb__val{flex:0 1 auto;margin-left:auto;text-align:right}
+.ucb-work--receipt .body .ucb--workings .ucb__total{margin-top:8px;padding-top:12px;border-top:3px double var(--ucb-ink-strong)}
+.ucb-work--receipt .ucb--workings .ucb__total .ucb__text{color:var(--ucb-ink-strong);font-weight:600}
+.ucb-work--receipt .ucb--workings .ucb__total .ucb__val{font-size:24px;letter-spacing:-.02em;line-height:1.2;color:var(--ucb-blue)}
+
+/* Tile: the lines on one white tile in a grey panel, the answer its own solid blue tile under them */
+.ucb-work--tile .body .ucb--workings .ucb__list{padding:var(--ucb-pp);border-radius:var(--ucb-r-lg);background:var(--ucb-soft)}
+.ucb-work--tile .ucb--workings .ucb__list>li{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:12px 16px;background:var(--ucb-card);font-size:16px;line-height:1.4}
+.ucb-work--tile .ucb--workings .ucb__list>li+li:not(.ucb__total){border-top:1px solid var(--ucb-rule)}
+.ucb-work--tile .ucb--workings .ucb__list>li:first-child{border-top-left-radius:var(--ucb-r);border-top-right-radius:var(--ucb-r)}
+.ucb-work--tile .ucb--workings .ucb__list>li:is(:last-child,:has(+.ucb__total)){border-bottom-left-radius:var(--ucb-r);border-bottom-right-radius:var(--ucb-r)}
+.ucb-work--tile .ucb--workings .ucb__text{color:var(--ucb-ink-soft)}
+.ucb-work--tile .ucb--workings .ucb__val{text-align:right}
+.ucb-work--tile .body .ucb--workings .ucb__total{margin-top:var(--ucb-pp);padding:16px;border-radius:var(--ucb-r);background:var(--ucb-blue)}
+.ucb-work--tile .ucb--workings .ucb__total :is(.ucb__text,.ucb__val){color:#fff}
+.ucb-work--tile .ucb--workings .ucb__total .ucb__text{font-weight:600}
+.ucb-work--tile .ucb--workings .ucb__total .ucb__val{font-size:26px;letter-spacing:-.02em;line-height:1.1}
+
+/* Column: the sum as it's done on paper, the values big and right-aligned, one rule over the answer */
+.ucb-work--column .body .ucb--workings .ucb__list{max-width:460px}
+.ucb-work--column .ucb--workings .ucb__list>li{display:grid;grid-template-columns:minmax(42%,1fr) minmax(0,auto);align-items:baseline;column-gap:20px;padding:5px 0}
+.ucb-work--column .ucb--workings .ucb__text{font-size:15px;line-height:1.4;color:var(--ucb-ink-soft)}
+.ucb-work--column .ucb--workings .ucb__val{font-size:26px;letter-spacing:-.03em;line-height:1.15;text-align:right}
+.ucb-work--column .body .ucb--workings .ucb__total{margin-top:8px;padding-top:12px;border-top:2px solid var(--ucb-ink-strong)}
+.ucb-work--column .ucb--workings .ucb__total .ucb__text{color:var(--ucb-ink-strong);font-weight:600}
+.ucb-work--column .ucb--workings .ucb__total .ucb__val{font-size:36px;color:var(--ucb-blue)}
+
+/* ---------- the data table: a real <table>, row headers and labelled cells, the wrapper the focusable
+   scroller. The base is the table on a white tile. Rail and Stack restyle it on a phone; Rail keeps
+   its cards on every screen; a table of five columns or more keeps the phone shape everywhere.
+   No script: the rail's count reads --rows, its progress line runs off the scroll where supported ---------- */
+.body .ucb-data{position:relative;margin-top:32px;overflow-x:auto;overscroll-behavior-x:contain;border-radius:var(--ucb-r);background:var(--ucb-card);box-shadow:var(--ucb-shadow)}
 .ucb-data:focus-visible{outline:2px solid var(--ucb-blue);outline-offset:4px}
-.ucb-data::before{content:counter(ucb-rows) " rows, swipe" / "";position:sticky;left:0;display:block;margin-bottom:12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
-.ucb-data::after{content:"";position:sticky;left:0;display:block;width:calc(100% - var(--pad));height:1px;margin-top:16px;background:var(--line)}
-.body .ucb-data table{display:block;width:auto;margin:0;border-collapse:collapse;font-size:15px;line-height:1.4}
-.ucb-data thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-.ucb-data tbody{display:flex;gap:10px;width:max-content;padding-right:var(--pad);counter-reset:ucb-row}
-.ucb-data tbody tr{counter-increment:ucb-row;display:flex;flex-direction:column;flex:none;width:min(76vw,300px);scroll-snap-align:start;background:var(--off);padding:16px 18px 18px;box-shadow:inset 0 2px 0 var(--ink)}
-.body .ucb-data tbody th{display:block;padding:0 0 12px;border:0;font-size:17px;font-weight:500;letter-spacing:-.01em;line-height:1.3;color:var(--ink);text-transform:none}
-.ucb-data tbody th::before{content:counter(ucb-row,decimal-leading-zero) " / " counter(ucb-rows,decimal-leading-zero) / "";display:block;margin-bottom:10px;font-size:11px;font-weight:400;letter-spacing:.14em;color:var(--ink-2);font-variant-numeric:tabular-nums}
-.body .ucb-data td{display:block;padding:9px 0 0;margin-top:9px;border:0;border-top:1px solid var(--line);color:var(--ink)}
-.ucb-data td::before{content:attr(data-label) / "";display:block;margin-bottom:3px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.body .ucb-data table{display:table;width:100%;margin:0;border-collapse:collapse;font-size:15px;line-height:1.45}
+.body .ucb-data :is(th,td){padding:13px 16px;border:0;border-bottom:1px solid var(--ucb-rule);text-align:left;vertical-align:top}
+.body .ucb-data tbody tr:last-child>*{border-bottom:0}
+.body .ucb-data thead th{background:var(--ucb-soft);font-family:var(--ucb-display);font-size:13px;font-weight:700;letter-spacing:0;text-transform:none;color:var(--ucb-ink-soft)}
+.body .ucb-data tbody th{font-family:var(--ucb-display);font-size:15px;font-weight:700;letter-spacing:-.01em;text-transform:none;color:var(--ucb-ink-strong)}
+.body .ucb-data td{color:var(--ucb-ink)}
+
+/* Rail: one card a row on a CSS snap rail (fit uses it on a phone, rail everywhere) */
+:is(.ucb-data--rail,.ucb-data--fit) .body .ucb-data{overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-right:calc(-1*var(--pad));border-radius:0;background:none;box-shadow:none;counter-reset:ucb-rows var(--rows)}
+:is(.ucb-data--rail,.ucb-data--fit) .ucb-data::-webkit-scrollbar{display:none}
+:is(.ucb-data--rail,.ucb-data--fit) .ucb-data::before{content:counter(ucb-rows) " rows, swipe" / "";position:sticky;left:0;display:block;width:fit-content;margin-bottom:10px;padding:2px 10px;border-radius:999px;background:var(--ucb-soft);font-size:13px;line-height:1.6;color:var(--ucb-ink-soft)}
+:is(.ucb-data--rail,.ucb-data--fit) .ucb-data::after{content:"";position:sticky;left:0;display:block;width:calc(100% - var(--pad));height:2px;margin-top:8px;border-radius:2px;background:var(--ucb-rule)}
+:is(.ucb-data--rail,.ucb-data--fit) .body .ucb-data table{display:block;width:auto}
+:is(.ucb-data--rail,.ucb-data--fit) .ucb-data thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+:is(.ucb-data--rail,.ucb-data--fit) .ucb-data tbody{display:flex;gap:var(--ucb-gap);width:max-content;padding:2px var(--pad) 10px 2px;counter-reset:ucb-row}
+:is(.ucb-data--rail,.ucb-data--fit) .ucb-data tbody tr{counter-increment:ucb-row;display:flex;flex-direction:column;flex:none;width:min(76vw,300px);scroll-snap-align:start;padding:16px 18px 18px;border-radius:var(--ucb-r);background:var(--ucb-card);box-shadow:var(--ucb-shadow)}
+:is(.ucb-data--rail,.ucb-data--fit) .body .ucb-data tbody th{display:block;padding:0 0 10px;border:0;font-size:17px;line-height:1.3}
+:is(.ucb-data--rail,.ucb-data--fit) .ucb-data tbody th::before{content:counter(ucb-row,decimal-leading-zero) " / " counter(ucb-rows,decimal-leading-zero) / "";display:block;margin-bottom:8px;font-size:12px;font-weight:700;color:var(--ucb-ink-faint);font-variant-numeric:tabular-nums}
+:is(.ucb-data--rail,.ucb-data--fit) .body .ucb-data td{display:block;padding:10px 0 0;margin-top:10px;border:0;border-top:1px solid var(--ucb-rule)}
+:is(.ucb-data--rail,.ucb-data--fit) .ucb-data td::before{content:attr(data-label) / "";display:block;margin-bottom:2px;font-size:12px;font-weight:600;color:var(--ucb-ink-soft)}
 @supports (animation-timeline:scroll()){
-  .ucb-data::after{background:linear-gradient(var(--ucb-blue),var(--ucb-blue)) 0 0/0 100% no-repeat,var(--line);animation:ucb-progress linear both;animation-timeline:scroll(nearest inline)}
+  :is(.ucb-data--rail,.ucb-data--fit) .ucb-data::after{background:linear-gradient(var(--ucb-blue),var(--ucb-blue)) 0 0/0 100% no-repeat,var(--ucb-rule);animation:ucb-progress linear both;animation-timeline:scroll(nearest inline)}
 }
 @keyframes ucb-progress{from{background-size:calc(100% / var(--rows)) 100%,auto}to{background-size:100% 100%,auto}}
 
+/* Stack: one white card a row, down the page, each cell's label beside its value */
+.ucb-data--stack .body .ucb-data{overflow:visible;border-radius:0;background:none;box-shadow:none}
+.ucb-data--stack .body .ucb-data table{display:block}
+.ucb-data--stack .ucb-data thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.ucb-data--stack .ucb-data tbody{display:grid;gap:var(--ucb-gap)}
+.ucb-data--stack .ucb-data tbody tr{display:block;padding:16px 18px 6px;border-radius:var(--ucb-r);background:var(--ucb-card);box-shadow:var(--ucb-shadow)}
+.ucb-data--stack .body .ucb-data tbody th{display:block;padding:0 0 10px;border:0;font-size:17px;line-height:1.3}
+.ucb-data--stack .body .ucb-data td{position:relative;display:block;padding:10px 0 10px 40%;border:0;border-top:1px solid var(--ucb-rule)}
+.ucb-data--stack .ucb-data td::before{content:attr(data-label) / "";position:absolute;left:0;top:10px;width:calc(40% - 14px);font-size:13px;font-weight:600;line-height:1.45;color:var(--ucb-ink-soft)}
+
+/* Pinned: the table itself on a phone too, scrolled sideways inside its tile, the row names pinned left */
+.ucb-data--pinned .body .ucb-data table{min-width:calc(var(--cols) * 150px)}
+.ucb-data--pinned .body .ucb-data :is(thead th:first-child,tbody th){position:sticky;left:0;z-index:1;box-shadow:1px 0 0 var(--ucb-rule)}
+.ucb-data--pinned .body .ucb-data tbody th{min-width:118px;background:var(--ucb-card)}
+
+/* fit and stack give a table of up to four columns its grid back from 961px; rail keeps its cards, tuned for the mouse */
 @media (min-width:961px){
-  .ucb-data{margin-right:0}
-  .ucb-data::before{content:counter(ucb-rows) " rows, scroll sideways" / ""}
-  .ucb-data::after{width:100%}
-  .ucb-data tbody{padding-right:0}
-  .ucb-data tbody tr{width:280px}
-  /* fit: a table up to four columns is a table again, hairline rows on the column */
-  .ucb-data--fit .ucb-data:not(.ucb-data--wide){overflow:visible;scroll-snap-type:none}
-  .ucb-data--fit .ucb-data:not(.ucb-data--wide)::before,.ucb-data--fit .ucb-data:not(.ucb-data--wide)::after{display:none}
-  .ucb-data--fit .body .ucb-data:not(.ucb-data--wide) table{display:table;width:100%;border-top:1px solid var(--line)}
-  .ucb-data--fit .ucb-data:not(.ucb-data--wide) thead{position:static;display:table-header-group;width:auto;height:auto;overflow:visible;clip-path:none;white-space:normal}
-  .ucb-data--fit .ucb-data:not(.ucb-data--wide) tbody{display:table-row-group;width:auto}
-  .ucb-data--fit .ucb-data:not(.ucb-data--wide) tbody tr{display:table-row;width:auto;padding:0;background:none;box-shadow:none}
-  .ucb-data--fit .body .ucb-data:not(.ucb-data--wide) :is(th,td){display:table-cell;margin:0;padding:13px 20px 13px 0;border:0;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
-  .ucb-data--fit .body .ucb-data:not(.ucb-data--wide) thead th{padding:12px 20px 12px 0;font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
-  .ucb-data--fit .body .ucb-data:not(.ucb-data--wide) tbody th{font-size:15px;font-weight:500;letter-spacing:0}
-  .ucb-data--fit .ucb-data:not(.ucb-data--wide) td{color:var(--ink-2)}
-  .ucb-data--fit .ucb-data:not(.ucb-data--wide) :is(tbody th,td)::before{display:none}
+  :is(.ucb-data--rail,.ucb-data--fit) .body .ucb-data{margin-right:0}
+  :is(.ucb-data--rail,.ucb-data--fit) .ucb-data::before{content:counter(ucb-rows) " rows, scroll sideways" / ""}
+  :is(.ucb-data--rail,.ucb-data--fit) .ucb-data::after{width:100%}
+  :is(.ucb-data--rail,.ucb-data--fit) .ucb-data tbody{padding-right:2px}
+  :is(.ucb-data--rail,.ucb-data--fit) .ucb-data tbody tr{width:280px}
+
+  :is(.ucb-data--fit,.ucb-data--stack) .body .ucb-data:not(.ucb-data--wide){overflow-x:auto;scroll-snap-type:none;margin-right:0;border-radius:var(--ucb-r);background:var(--ucb-card);box-shadow:var(--ucb-shadow)}
+  :is(.ucb-data--fit,.ucb-data--stack) .ucb-data:not(.ucb-data--wide)::before,
+  :is(.ucb-data--fit,.ucb-data--stack) .ucb-data:not(.ucb-data--wide)::after{content:none;display:none}
+  :is(.ucb-data--fit,.ucb-data--stack) .body .ucb-data:not(.ucb-data--wide) table{display:table;width:100%}
+  :is(.ucb-data--fit,.ucb-data--stack) .ucb-data:not(.ucb-data--wide) thead{position:static;display:table-header-group;width:auto;height:auto;overflow:visible;clip-path:none;white-space:normal}
+  :is(.ucb-data--fit,.ucb-data--stack) .ucb-data:not(.ucb-data--wide) tbody{display:table-row-group;width:auto;padding:0;gap:0}
+  :is(.ucb-data--fit,.ucb-data--stack) .ucb-data:not(.ucb-data--wide) tbody tr{display:table-row;width:auto;padding:0;border-radius:0;background:none;box-shadow:none}
+  :is(.ucb-data--fit,.ucb-data--stack) .body .ucb-data:not(.ucb-data--wide) :is(th,td){position:static;display:table-cell;margin:0;padding:13px 16px;border:0;border-bottom:1px solid var(--ucb-rule)}
+  :is(.ucb-data--fit,.ucb-data--stack) .body .ucb-data:not(.ucb-data--wide) tbody th{font-size:15px}
+  :is(.ucb-data--fit,.ucb-data--stack) .body .ucb-data:not(.ucb-data--wide) tbody tr:last-child>*{border-bottom:0}
+  :is(.ucb-data--fit,.ucb-data--stack) .ucb-data:not(.ucb-data--wide) :is(tbody th,td)::before{content:none;display:none}
 }
 
-/* ---------- Quick Answer, quiet: the answer sentence bold and first, two to four short points under it.
-   Plain: the points go two across from 961px. Split: the points sit in a column beside the answer
-   from 961px. Either way the DOM is the label, a <p><strong>, a <ul>, in that order ---------- */
+/* ---------- Quick Answer: the answer sentence first, bold, self-contained, then two to four short points.
+   In the DOM: the label, a <p><strong>, a <ul>, in that order, in every look ---------- */
 .ucb-looks .qa__in{max-width:760px}
-.ucb-looks .qa__lead--answer strong{font-weight:500}
-.ucb-looks .qa__pts{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid var(--line)}
-.ucb-looks .qa__pts li{position:relative;padding:12px 0 12px 24px;border-bottom:1px solid var(--line);font-size:16px;line-height:1.45;color:var(--ink-2)}
-.ucb-looks .qa__pts li::before{content:"";position:absolute;left:1px;top:23px;width:10px;height:2px;background:var(--ucb-blue)}
+.ucb-looks .qa .eyebrow{display:block;width:fit-content;padding:2px 12px;border-radius:999px;background:var(--ucb-soft);font-family:var(--ucb-text);font-size:13px;font-weight:600;letter-spacing:0;line-height:1.7;text-transform:none;color:var(--ucb-ink-soft)}
+.ucb-looks .qa__lead{font-family:var(--ucb-text);color:var(--ucb-ink)}
+.ucb-looks .qa__lead--answer{font-family:var(--ucb-display);font-size:clamp(21px,2vw,26px);line-height:1.3;letter-spacing:-.02em;color:var(--ucb-ink-strong);max-width:36ch}
+.ucb-looks .qa__lead--answer strong{font-weight:700}
+.ucb-looks .qa__pts{list-style:none;margin:20px 0 0;padding:0;font-family:var(--ucb-text)}
+.ucb-looks .qa__pts li{position:relative;padding:10px 0 10px 22px;font-size:16px;line-height:1.5;color:var(--ucb-ink)}
+.ucb-looks .qa__pts li::before{content:"";position:absolute;left:0;top:21px;width:10px;height:2px;border-radius:2px;background:var(--ucb-blue)}
+
+/* Plain: hairline rows on the paper; the points go two across from 961px */
+.ucb-qa--plain .qa__pts{border-top:1px solid var(--ucb-rule)}
+.ucb-qa--plain .qa__pts li{border-bottom:1px solid var(--ucb-rule)}
+@media (min-width:961px){.ucb-qa--plain .qa__pts{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}}
+
+/* BLUF: one white card, the charcoal edge and the hard blue offset BRAND keeps for the bottom line */
+.ucb-qa--bluf .qa__in{margin-right:4px;padding:var(--ucb-cp);border:1px solid var(--ucb-charcoal);border-radius:var(--ucb-r);background:var(--ucb-card);box-shadow:var(--ucb-offset)}
+.ucb-qa--bluf .qa__lead{margin-top:14px}
+.ucb-qa--bluf .qa__pts li+li{border-top:1px solid var(--ucb-rule)}
 @media (min-width:961px){
-  .ucb-qa--plain .qa__pts{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
-  .ucb-qa--split .qa__in{max-width:1080px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);column-gap:56px;align-items:start}
-  .ucb-qa--split .qa__in>*{grid-column:1}
-  .ucb-qa--split .qa__pts{grid-column:2;grid-row:1/span 3;margin-top:0;border-top:0;border-left:1px solid var(--line);padding-left:28px}
-  .ucb-qa--split .qa__pts li:first-child{padding-top:0}
-  .ucb-qa--split .qa__pts li:first-child::before{top:11px}
-  .ucb-qa--split .qa__pts li:last-child{border-bottom:0}
+  .ucb-qa--bluf .qa__pts{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
+  .ucb-qa--bluf .qa__pts li:nth-child(2){border-top:0}
 }
+
+/* Split: the points in a grey panel, under the answer on a phone, beside it from 961px */
+.ucb-qa--split .qa__pts{margin-top:18px;padding:4px 18px;border-radius:var(--ucb-r);background:var(--ucb-soft)}
+.ucb-qa--split .qa__pts li+li{border-top:1px solid var(--ucb-rule)}
+@media (min-width:961px){
+  .ucb-qa--split .qa__in{max-width:1080px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);column-gap:48px;align-items:start}
+  .ucb-qa--split .qa__in>*{grid-column:1}
+  .ucb-qa--split .qa__pts{grid-column:2;grid-row:1/span 3;margin-top:0}
+}
+
+/* Tiles: the box-within-box, the answer on one white tile, each point its own tile, two across from 641px */
+.ucb-qa--tiles .qa__in{display:grid;gap:var(--ucb-pp);padding:var(--ucb-pp);border-radius:var(--ucb-r-lg);background:var(--ucb-soft)}
+.ucb-qa--tiles .qa .eyebrow{margin:6px 0 0 6px;background:var(--ucb-card)}
+.ucb-qa--tiles .qa__lead{margin:0;max-width:none;padding:var(--ucb-cp);border-radius:var(--ucb-r);background:var(--ucb-card);box-shadow:var(--ucb-shadow)}
+.ucb-qa--tiles .qa__pts{display:grid;gap:var(--ucb-pp);margin:0}
+.ucb-qa--tiles .qa__pts li{padding:14px 16px 14px 38px;border-radius:var(--ucb-r);background:var(--ucb-card);box-shadow:var(--ucb-shadow)}
+.ucb-qa--tiles .qa__pts li::before{left:16px;top:25px}
+@media (min-width:641px){.ucb-qa--tiles .qa__pts{grid-template-columns:1fr 1fr}}
 
 /* ---------- the photo hero: the category ground keeps the title, Luke's photo beside it on a wide
    screen and under it on a phone. A clean shot, as the who card (Luke, 2026-09-13), a real <img> with its alt ---------- */
@@ -162,16 +313,19 @@ ol>.ucb__grouped>.ucb__group::before{content:counter(ucb-g,decimal-leading-zero)
   .hero__fig{position:absolute;top:0;right:0;bottom:0;width:44%;aspect-ratio:auto}
 }
 
-/* ---------- a photo in the body: in the column on a wide screen, edge to edge on a phone; a tall one
-   cropped to 4:5 and held to 480px wide, so a portrait frame never runs a screen and a half ---------- */
+/* ---------- a photo in the body: a rounded tile in the column on a wide screen, edge to edge on a phone;
+   a tall one cropped to 4:5 and held to 480px wide, so a portrait frame never runs a screen and a half ---------- */
 .body .ucb-fig{margin:36px 0 0}
 .body .ucb-fig img{display:block;width:100%;height:auto;margin:0}
-.ucb-fig__cap{margin-top:10px;font-size:13px;line-height:1.45;color:var(--ink-2)}
+.ucb-fig__cap{margin-top:10px;font-family:var(--ucb-text);font-size:13px;line-height:1.45;color:var(--ucb-ink-soft)}
 .body .ucb-fig--tall img{aspect-ratio:4/5;object-fit:cover}
 @media (max-width:640px){
   .body .ucb-fig{margin-left:calc(-1*var(--pad));margin-right:calc(-1*var(--pad))}
   .ucb-fig__cap{padding:0 var(--pad)}
 }
-@media (min-width:641px){.body .ucb-fig--tall{max-width:480px}}
+@media (min-width:641px){
+  .body .ucb-fig img{border-radius:var(--ucb-r)}
+  .body .ucb-fig--tall{max-width:480px}
+}
 
 @media (prefers-reduced-motion:reduce){.ucb__box,.ucb__box::before{transition:none}}
