@@ -21,10 +21,9 @@ import { photoOf } from '@/lib/photos'
 const SITE_URL = 'https://undercurrentautomations.com'
 const CALC_TOKEN = '<!-- calc:tradie-admin -->'
 
-// The looks for the article blocks, one class each (app/styles/article-blocks.css): steps
-// ledger|track|tiles|ramp, pairs panel|offset|deep|pills, tables fit|rail|stack|pinned, Quick Answer
-// plain|bluf|split|tiles, workings receipt|tile|column. Side by side: /article-blocks-concepts.html
-const BLOCK_LOOKS = { steps: 'ledger', pairs: 'panel', data: 'fit', qa: 'plain', work: 'receipt' }
+// The looks for the article blocks, one class each (app/styles/article-blocks.css). None yet: the
+// blocks sit on the live site's base styles. Side by side: /article-blocks-concepts.html
+const BLOCK_LOOKS = {}
 const LOOKS = `ucb-looks ${Object.entries(BLOCK_LOOKS).map(([k, v]) => `ucb-${k}--${v}`).join(' ')}`
 
 // the share and schema image: the library photo when the article has one, else the old poster, else the brand card
