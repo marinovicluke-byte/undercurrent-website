@@ -17,7 +17,7 @@
 .body .ucb{margin-top:40px}
 .body .ucb p{margin-top:0}
 .body .ucb__title{font-size:18px;font-weight:500;letter-spacing:-.01em;line-height:1.3;max-width:40ch}
-.ucb__meta{margin-left:.4em;font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.ucb__meta{display:block;margin-top:5px;font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
 .body .ucb__list{list-style:none;margin:14px 0 0;padding:0;border-top:1px solid var(--line)}
 .body .ucb__list li{margin:0}
 .body .ucb__note{margin-top:14px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:60ch}
@@ -59,7 +59,7 @@ ol>.ucb__grouped>.ucb__group::before{content:counter(ucb-g,decimal-leading-zero)
 
 /* ---------- list: a drawn dash on hairline rows ---------- */
 .ucb--list .ucb__list>li{position:relative;padding:11px 0 11px 24px;border-bottom:1px solid var(--line);font-size:17px;line-height:1.45}
-.ucb--list .ucb__list>li::before{content:"";position:absolute;left:1px;top:calc(11px + .72em);width:9px;height:1.5px;background:var(--ink)}
+.ucb--list .ucb__list>li::before{content:"";position:absolute;left:1px;top:23px;width:9px;height:1px;background:var(--ink)}
 
 /* ---------- pair: two lists side by side from a phone's landscape up. A contrast (before and
    after, works and doesn't, do and don't) in two blues, the deep one for the better side;
@@ -68,12 +68,12 @@ ol>.ucb__grouped>.ucb__group::before{content:counter(ucb-g,decimal-leading-zero)
 .body .ucb-pair .ucb{margin:0;padding:18px 18px 20px;background:var(--off);box-shadow:inset 0 2px 0 var(--ink)}
 .body .ucb-pair .ucb__list{border-top:0;margin-top:10px}
 .ucb-pair .ucb--list .ucb__list>li{border-bottom:0;padding:6px 0 6px 24px;font-size:16px}
-.ucb-pair .ucb--list .ucb__list>li::before{top:calc(6px + .7em)}
-.body .ucb-pair .ucb--plus{background:var(--ucb-b50);box-shadow:inset 0 3px 0 var(--ucb-blue)}
-.body .ucb-pair .ucb--minus{background:var(--white);box-shadow:inset 0 3px 0 var(--ucb-b200),inset 0 0 0 1px var(--line)}
+.ucb-pair .ucb--list .ucb__list>li::before{top:17px}
+.body .ucb-pair .ucb--plus{background:var(--ucb-b50);box-shadow:inset 0 2px 0 var(--ucb-blue)}
+.body .ucb-pair .ucb--minus{background:var(--white);box-shadow:inset 0 2px 0 var(--ucb-b400),inset 0 0 0 1px var(--line)}
 .body .ucb--plus .ucb__title{color:var(--ucb-b700)}
 .body .ucb--minus .ucb__title{color:var(--ink-2)}
-.ucb-pair .ucb--plus .ucb__list>li::before{width:12px;height:12px;top:calc(6px + .35em);background:var(--ucb-blue);-webkit-mask:var(--ucb-tick) center/contain no-repeat;mask:var(--ucb-tick) center/contain no-repeat}
+.ucb-pair .ucb--plus .ucb__list>li::before{width:12px;height:12px;top:12px;background:var(--ucb-blue);-webkit-mask:var(--ucb-tick) center/contain no-repeat;mask:var(--ucb-tick) center/contain no-repeat}
 .ucb-pair .ucb--minus .ucb__list>li::before{background:var(--ucb-b400)}
 @media (min-width:641px){.body .ucb-pair{grid-template-columns:1fr 1fr}}
 
@@ -138,14 +138,14 @@ ol>.ucb__grouped>.ucb__group::before{content:counter(ucb-g,decimal-leading-zero)
 .ucb-looks .qa__lead--answer strong{font-weight:500}
 .ucb-looks .qa__pts{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid var(--line)}
 .ucb-looks .qa__pts li{position:relative;padding:12px 0 12px 24px;border-bottom:1px solid var(--line);font-size:16px;line-height:1.45;color:var(--ink-2)}
-.ucb-looks .qa__pts li::before{content:"";position:absolute;left:1px;top:calc(12px + .72em);width:10px;height:1.5px;background:var(--ucb-blue)}
+.ucb-looks .qa__pts li::before{content:"";position:absolute;left:1px;top:23px;width:10px;height:2px;background:var(--ucb-blue)}
 @media (min-width:961px){
   .ucb-qa--plain .qa__pts{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
   .ucb-qa--split .qa__in{max-width:1080px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);column-gap:56px;align-items:start}
   .ucb-qa--split .qa__in>*{grid-column:1}
   .ucb-qa--split .qa__pts{grid-column:2;grid-row:1/span 3;margin-top:0;border-top:0;border-left:1px solid var(--line);padding-left:28px}
   .ucb-qa--split .qa__pts li:first-child{padding-top:0}
-  .ucb-qa--split .qa__pts li:first-child::before{top:.72em}
+  .ucb-qa--split .qa__pts li:first-child::before{top:11px}
   .ucb-qa--split .qa__pts li:last-child{border-bottom:0}
 }
 
@@ -153,7 +153,7 @@ ol>.ucb__grouped>.ucb__group::before{content:counter(ucb-g,decimal-leading-zero)
    screen and under it on a phone. A clean shot, as the who card (Luke, 2026-09-13), a real <img> with its alt ---------- */
 .hero--photo{min-height:0;flex-direction:column;container-type:inline-size}
 .hero--photo .hero__inner{padding-top:110px;padding-bottom:36px}
-.hero__fig{position:relative;z-index:2;margin:0;aspect-ratio:4/3;overflow:hidden;background:var(--b0)}
+.hero__fig{position:relative;z-index:2;margin:0;aspect-ratio:3/2;overflow:hidden;background:var(--b0)}
 .hero__fig img{display:block;width:100%;height:100%;object-fit:cover}
 @media (min-width:961px){
   .hero--photo{flex-direction:row;min-height:62vh}
