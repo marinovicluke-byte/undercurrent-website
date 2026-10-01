@@ -47,7 +47,7 @@ Take a customer email asking for a quote. The **AI model** reads it and works ou
 
 **Normal automation follows fixed rules, while AI automation reads messy input and picks the rule that fits.** A rule says "when a form comes in, add a row to the sheet". That works until a customer sends a photo of a handwritten note. Here's how each one handles a new enquiry.
 
-| | By hand | Normal automation | **AI automation** |
+| | By hand | Normal automation | AI automation |
 |---|---|---|---|
 | What it can read | Anything | Forms and tidy data only | Emails, PDFs, photos, voice notes |
 | Who decides what it means | You | Nobody, it follows the rule | The AI model, and you check it |
