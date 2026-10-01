@@ -2,7 +2,10 @@
 // with the live markdown. Category ground hero, the rail, the quick answer
 // strip, the byline with the photo, the body in blocks, FAQ from front-matter,
 // the end row, the who card, Read next, the closing band. Schema as before.
+// A `photo` in front-matter puts a photo from the library beside the title.
 import '@/app/styles/article.css'
+import '@/app/styles/article-blocks.css'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import PageFx from '@/components/site/PageFx'
 import JsonLd from '@/components/ui/JsonLd'
@@ -13,9 +16,23 @@ import { getAllArticles, getArticleBySlug } from '@/lib/articles'
 import { LUKE_PERSON } from '@/lib/schema/person'
 import { categoryOf, CLOSE_LINES, fmtDate, isoDate } from '@/lib/categories'
 import { extractQuickAnswer, stripSection, splitBlocks, decorate } from '@/lib/articleBody'
+import { photoOf } from '@/lib/photos'
 
 const SITE_URL = 'https://undercurrentautomations.com'
 const CALC_TOKEN = '<!-- calc:tradie-admin -->'
+
+// The looks for the article blocks, one class each (app/styles/article-blocks.css):
+// steps ledger|track, tables fit|rail, Quick Answer plain|split. Side by side: /article-blocks-concepts.html
+const BLOCK_LOOKS = { steps: 'ledger', data: 'fit', qa: 'plain' }
+const LOOKS = `ucb-looks ucb-steps--${BLOCK_LOOKS.steps} ucb-data--${BLOCK_LOOKS.data} ucb-qa--${BLOCK_LOOKS.qa}`
+
+// the share and schema image: the library photo when the article has one, else the old poster, else the brand card
+function shareImage(slug, fm) {
+  const hero = photoOf(fm.photo)
+  if (hero) return { url: `${SITE_URL}${hero.path}`, width: hero.width, height: hero.height, alt: fm.photoAlt || hero.alt }
+  if (hasCover(slug)) return { url: `${SITE_URL}/articles/${slug}/hero.jpg`, width: 1536, height: 1024, alt: fm.title }
+  return { url: `${SITE_URL}/brand/og-card.png`, width: 1536, height: 1024, alt: fm.title }
+}
 
 export const dynamicParams = false
 
@@ -28,7 +45,7 @@ export async function generateMetadata({ params }) {
   const article = await getArticleBySlug(slug)
   if (!article) return {}
   const fm = article.frontmatter
-  const heroImageUrl = hasCover(slug) ? `${SITE_URL}/articles/${slug}/hero.jpg` : `${SITE_URL}/brand/og-card.png`
+  const share = shareImage(slug, fm)
   const description = fm.metaDescription || fm.description || fm.summary
   return {
     title: { absolute: fm.title },
@@ -38,9 +55,9 @@ export async function generateMetadata({ params }) {
       title: fm.title, description, type: 'article',
       publishedTime: isoDate(fm.date), modifiedTime: isoDate(fm.dateModified || fm.date),
       url: `${SITE_URL}/blog/${slug}`, authors: [fm.author || 'Luke Marinovic'],
-      images: [{ url: heroImageUrl, width: 1536, height: 1024, alt: fm.title }],
+      images: [share],
     },
-    twitter: { card: 'summary_large_image', title: fm.title, description, images: [heroImageUrl] },
+    twitter: { card: 'summary_large_image', title: fm.title, description, images: [share.url] },
   }
 }
 
@@ -69,6 +86,8 @@ export default async function ArticlePage({ params }) {
   const fm = article.frontmatter
   const cat = categoryOf(fm.cluster)
   const faqs = faqsOf(fm)
+  const hero = photoOf(fm.photo)
+  const heroAlt = hero && (fm.photoAlt || hero.alt)
 
   const { qa, html: afterQa } = extractQuickAnswer(article.html)
   const body = faqs.length ? stripSection(afterQa, 'Frequently Asked Questions') : afterQa
@@ -100,7 +119,7 @@ export default async function ArticlePage({ params }) {
         mainEntityOfPage: url, articleSection: cat.label,
         keywords: [fm.keyword, cat.label, fm.level].filter(Boolean).join(', '),
         inLanguage: 'en-AU', about: aboutEntities, ...(mentionEntities && { mentions: mentionEntities }),
-        ...(hasCover(slug) && { image: `${SITE_URL}/articles/${slug}/hero.jpg` }),
+        ...((hero || hasCover(slug)) && { image: shareImage(slug, fm).url }),
       },
       LUKE_PERSON,
     ],
@@ -127,8 +146,8 @@ export default async function ArticlePage({ params }) {
       {faqSchema && <JsonLd schema={faqSchema} />}
 
       <main>
-        <article>
-          <header className="hero" id="top" data-reveal="">
+        <article className={LOOKS}>
+          <header className={`hero${hero ? ' hero--photo' : ''}`} id="top" data-reveal="">
             <div className="hero__layer band"></div>
             <div className="hero__layer hero__glow b"></div>
             <div className="hero__layer hero__static"></div>
@@ -138,6 +157,12 @@ export default async function ArticlePage({ params }) {
               <h1 className="rv" style={{ '--i': '1' }}>{fm.title}</h1>
               {fm.description && <p className="hero__sub rv" style={{ '--i': '2' }}>{fm.description}</p>}
             </div>
+            {hero && (
+              <figure className="hero__fig">
+                <Image src={hero.path} width={hero.width} height={hero.height} alt={heroAlt} preload
+                  sizes="(min-width: 961px) 44vw, 100vw" style={{ objectPosition: fm.photoFocus || 'center' }} />
+              </figure>
+            )}
           </header>
           <div id="content"></div>
 
@@ -150,8 +175,13 @@ export default async function ArticlePage({ params }) {
           {qa && (
             <section className="qa" data-reveal="" aria-label="Quick answer"><div className="wrap"><div className="qa__in">
               <p className="eyebrow rv">Quick answer</p>
-              <p className="qa__lead rv" style={{ '--i': '1' }} dangerouslySetInnerHTML={{ __html: qa.lead }} />
-              {qa.items.length > 0 && (
+              <p className={`qa__lead rv${qa.answer ? ' qa__lead--answer' : ''}`} style={{ '--i': '1' }} dangerouslySetInnerHTML={{ __html: qa.lead }} />
+              {qa.items.length > 0 && !qa.ordered && (
+                <ul className="qa__pts rv" style={{ '--i': '2' }}>
+                  {qa.items.map((it, i) => <li key={i} dangerouslySetInnerHTML={{ __html: it }} />)}
+                </ul>
+              )}
+              {qa.items.length > 0 && qa.ordered && (
                 <ol className="qa__cells rv" style={{ '--i': '2' }}>
                   {qa.items.map((it, i) => <li key={i} dangerouslySetInnerHTML={{ __html: it }} />)}
                 </ol>

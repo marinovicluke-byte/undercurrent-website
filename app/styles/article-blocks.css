@@ -1,0 +1,177 @@
+/* app/styles/article-blocks.css — the article's blocks (lib/remarkArticleBlocks.js), the
+   quiet Quick Answer, the data rail, the photo hero and figures. Phone first. The page's
+   own language (hairlines, the light numerals, straight edges, the 12px tracked labels),
+   and the one blue from docs/redesign/BRAND.md as a ramp, never red or green for good and
+   bad. The look is a class on the <article>: ucb-steps--ledger|track, ucb-data--fit|rail,
+   ucb-qa--plain|split (BLOCK_LOOKS in app/blog/[slug]/page.js). Board of the looks:
+   /article-blocks-concepts.html */
+
+.ucb-looks{
+  --ucb-b50:#F1F6FF; --ucb-b100:#DEEAFF; --ucb-b200:#C3D8FF; --ucb-b400:#6E97F4;
+  --ucb-blue:#2563EB; --ucb-b700:#1B47A0;
+  --ucb-tick:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M5 12.5l4.5 4.5L19 7.5'/></svg>");
+}
+.ucb-looks ::selection{background:var(--ucb-b100);color:var(--ink)}
+
+/* ---------- the block: a title, the list, an optional note ---------- */
+.body .ucb{margin-top:40px}
+.body .ucb p{margin-top:0}
+.body .ucb__title{font-size:18px;font-weight:500;letter-spacing:-.01em;line-height:1.3;max-width:40ch}
+.ucb__meta{margin-left:.4em;font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.body .ucb__list{list-style:none;margin:14px 0 0;padding:0;border-top:1px solid var(--line)}
+.body .ucb__list li{margin:0}
+.body .ucb__note{margin-top:14px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:60ch}
+/* the comma before a timing or a value stays in the text for screen readers and engines */
+.ucb__sep{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+
+/* ---------- steps, Ledger: the page's own numbered rows, the light numeral beside each step ---------- */
+.body .ucb--steps .ucb__list{counter-reset:ucb-s}
+.ucb-steps--ledger .ucb--steps .ucb__list>li{counter-increment:ucb-s;display:grid;grid-template-columns:40px minmax(0,1fr);align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line);font-size:17px;line-height:1.45}
+.ucb-steps--ledger .ucb--steps .ucb__list>li::before{content:counter(ucb-s,decimal-leading-zero);font-size:13px;font-weight:400;letter-spacing:.06em;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.ucb-steps--ledger .ucb--steps .ucb__list>li>*{grid-column:2}
+.ucb-steps--ledger .ucb__time{display:block;margin-top:3px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+
+/* ---------- steps, Track: the run of a workflow, a spine through numbered nodes, the last one lit ---------- */
+.ucb-steps--track .ucb--steps .ucb__list{border-top:0;padding-top:4px}
+.ucb-steps--track .ucb--steps .ucb__list>li{counter-increment:ucb-s;position:relative;padding:0 0 20px 42px;min-height:44px;font-size:17px;line-height:1.45}
+.ucb-steps--track .ucb--steps .ucb__list>li::before{content:counter(ucb-s);position:absolute;left:0;top:0;box-sizing:border-box;width:25px;height:25px;border:1px solid var(--ink);border-radius:50%;background:var(--white);display:grid;place-items:center;font-size:11px;font-weight:500;line-height:1;font-variant-numeric:tabular-nums;color:var(--ink);z-index:1}
+.ucb-steps--track .ucb--steps .ucb__list>li::after{content:"";position:absolute;left:12px;top:25px;bottom:0;width:1px;background:var(--line)}
+.ucb-steps--track .ucb--steps .ucb__list>li:last-child{padding-bottom:0}
+.ucb-steps--track .ucb--steps .ucb__list>li:last-child::after{display:none}
+.ucb-steps--track .ucb--steps .ucb__list>li:last-child::before{background:var(--ucb-blue);border-color:var(--ucb-blue);color:#fff}
+.ucb-steps--track .ucb__time{display:block;margin-top:2px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ucb-b700)}
+
+/* ---------- checklist: real checkboxes on hairline rows, the tick in the blue; nested checks grouped under their name ---------- */
+.ucb__check{border-bottom:1px solid var(--line)}
+.ucb__check label{display:grid;grid-template-columns:30px minmax(0,1fr);align-items:start;padding:12px 0;font-size:17px;line-height:1.45;cursor:pointer}
+.ucb__box{-webkit-appearance:none;appearance:none;box-sizing:border-box;width:18px;height:18px;margin:3px 0 0;border:1.5px solid var(--ink);border-radius:0;background:var(--white);display:grid;place-items:center;cursor:pointer;transition:background-color .2s,border-color .2s}
+.ucb__box::before{content:"";width:12px;height:12px;background:#fff;-webkit-mask:var(--ucb-tick) center/contain no-repeat;mask:var(--ucb-tick) center/contain no-repeat;transform:scale(0);transition:transform .2s var(--ease)}
+.ucb__box:checked{background:var(--ucb-blue);border-color:var(--ucb-blue)}
+.ucb__box:checked::before{transform:none}
+.ucb__box:focus-visible{outline:2px solid var(--ucb-blue);outline-offset:3px}
+.ucb__check:has(.ucb__box:checked) .ucb__text{color:var(--ink-2)}
+.body .ucb__list:has(>.ucb__grouped){border-top:0;counter-reset:ucb-g}
+.body .ucb__checks{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.ucb__grouped{counter-increment:ucb-g}
+.ucb__group{display:block;padding:20px 0 8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.ucb__group strong{font-weight:400}
+ol>.ucb__grouped>.ucb__group::before{content:counter(ucb-g,decimal-leading-zero);margin-right:12px;font-variant-numeric:tabular-nums}
+
+/* ---------- list: a drawn dash on hairline rows ---------- */
+.ucb--list .ucb__list>li{position:relative;padding:11px 0 11px 24px;border-bottom:1px solid var(--line);font-size:17px;line-height:1.45}
+.ucb--list .ucb__list>li::before{content:"";position:absolute;left:1px;top:calc(11px + .72em);width:9px;height:1.5px;background:var(--ink)}
+
+/* ---------- pair: two lists side by side from a phone's landscape up. A contrast (before and
+   after, works and doesn't, do and don't) in two blues, the deep one for the better side;
+   the titles carry the meaning, the colour only repeats it. Equals sit on two grey panels ---------- */
+.body .ucb-pair{display:grid;gap:10px;margin-top:40px}
+.body .ucb-pair .ucb{margin:0;padding:18px 18px 20px;background:var(--off);box-shadow:inset 0 2px 0 var(--ink)}
+.body .ucb-pair .ucb__list{border-top:0;margin-top:10px}
+.ucb-pair .ucb--list .ucb__list>li{border-bottom:0;padding:6px 0 6px 24px;font-size:16px}
+.ucb-pair .ucb--list .ucb__list>li::before{top:calc(6px + .7em)}
+.body .ucb-pair .ucb--plus{background:var(--ucb-b50);box-shadow:inset 0 3px 0 var(--ucb-blue)}
+.body .ucb-pair .ucb--minus{background:var(--white);box-shadow:inset 0 3px 0 var(--ucb-b200),inset 0 0 0 1px var(--line)}
+.body .ucb--plus .ucb__title{color:var(--ucb-b700)}
+.body .ucb--minus .ucb__title{color:var(--ink-2)}
+.ucb-pair .ucb--plus .ucb__list>li::before{width:12px;height:12px;top:calc(6px + .35em);background:var(--ucb-blue);-webkit-mask:var(--ucb-tick) center/contain no-repeat;mask:var(--ucb-tick) center/contain no-repeat}
+.ucb-pair .ucb--minus .ucb__list>li::before{background:var(--ucb-b400)}
+@media (min-width:641px){.body .ucb-pair{grid-template-columns:1fr 1fr}}
+
+/* ---------- workings: the maths shown, label and value on a dotted leader, the answer under a double rule in the blue ---------- */
+.body .ucb--workings .ucb__list{border-top:1px solid var(--ink);padding-top:4px}
+/* a line that won't fit wraps its value to the next line, right-aligned, the leader running out to the edge */
+.ucb--workings .ucb__list>li{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:10px;row-gap:2px;padding:8px 0;font-size:16px;line-height:1.4}
+.ucb--workings .ucb__text{flex:0 1 auto;color:var(--ink-2)}
+.ucb--workings .ucb__sep{position:static;flex:1 1 24px;min-width:24px;width:auto;height:auto;overflow:hidden;clip-path:none;align-self:center;border-bottom:1px dotted rgba(20,20,20,.32);color:transparent;font-size:0}
+.ucb--workings .ucb__val{flex:0 1 auto;margin-left:auto;text-align:right;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
+.body .ucb--workings .ucb__total{margin-top:8px;padding-top:12px;border-top:3px double var(--ink)}
+.ucb--workings .ucb__total .ucb__text{color:var(--ink);font-weight:500}
+.ucb--workings .ucb__total .ucb__val{font-size:22px;letter-spacing:-.02em;line-height:1.2;color:var(--ucb-blue)}
+
+/* ---------- the data rail: a real <table> shown as a snap rail of one card a row. The base is
+   the rail (the phone); ucb-data--fit gives it back its grid from 961px, ucb-data--rail keeps
+   the rail on every screen, a table of five columns or more is a rail everywhere. No script:
+   the hint counts the rows from --rows, the progress line runs off the scroll where the
+   browser supports scroll-driven animation ---------- */
+.ucb-data{position:relative;margin-top:32px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;margin-right:calc(-1*var(--pad));counter-reset:ucb-rows var(--rows)}
+.ucb-data::-webkit-scrollbar{display:none}
+.ucb-data:focus-visible{outline:2px solid var(--ucb-blue);outline-offset:4px}
+.ucb-data::before{content:counter(ucb-rows) " rows, swipe" / "";position:sticky;left:0;display:block;margin-bottom:12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.ucb-data::after{content:"";position:sticky;left:0;display:block;width:calc(100% - var(--pad));height:1px;margin-top:16px;background:var(--line)}
+.body .ucb-data table{display:block;width:auto;margin:0;border-collapse:collapse;font-size:15px;line-height:1.4}
+.ucb-data thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.ucb-data tbody{display:flex;gap:10px;width:max-content;padding-right:var(--pad);counter-reset:ucb-row}
+.ucb-data tbody tr{counter-increment:ucb-row;display:flex;flex-direction:column;flex:none;width:min(76vw,300px);scroll-snap-align:start;background:var(--off);padding:16px 18px 18px;box-shadow:inset 0 2px 0 var(--ink)}
+.body .ucb-data tbody th{display:block;padding:0 0 12px;border:0;font-size:17px;font-weight:500;letter-spacing:-.01em;line-height:1.3;color:var(--ink);text-transform:none}
+.ucb-data tbody th::before{content:counter(ucb-row,decimal-leading-zero) " / " counter(ucb-rows,decimal-leading-zero) / "";display:block;margin-bottom:10px;font-size:11px;font-weight:400;letter-spacing:.14em;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.body .ucb-data td{display:block;padding:9px 0 0;margin-top:9px;border:0;border-top:1px solid var(--line);color:var(--ink)}
+.ucb-data td::before{content:attr(data-label) / "";display:block;margin-bottom:3px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+@supports (animation-timeline:scroll()){
+  .ucb-data::after{background:linear-gradient(var(--ucb-blue),var(--ucb-blue)) 0 0/0 100% no-repeat,var(--line);animation:ucb-progress linear both;animation-timeline:scroll(nearest inline)}
+}
+@keyframes ucb-progress{from{background-size:calc(100% / var(--rows)) 100%,auto}to{background-size:100% 100%,auto}}
+
+@media (min-width:961px){
+  .ucb-data{margin-right:0}
+  .ucb-data::before{content:counter(ucb-rows) " rows, scroll sideways" / ""}
+  .ucb-data::after{width:100%}
+  .ucb-data tbody{padding-right:0}
+  .ucb-data tbody tr{width:280px}
+  /* fit: a table up to four columns is a table again, hairline rows on the column */
+  .ucb-data--fit .ucb-data:not(.ucb-data--wide){overflow:visible;scroll-snap-type:none}
+  .ucb-data--fit .ucb-data:not(.ucb-data--wide)::before,.ucb-data--fit .ucb-data:not(.ucb-data--wide)::after{display:none}
+  .ucb-data--fit .body .ucb-data:not(.ucb-data--wide) table{display:table;width:100%;border-top:1px solid var(--line)}
+  .ucb-data--fit .ucb-data:not(.ucb-data--wide) thead{position:static;display:table-header-group;width:auto;height:auto;overflow:visible;clip-path:none;white-space:normal}
+  .ucb-data--fit .ucb-data:not(.ucb-data--wide) tbody{display:table-row-group;width:auto}
+  .ucb-data--fit .ucb-data:not(.ucb-data--wide) tbody tr{display:table-row;width:auto;padding:0;background:none;box-shadow:none}
+  .ucb-data--fit .body .ucb-data:not(.ucb-data--wide) :is(th,td){display:table-cell;margin:0;padding:13px 20px 13px 0;border:0;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+  .ucb-data--fit .body .ucb-data:not(.ucb-data--wide) thead th{padding:12px 20px 12px 0;font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+  .ucb-data--fit .body .ucb-data:not(.ucb-data--wide) tbody th{font-size:15px;font-weight:500;letter-spacing:0}
+  .ucb-data--fit .ucb-data:not(.ucb-data--wide) td{color:var(--ink-2)}
+  .ucb-data--fit .ucb-data:not(.ucb-data--wide) :is(tbody th,td)::before{display:none}
+}
+
+/* ---------- Quick Answer, quiet: the answer sentence bold and first, two to four short points under it.
+   Plain: the points go two across from 961px. Split: the points sit in a column beside the answer
+   from 961px. Either way the DOM is the label, a <p><strong>, a <ul>, in that order ---------- */
+.ucb-looks .qa__in{max-width:760px}
+.ucb-looks .qa__lead--answer strong{font-weight:500}
+.ucb-looks .qa__pts{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid var(--line)}
+.ucb-looks .qa__pts li{position:relative;padding:12px 0 12px 24px;border-bottom:1px solid var(--line);font-size:16px;line-height:1.45;color:var(--ink-2)}
+.ucb-looks .qa__pts li::before{content:"";position:absolute;left:1px;top:calc(12px + .72em);width:10px;height:1.5px;background:var(--ucb-blue)}
+@media (min-width:961px){
+  .ucb-qa--plain .qa__pts{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
+  .ucb-qa--split .qa__in{max-width:1080px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);column-gap:56px;align-items:start}
+  .ucb-qa--split .qa__in>*{grid-column:1}
+  .ucb-qa--split .qa__pts{grid-column:2;grid-row:1/span 3;margin-top:0;border-top:0;border-left:1px solid var(--line);padding-left:28px}
+  .ucb-qa--split .qa__pts li:first-child{padding-top:0}
+  .ucb-qa--split .qa__pts li:first-child::before{top:.72em}
+  .ucb-qa--split .qa__pts li:last-child{border-bottom:0}
+}
+
+/* ---------- the photo hero: the category ground keeps the title, Luke's photo beside it on a wide
+   screen and under it on a phone. A clean shot, as the who card (Luke, 2026-09-13), a real <img> with its alt ---------- */
+.hero--photo{min-height:0;flex-direction:column;container-type:inline-size}
+.hero--photo .hero__inner{padding-top:110px;padding-bottom:36px}
+.hero__fig{position:relative;z-index:2;margin:0;aspect-ratio:4/3;overflow:hidden;background:var(--b0)}
+.hero__fig img{display:block;width:100%;height:100%;object-fit:cover}
+@media (min-width:961px){
+  .hero--photo{flex-direction:row;min-height:62vh}
+  .hero--photo .hero__inner{width:56%;max-width:none;margin:0;padding-top:140px;padding-bottom:clamp(48px,7vh,88px);padding-right:48px;padding-left:max(var(--pad),calc((100vw - var(--max))/2 + var(--pad)));padding-left:max(var(--pad),calc((100cqw - var(--max))/2 + var(--pad)))}
+  .hero--photo h1,.hero--photo .hero__sub{max-width:none}
+  .hero__fig{position:absolute;top:0;right:0;bottom:0;width:44%;aspect-ratio:auto}
+}
+
+/* ---------- a photo in the body: in the column on a wide screen, edge to edge on a phone; a tall one
+   cropped to 4:5 and held to 480px wide, so a portrait frame never runs a screen and a half ---------- */
+.body .ucb-fig{margin:36px 0 0}
+.body .ucb-fig img{display:block;width:100%;height:auto;margin:0}
+.ucb-fig__cap{margin-top:10px;font-size:13px;line-height:1.45;color:var(--ink-2)}
+.body .ucb-fig--tall img{aspect-ratio:4/5;object-fit:cover}
+@media (max-width:640px){
+  .body .ucb-fig{margin-left:calc(-1*var(--pad));margin-right:calc(-1*var(--pad))}
+  .ucb-fig__cap{padding:0 var(--pad)}
+}
+@media (min-width:641px){.body .ucb-fig--tall{max-width:480px}}
+
+@media (prefers-reduced-motion:reduce){.ucb__box,.ucb__box::before{transition:none}}
