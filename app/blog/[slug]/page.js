@@ -1,6 +1,6 @@
 // app/blog/[slug]/page.js — the article, the sandbox's Ground skeleton poured
-// with the live markdown. Category ground hero, the rail, the quick answer
-// strip, the byline with the photo, the body in blocks, FAQ from front-matter,
+// with the live markdown. Category ground hero with the quick answer under the
+// title, the rail, the byline with the photo, the body in blocks, FAQ from front-matter,
 // the end row, the who card, Read next, the closing band. Schema as before.
 // A `photo` in front-matter puts a photo from the library beside the title.
 import '@/app/styles/article.css'
@@ -21,18 +21,11 @@ import { photoOf } from '@/lib/photos'
 const SITE_URL = 'https://undercurrentautomations.com'
 const CALC_TOKEN = '<!-- calc:tradie-admin -->'
 
-// The looks for the article blocks, one class each (app/styles/article-blocks.css): steps
-// fill|relay|command|signal, pairs strike|weight|across|signed, tables rail|ledger|pick|turn, Quick
-// Answer statement|deck|margin|grid, workings worked|tally|equation. Side by side, with the idea
-// behind each: /article-blocks-concepts.html
-const BLOCK_LOOKS = { steps: 'fill', pairs: 'weight', data: 'rail', qa: 'deck', work: 'worked' }
-const LOOKS = `ucb-looks ${Object.entries(BLOCK_LOOKS).map(([k, v]) => `ucb-${k}--${v}`).join(' ')}`
-
-// the share and schema image: the library photo when the article has one, else the old poster, else the brand card
-// the Quick Answer: the label, the answer sentence, the points, in that order wherever it sits
-function QuickAnswer({ qa, className }) {
+// the Quick Answer, Deck (app/styles/article-blocks.css): the title's deck, in the hero under the
+// H1. The label, the answer sentence, the points, in that order
+function QuickAnswer({ qa }) {
   return (
-    <section className={className} data-reveal="" aria-label="Quick answer"><div className="wrap"><div className="qa__in">
+    <section className="qa qa--deck" data-reveal="" aria-label="Quick answer"><div className="wrap"><div className="qa__in">
       <p className="eyebrow rv">Quick answer</p>
       <p className={`qa__lead rv${qa.answer ? ' qa__lead--answer' : ''}`} style={{ '--i': '1' }} dangerouslySetInnerHTML={{ __html: qa.lead }} />
       {qa.items.length > 0 && !qa.ordered && (
@@ -50,6 +43,7 @@ function QuickAnswer({ qa, className }) {
   )
 }
 
+// the share and schema image: the library photo when the article has one, else the old poster, else the brand card
 function shareImage(slug, fm) {
   const hero = photoOf(fm.photo)
   if (hero) return { url: `${SITE_URL}${hero.path}`, width: hero.width, height: hero.height, alt: fm.photoAlt || hero.alt }
@@ -111,8 +105,6 @@ export default async function ArticlePage({ params }) {
   const faqs = faqsOf(fm)
   const hero = photoOf(fm.photo)
   const heroAlt = hero && (fm.photoAlt || hero.alt)
-  // the Deck look puts the Quick Answer in the hero, under the title, in place of the description
-  const deck = BLOCK_LOOKS.qa === 'deck'
 
   const { qa, html: afterQa } = extractQuickAnswer(article.html)
   const body = faqs.length ? stripSection(afterQa, 'Frequently Asked Questions') : afterQa
@@ -171,7 +163,7 @@ export default async function ArticlePage({ params }) {
       {faqSchema && <JsonLd schema={faqSchema} />}
 
       <main>
-        <article className={LOOKS}>
+        <article>
           <header className={`hero${hero ? ' hero--photo' : ''}`} id="top" data-reveal="">
             <div className="hero__layer band"></div>
             <div className="hero__layer hero__glow b"></div>
@@ -180,7 +172,7 @@ export default async function ArticlePage({ params }) {
             <div className="hero__inner">
               <a className="eyebrow hero__cat rv" href={`/blog#cat-${cat.key}`}>{cat.label}</a>
               <h1 className="rv" style={{ '--i': '1' }}>{fm.title}</h1>
-              {qa && deck ? <QuickAnswer qa={qa} className="qa qa--deck" />
+              {qa ? <QuickAnswer qa={qa} />
                 : fm.description && <p className="hero__sub rv" style={{ '--i': '2' }}>{fm.description}</p>}
             </div>
             {hero && (
@@ -198,7 +190,6 @@ export default async function ArticlePage({ params }) {
             </div></div></nav>
           )}
 
-          {qa && !deck && <QuickAnswer qa={qa} className="qa" />}
 
           <div className="art"><div className="wrap"><div className="art__col">
             <div className="meta meta--photo">

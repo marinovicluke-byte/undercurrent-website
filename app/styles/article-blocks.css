@@ -2,22 +2,17 @@
    Answer, the data table, the photo hero and figures. Phone first. The blocks are cut from the
    live site, not from a brand doc: Inter, the one hairline, ink and ink-2, square corners, the
    article's category colour only at the size of a mark, the grain cross, the scanline lettering
-   (docs/blocks-design-notes.md). The look is a class on the <article> (BLOCK_LOOKS in
-   app/blog/[slug]/page.js):
-     steps   fill | relay | command | signal
-     pairs   strike | weight | across | signed
-     data    rail | ledger | pick | turn
-     qa      statement | deck | margin | grid
-     work    worked | tally | equation
-   Look selectors go look-first: the class is on <article>, .body is inside it.
-   Board of the looks, with the idea behind each: /article-blocks-concepts.html */
+   (docs/blocks-design-notes.md). One look a block, picked by Luke on 2026-10-02 from the round 3
+   board: steps Fill, pairs Weight, tables Rail, Quick Answer Deck, workings Worked. The other
+   fourteen are kept only on the board, which has its own stylesheet: /article-blocks-concepts.html */
 
-.ucb-looks{
-  --ucb-mark:var(--c0);
+.body{
+  /* a bare URL in the copy breaks rather than push the page sideways on a phone */
+  overflow-wrap:break-word;
   /* the hero's scanlines on paper: ink stripes, .014em on per .043em, over a faint ink body */
   --ucb-scan:repeating-linear-gradient(to bottom,var(--ink) 0 max(1px,.014em),transparent max(1px,.014em) .043em),linear-gradient(rgba(20,20,20,.16),rgba(20,20,20,.16));
 }
-.ucb-looks ::selection{background:color-mix(in srgb,var(--c0) 20%,transparent);color:var(--ink)}
+.body ::selection{background:color-mix(in srgb,var(--c0) 20%,transparent);color:var(--ink)}
 
 /* ---------- the block: a title, the list, an optional note ---------- */
 .body .ucb{margin-top:40px}
@@ -33,344 +28,111 @@
 .ucb__time{display:block;margin-top:6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
 .ucb__val{font-weight:500;font-variant-numeric:tabular-nums}
 
-/* steps, list, workings: hairline rows until a look says otherwise */
+/* steps, list, workings: hairline rows */
 .body .ucb--steps .ucb__list{counter-reset:ucb-s}
 .ucb--steps .ucb__list>li{counter-increment:ucb-s}
 :is(.ucb--steps,.ucb--list,.ucb--workings) .ucb__list>li{padding:12px 0;border-top:1px solid var(--line)}
 :is(.ucb--steps,.ucb--list,.ucb--workings) .ucb__list>li:last-child{border-bottom:1px solid var(--line)}
 
-/* the site's cross: two 1px lines cut from the category colour run through the coarse grain,
-   jittering, as in the logo and problem grids. Every look that marks a joint uses this one */
-.ucb-steps--relay .ucb--steps .ucb__list>li::after,
-.ucb-steps--relay .ucb--steps .ucb__list>li>.ucb__text::after,
-.ucb-pairs--signed .ucb-pair .ucb--plus .ucb__list>li::before,
-.ucb-qa--margin .qa .eyebrow::before,
-.ucb-qa--grid .qa__pts>li::before,
-.ucb-qa--grid .qa__pts>li::after,
-.ucb-looks .ucb__op::before{
-  background:linear-gradient(var(--c0),var(--c0)),var(--noise-coarse) 0 0/220px 220px;background-blend-mode:multiply;
-  -webkit-mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;
-  mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;
-  animation:jit .6s steps(4) infinite}
-
-/* ================= STEPS ================= */
-
-/* Fill: the hero's striped lettering for the numerals, and each one filled from the foot in the
-   category colour as far as the run has gone: a third of the way at step one of three, solid at the last */
-.ucb-steps--fill .ucb--steps .ucb__list>li{display:grid;grid-template-columns:64px minmax(0,1fr);column-gap:10px;align-items:start;padding:18px 0}
-.ucb-steps--fill .ucb--steps .ucb__list>li::before{content:counter(ucb-s);grid-row:1/span 2;margin-top:-8px;font-size:52px;font-weight:500;line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums;
+/* ---------- steps, Fill: the hero's striped lettering for the numerals, each filled from the foot
+   in the category colour as far as the run has gone, a third at step one of three, solid at the
+   last. An Inter digit runs from about 14% to 86% of its 1em box, so the fill maps onto that ---------- */
+.ucb--steps .ucb__list>li{display:grid;grid-template-columns:64px minmax(0,1fr);column-gap:10px;align-items:start;padding:18px 0}
+.ucb--steps .ucb__list>li::before{content:counter(ucb-s);grid-row:1/span 2;margin-top:-8px;font-size:52px;font-weight:500;line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums;
   color:transparent;-webkit-text-fill-color:transparent;
   background:linear-gradient(to top,var(--c0) calc(14% + 72% * var(--n) / var(--of)),transparent 0),var(--ucb-scan);
   -webkit-background-clip:text;background-clip:text}
-.ucb-steps--fill .ucb--steps .ucb__list>li>*{grid-column:2}
+.ucb--steps .ucb__list>li>*{grid-column:2}
+/* a run of ten or more: two-digit numerals, set smaller so they keep to their column */
+.ucb--steps .ucb__list:has(>li:nth-child(10))>li::before{margin-top:-4px;font-size:36px}
 @media (min-width:961px){
-  .ucb-steps--fill .ucb--steps .ucb__list>li{grid-template-columns:96px minmax(0,1fr);padding:22px 0}
-  .ucb-steps--fill .ucb--steps .ucb__list>li::before{margin-top:-14px;font-size:72px}
-  .ucb-steps--fill .ucb--steps .ucb__text{font-size:18px}
+  .ucb--steps .ucb__list>li{grid-template-columns:96px minmax(0,1fr);padding:22px 0}
+  .ucb--steps .ucb__list>li::before{margin-top:-14px;font-size:72px}
+  .ucb--steps .ucb__list:has(>li:nth-child(10))>li::before{margin-top:-8px;font-size:52px}
+  .ucb--steps .ucb__text{font-size:18px}
 }
 
-/* Relay: the steps are the service page's problem grid, read left to right, the grain cross on the
-   hairline where one step hands to the next. On a phone the cells stack and the cross sits where each rule starts */
-.ucb-steps--relay .ucb--steps .ucb__list>li{position:relative;padding:18px 0 20px}
-.ucb-steps--relay .ucb--steps .ucb__list>li::before{content:counter(ucb-s,decimal-leading-zero);display:block;margin-bottom:10px;font-size:11px;letter-spacing:.14em;line-height:1;color:var(--ink-2)}
-.ucb-steps--relay .ucb--steps .ucb__list>li+li::after{content:"";position:absolute;left:-6px;top:-6px;width:13px;height:13px;z-index:1}
-@media (min-width:961px){
-  .ucb-steps--relay .body .ucb--steps .ucb__list{display:grid;grid-template-columns:repeat(var(--of),minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .ucb-steps--relay .body .ucb--steps .ucb__list:has(>li:nth-child(5)){grid-template-columns:repeat(3,minmax(0,1fr))}
-  .ucb-steps--relay .ucb--steps .ucb__list>li{display:flex;flex-direction:column;min-height:210px;padding:22px 24px 24px;border:0;border-right:1px solid var(--line)}
-  .ucb-steps--relay .ucb--steps .ucb__list>li:nth-child(odd){background:var(--off)}
-  .ucb-steps--relay .ucb--steps .ucb__list>li:last-child{border-right:0}
-  .ucb-steps--relay .ucb--steps .ucb__list:has(>li:nth-child(5))>li:nth-child(n+4){border-top:1px solid var(--line)}
-  .ucb-steps--relay .ucb--steps .ucb__list>li>.ucb__text{margin-top:auto;padding-top:32px;font-size:16px;line-height:1.45}
-  /* the crosses: top and foot of every inner vertical */
-  .ucb-steps--relay .ucb--steps .ucb__list>li+li::after{content:none}
-  .ucb-steps--relay .ucb--steps .ucb__list>li:not(:last-child)::after{content:"";position:absolute;right:-7px;top:-7px;width:13px;height:13px;z-index:1}
-  .ucb-steps--relay .ucb--steps .ucb__list>li:not(:last-child)>.ucb__text::after{content:"";position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;z-index:1}
-}
-
-/* Command: each step set as a headline, its number shrunk to a mark hanging in the margin, so a
-   short run reads as orders rather than a list */
-.ucb-steps--command .ucb--steps .ucb__list>li{position:relative;padding:0 0 0 30px;border:0}
-.ucb-steps--command .ucb--steps .ucb__list>li:last-child{border:0}
-.ucb-steps--command .ucb--steps .ucb__list>li+li{margin-top:18px}
-.ucb-steps--command .ucb--steps .ucb__list>li::before{content:counter(ucb-s);position:absolute;left:0;top:.55em;font-size:12px;font-weight:500;letter-spacing:.02em;line-height:1;color:var(--c0);font-variant-numeric:tabular-nums}
-.ucb-steps--command .ucb--steps .ucb__text{font-size:clamp(21px,2.3vw,27px);font-weight:500;letter-spacing:-.02em;line-height:1.22}
-.ucb-steps--command .ucb--steps .ucb__time{margin-top:8px}
-.ucb-steps--command .body .ucb--steps .ucb__list{margin-top:20px}
-.ucb-steps--command .body .ucb--steps .ucb__note{margin-top:26px}
-
-/* Signal: no numerals. Each step carries the whole run as the carousel's dots, the ones behind
-   it in ink, its own in the colour, the ones ahead in hairline grey: where you are, at a glance */
-.ucb-steps--signal .ucb--steps .ucb__list>li{position:relative;padding:16px 0 18px}
-.ucb-steps--signal .ucb--steps .ucb__list>li::before,
-.ucb-steps--signal .ucb--steps .ucb__list>li::after{content:"";display:block;height:6px;
-  background:radial-gradient(circle at 3px 3px,var(--line) 2.6px,transparent 3px) 0 0/14px 6px repeat-x;width:calc(var(--of) * 14px - 8px);margin-bottom:12px}
-.ucb-steps--signal .ucb--steps .ucb__list>li::after{position:absolute;left:0;top:16px;margin:0;width:calc(var(--n) * 14px - 8px);
-  background:radial-gradient(circle at 3px 3px,var(--c0) 2.6px,transparent 3px) 100% 0/6px 6px no-repeat,radial-gradient(circle at 3px 3px,var(--ink) 2.6px,transparent 3px) 0 0/14px 6px repeat-x}
-@media (min-width:961px){
-  .ucb-steps--signal .ucb--steps .ucb__list>li{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:24px;align-items:baseline}
-  .ucb-steps--signal .ucb--steps .ucb__list>li::before{grid-column:1/-1}
-  .ucb-steps--signal .ucb--steps .ucb__time{grid-column:2;grid-row:2;margin:0}
-}
-
-/* ================= PAIR ================= */
+/* ---------- pair, Weight: two titled lists, side by side from 641px. When the titles say which side
+   is better (before and after, do and don't), the verdict is the type: the better side set large in
+   ink and given more of the width, the other in small grey. Equals (free and paid) stay equal ---------- */
 .body .ucb-pair{display:grid;gap:32px;margin-top:40px}
 .body .ucb-pair .ucb{margin:0}
 .ucb-pair .ucb--list .ucb__list>li{font-size:16px;padding:10px 0}
-@media (min-width:641px){.body .ucb-pair{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
-
-/* Strike: the worse side is crossed out like an edit, the better side left standing. When the
-   titles don't say which is better (free and paid), nothing is struck */
-.ucb-pairs--strike .ucb-pair .ucb--minus :is(.ucb__title,.ucb__text){color:var(--ink-2)}
-.ucb-pairs--strike .ucb-pair .ucb--minus .ucb__text{text-decoration:line-through;text-decoration-thickness:1px;text-decoration-color:rgba(20,20,20,.5)}
-.ucb-pairs--strike .ucb-pair .ucb--plus .ucb__title{box-shadow:0 1px 0 var(--c0);width:fit-content}
-
-/* Weight: the verdict is the type. The better side is set large in ink and given more of the
-   width, the other drops to small grey; equals stay equal */
-.ucb-pairs--weight .ucb-pair .ucb__title{font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
-.ucb-pairs--weight .ucb-pair .ucb--plus .ucb__title{color:var(--ink)}
-.ucb-pairs--weight .ucb-pair .ucb--plus .ucb__list>li{font-size:clamp(19px,1.9vw,22px);font-weight:500;letter-spacing:-.015em;line-height:1.3;padding:12px 0}
-.ucb-pairs--weight .ucb-pair .ucb--minus .ucb__list>li{font-size:14px;color:var(--ink-2)}
+.ucb-pair .ucb__title{font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.ucb-pair .ucb--plus .ucb__title{color:var(--ink)}
+.ucb-pair .ucb__meta{display:block;margin-top:4px;font-size:13px;letter-spacing:0;text-transform:none}
+.ucb-pair .ucb--plus .ucb__list>li{font-size:clamp(19px,1.9vw,22px);font-weight:500;letter-spacing:-.015em;line-height:1.3;padding:12px 0}
+.ucb-pair .ucb--minus .ucb__list>li{font-size:14px;color:var(--ink-2)}
 @media (min-width:641px){
-  .ucb-pairs--weight .body .ucb-pair:has(>.ucb--plus:last-child){grid-template-columns:minmax(0,1fr) minmax(0,1.7fr)}
-  .ucb-pairs--weight .body .ucb-pair:has(>.ucb--plus:first-child){grid-template-columns:minmax(0,1.7fr) minmax(0,1fr)}
+  .body .ucb-pair{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .body .ucb-pair:has(>.ucb--plus:last-child){grid-template-columns:minmax(0,1fr) minmax(0,1.7fr)}
+  .body .ucb-pair:has(>.ucb--plus:first-child){grid-template-columns:minmax(0,1.7fr) minmax(0,1fr)}
 }
 
-/* Across: read line against line. The two lists share one set of rows (subgrid), so the third
-   line of one sits beside the third line of the other, on every screen, a hairline down the middle */
-.ucb-pairs--across .body .ucb-pair{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto repeat(var(--rows),auto) auto;gap:0}
-.ucb-pairs--across .body .ucb-pair>.ucb{display:grid;grid-row:1/-1;grid-template-rows:subgrid}
-.ucb-pairs--across .body .ucb-pair>.ucb+.ucb{padding-left:14px;border-left:1px solid var(--line)}
-.ucb-pairs--across .body .ucb-pair>.ucb:first-child{padding-right:14px}
-.ucb-pairs--across .body .ucb-pair .ucb__title{grid-row:1;padding-bottom:12px;font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
-.ucb-pairs--across .body .ucb-pair .ucb--minus .ucb__title{color:var(--ink-2)}
-.ucb-pairs--across .body .ucb-pair .ucb__list{grid-row:2/span var(--rows);display:grid;grid-template-rows:subgrid;margin:0}
-.ucb-pairs--across .body .ucb-pair .ucb__note{grid-row:-2}
-.ucb-pairs--across .ucb-pair .ucb--list .ucb__list>li{font-size:15px;line-height:1.45}
-.ucb-pairs--across .ucb-pair .ucb--minus .ucb__list>li{color:var(--ink-2)}
-@media (min-width:641px){
-  .ucb-pairs--across .body .ucb-pair>.ucb+.ucb{padding-left:24px}
-  .ucb-pairs--across .body .ucb-pair>.ucb:first-child{padding-right:24px}
-  .ucb-pairs--across .ucb-pair .ucb--list .ucb__list>li{font-size:16px}
-}
-
-/* Signed: every line carries a sign. The grain cross on the side that helps, a plain dash on the
-   side that costs, so a single line still says which side it was on; equals both get the dash */
-.ucb-pairs--signed .ucb-pair .ucb__title{font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
-.ucb-pairs--signed .ucb-pair .ucb--minus .ucb__title{color:var(--ink-2)}
-.ucb-pairs--signed .ucb-pair .ucb--list .ucb__list>li{position:relative;padding-left:26px}
-.ucb-pairs--signed .ucb-pair .ucb--list .ucb__list>li::before{content:"";position:absolute;left:0;top:22px;width:11px;height:1px;background:var(--ink-2)}
-.ucb-pairs--signed .ucb-pair .ucb--plus .ucb__list>li::before{top:16px;width:11px;height:11px}
-.ucb-pairs--signed .ucb-pair .ucb--minus .ucb__list>li{color:var(--ink-2)}
-
-/* ================= DATA TABLE ================= */
+/* ---------- the data table, Rail: a real <table>, row headers and labelled cells, the wrapper the
+   focusable scroller. On a phone the row names hold still and the other columns snap past one at a
+   time; each says which of how many it is, and a hairline under the table fills as you go. A table
+   of one column has nothing to swipe and stays a table. CSS only. From 761px it is the whole table ---------- */
 .body .ucb-data{position:relative;margin-top:32px;overflow-x:auto;overscroll-behavior-x:contain}
 .ucb-data:focus-visible{outline:1px solid var(--ink);outline-offset:6px}
 .body .ucb-data table{width:100%;margin:0;border-collapse:collapse;font-size:15px;line-height:1.45}
 .body .ucb-data :is(th,td){padding:12px 16px 12px 0;border:0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 .body .ucb-data thead th{font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);border-bottom-color:var(--ink)}
 .body .ucb-data thead strong{font-weight:inherit}
+/* article.css sets every .body th as a tracked caps label; a row header is a name */
 .body .ucb-data tbody th{font-size:15px;font-weight:500;letter-spacing:-.005em;text-transform:none;color:var(--ink)}
 .body .ucb-data td{color:var(--ink)}
-
-/* Rail: on a phone the row names hold still and the options snap past one column at a time; each
-   column says which of how many it is, and a hairline under the table fills as you go. CSS only,
-   a real <table>. From 761px it is the whole table */
 @media (max-width:760px){
-  .ucb-data--rail .body .ucb-data{--rh:112px;container-type:inline-size;scroll-snap-type:x mandatory;scroll-padding-left:var(--rh);scrollbar-width:none;counter-reset:ucb-opt 0 ucb-opts var(--opts)}
-  .ucb-data--rail .ucb-data::-webkit-scrollbar{display:none}
-  .ucb-data--rail .body .ucb-data table{width:auto}
-  .ucb-data--rail .body .ucb-data :is(thead th:first-child,tbody th){position:sticky;left:0;z-index:1;width:var(--rh);min-width:var(--rh);max-width:var(--rh);padding-right:12px;background:var(--white);box-shadow:inset -1px 0 0 var(--line)}
-  .ucb-data--rail .body .ucb-data :is(thead th+th,td){width:calc(100cqi - var(--rh));min-width:calc(100cqi - var(--rh));max-width:calc(100cqi - var(--rh));padding-left:16px}
-  .ucb-data--rail .body .ucb-data thead th+th{scroll-snap-align:start}
-  .ucb-data--rail .ucb-data thead th+th::before{counter-increment:ucb-opt;content:counter(ucb-opt) " / " counter(ucb-opts) / "";display:block;margin-bottom:6px;color:var(--c0)}
-  .ucb-data--rail .ucb-data::after{content:counter(ucb-opts) " options, swipe" / "";position:sticky;left:0;display:block;width:100cqi;margin-top:0;padding-top:12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);
+  .body .ucb-data:not(.ucb-data--single){--rh:112px;container-type:inline-size;scroll-snap-type:x mandatory;scroll-padding-left:var(--rh);scrollbar-width:none;counter-reset:ucb-opt 0 ucb-opts var(--opts)}
+  .ucb-data:not(.ucb-data--single)::-webkit-scrollbar{display:none}
+  .body .ucb-data:not(.ucb-data--single) table{width:auto}
+  .body .ucb-data:not(.ucb-data--single) :is(thead th:first-child,tbody th){position:sticky;left:0;z-index:1;width:var(--rh);min-width:var(--rh);max-width:var(--rh);padding-right:12px;background:var(--white);box-shadow:inset -1px 0 0 var(--line)}
+  .body .ucb-data:not(.ucb-data--single) :is(thead th+th,td){width:calc(100cqi - var(--rh));min-width:calc(100cqi - var(--rh));max-width:calc(100cqi - var(--rh));padding-left:16px}
+  .body .ucb-data:not(.ucb-data--single) thead th+th{scroll-snap-align:start}
+  .ucb-data:not(.ucb-data--single) thead th+th::before{counter-increment:ucb-opt;content:counter(ucb-opt) " / " counter(ucb-opts) / "";display:block;margin-bottom:6px;color:var(--c0)}
+  .ucb-data:not(.ucb-data--single)::after{content:counter(ucb-opts) " columns, swipe" / "";position:sticky;left:0;display:block;width:100cqi;padding-top:12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);
     background:linear-gradient(var(--c0),var(--c0)) 0 0/calc(100% / var(--opts)) 1px no-repeat}
   @supports (animation-timeline:scroll()){
-    .ucb-data--rail .ucb-data::after{animation:ucb-rail linear both;animation-timeline:scroll(nearest inline)}
+    .ucb-data:not(.ucb-data--single)::after{animation:ucb-rail linear both;animation-timeline:scroll(nearest inline)}
   }
 }
 @keyframes ucb-rail{from{background-size:calc(100% / var(--opts)) 1px}to{background-size:100% 1px}}
+/* five columns or more: on a wide screen the table steps out of the 760px column to the page's full
+   width, the way a wide figure would, where seven and eight columns have room */
+@media (min-width:1100px){.body .ucb-data--wide{width:min(calc(100vw - 2 * var(--pad) - 16px),calc(var(--max) - 2 * var(--pad)))}}
 
-/* Ledger: read it as an account book. The figures in tabular numerals and right-aligned, a rule
-   down every column, the header ruled off in ink, a double rule to close, on the grain like paper.
-   On a phone it scrolls sideways the way a ledger would, the row names pinned */
-.ucb-data--ledger .body .ucb-data{padding:4px 18px 20px;background:linear-gradient(rgba(246,246,246,.78),rgba(246,246,246,.78)),var(--noise) 0 0/240px 240px;background-attachment:local}
-.ucb-data--ledger .body .ucb-data table{min-width:calc(var(--cols) * 132px);font-variant-numeric:tabular-nums}
-.ucb-data--ledger .body .ucb-data :is(th,td){padding:11px 14px}
-.ucb-data--ledger .body .ucb-data :is(th,td)+:is(th,td){border-left:1px solid var(--line)}
-.ucb-data--ledger .body .ucb-data :is(th,td):first-child{padding-left:0}
-.ucb-data--ledger .body .ucb-data thead th{padding-top:16px;color:var(--ink)}
-.ucb-data--ledger .body .ucb-data .ucb__num{text-align:right}
-.ucb-data--ledger .body .ucb-data tbody tr:last-child>*{border-bottom:3px double var(--ink)}
-@media (max-width:760px){
-  .ucb-data--ledger .body .ucb-data{margin-right:calc(-1*var(--pad))}
-  .ucb-data--ledger .body .ucb-data :is(thead th:first-child,tbody th){position:sticky;left:-18px;z-index:1;min-width:120px;max-width:120px;padding-left:18px;margin-left:-18px;background:#f4f4f4}
-}
-
-/* Pick: one column is the answer. A header set in bold in the markdown marks it; it reads in full
-   ink at weight 500 under the colour's underline while the rest recede to grey, and on a phone the
-   pick leads every row */
-.ucb-data--pick .body .ucb-data td{color:var(--ink-2)}
-.ucb-data--pick .body .ucb-data .ucb__pick{color:var(--ink);font-weight:500}
-.ucb-data--pick .body .ucb-data thead .ucb__pick{border-bottom:1px solid var(--c0);box-shadow:inset 0 -1px 0 var(--c0)}
-@media (max-width:640px){
-  .ucb-data--pick .body .ucb-data{overflow:visible}
-  .ucb-data--pick .body .ucb-data table{display:block}
-  .ucb-data--pick .ucb-data thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-  .ucb-data--pick .ucb-data tbody{display:block;border-top:1px solid var(--ink)}
-  .ucb-data--pick .ucb-data tbody tr{display:flex;flex-direction:column;padding:16px 0 12px;border-bottom:1px solid var(--line)}
-  .ucb-data--pick .body .ucb-data tbody :is(th,td){display:grid;grid-template-columns:40% minmax(0,1fr);column-gap:14px;padding:4px 0;border:0;font-size:14px}
-  .ucb-data--pick .body .ucb-data tbody th{display:block;order:-2;padding:0 0 8px;font-size:16px}
-  .ucb-data--pick .body .ucb-data tbody .ucb__pick{order:-1;padding:2px 0 8px;font-size:17px}
-  .ucb-data--pick .ucb-data td::before{content:attr(data-label) / "";font-size:11px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;line-height:1.9;color:var(--ink-2)}
-  .ucb-data--pick .ucb-data td.ucb__pick::before{color:var(--c0)}
-}
-
-/* Turn: the column names turn on their side, so every column fits a phone: nothing scrolls, nothing
-   hides, the grid stays a grid. From 641px the names lie down again */
-@media (max-width:640px){
-  .ucb-data--turn .body .ucb-data table{table-layout:fixed;font-size:13px;line-height:1.4}
-  .ucb-data--turn .body .ucb-data thead th:first-child{width:30%}
-  .ucb-data--turn .body .ucb-data thead th+th{writing-mode:vertical-rl;transform:rotate(180deg);text-align:left;white-space:nowrap;padding:10px 0 12px;font-size:11px;line-height:1.2;border-bottom:0;box-shadow:inset 0 1px 0 var(--ink)}
-  .ucb-data--turn .body .ucb-data thead th:first-child{vertical-align:bottom}
-  .ucb-data--turn .body .ucb-data thead th+th{vertical-align:top}
-  .ucb-data--turn .body .ucb-data :is(tbody th,td){padding:10px 10px 10px 0;font-size:13px;hyphens:auto;overflow-wrap:anywhere}
-  .ucb-data--turn .body .ucb-data td{padding-left:2px}
-}
-
-/* ================= QUICK ANSWER =================
-   In the DOM in every look: the label, the answer sentence (<p><strong>), the points (<ul>) */
-.ucb-looks .qa__in{max-width:760px}
-.ucb-looks .qa__lead--answer strong{font-weight:500}
-.ucb-looks .qa__pts{list-style:none;margin:20px 0 0;padding:0}
-.ucb-looks .qa__pts li{padding:10px 0;border-top:1px solid var(--line);font-size:16px;line-height:1.5}
-
-/* Statement: the answer is the biggest sentence on the page after the title, set the way the
-   homepage sets its opening line; the points sit under it as fine print */
-.ucb-qa--statement .qa__lead--answer{margin-top:18px;font-size:clamp(27px,3.3vw,44px);line-height:1.14;letter-spacing:-.025em;max-width:none}
-.ucb-qa--statement .qa__pts{margin-top:32px}
-.ucb-qa--statement .qa__pts li{font-size:15px;color:var(--ink-2)}
-@media (min-width:961px){
-  .ucb-qa--statement .qa__pts{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
-}
-
-/* Deck: the answer is the title's deck. It sits in the hero under the H1, on the category ground,
-   so the title and its answer are one glance (page.js renders the Quick Answer there for this look) */
-.ucb-qa--deck .qa--deck{margin-top:24px;padding:0;max-width:620px}
-.ucb-qa--deck .qa--deck .wrap{max-width:none;padding:0}
-.ucb-qa--deck .qa--deck .eyebrow{color:rgba(255,255,255,.62)}
-.ucb-qa--deck .qa--deck .qa__lead--answer{margin-top:10px;font-size:clamp(19px,1.7vw,23px);line-height:1.38;letter-spacing:-.01em;max-width:42ch;color:#fff}
-.ucb-qa--deck .qa--deck .qa__pts{margin-top:18px}
-.ucb-qa--deck .qa--deck .qa__pts li{padding:8px 0;font-size:15px;line-height:1.45;color:rgba(255,255,255,.82);border-top-color:rgba(255,255,255,.2)}
-@media (min-width:961px){.ucb-qa--deck .qa--deck .qa__pts{display:grid;grid-template-columns:1fr 1fr;column-gap:28px}}
-
-/* Margin: on a wide screen the answer stands in the margin beside the opening, a note that is
-   there the whole time you read the first lines; under 1200px it is a lead-in, the label run in
-   ahead of the answer the way a newspaper runs in its first words */
-@media (min-width:1200px){
-  .ucb-qa--margin{position:relative}
-  .ucb-qa--margin .qa{position:absolute;z-index:2;left:calc(max(var(--pad),(100% - var(--max)) / 2 + var(--pad)) + 760px + clamp(48px,5vw,80px));right:max(var(--pad),calc((100% - var(--max)) / 2 + var(--pad)));padding-top:clamp(48px,6vw,80px)}
-  .ucb-qa--margin .qa .wrap{max-width:none;padding:0}
-  .ucb-qa--margin .qa__in{max-width:340px;padding-top:16px;border-top:1px solid var(--line)}
-  .ucb-qa--margin .qa .eyebrow{display:flex;align-items:center;gap:10px;color:var(--ink)}
-  .ucb-qa--margin .qa .eyebrow::before{content:"";flex:none;width:13px;height:13px}
-  .ucb-qa--margin .qa__lead--answer{margin-top:12px;font-size:18px;line-height:1.42;letter-spacing:-.01em}
-  .ucb-qa--margin .qa__pts{margin-top:16px}
-  .ucb-qa--margin .qa__pts li{padding:8px 0;font-size:14px;line-height:1.45;color:var(--ink-2)}
-}
-@media (max-width:1199px){
-  .ucb-qa--margin .qa .eyebrow,.ucb-qa--margin .qa__lead{display:inline}
-  .ucb-qa--margin .qa .eyebrow{margin-right:12px;color:var(--c0)}
-  .ucb-qa--margin .qa__lead--answer{font-size:clamp(19px,2.4vw,22px);line-height:1.45}
-  .ucb-qa--margin .qa__pts{margin-top:18px}
-  .ucb-qa--margin .qa__pts li{font-size:15px;color:var(--ink-2)}
-}
-
-/* Grid: the answer is the lead cell of the service page's crossed grid and every point gets a cell
-   of its own, read at a glance the way the problems are; one column on a phone */
-.ucb-qa--grid .qa__lead--answer{margin-top:14px;font-size:clamp(21px,2vw,26px);line-height:1.28;letter-spacing:-.015em}
-.ucb-qa--grid .qa__pts{margin-top:22px}
-.ucb-qa--grid .qa__pts li{padding:14px 0;font-size:16px;font-weight:500;letter-spacing:-.01em;line-height:1.35}
-@media (min-width:961px){
-  .ucb-qa--grid .qa__in{max-width:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto 1fr;margin-top:6px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .ucb-qa--grid .qa .eyebrow{grid-column:1;grid-row:1;padding:24px 28px 0 0}
-  .ucb-qa--grid .qa__lead--answer{grid-column:1;grid-row:2;align-self:end;margin:0;padding:28px 32px 28px 0;max-width:none}
-  .ucb-qa--grid .qa__pts{grid-column:2/4;grid-row:1/3;display:grid;grid-template-columns:1fr 1fr;margin:0;border-left:1px solid var(--line)}
-  .ucb-qa--grid .qa__pts li{position:relative;display:flex;align-items:flex-end;min-height:clamp(140px,12vw,180px);padding:24px 28px;border:0;font-size:18px;line-height:1.3}
-  .ucb-qa--grid .qa__pts li:nth-child(4n+1),.ucb-qa--grid .qa__pts li:nth-child(4n){background:var(--off)}
-  .ucb-qa--grid .qa__pts li:nth-child(odd){border-right:1px solid var(--line)}
-  .ucb-qa--grid .qa__pts li:nth-child(n+3){border-top:1px solid var(--line)}
-  .ucb-qa--grid .qa__pts>li:nth-child(1)::before{content:"";position:absolute;left:-7px;top:-7px;width:13px;height:13px;z-index:1}
-  .ucb-qa--grid .qa__pts>li:nth-child(1)::after{content:"";position:absolute;right:-7px;top:-7px;width:13px;height:13px;z-index:1}
-  .ucb-qa--grid .qa__pts>li:nth-child(3)::before{content:"";position:absolute;left:-7px;top:-7px;width:13px;height:13px;z-index:1}
-  .ucb-qa--grid .qa__pts>li:nth-child(3)::after{content:"";position:absolute;right:-7px;top:-7px;width:13px;height:13px;z-index:1}
-  .ucb-qa--grid .qa__pts>li:nth-last-child(-n+2):nth-child(odd)::before{top:auto;bottom:-7px}
-  .ucb-qa--grid .qa__pts>li:nth-child(4)::before{content:"";position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;z-index:1}
-}
-
-/* ================= WORKINGS =================
-   The site does the maths (lib/remarkArticleBlocks.js): the sign between the lines is worked out
-   from the numbers and written into the text, and a sum that doesn't hold stops the build. The
-   signs are drawn as the site's cross: upright for plus, turned for times, two hairlines for equals */
+/* ---------- workings, Worked: the maths shown, and checked (lib/remarkArticleBlocks.js works out the
+   sign between the lines from the numbers, writes it into the text, and stops the build when a sum
+   doesn't hold). Set the way you'd do it on paper: the figures stacked and right-aligned in light
+   numerals, the sign beside each, drawn as the site's cross (upright for plus, turned for times, two
+   hairlines for equals), a rule under the last line, the answer in the hero's stripes ---------- */
 .ucb--workings .ucb__fig{font-variant-numeric:tabular-nums}
 .ucb--workings :is(.ucb__pre,.ucb__unit){font-weight:400;color:var(--ink-2)}
-.ucb-looks .ucb__op{position:relative;display:inline-block;flex:none;width:var(--op,11px);height:var(--op,11px);overflow:hidden;color:transparent;-webkit-text-fill-color:transparent;vertical-align:middle}
-.ucb-looks .ucb__op::before{content:"";position:absolute;inset:0}
-.ucb-looks .ucb__op--times::before{transform:rotate(45deg)}
-.ucb-looks .ucb__op--eq::before{
+.ucb__op{position:relative;display:inline-block;flex:none;width:var(--op,11px);height:var(--op,11px);overflow:hidden;color:transparent;-webkit-text-fill-color:transparent;vertical-align:middle}
+.ucb__op::before{content:"";position:absolute;inset:0;
+  background:linear-gradient(var(--c0),var(--c0)),var(--noise-coarse) 0 0/220px 220px;background-blend-mode:multiply;
+  -webkit-mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;
+  mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;
+  animation:jit .6s steps(4) infinite}
+.ucb__op--times::before{transform:rotate(45deg)}
+.ucb__op--eq::before{
   -webkit-mask:linear-gradient(#000,#000) 0 30%/100% 1px no-repeat,linear-gradient(#000,#000) 0 70%/100% 1px no-repeat;
   mask:linear-gradient(#000,#000) 0 30%/100% 1px no-repeat,linear-gradient(#000,#000) 0 70%/100% 1px no-repeat}
-/* the answer in the hero's striped lettering */
-:is(.ucb-work--worked,.ucb-work--tally,.ucb-work--equation) .ucb--workings .ucb__total .ucb__fig{font-weight:500;letter-spacing:-.03em;color:transparent;-webkit-text-fill-color:transparent;background:var(--ucb-scan);-webkit-background-clip:text;background-clip:text}
-
-/* Worked: the sum set the way you'd do it on paper. The figures stacked and right-aligned in light
-   numerals, the sign in the margin beside them, a rule under the last, the answer in the stripes */
-.ucb-work--worked .body .ucb--workings .ucb__list{max-width:600px}
-.ucb-work--worked .ucb--workings .ucb__list>li{display:grid;grid-template-columns:minmax(0,1fr) 18px auto;column-gap:12px;align-items:baseline;padding:5px 0;border:0}
-.ucb-work--worked .ucb--workings .ucb__list>li:first-child{padding-top:10px}
-.ucb-work--worked .ucb--workings .ucb__text{grid-column:1;grid-row:1;font-size:15px;line-height:1.4;color:var(--ink-2)}
-.ucb-work--worked .ucb--workings .ucb__op{grid-column:2;grid-row:1;align-self:center;justify-self:end}
-.ucb-work--worked .ucb--workings .ucb__val{grid-column:3;grid-row:1;max-width:min(52vw,320px);text-align:right;font-weight:400}
-.ucb-work--worked .ucb--workings .ucb__fig{font-size:30px;font-weight:300;letter-spacing:-.02em;line-height:1.1;white-space:nowrap}
-.ucb-work--worked .ucb--workings :is(.ucb__pre,.ucb__unit){font-size:13px}
-.ucb-work--worked .ucb--workings .ucb__val:not(:has(.ucb__fig)){font-size:15px;font-weight:500}
-.ucb-work--worked .body .ucb--workings .ucb__total{margin-top:8px;padding-top:12px;border:0}
-.ucb-work--worked .ucb--workings .ucb__total::before{content:"";grid-column:2/4;grid-row:1;align-self:start;margin-top:-12px;border-top:1px solid var(--ink)}
-.ucb-work--worked .ucb--workings .ucb__total .ucb__text{color:var(--ink);font-weight:500}
-.ucb-work--worked .ucb--workings .ucb__total .ucb__fig{font-size:clamp(46px,5vw,60px);line-height:1.05}
-@media (min-width:961px){.ucb-work--worked .ucb--workings .ucb__fig{font-size:34px}.ucb-work--worked .ucb--workings .ucb__op{--op:13px}}
-
-/* Tally: the result is kept as you go. Each line carries the running figure on the right, growing
-   with every line, so you watch 10 become 480 become $38,400 */
-.ucb-work--tally .ucb--workings .ucb__list>li{display:grid;grid-template-columns:14px auto minmax(0,1fr) auto;column-gap:8px;row-gap:3px;align-items:baseline;padding:14px 0}
-.ucb-work--tally .ucb--workings .ucb__text{grid-column:1/4;grid-row:1;font-size:15px;line-height:1.4}
-.ucb-work--tally .ucb--workings .ucb__op{grid-column:1;grid-row:2;align-self:center;--op:10px}
-.ucb-work--tally .ucb--workings .ucb__val{grid-column:2/4;grid-row:2;font-size:14px;font-weight:400;color:var(--ink-2)}
-.ucb-work--tally .ucb--workings .ucb__list>li::after{content:attr(data-run);grid-column:4;grid-row:1/3;align-self:end;padding-left:16px;font-size:calc(19px + 25px * var(--n) / var(--of));font-weight:300;letter-spacing:-.025em;line-height:1;font-variant-numeric:tabular-nums}
-.ucb-work--tally .ucb--workings .ucb__list>li:has(+.ucb__total)::after{content:none}
-.ucb-work--tally .ucb--workings .ucb__list--sums>li:not(.ucb__total) .ucb__val{grid-column:4;grid-row:1/3;align-self:end;padding-left:16px;font-size:15px;font-weight:500;color:var(--ink);text-align:right}
-.ucb-work--tally .body .ucb--workings .ucb__total{border-top:1px solid var(--ink)}
-.ucb-work--tally .ucb--workings .ucb__total .ucb__op{grid-row:1}
-.ucb-work--tally .ucb--workings .ucb__total .ucb__text{grid-column:2/4;font-weight:500}
-.ucb-work--tally .ucb--workings .ucb__total .ucb__val{grid-column:4;grid-row:1/3;align-self:end;padding-left:16px;text-align:right;color:var(--ink)}
-.ucb-work--tally .ucb--workings .ucb__total .ucb__fig{font-size:clamp(46px,5.4vw,64px);line-height:1}
-.ucb-work--tally .ucb--workings .ucb__total :is(.ucb__pre,.ucb__unit){font-size:13px}
-
-/* Equation: the sum is one line across the column, each figure captioned underneath the way the
-   homepage captions its stats, the answer last in the stripes. It wraps on a phone */
-.ucb-work--equation .body .ucb--workings .ucb__list{display:flex;flex-wrap:wrap;align-items:flex-start;column-gap:clamp(12px,1.4vw,18px);row-gap:24px;padding-top:22px;border-top:1px solid var(--line)}
-.ucb-work--equation .ucb--workings .ucb__list>li{display:grid;grid-template-columns:auto auto;column-gap:clamp(12px,1.4vw,18px);align-items:center;max-width:100%;padding:0;border:0}
-.ucb-work--equation .ucb--workings .ucb__list>li:not(:has(>.ucb__op)){grid-template-columns:auto}
-.ucb-work--equation .ucb--workings .ucb__op{grid-column:1;grid-row:1;--op:clamp(16px,1.8vw,22px)}
-.ucb-work--equation .ucb--workings :is(.ucb__val,.ucb__text){grid-column:-2}
-.ucb-work--equation .ucb--workings .ucb__val{grid-row:1;font-weight:400}
-.ucb-work--equation .ucb--workings .ucb__fig{font-size:clamp(38px,3.4vw,48px);font-weight:300;letter-spacing:-.03em;line-height:1;white-space:nowrap}
-.ucb-work--equation .ucb--workings :is(.ucb__pre,.ucb__unit){font-size:14px}
-.ucb-work--equation .ucb--workings .ucb__unit{margin-left:2px}
-.ucb-work--equation .ucb--workings .ucb__val:not(:has(.ucb__fig)){font-size:17px;font-weight:500;max-width:22ch}
-.ucb-work--equation .ucb--workings .ucb__text{grid-row:2;margin-top:10px;max-width:14ch;font-size:13px;line-height:1.35;color:var(--ink-2)}
-.ucb-work--equation .ucb--workings .ucb__total .ucb__text{color:var(--ink);font-weight:500}
+.body .ucb--workings .ucb__list{max-width:600px}
+.ucb--workings .ucb__list>li{display:grid;grid-template-columns:minmax(0,1fr) 18px auto;column-gap:12px;align-items:baseline;padding:5px 0;border:0}
+.ucb--workings .ucb__list>li:first-child{padding-top:10px}
+.ucb--workings .ucb__list>li:last-child{border:0}
+.ucb--workings .ucb__text{grid-column:1;grid-row:1;font-size:15px;line-height:1.4;color:var(--ink-2)}
+.ucb--workings .ucb__op{grid-column:2;grid-row:1;align-self:center;justify-self:end}
+.ucb--workings .ucb__val{grid-column:3;grid-row:1;max-width:min(52vw,320px);text-align:right;font-weight:400}
+.ucb--workings .ucb__fig{font-size:30px;font-weight:300;letter-spacing:-.02em;line-height:1.1;white-space:nowrap}
+.ucb--workings :is(.ucb__pre,.ucb__unit){font-size:13px}
+.ucb--workings .ucb__val:not(:has(.ucb__fig)){font-size:15px;font-weight:500}
+.body .ucb--workings .ucb__total{margin-top:8px;padding-top:12px}
+.ucb--workings .ucb__total::before{content:"";grid-column:2/4;grid-row:1;align-self:start;margin-top:-12px;border-top:1px solid var(--ink)}
+.ucb--workings .ucb__total .ucb__text{color:var(--ink);font-weight:500}
+.ucb--workings .ucb__total .ucb__fig{font-size:clamp(46px,5vw,60px);font-weight:500;line-height:1.05;letter-spacing:-.03em;color:transparent;-webkit-text-fill-color:transparent;background:var(--ucb-scan);-webkit-background-clip:text;background-clip:text}
+@media (min-width:961px){.ucb--workings .ucb__fig{font-size:34px}.ucb--workings .ucb__op{--op:13px}}
 
 /* ---------- checklist: real checkboxes on hairline rows, square, the tick in the category colour ---------- */
 .body .ucb--checklist .ucb__list{border-top:1px solid var(--line)}
@@ -378,7 +140,7 @@
 .ucb__check label{display:grid;grid-template-columns:32px minmax(0,1fr);align-items:start;padding:12px 0;font-size:17px;line-height:1.5;cursor:pointer}
 .ucb__box{-webkit-appearance:none;appearance:none;box-sizing:border-box;width:18px;height:18px;margin:4px 0 0;border:1px solid var(--ink);background:var(--white);display:grid;place-items:center;cursor:pointer;transition:background-color .2s,border-color .2s}
 .ucb__box::before{content:"";width:8px;height:8px;background:var(--white);transform:scale(0);transition:transform .2s var(--ease)}
-.ucb__box:checked{background:var(--ucb-mark);border-color:var(--ucb-mark)}
+.ucb__box:checked{background:var(--c0);border-color:var(--c0)}
 .ucb__box:checked::before{transform:none}
 .ucb__box:focus-visible{outline:1px solid var(--ink);outline-offset:3px}
 .ucb__check:has(.ucb__box:checked) .ucb__text{color:var(--ink-2)}
@@ -387,6 +149,25 @@
 .ucb__group{display:block;padding:24px 0 10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid var(--line)}
 .ucb__group strong{font-weight:400}
 ol>.ucb__grouped>.ucb__group::before{content:counter(ucb-g,decimal-leading-zero);margin-right:12px}
+
+/* ---------- the Quick Answer, Deck: the title's deck, in the hero under the H1 on the category
+   ground, so the title and its answer are one glance (page.js renders it there, in place of the
+   description). The label, the answer, the points, in that order. The hairlines and the grey turn
+   to white on the ground. An older answer of one paragraph sets smaller, its bold lead in full white ---------- */
+.qa--deck{--line:rgba(255,255,255,.2);--ink-2:rgba(255,255,255,.72);margin-top:24px;padding:0;max-width:620px}
+.qa--deck .wrap{max-width:none;padding:0}
+.qa--deck .eyebrow{color:rgba(255,255,255,.62)}
+.qa--deck .qa__lead{margin-top:10px;max-width:60ch;font-size:16px;line-height:1.55;color:rgba(255,255,255,.86)}
+.qa--deck .qa__lead strong{font-weight:500;color:#fff}
+.qa--deck .qa__lead--answer{max-width:42ch;font-size:clamp(19px,1.7vw,23px);line-height:1.38;letter-spacing:-.01em;color:#fff}
+.qa--deck .qa__pts{list-style:none;margin:18px 0 0;padding:0}
+.qa--deck .qa__pts li{padding:8px 0;border-top:1px solid var(--line);font-size:15px;line-height:1.45;color:rgba(255,255,255,.82)}
+.qa--deck .qa__pts li strong{font-weight:500;color:#fff}
+.qa--deck .qa__cells{margin-top:18px;color:#fff}
+.qa--deck .qa__close{margin-top:14px;font-size:15px;line-height:1.5;color:var(--ink-2)}
+.qa--deck a{text-decoration:underline;text-decoration-color:rgba(255,255,255,.4);text-underline-offset:3px}
+.qa--deck ::selection{background:rgba(255,255,255,.3);color:#fff}
+@media (min-width:961px){.qa--deck .qa__pts{display:grid;grid-template-columns:1fr 1fr;column-gap:28px}}
 
 /* ---------- the photo hero: the category ground keeps the title, Luke's photo beside it on a wide
    screen and under it on a phone. A clean shot, as the who card (Luke, 2026-09-13), a real <img> with its alt ---------- */
@@ -413,13 +194,4 @@ ol>.ucb__grouped>.ucb__group::before{content:counter(ucb-g,decimal-leading-zero)
 }
 @media (min-width:641px){.body .ucb-fig--tall{max-width:480px}}
 
-@media (prefers-reduced-motion:reduce){
-  .ucb__box,.ucb__box::before{transition:none}
-  .ucb-steps--relay .ucb--steps .ucb__list>li::after,
-  .ucb-steps--relay .ucb--steps .ucb__list>li>.ucb__text::after,
-  .ucb-pairs--signed .ucb-pair .ucb--plus .ucb__list>li::before,
-  .ucb-qa--margin .qa .eyebrow::before,
-  .ucb-qa--grid .qa__pts>li::before,
-  .ucb-qa--grid .qa__pts>li::after,
-  .ucb-looks .ucb__op::before{animation:none}
-}
+@media (prefers-reduced-motion:reduce){.ucb__box,.ucb__box::before{transition:none}.ucb__op::before{animation:none}}
