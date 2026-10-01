@@ -33,16 +33,18 @@ For service-page work invoke `/service-page-blueprint`. For copy work invoke `/u
 
 ## Hard Rules
 
+The live site is the design (Luke, 2026-10-02). BRAND.md, the uc-redesign-v3 mockups and the old Vite rules (Space Grotesk, Satoshi, 14px radius, offset shadows) are retired. Source: `docs/blocks-design-notes.md`.
+
 - Never delete or modify files under `src/` (legacy Vite reference, kept for migration history)
 - Never edit `tailwind.config.js` (old Vite config, not active)
-- Design tokens live in `app/globals.css` under `@theme {}`
-- Rounded 14px on cards, 999 on pills (confirmed UC pattern, zero-radius is wrong)
-- Blue (#6A8DAD) is default accent, Sage (#8FAF9F) for positive/after, Orange (#E07A55) warnings/before only
-- Hard offset accent shadows on cards (`6px 6px 0 0 var(--accent)`), never soft accent blurs
-- No gradient text on headings, no glassmorphism, no animated shimmer, no ambient radial glows (one per page max, in ClosingCTA only)
-- SF Mono confined to stat numerals and section numbers, never on every label
-- Space Grotesk for display, Satoshi for body
-- Full design principles: `.impeccable.md`
+- Tokens live in the `:root` at the top of each page stylesheet in `app/styles/`: `--white`, `--off` #f6f6f6, `--ink` #141414, `--ink-2` #6b6b6b, `--line` rgba(20,20,20,.14), the noise data URIs, the five category colours. The `@theme {}` palette in `app/globals.css` is the retired design; don't build new UI from it
+- Inter only (next/font, `--font-inter`): 500 for headings at -.02 to -.03em, 300 for big numerals, 18px/1.65 body, 11-12px uppercase tracked .14em for labels, links and buttons. No other faces
+- Square corners everywhere: cards, photos, buttons, grids. The only round things are dots
+- One hairline, `1px var(--line)`. A section opens on a full-width rule with a tracked caps label under it; lists are hairline rows; grids are hairline cells alternating white and #f6f6f6, no gaps
+- Colour means the category (green automation, red search, orange web, teal strategy, plum growth) and fills grounds: the hero, cards, bands, the footer. On white paper it appears only at the size of a mark: the grain cross, the rail's underline, a hover, an 8% row band. No accent or offset shadows
+- Grain is inline SVG noise blended over the category colour and jittered with `steps()`. On paper it shows only inside the 13px cross where hairlines meet
+- Scanline lettering (`background-clip:text` over repeating stripes) is kept for the hero H1s, the wordmark, the footer sign and the article blocks' numerals and answers. No other gradient text
+- Article blocks ship one look each (steps Fill, pairs Weight, tables Rail, Quick Answer Deck, workings Worked) from `app/styles/article-blocks.css`. The other fourteen live only on the board, `/article-blocks-concepts.html`, which has its own frozen stylesheet
 
 ## Errors
 
