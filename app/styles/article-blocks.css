@@ -83,7 +83,7 @@
 .body .ucb-data tbody th{font-size:15px;font-weight:500;letter-spacing:-.005em;text-transform:none;color:var(--ink)}
 .body .ucb-data td{color:var(--ink)}
 @media (max-width:760px){
-  .body .ucb-data:not(.ucb-data--single){--rh:112px;container-type:inline-size;scroll-snap-type:x mandatory;scroll-padding-left:var(--rh);scrollbar-width:none;counter-reset:ucb-opt 0 ucb-opts var(--opts)}
+  .body .ucb-data:not(.ucb-data--single){--rh:112px;container-type:inline-size;scroll-snap-type:x mandatory;scroll-padding-left:var(--rh);scrollbar-width:none}
   .ucb-data:not(.ucb-data--single)::-webkit-scrollbar{display:none}
   .body .ucb-data:not(.ucb-data--single) table{width:auto}
   .body .ucb-data:not(.ucb-data--single) :is(thead th:first-child,tbody th){position:sticky;left:0;z-index:1;width:var(--rh);min-width:var(--rh);max-width:var(--rh);padding-right:12px;background:var(--white);box-shadow:inset -1px 0 0 var(--line)}
