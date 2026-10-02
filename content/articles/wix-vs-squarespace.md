@@ -163,16 +163,14 @@ Across 196 audited articles the mean is 56.7 out of 100, and our own articles av
 
 The honest framing is build-or-buy timing, not build-versus-buy forever. A template gets you online and tests demand. A custom build is the right tool once the site does real commercial work. Use the checklist below to find which side of that line you're on.
 
-```text
-Custom-build trigger checklist (3+ yes = you have outgrown your builder)
+**Custom-build trigger checklist (3+ yes = you have outgrown your builder)**
 
-1. Search or AI engines drive real enquiries, or you want them to
-2. Page speed or template limits are costing you conversions
-3. You need schema and structure a builder will not let you control
-4. You publish content regularly and want it built to be cited
-5. Your site is core to revenue, not a digital business card
-6. You expect to keep the site for 3 years or more
-```
+- [ ] Search or AI engines drive real enquiries, or you want them to
+- [ ] Page speed or template limits are costing you conversions
+- [ ] You need schema and structure a builder will not let you control
+- [ ] You publish content regularly and want it built to be cited
+- [ ] Your site is core to revenue, not a digital business card
+- [ ] You expect to keep the site for 3 years or more
 
 This is the work we do: we build sites custom rather than on templates, and you can see [how we approach website builds](/services). Our [south-east Melbourne plumber SEO project](/case-studies/plumbers-south-east-melbourne-seo) for a client shows what that control over structure does for a local trades business.
 

@@ -1,0 +1,748 @@
+/* the article blocks board's own stylesheet: a frozen record of round 3 (2026-10-02), app/styles/article.css plus all nineteen block looks as they stood when Luke picked. The site ships five of them from app/styles/article-blocks.css; this file is not built from it and doesn't change with it. Generator: scripts/build-blocks-board.mjs at commit 54ab531 */
+:root{--font-inter:'Inter'}
+:root{
+  --white:#fff; --off:#f6f6f6; --ink:#141414; --ink-2:#6b6b6b; --line:rgba(20,20,20,.14);
+  --font:var(--font-inter),Inter,"Noto Sans JP",system-ui,-apple-system,sans-serif;
+  --pad:clamp(20px,4vw,56px); --max:1320px; --navh:72px;
+  --ease:cubic-bezier(.22,.8,.2,1);
+  --noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='280'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  --noise-coarse:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.32' numOctaves='1' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  --teal:hsl(196 60% 45%); --teal-0:hsl(200 45% 32%); --green:hsl(160 45% 40%); --orange:#ff8a1f; --red:#d42222; --plum:hsl(300 35% 46%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+
+/* ---------- the five categories, as the index. the article's own category sits on html, so the page reads in that colour; the related rows carry their own ---------- */
+.c-seo{--c:var(--red);--c0:#b81c1c;--b0:#7e0c0c;--b1:#d42222;--b2:hsl(0 80% 56% / .85)}
+.c-auto{--c:var(--green);--c0:hsl(160 45% 34%);--b0:#0b3b31;--b1:hsl(165 50% 30%);--b2:hsl(150 40% 42% / .85)}
+.c-web{--c:var(--orange);--c0:#b8480a;--b0:#b8480a;--b1:#ff8a1f;--b2:hsl(28 100% 62% / .85)}
+.c-strat{--c:var(--teal);--c0:hsl(200 45% 32%);--b0:#12303d;--b1:hsl(200 45% 32%);--b2:hsl(196 60% 45% / .85)}
+.c-growth{--c:var(--plum);--c0:hsl(300 35% 36%);--b0:#25102b;--b1:#5c2a62;--b2:hsl(300 35% 42% / .85)}
+
+/* ---------- reveal: soft wipe, left to right. gated on .js so a page without scripts (or a fetcher reading the HTML) shows everything, and the text is in the markup either way ---------- */
+.js .rv{opacity:0;transform:translateX(-16px);
+  -webkit-mask:linear-gradient(90deg,#000 42%,transparent 58%) 100% 0/300% 100% no-repeat;
+  mask:linear-gradient(90deg,#000 42%,transparent 58%) 100% 0/300% 100% no-repeat}
+.js .in .rv{animation:rv 1.5s var(--ease) forwards;animation-delay:calc(var(--i,0)*150ms)}
+@keyframes rv{to{opacity:1;transform:none;-webkit-mask-position:0 0;mask-position:0 0}}
+
+/* ---------- grain, shared ---------- */
+@keyframes grain{to{transform:translate(-84px,-60px)}}
+@keyframes jit{to{background-position:-84px -60px}}
+@keyframes breathe{to{opacity:.55}}
+
+/* ---------- nav (as the index). .ink is the article's own state: dark type over the white type-only hero before the page scrolls ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding:22px 0;color:#fff;transition:background .4s,color .4s,box-shadow .4s}
+.nav__in{display:flex;align-items:center;justify-content:space-between}
+.nav.scrolled{background:var(--white);color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.nav__brand{display:flex;align-items:center;gap:12px;line-height:1}
+.wm-lock{display:flex;flex-direction:column;gap:4px;clip-path:inset(0 0 100% 0);opacity:0;transition:clip-path .7s var(--ease),opacity .5s var(--ease)}
+.wm-lock b{font-weight:600;font-size:15px;letter-spacing:-.01em}
+.wm-lock small{font-size:9px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;opacity:.8}
+.nav.scrolled .wm-lock{clip-path:inset(0);opacity:1}
+.mk-ink{display:block;position:relative;width:26px;flex:none}
+.mk-ink img{display:block;width:100%;height:auto}
+.mk-ink .dk{position:absolute;inset:0;opacity:0;transition:opacity .4s}
+.nav.scrolled .mk-ink .dk{opacity:1}.menu-open .mk-ink .dk{opacity:0}
+.burger{position:relative;width:26px;height:14px}
+.burger::before,.burger::after{content:"";position:absolute;left:0;right:0;height:1.5px;background:currentColor;transition:transform .45s var(--ease),top .45s var(--ease),bottom .45s var(--ease)}
+.burger::before{top:0}.burger::after{bottom:0}
+.menu-open .burger::before{top:6px;transform:rotate(45deg)}.menu-open .burger::after{bottom:6px;transform:rotate(-45deg)}
+.menu-open .nav{background:transparent;color:#fff;box-shadow:none}
+.menu{position:fixed;inset:0;z-index:45;background:var(--ink);color:#fff;display:flex;padding:80px var(--pad);overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}
+.menu-open .menu{opacity:1;visibility:visible}
+.menu>div{width:100%;max-width:var(--max);margin:auto}
+.menu a{display:block;font-size:clamp(32px,5vw,64px);font-weight:500;letter-spacing:-.02em;line-height:1.15;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.16);opacity:0;transform:translateX(-16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.menu-open .menu a{opacity:1;transform:none}
+.menu-open .menu a:nth-child(2){transition-delay:.06s}.menu-open .menu a:nth-child(3){transition-delay:.12s}.menu-open .menu a:nth-child(4){transition-delay:.18s}.menu-open .menu a:nth-child(5){transition-delay:.24s}
+.opts{margin-top:clamp(28px,5vh,56px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);opacity:0;transition:opacity .6s var(--ease) .24s}
+.menu-open .opts{opacity:1}
+.opts__row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;padding:9px 0}
+.opts__row span{flex:0 0 116px}
+.opts button{padding:3px 0;color:#fff;opacity:.4;border-bottom:1px solid transparent}
+.opts button.on{opacity:1;border-bottom-color:#fff}
+
+/* ---------- the layer stack: the photo treatment and the service ground, as the index ---------- */
+.hero__layer{position:absolute;inset:0;pointer-events:none}
+.hero__photo{background:url(/assets/hero.jpg) center 40%/cover no-repeat;filter:saturate(.4) brightness(.5) contrast(1.08)}
+.hero__glow.a{background:var(--b1);mix-blend-mode:color}
+.hero__glow.b{background:linear-gradient(to bottom,rgba(18,20,22,.3),rgba(18,20,22,.08) 40%,rgba(18,20,22,.7) 100%)}
+.hero__static{inset:-120px;background:linear-gradient(var(--sc),var(--sc)),var(--noise-coarse) 0 0/220px 220px;background-blend-mode:multiply;mix-blend-mode:screen;opacity:.18;animation:grain .6s steps(4) infinite}
+.hero__grain{inset:-120px;background:var(--noise) 0 0/280px 280px;mix-blend-mode:overlay;opacity:.6;animation:grain .9s steps(6) infinite}
+.band{position:absolute;inset:0;overflow:hidden;isolation:isolate;background:var(--b0)}
+.band::before{content:"";position:absolute;inset:0;background:radial-gradient(90% 70% at 25% 100%,var(--b1),transparent 70%),radial-gradient(60% 50% at 95% 0%,var(--b2),transparent 70%);animation:breathe 12s ease-in-out infinite alternate}
+.band::after{content:"";position:absolute;inset:-100px;background:var(--noise) 0 0/240px 240px;mix-blend-mode:overlay;opacity:.7;animation:grain 1s steps(6) infinite}
+
+/* ---------- hero: the category ground from the index's head (gradient, breathing glows, tinted static, grain, darkened), no photo, the title bottom-left. decided 2026-09-06, Ground ---------- */
+.hero{position:relative;overflow:hidden;isolation:isolate;background:var(--b0);color:#fff;display:flex;min-height:62vh;--sc:var(--c)}
+.hero__inner{position:relative;z-index:2;width:100%;max-width:var(--max);margin:0 auto;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:140px var(--pad) clamp(48px,7vh,88px)}
+.hero__inner .hero__cat{color:rgba(255,255,255,.88);transition:color .3s}.hero__inner .hero__cat:hover{color:#fff}
+.hero h1{margin-top:18px;font-weight:500;font-size:clamp(32px,4vw,58px);line-height:1.04;letter-spacing:-.03em;max-width:24ch}
+.hero__sub{margin-top:20px;font-size:clamp(17px,1.4vw,20px);line-height:1.45;max-width:52ch;color:rgba(255,255,255,.85)}
+
+/* ---------- on this page: the h2s as short labels across a sticky hairline row under the nav, the current one underlined in the colour, scrolls sideways on the phone. static markup, the script only marks the current one ---------- */
+.rail{position:sticky;top:var(--navh);z-index:40;background:var(--white);border-bottom:1px solid var(--line)}
+.rail .wrap{padding:0}
+.rail__in{display:flex;gap:28px;padding:0 var(--pad);overflow-x:auto;scrollbar-width:none}
+.rail__in::-webkit-scrollbar{display:none}
+.rail__in a{flex:none;padding:15px 0;font-size:13px;color:var(--ink-2);border-bottom:1px solid transparent;margin-bottom:-1px;white-space:nowrap;transition:color .3s,border-color .3s}
+.rail__in a:hover{color:var(--ink)}
+.rail__in a.on{color:var(--ink);border-bottom-color:var(--c0)}
+
+/* ---------- quick answer: the first part of the article (Luke, 2026-09-06: "I still need quick answer as the first part"). the live post's block verbatim: the answer sentence, the four things as numbered cells on a hairline grid, the closing line. plain markup right after the h1 so an engine reads the answer first ---------- */
+.qa{padding-top:clamp(40px,5vw,64px)}
+.qa__lead{margin-top:16px;font-size:clamp(19px,1.6vw,23px);line-height:1.45;max-width:52ch}
+.qa__cells{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);counter-reset:k;margin-top:24px}
+.qa__cells li{padding:22px 24px 24px 0;font-size:16px;line-height:1.35;font-weight:500;letter-spacing:-.01em}
+.qa__cells li+li{padding-left:24px;border-left:1px solid var(--line)}
+.qa__cells li::before{counter-increment:k;content:counter(k,decimal-leading-zero);display:block;font-weight:300;font-size:22px;letter-spacing:-.02em;line-height:1;margin-bottom:14px}
+.qa__close{margin-top:18px;font-size:16px;line-height:1.5;color:var(--ink-2)}
+
+/* ---------- the column, 760px centred ---------- */
+.art{padding:clamp(48px,6vw,80px) 0 clamp(72px,9vw,128px)}
+/* the column, two ways on the dial (Luke, 2026-09-06: "not sure if all font should be left aligned or the quick answer should be aligned like the rest"). Left: the 760px column on the wrap's left edge, so the hero title, the rail, the quick answer, the meta, the body and the bio share one edge. Centre: the column centred and the quick answer narrowed to it, the cells two by two */
+.art__col{max-width:760px;margin:0 auto}
+.art__col{margin-left:0}
+@media (min-width:961px){
+}
+
+/* ---------- meta row, two ways on the dial. Photo: the photo, the name and role, the date and read time, one grid so the phone stacks the name over the date beside the photo. Name: text only ---------- */
+.meta{padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);line-height:1.5}
+.meta em{font-style:normal;margin:0 10px}
+.meta b{font-weight:400;color:var(--ink)}
+.meta--photo{display:grid;grid-template-columns:44px 1fr auto;align-items:center;column-gap:14px}
+.meta__ph{display:block;width:44px;height:44px}
+.meta__ph img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(.7)}
+.meta__name b{display:block}
+.meta__name small{display:block;margin-top:2px;font-size:11px;letter-spacing:.14em}
+.meta__d{text-align:right;white-space:nowrap}
+.meta--name{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 32px}
+.meta--name{display:none}
+
+/* ---------- the body: 18px at 1.65 on a 720px measure, h2 at 30px 500 with 64px above, hairline links ---------- */
+.body{font-size:18px;line-height:1.65}
+.body p{margin-top:22px}
+.body p.lead{font-size:clamp(19px,1.5vw,22px);line-height:1.5}
+.body p a{text-decoration:underline;text-decoration-color:var(--line);text-decoration-thickness:1px;text-underline-offset:4px;transition:text-decoration-color .3s}
+.body p a:hover{text-decoration-color:var(--c0)}
+.body strong{font-weight:500}
+.blk{scroll-margin-top:calc(var(--navh) + 84px)}
+.body h2{font-size:clamp(24px,2.2vw,30px);font-weight:500;letter-spacing:-.02em;line-height:1.2;margin-top:clamp(48px,5vw,72px);max-width:26ch}
+.body h2+p{margin-top:16px}
+.intro{margin-top:clamp(32px,4vw,44px)}
+.intro>p:first-child{margin-top:0}
+
+/* the audit figure: the service page's light numeral, four hairline rows beside it */
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:24px 40px;margin-top:40px;padding:28px 0 18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);line-height:1.4}
+.fg__n b{display:block;font-weight:300;font-size:clamp(56px,6vw,84px);line-height:1;letter-spacing:-.02em}
+.fg__n b small{font-size:.38em;color:var(--ink-2);margin-left:4px;letter-spacing:0}
+.fg__n span{display:block;margin-top:14px;font-size:15px;color:var(--ink-2);max-width:22ch}
+.fg__rows{list-style:none;align-self:end}
+.fg__rows li{padding:10px 0;border-top:1px solid var(--line);font-size:15px}
+.fg figcaption{grid-column:1/-1;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+
+/* the table as hairline rows, stacked on the phone with the column names in front */
+.tbl{margin-top:32px;border-top:1px solid var(--line);font-size:15px;line-height:1.4}
+.tbl__h,.tbl__r{display:grid;grid-template-columns:var(--tcols,1.1fr 1.4fr 1.4fr);gap:20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.tbl__h{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);padding:12px 0}
+.tbl__r b{font-weight:500}
+.tbl__r span{color:var(--ink-2)}
+.tbl__r span::before{content:attr(data-l);display:none;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-right:10px}
+
+/* the pull quote, on hairlines */
+.pull{margin-top:44px;padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:clamp(22px,2.1vw,30px);font-weight:500;letter-spacing:-.02em;line-height:1.25;max-width:24ch}
+
+/* the workflow strip: five numbered cells on a hairline, rows on the phone */
+.flow{margin-top:40px;padding:24px 0 18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.flow ol{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:24px;counter-reset:f}
+.flow li::before{counter-increment:f;content:counter(f,decimal-leading-zero);display:block;font-weight:300;font-size:22px;letter-spacing:-.02em;line-height:1;margin-bottom:14px}
+.flow li b{display:block;font-weight:500;font-size:15px;letter-spacing:-.01em;line-height:1.3}
+.flow li span{display:block;margin-top:4px;font-size:13px;line-height:1.4;color:var(--ink-2)}
+.flow__src{display:block;margin-top:22px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+
+/* faq, the service page's accordion */
+.faq{margin-top:20px}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;font-size:18px;font-weight:500;letter-spacing:-.01em;line-height:1.3;cursor:pointer}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px;font-weight:300;color:var(--ink-2);flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq p{margin:0 0 22px;font-size:16px;line-height:1.6;color:var(--ink-2);max-width:60ch}
+
+/* the end row: the byline again and the share where the reader is */
+.end{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:14px 32px;margin-top:clamp(48px,6vw,80px);padding-top:18px;border-top:1px solid var(--line);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);line-height:1.6}
+.end b{font-weight:400;color:var(--ink)}.end em{font-style:normal;margin:0 10px}.end .share{margin:0}
+
+/* ---------- the end: the share row, then the author, the big one (Luke, 2026-09-06: "my photo and a description etc which will be at the bottom") ---------- */
+.end{display:flex;justify-content:space-between;align-items:baseline;gap:14px 32px;flex-wrap:wrap;margin-top:clamp(48px,6vw,80px);padding-top:18px;border-top:1px solid var(--line)}
+.share{display:flex;flex-wrap:wrap;gap:12px 22px}
+.share a,.share button{font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding-bottom:5px;border-bottom:1px solid var(--line);color:var(--ink);transition:border-color .3s}
+.share a:hover,.share button:hover{border-color:var(--ink)}
+.author{margin-top:clamp(48px,6vw,80px);padding-top:clamp(32px,4vw,48px);border-top:1px solid var(--line)}
+/* Luke's reference (2026-09-06): the square photo about two fifths of the column, "Hey, I'm Luke", two grey paragraphs with a full line between, the text centred on the photo. the photo is a stretched grid cell with the image covering it, so it is always exactly the height of the text beside it. straight edges, the site has no rounded corners */
+.author__g{display:grid;grid-template-columns:300px 1fr;column-gap:48px;align-items:stretch}
+.author__ph{position:relative;min-height:300px}
+.author__ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:saturate(.7)}
+
+/* the who card (Luke, 2026-09-13): the homepage About card on the bio photo, the name and role bottom-left, X and LinkedIn. the scrim is one straight gradient off the bottom, ink at .7 dying out before the face. a clean shot like the testimonials, no grain, no desaturation, no signature (Luke, 2026-09-13) */
+.who{position:relative;overflow:hidden;isolation:isolate;background:#e4e4e4}
+.who__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.who::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(20,20,20,.72),rgba(20,20,20,.28) 22%,rgba(20,20,20,0) 48%)}
+.who__c{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:var(--whop,24px);color:#fff}
+.who__n{display:block;font-size:var(--whon,16px);font-weight:500;letter-spacing:-.01em;line-height:1.2}
+.who__n small{display:block;margin-top:5px;font-size:var(--whor,13px);font-weight:400;letter-spacing:0;color:rgba(255,255,255,.62)}
+.who__s{display:flex;gap:12px;margin-top:14px}
+.who__s a{display:block;width:18px;height:18px;color:rgba(255,255,255,.66);transition:color .3s}.who__s a:hover{color:#fff}
+.who__s svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.author__ph.who{--whop:18px;--whon:14px;--whor:12px}
+.author__ph.who .who__img{position:absolute}
+.author__t{display:flex;flex-direction:column;justify-content:center}
+.author h3{font-size:clamp(26px,2.4vw,32px);font-weight:500;letter-spacing:-.02em;line-height:1.15}
+.author__p{margin-top:22px;font-size:18px;line-height:1.55;color:var(--ink-2);max-width:48ch}
+.author h3+.author__p{margin-top:26px}
+.author__p a{text-decoration:underline;text-decoration-color:var(--line);text-decoration-thickness:1px;text-underline-offset:4px;transition:text-decoration-color .3s}.author__p a:hover{text-decoration-color:var(--c0)}
+
+/* ---------- the close: the three related on off-white, then a full-bleed band in the category ground, the index's head closing the page ---------- */
+.sec{padding:clamp(72px,9vw,128px) 0}
+.sec--off{background:var(--off)}
+.sec__head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding-top:20px;border-top:1px solid var(--line);margin-bottom:clamp(40px,5vw,72px)}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+h2{font-weight:500;letter-spacing:-.02em;font-size:clamp(28px,3.2vw,44px);line-height:1.12}
+.link{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding-bottom:6px;border-bottom:1px solid currentColor}
+.cband{position:relative;isolation:isolate;overflow:hidden;color:#fff;--sc:var(--c)}
+.cband>*:not(.hero__layer){position:relative}
+.cband .hero__glow.b{background:linear-gradient(to bottom,rgba(18,20,22,.42),rgba(18,20,22,.3) 40%,rgba(18,20,22,.74) 100%)}
+.cband__in{display:flex;justify-content:space-between;align-items:baseline;gap:24px 48px;flex-wrap:wrap;padding-top:clamp(56px,7vw,96px);padding-bottom:clamp(56px,7vw,96px)}
+.cband h2{font-size:clamp(26px,3vw,44px);max-width:22ch}
+.cband .link{color:#fff}
+
+/* ---------- related: the other three, the index's rows with the thumb on top at 3:2 on desktop, the row on the phone ---------- */
+.related{background:var(--off)}
+.rel{display:grid;grid-template-columns:repeat(3,1fr);gap:0 clamp(32px,4vw,56px)}
+.thumb{display:block;position:relative;overflow:hidden;isolation:isolate;aspect-ratio:4/3;background:var(--b0);--sc:var(--c)}
+.thumb__ph{position:absolute;inset:0;background:url(/assets/hero.jpg) var(--px,50%) var(--py,50%)/cover no-repeat;filter:saturate(.4) brightness(.55) contrast(1.08)}
+.thumb__ph::after{content:"";position:absolute;inset:0;background:var(--b1);mix-blend-mode:color}
+.thumb .hero__grain{opacity:.45}
+.thumb__ph--img{background:none}.thumb__ph--img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb__icon{position:absolute;left:50%;top:50%;width:62%;height:auto;transform:translate(-50%,-50%);opacity:.95}
+.post{display:grid;grid-template-columns:128px 1fr;column-gap:24px;padding:22px 0;border-bottom:1px solid var(--line)}
+.post .thumb{align-self:start}
+.post h3{margin-top:10px;font-size:clamp(19px,1.7vw,24px);font-weight:500;letter-spacing:-.015em;line-height:1.2;max-width:30ch;transition:color .35s}
+.post:hover h3{color:var(--c0)}
+.pmeta{display:flex;flex-wrap:wrap;align-items:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.pmeta em,.pdate em{font-style:normal;margin:0 10px}
+.pcat{font-weight:400;color:var(--c0)}
+.pdate{display:none;margin-top:10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.rel .post{display:block;padding:0;border-bottom:0}
+.rel .thumb{aspect-ratio:3/2;margin-bottom:20px}
+.rel .post h3{max-width:none}
+.rel .pm-d{display:none}.rel .pdate{display:block}
+
+/* ---------- footer (the index's, decided) ---------- */
+footer{position:relative;overflow:hidden;isolation:isolate;background:#121416;padding:clamp(96px,12vw,160px) 0 40px;font-size:13px;color:rgba(255,255,255,.6);--line:rgba(255,255,255,.2);--sc:var(--teal)}
+.foot__base{background:linear-gradient(to bottom,hsl(200 42% 27%),hsl(204 32% 15%) 65%,#121416)}
+footer .hero__glow.b{background:linear-gradient(to bottom,rgba(18,20,22,.25),rgba(18,20,22,.05) 40%,rgba(18,20,22,.7) 100%)}
+footer .wrap{position:relative;z-index:1}
+footer b{color:#fff;font-weight:500}
+footer a{transition:color .3s,border-color .3s}footer a:hover{color:#fff}
+.ft__cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px 32px}
+.ft__brand p{margin-top:12px;max-width:30ch;font-size:14px;line-height:1.5}
+.ft__brand address{font-style:normal;margin-top:18px;font-size:14px;line-height:1.7}
+.ft__cta{display:flex;gap:8px;margin-top:28px;flex-wrap:wrap}
+.ft__cta a{padding:13px 20px;border:1px solid var(--line);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+.ft__cta a:hover{border-color:#fff}
+.ft__col h4{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px}
+.ft__col a{display:block;font-size:14px;padding:5px 0;color:rgba(255,255,255,.85)}
+.ft__sign{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-top:clamp(80px,10vw,160px)}
+.ft__uca{display:block;width:min(100%,clamp(300px,42vw,620px));height:auto}
+.ft__uca--c{display:none}
+.ft__soc{display:flex;gap:22px;padding-bottom:6px}
+.ft__soc a{display:block;width:22px;height:22px;color:rgba(255,255,255,.7)}
+.ft__soc svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ft__bar{display:flex;justify-content:space-between;gap:12px 32px;flex-wrap:wrap;margin-top:32px;padding-top:18px;border-top:1px solid var(--line)}
+.ft__chat{display:none}
+.ft__meta{display:flex;gap:28px}
+
+@media (max-width:1000px){.ft__cols{grid-template-columns:1fr 1fr}}
+@media (max-width:960px){
+  .qa__cells{grid-template-columns:1fr;border-top:0}.qa__cells li{display:grid;grid-template-columns:40px 1fr;padding:12px 0;border-top:1px solid var(--line);font-size:15px}
+  .qa__cells li+li{padding-left:0;border-left:0}.qa__cells li::before{margin:0;font-size:12px;font-weight:400;letter-spacing:.14em;line-height:1.6}
+  .rel{grid-template-columns:1fr;border-top:1px solid var(--line)}
+  .rel .post{display:grid;padding:18px 0;border-bottom:1px solid var(--line)}.rel .thumb{aspect-ratio:4/3;margin:0}
+}
+@media (max-width:640px){
+  .hero{min-height:52vh;min-height:52svh}.hero__inner{padding-top:110px;padding-bottom:40px}.hero h1{font-size:32px}.hero__sub{font-size:16px}
+  .body{font-size:17px;line-height:1.6}.body p.lead{font-size:19px}
+  .body h2{font-size:24px;margin-top:48px}
+  .fg{grid-template-columns:1fr;gap:18px}.fg__n b{font-size:56px}
+  .tbl__h{display:none}.tbl__r{grid-template-columns:1fr;gap:6px}.tbl__r span::before{display:inline}
+  .flow ol{grid-template-columns:1fr;gap:0}.flow li{display:grid;grid-template-columns:40px 1fr;padding:12px 0;border-top:1px solid var(--line)}
+  .flow li::before{grid-row:1/3;margin:0;font-size:15px;font-weight:400;letter-spacing:0;line-height:1.3}.flow li span{grid-column:2}
+  .flow{padding-top:0}.flow ol{border-top:0}.flow li:first-child{border-top:0}
+  .pull{font-size:22px;max-width:none}
+  .author__g{grid-template-columns:1fr;row-gap:22px}.author__ph{min-height:0}.author__ph.who .who__img{position:static;display:block;width:100%;height:auto} /* in flow on the phone, the file's own 4:5 sets the height (2026-09-13: Safari collapsed the aspect-ratio grid cell, Luke saw no photo) */.author h3{font-size:26px}.author__p{font-size:17px}
+  .meta--photo{grid-template-columns:44px 1fr;row-gap:2px}.meta--photo .meta__ph{grid-row:1/3}.meta__name small{display:none}.meta--photo .meta__d{grid-column:2;text-align:left;white-space:normal;font-size:11px}
+  .cband__in{flex-direction:column;align-items:flex-start}
+  .post{grid-template-columns:88px 1fr;column-gap:16px}.post h3{font-size:19px;margin-top:8px}
+  .rel .post{grid-template-columns:88px 1fr}
+  .has-c .pm-d{display:none}.has-c .pdate{display:block}
+  .sec__head{margin-bottom:36px}
+  /* footer on the phone, flipped, as the homepage */
+  footer .wrap{display:flex;flex-direction:column}.ft__brand{display:none}
+  .ft__sign{order:1;flex-direction:column;align-items:center;gap:28px;margin-top:0}.ft__uca--l{display:none}.ft__uca--c{display:block;width:100%}
+  .ft__chat{order:2;display:block;margin-top:40px;padding:15px 20px;border:1px solid var(--line);text-align:center;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+  .ft__cols{order:3;grid-template-columns:1fr 1fr;gap:36px 24px;margin-top:64px}
+  .ft__bar{order:4;flex-direction:column;align-items:center;text-align:center;gap:10px;margin-top:48px}
+  .opts__row span{flex:0 0 100%}}
+@media (prefers-reduced-motion:reduce){.js .rv,.js .in .rv{animation:none;opacity:1;transform:none;mask:none;-webkit-mask:none}.hero__grain,.hero__static,.band::before,.band::after{animation:none}}
+
+/* the live markdown carries lists, h3s, images, inline SVG diagrams and code the mockup did not. same voice: hairlines, 18px, the ink-2 grey */
+.body ul,.body ol{margin-top:18px;padding-left:22px}
+.body li{margin-top:10px}
+.body li::marker{color:var(--ink-2)}
+.body li a,.body td a{text-decoration:underline;text-decoration-color:var(--line);text-decoration-thickness:1px;text-underline-offset:4px;transition:text-decoration-color .3s}
+.body li a:hover{text-decoration-color:var(--c0)}
+.body h3{font-size:clamp(20px,1.7vw,23px);font-weight:500;letter-spacing:-.015em;line-height:1.25;margin-top:36px;max-width:30ch}
+.body h3+p{margin-top:12px}
+.body img,.body svg{display:block;max-width:100%;height:auto;margin-top:32px}
+.body p>img{margin-top:0}
+.body pre{margin-top:24px;padding:18px 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px;line-height:1.5;overflow-x:auto;background:var(--off)}
+.body code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
+.body p code,.body li code{background:var(--off);padding:1px 5px}
+.body hr{border:0;border-top:1px solid var(--line);margin-top:40px}
+.body table{width:100%;border-collapse:collapse;margin-top:32px;font-size:15px}
+.body th,.body td{text-align:left;padding:12px 16px 12px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.body th{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:400;color:var(--ink-2)}
+
+/* app/styles/article-blocks.css — the article's blocks (lib/remarkArticleBlocks.js), the Quick
+   Answer, the data table, the photo hero and figures. Phone first. The blocks are cut from the
+   live site, not from a brand doc: Inter, the one hairline, ink and ink-2, square corners, the
+   article's category colour only at the size of a mark, the grain cross, the scanline lettering
+   (docs/blocks-design-notes.md). The look is a class on the <article> (BLOCK_LOOKS in
+   app/blog/[slug]/page.js):
+     steps   fill | relay | command | signal
+     pairs   strike | weight | across | signed
+     data    rail | ledger | pick | turn
+     qa      statement | deck | margin | grid
+     work    worked | tally | equation
+   Look selectors go look-first: the class is on <article>, .body is inside it.
+   Board of the looks, with the idea behind each: /article-blocks-concepts.html */
+
+.ucb-looks{
+  --ucb-mark:var(--c0);
+  /* the hero's scanlines on paper: ink stripes, .014em on per .043em, over a faint ink body */
+  --ucb-scan:repeating-linear-gradient(to bottom,var(--ink) 0 max(1px,.014em),transparent max(1px,.014em) .043em),linear-gradient(rgba(20,20,20,.16),rgba(20,20,20,.16));
+}
+.ucb-looks ::selection{background:color-mix(in srgb,var(--c0) 20%,transparent);color:var(--ink)}
+
+/* ---------- the block: a title, the list, an optional note ---------- */
+.body .ucb{margin-top:40px}
+.body .ucb p{margin-top:0}
+.body .ucb__title{font-size:17px;font-weight:500;letter-spacing:-.01em;line-height:1.35;max-width:44ch}
+.ucb__meta{font-weight:400;color:var(--ink-2)}
+.body .ucb__list{list-style:none;margin:14px 0 0;padding:0}
+.body .ucb__list li{margin:0}
+.ucb__list>li{font-size:17px;line-height:1.5}
+.body .ucb__note{margin-top:14px;font-size:15px;line-height:1.55;color:var(--ink-2);max-width:60ch}
+/* the comma before a timing or a value stays in the text for screen readers and engines */
+.ucb__sep{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.ucb__time{display:block;margin-top:6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.ucb__val{font-weight:500;font-variant-numeric:tabular-nums}
+
+/* steps, list, workings: hairline rows until a look says otherwise */
+.body .ucb--steps .ucb__list{counter-reset:ucb-s}
+.ucb--steps .ucb__list>li{counter-increment:ucb-s}
+:is(.ucb--steps,.ucb--list,.ucb--workings) .ucb__list>li{padding:12px 0;border-top:1px solid var(--line)}
+:is(.ucb--steps,.ucb--list,.ucb--workings) .ucb__list>li:last-child{border-bottom:1px solid var(--line)}
+
+/* the site's cross: two 1px lines cut from the category colour run through the coarse grain,
+   jittering, as in the logo and problem grids. Every look that marks a joint uses this one */
+.ucb-steps--relay .ucb--steps .ucb__list>li::after,
+.ucb-steps--relay .ucb--steps .ucb__list>li>.ucb__text::after,
+.ucb-pairs--signed .ucb-pair .ucb--plus .ucb__list>li::before,
+.ucb-qa--margin .qa .eyebrow::before,
+.ucb-qa--grid .qa__pts>li::before,
+.ucb-qa--grid .qa__pts>li::after,
+.ucb-looks .ucb__op::before{
+  background:linear-gradient(var(--c0),var(--c0)),var(--noise-coarse) 0 0/220px 220px;background-blend-mode:multiply;
+  -webkit-mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;
+  mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;
+  animation:jit .6s steps(4) infinite}
+
+/* ================= STEPS ================= */
+
+/* Fill: the hero's striped lettering for the numerals, and each one filled from the foot in the
+   category colour as far as the run has gone: a third of the way at step one of three, solid at the last */
+.ucb-steps--fill .ucb--steps .ucb__list>li{display:grid;grid-template-columns:64px minmax(0,1fr);column-gap:10px;align-items:start;padding:18px 0}
+.ucb-steps--fill .ucb--steps .ucb__list>li::before{content:counter(ucb-s);grid-row:1/span 2;margin-top:-8px;font-size:52px;font-weight:500;line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums;
+  color:transparent;-webkit-text-fill-color:transparent;
+  background:linear-gradient(to top,var(--c0) calc(14% + 72% * var(--n) / var(--of)),transparent 0),var(--ucb-scan);
+  -webkit-background-clip:text;background-clip:text}
+.ucb-steps--fill .ucb--steps .ucb__list>li>*{grid-column:2}
+@media (min-width:961px){
+  .ucb-steps--fill .ucb--steps .ucb__list>li{grid-template-columns:96px minmax(0,1fr);padding:22px 0}
+  .ucb-steps--fill .ucb--steps .ucb__list>li::before{margin-top:-14px;font-size:72px}
+  .ucb-steps--fill .ucb--steps .ucb__text{font-size:18px}
+}
+
+/* Relay: the steps are the service page's problem grid, read left to right, the grain cross on the
+   hairline where one step hands to the next. On a phone the cells stack and the cross sits where each rule starts */
+.ucb-steps--relay .ucb--steps .ucb__list>li{position:relative;padding:18px 0 20px}
+.ucb-steps--relay .ucb--steps .ucb__list>li::before{content:counter(ucb-s,decimal-leading-zero);display:block;margin-bottom:10px;font-size:11px;letter-spacing:.14em;line-height:1;color:var(--ink-2)}
+.ucb-steps--relay .ucb--steps .ucb__list>li+li::after{content:"";position:absolute;left:-6px;top:-6px;width:13px;height:13px;z-index:1}
+@media (min-width:961px){
+  .ucb-steps--relay .body .ucb--steps .ucb__list{display:grid;grid-template-columns:repeat(var(--of),minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .ucb-steps--relay .body .ucb--steps .ucb__list:has(>li:nth-child(5)){grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ucb-steps--relay .ucb--steps .ucb__list>li{display:flex;flex-direction:column;min-height:210px;padding:22px 24px 24px;border:0;border-right:1px solid var(--line)}
+  .ucb-steps--relay .ucb--steps .ucb__list>li:nth-child(odd){background:var(--off)}
+  .ucb-steps--relay .ucb--steps .ucb__list>li:last-child{border-right:0}
+  .ucb-steps--relay .ucb--steps .ucb__list:has(>li:nth-child(5))>li:nth-child(n+4){border-top:1px solid var(--line)}
+  .ucb-steps--relay .ucb--steps .ucb__list>li>.ucb__text{margin-top:auto;padding-top:32px;font-size:16px;line-height:1.45}
+  /* the crosses: top and foot of every inner vertical */
+  .ucb-steps--relay .ucb--steps .ucb__list>li+li::after{content:none}
+  .ucb-steps--relay .ucb--steps .ucb__list>li:not(:last-child)::after{content:"";position:absolute;right:-7px;top:-7px;width:13px;height:13px;z-index:1}
+  .ucb-steps--relay .ucb--steps .ucb__list>li:not(:last-child)>.ucb__text::after{content:"";position:absolute;right:-7px;bottom:-7px;width:13px;height:13px;z-index:1}
+}
+
+/* Command: each step set as a headline, its number shrunk to a mark hanging in the margin, so a
+   short run reads as orders rather than a list */
+.ucb-steps--command .ucb--steps .ucb__list>li{position:relative;padding:0 0 0 30px;border:0}
+.ucb-steps--command .ucb--steps .ucb__list>li:last-child{border:0}
+.ucb-steps--command .ucb--steps .ucb__list>li+li{margin-top:18px}
+.ucb-steps--command .ucb--steps .ucb__list>li::before{content:counter(ucb-s);position:absolute;left:0;top:.55em;font-size:12px;font-weight:500;letter-spacing:.02em;line-height:1;color:var(--c0);font-variant-numeric:tabular-nums}
+.ucb-steps--command .ucb--steps .ucb__text{font-size:clamp(21px,2.3vw,27px);font-weight:500;letter-spacing:-.02em;line-height:1.22}
+.ucb-steps--command .ucb--steps .ucb__time{margin-top:8px}
+.ucb-steps--command .body .ucb--steps .ucb__list{margin-top:20px}
+.ucb-steps--command .body .ucb--steps .ucb__note{margin-top:26px}
+
+/* Signal: no numerals. Each step carries the whole run as the carousel's dots, the ones behind
+   it in ink, its own in the colour, the ones ahead in hairline grey: where you are, at a glance */
+.ucb-steps--signal .ucb--steps .ucb__list>li{position:relative;padding:16px 0 18px}
+.ucb-steps--signal .ucb--steps .ucb__list>li::before,
+.ucb-steps--signal .ucb--steps .ucb__list>li::after{content:"";display:block;height:6px;
+  background:radial-gradient(circle at 3px 3px,var(--line) 2.6px,transparent 3px) 0 0/14px 6px repeat-x;width:calc(var(--of) * 14px - 8px);margin-bottom:12px}
+.ucb-steps--signal .ucb--steps .ucb__list>li::after{position:absolute;left:0;top:16px;margin:0;width:calc(var(--n) * 14px - 8px);
+  background:radial-gradient(circle at 3px 3px,var(--c0) 2.6px,transparent 3px) 100% 0/6px 6px no-repeat,radial-gradient(circle at 3px 3px,var(--ink) 2.6px,transparent 3px) 0 0/14px 6px repeat-x}
+@media (min-width:961px){
+  .ucb-steps--signal .ucb--steps .ucb__list>li{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:24px;align-items:baseline}
+  .ucb-steps--signal .ucb--steps .ucb__list>li::before{grid-column:1/-1}
+  .ucb-steps--signal .ucb--steps .ucb__time{grid-column:2;grid-row:2;margin:0}
+}
+
+/* ================= PAIR ================= */
+.body .ucb-pair{display:grid;gap:32px;margin-top:40px}
+.body .ucb-pair .ucb{margin:0}
+.ucb-pair .ucb--list .ucb__list>li{font-size:16px;padding:10px 0}
+@media (min-width:641px){.body .ucb-pair{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+
+/* Strike: the worse side is crossed out like an edit, the better side left standing. When the
+   titles don't say which is better (free and paid), nothing is struck */
+.ucb-pairs--strike .ucb-pair .ucb--minus :is(.ucb__title,.ucb__text){color:var(--ink-2)}
+.ucb-pairs--strike .ucb-pair .ucb--minus .ucb__text{text-decoration:line-through;text-decoration-thickness:1px;text-decoration-color:rgba(20,20,20,.5)}
+.ucb-pairs--strike .ucb-pair .ucb--plus .ucb__title{box-shadow:0 1px 0 var(--c0);width:fit-content}
+
+/* Weight: the verdict is the type. The better side is set large in ink and given more of the
+   width, the other drops to small grey; equals stay equal */
+.ucb-pairs--weight .ucb-pair .ucb__title{font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.ucb-pairs--weight .ucb-pair .ucb--plus .ucb__title{color:var(--ink)}
+.ucb-pairs--weight .ucb-pair .ucb--plus .ucb__list>li{font-size:clamp(19px,1.9vw,22px);font-weight:500;letter-spacing:-.015em;line-height:1.3;padding:12px 0}
+.ucb-pairs--weight .ucb-pair .ucb--minus .ucb__list>li{font-size:14px;color:var(--ink-2)}
+@media (min-width:641px){
+  .ucb-pairs--weight .body .ucb-pair:has(>.ucb--plus:last-child){grid-template-columns:minmax(0,1fr) minmax(0,1.7fr)}
+  .ucb-pairs--weight .body .ucb-pair:has(>.ucb--plus:first-child){grid-template-columns:minmax(0,1.7fr) minmax(0,1fr)}
+}
+
+/* Across: read line against line. The two lists share one set of rows (subgrid), so the third
+   line of one sits beside the third line of the other, on every screen, a hairline down the middle */
+.ucb-pairs--across .body .ucb-pair{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto repeat(var(--rows),auto) auto;gap:0}
+.ucb-pairs--across .body .ucb-pair>.ucb{display:grid;grid-row:1/-1;grid-template-rows:subgrid}
+.ucb-pairs--across .body .ucb-pair>.ucb+.ucb{padding-left:14px;border-left:1px solid var(--line)}
+.ucb-pairs--across .body .ucb-pair>.ucb:first-child{padding-right:14px}
+.ucb-pairs--across .body .ucb-pair .ucb__title{grid-row:1;padding-bottom:12px;font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.ucb-pairs--across .body .ucb-pair .ucb--minus .ucb__title{color:var(--ink-2)}
+.ucb-pairs--across .body .ucb-pair .ucb__list{grid-row:2/span var(--rows);display:grid;grid-template-rows:subgrid;margin:0}
+.ucb-pairs--across .body .ucb-pair .ucb__note{grid-row:-2}
+.ucb-pairs--across .ucb-pair .ucb--list .ucb__list>li{font-size:15px;line-height:1.45}
+.ucb-pairs--across .ucb-pair .ucb--minus .ucb__list>li{color:var(--ink-2)}
+@media (min-width:641px){
+  .ucb-pairs--across .body .ucb-pair>.ucb+.ucb{padding-left:24px}
+  .ucb-pairs--across .body .ucb-pair>.ucb:first-child{padding-right:24px}
+  .ucb-pairs--across .ucb-pair .ucb--list .ucb__list>li{font-size:16px}
+}
+
+/* Signed: every line carries a sign. The grain cross on the side that helps, a plain dash on the
+   side that costs, so a single line still says which side it was on; equals both get the dash */
+.ucb-pairs--signed .ucb-pair .ucb__title{font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.ucb-pairs--signed .ucb-pair .ucb--minus .ucb__title{color:var(--ink-2)}
+.ucb-pairs--signed .ucb-pair .ucb--list .ucb__list>li{position:relative;padding-left:26px}
+.ucb-pairs--signed .ucb-pair .ucb--list .ucb__list>li::before{content:"";position:absolute;left:0;top:22px;width:11px;height:1px;background:var(--ink-2)}
+.ucb-pairs--signed .ucb-pair .ucb--plus .ucb__list>li::before{top:16px;width:11px;height:11px}
+.ucb-pairs--signed .ucb-pair .ucb--minus .ucb__list>li{color:var(--ink-2)}
+
+/* ================= DATA TABLE ================= */
+.body .ucb-data{position:relative;margin-top:32px;overflow-x:auto;overscroll-behavior-x:contain}
+.ucb-data:focus-visible{outline:1px solid var(--ink);outline-offset:6px}
+.body .ucb-data table{width:100%;margin:0;border-collapse:collapse;font-size:15px;line-height:1.45}
+.body .ucb-data :is(th,td){padding:12px 16px 12px 0;border:0;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.body .ucb-data thead th{font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);border-bottom-color:var(--ink)}
+.body .ucb-data thead strong{font-weight:inherit}
+.body .ucb-data tbody th{font-size:15px;font-weight:500;letter-spacing:-.005em;text-transform:none;color:var(--ink)}
+.body .ucb-data td{color:var(--ink)}
+
+/* Rail: on a phone the row names hold still and the options snap past one column at a time; each
+   column says which of how many it is, and a hairline under the table fills as you go. CSS only,
+   a real <table>. From 761px it is the whole table */
+@media (max-width:760px){
+  .ucb-data--rail .body .ucb-data{--rh:112px;container-type:inline-size;scroll-snap-type:x mandatory;scroll-padding-left:var(--rh);scrollbar-width:none;counter-reset:ucb-opt 0 ucb-opts var(--opts)}
+  .ucb-data--rail .ucb-data::-webkit-scrollbar{display:none}
+  .ucb-data--rail .body .ucb-data table{width:auto}
+  .ucb-data--rail .body .ucb-data :is(thead th:first-child,tbody th){position:sticky;left:0;z-index:1;width:var(--rh);min-width:var(--rh);max-width:var(--rh);padding-right:12px;background:var(--white);box-shadow:inset -1px 0 0 var(--line)}
+  .ucb-data--rail .body .ucb-data :is(thead th+th,td){width:calc(100cqi - var(--rh));min-width:calc(100cqi - var(--rh));max-width:calc(100cqi - var(--rh));padding-left:16px}
+  .ucb-data--rail .body .ucb-data thead th+th{scroll-snap-align:start}
+  .ucb-data--rail .ucb-data thead th+th::before{counter-increment:ucb-opt;content:counter(ucb-opt) " / " counter(ucb-opts) / "";display:block;margin-bottom:6px;color:var(--c0)}
+  .ucb-data--rail .ucb-data::after{content:counter(ucb-opts) " options, swipe" / "";position:sticky;left:0;display:block;width:100cqi;margin-top:0;padding-top:12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);
+    background:linear-gradient(var(--c0),var(--c0)) 0 0/calc(100% / var(--opts)) 1px no-repeat}
+  @supports (animation-timeline:scroll()){
+    .ucb-data--rail .ucb-data::after{animation:ucb-rail linear both;animation-timeline:scroll(nearest inline)}
+  }
+}
+@keyframes ucb-rail{from{background-size:calc(100% / var(--opts)) 1px}to{background-size:100% 1px}}
+
+/* Ledger: read it as an account book. The figures in tabular numerals and right-aligned, a rule
+   down every column, the header ruled off in ink, a double rule to close, on the grain like paper.
+   On a phone it scrolls sideways the way a ledger would, the row names pinned */
+.ucb-data--ledger .body .ucb-data{padding:4px 18px 20px;background:linear-gradient(rgba(246,246,246,.78),rgba(246,246,246,.78)),var(--noise) 0 0/240px 240px;background-attachment:local}
+.ucb-data--ledger .body .ucb-data table{min-width:calc(var(--cols) * 132px);font-variant-numeric:tabular-nums}
+.ucb-data--ledger .body .ucb-data :is(th,td){padding:11px 14px}
+.ucb-data--ledger .body .ucb-data :is(th,td)+:is(th,td){border-left:1px solid var(--line)}
+.ucb-data--ledger .body .ucb-data :is(th,td):first-child{padding-left:0}
+.ucb-data--ledger .body .ucb-data thead th{padding-top:16px;color:var(--ink)}
+.ucb-data--ledger .body .ucb-data .ucb__num{text-align:right}
+.ucb-data--ledger .body .ucb-data tbody tr:last-child>*{border-bottom:3px double var(--ink)}
+@media (max-width:760px){
+  .ucb-data--ledger .body .ucb-data{margin-right:calc(-1*var(--pad))}
+  .ucb-data--ledger .body .ucb-data :is(thead th:first-child,tbody th){position:sticky;left:-18px;z-index:1;min-width:120px;max-width:120px;padding-left:18px;margin-left:-18px;background:#f4f4f4}
+}
+
+/* Pick: one column is the answer. A header set in bold in the markdown marks it; it reads in full
+   ink at weight 500 under the colour's underline while the rest recede to grey, and on a phone the
+   pick leads every row */
+.ucb-data--pick .body .ucb-data td{color:var(--ink-2)}
+.ucb-data--pick .body .ucb-data .ucb__pick{color:var(--ink);font-weight:500}
+.ucb-data--pick .body .ucb-data thead .ucb__pick{border-bottom:1px solid var(--c0);box-shadow:inset 0 -1px 0 var(--c0)}
+@media (max-width:640px){
+  .ucb-data--pick .body .ucb-data{overflow:visible}
+  .ucb-data--pick .body .ucb-data table{display:block}
+  .ucb-data--pick .ucb-data thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .ucb-data--pick .ucb-data tbody{display:block;border-top:1px solid var(--ink)}
+  .ucb-data--pick .ucb-data tbody tr{display:flex;flex-direction:column;padding:16px 0 12px;border-bottom:1px solid var(--line)}
+  .ucb-data--pick .body .ucb-data tbody :is(th,td){display:grid;grid-template-columns:40% minmax(0,1fr);column-gap:14px;padding:4px 0;border:0;font-size:14px}
+  .ucb-data--pick .body .ucb-data tbody th{display:block;order:-2;padding:0 0 8px;font-size:16px}
+  .ucb-data--pick .body .ucb-data tbody .ucb__pick{order:-1;padding:2px 0 8px;font-size:17px}
+  .ucb-data--pick .ucb-data td::before{content:attr(data-label) / "";font-size:11px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;line-height:1.9;color:var(--ink-2)}
+  .ucb-data--pick .ucb-data td.ucb__pick::before{color:var(--c0)}
+}
+
+/* Turn: the column names turn on their side, so every column fits a phone: nothing scrolls, nothing
+   hides, the grid stays a grid. From 641px the names lie down again */
+@media (max-width:640px){
+  .ucb-data--turn .body .ucb-data table{table-layout:fixed;font-size:13px;line-height:1.4}
+  .ucb-data--turn .body .ucb-data thead th:first-child{width:30%}
+  .ucb-data--turn .body .ucb-data thead th+th{writing-mode:vertical-rl;transform:rotate(180deg);text-align:left;white-space:nowrap;padding:10px 0 12px;font-size:11px;line-height:1.2;border-bottom:0;box-shadow:inset 0 1px 0 var(--ink)}
+  .ucb-data--turn .body .ucb-data thead th:first-child{vertical-align:bottom}
+  .ucb-data--turn .body .ucb-data thead th+th{vertical-align:top}
+  .ucb-data--turn .body .ucb-data :is(tbody th,td){padding:10px 10px 10px 0;font-size:13px;hyphens:auto;overflow-wrap:anywhere}
+  .ucb-data--turn .body .ucb-data td{padding-left:2px}
+}
+
+/* ================= QUICK ANSWER =================
+   In the DOM in every look: the label, the answer sentence (<p><strong>), the points (<ul>) */
+.ucb-looks .qa__in{max-width:760px}
+.ucb-looks .qa__lead--answer strong{font-weight:500}
+.ucb-looks .qa__pts{list-style:none;margin:20px 0 0;padding:0}
+.ucb-looks .qa__pts li{padding:10px 0;border-top:1px solid var(--line);font-size:16px;line-height:1.5}
+
+/* Statement: the answer is the biggest sentence on the page after the title, set the way the
+   homepage sets its opening line; the points sit under it as fine print */
+.ucb-qa--statement .qa__lead--answer{margin-top:18px;font-size:clamp(27px,3.3vw,44px);line-height:1.14;letter-spacing:-.025em;max-width:none}
+.ucb-qa--statement .qa__pts{margin-top:32px}
+.ucb-qa--statement .qa__pts li{font-size:15px;color:var(--ink-2)}
+@media (min-width:961px){
+  .ucb-qa--statement .qa__pts{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
+}
+
+/* Deck: the answer is the title's deck. It sits in the hero under the H1, on the category ground,
+   so the title and its answer are one glance (page.js renders the Quick Answer there for this look) */
+.ucb-qa--deck .qa--deck{margin-top:24px;padding:0;max-width:620px}
+.ucb-qa--deck .qa--deck .wrap{max-width:none;padding:0}
+.ucb-qa--deck .qa--deck .eyebrow{color:rgba(255,255,255,.62)}
+.ucb-qa--deck .qa--deck .qa__lead--answer{margin-top:10px;font-size:clamp(19px,1.7vw,23px);line-height:1.38;letter-spacing:-.01em;max-width:42ch;color:#fff}
+.ucb-qa--deck .qa--deck .qa__pts{margin-top:18px}
+.ucb-qa--deck .qa--deck .qa__pts li{padding:8px 0;font-size:15px;line-height:1.45;color:rgba(255,255,255,.82);border-top-color:rgba(255,255,255,.2)}
+@media (min-width:961px){.ucb-qa--deck .qa--deck .qa__pts{display:grid;grid-template-columns:1fr 1fr;column-gap:28px}}
+
+/* Margin: on a wide screen the answer stands in the margin beside the opening, a note that is
+   there the whole time you read the first lines; under 1200px it is a lead-in, the label run in
+   ahead of the answer the way a newspaper runs in its first words */
+@media (min-width:1200px){
+  .ucb-qa--margin{position:relative}
+  .ucb-qa--margin .qa{position:absolute;z-index:2;left:calc(max(var(--pad),(100% - var(--max)) / 2 + var(--pad)) + 760px + clamp(48px,5vw,80px));right:max(var(--pad),calc((100% - var(--max)) / 2 + var(--pad)));padding-top:clamp(48px,6vw,80px)}
+  .ucb-qa--margin .qa .wrap{max-width:none;padding:0}
+  .ucb-qa--margin .qa__in{max-width:340px;padding-top:16px;border-top:1px solid var(--line)}
+  .ucb-qa--margin .qa .eyebrow{display:flex;align-items:center;gap:10px;color:var(--ink)}
+  .ucb-qa--margin .qa .eyebrow::before{content:"";flex:none;width:13px;height:13px}
+  .ucb-qa--margin .qa__lead--answer{margin-top:12px;font-size:18px;line-height:1.42;letter-spacing:-.01em}
+  .ucb-qa--margin .qa__pts{margin-top:16px}
+  .ucb-qa--margin .qa__pts li{padding:8px 0;font-size:14px;line-height:1.45;color:var(--ink-2)}
+}
+@media (max-width:1199px){
+  .ucb-qa--margin .qa .eyebrow,.ucb-qa--margin .qa__lead{display:inline}
+  .ucb-qa--margin .qa .eyebrow{margin-right:12px;color:var(--c0)}
+  .ucb-qa--margin .qa__lead--answer{font-size:clamp(19px,2.4vw,22px);line-height:1.45}
+  .ucb-qa--margin .qa__pts{margin-top:18px}
+  .ucb-qa--margin .qa__pts li{font-size:15px;color:var(--ink-2)}
+}
+
+/* Grid: the answer is the lead cell of the service page's crossed grid and every point gets a cell
+   of its own, read at a glance the way the problems are; one column on a phone */
+.ucb-qa--grid .qa__lead--answer{margin-top:14px;font-size:clamp(21px,2vw,26px);line-height:1.28;letter-spacing:-.015em}
+.ucb-qa--grid .qa__pts{margin-top:22px}
+.ucb-qa--grid .qa__pts li{padding:14px 0;font-size:16px;font-weight:500;letter-spacing:-.01em;line-height:1.35}
+@media (min-width:961px){
+  .ucb-qa--grid .qa__in{max-width:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto 1fr;margin-top:6px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .ucb-qa--grid .qa .eyebrow{grid-column:1;grid-row:1;padding:24px 28px 0 0}
+  .ucb-qa--grid .qa__lead--answer{grid-column:1;grid-row:2;align-self:end;margin:0;padding:28px 32px 28px 0;max-width:none}
+  .ucb-qa--grid .qa__pts{grid-column:2/4;grid-row:1/3;display:grid;grid-template-columns:1fr 1fr;margin:0;border-left:1px solid var(--line)}
+  .ucb-qa--grid .qa__pts li{position:relative;display:flex;align-items:flex-end;min-height:clamp(140px,12vw,180px);padding:24px 28px;border:0;font-size:18px;line-height:1.3}
+  .ucb-qa--grid .qa__pts li:nth-child(4n+1),.ucb-qa--grid .qa__pts li:nth-child(4n){background:var(--off)}
+  .ucb-qa--grid .qa__pts li:nth-child(odd){border-right:1px solid var(--line)}
+  .ucb-qa--grid .qa__pts li:nth-child(n+3){border-top:1px solid var(--line)}
+  .ucb-qa--grid .qa__pts>li:nth-child(1)::before{content:"";position:absolute;left:-7px;top:-7px;width:13px;height:13px;z-index:1}
+  .ucb-qa--grid .qa__pts>li:nth-child(1)::after{content:"";position:absolute;right:-7px;top:-7px;width:13px;height:13px;z-index:1}
+  .ucb-qa--grid .qa__pts>li:nth-child(3)::before{content:"";position:absolute;left:-7px;top:-7px;width:13px;height:13px;z-index:1}
+  .ucb-qa--grid .qa__pts>li:nth-child(3)::after{content:"";position:absolute;right:-7px;top:-7px;width:13px;height:13px;z-index:1}
+  .ucb-qa--grid .qa__pts>li:nth-last-child(-n+2):nth-child(odd)::before{top:auto;bottom:-7px}
+  .ucb-qa--grid .qa__pts>li:nth-child(4)::before{content:"";position:absolute;left:-7px;bottom:-7px;width:13px;height:13px;z-index:1}
+}
+
+/* ================= WORKINGS =================
+   The site does the maths (lib/remarkArticleBlocks.js): the sign between the lines is worked out
+   from the numbers and written into the text, and a sum that doesn't hold stops the build. The
+   signs are drawn as the site's cross: upright for plus, turned for times, two hairlines for equals */
+.ucb--workings .ucb__fig{font-variant-numeric:tabular-nums}
+.ucb--workings :is(.ucb__pre,.ucb__unit){font-weight:400;color:var(--ink-2)}
+.ucb-looks .ucb__op{position:relative;display:inline-block;flex:none;width:var(--op,11px);height:var(--op,11px);overflow:hidden;color:transparent;-webkit-text-fill-color:transparent;vertical-align:middle}
+.ucb-looks .ucb__op::before{content:"";position:absolute;inset:0}
+.ucb-looks .ucb__op--times::before{transform:rotate(45deg)}
+.ucb-looks .ucb__op--eq::before{
+  -webkit-mask:linear-gradient(#000,#000) 0 30%/100% 1px no-repeat,linear-gradient(#000,#000) 0 70%/100% 1px no-repeat;
+  mask:linear-gradient(#000,#000) 0 30%/100% 1px no-repeat,linear-gradient(#000,#000) 0 70%/100% 1px no-repeat}
+/* the answer in the hero's striped lettering */
+:is(.ucb-work--worked,.ucb-work--tally,.ucb-work--equation) .ucb--workings .ucb__total .ucb__fig{font-weight:500;letter-spacing:-.03em;color:transparent;-webkit-text-fill-color:transparent;background:var(--ucb-scan);-webkit-background-clip:text;background-clip:text}
+
+/* Worked: the sum set the way you'd do it on paper. The figures stacked and right-aligned in light
+   numerals, the sign in the margin beside them, a rule under the last, the answer in the stripes */
+.ucb-work--worked .body .ucb--workings .ucb__list{max-width:600px}
+.ucb-work--worked .ucb--workings .ucb__list>li{display:grid;grid-template-columns:minmax(0,1fr) 18px auto;column-gap:12px;align-items:baseline;padding:5px 0;border:0}
+.ucb-work--worked .ucb--workings .ucb__list>li:first-child{padding-top:10px}
+.ucb-work--worked .ucb--workings .ucb__text{grid-column:1;grid-row:1;font-size:15px;line-height:1.4;color:var(--ink-2)}
+.ucb-work--worked .ucb--workings .ucb__op{grid-column:2;grid-row:1;align-self:center;justify-self:end}
+.ucb-work--worked .ucb--workings .ucb__val{grid-column:3;grid-row:1;max-width:min(52vw,320px);text-align:right;font-weight:400}
+.ucb-work--worked .ucb--workings .ucb__fig{font-size:30px;font-weight:300;letter-spacing:-.02em;line-height:1.1;white-space:nowrap}
+.ucb-work--worked .ucb--workings :is(.ucb__pre,.ucb__unit){font-size:13px}
+.ucb-work--worked .ucb--workings .ucb__val:not(:has(.ucb__fig)){font-size:15px;font-weight:500}
+.ucb-work--worked .body .ucb--workings .ucb__total{margin-top:8px;padding-top:12px;border:0}
+.ucb-work--worked .ucb--workings .ucb__total::before{content:"";grid-column:2/4;grid-row:1;align-self:start;margin-top:-12px;border-top:1px solid var(--ink)}
+.ucb-work--worked .ucb--workings .ucb__total .ucb__text{color:var(--ink);font-weight:500}
+.ucb-work--worked .ucb--workings .ucb__total .ucb__fig{font-size:clamp(46px,5vw,60px);line-height:1.05}
+@media (min-width:961px){.ucb-work--worked .ucb--workings .ucb__fig{font-size:34px}.ucb-work--worked .ucb--workings .ucb__op{--op:13px}}
+
+/* Tally: the result is kept as you go. Each line carries the running figure on the right, growing
+   with every line, so you watch 10 become 480 become $38,400 */
+.ucb-work--tally .ucb--workings .ucb__list>li{display:grid;grid-template-columns:14px auto minmax(0,1fr) auto;column-gap:8px;row-gap:3px;align-items:baseline;padding:14px 0}
+.ucb-work--tally .ucb--workings .ucb__text{grid-column:1/4;grid-row:1;font-size:15px;line-height:1.4}
+.ucb-work--tally .ucb--workings .ucb__op{grid-column:1;grid-row:2;align-self:center;--op:10px}
+.ucb-work--tally .ucb--workings .ucb__val{grid-column:2/4;grid-row:2;font-size:14px;font-weight:400;color:var(--ink-2)}
+.ucb-work--tally .ucb--workings .ucb__list>li::after{content:attr(data-run);grid-column:4;grid-row:1/3;align-self:end;padding-left:16px;font-size:calc(19px + 25px * var(--n) / var(--of));font-weight:300;letter-spacing:-.025em;line-height:1;font-variant-numeric:tabular-nums}
+.ucb-work--tally .ucb--workings .ucb__list>li:has(+.ucb__total)::after{content:none}
+.ucb-work--tally .ucb--workings .ucb__list--sums>li:not(.ucb__total) .ucb__val{grid-column:4;grid-row:1/3;align-self:end;padding-left:16px;font-size:15px;font-weight:500;color:var(--ink);text-align:right}
+.ucb-work--tally .body .ucb--workings .ucb__total{border-top:1px solid var(--ink)}
+.ucb-work--tally .ucb--workings .ucb__total .ucb__op{grid-row:1}
+.ucb-work--tally .ucb--workings .ucb__total .ucb__text{grid-column:2/4;font-weight:500}
+.ucb-work--tally .ucb--workings .ucb__total .ucb__val{grid-column:4;grid-row:1/3;align-self:end;padding-left:16px;text-align:right;color:var(--ink)}
+.ucb-work--tally .ucb--workings .ucb__total .ucb__fig{font-size:clamp(46px,5.4vw,64px);line-height:1}
+.ucb-work--tally .ucb--workings .ucb__total :is(.ucb__pre,.ucb__unit){font-size:13px}
+
+/* Equation: the sum is one line across the column, each figure captioned underneath the way the
+   homepage captions its stats, the answer last in the stripes. It wraps on a phone */
+.ucb-work--equation .body .ucb--workings .ucb__list{display:flex;flex-wrap:wrap;align-items:flex-start;column-gap:clamp(12px,1.4vw,18px);row-gap:24px;padding-top:22px;border-top:1px solid var(--line)}
+.ucb-work--equation .ucb--workings .ucb__list>li{display:grid;grid-template-columns:auto auto;column-gap:clamp(12px,1.4vw,18px);align-items:center;max-width:100%;padding:0;border:0}
+.ucb-work--equation .ucb--workings .ucb__list>li:not(:has(>.ucb__op)){grid-template-columns:auto}
+.ucb-work--equation .ucb--workings .ucb__op{grid-column:1;grid-row:1;--op:clamp(16px,1.8vw,22px)}
+.ucb-work--equation .ucb--workings :is(.ucb__val,.ucb__text){grid-column:-2}
+.ucb-work--equation .ucb--workings .ucb__val{grid-row:1;font-weight:400}
+.ucb-work--equation .ucb--workings .ucb__fig{font-size:clamp(38px,3.4vw,48px);font-weight:300;letter-spacing:-.03em;line-height:1;white-space:nowrap}
+.ucb-work--equation .ucb--workings :is(.ucb__pre,.ucb__unit){font-size:14px}
+.ucb-work--equation .ucb--workings .ucb__unit{margin-left:2px}
+.ucb-work--equation .ucb--workings .ucb__val:not(:has(.ucb__fig)){font-size:17px;font-weight:500;max-width:22ch}
+.ucb-work--equation .ucb--workings .ucb__text{grid-row:2;margin-top:10px;max-width:14ch;font-size:13px;line-height:1.35;color:var(--ink-2)}
+.ucb-work--equation .ucb--workings .ucb__total .ucb__text{color:var(--ink);font-weight:500}
+
+/* ---------- checklist: real checkboxes on hairline rows, square, the tick in the category colour ---------- */
+.body .ucb--checklist .ucb__list{border-top:1px solid var(--line)}
+.ucb__check{border-bottom:1px solid var(--line)}
+.ucb__check label{display:grid;grid-template-columns:32px minmax(0,1fr);align-items:start;padding:12px 0;font-size:17px;line-height:1.5;cursor:pointer}
+.ucb__box{-webkit-appearance:none;appearance:none;box-sizing:border-box;width:18px;height:18px;margin:4px 0 0;border:1px solid var(--ink);background:var(--white);display:grid;place-items:center;cursor:pointer;transition:background-color .2s,border-color .2s}
+.ucb__box::before{content:"";width:8px;height:8px;background:var(--white);transform:scale(0);transition:transform .2s var(--ease)}
+.ucb__box:checked{background:var(--ucb-mark);border-color:var(--ucb-mark)}
+.ucb__box:checked::before{transform:none}
+.ucb__box:focus-visible{outline:1px solid var(--ink);outline-offset:3px}
+.ucb__check:has(.ucb__box:checked) .ucb__text{color:var(--ink-2)}
+.body .ucb__list:has(>.ucb__grouped){border-top:0;counter-reset:ucb-g}
+.ucb__grouped{counter-increment:ucb-g}
+.ucb__group{display:block;padding:24px 0 10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid var(--line)}
+.ucb__group strong{font-weight:400}
+ol>.ucb__grouped>.ucb__group::before{content:counter(ucb-g,decimal-leading-zero);margin-right:12px}
+
+/* ---------- the photo hero: the category ground keeps the title, Luke's photo beside it on a wide
+   screen and under it on a phone. A clean shot, as the who card (Luke, 2026-09-13), a real <img> with its alt ---------- */
+.hero--photo{min-height:0;flex-direction:column;container-type:inline-size}
+.hero--photo .hero__inner{padding-top:110px;padding-bottom:36px}
+.hero__fig{position:relative;z-index:2;margin:0;aspect-ratio:3/2;overflow:hidden;background:var(--b0)}
+.hero__fig img{display:block;width:100%;height:100%;object-fit:cover}
+@media (min-width:961px){
+  .hero--photo{flex-direction:row;min-height:62vh}
+  .hero--photo .hero__inner{width:56%;max-width:none;margin:0;padding-top:140px;padding-bottom:clamp(48px,7vh,88px);padding-right:48px;padding-left:max(var(--pad),calc((100vw - var(--max))/2 + var(--pad)));padding-left:max(var(--pad),calc((100cqw - var(--max))/2 + var(--pad)))}
+  .hero--photo h1,.hero--photo .hero__sub{max-width:none}
+  .hero__fig{position:absolute;top:0;right:0;bottom:0;width:44%;aspect-ratio:auto}
+}
+
+/* ---------- a photo in the body: square, in the column on a wide screen, edge to edge on a phone;
+   a tall one cropped to 4:5 and held to 480px wide, so a portrait frame never runs a screen and a half ---------- */
+.body .ucb-fig{margin:36px 0 0}
+.body .ucb-fig img{display:block;width:100%;height:auto;margin:0}
+.ucb-fig__cap{margin-top:10px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;line-height:1.6;color:var(--ink-2)}
+.body .ucb-fig--tall img{aspect-ratio:4/5;object-fit:cover}
+@media (max-width:640px){
+  .body .ucb-fig{margin-left:calc(-1*var(--pad));margin-right:calc(-1*var(--pad))}
+  .ucb-fig__cap{padding:0 var(--pad)}
+}
+@media (min-width:641px){.body .ucb-fig--tall{max-width:480px}}
+
+@media (prefers-reduced-motion:reduce){
+  .ucb__box,.ucb__box::before{transition:none}
+  .ucb-steps--relay .ucb--steps .ucb__list>li::after,
+  .ucb-steps--relay .ucb--steps .ucb__list>li>.ucb__text::after,
+  .ucb-pairs--signed .ucb-pair .ucb--plus .ucb__list>li::before,
+  .ucb-qa--margin .qa .eyebrow::before,
+  .ucb-qa--grid .qa__pts>li::before,
+  .ucb-qa--grid .qa__pts>li::after,
+  .ucb-looks .ucb__op::before{animation:none}
+}
+
+body{background:#fff}article>.art:first-child{padding:28px 0 40px}.hero,.hero--photo{min-height:0}@media (min-width:961px){.hero--photo{min-height:560px}}

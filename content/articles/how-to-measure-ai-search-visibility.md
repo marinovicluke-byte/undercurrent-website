@@ -75,17 +75,15 @@ The engines that count for an Australian audience are ChatGPT, Google's AI Overv
 
 Build the list from how buyers actually search: "best [your service] in [your suburb]", "who should I hire to [the job you do]", "is [your service] worth it", "[your service] near me", plus two or three of your highest-intent service-page keywords phrased as questions. Add one or two comparison prompts ("X versus Y") because AI loves a comparison. Then log it. A plain template does the job:
 
-```text
-AI VISIBILITY BASELINE , [date]
-For each engine (ChatGPT / Perplexity / Google AI Overview):
-  1. Run all 25 buyer-intent prompts
-  2. Cited?              Y / N
-  3. Position in answer  (first mention / later / sources list / not at all)
-  4. Accurate?           Y / N  , note any wrong details
-  5. Source page URL     ______________________
-Score = (prompts where you're cited) divided by 25, per engine
-Re-run on the same day each month. Track the trend, not one snapshot.
-```
+**AI visibility baseline ([date])**
+
+1. For each engine (ChatGPT / Perplexity / Google AI Overview), run all 25 buyer-intent prompts
+2. Cited? **Y / N**
+3. Position in answer: first mention / later / sources list / not at all
+4. Accurate? **Y / N**, note any wrong details
+5. Source page URL
+
+*Score = (prompts where you're cited) divided by 25, per engine. Re-run on the same day each month. Track the trend, not one snapshot.*
 
 Do this once and you'll know more about your AI search visibility than most of your competitors know about theirs. It pairs naturally with a quick [SEO self-audit](/blog/seo-audit-self-check-australia). If you'd rather have it run for you, [our AI search visibility service](/seo-ai-visibility) starts with exactly this baseline before any fixes. Then you fix things in order.
 

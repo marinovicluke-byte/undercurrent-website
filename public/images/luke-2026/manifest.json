@@ -1,0 +1,1016 @@
+{
+  "shoot": "UnderCurrent brand shoot 2026",
+  "credit": "Allyjana Marie Creative",
+  "subject": "Luke Marinovic only, no third parties in frame",
+  "spec": "1800px long edge, JPEG quality 78 (stepped down only if over 350KB), metadata stripped",
+  "topic_fit_tags": [
+    "at-laptop",
+    "on-phone",
+    "portrait",
+    "working",
+    "talking"
+  ],
+  "hero_rule": "hero_pick marks the behind-the-laptop and on-the-phone frames, prefer them for article heroes",
+  "screens": "Frames 7 to 13 show real screens: a photography website (7 to 10), a code editor (11), a search performance report (12, 13). Check what is legible before cropping in tight",
+  "photos": [
+    {
+      "n": 1,
+      "filename": "luke-marinovic-undercurrent-on-phone-at-desk-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-on-phone-at-desk-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 103030,
+      "quality": 78,
+      "alt": "Luke Marinovic on a phone call at a round white desk, laptop closed in front of him, looking off to the side.",
+      "shows": "On the phone at the white desk, laptop shut, looking away.",
+      "topic_fit": [
+        "on-phone",
+        "talking",
+        "working"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-01.jpg"
+    },
+    {
+      "n": 2,
+      "filename": "luke-marinovic-undercurrent-on-phone-seated-side-on-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-on-phone-seated-side-on-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 93667,
+      "quality": 78,
+      "alt": "Luke Marinovic seated side-on at his desk, phone to his ear, mid-conversation, laptop open beside him.",
+      "shows": "Side-on at the desk, phone to ear, laptop open.",
+      "topic_fit": [
+        "on-phone",
+        "talking",
+        "working"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-02.jpg"
+    },
+    {
+      "n": 3,
+      "filename": "luke-marinovic-undercurrent-at-desk-hands-clasped-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-at-desk-hands-clasped-melbourne.jpg",
+      "width": 1800,
+      "height": 1200,
+      "orientation": "landscape",
+      "bytes": 102029,
+      "quality": 78,
+      "alt": "Luke Marinovic at a white desk with his hands clasped, looking at the camera, laptop open to one side.",
+      "shows": "Seated at the desk, hands clasped, to camera, laptop beside.",
+      "topic_fit": [
+        "portrait",
+        "at-laptop"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-03.jpg"
+    },
+    {
+      "n": 4,
+      "filename": "luke-marinovic-undercurrent-at-desk-hands-clasped-smiling-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-at-desk-hands-clasped-smiling-melbourne.jpg",
+      "width": 1800,
+      "height": 1200,
+      "orientation": "landscape",
+      "bytes": 104335,
+      "quality": 78,
+      "alt": "Luke Marinovic smiling at a white desk, hands clasped, laptop open beside him.",
+      "shows": "Same set-up as 3, smiling.",
+      "topic_fit": [
+        "portrait",
+        "at-laptop"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-04.jpg"
+    },
+    {
+      "n": 5,
+      "filename": "luke-marinovic-undercurrent-at-desk-arms-folded-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-at-desk-arms-folded-melbourne.jpg",
+      "width": 1800,
+      "height": 1200,
+      "orientation": "landscape",
+      "bytes": 95561,
+      "quality": 78,
+      "alt": "Luke Marinovic at a white desk with his arms folded on the table, laptop open, a black vase of blossom beside him.",
+      "shows": "Wide frame at the desk, arms folded, laptop and vase.",
+      "topic_fit": [
+        "portrait",
+        "at-laptop"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-05.jpg"
+    },
+    {
+      "n": 6,
+      "filename": "luke-marinovic-undercurrent-walking-to-desk-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-walking-to-desk-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 74841,
+      "quality": 78,
+      "alt": "Luke Marinovic walking past his desk towards an open laptop, in a black t-shirt against a concrete wall.",
+      "shows": "Walking past the desk to the laptop.",
+      "topic_fit": [
+        "working"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-06.jpg"
+    },
+    {
+      "n": 7,
+      "filename": "luke-marinovic-undercurrent-over-shoulder-laptop-photo-grid-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-over-shoulder-laptop-photo-grid-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 94655,
+      "quality": 78,
+      "alt": "Over-the-shoulder view of Luke Marinovic at his laptop, a grid of photos on screen, vase of blossom on the desk.",
+      "shows": "Behind Luke at the laptop, photo grid on screen.",
+      "topic_fit": [
+        "at-laptop",
+        "working"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-07.jpg"
+    },
+    {
+      "n": 8,
+      "filename": "luke-marinovic-undercurrent-hands-on-laptop-website-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-hands-on-laptop-website-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 79680,
+      "quality": 78,
+      "alt": "Luke Marinovic's hands on a laptop keyboard, a photography website on the screen.",
+      "shows": "Close on hands and screen, a website open.",
+      "topic_fit": [
+        "at-laptop",
+        "working"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-08.jpg"
+    },
+    {
+      "n": 9,
+      "filename": "luke-marinovic-undercurrent-over-shoulder-typing-portrait-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-over-shoulder-typing-portrait-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 94020,
+      "quality": 78,
+      "alt": "Over-the-shoulder view of Luke Marinovic typing on a laptop at a white desk, a website on screen.",
+      "shows": "Behind Luke typing, website on screen, upright frame.",
+      "topic_fit": [
+        "at-laptop",
+        "working"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-09.jpg"
+    },
+    {
+      "n": 10,
+      "filename": "luke-marinovic-undercurrent-over-shoulder-typing-website-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-over-shoulder-typing-website-melbourne.jpg",
+      "width": 1800,
+      "height": 1200,
+      "orientation": "landscape",
+      "bytes": 99871,
+      "quality": 78,
+      "alt": "Luke Marinovic seen from behind, typing on a laptop at a round white table, a website open on screen.",
+      "shows": "Behind Luke typing at the round table, website on screen, wide frame.",
+      "topic_fit": [
+        "at-laptop",
+        "working"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-10.jpg"
+    },
+    {
+      "n": 11,
+      "filename": "luke-marinovic-undercurrent-over-shoulder-laptop-code-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-over-shoulder-laptop-code-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 96164,
+      "quality": 78,
+      "alt": "Over-the-shoulder view of Luke Marinovic working in a dark code editor on his laptop.",
+      "shows": "Behind Luke, dark code and terminal panes on screen.",
+      "topic_fit": [
+        "at-laptop",
+        "working"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-11.jpg"
+    },
+    {
+      "n": 12,
+      "filename": "luke-marinovic-undercurrent-hands-on-laptop-analytics-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-hands-on-laptop-analytics-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 69884,
+      "quality": 78,
+      "alt": "Luke Marinovic's hands on a laptop showing a search performance chart.",
+      "shows": "Close on hands, a line chart on screen.",
+      "topic_fit": [
+        "at-laptop",
+        "working"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-12.jpg"
+    },
+    {
+      "n": 13,
+      "filename": "luke-marinovic-undercurrent-over-shoulder-search-console-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-over-shoulder-search-console-melbourne.jpg",
+      "width": 1800,
+      "height": 1200,
+      "orientation": "landscape",
+      "bytes": 106752,
+      "quality": 78,
+      "alt": "Luke Marinovic at a round white table, seen from behind, reviewing a search performance report on his laptop.",
+      "shows": "Behind Luke at the round table, a Search Console style report on screen, wide frame.",
+      "topic_fit": [
+        "at-laptop",
+        "working"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-13.jpg"
+    },
+    {
+      "n": 14,
+      "filename": "luke-marinovic-undercurrent-walking-laptop-under-arm-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-walking-laptop-under-arm-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 72196,
+      "quality": 78,
+      "alt": "Luke Marinovic walking in profile with a laptop under his arm, past a concrete wall.",
+      "shows": "Walking in profile, laptop under arm, sharp.",
+      "topic_fit": [
+        "working"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-14.jpg"
+    },
+    {
+      "n": 15,
+      "filename": "luke-marinovic-undercurrent-walking-motion-blur-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-walking-motion-blur-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 69497,
+      "quality": 78,
+      "alt": "Luke Marinovic walking with a laptop, blurred by motion against a concrete wall.",
+      "shows": "Walking, motion blur, laptop in hand.",
+      "topic_fit": [
+        "working"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-15.jpg"
+    },
+    {
+      "n": 16,
+      "filename": "luke-marinovic-undercurrent-walking-motion-blur-profile-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-walking-motion-blur-profile-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 70725,
+      "quality": 78,
+      "alt": "Luke Marinovic in profile, blurred mid-step, carrying a laptop.",
+      "shows": "Profile, motion blur, laptop.",
+      "topic_fit": [
+        "working"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-16.jpg"
+    },
+    {
+      "n": 17,
+      "filename": "luke-marinovic-undercurrent-walking-past-steel-chair-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-walking-past-steel-chair-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 81055,
+      "quality": 78,
+      "alt": "Luke Marinovic walking past a steel chair and side table, blurred by motion.",
+      "shows": "Motion blur past the chair and side table, full length.",
+      "topic_fit": [
+        "working"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-17.jpg"
+    },
+    {
+      "n": 18,
+      "filename": "luke-marinovic-undercurrent-walking-laptop-past-chairs-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-walking-laptop-past-chairs-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 77305,
+      "quality": 78,
+      "alt": "Luke Marinovic carrying a laptop past two steel chairs, blurred by motion.",
+      "shows": "Motion blur with laptop past the chairs, full length.",
+      "topic_fit": [
+        "working"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-18.jpg"
+    },
+    {
+      "n": 19,
+      "filename": "luke-marinovic-undercurrent-mid-stride-studio-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-mid-stride-studio-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 114009,
+      "quality": 78,
+      "alt": "Luke Marinovic mid-stride beside a steel chair, looking off camera, full length.",
+      "shows": "Full length mid-stride by the steel chair.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-19.jpg"
+    },
+    {
+      "n": 20,
+      "filename": "luke-marinovic-undercurrent-reclining-steel-chair-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-reclining-steel-chair-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 110216,
+      "quality": 78,
+      "alt": "Luke Marinovic reclining in a steel and leather chair, looking up and away.",
+      "shows": "Reclining in the steel chair, looking up, full length.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-20.jpg"
+    },
+    {
+      "n": 21,
+      "filename": "luke-marinovic-undercurrent-seated-legs-crossed-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-seated-legs-crossed-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 130622,
+      "quality": 78,
+      "alt": "Luke Marinovic seated in a steel chair with his legs crossed, looking at the camera.",
+      "shows": "Seated, legs crossed, to camera.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-21.jpg"
+    },
+    {
+      "n": 22,
+      "filename": "luke-marinovic-undercurrent-seated-leaning-forward-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-seated-leaning-forward-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 121347,
+      "quality": 78,
+      "alt": "Luke Marinovic seated and leaning forward, elbows on his knees, smiling at the camera.",
+      "shows": "Seated leaning forward, smiling, to camera.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-22.jpg"
+    },
+    {
+      "n": 23,
+      "filename": "luke-marinovic-undercurrent-headshot-dark-backdrop-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-headshot-dark-backdrop-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 63081,
+      "quality": 78,
+      "alt": "Headshot of Luke Marinovic, founder of UnderCurrent Automations, with a slight smile on a dark grey backdrop.",
+      "shows": "Headshot, slight smile, dark backdrop.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-23.jpg"
+    },
+    {
+      "n": 24,
+      "filename": "luke-marinovic-undercurrent-headshot-looking-away-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-headshot-looking-away-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 59797,
+      "quality": 78,
+      "alt": "Luke Marinovic looking off to the side on a dark grey backdrop, head and shoulders.",
+      "shows": "Head and shoulders, looking away, dark backdrop.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-24.jpg"
+    },
+    {
+      "n": 25,
+      "filename": "luke-marinovic-undercurrent-portrait-dark-backdrop-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-portrait-dark-backdrop-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 59043,
+      "quality": 78,
+      "alt": "Luke Marinovic, half length, looking straight at the camera on a dark grey backdrop.",
+      "shows": "Half length, straight to camera, dark backdrop.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-25.jpg"
+    },
+    {
+      "n": 26,
+      "filename": "luke-marinovic-undercurrent-portrait-dark-backdrop-smiling-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-portrait-dark-backdrop-smiling-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 61843,
+      "quality": 78,
+      "alt": "Luke Marinovic smiling, half length, on a dark grey backdrop.",
+      "shows": "Half length, smiling, dark backdrop.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-26.jpg"
+    },
+    {
+      "n": 27,
+      "filename": "luke-marinovic-undercurrent-portrait-dark-backdrop-close-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-portrait-dark-backdrop-close-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 61013,
+      "quality": 78,
+      "alt": "Luke Marinovic with a slight smile, close half length, on a dark grey backdrop.",
+      "shows": "Closer half length, slight smile, dark backdrop.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-27.jpg"
+    },
+    {
+      "n": 28,
+      "filename": "luke-marinovic-undercurrent-portrait-laughing-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-portrait-laughing-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 60769,
+      "quality": 78,
+      "alt": "Luke Marinovic laughing, half length, on a dark grey backdrop.",
+      "shows": "Half length, laughing, dark backdrop.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-28.jpg"
+    },
+    {
+      "n": 29,
+      "filename": "luke-marinovic-undercurrent-portrait-big-smile-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-portrait-big-smile-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 59836,
+      "quality": 78,
+      "alt": "Luke Marinovic with a big smile, half length, on a dark grey backdrop.",
+      "shows": "Half length, big smile, dark backdrop.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-29.jpg"
+    },
+    {
+      "n": 30,
+      "filename": "luke-marinovic-undercurrent-white-shirt-light-beam-wide-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-white-shirt-light-beam-wide-melbourne.jpg",
+      "width": 1800,
+      "height": 1200,
+      "orientation": "landscape",
+      "bytes": 56208,
+      "quality": 78,
+      "alt": "Luke Marinovic in a white shirt against a brushed steel wall, a beam of light across the frame.",
+      "shows": "White shirt, light beam on steel, wide frame.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-30.jpg"
+    },
+    {
+      "n": 31,
+      "filename": "luke-marinovic-undercurrent-white-shirt-light-beam-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-white-shirt-light-beam-melbourne.jpg",
+      "width": 1800,
+      "height": 1200,
+      "orientation": "landscape",
+      "bytes": 58396,
+      "quality": 78,
+      "alt": "Luke Marinovic in a white shirt, shoulder to camera, a beam of light across a steel wall.",
+      "shows": "White shirt, shoulder turned, light beam, wide frame.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-31.jpg"
+    },
+    {
+      "n": 32,
+      "filename": "luke-marinovic-undercurrent-white-shirt-portrait-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-white-shirt-portrait-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 80668,
+      "quality": 78,
+      "alt": "Luke Marinovic in a white shirt, three-quarter view, light falling across a steel wall.",
+      "shows": "White shirt, three-quarter, upright frame.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-32.jpg"
+    },
+    {
+      "n": 33,
+      "filename": "luke-marinovic-undercurrent-laptop-lounge-chair-feet-up-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-laptop-lounge-chair-feet-up-melbourne.jpg",
+      "width": 1800,
+      "height": 1200,
+      "orientation": "landscape",
+      "bytes": 77913,
+      "quality": 78,
+      "alt": "Luke Marinovic working on a laptop in a cream lounge chair with his feet up, against a steel wall.",
+      "shows": "Lounging with the laptop, feet up, wide frame.",
+      "topic_fit": [
+        "at-laptop",
+        "working"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-33.jpg"
+    },
+    {
+      "n": 34,
+      "filename": "luke-marinovic-undercurrent-laptop-lounge-chair-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-laptop-lounge-chair-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 81341,
+      "quality": 78,
+      "alt": "Luke Marinovic in a cream lounge chair with a laptop, looking at the camera.",
+      "shows": "In the lounge chair with the laptop, to camera.",
+      "topic_fit": [
+        "at-laptop",
+        "portrait"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-34.jpg"
+    },
+    {
+      "n": 35,
+      "filename": "luke-marinovic-undercurrent-laptop-on-lap-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-laptop-on-lap-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 77390,
+      "quality": 78,
+      "alt": "Luke Marinovic with a laptop on his lap in a cream lounge chair, looking at the camera.",
+      "shows": "Laptop on lap in the lounge chair, to camera.",
+      "topic_fit": [
+        "at-laptop",
+        "portrait"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-35.jpg"
+    },
+    {
+      "n": 36,
+      "filename": "luke-marinovic-undercurrent-laptop-on-lap-close-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-laptop-on-lap-close-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 71922,
+      "quality": 78,
+      "alt": "Luke Marinovic with a laptop on his lap, close frame, cream lounge chair and steel wall behind.",
+      "shows": "Closer, laptop on lap, to camera.",
+      "topic_fit": [
+        "at-laptop",
+        "portrait"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-36.jpg"
+    },
+    {
+      "n": 37,
+      "filename": "luke-marinovic-undercurrent-overshirt-standing-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-overshirt-standing-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 59529,
+      "quality": 78,
+      "alt": "Luke Marinovic standing in a dark overshirt with his hands in his pockets, smiling, on a light backdrop.",
+      "shows": "Standing, dark overshirt, hands in pockets, smiling.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-37.jpg"
+    },
+    {
+      "n": 38,
+      "filename": "luke-marinovic-undercurrent-overshirt-standing-grin-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-overshirt-standing-grin-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 57738,
+      "quality": 78,
+      "alt": "Luke Marinovic grinning in a dark overshirt, hands in his pockets, on a light backdrop.",
+      "shows": "Same as 37, grinning.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-38.jpg"
+    },
+    {
+      "n": 39,
+      "filename": "luke-marinovic-undercurrent-overshirt-full-length-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-overshirt-full-length-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 54111,
+      "quality": 78,
+      "alt": "Luke Marinovic standing in a dark overshirt and black t-shirt on a light backdrop.",
+      "shows": "Standing, overshirt, a little wider.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-39.jpg"
+    },
+    {
+      "n": 40,
+      "filename": "luke-marinovic-undercurrent-black-tee-light-backdrop-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-black-tee-light-backdrop-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 47758,
+      "quality": 78,
+      "alt": "Luke Marinovic smiling in a black t-shirt on a light backdrop, half length.",
+      "shows": "Half length, black tee, smiling, light backdrop.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-40.jpg"
+    },
+    {
+      "n": 41,
+      "filename": "luke-marinovic-undercurrent-steel-desk-hand-on-chin-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-steel-desk-hand-on-chin-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 78834,
+      "quality": 78,
+      "alt": "Luke Marinovic leaning on a steel desk with his hand on his chin, laptop open beside him.",
+      "shows": "Leaning on the steel desk, hand on chin, laptop.",
+      "topic_fit": [
+        "portrait",
+        "at-laptop"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-41.jpg"
+    },
+    {
+      "n": 42,
+      "filename": "luke-marinovic-undercurrent-steel-desk-hand-on-chin-smiling-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-steel-desk-hand-on-chin-smiling-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 58300,
+      "quality": 78,
+      "alt": "Luke Marinovic smiling with his hand on his chin at a steel desk, laptop open.",
+      "shows": "Same as 41, smiling, a touch wider.",
+      "topic_fit": [
+        "portrait",
+        "at-laptop"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-42.jpg"
+    },
+    {
+      "n": 43,
+      "filename": "luke-marinovic-undercurrent-steel-desk-laptop-wide-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-steel-desk-laptop-wide-melbourne.jpg",
+      "width": 1800,
+      "height": 1200,
+      "orientation": "landscape",
+      "bytes": 49419,
+      "quality": 78,
+      "alt": "Luke Marinovic leaning on a steel desk beside an open laptop, looking at the camera.",
+      "shows": "At the steel desk with the laptop, to camera, wide frame.",
+      "topic_fit": [
+        "portrait",
+        "at-laptop"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-43.jpg"
+    },
+    {
+      "n": 44,
+      "filename": "luke-marinovic-undercurrent-steel-desk-typing-wide-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-steel-desk-typing-wide-melbourne.jpg",
+      "width": 1800,
+      "height": 1200,
+      "orientation": "landscape",
+      "bytes": 56592,
+      "quality": 78,
+      "alt": "Luke Marinovic typing on a laptop at a steel desk, eyes on the screen.",
+      "shows": "Typing at the steel desk, wide frame.",
+      "topic_fit": [
+        "at-laptop",
+        "working"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-44.jpg"
+    },
+    {
+      "n": 45,
+      "filename": "luke-marinovic-undercurrent-steel-desk-typing-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-steel-desk-typing-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 53439,
+      "quality": 78,
+      "alt": "Luke Marinovic looking down at his laptop and typing at a steel desk.",
+      "shows": "Typing, looking down at the laptop, upright frame.",
+      "topic_fit": [
+        "at-laptop",
+        "working"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-45.jpg"
+    },
+    {
+      "n": 46,
+      "filename": "luke-marinovic-undercurrent-standing-at-laptop-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-standing-at-laptop-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 56284,
+      "quality": 78,
+      "alt": "Luke Marinovic standing at a steel bench, typing on an open laptop.",
+      "shows": "Standing at the bench, typing.",
+      "topic_fit": [
+        "at-laptop",
+        "working"
+      ],
+      "hero_pick": true,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-46.jpg"
+    },
+    {
+      "n": 47,
+      "filename": "luke-marinovic-undercurrent-steel-desk-arms-folded-close-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-steel-desk-arms-folded-close-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 75321,
+      "quality": 78,
+      "alt": "Luke Marinovic leaning on a steel desk with his arms folded, looking at the camera, close frame.",
+      "shows": "Arms folded on the steel desk, close, to camera.",
+      "topic_fit": [
+        "portrait",
+        "at-laptop"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-47.jpg"
+    },
+    {
+      "n": 48,
+      "filename": "luke-marinovic-undercurrent-steel-desk-arms-folded-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-steel-desk-arms-folded-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 77310,
+      "quality": 78,
+      "alt": "Luke Marinovic with his arms folded on a steel desk, laptop beside him, looking straight at the camera.",
+      "shows": "Arms folded on the desk, straight to camera.",
+      "topic_fit": [
+        "portrait",
+        "at-laptop"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-48.jpg"
+    },
+    {
+      "n": 49,
+      "filename": "luke-marinovic-undercurrent-steel-desk-arms-folded-portrait-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-steel-desk-arms-folded-portrait-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 68241,
+      "quality": 78,
+      "alt": "Luke Marinovic with his arms folded on a steel desk beside a laptop, slight smile.",
+      "shows": "Arms folded beside the laptop, slight smile.",
+      "topic_fit": [
+        "portrait",
+        "at-laptop"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-49.jpg"
+    },
+    {
+      "n": 50,
+      "filename": "luke-marinovic-undercurrent-steel-desk-smiling-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-steel-desk-smiling-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 67818,
+      "quality": 78,
+      "alt": "Luke Marinovic smiling, arms folded on a steel desk, laptop open beside him.",
+      "shows": "Arms folded beside the laptop, smiling.",
+      "topic_fit": [
+        "portrait",
+        "at-laptop"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-50.jpg"
+    },
+    {
+      "n": 51,
+      "filename": "luke-marinovic-undercurrent-cap-steel-desk-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-cap-steel-desk-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 68520,
+      "quality": 78,
+      "alt": "Luke Marinovic in a cap, arms folded on a steel desk beside an open laptop.",
+      "shows": "In a cap, arms folded at the desk.",
+      "topic_fit": [
+        "portrait",
+        "at-laptop"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-51.jpg"
+    },
+    {
+      "n": 52,
+      "filename": "luke-marinovic-undercurrent-cap-steel-desk-close-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-cap-steel-desk-close-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 77959,
+      "quality": 78,
+      "alt": "Luke Marinovic in a cap with his arms folded on a steel desk, close frame.",
+      "shows": "In a cap, closer.",
+      "topic_fit": [
+        "portrait",
+        "at-laptop"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-52.jpg"
+    },
+    {
+      "n": 53,
+      "filename": "luke-marinovic-undercurrent-sling-chair-arc-lamp-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-sling-chair-arc-lamp-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 72428,
+      "quality": 78,
+      "alt": "Luke Marinovic reclining in a black sling chair under a chrome arc floor lamp.",
+      "shows": "Reclining under the arc lamp, wide.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-53.jpg"
+    },
+    {
+      "n": 54,
+      "filename": "luke-marinovic-undercurrent-sling-chair-thinking-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-sling-chair-thinking-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 61063,
+      "quality": 78,
+      "alt": "Luke Marinovic in a sling chair with his hand on his chin, looking up, under an arc lamp.",
+      "shows": "Hand on chin, looking up, arc lamp.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-54.jpg"
+    },
+    {
+      "n": 55,
+      "filename": "luke-marinovic-undercurrent-sling-chair-hand-on-chin-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-sling-chair-hand-on-chin-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 65367,
+      "quality": 78,
+      "alt": "Luke Marinovic reclining with his hand on his chin, looking away, under a chrome arc lamp.",
+      "shows": "Hand on chin, looking away, arc lamp.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-55.jpg"
+    },
+    {
+      "n": 56,
+      "filename": "luke-marinovic-undercurrent-sling-chair-looking-away-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-sling-chair-looking-away-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 59602,
+      "quality": 78,
+      "alt": "Luke Marinovic reclining in a black sling chair, looking out of frame, arc lamp overhead.",
+      "shows": "Looking out of frame, arc lamp.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-56.jpg"
+    },
+    {
+      "n": 57,
+      "filename": "luke-marinovic-undercurrent-sling-chair-relaxed-melbourne.jpg",
+      "path": "/images/luke-2026/luke-marinovic-undercurrent-sling-chair-relaxed-melbourne.jpg",
+      "width": 1200,
+      "height": 1800,
+      "orientation": "portrait",
+      "bytes": 59858,
+      "quality": 78,
+      "alt": "Luke Marinovic relaxed in a black sling chair, hands folded, under a chrome arc lamp.",
+      "shows": "Hands folded, relaxed, arc lamp.",
+      "topic_fit": [
+        "portrait"
+      ],
+      "hero_pick": false,
+      "source_file": "Allyjana Marie Creative - Undercurrent Brand Shoot 2026-57.jpg"
+    }
+  ]
+}

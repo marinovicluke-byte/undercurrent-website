@@ -3,6 +3,9 @@
 // ChatGPT Search + Copilot, Bravebot powers Claude's live retrieval. Get the
 // strict `*` disallow because audit reports are user-specific.
 // aiBots: AI training + on-demand fetchers. Looser disallow.
+// the article blocks board is a design record (noindex in its own head), not a page
+const DISALLOW = ['/api/', '/article-blocks-concepts']
+
 export default function robots() {
   const searchBots = [
     'Bingbot',
@@ -30,17 +33,17 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/'],
+        disallow: DISALLOW,
       },
       ...searchBots.map((agent) => ({
         userAgent: agent,
         allow: '/',
-        disallow: ['/api/'],
+        disallow: DISALLOW,
       })),
       ...aiBots.map((agent) => ({
         userAgent: agent,
         allow: '/',
-        disallow: ['/api/'],
+        disallow: DISALLOW,
       })),
     ],
     sitemap: 'https://undercurrentautomations.com/sitemap.xml',

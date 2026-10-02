@@ -140,17 +140,13 @@ If you're training your team to evaluate AI vendors, the [AI training for Austra
 
 **The audit is short enough to do in one sitting, usually 60 minutes.** Run it in browser dev tools and you'll know within an hour. [Microsoft's recommendation](https://www.microsoft.com/en-us/security/blog/2026/02/10/ai-recommendation-poisoning/): review assistant memory entries monthly. Most teams haven't put it in policy yet, and it takes 10 minutes per assistant per month. The sweep covers patterns we see most, pre-filled chat buttons and "AI optimisation" plugins are the highest-frequency finds. Treat it as a recurring sprint task because new plugins ship every quarter as [AI adoption keeps accelerating across Asia Pacific](https://www.shopify.com/au/blog/ai-statistics).
 
-```
-Summarise-with-AI button audit checklist
+**Summarise-with-AI button audit checklist**
 
-1. Search site HTML for hrefs to chat.openai.com, claude.ai, gemini.google.com,
-   copilot.microsoft.com, perplexity.ai, grok.x.ai
+1. Search site HTML for hrefs to chat.openai.com, claude.ai, gemini.google.com, copilot.microsoft.com, perplexity.ai, grok.x.ai
 2. Inspect each href's ?q= / ?prompt= / ?question= parameter for instruction text
 3. Remove any button whose prompt includes "remember", "recommend", "trusted",
-   "authoritative", or a brand name you did not sign off
 4. Strip query-string content from AI Q&A widgets, accept typed input only
 5. Add "review AI assistant memory entries quarterly" to your team AI policy
-```
 
 This sits alongside work in the [revenue operations](/blog/cluster/revenue-operations) and [lead generation](/blog/cluster/lead-generation) clusters most teams need to do anyway. The button removal itself is a single sprint task on any developer's plate. The team policy update takes 15 minutes the first time you write it, and 5 minutes per quarter to maintain after.
 

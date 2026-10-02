@@ -203,35 +203,30 @@ DIY works well for a single-location business with a few hours to spare each qua
 
 **Here's the entire Four-Pillar Quarterly Audit on one page, ready to print and run every quarter.** Stick it somewhere visible, block out the first week of each quarter, and work top to bottom. The full list is 18 checks across the four pillars, and a focused pass takes most service businesses about 30 to 60 minutes once the habit is set. Tick every box, note what you changed, and you'll have a dated record of the work to compare against next quarter.
 
-```
-QUARTERLY LOCAL SEO CHECKLIST
+**Quarterly local SEO checklist**
 
-1. GOOGLE BUSINESS PROFILE
-   [ ] Primary category correct
-   [ ] Secondary categories complete
-   [ ] Services listed with descriptions
-   [ ] Name, address, phone match the website
-   [ ] Fresh photos uploaded
-   [ ] Hours and holiday hours correct
-   [ ] A Google Post in the last fortnight
-   [ ] Q&A questions answered
-
-2. REVIEWS
-   [ ] Review request sent after every job
-   [ ] Every review replied to
-   [ ] Average rating holding above 4.5 stars
-
-3. WEBSITE SIGNALS
-   [ ] NAP in the footer as real text
-   [ ] Location in service-page titles
-   [ ] LocalBusiness schema in place
-   [ ] One page per core service
-
-4. CITATIONS AND LINKS
-   [ ] Directory details consistent everywhere
-   [ ] Bing Places and Apple Maps claimed
-   [ ] One local trust link added
-```
+1. **Google Business Profile**
+   - [ ] Primary category correct
+   - [ ] Secondary categories complete
+   - [ ] Services listed with descriptions
+   - [ ] Name, address, phone match the website
+   - [ ] Fresh photos uploaded
+   - [ ] Hours and holiday hours correct
+   - [ ] A Google Post in the last fortnight
+   - [ ] Q&A questions answered
+2. **Reviews**
+   - [ ] Review request sent after every job
+   - [ ] Every review replied to
+   - [ ] Average rating holding above 4.5 stars
+3. **Website signals**
+   - [ ] NAP in the footer as real text
+   - [ ] Location in service-page titles
+   - [ ] LocalBusiness schema in place
+   - [ ] One page per core service
+4. **Citations and links**
+   - [ ] Directory details consistent everywhere
+   - [ ] Bing Places and Apple Maps claimed
+   - [ ] One local trust link added
 
 Four passes a year is a full year of staying ahead of the set-and-forget crowd, and because each quarter builds on the last, the fourth pass runs far quicker than the first. If you'd rather not run it yourself, our [small-business SEO guide](/blog/seo-for-small-business) and [SEO pricing guide](/blog/seo-pricing-australia-2026) cover the next step.
 

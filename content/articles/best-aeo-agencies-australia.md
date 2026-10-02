@@ -39,14 +39,13 @@ If you run a small business in Australia and you've started getting pitches for 
 
 **The best AEO agency in Australia ships work you can see and a report that ties it to outcomes.** A monthly AEO report is a document that lists what content went live, what schema changed, and which AI assistants now name you, compared with last month. Concretely, each month you should get [new content built around real buyer questions](/blog/what-is-answer-engine-optimisation) (expect at least 2,000 words of genuinely new pages or substantial rewrites), schema and entity changes, a [citation check against named prompts](/blog/what-is-ai-search-optimisation-australia), and next month's plan. The point of the report is so a sceptical business partner can read it and see exactly what their money bought. Here's the shape of a monthly report worth actually paying for:
 
-```
-MONTHLY AEO REPORT - what a real one shows you
-- prompts tracked:       the 12 to 20 buyer questions you actually care about
-- citation status:       which AI assistants name you, on which prompts, vs last month
-- content shipped:       URLs published this month + the prompt each one targets
-- schema + entity work:  what markup changed, which "about" facts were added
-- next month's plan:     the 3 to 5 prompts you're chasing next and why
-```
+**Monthly AEO report (what a real one shows you)**
+
+- **Prompts tracked:** the 12 to 20 buyer questions you actually care about
+- **Citation status:** which AI assistants name you, on which prompts, vs last month
+- **Content shipped:** URLs published this month + the prompt each one targets
+- **Schema + entity work:** what markup changed, which "about" facts were added
+- **Next month's plan:** the 3 to 5 prompts you're chasing next and why
 
 If a proposal can't describe a deliverable in that much detail, it isn't a plan, it's a holding pattern. Ask for last quarter's report for a client like you, and [a frank comparison of two or three agencies](/blog/au-seo-agencies-ai-search-audit), before you sign anything.
 
