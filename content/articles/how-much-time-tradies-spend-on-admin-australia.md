@@ -1,266 +1,151 @@
 ---
-title: "How Much Time Australian Tradies Spend on Admin"
-description: "Australian tradies lose 8-12 hours per week to admin. The real hourly cost using ABS, Xero and Fair Work data, and what automation gets back."
+title: "How Much Time Tradies Spend on Admin, and How to Reduce It"
+description: "How much time do tradies spend on admin? What Australian surveys show, what it costs you a year, and how to reduce admin time, starting with invoices."
 date: "2026-03-31"
-dateModified: "2026-05-20"
+dateModified: "2026-10-02"
 slug: "how-much-time-tradies-spend-on-admin-australia"
 cluster: "foundations"
 keyword: "how much time tradies spend on admin australia"
 author: "Luke Marinovic"
 level: "beginner"
 readingTime: 8
-summary: "Australian trade and service business owners lose 8 to 12 hours a week to paperwork like invoicing, bookkeeping and quoting. At a $90 AUD per hour billable rate, that costs $34,560 to $43,200 a year in lost work time."
+photo: "/images/luke-2026/luke-marinovic-undercurrent-steel-desk-typing-melbourne.jpg"
+photoFocus: "50% 70%"
 faqs:
-  - q: 'How many hours per week do Australian tradies spend on admin tasks?'
-    a: 'Australian tradies spend 8 to 12 hours a week on admin. That comes from Xero Small Business Insights 2024 and ABS data on small business work patterns. It covers invoicing, bookkeeping, quoting, compliance paperwork and job scheduling.'
-  - q: 'What admin tasks take the most time for trade business owners in Australia?'
-    a: 'The Tradie Admin Triangle: invoicing and chasing payments (2-3 hours a week), bookkeeping and expense tracking (2-4 hours), and scheduling plus client comms (1-2 hours). Quoting and compliance paperwork add another 2-4 hours on top.'
-  - q: 'How much does admin cost a trade business in Australia per year?'
-    a: 'At $90 AUD an hour billable, 10 hours a week of admin costs $43,200 a year in lost work. Even at 8 hours a week, that is $34,560 a year. Money you could have earned on the tools instead of pushing paper.'
-  - q: 'What is the average hourly rate for plumbers and electricians in Australia?'
-    a: 'Plumbers charge $90 to $120 AUD an hour on average. Licensed electricians bill $95 to $130 AUD an hour. Rates come from Fair Work Commission award data and IBISWorld industry reports. Sydney and Melbourne sit at the higher end.'
-  - q: 'Which admin tasks should tradies automate first to save the most time?'
-    a: 'Start with the first side of the Tradie Admin Triangle: invoicing and payment chases (saves 2-3 hours a week). Then expense tracking (saves 1-2 hours). Then scheduling and client comms (saves 1-2 hours). These three usually claw back 6 to 8 hours a week inside the first month.'
-  - q: 'How much time can automation save for Australian trade businesses?'
-    a: 'Automation usually claws back 6 to 8 hours a week, based on UnderCurrent Automations builds across Melbourne, Brisbane and Sydney trade businesses. At $90 AUD an hour, that is $540 a week or $25,920 a year back in your pocket.'
+  - q: 'How many hours a week do tradies work in Australia?'
+    a: 'Full-time plumbers in Australia work an average of 44 hours a week, and electricians average 45. Jobs and Skills Australia takes those figures from the 2021 Census. Admin sits inside those hours or on top of them. If five go on quotes and invoices, that''s more than a tenth of the week unpaid. Most of it happens at night or on the weekend, so it rarely gets counted as work.'
+  - q: 'Should tradies outsource admin or automate it?'
+    a: 'Tradies can outsource admin to a virtual assistant or bookkeeper, automate it, or do both. Outsourcing suits work that needs judgement, like odd transactions or tricky customer emails. Automation suits work that repeats the same way, like invoices and payment reminders. Outsourcing costs you every month you use it. Automation is mostly paid up front. Automate the repeats first, then outsource what''s left.'
+  - q: 'Is ServiceM8 or Tradify better for reducing admin time?'
+    a: 'ServiceM8 and Tradify are both job management apps used by Australian tradies. Both turn jobs into quotes and invoices, and both connect to Xero. Neither is best for every trade. The right one fits how your jobs already run. If you can, run a real week of jobs through each one before you commit. Check how each handles your quotes.'
+  - q: 'What admin records does a tradie have to keep?'
+    a: 'A tradie running a business has to keep most tax records for 5 years, according to the ATO''s record-keeping rules. Records can be kept digitally, as long as they''re kept safe and can be read when the ATO asks. Automation helps here because each invoice and receipt lands in one labelled place, instead of a folder in the van.'
+  - q: 'How long does it take to automate tradie admin?'
+    a: 'Turning on invoice reminders in an app like Xero is a settings change, not a project. You''re switching on a feature you already pay for. A custom workflow that joins your job app, inbox and accounts usually takes a few weeks. Most of that time goes on agreeing the steps and testing them with real jobs. Start with one job so you see a result quickly.'
 ---
-# How Much Time Australian Tradies Spend on Admin
+# How Much Time Tradies Spend on Admin, and How to Reduce It
 
-> **Australian tradies lose 8 to 12 hours a week to admin work.** At $80 to $100 AUD an hour billable, that is $4,000 to $7,200 a year in lost work time. The data comes from Xero Small Business Insights 2024 and the Australian Bureau of Statistics. Hours you could have spent on the tools, earning.
+> **Quick Answer:** **Most Australian tradies lose hours every week to admin, and quoting, scheduling and invoicing take the biggest share.**
+>
+> - 62% of construction businesses spend more time on quotes, invoices and scheduling than on the tools.
+> - Ten admin hours a week at $90 an hour is $43,200 a year.
+> - Reduce admin time by fixing invoices first.
 
-It is 5pm. The kids are home. You are still at the kitchen table doing paperwork.
+It's 8pm on a Thursday and the van's finally unpacked. Dinner's done, but three quotes still aren't written and Monday's invoices haven't gone out.
 
-This is not a one-off. [Xero Small Business Insights 2024](https://www.xero.com/au/resources/small-business-insights/) says Australian small business owners spend 10.5 hours a week on admin. For tradies the number sits at the top of that range. Plumbers, sparkies, builders, HVAC techs all push paper job by job, with extra weight from compliance and vehicle paperwork.
+Here's how much time tradies spend on admin, what it costs you, and the order to fix it in.
 
-The [Australian Bureau of Statistics](https://www.abs.gov.au) says sole traders and small business owners with one to four staff work 44 hours a week. Eight to twelve of those hours do not earn a cent. They keep the business alive.
+## How many hours a week do Australian tradies spend on admin?
 
-If you want to skip the math and just see where your hours are going, [book a free 30-minute audit](/audit). Otherwise read on. Here is where the time goes, what it costs, and how to claw it back.
+**There's no official count, but every trade survey finds admin eats hours each week.** **For many tradies, it takes more time than the paid work.**
 
-## How many hours per week do Australian tradies lose to admin?
+OpenAI paid for a [survey of more than 1,000 Australian businesses](https://plumbingconnection.com.au/slow-customer-follow-up-costing-australian-tradies-work/). In it, 62% of construction firms spent more time quoting, invoicing or scheduling than on the tools. A [hipages survey of over 400 trade firms](https://hipages.com.au/business/blog/admin-automation) found 74% spend up to 5 hours a job on client chat.
 
-**Australian tradies lose 8 to 12 hours a week to admin work, based on Xero 2024 and ABS data.** That is one full working day a week. Over a year it adds up to 416 to 624 hours of unpaid time at the kitchen table.
+The money side adds more. [Dext surveyed 500 Australian owners in 2025](https://dext.com/au/news/half-of-australian-smes-fear-closure-yet-many-still-handle-finances-alone). Of those, 21% spent 21 to 40 or more hours a month on money admin. That's about 5 to 10 hours a week for one owner in five. Your own number matters more than any survey. Admin comes in ten-minute bits, so it's easy to guess low.
 
-Most of it is invisible. You do not clock in to write an invoice. You do it after dinner, on the weekend, or between jobs. So the hours never feel like work, even though they cost you the same.
+## Which admin jobs take tradies the most time?
 
-A plumber in Geelong (name changed for privacy, like every anecdote below) told us he does the books every Sunday afternoon. That is 3 to 4 hours every weekend. A Brisbane sparkie said he stays up until 11pm doing invoices because he does not want to lose tomorrow's work to paperwork.
+**Quoting takes tradies the most admin time, then scheduling, then invoicing.** A [hipages survey reported in April 2024](https://smallbusinessconnections.com.au/could-australias-tradie-shortage-be-caused-admin-overload/) asked which jobs take longest. 77% said quoting, 69% said scheduling and 61% said invoicing.
 
-That is not a job. That is a second shift, and it costs your family the time you cannot get back.
+Why is your team spending hours on admin instead of billable work? Retyping is usually why. The same job details go into the quote, the calendar, the invoice and the books. Each copy is a chance for a mistake, and a phone call to fix it. Every moved job also means calls to the customer, the supplier and maybe a subbie.
 
-## What admin tasks eat the most time?
+Slow quotes cost jobs as well as hours. In the OpenAI survey, 45% of construction firms had lost work by replying too slowly. A fast quote is worth more than a perfect one that arrives late. That's [why tradies lose jobs before quoting](/blog/why-tradies-lose-jobs-before-quoting-australia).
 
-**Three tasks soak up most of the time: invoicing, bookkeeping, and scheduling. We call it the Tradie Admin Triangle.** Each side is its own time sink. Fix all three and you get most of your week back. Fix one and you still get hours.
+## What does admin cost a tradie in a year?
 
-<svg width="100%" viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Tradie Admin Triangle: three sides of weekly admin work. Invoice side 2 to 3 hours per week, expense side 2 to 4 hours per week, schedule side 1 to 2 hours per week.">
-  <title>The Tradie Admin Triangle</title>
-  <desc>Diagram of the three sides of weekly admin work for Australian tradies: invoice (2 to 3 hours), expense (2 to 4 hours), schedule (1 to 2 hours).</desc>
-  <polygon points="320,60 600,330 40,330" fill="none" stroke="#8FAF9F" stroke-width="3"/>
-  <text x="320" y="205" text-anchor="middle" font-size="22" font-weight="700" fill="#F7F3ED">Tradie Admin</text>
-  <text x="320" y="232" text-anchor="middle" font-size="22" font-weight="700" fill="#F7F3ED">Triangle</text>
-  <text x="320" y="38" text-anchor="middle" font-size="17" font-weight="600" fill="#F7F3ED">Invoice side</text>
-  <text x="320" y="55" text-anchor="middle" font-size="13" fill="#F7F3ED" opacity="0.8">2 to 3 hrs/wk</text>
-  <text x="20" y="357" font-size="17" font-weight="600" fill="#F7F3ED">Expense side</text>
-  <text x="20" y="374" font-size="13" fill="#F7F3ED" opacity="0.8">2 to 4 hrs/wk</text>
-  <text x="620" y="357" text-anchor="end" font-size="17" font-weight="600" fill="#F7F3ED">Schedule side</text>
-  <text x="620" y="374" text-anchor="end" font-size="13" fill="#F7F3ED" opacity="0.8">1 to 2 hrs/wk</text>
-</svg>
+**Ten hours of admin a week costs a tradie $43,200 a year at $90 an hour.** That's billable time, worked out over 48 weeks. The $90 sits inside the hourly rates hipages lists for [plumbers, $80 to $200](https://hipages.com.au/article/how_much_does_a_plumber_cost), and [electricians, $80 to $100](https://hipages.com.au/article/how_much_does_an_electrician_cost).
 
-Same shape for every trade. Plumbers, sparkies, builders, roofers, HVAC, painters, landscapers, tilers, the lot. Three buckets:
+**What 10 hours of admin a week costs (swap in your own numbers)**
 
-- **Invoice side:** writing quotes, sending invoices, chasing late payments.
-- **Expense side:** receipts, fuel, materials, BAS prep, tax time.
-- **Schedule side:** booking jobs, client texts, "when are you coming?" calls.
-
-On top sit two smaller jobs that still bite: quotes and compliance paperwork. We will get to those next.
-
-Add it up and you are at 8 to 12 hours a week before you have turned a single screw or laid a single brick.
-
-## How much time does invoicing eat each week?
-
-**Invoicing and chasing payments takes the average tradie 2 to 3 hours a week.** Writing the invoice is the quick part. Chasing the late ones is the slow part, and it never really ends.
-
-Xero's [Small Business Insights](https://www.xero.com/au/resources/small-business-insights/) data shows 44% of Australian small business invoices get paid late. That means follow-up calls, reminder emails, and bank reconciliation work for almost half of every job you ever do. We have written more on [how overdue invoices hurt Australian SME cash flow](/blog/how-overdue-invoices-hurt-australian-sme-cash-flow) if you want the deeper read.
-
-If you do five jobs a week and two get paid late, that is two extra phone calls, two extra emails, and two awkward "any update mate?" texts. Multiply by 50 working weeks and you have done that loop 200 times in a year. None of it billable.
-
-This is the first side of the triangle, and the fastest to fix.
-
-## How much time does bookkeeping eat each week?
-
-**Bookkeeping and expense tracking eats 2 to 4 hours a week for most Australian tradies.** Every fuel receipt, every Bunnings run, every coffee with a client has to be logged, sorted into a category, and matched to a job.
-
-The ABS says 68% of sole traders still do this by hand. Spreadsheets, shoeboxes, glove-box folders full of curled-up dockets. Then a panic catch-up the week before BAS is due, when half the receipts have already faded.
-
-If you do this on a Friday night you are losing prime family time. If you do it monthly you have lost the receipts. If you do it quarterly you have lost the plot, and your accountant charges you to fix the mess.
-
-This is the second side of the triangle. Receipts in, receipts out, all year round.
-
-## How much time does quoting and scheduling eat?
-
-**Quoting takes 1 to 2 hours a week and scheduling takes another 1 to 2 hours.** Add compliance paperwork at the same rate and you have 3 to 6 extra hours sitting on top of the triangle.
-
-Quoting is the slow killer. Materials. Labour. Travel. Contingency. Format it so the client gets it. Send it. Then a three-week wait while the lead goes cold and the client gets quotes from two other blokes. There is more on [why tradies lose jobs before quoting](/blog/why-tradies-lose-jobs-before-quoting-australia) if that pattern sounds familiar.
-
-Scheduling looks easy until it is not. Clients call wanting updates. Materials show up late. Subbies move. Emergency callouts cut through the day.
-
-[Fair Work Commission](https://www.fwc.gov.au) rules on pay slips, leave and record-keeping add another layer if you have anyone on the payroll. None of it bills, all of it has to be right.
-
-## What is the real hourly cost for an Australian tradie?
-
-**The average Australian tradie needs to bill around $90 AUD an hour to cover costs and take home a fair wage.** Below that, the numbers do not work. Above that, you start competing on rate instead of on quality.
-
-Here is what the main trades break down to in 2024:
-
-- **Plumbers:** $90 to $120 AUD an hour, per Fair Work Commission award data for qualified plumbers.
-- **Sparkies:** $95 to $130 AUD an hour, per the Electrical, Electronic and Communications Contracting Award.
-- **Residential builders:** $60 to $90 AUD an hour, per [IBISWorld](https://www.ibisworld.com) construction data. Custom Sydney work can hit $120+.
-- **HVAC and roofers:** $85 to $120 AUD an hour, depending on certification and call-out distance.
-
-<svg width="100%" viewBox="0 0 640 300" role="img" aria-label="Australian tradie billable rates 2024 in AUD per hour. Plumbers 90 to 120. Sparkies 95 to 130. Builders 60 to 90. HVAC and roofers 85 to 120.">
-  <title>Australian tradie billable rates (2024)</title>
-  <desc>Horizontal bar chart of AUD per hour billable rates. Plumber 90 to 120. Sparkie 95 to 130. Builder 60 to 90. HVAC 85 to 120.</desc>
-  <g font-size="14" fill="#F7F3ED" font-family="sans-serif">
-    <text x="10" y="50">Plumber</text>
-    <rect x="372" y="36" width="84" height="20" fill="#8FAF9F"/>
-    <text x="465" y="50">$90 to $120</text>
-    <text x="10" y="100">Sparkie</text>
-    <rect x="386" y="86" width="98" height="20" fill="#5B7A9F"/>
-    <text x="493" y="100">$95 to $130</text>
-    <text x="10" y="150">Builder</text>
-    <rect x="288" y="136" width="84" height="20" fill="#D89B6D"/>
-    <text x="381" y="150">$60 to $90</text>
-    <text x="10" y="200">HVAC</text>
-    <rect x="358" y="186" width="98" height="20" fill="#8FAF9F"/>
-    <text x="465" y="200">$85 to $120</text>
-  </g>
-  <line x1="120" y1="230" x2="540" y2="230" stroke="#F7F3ED" stroke-width="1" opacity="0.4"/>
-  <g font-size="12" fill="#F7F3ED" opacity="0.7">
-    <text x="116" y="250">$0</text>
-    <text x="236" y="250">$50</text>
-    <text x="376" y="250">$100</text>
-    <text x="500" y="250">$150</text>
-  </g>
-  <text x="320" y="285" text-anchor="middle" font-size="13" font-weight="600" fill="#F7F3ED">AUD per hour billable, 2024</text>
-</svg>
-
-| Trade | Hourly rate range (AUD) | Source |
-|---|---|---|
-| Plumber | $90 to $120 | Fair Work Commission 2024 |
-| Sparkie (electrician) | $95 to $130 | Electrical Contracting Award 2024 |
-| Residential builder | $60 to $90 | IBISWorld construction 2024 |
-| HVAC technician / roofer | $85 to $120 | Industry rate, 2024 |
-
-The $90 figure is a fair middle for any trade with a ute and a licence. Use it as your back-of-the-truck cost calculator when you read the rest of this article.
-
-## What does 10 hours of admin per week cost over a year?
-
-**Ten hours a week of admin at $90 AUD an hour costs you $43,200 a year in lost billable time.** Even 8 hours a week costs $34,560. That is the simple arithmetic, and it is before the mental load of carrying it all in your head.
-
-Here is the part that hurts. Ten hours a week is 520 hours a year. That is 13 full 40-hour weeks. A quarter of your working year, spent on paperwork instead of work.
-
-You could have taken 13 weeks off. Or you could have worked those 520 hours on the tools at $90 AUD an hour and earned an extra $46,800. If you bill at $120 an hour, the lost work climbs to $62,400.
-
-This is the hidden cost no tradie ever puts on a quote, but every tradie pays.
+- Admin hours a week, **10**
+- Your hourly rate, **$90**
+- Working weeks a year, **48**
+- = Billable time lost a year, **$43,200**
 
 <!-- calc:tradie-admin -->
 
-## Which side of the Tradie Admin Triangle should you automate first?
+Chasing late payers adds to the bill. [GoCardless surveyed small firms](https://gocardless.com/en-au/blog/pursuing-payments-2025/) in Australia and New Zealand. One in five spend 6 to 12 work days a year chasing debts. Leave it alone and that cost comes back every year. That's before you count the jobs lost to slow quotes.
 
-**Start with the invoice side. It is the biggest time sink and the fastest to fix.** Most tradies save 2 to 3 hours a week inside the first month, with no change to the rest of how they work.
+## How can tradies reduce admin time?
 
-The order matters because the wins compound. Do the three sides in this order:
+**Tradies reduce admin time by making one repeating job run itself, then moving to the next one.** Start with the job that repeats most and follows the same steps every time. Here's what changes when each job stops being typed by hand.
 
-1. **Invoice side first.** Biggest pain, fastest payback, cash in the bank.
-2. **Expense side second.** Steady weekly drag, makes BAS painless.
-3. **Schedule side third.** Quality-of-life fix once the cash is sorted.
-
-Fix one side and you get hours back. Fix all three and you have got the triangle. See the wider list of [simplest small business automation tasks](/blog/simplest-small-business-automation-tasks-australia-2026) for a broader view.
-
-Curious how much time you are losing now? [Get a free business audit](/audit) — ten minutes, a clear read of where your hours go.
-
-## How does invoicing automation work for a tradie?
-
-**Invoicing automation means the invoice writes and sends itself the moment you mark a job done.** Reminders fire at 7, 14 and 30 days overdue. Bank reconciliation runs in the background, matching payments to jobs without you opening a spreadsheet.
-
-The tools most Australian tradies already know:
-
-- **Xero or MYOB** for the accounting side, talking straight to your bank feed.
-- **ServiceM8 or Tradify** for the job-management side that talks to Xero.
-- **Invoice2go** for the simple "just send the invoice from my phone" job.
-
-We have seen tradies cut invoicing from 2 to 3 hours a week down to 15 minutes. The system writes the invoice. The system sends it. The system chases the late ones. You approve the job, watch the money clear, and never open a follow-up email again.
-
-That is one side of the triangle gone, and BAS time gets quieter at the same time.
-
-## How does expense and scheduling automation work?
-
-**Expense and scheduling automation means receipts get logged the moment you photograph them, and clients get updates without you sending a text.** Two sides of the triangle, two simple tools each.
-
-For expenses: **Dext** (used to be Receipt Bank) or the built-in receipt scanner in **Xero**. Snap a photo at the till, the system reads the amount, the date and the supplier, drops it in the right category. A Sydney builder we work with cut his Friday receipt sort from 90 minutes to 10.
-
-For scheduling: **Simpro** or **ServiceM8**. Clients book straight into your calendar. Auto-confirmations fire on booking. "On my way" texts go out automatically when you are 30 minutes away. A Melbourne plumber cut his weekly "when are you coming?" calls from 15 to zero.
-
-Triangle: complete. The three biggest sides now run themselves.
-
-## How much time does automation actually save a tradie?
-
-**Properly built automation claws back 6 to 8 hours a week for the average Australian tradie.** That is $540 a week or $25,920 a year at $90 AUD an hour, based on the trade builds UnderCurrent Automations runs in Melbourne, Brisbane and Sydney.
-
-The numbers in plain English, depending on how many sides of the triangle you fix:
-
-| Setup | Hours per week on admin | Annual cost at $90 AUD/hr |
+| Admin job | Done by hand | Automated |
 |---|---|---|
-| Manual (the kitchen table) | 10 hours | $43,200 lost |
-| Some automation | 4 hours | $17,280 lost |
-| Full triangle automated | 1.5 hours | $6,480 lost |
+| Quote | Typed up at night from site notes | Built from your price list, ready for you to check |
+| Booking | Phone tag and texts back and forth | The customer picks a time and gets a confirmation |
+| Invoice | Written days after the job | Sent when you mark the job done |
+| Chasing payment | Calls and awkward texts | Reminders go out before and after the due date |
+| Receipts | A shoebox until BAS time | A photo at the counter, filed by the app |
 
-A Geelong sparkie we set up got 7 hours back a week. He used 4 of them to take an extra job. He spent the other 3 coaching his kid's footy team. Same business. Better life. Same trade ute in the driveway.
+Off-the-shelf apps cover the common steps. [ServiceM8 syncs invoices to Xero](https://www.servicem8.com/au/xero-integration), and Tradify and Xero both send payment reminders. Some steps are odd, or the apps don't talk. Then UnderCurrent Automations builds a [custom workflow](/automation) that joins them for Australian trade businesses.
 
-## When does automation not help a trade business?
+## How does automated invoice follow-up work for tradies?
 
-**Automation helps least when every job is bespoke and never repeats.** It also helps less under three jobs a week, because there is not enough volume for the time-savings maths to work yet.
+**Automated invoice follow-up sends the invoice when you mark a job done, then sends reminders until it's paid.** You set the wording and the timing once. After that, nobody has to remember to chase. A friendly nudge before the due date feels like service, not pressure.
 
-A custom builder doing two huge jobs a year sees smaller weekly wins than a plumber doing 30 jobs a week. The triangle still works for the custom builder. The payback is slower, and the wins lean toward expense and compliance.
+[Xero sends reminders before and after the due date](https://www.xero.com/au/accounting-software/send-invoices/), then weekly until the invoice is paid. [Tradify's reminders](https://www.tradifyhq.com/au/features/invoicing-software) go out by email or SMS. Either way, the invoice starts from the finished job, not a blank page.
 
-It will not fix the work you want to keep doing yourself either. Quoting a tricky job, talking to a difficult client, deciding what to charge the regular who keeps you afloat — that is your call, not the system's.
+This is the job tradies resent most. In a [2024 hipages survey](https://hipages.com.au/business/blog/admin-automation), 78% said time is wasted chasing quotes, invoices and payments. Late invoices also [squeeze your cash flow](/blog/how-overdue-invoices-hurt-australian-sme-cash-flow), so fixing the follow up pays twice. Keep a person on anything disputed, because a reminder can't settle a complaint about the work.
 
-Automation runs the boring stuff so you can do the human stuff. See [how to use AI to optimise a tradie business](/blog/how-to-use-ai-to-optimise-tradie-business-australia) when you are ready to layer AI on top.
+## What happened when a health business automated its invoices?
 
-## What is the real cost of doing nothing?
+**A health business was writing every invoice by hand, and it took about 10 hours a week.** It isn't a trade, but the job has the same shape as yours. The work gets done, the details get copied, and the invoice goes out.
 
-**Every week you stay manual, you lose another 8 to 12 hours and $720 to $1,080 in billable time.** Over a year that adds up to $37,440 to $56,160. Over five years, $187,200 to $280,800. That is not a sales pitch. That is arithmetic.
+![Luke Marinovic at a white desk with his hands clasped, looking at the camera, laptop open to one side.](/images/luke-2026/luke-marinovic-undercurrent-at-desk-hands-clasped-melbourne.jpg)
 
-But the money is only half of it. The other half is Sunday afternoon spent on invoices instead of watching your kid play sport. Late nights reconciling expenses instead of having dinner with your partner. The constant drag of knowing there is always more paperwork waiting.
+UnderCurrent Automations built the business an invoice generator. Over the engagement, it saved about 10 hours a week on invoicing. For a tradie, ten hours is more than a full day on the tools each week. A tradie's version turns a done job in the job app into a checked invoice in Xero. Across the automation systems UC has shipped, the best first fix is usually the dull weekly job somebody dreads.
 
-You became a tradie to work with your hands and build things. Not to chase payments and file receipts at 11pm on a Tuesday.
+## Which admin job should you automate first?
 
-The fix is not complicated. It is a single decision to stop treating admin like part of the job.
+**Automate the admin job that repeats every week and follows the same steps every time.** For most tradies, that's invoicing and payment follow-up, because it starts the moment the job ends.
 
-## Want a hand fixing this?
+**Find your first job to automate**
 
-**UnderCurrent Automations has built the Tradie Admin Triangle for plumbers, sparkies, builders and HVAC techs across Melbourne, Brisbane and Sydney.** If you want to see what that looks like for your business, [book a free 30-minute chat](/audit). No sales pitch. We will show you where your hours are going and how to claw them back, even if we never work together.
+1. Write down every admin task for one week, with the minutes each one took.
+2. Circle the one that repeats weekly and runs the same way each time.
+3. Note where it starts and ends, such as your job app, inbox or Xero.
+4. Fix that one job, then time it again for two weeks.
+
+The payoff starts small. In the OpenAI survey, 74% of firms already using AI saved at least an hour a week. Another 26% saved seven hours or more. Once one job runs itself, the next [simple automation tasks](/blog/simplest-small-business-automation-tasks-australia-2026) get easier, because the job details live in one place.
+
+## When doesn't automation help a trade business?
+
+**Automation helps least when every job is a one-off and there's little volume.** Take a builder doing two big custom jobs a year. That builder has fewer repeats than a plumber doing 30 small jobs a week. The wins still come, but they arrive slower.
+
+It also won't do the parts that need you. Pricing a tricky job, calming an upset customer and deciding who gets a discount all stay with you. Automation takes the typing and chasing, and [AI in a tradie business](/blog/how-to-use-ai-to-optimise-tradie-business-australia) can help with drafting once those basics run.
+
+Admin you do once a year, like a licence renewal, is rarely worth automating. A calendar reminder will do. Automation also needs clean inputs. If job notes live in three places, fix that first, or the system just copies the mess faster.
 
 ## Frequently Asked Questions
 
-### How many hours per week do Australian tradies spend on admin tasks?
+### How many hours a week do tradies work in Australia?
 
-Australian tradies spend 8 to 12 hours a week on admin. That comes from Xero Small Business Insights 2024 and ABS data on small business work patterns. It covers invoicing, bookkeeping, quoting, compliance paperwork and job scheduling.
+Full-time [plumbers](https://www.jobsandskills.gov.au/data/occupation-and-industry-profiles/occupations-anzsco/3341-plumbers) in Australia work an average of 44 hours a week, and [electricians](https://www.jobsandskills.gov.au/data/occupation-and-industry-profiles/occupations-anzsco/3411-electricians) average 45. Jobs and Skills Australia takes those figures from the 2021 Census. Admin sits inside those hours or on top of them. If five go on quotes and invoices, that's more than a tenth of the week unpaid. Most of it happens at night or on the weekend, so it rarely gets counted as work.
 
-### What admin tasks take the most time for trade business owners in Australia?
+### Should tradies outsource admin or automate it?
 
-The Tradie Admin Triangle: invoicing and chasing payments (2-3 hours a week), bookkeeping and expense tracking (2-4 hours), and scheduling plus client comms (1-2 hours). Quoting and compliance paperwork add another 2-4 hours on top.
+Tradies can outsource admin to a virtual assistant or bookkeeper, automate it, or do both. Outsourcing suits work that needs judgement, like odd transactions or tricky customer emails. Automation suits work that repeats the same way, like invoices and payment reminders. Outsourcing costs you every month you use it. Automation is mostly paid up front. Automate the repeats first, then outsource what's left.
 
-### How much does admin cost a trade business in Australia per year?
+### Is ServiceM8 or Tradify better for reducing admin time?
 
-At $90 AUD an hour billable, 10 hours a week of admin costs $43,200 a year in lost work. Even at 8 hours a week, that is $34,560 a year. Money you could have earned on the tools instead of pushing paper.
+ServiceM8 and Tradify are both job management apps used by Australian tradies. Both turn jobs into quotes and invoices, and both connect to Xero. Neither is best for every trade. The right one fits how your jobs already run. If you can, run a real week of jobs through each one before you commit. Check how each handles your quotes.
 
-### What is the average hourly rate for plumbers and electricians in Australia?
+### What admin records does a tradie have to keep?
 
-Plumbers charge $90 to $120 AUD an hour on average. Licensed electricians bill $95 to $130 AUD an hour. Rates come from Fair Work Commission award data and IBISWorld industry reports. Sydney and Melbourne sit at the higher end.
+A tradie running a business has to keep most tax records for 5 years, according to the [ATO's record-keeping rules](https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/record-keeping-for-business/overview-of-record-keeping-rules-for-business). Records can be kept digitally, as long as they're kept safe and can be read when the ATO asks. Automation helps here because each invoice and receipt lands in one labelled place, instead of a folder in the van.
 
-### Which admin tasks should tradies automate first to save the most time?
+### How long does it take to automate tradie admin?
 
-Start with the first side of the Tradie Admin Triangle: invoicing and payment chases (saves 2-3 hours a week). Then expense tracking (saves 1-2 hours). Then scheduling and client comms (saves 1-2 hours). These three usually claw back 6 to 8 hours a week inside the first month.
+Turning on invoice reminders in an app like Xero is a settings change, not a project. You're switching on a feature you already pay for. A custom workflow that joins your job app, inbox and accounts usually takes a few weeks. Most of that time goes on agreeing the steps and testing them with real jobs. Start with one job so you see a result quickly.
 
-### How much time can automation save for Australian trade businesses?
+## Related Reading
 
-Automation usually claws back 6 to 8 hours a week, based on UnderCurrent Automations builds across Melbourne, Brisbane and Sydney trade businesses. At $90 AUD an hour, that is $540 a week or $25,920 a year back in your pocket.
+- [The hidden cost of manual work in a trade business](/blog/hidden-cost-manual-trade-business-australia): where the unpaid hours hide
+- [Sending an instant follow-up email to new leads](/blog/how-to-send-instant-follow-up-email-to-leads-automatically-australia): answer enquiries before a rival does
+- [What AI automation is, in plain English](/blog/what-is-ai-automation-australia): how it reads messy jobs and emails
+- [eInvoicing for small business](/blog/einvoicing-small-business-australia-guide): invoices that land straight in a customer's accounts
+- [Why tradies don't get Google reviews](/blog/why-tradies-dont-get-google-reviews-australia): another job worth automating
+- [AI automation in Australia](/ai-automation-australia): what a build looks like from first call to handover
+
+Want to know which admin job to fix first? [Tell us about your week](/contact). UnderCurrent Automations will map where your admin hours go and show you the one fix worth making first. It takes 30 minutes and costs nothing.
