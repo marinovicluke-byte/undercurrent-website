@@ -82,7 +82,7 @@ Those questions are the right ones. The rest of this article is built around ans
 - **Sampling tilts toward agencies, not against them.** Where larger agency blogs were sampled, the selection biased toward each agency's most-trafficked content, their flagship work, not their weakest.
 - **Weights were built on citation correlation, not opinion.** Categories carrying the most points are the ones where movement in the variable consistently moved citation rates in our own tracking data.
 
-**What we did not solve**
+**What we left unsolved**
 
 - **We chose the agencies.** The 22-domain list is a judgement call. A different sampler might have produced a different industry average.
 - **We chose the rubric.** Other valid frameworks exist for measuring content quality. This one is built specifically for AI search extraction; agencies optimising for other goals will look different through different lenses.
