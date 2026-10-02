@@ -53,11 +53,11 @@ This guide cuts through the acronym soup (GEO, AEO, LLMO , they're basically the
 
 When someone types "best electrician in Brunswick" into Perplexity, the AI retrieves pages it considers authoritative, extracts specific passages, and weaves them into a conversational answer. Your job is to make those passages easy to find and extract.
 
-The mechanics come down to three things:
+**The mechanics come down to three things**
 
-1. **Answer-first writing** , lead every page and section with a direct answer, not a preamble
-2. **Structured data** , JSON-LD schema helps AI engines understand what your page is about
-3. **Entity density** , named tools, locations, services, and people give AI engines the relational context to place your business in a knowledge graph
+- **Answer-first writing** , lead every page and section with a direct answer, not a preamble
+- **Structured data** , JSON-LD schema helps AI engines understand what your page is about
+- **Entity density** , named tools, locations, services, and people give AI engines the relational context to place your business in a knowledge graph
 
 ---
 
