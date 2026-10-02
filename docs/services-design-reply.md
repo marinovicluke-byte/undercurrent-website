@@ -63,3 +63,13 @@ The board now has The problem (section 02): the live grid, then four ideas built
 - **Strike:** each title crossed through in the page colour as you scroll to it.
 
 The four pages' problem sections are unchanged.
+
+## Stage 4, the problem section, round two (2026-10-02)
+
+Luke on round one: "you've just designed things that are already on our site and nothing original". Round two keeps what he liked (the striped 5 beside the opening line, Index's small number over a large title with the grey line, the live grid's white and grey) and gives each idea one new thing the reader does with the five complaints:
+- **That's us (pick):** tap a row to tick it "That's us" (a real checkbox; tapping anywhere on the row works). A tally pinned to the section's foot counts the ticks, "2 of 5 are yours". CSS only, using counters and `:has()`. Tested: tapping a title ticks the row, Space toggles from the keyboard, and the tally follows.
+- **Costs us most:** one question, "Which one costs you most?", as a radio group in a fieldset. The pick takes the page colour's grained ground and the other four step back to grey.
+- **Pile-up:** the problems slide up and stick under each other into a stack of five tabs (sticky positioning, pure CSS).
+- **Tally:** the numbers become tally marks, one stroke more each row and the newest drawn in the page colour as you reach it, until the fifth crosses the four.
+
+Interface text added: "That's us", "of 5 are yours", "Which one costs you most?" and "Costs us most". The problem copy is unchanged. Round one is kept below on the board for comparison. Pages untouched.
