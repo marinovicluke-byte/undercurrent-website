@@ -23,7 +23,11 @@ faqs:
 ---
 # How to Rank a Melbourne Buyers Agency on AI Search
 
-> **Quick Answer:** Melbourne buyers agencies average just 45/100 on our AI search and SEO rubric, 34 points below UC's own content benchmark. The core problem isn't keyword strategy. It's structural: missing quick-answer blocks, broken schema, no llms.txt, and prose where comparison tables should be. Fix the structure, and AI engines have something to extract and cite.
+> **Quick Answer:** **To rank a Melbourne buyers agency in AI search, fix the site's structure first, because the vertical averages just 45/100 on our rubric.**
+> - That's 34 points below UC's own content benchmark
+> - Add quick-answer blocks and fix broken schema
+> - Publish an llms.txt and use comparison tables, not prose
+> - Give AI engines something to extract and cite
 
 ![Australian Melbourne buyers agency AI search ranking five-step optimisation workflow diagram](./body-1.jpg)
 

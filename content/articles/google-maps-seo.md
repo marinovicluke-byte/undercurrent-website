@@ -26,7 +26,11 @@ faqs:
 
 Google Maps SEO is the work that decides whether your business shows up in the local pack, the three-result box with a map pinned above the regular search results. Get it right and you reach customers at the exact moment they're ready to call. Get it wrong and you're invisible to the people standing closest to your door.
 
-> **Quick Answer:** Google Maps SEO is the practice of ranking a business in Google's local pack and Maps results. Google ranks the pack on three factors it names openly: relevance, distance, and prominence. The fastest wins come from a complete Google Business Profile, steady review growth, and a website whose pages match the services on that profile. Build the profile first.
+> **Quick Answer:** **Google Maps SEO is the practice of ranking a business in Google's local pack and Maps results.**
+> - Google ranks the pack on relevance, distance and prominence
+> - Complete your Google Business Profile first
+> - Grow reviews steadily
+> - Match your website's pages to the services on your profile
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>AI search optimisation workflow for Australian businesses in five steps</title>
