@@ -1,7 +1,8 @@
 // app/blog/[slug]/page.js — the article, the sandbox's Ground skeleton poured
 // with the live markdown. Category ground hero with the quick answer under the
-// title, the rail, the byline with the photo, the body in blocks, FAQ from front-matter,
-// a photo from the rotation (lib/endPhotos.js), the end row, the who card, Read next, the closing band. Schema as before.
+// title, the rail, the byline with the photo, the body in blocks with a photo from the rotation
+// at the h2 nearest its middle (lib/endPhotos.js), FAQ from front-matter,
+// the end row, the who card, Read next, the closing band. Schema as before.
 // A `photo` in front-matter puts a photo from the library beside the title.
 import '@/app/styles/article.css'
 import '@/app/styles/article-blocks.css'
@@ -17,7 +18,7 @@ import { LUKE_PERSON } from '@/lib/schema/person'
 import { categoryOf, CLOSE_LINES, fmtDate, isoDate } from '@/lib/categories'
 import { extractQuickAnswer, stripSection, splitBlocks, decorate } from '@/lib/articleBody'
 import { photoOf } from '@/lib/photos'
-import { endPhotoOf, relatedTo } from '@/lib/endPhotos'
+import { endPhotoOf, photoSpot, relatedTo } from '@/lib/endPhotos'
 
 const SITE_URL = 'https://undercurrentautomations.com'
 const CALC_TOKEN = '<!-- calc:tradie-admin -->'
@@ -115,6 +116,14 @@ export default async function ArticlePage({ params }) {
   const all = getAllArticles()
   const related = relatedTo(slug, all)
   const endPhoto = endPhotoOf(slug, all)
+  // the block the photo closes (-1, the intro), or none: see photoSpot
+  const photoAt = endPhoto ? photoSpot(intro, blocks).at : undefined
+  const midPhoto = endPhoto && (
+    <figure className={`rv ucb-fig${endPhoto.height > endPhoto.width ? ' ucb-fig--tall' : ''}`} style={{ '--i': 5 }}>
+      <Image src={endPhoto.path} width={endPhoto.width} height={endPhoto.height} alt={endPhoto.alt}
+        sizes="(min-width: 641px) 720px, 100vw" />
+    </figure>
+  )
 
   const updated = fm.dateModified || fm.date
   const url = `${SITE_URL}/blog/${slug}`
@@ -197,11 +206,12 @@ export default async function ArticlePage({ params }) {
               <span className="meta__d">Updated <time dateTime={isoDate(updated)}>{fmtDate(updated)}</time><em>·</em>{fm.readingTime || 5} min read</span>
             </div>
             <div className="body">
-              {intro && <div className="blk intro" data-reveal=""><Body html={decorate(intro, { lead: true })} /></div>}
-              {blocks.map(b => (
+              {intro && <div className="blk intro" data-reveal=""><Body html={decorate(intro, { lead: true })} />{photoAt === -1 && midPhoto}</div>}
+              {blocks.map((b, k) => (
                 <div key={b.id} className="blk" data-reveal="" id={b.id}>
                   <h2 className="rv" data-toc={b.toc} dangerouslySetInnerHTML={{ __html: b.title }} />
                   <Body html={decorate(b.html)} />
+                  {photoAt === k && midPhoto}
                 </div>
               ))}
               {faqs.length > 0 && (
@@ -211,12 +221,6 @@ export default async function ArticlePage({ params }) {
                     {faqs.map((f, i) => <details key={i}><summary>{f.question}</summary><p>{f.answer}</p></details>)}
                   </div>
                 </div>
-              )}
-              {endPhoto && (
-                <figure className={`ucb-fig${endPhoto.height > endPhoto.width ? ' ucb-fig--tall' : ''} end__ph`} data-reveal="">
-                  <Image className="rv" src={endPhoto.path} width={endPhoto.width} height={endPhoto.height} alt={endPhoto.alt}
-                    sizes="(min-width: 641px) 720px, 100vw" />
-                </figure>
               )}
             </div>
             <div className="end"><span className="eyebrow">Published <time dateTime={isoDate(fm.date)}>{fmtDate(fm.date)}</time></span><div className="share"><a data-share="li" href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noopener">LinkedIn</a><a data-share="x" href="https://twitter.com/intent/tweet" target="_blank" rel="noopener">X</a><button data-copy="">Copy link</button></div></div>
