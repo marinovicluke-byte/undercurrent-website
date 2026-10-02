@@ -67,3 +67,24 @@ export function ServiceIncludes({ stages }) {
     </div>
   )
 }
+
+// the problem: the opening line beside its count in the hero's stripes, then the problems, Pile-up. The
+// count is the number of problems, so a page with four shows a 4
+export function ServiceProblem({ lead, problems }) {
+  return (
+    <>
+      <div className="sv-open rv">
+        <span className="sv-open__n" aria-hidden="true">{problems.length}</span>
+        <p>{lead}</p>
+      </div>
+      <ol className="sv-pile rv" style={{ '--i': 1, '--n': problems.length }}>
+        {problems.map(([h, p], i) => (
+          <li style={{ '--k': i }} key={h}>
+            <span className="sv-pile__n" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            <h3>{h}</h3><p>{p}</p>
+          </li>
+        ))}
+      </ol>
+    </>
+  )
+}

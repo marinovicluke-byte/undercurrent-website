@@ -3,7 +3,7 @@
 import '@/app/styles/consulting.css'
 import '@/app/styles/service-blocks.css'
 import ServiceFx from '@/components/site/ServiceFx'
-import { ServiceFigures, ServiceSteps, ServiceWhat, ServiceIncludes } from '@/components/site/ServiceBlocks'
+import { ServiceFigures, ServiceProblem, ServiceSteps, ServiceWhat, ServiceIncludes } from '@/components/site/ServiceBlocks'
 import JsonLd from '@/components/ui/JsonLd'
 
 const DOMAIN = 'https://undercurrentautomations.com'
@@ -59,6 +59,32 @@ const FIGURES = [
     "say the tech they bought last year made them more money"
   ]
 ]
+
+const PROBLEM = {
+  "lead": "Five things we hear before anyone has a plan.",
+  "problems": [
+    [
+      "Six tools, two get used",
+      "You pay for six bits of software every month. Your team opens two of them. Nobody wants to say which four to drop."
+    ],
+    [
+      "The AI thing nobody opens",
+      "Someone set one up for you last year. It half worked. Now it sits there and nobody touches it."
+    ],
+    [
+      "Every pitch sounds the same",
+      "They all say AI will fix everything. None of them tell you what they would actually do on Monday."
+    ],
+    [
+      "It's all in your head",
+      "You are the only one who knows how the whole thing works. So nothing gets fixed unless you do it yourself."
+    ],
+    [
+      "Three started, none finished",
+      "A new system in March. A new tool in June. Both half done, both still on the bank statement."
+    ]
+  ]
+}
 
 const STEPS = [
   [
@@ -189,14 +215,7 @@ export default function Consulting() {
 <section className="sec sec--off" id="problem" data-reveal="">
   <div className="wrap">
     <div className="sec__head"><span className="eyebrow">The problem</span></div>
-    <div className="xg rv">
-      <div className="xc pb pb--lead xc--x xc--xt"><p>Five things we hear before anyone has a plan.</p></div>
-      <div className="xc pb xc--off xc--x xc--xt"><span className="eyebrow">01</span><h3>Six tools, two get used</h3><p>You pay for six bits of software every month. Your team opens two of them. Nobody wants to say which four to drop.</p></div>
-      <div className="xc pb xc--end"><span className="eyebrow">02</span><h3>The AI thing nobody opens</h3><p>Someone set one up for you last year. It half worked. Now it sits there and nobody touches it.</p></div>
-      <div className="xc pb xc--off xc--x xc--last"><span className="eyebrow">03</span><h3>Every pitch sounds the same</h3><p>They all say AI will fix everything. None of them tell you what they would actually do on Monday.</p></div>
-      <div className="xc pb xc--x xc--last"><span className="eyebrow">04</span><h3>It's all in your head</h3><p>You are the only one who knows how the whole thing works. So nothing gets fixed unless you do it yourself.</p></div>
-      <div className="xc pb xc--off xc--end xc--last"><span className="eyebrow">05</span><h3>Three started, none finished</h3><p>A new system in March. A new tool in June. Both half done, both still on the bank statement.</p></div>
-    </div>
+    <ServiceProblem {...PROBLEM} />
   </div>
 </section>
 
@@ -337,7 +356,7 @@ export default function Consulting() {
       <div className="xc ig xc--x xc--xt">Legal and accounting</div>
       <div className="xc ig xc--off xc--end">Real estate</div>
       <div className="xc ig xc--off xc--x xc--last">Hospitality</div>
-      <div className="xc ig xc--x xc--last">Retail and e-commerce</div>
+      <div className="xc ig xc--x xc--last">Retail and <span style={{whiteSpace:"nowrap"}}>e-commerce</span></div>
       <div className="xc ig xc--off xc--x xc--last">Education and training</div>
       <div className="xc ig xc--end xc--last">Creative and media</div>
     </div>

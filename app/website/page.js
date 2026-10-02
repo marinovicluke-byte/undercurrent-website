@@ -4,7 +4,7 @@
 import '@/app/styles/website.css'
 import '@/app/styles/service-blocks.css'
 import ServiceFx from '@/components/site/ServiceFx'
-import { ServiceFigures, ServiceSteps, ServiceWhat, ServiceIncludes } from '@/components/site/ServiceBlocks'
+import { ServiceFigures, ServiceProblem, ServiceSteps, ServiceWhat, ServiceIncludes } from '@/components/site/ServiceBlocks'
 import JsonLd from '@/components/ui/JsonLd'
 
 const DOMAIN = 'https://undercurrentautomations.com'
@@ -60,6 +60,32 @@ const FIGURES = [
     "Australians trust a business more when its website ends in .au"
   ]
 ]
+
+const PROBLEM = {
+  "lead": "Five things we hear when someone shows us their old site.",
+  "problems": [
+    [
+      "Fine on the desk, broken on the phone",
+      "It looks sharp on your big screen. On a phone the words run off the side and the buttons are too small to hit."
+    ],
+    [
+      "The site from 2016",
+      "You want to change a price or swap a photo. You can't. The bloke who built it stopped answering years ago."
+    ],
+    [
+      "A form that goes nowhere",
+      "Someone fills it in. It lands in an inbox nobody opens. You never even knew they asked."
+    ],
+    [
+      "A home page that says nothing",
+      "It lists everything you do. A visitor still can't tell what you're best at, or what to do next."
+    ],
+    [
+      "Slow on one bar of signal",
+      "They open it on a job site and the page stays blank. They hit back and ring someone else."
+    ]
+  ]
+}
 
 const STEPS = [
   [
@@ -190,14 +216,7 @@ export default function WebsiteDesignPage() {
 <section className="sec sec--off" id="problem" data-reveal="">
   <div className="wrap">
     <div className="sec__head"><span className="eyebrow">The problem</span></div>
-    <div className="xg rv">
-      <div className="xc pb pb--lead xc--x xc--xt"><p>Five things we hear when someone shows us their old site.</p></div>
-      <div className="xc pb xc--off xc--x xc--xt"><span className="eyebrow">01</span><h3>Fine on the desk, broken on the phone</h3><p>It looks sharp on your big screen. On a phone the words run off the side and the buttons are too small to hit.</p></div>
-      <div className="xc pb xc--end"><span className="eyebrow">02</span><h3>The site from 2016</h3><p>You want to change a price or swap a photo. You can't. The bloke who built it stopped answering years ago.</p></div>
-      <div className="xc pb xc--off xc--x xc--last"><span className="eyebrow">03</span><h3>A form that goes nowhere</h3><p>Someone fills it in. It lands in an inbox nobody opens. You never even knew they asked.</p></div>
-      <div className="xc pb xc--x xc--last"><span className="eyebrow">04</span><h3>A home page that says nothing</h3><p>It lists everything you do. A visitor still can't tell what you're best at, or what to do next.</p></div>
-      <div className="xc pb xc--off xc--end xc--last"><span className="eyebrow">05</span><h3>Slow on one bar of signal</h3><p>They open it on a job site and the page stays blank. They hit back and ring someone else.</p></div>
-    </div>
+    <ServiceProblem {...PROBLEM} />
   </div>
 </section>
 
@@ -360,7 +379,7 @@ export default function WebsiteDesignPage() {
       <div className="xc ig xc--x xc--xt">Legal and accounting</div>
       <div className="xc ig xc--off xc--end">Real estate</div>
       <div className="xc ig xc--off xc--x xc--last">Hospitality</div>
-      <div className="xc ig xc--x xc--last">Retail and e-commerce</div>
+      <div className="xc ig xc--x xc--last">Retail and <span style={{whiteSpace:"nowrap"}}>e-commerce</span></div>
       <div className="xc ig xc--off xc--x xc--last">Education and training</div>
       <div className="xc ig xc--end xc--last">Creative and media</div>
     </div>

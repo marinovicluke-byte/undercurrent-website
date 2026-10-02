@@ -4,7 +4,7 @@
 import '@/app/styles/seo.css'
 import '@/app/styles/service-blocks.css'
 import ServiceFx from '@/components/site/ServiceFx'
-import { ServiceFigures, ServiceSteps, ServiceWhat, ServiceIncludes } from '@/components/site/ServiceBlocks'
+import { ServiceFigures, ServiceProblem, ServiceSteps, ServiceWhat, ServiceIncludes } from '@/components/site/ServiceBlocks'
 import JsonLd from '@/components/ui/JsonLd'
 
 const DOMAIN = 'https://undercurrentautomations.com'
@@ -60,6 +60,32 @@ const FIGURES = [
     "as many clicks on websites when Google puts its own AI answer on top"
   ]
 ]
+
+const PROBLEM = {
+  "lead": "Five things we hear when people can't find you.",
+  "problems": [
+    [
+      "Not on the map",
+      "Type your trade and your suburb into Google. A shop three streets over comes up. You don't."
+    ],
+    [
+      "An old Google page",
+      "Wrong hours. An old number. One review, from 2019. That page is the first thing people see."
+    ],
+    [
+      "Only found by name",
+      "Type your business name and the site comes up. Type the job you do and it doesn't."
+    ],
+    [
+      "They asked an AI",
+      "A customer says they asked ChatGPT for someone local. It gave them three names. Yours wasn't one."
+    ],
+    [
+      "Reports, no phone calls",
+      "The last agency sent graphs that all went up. The phone rang the same as it always did."
+    ]
+  ]
+}
 
 const STEPS = [
   [
@@ -190,14 +216,7 @@ export default function Seo() {
 <section className="sec sec--off" id="problem" data-reveal="">
   <div className="wrap">
     <div className="sec__head"><span className="eyebrow">The problem</span></div>
-    <div className="xg rv">
-      <div className="xc pb pb--lead xc--x xc--xt"><p>Five things we hear when people can't find you.</p></div>
-      <div className="xc pb xc--off xc--x xc--xt"><span className="eyebrow">01</span><h3>Not on the map</h3><p>Type your trade and your suburb into Google. A shop three streets over comes up. You don't.</p></div>
-      <div className="xc pb xc--end"><span className="eyebrow">02</span><h3>An old Google page</h3><p>Wrong hours. An old number. One review, from 2019. That page is the first thing people see.</p></div>
-      <div className="xc pb xc--off xc--x xc--last"><span className="eyebrow">03</span><h3>Only found by name</h3><p>Type your business name and the site comes up. Type the job you do and it doesn't.</p></div>
-      <div className="xc pb xc--x xc--last"><span className="eyebrow">04</span><h3>They asked an AI</h3><p>A customer says they asked ChatGPT for someone local. It gave them three names. Yours wasn't one.</p></div>
-      <div className="xc pb xc--off xc--end xc--last"><span className="eyebrow">05</span><h3>Reports, no phone calls</h3><p>The last agency sent graphs that all went up. The phone rang the same as it always did.</p></div>
-    </div>
+    <ServiceProblem {...PROBLEM} />
   </div>
 </section>
 
@@ -330,7 +349,7 @@ export default function Seo() {
       <div className="xc ig xc--x xc--xt">Legal and accounting</div>
       <div className="xc ig xc--off xc--end">Real estate</div>
       <div className="xc ig xc--off xc--x xc--last">Hospitality</div>
-      <div className="xc ig xc--x xc--last">Retail and e-commerce</div>
+      <div className="xc ig xc--x xc--last">Retail and <span style={{whiteSpace:"nowrap"}}>e-commerce</span></div>
       <div className="xc ig xc--off xc--x xc--last">Education and training</div>
       <div className="xc ig xc--end xc--last">Creative and media</div>
     </div>
