@@ -24,7 +24,11 @@ faqs:
 ---
 # GEO for Buyers Agents: Win AI Search in Australia
 
-> **Quick Answer:** GEO ([Generative Engine Optimisation](/glossary/what-is-generative-engine-optimisation)) for buyers agents is the work of setting up your site so ChatGPT, Gemini, Perplexity, and Google's AI Overviews cite your firm by name when an Australian property buyer asks "who's the best buyers agent near me?" Hit the rubric: a direct one-sentence answer up top, schema-marked services, named-entity density, and tier-1 citations on every claim. Win the citation, win the lead.
+> **Quick Answer:** **[GEO](/glossary/what-is-generative-engine-optimisation) for buyers agents is setting up your site so ChatGPT, Gemini, Perplexity and Google's AI Overviews cite your firm when a buyer asks who's best.**
+> - A direct one-sentence answer at the top of the page
+> - Schema-marked services and plenty of named entities
+> - Tier-1 sources cited on every claim
+> - Win the citation and you win the lead
 
 A note on terminology. **GEO for buyers agents** in this guide means *Generative Engine Optimisation*, the AI-search version of [SEO](/glossary/what-is-seo). Some real-estate writers use "GEO" as shorthand for *geographic targeting*. That's not what we mean. We're talking about getting your buyers agency surfaced inside AI answer engines.
 

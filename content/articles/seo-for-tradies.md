@@ -24,7 +24,11 @@ faqs:
 ---
 # How to Do SEO for Tradies in Australia
 
-> **Quick Answer:** SEO for tradies means getting your trade business found the moment a local searches for the work you do, whether they type "emergency electrician", tap "plumber near me", or ask ChatGPT for a name. It runs on what we call the Three-Layer Trade Search Stack: your Google listing and the local map pack, a website built around the suburbs and services you cover, and content AI engines can quote back. Local intent is the whole game. Win your suburb first.
+> **Quick Answer:** **SEO for tradies means getting your trade business found when a local searches for your work, on Google, Maps or ChatGPT.**
+> - Layer 1: your Google listing and the local map pack
+> - Layer 2: a website built around your suburbs and services
+> - Layer 3: content AI engines can quote back
+> - Local intent is everything, so win your suburb first
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>AI search optimisation workflow for Australian businesses in five steps</title>
