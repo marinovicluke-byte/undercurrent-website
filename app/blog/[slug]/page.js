@@ -1,7 +1,7 @@
 // app/blog/[slug]/page.js — the article, the sandbox's Ground skeleton poured
 // with the live markdown. Category ground hero with the quick answer under the
 // title, the rail, the byline with the photo, the body in blocks, FAQ from front-matter,
-// the end row, the who card, Read next, the closing band. Schema as before.
+// a photo from the rotation (lib/endPhotos.js), the end row, the who card, Read next, the closing band. Schema as before.
 // A `photo` in front-matter puts a photo from the library beside the title.
 import '@/app/styles/article.css'
 import '@/app/styles/article-blocks.css'
@@ -17,6 +17,7 @@ import { LUKE_PERSON } from '@/lib/schema/person'
 import { categoryOf, CLOSE_LINES, fmtDate, isoDate } from '@/lib/categories'
 import { extractQuickAnswer, stripSection, splitBlocks, decorate } from '@/lib/articleBody'
 import { photoOf } from '@/lib/photos'
+import { endPhotoOf, relatedTo } from '@/lib/endPhotos'
 
 const SITE_URL = 'https://undercurrentautomations.com'
 const CALC_TOKEN = '<!-- calc:tradie-admin -->'
@@ -112,10 +113,8 @@ export default async function ArticlePage({ params }) {
   const rail = [...blocks.map(b => ({ id: b.id, label: b.toc })), ...(faqs.length ? [{ id: 'faq', label: 'FAQ' }] : [])]
 
   const all = getAllArticles()
-  const related = [
-    ...all.filter(a => a.slug !== slug && categoryOf(a.cluster).key === cat.key),
-    ...all.filter(a => a.slug !== slug && categoryOf(a.cluster).key !== cat.key),
-  ].slice(0, 3)
+  const related = relatedTo(slug, all)
+  const endPhoto = endPhotoOf(slug, all)
 
   const updated = fm.dateModified || fm.date
   const url = `${SITE_URL}/blog/${slug}`
@@ -212,6 +211,12 @@ export default async function ArticlePage({ params }) {
                     {faqs.map((f, i) => <details key={i}><summary>{f.question}</summary><p>{f.answer}</p></details>)}
                   </div>
                 </div>
+              )}
+              {endPhoto && (
+                <figure className={`ucb-fig${endPhoto.height > endPhoto.width ? ' ucb-fig--tall' : ''} end__ph`} data-reveal="">
+                  <Image className="rv" src={endPhoto.path} width={endPhoto.width} height={endPhoto.height} alt={endPhoto.alt}
+                    sizes="(min-width: 641px) 720px, 100vw" />
+                </figure>
               )}
             </div>
             <div className="end"><span className="eyebrow">Published <time dateTime={isoDate(fm.date)}>{fmtDate(fm.date)}</time></span><div className="share"><a data-share="li" href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noopener">LinkedIn</a><a data-share="x" href="https://twitter.com/intent/tweet" target="_blank" rel="noopener">X</a><button data-copy="">Copy link</button></div></div>

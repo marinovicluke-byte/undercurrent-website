@@ -1,242 +1,154 @@
 ---
 title: "How to use Claude in your business: AU SMB guide"
-description: "A practical guide to using Claude in an Australian small business: the four product lines, the six use cases that pay back, the setup, and ROI maths."
+description: "How to use Claude in your business: which plan you need, the Claude Code setup for business operations, staying safe in Australia, and a first-month plan."
 date: "2026-05-24"
+dateModified: "2026-10-02"
 slug: "how-to-use-claude-in-your-business-australian-smb-guide"
-cluster: "seo-ai-visibility"
+cluster: "ai-strategy-training"
 keyword: "how to use claude in my business"
 author: "Luke"
 level: "intermediate"
-readingTime: 11
+readingTime: 8
+photo: "/images/luke-2026/luke-marinovic-undercurrent-laptop-lounge-chair-feet-up-melbourne.jpg"
+photoFocus: "72% 50%"
 faqs:
-  - q: "How much does Claude cost for an Australian small business in 2026?"
-    a: "Claude pricing for Australian SMBs ranges from free (Claude.ai basic) to roughly $70 per seat per month for the Claude for Small Business plan, with Claude Code at $30 to $100 per month for individual use and Cowork at around $45 per seat for teams. Most SMBs land between $30 and $250 a month total. Pricing is in US dollars on Anthropic's site, so add roughly 50% for the AUD equivalent before card surcharges."
-  - q: "Is Claude safe to use with customer data in Australia?"
-    a: "Claude can be used safely with customer data in Australia, but only on the right tier and with the right controls. Free Claude.ai accounts may use your inputs to improve models and aren't appropriate for sensitive data; Cowork, enterprise, and API tiers carry stronger data-handling commitments. The Australian Cyber Security Centre's guidance is to treat any AI tool as a third-party data processor, never paste anything covered by the Privacy Act 1988 without a deliberate decision."
-  - q: "What's the difference between Claude.ai, Claude Code, and Claude Cowork?"
-    a: "Claude.ai is the chat website where you type questions and get answers, useful for one-off help but limited as a business tool. Claude Code is a terminal-based agent that reads your files, runs scripts, and builds automations, which is where real productivity gains live for an SMB. Claude Cowork is a shared team workspace launched in 2026 that adds projects, memory, and team skills on top of Claude. Most businesses end up using a combination of all three."
-  - q: "Do I need to be a developer to use Claude Code in my business?"
-    a: "You don't need to be a developer to use Claude Code, but you do need to be willing to learn the terminal and spend roughly a weekend on initial setup. The friction isn't conceptual, Claude Code does the technical heavy lifting itself, but the first three or four skills take a few attempts to get right. Most non-technical SMB owners either sit a workshop or hire someone to set it up before training their team."
-  - q: "How many Australian businesses are actually using Claude?"
-    a: "Australia ranks 11th globally for Claude.ai usage and uses Claude at more than 4x the per-capita rate population alone would predict, according to the Anthropic How Australia Uses Claude report. NSW and Victoria account for 68% of that activity. Over 100 Australian companies are confirmed Claude Code users as of early 2026, including names across banking, design, consulting, and software. Adoption is heavier in office, sales, and management tasks than in coding."
-  - q: "What's the fastest way to start using Claude in a business that's never used AI before?"
-    a: "Sign up for a Claude Pro subscription, pick one recurring weekly task that takes you over an hour (quote follow-ups, weekly report prep, customer email triage), and use Claude.ai to do only that one task for two weeks before adding anything else. After two weeks you'll know whether the productivity lift is real, and you'll have learned enough to make the next call: stay on Claude.ai, upgrade to Code, or bring in UnderCurrent Automations."
+  - q: 'How does Claude find businesses when it searches the web?'
+    a: 'Claude finds businesses by searching the live web when a question needs current information, then citing the pages it used. Anthropic runs a crawler called Claude-SearchBot that indexes sites to improve search answers. If your site blocks it, Anthropic says your visibility in Claude''s answers may drop. So check your robots.txt allows it, and make your services and location clear on the page. Our guide to ranking in ChatGPT search covers the same ideas.'
+  - q: 'Is Claude free to use for a small business?'
+    a: 'Claude has a free plan that includes chat, web search, file creation and app connections. It''s enough to test whether Claude helps with one job. For regular business use, Pro costs US$20 a month and adds Claude Code and projects. A Team standard seat costs US$25 a month and comes under Anthropic''s commercial terms. Most owners should try the free plan for a week, then upgrade once a job works.'
+  - q: 'Can Claude connect to QuickBooks, HubSpot or Google Workspace?'
+    a: 'Claude can connect to QuickBooks, HubSpot and Google Workspace through Claude for Small Business, which Anthropic launched in May 2026. It also lists PayPal, Canva, Docusign and Microsoft 365. Claude reads and drafts inside those tools, and you approve anything before it sends, posts or pays. For tools without a ready connector, a workflow tool or a custom connection can link Claude to the app.'
+  - q: 'How many Australians use Claude?'
+    a: 'Australia makes up 1.6% of global Claude.ai traffic and ranks eleventh in the world, according to Anthropic''s March 2026 report. Australians use Claude more than four times as much as the working-age population would predict. About 46% of Australian conversations are for work, 47% are personal and 7% are for study. New South Wales and Victoria make up about two thirds of Australian use.'
+  - q: 'Can Claude run business tasks on a schedule?'
+    a: 'Claude can run business tasks on a schedule. Anthropic''s September 2026 update lets you schedule a task like a Monday report, and Claude starts it without being asked. It''s rolling out to Pro and Max plans first. Claude Code has routines that run in the cloud, even when your computer is off. Start with a job that has clear inputs, like a weekly sales summary, and check the first few runs yourself.'
 ---
 # How to use Claude in your business: AU SMB guide
 
-> **Quick Answer:** Using [Claude](https://www.anthropic.com/news/claude-for-small-business) in your business means picking the right product (Claude.ai for chat, Claude Code for real work, Claude Cowork for teams, Claude for Small Business as the packaged plan), then wiring it into the work that drains your week. Australians already use Claude at over 4× the global per-capita rate, but most stop at asking questions instead of giving it real jobs. DIY setup takes a weekend. The compound benefit takes months. Pick one task, start tomorrow.
+> **Quick Answer:** **To use Claude in your business, give it one repeat job, your rules and access to your tools, then let it run that job each week.**
+> - Claude chat handles drafting, research and reports
+> - Claude Code runs files, scripts and scheduled jobs
+> - Team plans don't train on your chats by default
+> - Start with one weekly task
 
-## What is Claude, and what are the four product lines?
+It's Thursday night and you've asked Claude to rewrite one email. It did a nice job, then you closed the tab. Monday comes and every job is still sitting on your desk.
 
-**Claude is the AI assistant built by [Anthropic](https://www.anthropic.com/news/claude-for-small-business), and as of 2026 it ships in four product lines that confuse almost every Australian SMB owner.**
+This guide shows you how to use Claude in your business, so it does the work instead of just chatting about it.
 
-Most people meet Claude through claude.ai, assume that's the whole product, and miss the parts that actually run a business.
+## What is Claude, and which version does your business need?
 
-| Product | What it is | Best for | Cost (AUD) |
+**Claude is the AI assistant made by Anthropic, and most small businesses only need the chat app on a paid plan.** Add Claude Code when you want it to run files, scripts and jobs on a schedule.
+
+The products moved a lot this year. On 16 September 2026, Anthropic said [Cowork and chat are merging into one Claude](https://claude.com/blog/cowork-is-now-claude), so you can hand over a task and close your laptop. Here's how the pieces fit, with prices from [Claude's pricing page](https://claude.com/pricing) in US dollars.
+
+| Version | What it does | Best for | Price (US$) |
 |---|---|---|---|
-| Claude.ai | The chat website | Solo research, drafting | Free or ~$30/mo |
-| Claude Code | Terminal agent running scripts and skills | Owner-operators automating | ~$30-300/mo |
-| Claude Cowork | Shared team workspace with skills, projects, memory | 2-10 person teams | ~$45/seat/mo |
-| Claude for Small Business | The packaged 2026 plan (Cowork + admin tools) | SMBs without an IT team | ~$70/seat/mo |
+| Free | Chat, web search, file creation, app connections | Trying it out | $0 |
+| Pro | Adds Claude Code, projects and more models | An owner doing the work | $20 a month, or $17 a month yearly |
+| Team, standard seat | Pro features with more usage, run by your business | A business with staff | $25 a month, or $20 a month yearly |
+| Max | 5x or 20x the Pro usage | Heavy daily use | From $100 a month |
 
-The answer to "how do I use Claude in my business" depends on which product you start with. Claude.ai is toe-in-the-water. Claude Code is where [productivity gains compound](https://masterofcode.com/blog/generative-ai-statistics). Cowork and Claude for Small Business are how you stop being the only person who knows how. See our [BPA guide](/blog/what-is-business-process-automation-australia).
+*Your card is charged in US dollars, so the Australian price moves with the exchange rate.*
 
-## How to use Claude in your business: six use cases that pay back
+## How to use Claude in your business: the jobs it does well
 
-**The honest list of where Claude pays back for an Australian SMB is shorter than the marketing pages suggest, but each use case is worth real money over a quarter.**
+**Claude earns its keep on business operations: reports, checklists, spreadsheets and the emails that go with them.** That's what businesses already use it for.
 
-These six survive the three-month "is this still being used" test in client builds:
+Anthropic studied [1.2 million Cowork sessions from May 2026](https://claude.com/blog/how-people-are-using-claude-cowork). The biggest use, at 33.4%, was "business process and operations". Think pulling scattered updates into one report, building onboarding checklists and matching spreadsheets. Few small businesses do this yet. The [ABS found about 11% of small and micro businesses used AI](https://www.abs.gov.au/media-centre/media-releases/business-adoption-artificial-intelligence-accelerates-2024-25) in 2024-25, so a working setup still puts you ahead. Our guide on [what AI automation is](/blog/what-is-ai-automation-australia) explains the basics.
 
-- **Admin and email triage**, drafting replies, summarising threads, turning a voicemail into action.
-- **Customer communications**, quote follow-ups, booking confirmations, post-job check-ins, complaint responses.
-- **Document drafting**, proposals, SOPs, onboarding packs, [website copy](/blog/small-business-website-design), training material, [e-invoicing](/blog/einvoicing-small-business-australia-guide) templates.
-- **Operations and scheduling**, turning messy job notes into records, prepping the next day's run sheet, BAS prep.
-- **Research and decisions**, competitor scans, supplier comparisons, sizing a new service line, [SEO planning](/blog/seo-for-small-business).
-- **Content and ads**, first drafts of blog posts, social captions, [Google Ads variants](/blog/google-ads-cost-australian-small-business).
+In May 2026, Anthropic also launched [Claude for Small Business](https://www.anthropic.com/news/claude-for-small-business), which you switch on inside Cowork. It covers jobs like invoice chasing, payroll planning and sales campaigns. It connects to QuickBooks, PayPal, HubSpot, Canva, Docusign, Google Workspace and Microsoft 365. Anthropic's own rule for it is a good one: "you approve before anything sends, posts, or pays."
 
-All six are now augmented by [Claude's native Connectors](https://claude.com/blog/integrations), direct integrations into Intuit QuickBooks, PayPal, HubSpot, Canva, Docusign, [Slack](https://claude.com/blog/claude-and-slack), Google Workspace, and Microsoft 365, so Claude reads and writes inside your stack without custom plumbing.
+## What are the best Claude Code setups for running business operations?
 
-The ones that don't survive: anything client-facing without human review (legal, medical). For trades, our [tradie AI guide](/blog/hidden-cost-manual-trade-business-australia) covers the same six.
+**The best Claude Code setup for business operations is one folder per job, a rules file, a few saved skills and a schedule.** Claude Code is a tool that reads your files, runs commands and follows the rules you write down.
 
-## How do you set up Claude Code without being a developer?
+**A Claude Code setup for one business job**
 
-**You don't need to be a developer to run Claude Code, but you do need a weekend to learn the terminal, and that's the gap most owners fall into.**
+1. Install Claude Code, or open the Code tab in the Claude desktop app. It needs a paid plan.
+2. Make one folder for the job, like "quotes", with your templates and price list.
+3. Write a CLAUDE.md file in that folder. [Claude Code reads it](https://code.claude.com/docs/en/overview) at the start of every session, so your rules load every time.
+4. Save each repeat job as a skill, like "chase every quote older than five days".
+5. Connect your tools through MCP. MCP is an open standard for plugging Claude into apps like Google Drive.
+6. Put the job on a schedule. Routines run in the cloud, even when your computer is off.
 
-The setup isn't hard. The friction is unfamiliar tooling and no-one to ask when a skill breaks.
+You don't need to be a developer, but expect a learning curve. Most owners get stuck at the skill step, because clear rules are harder to write than they look. Our [AI training guide](/blog/ai-training-australia-small-business-guide) covers how teams learn this together.
 
-The actual setup, top to bottom:
+## How UnderCurrent Automations uses Claude
 
-1. Sign up for a Claude plan that includes Code (Pro at ~$30/mo or higher).
-2. Install Claude Code via a single terminal command, under five minutes.
-3. Authenticate with your Claude login.
-4. Point it at a folder where your business lives (proposals, SOPs, spreadsheets, customer notes).
-5. Build your first "skill", a saved instruction set for a recurring job.
+**UnderCurrent Automations uses Claude to write its own weekly, monthly and quarterly SEO reports, with no person in the loop.** We build the same kind of workflow for small businesses across Australia.
 
-Sample skill prompt you can paste into Claude.ai or save in Claude Code today:
+![Luke Marinovic at a round white table, seen from behind, reviewing a search performance report on his laptop.](/images/luke-2026/luke-marinovic-undercurrent-over-shoulder-search-console-melbourne.jpg)
 
-```
-You are a quote follow-up assistant for [BUSINESS NAME].
-Context: we send 30-50 quotes a month, 60% never respond on their own.
-Task: draft a follow-up email to a prospect who hasn't replied in 5 business days.
-Tone: friendly, brief, low-pressure, mention one specific detail from the original quote.
-Output: subject line + 3-paragraph email body, sign off as [OWNER FIRST NAME].
-```
+The problem was simple: reports that rely on someone remembering them get skipped. So we run them as a scheduled workflow. Code pulls the numbers, Claude writes the report, and nobody touches it. If the data is missing, the job fails loudly instead of sending an empty report. That rule matters more than the AI part, because a blank report that looks fine is worse than none.
 
-Most owners give up between step 4 and step 5, the gap our [AI training](/blog/ai-training-australia-small-business-guide) and [done-for-you builds at UnderCurrent Automations](/contact) close.
+We use Claude because it works for us. We'd change if something clearly better came along. We don't switch every month, because rebuilding workflows for each new model wastes your time.
 
-## Behind the chat: a Claude architecture for production
+## How to use Claude in your business safely in Australia
 
-**Once Claude is doing real work in your business, it's no longer a chat window, it's a service running between your stack and your customers, and the architecture matters more than the prompt.**
+**Use Claude safely by choosing the right plan, checking its data settings and never pasting in customer details you haven't cleaned up.** The [Australian Cyber Security Centre's guide for small business](https://www.cyber.gov.au/business-government/secure-design/artificial-intelligence/artificial-intelligence-for-small-business) says some AI providers train on what you type, depending on your settings and plan.
 
-**Here's the shape of a typical production Claude workflow for an Australian SMB:**
+That's true of Claude too. On Free, Pro and Max, you choose whether your chats help train Anthropic's models, and [data is kept for five years if you say yes](https://www.anthropic.com/news/updates-to-our-consumer-terms). Team, Enterprise and API use sit under Anthropic's commercial terms, which don't use your inputs for training by default.
 
-1. Inbound lead/email
-2. n8n or Make trigger
-3. Claude (Cowork or API) + Supabase context store
-4. CRM: drafted reply + tagged task + follow-up scheduled
+The ACSC gives a real warning. In early 2025, a contractor uploaded names, contact details and health records from a government program into an AI system. That was a notifiable data breach. Before anyone pastes customer data, strip the names out, or move the job onto a Team plan. [business.gov.au also says](https://business.gov.au/online-and-digital/artificial-intelligence) a chatbot talking to customers is riskier than AI drafting social posts.
 
-Each box is a checkpoint, not a black box. The trigger fires deterministically. Claude operates as an un-monitored microservice with a locked system prompt. Supabase (or any vector store) supplies the context Claude needs without you re-pasting it into every chat. The CRM receives a structured output, not a wall of prose.
+## What does Claude cost, and when does it pay for itself?
 
-A production-grade system prompt looks more like this than the quote-follow-up sample above:
+**Claude pays for itself when it takes over a job you already spend hours on each week.** Pro costs US$200 a year on yearly billing. The bigger cost is your time, so here's a worked example, not a client result.
 
-```
-You are a sales-ops assistant for [Business Name], an Australian [vertical] business.
+**What hand-written quote follow-ups cost in a year (an example)**
 
-ROLE: triage inbound leads, draft a first-touch reply, log the lead to the CRM.
+- Hours a week on quote follow-ups and emails, **3**
+- What your hour is worth, **$80**
+- Working weeks a year, **48**
+- = Your time spent a year, **$11,520**
 
-CONTEXT (pulled from Supabase per lead):
-- Lead source, industry, size, original enquiry text
-- Past interactions if any
-- Active offers + capacity for the next 14 days
+If Claude takes half that work, you get back $5,760 of time a year. The cost isn't only your time either. Slow follow-ups lose jobs, and our guide to [sending instant follow-ups to leads](/blog/how-to-send-instant-follow-up-email-to-leads-automatically-australia) shows why speed matters. To find your own number, see [what manual processes really cost](/blog/how-much-are-manual-processes-costing-your-business).
 
-FORMAT:
-- Subject line under 60 chars
-- 3-paragraph email body, plain text, no markdown
-- Sign off as [Owner First Name], [Business Name]
-- Currency in AUD, dates DD/MM/YYYY, times in AEST
+## Your first month with Claude: a four-week plan
 
-CONSTRAINTS:
-- Never invent past interactions
-- Never quote a price or guarantee a delivery date
-- If a context field is empty, write "[needs input]" rather than guess
+**Spend your first month on one job, and decide after four weeks whether Claude earns a bigger role.** One job you finish beats ten you start.
 
-OUTPUT: JSON with keys subject, body_text, crm_tag, follow_up_in_days.
-```
+**Your first month with Claude**
 
-The CONSTRAINTS block is what stops hallucinated promises. The OUTPUT schema is what makes the result safe to wire into a CRM API.
+1. Pick one job that repeats weekly and takes over an hour. Time it once by hand. **Week 1**
+2. Do that job with Claude every time it comes up. Note the minutes saved. **Week 2**
+3. Save your best instructions as a project or a skill, so you stop retyping them. **Week 3**
+4. Decide: stay on chat, move to Claude Code, or get it built. **Week 4**
 
-## What are Australian businesses actually doing with Claude?
+Australians tend to work with Claude, not hand it everything. Anthropic's [Australian usage report](https://www.anthropic.com/research/how-australia-uses-claude) scores us 3.38 out of 5 for autonomy, which it reads as more collaborative use. That's a fine way to start. Once a job works, connect it to your other tools, like the ones in our [top 5 small business automation tools](/blog/top-5-small-business-automation-tools-2026).
 
-**Australians use Claude harder than almost anyone else on earth, per the [Anthropic How Australia Uses Claude report](https://www.anthropic.com/research/how-australia-uses-claude), but the mix is office, sales, and management work, not coding.**
+## Should you set up Claude yourself or get help?
 
-Australia takes 1.6% of global Claude.ai traffic and ranks 11th worldwide; per capita we use Claude at over 4× the rate population alone would predict. NSW (37.2%) and Victoria (30.8%) account for two-thirds of activity. Use mix: 46% work, 47% personal, 7% study. Computer and mathematical tasks sit eight percentage points below the global baseline; workplace correspondence, business documents, and financial guidance run higher. The Australian autonomy score is 3.38 out of 5, we prefer Claude as a co-pilot, not an autonomous agent. The average prompt assumes 11.9 years of schooling and represents work a skilled professional would spend 2.7 hours on, per the [Anthropic March 2026 Economic Index](https://www.anthropic.com/research/economic-index-march-2026-report). Over 100 Australian companies are confirmed Claude Code users, and the [Australian Government signed an MoU with Anthropic](https://www.industry.gov.au/news/australian-government-has-signed-memorandum-understanding-mou-global-ai-innovator-anthropic) in 2026.
+**Set Claude up yourself if you enjoy tinkering and have a few hours a week, and get help if your time is worth more on the tools or with clients.** Both paths use the same Claude.
 
-## How to use Claude in your business safely: the ACSC angle
+Doing it yourself costs a subscription and your evenings. Getting help costs more up front, but the job runs sooner and someone else fixes it when it breaks. Some jobs need more than Claude, like a workflow tool joining your apps. Our [n8n vs Zapier comparison](/blog/n8n-vs-zapier-australia-small-business) covers that layer, and [what an AI agent is](/blog/what-is-an-ai-agent-for-business-australia) explains the next step up.
 
-**Before you put a single customer record into Claude, read the [Australian Cyber Security Centre's small business AI guidance](https://www.cyber.gov.au/business-government/secure-design/artificial-intelligence/artificial-intelligence-for-small-business) and the [business.gov.au AI page](https://business.gov.au/online-and-digital/artificial-intelligence), together they're the closest thing to an Australian compliance checklist.**
+Want Claude doing a real job by next month? [Tell us the job that eats your week](/contact). UnderCurrent Automations will build your first Claude workflow around how you already work. The first call takes 30 minutes and costs nothing.
 
-The ACSC's working rules for SMBs using Claude (and any cloud AI):
+## Frequently Asked Questions
 
-- **Don't paste sensitive data** without assessing risk first. PII, financials, health, NDA contracts need a deliberate decision.
-- **Check what the tool stores and trains on.** Cowork, enterprise, and API tiers carry stronger controls than the free tier.
-- **Match the plan to your data sensitivity.** Sometimes Cowork, sometimes an enterprise contract.
-- **Train your staff first.** Most breaches are people, not platforms.
-- **Have an incident process.** What if someone pastes a customer list into a free account?
+**How does Claude find businesses when it searches the web?**
 
-**One nuance most SMB guides miss:** SMBs under $3M turnover (not health-service or data-trading) are technically exempt from the Privacy Act 1988, per the [OAIC's commercially-available-AI guide](https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products). But the [Privacy Amendment Act 2024](https://www.oaic.gov.au/privacy/australian-privacy-principles) brings automated-decision-making rules in on 10 December 2026, so plan as if they apply.
+Claude finds businesses by searching the live web when a question needs current information, then citing the pages it used. Anthropic runs a crawler called Claude-SearchBot that indexes sites to improve search answers. If your site blocks it, Anthropic says your visibility in Claude's answers may drop. So check your robots.txt allows it, and make your services and location clear on the page. Our guide to [ranking in ChatGPT search](/blog/how-to-rank-in-chatgpt-search) covers the same ideas.
 
-Government engagement with Anthropic isn't blanket approval (per [business.gov.au](https://business.gov.au/online-and-digital/artificial-intelligence)). Your obligations sit on you. Pair with our [service area business explainer](/glossary/what-is-a-service-area-business) if you're remote-first.
+**Is Claude free to use for a small business?**
 
-## What's the real ROI on Claude for an Australian SMB?
+Claude has a free plan that includes chat, web search, file creation and app connections. It's enough to test whether Claude helps with one job. For regular business use, Pro costs US$20 a month and adds Claude Code and projects. A Team standard seat costs US$25 a month and comes under Anthropic's commercial terms. Most owners should try the free plan for a week, then upgrade once a job works.
 
-**Australian SMBs typically spend $200-$500 a month on Claude-plus-automation and recover 30-60 hours of staff time worth $1,500-$2,500, in line with the [Anthropic March 2026 Economic Index](https://www.anthropic.com/research/economic-index-march-2026-report).**
+**Can Claude connect to QuickBooks, HubSpot or Google Workspace?**
 
-| Scenario | Monthly cost | Hours saved | Net monthly benefit |
-|---|---|---|---|
-| Just Claude.ai Pro | ~$30 | 5-10 | ~$200-400 |
-| Claude Code + 2 skills | ~$80 | 20-30 | ~$800-1,200 |
-| Claude Cowork (3 seats) + workflows | ~$350 | 40-60 | ~$1,500-2,500 |
-| Done-for-you (Cowork + custom skills) | ~$500-800 | 60-100 | ~$2,500-4,000 |
+Claude can connect to QuickBooks, HubSpot and Google Workspace through Claude for Small Business, which Anthropic launched in May 2026. It also lists PayPal, Canva, Docusign and Microsoft 365. Claude reads and drafts inside those tools, and you approve anything before it sends, posts or pays. For tools without a ready connector, a workflow tool or a custom connection can link Claude to the app.
 
-Two examples from [Flowtivity's Australian SMB automation dataset](https://flowtivity.ai/blog/ai-automation-roi-500-month-australian-smb/) (third-party cases, neither is a UnderCurrent Automations client): one 12-staff Melbourne plumbing firm spent $350 a month and recovered $12,000 in lost quotes, with quote-win climbing to 31%. Another, an 8-practitioner Brisbane allied-health clinic, cut no-shows down to 11% (a 40% relative reduction), recovering $3,400 a month, consistent with the [Anthropic Economic Index September 2025 report](https://www.anthropic.com/research/anthropic-economic-index-september-2025-report). See [cost of manual processes](/blog/how-much-are-manual-processes-costing-your-business) and the [top 5 SMB automation tools for 2026](/blog/top-5-small-business-automation-tools-2026).
+**How many Australians use Claude?**
 
-## Your first month with Claude: a four-week playbook
+Australia makes up 1.6% of global Claude.ai traffic and ranks eleventh in the world, according to [Anthropic's March 2026 report](https://www.anthropic.com/research/how-australia-uses-claude). Australians use Claude more than four times as much as the working-age population would predict. About 46% of Australian conversations are for work, 47% are personal and 7% are for study. New South Wales and Victoria make up about two thirds of Australian use.
 
-**Use this four-week playbook if you want a concrete plan you can start tomorrow.**
+**Can Claude run business tasks on a schedule?**
 
-No team rollout, no consultants, no software shopping. Just you, Claude.ai, and one workflow (the shape we use in [AI training for SMBs](/blog/ai-training-australia-small-business-guide)):
-
-1. **Week 1, pick one task.** A recurring weekly job that takes you over an hour. Quote follow-ups, weekly report prep, customer email triage, or BAS-prep checks all work.
-2. **Week 2, run it through Claude.ai daily.** Use the chat tier only. Time yourself before and after. Measure minutes saved.
-3. **Week 3, turn the working prompts into a saved "project" on Claude.ai (or a skill if you've upgraded to Code).** Add context once, reuse forever.
-4. **Week 4, decide.** Stay on Claude.ai, upgrade to Claude Code, or get help via [UnderCurrent Automations](/contact).
-
-If you can't carve four hours a week, skip to a workshop. That's a signal. The same playbook scales for [tradie operators](/blog/hidden-cost-manual-trade-business-australia) and [service-area firms losing time to manual work](/blog/how-much-are-manual-processes-costing-your-business).
-
-## What we learned auditing 199 articles on AI in business
-
-**We've run 199 articles through the UnderCurrent Automations Article Reviewer rubric (version 2.0.0) across the AI-in-business vertical, and the gap between competent and great is bigger than the gap between bad and competent.**
-
-The vertical mean across 118 articles from 55 distinct Australian hosts sits at 60.7 out of 100, competent, but not the work people share or cite.
-
-Our own internal benchmark across 33 published articles averages 87.8 out of 100, mostly because we score every draft against the rubric before publishing and rewrite the failures. The pattern in the bottom half is consistent: thin first-party data, no comparison tables, citations that exist but don't link out, FAQ sections full of marketing questions instead of real search queries, and a generic-AI tone any rubric flags inside ten seconds. The top half does the boring stuff: original numbers, named sources, structured comparisons, real Australian context.
-
-## Crawl, walk, run: how UnderCurrent Automations works with clients
-
-**This is the approach, not a slogan: every client we put on Claude goes through crawl, walk, run so they're never overwhelmed, and every dollar spent has paid back before the next one goes in.**
-
-Three stages, three graduation gates, three pay-back bands we've seen across the work:
-
-- **Crawl (week 1-4)**: one owner, one task, Claude.ai chat. Typical lift we see: 5-10 hours a week off a single task, around $200-$400/mo of recovered time at AU labour rates. Graduates when the lift sticks for two weeks straight.
-- **Walk (month 2-3)**: Claude Code with 3-5 saved skills, owner-led, with [light AI training across the team](/blog/ai-training-australia-small-business-guide). Typical lift: 20-30 hours a week, $800-$1,200/mo. Graduates when two skills run unattended and a second person uses them daily.
-- **Run (month 4+)**: Claude Cowork or Claude for Small Business, team-wide skill library, integrated with your [business tool stack](/blog/top-5-small-business-automation-tools-2026). Typical lift: 60-100 hours a week, $2,500-$4,000/mo, in line with [Anthropic's Economic Index](https://www.anthropic.com/research/economic-index-march-2026-report) productivity benchmarks and [Master of Code's $3.50-per-$1 ROI data](https://masterofcode.com/blog/generative-ai-statistics).
-
-The point: no overwhelm, no skipped lessons. The 60.7/100 vertical mean above is what happens when SMBs jump straight to run.
-
-## Should you DIY, sit a workshop, or have it built for you?
-
-**There are three honest ways to put Claude into an Australian business, and the right one depends on whether your time is worth more than the learning curve, per [adoption patterns published by Anthropic](https://www.anthropic.com/research/anthropic-economic-index-september-2025-report).**
-
-Most owners try DIY first, hit the wall at skill 3, then choose between a workshop and a [done-for-you build from UnderCurrent Automations](/contact):
-
-- **DIY** (the crawl stage), hands-on owner, comfortable with the terminal. Weekend setup, ~6 weeks before compounding. Cost: the Claude subscription.
-- **Workshop** (accelerates the walk), team of 2-15 needing the same mental model. Two-day session, your real workflows, three skills shipped. Cost: a few thousand.
-- **Done-for-you** (gets you to run faster), buy the outcome. We scope, build the skills, train your team, monitor month one. Cost: setup fee plus the Claude plan.
-
-**Not sure which fits?** [Book the free 30-min UnderCurrent AI Workflow Audit](/contact) and Luke will personally map your two-to-three highest-ROI Claude wins on the call, plus tell you straight when DIY is the smarter call (consistent with [Anthropic's autonomy data](https://www.anthropic.com/research/how-australia-uses-claude)). Worst outcome: a $5k build no one uses. Best outcome: a costed path to your first compounding skill inside the month.
-
-## Frequently asked questions
-
-**How much does Claude cost for an Australian small business in 2026?**
-
-Claude pricing for Australian SMBs ranges from free (Claude.ai basic) to roughly $70 per seat per month for the Claude for Small Business plan, with Claude Code at $30 to $100 per month for individual use and Cowork at around $45 per seat for teams. Most SMBs land between $30 and $250 a month total. Pricing is in US dollars on Anthropic's site, so add roughly 50% for the AUD equivalent before card surcharges.
-
-**Is Claude safe to use with customer data in Australia?**
-
-Claude can be used safely with customer data in Australia, but only on the right tier and with the right controls. Free Claude.ai accounts may use your inputs to improve models and aren't appropriate for sensitive data; Cowork, enterprise, and API tiers carry stronger data-handling commitments. The Australian Cyber Security Centre's guidance is to treat any AI tool as a third-party data processor, never paste anything covered by the Privacy Act 1988 without a deliberate decision.
-
-**What's the difference between Claude.ai, Claude Code, and Claude Cowork?**
-
-Claude.ai is the chat website where you type questions and get answers, useful for one-off help but limited as a business tool. Claude Code is a terminal-based agent that reads your files, runs scripts, and builds automations, which is where real productivity gains live for an SMB. Claude Cowork is a shared team workspace launched in 2026 that adds projects, memory, and team skills on top of Claude. Most businesses end up using a combination of all three.
-
-**Do I need to be a developer to use Claude Code in my business?**
-
-You don't need to be a developer to use Claude Code, but you do need to be willing to learn the terminal and spend roughly a weekend on initial setup. The friction isn't conceptual, Claude Code does the technical heavy lifting itself, but the first three or four skills take a few attempts to get right. Most non-technical SMB owners either sit a workshop or hire someone to set it up before training their team.
-
-**How many Australian businesses are actually using Claude?**
-
-Australia ranks 11th globally for Claude.ai usage and uses Claude at more than 4x the per-capita rate population alone would predict, according to the [Anthropic How Australia Uses Claude report](https://www.anthropic.com/research/how-australia-uses-claude). NSW and Victoria account for 68% of that activity. Over 100 Australian companies are confirmed Claude Code users as of early 2026, including names across banking, design, consulting, and software. Adoption is heavier in office, sales, and management tasks than in coding.
-
-**What's the fastest way to start using Claude in a business that's never used AI before?**
-
-Sign up for a Claude Pro subscription, pick one recurring weekly task that takes you over an hour (quote follow-ups, weekly report prep, customer email triage), and use Claude.ai to do only that one task for two weeks before adding anything else. After two weeks you'll know whether the productivity lift is real, and you'll have learned enough to make the next call: stay on Claude.ai, upgrade to Code, or bring in UnderCurrent Automations.
+Claude can run business tasks on a schedule. Anthropic's September 2026 update lets you schedule a task like a Monday report, and Claude starts it without being asked. It's rolling out to Pro and Max plans first. Claude Code has routines that run in the cloud, even when your computer is off. Start with a job that has clear inputs, like a weekly sales summary, and check the first few runs yourself.
 
 ## Related Reading
 
-- [Top 5 small business automation tools for 2026](/blog/top-5-small-business-automation-tools-2026)
-- [What is business process automation in Australia](/blog/what-is-business-process-automation-australia)
-- [AI training for small business in Australia](/blog/ai-training-australia-small-business-guide)
-- [e-Invoicing for Australian small business](/blog/einvoicing-small-business-australia-guide)
-- [Hidden cost of manual processes in a trade business](/blog/hidden-cost-manual-trade-business-australia)
-- [How much manual processes are costing your business](/blog/how-much-are-manual-processes-costing-your-business)
-- [Google Ads cost for Australian small business](/blog/google-ads-cost-australian-small-business)
+- [What is AI automation?](/blog/what-is-ai-automation-australia)
+- [AI training for Australian small business](/blog/ai-training-australia-small-business-guide)
+- [Top 5 small business automation tools](/blog/top-5-small-business-automation-tools-2026)
