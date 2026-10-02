@@ -17,3 +17,37 @@ Board: https://undercurrent-website-git-de-49e525-marinovicluke-bytes-projects.v
 - How the pages are built: four separate `page.js` files and four near-identical stylesheets, with no shared components. The rebuild will add shared ones.
 
 Waiting on Luke's pick, one name per section.
+
+## Stage 2, the four pages rebuilt (2026-10-02)
+
+Luke's picks: figures Scanline, steps Fill, What it is the Trigger line opening followed by the crossed four-cell areas grid, includes Stages, About as live, Why us untouched.
+
+**How it's built now.** Four shared components in `components/site/ServiceBlocks.js` (`ServiceFigures`, `ServiceSteps`, `ServiceWhat`, `ServiceIncludes`) and one shared stylesheet, `app/styles/service-blocks.css`, loaded after each page's own stylesheet so it takes that page's colour. Each page passes its own copy as data at the top of its `page.js`. The old `.fig`, `.areas`, `.steps` and `.spec` rules (26 lines a page) are gone from the four page stylesheets. Two dead remnants were left on purpose: the `.fig` rule inside the 1000px media line, because that line also holds the Why us `.stats` rules, and the `.row` hover rules.
+
+**What each page now has (all four the same shape):**
+- Why it matters: the page's three figures in the hero's stripes. Hairline rows on a phone; on desktop, three hairline cells with the grain cross where each divider meets the rules. "Over half" wraps at its space on narrow widths and doesn't clip.
+- How we work together: the four steps with the article Fill numerals in the page's colour, a quarter filled at step 1 and solid at step 4.
+- What it is: the h2, the opening sentence, its pattern drawn as a line of steps with a cross at each (the last in the page colour), the rest of the copy, then the four areas as the crossed grid. That's two by two with the cross at the centre on a phone, four across with crosses top and bottom on desktop.
+- What the build includes: the h2, then the six items in three groups. Each group is headed by the number and name of the step that delivers it, using the page's own step names, so the list ties back to the steps above.
+
+**Every copy change** (all in the What it is opening; no word added, no figure, heading, title, meta, URL, schema or link touched):
+- Automation: "...follows a pattern: a job comes in, a quote goes out, an invoice is raised, a follow-up falls due. A system watches..." becomes "...follows a pattern:" plus a flow ("A job comes in" / "A quote goes out" / "An invoice is raised" / "A follow-up falls due"). "A system watches for the trigger and does the steps, on the tools you already pay for." now stands as its own line.
+- Website: "For a small business it does three jobs. It says what you do. It shows people you're real and you're good at it. And it makes getting in touch easy." becomes "...three jobs:" plus a flow ("It says what you do" / "It shows people you're real and you're good at it" / "It makes getting in touch easy"). "And" is dropped.
+- Search: "Our job is to make sure they find you. On Google's map, on the results page, and now inside AI answers." becomes "...find you:" plus a flow ("On Google's map" / "On the results page" / "And now inside AI answers"). "This is the work people used to call SEO." follows the flow.
+- Consulting: "...watches how the work really moves. Where a job comes in. Who types what. What gets dropped." becomes "...really moves:" plus a flow ("Where a job comes in" / "Who types what" / "What gets dropped"). "Then you get a plan you can read. What to fix first. What to buy, what to build, and what to leave alone." follows.
+- Combining Trigger line with the grid forced no change beyond these. The second paragraph stays whole on every page.
+
+**What a page couldn't take as-is, and what I did:**
+- Only the automation page has a trigger-and-steps pattern. On the other three, the flow is the closest list already in the opening: the website's three jobs, search's three places to be found, consulting's three things watched. They're lists, not sequences.
+- The Stages groupings are my reading of each page. Group names are the page's own step names (step 1, Talk, delivers nothing on the list on any page):
+  - Automation: Map (process map); Build, together (automation, documentation, training); Stay (monitoring, 30 days of support).
+  - Website: Design (the plan, the design); Build together (the build, the words); Launch and stay (the setup, 30 days of care).
+  - Search: Map (search map); Build, together (Google page, page per job, the questions, the fixes underneath); Stay (monthly report).
+  - Consulting: Look (the map); The plan (the plan, tool list, the numbers); Stay (training, 30 day check-in).
+  - Debatable placements: automation's Training, website's Setup, consulting's Training.
+
+**Checks.** `next build` passes. The four pages, the homepage, /blog and an article show no sideways scroll at 390 or 1440. Why us (`#stats`) and About (`#about`) markup hash identically to main on all four pages, and so do the Why us and About CSS rules. Every page renders the same nine h2s in the same order, with metadata, schema and links untouched. The homepage, blog and articles share no file with this change. After screenshots are in `docs/screenshots/services-after/`.
+
+**Preview** (branch alias, Vercel login): https://undercurrent-website-git-de-49e525-marinovicluke-bytes-projects.vercel.app plus /automation, /website, /seo, /consulting. Nothing merged.
+
+**For Luke:** the three debatable Stages placements above. The figures still have no on-page source (your call in 73da37e), and the dead `.fig` rule can go whenever the Why us line is next touched.
