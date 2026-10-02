@@ -1,13 +1,13 @@
-// scripts/gen-services-concepts.mjs — builds public/services-concepts.html, the board of design
+// scripts/gen-services-concepts.mjs — builds docs/concept-boards/services-concepts.html, the board of design
 // ideas for the four service pages (Luke, 2026-10-02: "use a html to show me various design ideas
 // ... ensuring it's best for mobile"). Each idea is a frame (srcdoc) on its own stylesheet,
-// public/services-concepts.css, set at 390 first with a desktop toggle. Copy and figures are the
+// docs/concept-boards/services-concepts.css, set at 390 first with a desktop toggle. Copy and figures are the
 // AI Automation page's, word for word unless the idea says otherwise.
 // Run: node scripts/gen-services-concepts.mjs
 import fs from 'node:fs'
 import path from 'node:path'
 
-const OUT = path.join(path.dirname(new URL(import.meta.url).pathname), '..', 'public', 'services-concepts.html')
+const OUT = path.join(path.dirname(new URL(import.meta.url).pathname), '..', 'docs', 'concept-boards', 'services-concepts.html')
 const V = Date.now().toString(36)
 
 // ---------- the AI Automation page's copy ----------
@@ -161,7 +161,7 @@ const families = [
 // ---------- the frame and the board ----------
 const liveJs = `<script>(function(){var r=[].slice.call(document.querySelectorAll('.fill--live>li,.ps>li,.pg>li'));if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){r.forEach(function(l){l.classList.add('on')});return}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -30% 0px'});r.forEach(function(l){io.observe(l)})})()</script>`
 const pinJs = `<script>document.addEventListener('click',function(e){var r=e.target.closest('.rowb');if(r)r.classList.toggle('on')})</script>`
-const frame = (look) => `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/services-concepts.css?v=${V}"></head><body>${look.html}${look.live ? liveJs : ''}${pinJs}</body></html>`
+const frame = (look) => `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="services-concepts.css?v=${V}"></head><body>${look.html}${look.live ? liveJs : ''}${pinJs}</body></html>`
 const attr = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;')
 
 const board = `<!doctype html>
@@ -174,7 +174,7 @@ const board = `<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-/* the board's own chrome. The frames carry /services-concepts.css */
+/* the board's own chrome. The frames carry services-concepts.css, beside the board */
 :root{--white:#fff;--off:#f6f6f6;--ink:#141414;--ink-2:#6b6b6b;--line:rgba(20,20,20,.14);--c0:hsl(160 45% 34%);--pad:clamp(16px,4vw,56px);
   --noise-coarse:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.32' numOctaves='1' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
 *{box-sizing:border-box;margin:0;padding:0}
