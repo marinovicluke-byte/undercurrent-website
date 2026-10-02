@@ -104,7 +104,14 @@ Cover all three search types and you catch the household at every stage.
 
 **Your Google Business Profile is the single biggest lever in electrician SEO, and most of them are half-built.** It's the free listing that feeds the map pack, and Google ranks it on completeness, proximity, and activity. Treat every field as a ranking signal, not paperwork.
 
-Set the primary category to "Electrician", not the vague "Contractor". Add every service you offer as a service item: switchboard upgrades, safety switch installs, EV chargers, rewires, emergency callouts. Upload real photos of your vans, your team, and finished boards, because Google reads images and stock shots add nothing. Post a Google update most weeks so the profile reads as a live business. Job management tools like ServiceM8 make this easier: the app logs completed jobs and customer contacts in one place, so following up for a photo or a review link takes seconds, not a manual search through messages.
+**Set up the profile, field by field**
+
+1. Set the primary category to "Electrician", not the vague "Contractor".
+2. Add every service you offer as a service item: switchboard upgrades, safety switch installs, EV chargers, rewires, emergency callouts.
+3. Upload real photos of your vans, your team, and finished boards, because Google reads images and stock shots add nothing.
+4. Post a Google update most weeks so the profile reads as a live business.
+
+Job management tools like ServiceM8 make this easier: the app logs completed jobs and customer contacts in one place, so following up for a photo or a review link takes seconds, not a manual search through messages.
 
 The payoff is measurable. [Backlinko reports](https://backlinko.com/local-seo-stats) customers are 2.7x more likely to see a business as reputable when its profile is complete, 50% more likely to consider buying, and that 42% of local searchers click a result inside the map pack. A finished profile is the cheapest lead source an electrician will ever own.
 
@@ -126,7 +133,13 @@ The reward is worth the writing. [Semrush's data](https://www.semrush.com/blog/l
 
 ## What does an electrician's website need to rank?
 
-**Your website's job is to prove you do the service, in the suburb, and can be trusted with it.** Three layers do that work. First, a dedicated page for each core service, not one "Services" page listing twelve jobs in a single paragraph. Second, a real page for each target suburb. Third, [schema markup](/glossary/what-is-schema-markup): structured code that spells out your business, services, and rating in a format Google and AI tools read directly.
+**Your website's job is to prove you do the service, in the suburb, and can be trusted with it.**
+
+**Three layers do that work**
+
+1. A dedicated page for each core service, not one "Services" page listing twelve jobs in a single paragraph.
+2. A real page for each target suburb.
+3. [Schema markup](/glossary/what-is-schema-markup): structured code that spells out your business, services, and rating in a format Google and AI tools read directly.
 
 For an electrician, the key block is LocalBusiness schema. Drop this into the page and you hand Google a clean, machine-readable profile:
 

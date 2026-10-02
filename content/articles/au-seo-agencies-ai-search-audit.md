@@ -73,14 +73,16 @@ The audit window before we get into the answers:
 
 Audited agencies were not contacted in advance. Any agency in the corpus can request its own anonymised score, category-level breakdown, and a re-audit on a specified URL set by contacting UC. The standing offer is open.
 
-Those questions are the right ones. The rest of this article is built around answering them transparently. What we did to mitigate the conflict:
+Those questions are the right ones. The rest of this article is built around answering them transparently.
+
+**What we did to mitigate the conflict**
 
 - **Scoring is automated, not human-graded.** The same code runs over UC content and competitor content with no override path. There is no reviewer to bias.
 - **UC content goes through the same publish gate.** Articles that fall below threshold are blocked and never reach the corpus. The 79.4 average reflects what survived our own filter, not a curated highlight reel.
 - **Sampling tilts toward agencies, not against them.** Where larger agency blogs were sampled, the selection biased toward each agency's most-trafficked content, their flagship work, not their weakest.
 - **Weights were built on citation correlation, not opinion.** Categories carrying the most points are the ones where movement in the variable consistently moved citation rates in our own tracking data.
 
-What we did not solve:
+**What we did not solve**
 
 - **We chose the agencies.** The 22-domain list is a judgement call. A different sampler might have produced a different industry average.
 - **We chose the rubric.** Other valid frameworks exist for measuring content quality. This one is built specifically for AI search extraction; agencies optimising for other goals will look different through different lenses.
@@ -154,7 +156,7 @@ That distinction matters when reading the corpus results below. An agency scorin
 
 ### How Were the 22 Australian Agency Domains Chosen?
 
-**We started with the top-ranked Australian SEO agencies surfacing for "Australian SEO consultancy" queries on Google and ChatGPT, plus specialist agencies appearing in Australian industry directories.** The list deliberately spans the full quality spectrum: large established agencies with national brand presence, mid-size specialists serving Australia-wide clients, and smaller location-led firms operating in single capital cities. Including high-reputation agencies in the same corpus as smaller ones was intentional — if the structural gap shows up across the spectrum, the gap is structural, not a function of agency size.
+**We started with the top-ranked Australian SEO agencies surfacing for "Australian SEO consultancy" queries on Google and ChatGPT, plus specialist agencies appearing in Australian industry directories.** The list deliberately spans the full quality spectrum: large established agencies with national brand presence, mid-size specialists serving Australia-wide clients, and smaller location-led firms operating in single capital cities. Including high-reputation agencies in the same corpus as smaller ones was intentional: if the structural gap shows up across the spectrum, the gap is structural, not a function of agency size.
 
 ### How Were Articles Sampled Per Domain?
 
@@ -178,7 +180,7 @@ We also excluded UC's own client-deliverable case studies and audit reports. The
 
 **A 4,200-word pillar-style article on [local SEO](/glossary/what-is-local-seo) for trades businesses.** The agency is well-regarded, the prose is professional, the content is comprehensive on its surface.
 
-Where the points went:
+**Where the points went**
 
 - **Answer Architecture: 4/16.** The article opened with a 240-word narrative introduction. The first answer to the article's headline question appeared in paragraph six. None of the five H2 sections led with a direct answer; each opened with context-setting prose.
 - **Source Discipline: 5/14.** Outbound links pointed to the agency's own older blog posts, two Semrush landing pages, and one Wikipedia article. No inline links to ABS, ACCC, or peer-reviewed sources. Stat claims like "70% of customers search online first" appeared without a source.
@@ -192,7 +194,9 @@ The fix path is concrete: rewrite section openings, replace tool-vendor citation
 
 ### Anonymous Reference Article, 82/100
 
-**A 2,900-word how-to article from a specialist agency operating outside the Australian benchmark sample, included as a reference point.** A structurally strong article looks like this:
+**A 2,900-word how-to article from a specialist agency operating outside the Australian benchmark sample, included as a reference point.**
+
+**A structurally strong article looks like this**
 
 - **Answer Architecture: 14/16.** Quick-answer block at the top. Each H2 led with a direct one-sentence answer before elaborating.
 - **Source Discipline: 13/14.** Inline hyperlinks to Google Search Central, Schema.org, and a peer-reviewed paper on retrieval-augmented generation. No tool-vendor citations.
