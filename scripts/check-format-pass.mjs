@@ -34,7 +34,8 @@ const FLAGGED = {
   'how-to-send-instant-follow-up-email-to-leads-automatically-australia': ['30%', '40%'],
 }
 
-const nums = s => (s.replace(/\]\([^)]*\)/g, ']').match(/\d+(?:[.,]\d+)*/g) || []).map(n => n.replace(/,/g, ''))
+// an ordered list's own numerals ("1. ") are structure, not figures
+const nums = s => (s.replace(/^\d+\.\s/gm, '').replace(/\]\([^)]*\)/g, ']').match(/\d+(?:[.,]\d+)*/g) || []).map(n => n.replace(/,/g, ''))
 const front = s => (s.match(/^---\n[\s\S]*?\n---\n/) || [''])[0].replace(/^dateModified:.*$/m, '')
 const qa = s => (s.match(/^> \*\*Quick Answer[\s\S]*?(?=\n[^>])/m) || [''])[0]
 const heads = s => s.split('\n').filter(l => /^#{1,6}\s/.test(l))
