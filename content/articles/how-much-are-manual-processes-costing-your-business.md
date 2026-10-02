@@ -25,7 +25,10 @@ faqs:
 ---
 # How Much Are Manual Processes Costing Your Business?
 
-> **Quick Answer:** Manual processes cost Australian SMEs between $15,000 and $40,000 annually in recoverable time spent on data entry, invoicing, follow-ups, and reporting. For a business with 5-10 staff, that's roughly 40 hours per week across the team on work that could be automated. [Source Digital](https://source-digital.com.au/blog/australian-smes-cutting-costs-with-ai-2026) reports payback on basic automation typically lands in 8-12 months.
+> **Quick Answer:** **Manual processes are costing Australian small businesses thousands of dollars a year in time on data entry, invoicing, follow-ups and reporting.**
+> - Between $15,000 and $40,000 a year in time you could win back
+> - About 40 hours a week across a 5-10 person team
+> - [Source Digital](https://source-digital.com.au/blog/australian-smes-cutting-costs-with-ai-2026) puts payback on basic automation at 8-12 months
 
 ![Manual invoice processing cost workflow for Australian small businesses showing five connected steps](./body-1.jpg)
 

@@ -26,12 +26,11 @@ faqs:
 ---
 # How to Do Dog Grooming Marketing in Australia
 
-> **Quick Answer:** Good dog grooming marketing in Australia comes down to a few honest moves:
-> - Win the Google local pack with proximity and a complete profile, not just five-star reviews.
-> - Get cited by AI tools like ChatGPT when owners ask "best groomer near me".
-> - Run a real website that books jobs and feeds Google an entity, not a Linktree.
-> - Automate bookings, reminders and review requests so marketing runs itself.
-> Fix the free channels first.
+> **Quick Answer:** **Good dog grooming marketing in Australia means winning the free channels first: the Google local pack, AI answers and a website that books.**
+> - Win the local pack with proximity and a complete profile, not just reviews
+> - Get named by ChatGPT when owners ask for the "best groomer near me"
+> - Run a real website that books jobs, not a Linktree
+> - Automate bookings, reminders and review requests
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="The five marketing channels that grow an Australian dog grooming business" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>The five marketing channels that grow an Australian dog grooming business</title>
