@@ -128,7 +128,16 @@ One Worked block only. The 336 hours is the one sum that changes the reader's de
 Body, from the H1 to the Sources list, without the FAQ, with link URLs removed:
 
 - Before: 3,175
-- After: see Checks
+- After: 2,851 (down 324, or 10%). The format-pass survey script counts 3,176 to 2,891 on its own rules.
+
+## Checks
+
+- **`next build`** (run directly, no IndexNow postbuild): passes. The Worked sum, 7 x 48 = 336, passes the workings check.
+- **`scripts/check-format-pass.mjs`** (from `content/format-pass-batch-1`, run without committing it here): it fails on purpose for a rewrite: words -9.0%, new numbers, headings, front matter and Quick Answer changed. The checks that apply to the rewrite lane pass: no em dash, no flagged figure in a Worked block, one H1. Its "new numbers" are exactly the source years (2021-22, 2022), the sample (1,531), the Worked figures (48, 52, 336) and the corrected prices (78, 315). Every one is in the figure table.
+- **`scripts/check-quick-answers.mjs`**: 71 of 71 pass. The new answer has no numbers.
+- **Headings:** H1 and H2s unchanged. The three H3s that named invented clients changed: "Example 1: HVAC business in Brunswick (Melbourne)" became "Pattern 1: a trade business, from enquiry to paid invoice", and the same for 2 and 3.
+- **Head against production:** title, meta description, canonical and every JSON-LD block are identical to undercurrentautomations.com, apart from the FAQ answer text.
+- **`next start`, at 390 and 1440, in Chromium and WebKit** (CSP stripped for WebKit): no sideways scroll. Both Fill blocks, the Worked block and the contrast pair render. The two tables break out of the text column the same way they do on production. The rotating photo sits before "What are the common mistakes to avoid?", one H2 later than on production, because the body is shorter.
 
 ## Reads thin (for Luke)
 
