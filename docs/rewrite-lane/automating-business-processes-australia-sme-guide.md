@@ -27,7 +27,7 @@ Tool prices were checked against each vendor's own page on 3 Oct 2026. Five were
 - MYOB's cheapest Business plan is Lite at $315 a year, not $14 a month.
 - Calendly is $10 USD a seat, not $12 AUD.
 
-These are corrected to the vendor's figure and linked, not invented. **If ops would rather cut price columns than correct them, the five rows are listed below.**
+These are corrected to the vendor's figure and linked, not invented. **Ops decided on 3 Oct to keep the corrected prices, each linked to the vendor page.**
 
 ## Rule applied to small counts
 
@@ -108,6 +108,7 @@ A count that's an instruction or a description of the article is not a claim, so
 | 94-95 | 2-3 hours, 8-10 hours, the first month | FAQ 3 | CUT |
 | 96-99 | 4-6 weeks, 10-15 hours, top 5, $4,000-6,000 a month | FAQ 4 | CUT |
 | 100 | 5-10 minutes to fix | FAQ 5 | CUT |
+| 101 | "Real examples from trades, retail, and professional services" (no figure, but no longer true) | Meta description | CHANGED (ops, 3 Oct). Now: "Worked patterns for trades, retail, and professional services." The title and canonical are unchanged |
 
 Em dashes: 24 in the original, 0 now, including in the `faqs:` front matter. The FAQ answers render from `faqs:` and feed the FAQPage JSON-LD, so they change with the visible FAQ. The schema type, the questions and their order are unchanged.
 
@@ -136,12 +137,12 @@ Body, from the H1 to the Sources list, without the FAQ, with link URLs removed:
 - **`scripts/check-format-pass.mjs`** (from `content/format-pass-batch-1`, run without committing it here): it fails on purpose for a rewrite: words -9.0%, new numbers, headings, front matter and Quick Answer changed. The checks that apply to the rewrite lane pass: no em dash, no flagged figure in a Worked block, one H1. Its "new numbers" are exactly the source years (2021-22, 2022), the sample (1,531), the Worked figures (48, 52, 336) and the corrected prices (78, 315). Every one is in the figure table.
 - **`scripts/check-quick-answers.mjs`**: 71 of 71 pass. The new answer has no numbers.
 - **Headings:** H1 and H2s unchanged. The three H3s that named invented clients changed: "Example 1: HVAC business in Brunswick (Melbourne)" became "Pattern 1: a trade business, from enquiry to paid invoice", and the same for 2 and 3.
-- **Head against production:** title, meta description, canonical and every JSON-LD block are identical to undercurrentautomations.com, apart from the FAQ answer text.
+- **Head against production:** title, canonical and every JSON-LD block are identical to undercurrentautomations.com, apart from the FAQ answer text. The meta description changed on purpose (figure 101).
 - **`next start`, at 390 and 1440, in Chromium and WebKit** (CSP stripped for WebKit): no sideways scroll. Both Fill blocks, the Worked block and the contrast pair render. The two tables break out of the text column the same way they do on production. The rotating photo sits before "What are the common mistakes to avoid?", one H2 later than on production, because the body is shorter.
 
 ## Reads thin (for Luke)
 
 1. **The "in practice" section has no real result.** The three builds are patterns now. The approved list has nothing in trades or retail. The health business invoice generator (about 10 hours a week, "stated by Luke") would fit, but it has no clickable source.
 2. **The FAQ "How long does it take to see ROI" no longer gives a time.** It says how to work it out.
-3. **The meta description says "Real examples from trades, retail, and professional services."** It has no figure, so it's unchanged, but the examples aren't real client work any more. Change it if ops agrees.
-4. **The 336 hours is a new total.** Both inputs are sourced, and the old $72,000 sum already assumed 48 weeks. Ops can veto it.
+3. **The meta description no longer says "Real examples".** Ops approved the change on 3 Oct. It now says "Worked patterns".
+4. **The 336 hours is a new total.** Ops kept it on 3 Oct, because it's arithmetic on two sourced inputs.
