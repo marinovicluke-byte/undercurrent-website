@@ -16,8 +16,6 @@ const AUD = new Intl.NumberFormat('en-AU', {
 // A typical full-time billable week — lets us express admin hours as
 // "weeks of paperwork a year" (matches the host article's framing).
 const FULL_WEEK = 40
-// Automation usually claws back 6-8 hrs of a typical 10-hr admin load.
-const RECOVERY = 0.7
 
 const FIELDS = [
   { key: 'hours', id: 'tradie-calc-hours', label: 'Hours per week on admin',
@@ -46,7 +44,6 @@ export default function TradieAdminCalculator() {
   const weekly = hours * rate
   const annual = weekly * weeks
   const adminWeeks = (hours * weeks) / FULL_WEEK
-  const recovered = annual * RECOVERY
 
   return (
     <div className={styles.calculator} role="group" aria-label="Admin cost calculator">
@@ -114,13 +111,6 @@ export default function TradieAdminCalculator() {
           <span className={styles.rowLabel}>That is pure paperwork</span>
           <span className={styles.rowValue}>{adminWeeks.toFixed(1)} weeks a year</span>
         </div>
-      </div>
-
-      <div className={styles.recovery}>
-        <span className={styles.recoveryLabel}>
-          Automate the routine work and you claw back around 70%
-        </span>
-        <span className={styles.recoveryValue}>{AUD.format(recovered)} back a year</span>
       </div>
     </div>
   )
