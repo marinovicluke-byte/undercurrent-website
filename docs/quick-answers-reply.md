@@ -38,14 +38,14 @@ None of these figures are in a bold sentence any more. Each one sits in a point,
 
 - **`scripts/check-quick-answers.mjs`** (committed): **59 of 59 pass.** For every article with a Quick Answer it asserts one bold sentence of up to 30 words, 2 to 4 points of up to 15 words each, no em dash, no closing paragraphs, and that every number was already in the article on `origin/main`. It also warns when the bold sentence is missing a keyword word. Four warnings are left: one on chatgpt-knowledge-cutoff, where "Australia" doesn't fit the answer, and three on articles that were already done.
 - **`next build`**, run directly: passes, 143 pages. In the built HTML, all 59 have the bold answer style and the points list, none have a closing line, and every article has one H1.
-- **`next start`, Chromium, 390 and 1440, reduced motion.** I checked the five longest, the five shortest, and one article per category colour (8 categories, 12 pages). Every page returned 200 with no sideways scroll. On a phone the answer ends by 696px at most, and the median before was 586px for the hero alone with some past 700. Screenshots are in `docs/screenshots/quick-answers/`.
+- **`next start`, Chromium, 390 and 1440, reduced motion.** I checked the five longest, the five shortest, and one article per category colour (8 categories, 12 pages). Every page returned 200 with no sideways scroll. On a phone the answer ends by 696px at most, and the median before was 586px for the hero alone with some past 700. The screenshots are kept out of the repo (24 PNGs, 23MB), on disk at `/private/tmp/claude-501/-Users-luke-UnderCurrent-Builds-Products-Website-undercurrent/64bcb93d-2508-452c-89b8-8b0e5616c384/scratchpad/quick-answers-screenshots/`.
 - **Head check against production, 10 articles:** titles, meta descriptions, canonicals and all six JSON-LD blocks are byte-identical between the branch build and undercurrentautomations.com.
 
 ## Not done (needs Luke)
 
-- **Merge PR #38.** It's mergeable and clean, and main hasn't moved since `717f074`. Production then deploys itself.
+- **Squash-merge PR #38.** It's mergeable and clean, and main hasn't moved since `717f074`. Production then deploys itself.
 - **Live checks after the merge:** ten articles return 200 with the answer in the hero, the head data is unchanged, and `/blog`, the homepage and the sitemap return 200. The scratchpad scripts and the production "before" snapshot are ready to run.
 
 ## Rollback
 
-`git revert -m 1 <PR #38 merge commit>`, merged through a PR. The revert deploys itself. For an instant rollback without git: `vercel rollback undercurrent-website-h2yqi6wmr-marinovicluke-bytes-projects.vercel.app`, which is production before the merge (commit `717f074`).
+PR #38 goes in as a squash merge, so main gets one commit. Roll back with `git revert <PR #38 squash commit>` (no `-m 1`, since a squash commit has one parent), merged through a PR. The revert deploys itself. For an instant rollback without git: `vercel rollback undercurrent-website-h2yqi6wmr-marinovicluke-bytes-projects.vercel.app`, which is production before the merge (commit `717f074`).
