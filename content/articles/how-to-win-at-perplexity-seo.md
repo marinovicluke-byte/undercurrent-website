@@ -24,7 +24,11 @@ faqs:
 ---
 # How to Win at Perplexity SEO: Freshness Beats Backlinks
 
-> **Quick Answer:** Perplexity SEO is not Google SEO with a new logo on it. Perplexity reads the live web on every query, leans on fresh pages, structured sources and tight summaries, and barely cares about your backlink profile. Win it by publishing often, citing real data, and formatting answers an engine can lift in one block. Cadence beats authority here.
+> **Quick Answer:** **Perplexity SEO is not Google SEO with a new logo, because Perplexity reads the live web on every query and barely weighs backlinks.**
+> - It favours fresh pages, structured sources and tight summaries
+> - Publish often and cite real data
+> - Format answers an engine can lift in one block
+> - Cadence beats authority here
 
 ![Five-step Perplexity SEO workflow for Australian businesses, from unblocking the crawler to tracking citations](./body-1.jpg)
 

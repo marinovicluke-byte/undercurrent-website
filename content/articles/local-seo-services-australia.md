@@ -26,7 +26,11 @@ faqs:
 
 Search "plumber near me" and Google answers with a map and three businesses on it. Everyone else is invisible. Getting into that map rarely comes down to who does the best work. It comes down to who has done the search work, which is what local SEO services do.
 
-> **Quick Answer:** [Local SEO](/glossary/what-is-local-seo) is how a business gets found by nearby customers across Google Maps, the local pack, and AI search tools. Local SEO services are the packaged version of that work: claiming and tuning your Google Business Profile, fixing your listings, growing reviews, matching your website to your profile, and structuring content so AI engines cite you. Win one of three map slots.
+> **Quick Answer:** **[Local SEO](/glossary/what-is-local-seo) services are the packaged work that gets a business found by nearby customers on Google Maps, the local pack and AI search.**
+> - Claim and tune your Google Business Profile
+> - Fix your listings, grow reviews and match your website to your profile
+> - Structure content so AI engines cite you
+> - The prize: one of three map slots
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>AI search optimisation workflow for Australian businesses in five steps</title>

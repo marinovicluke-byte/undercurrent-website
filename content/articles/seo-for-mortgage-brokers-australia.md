@@ -24,7 +24,11 @@ faqs:
 ---
 # How to Win SEO for Mortgage Brokers in Australia, 2026
 
-> **Quick Answer:** A modern home-loan enquiry passes through four search surfaces before a borrower ever calls: Google's organic results, the local map pack, AI search tools like ChatGPT and Perplexity, and the comparison content they read while deciding. Strong SEO for mortgage brokers covers all four surfaces, and in Australia it stays inside the rules ASIC and the MFAA set. Four surfaces, one job.
+> **Quick Answer:** **Strong SEO for mortgage brokers covers the four search surfaces a borrower passes through before calling, within the rules ASIC and the MFAA set.**
+> - Google's organic results
+> - The local map pack
+> - AI search tools like ChatGPT and Perplexity
+> - The comparison content borrowers read while deciding
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>AI search optimisation workflow for Australian businesses in five steps</title>

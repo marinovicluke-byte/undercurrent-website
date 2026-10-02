@@ -26,7 +26,11 @@ faqs:
 ---
 # Why Tradies Lose Jobs Before Quoting Australia 2026: The Lead Response Time Problem
 
-> **Quick Answer:** Most Australian tradies lose 50-70% of potential jobs simply because they don't respond fast enough. According to Harvard Business Review research, businesses that respond to new enquiries within 5 minutes are 100 times more likely to connect with the lead than those who wait 30 minutes. In the Australian trade context, customers typically contact 3-4 businesses and go with whoever calls back first. If you're not responding instantly, you're not even getting a chance to quote.
+> **Quick Answer:** **Australian tradies lose jobs before quoting because they don't reply fast enough, and the customer goes with whoever calls back first.**
+> - Many lose 50-70% of potential jobs to slow replies
+> - Harvard Business Review: replying in 5 minutes, not 30, connects 100 times more
+> - Customers usually contact 3-4 businesses
+> - If you don't reply fast, you never get to quote
 
 You've probably felt this. A new enquiry comes through. You're on a job site. You'll call them back at lunch. By the time you do, they've already booked someone else.
 

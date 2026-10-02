@@ -24,11 +24,11 @@ faqs:
 ---
 # How to Use AI Automation in a Pet Grooming Business
 
-> **Quick Answer:** AI automation for pet grooming is software that runs the repetitive admin around your appointments, so you stay at the table instead of on the phone.
-> - Automate in this order: booking and rebooking, no-show reminders, then review requests.
-> - Reminder sequences can drop grooming no-shows from 10-15% down to 2-5%.
-> - The win isn't the software brand, it's the automations you build around your bookings, leads, clients and finances.
-> - Nearly half of companies have already adopted AI in some form ([PetExec](https://www.petexec.net/resources/technology/ai-for-small-business)). Start with one workflow, measure it, then add the next.
+> **Quick Answer:** **AI automation for pet grooming is software that runs the admin around your appointments, so you stay at the table instead of on the phone.**
+> - Automate booking and rebooking first, then reminders, then review requests
+> - Reminders can cut grooming no-shows from 10-15% to 2-5%
+> - The automations you build matter more than the software brand
+> - Start with one workflow, measure it, then add the next
 
 A grooming salon doesn't run on clippers. It runs on the phone calls you miss while you're brushing a Cavoodle, the text reminders you forget to send, and the review you never asked for after a great groom. That is the unglamorous engine of the business, and it is exactly the part AI automation for pet grooming is built to handle.
 

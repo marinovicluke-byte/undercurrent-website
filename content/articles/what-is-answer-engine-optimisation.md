@@ -24,7 +24,11 @@ faqs:
 ---
 # What is Answer Engine Optimisation? A Plain-English Guide
 
-> **Quick Answer:** Answer engine optimisation makes your business one of the three citations an AI hands a buyer, instead of one of ten blue links they scroll past. The work is structural: definitional answers, [schema markup](/glossary/what-is-schema-markup), citation-friendly sources, and weekly tracking. Australian small businesses with decent Google rankings often have zero AI citations on the same queries. The fix is repeatable. Citations beat clicks now.
+> **Quick Answer:** **Answer engine optimisation makes your business one of the three citations an AI gives a buyer, instead of one of ten blue links.**
+> - The work is structural: clear definitions and [schema markup](/glossary/what-is-schema-markup)
+> - Citation-friendly sources and weekly tracking
+> - Good Google rankings often come with zero AI citations
+> - The fix is repeatable, and citations now beat clicks
 
 ![Answer engine optimisation workflow for Australian businesses in five steps](./body-1.jpg)
 

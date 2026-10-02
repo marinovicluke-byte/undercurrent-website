@@ -24,7 +24,10 @@ faqs:
 ---
 # Does ChatGPT Search the Web? The 34.5% Answer
 
-> **Quick Answer:** Yes, ChatGPT can search the web, but it usually doesn't. As of February 2026, ChatGPT triggers a live web search on only 34.5% of queries, down from 46% in late 2024, per a [Semrush analysis of 1B+ clickstream rows](https://www.semrush.com/blog/chatgpt-search-insights/). The other ~65% of answers come from training data baked in months earlier. Schema isn't the lever. Earned media is.
+> **Quick Answer:** **Yes, ChatGPT can search the web, but it usually doesn't: it ran a live search on only 34.5% of queries in February 2026.**
+> - Down from 46% in late 2024, per [Semrush's 1B+ row analysis](https://www.semrush.com/blog/chatgpt-search-insights/)
+> - The other ~65% of answers come from training data
+> - Schema isn't the lever, earned media is
 
 There's an AEO cottage industry on LinkedIn telling you that schema markup is the magic lever that gets you cited inside ChatGPT. It isn't. The lever sits somewhere else, and the data on where ChatGPT actually gets its answers is now public enough that nobody has an excuse for getting it wrong.
 

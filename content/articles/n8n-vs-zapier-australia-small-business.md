@@ -24,7 +24,11 @@ faqs:
 ---
 # n8n vs Zapier: Australia Small Business Guide
 
-> **Quick Answer:** For most Australian small businesses without a developer on staff, Zapier is the faster, simpler choice for business automation, you can connect Xero, ServiceM8, or HubSpot in minutes. But if your workflows run thousands of tasks per month, or you need your data to stay on Australian servers, n8n self-hosted on AWS Sydney is significantly cheaper and gives you full data control. The right answer depends on your volume, your technical confidence, and whether data sovereignty matters to your business.
+> **Quick Answer:** **In the n8n vs Zapier choice, Zapier is faster and simpler for most Australian small businesses without a developer on staff.**
+> - Zapier connects Xero, ServiceM8 or HubSpot in minutes
+> - n8n self-hosted on AWS Sydney is much cheaper at thousands of tasks a month
+> - n8n also keeps your data on Australian servers
+> - Choose on volume, technical confidence and data sovereignty
 
 ![n8n vs Zapier Australia small business workflow automation comparison showing five integrated process steps](./body-1.jpg)
 

@@ -25,7 +25,11 @@ faqs:
 ---
 # eInvoicing for Small Business Australia 2026: Your Step-by-Step Setup Guide
 
-> **Quick Answer:** Getting started with eInvoicing for small business in Australia means registering on the Peppol network through an Access Point provider (like Xero, MYOB, or a specialist eInvoicing platform), connecting your accounting software, and sending invoices digitally to other Peppol-registered businesses. The setup takes 1-2 hours and can cut your invoice processing costs from $2 per invoice to near-zero while reducing payment delays by 40%.
+> **Quick Answer:** **Getting started with eInvoicing for small business in Australia means registering on the Peppol network through an Access Point provider like Xero or MYOB.**
+> - Connect your accounting software to send invoices digitally
+> - Send them to any other Peppol-registered business
+> - Setup takes 1-2 hours
+> - Processing can drop from $2 an invoice to near zero
 
 eInvoicing is structured digital invoicing that goes straight from your accounting system to your customer's accounting system. No PDFs. No emails. No manual data entry on either end.
 

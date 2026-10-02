@@ -26,7 +26,10 @@ faqs:
 ---
 # How to Use an AI Agent for Business in Australia
 
-> **Quick Answer:** An AI agent is autonomous software that completes multi-step tasks on your behalf, booking jobs, chasing invoices, qualifying leads, without you clicking a button each time. In Australia, around [40% of SMEs have already adopted some form of AI agent](https://thomas-wiegold.com/blog/ai-agents-for-small-businesses-sydney/) as of late 2024, and the businesses using them are growing [2.8 times faster than those that aren't](https://insidesmallbusiness.com.au/technology/systems-software/smes-adopting-ai-grow-2-8-times-faster-data-shows). Start with one process. Results follow fast.
+> **Quick Answer:** **An AI agent for business in Australia is software that does multi-step tasks for you, like booking jobs, chasing invoices and qualifying leads, without a click each time.**
+> - About [40% of Australian SMEs](https://thomas-wiegold.com/blog/ai-agents-for-small-businesses-sydney/) used some form of AI agent by late 2024
+> - SMEs using AI grow [2.8 times faster](https://insidesmallbusiness.com.au/technology/systems-software/smes-adopting-ai-grow-2-8-times-faster-data-shows) than those that don't
+> - Start with one process
 
 ![AI agent business workflow showing autonomous task processing for Australian enterprises](./body-1.jpg)
 

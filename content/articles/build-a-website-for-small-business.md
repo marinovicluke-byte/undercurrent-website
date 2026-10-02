@@ -24,7 +24,11 @@ faqs:
 ---
 # Build a Website for Small Business: 2026 AU Guide
 
-> **Quick Answer:** To build a website for a small business, plan your pages and goal first, pick a platform that fits your budget and skills, write clear answer-first content, set up SEO and schema markup, then launch on fast, mobile-friendly hosting. A professional small business website in Australia costs roughly AUD $5,000 to $10,000, or about $500 to $2,500 a year on a DIY platform. Plan it before you build it.
+> **Quick Answer:** **To build a website for a small business, plan your pages and goal, pick a platform, write clear content, set up SEO, then launch on fast hosting.**
+> - A professional site in Australia costs about AUD $5,000 to $10,000
+> - A DIY platform runs about $500 to $2,500 a year
+> - Write answer-first content and add schema markup
+> - Plan it before you build it
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>AI search optimisation workflow for Australian businesses in five steps</title>

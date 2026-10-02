@@ -31,7 +31,11 @@ faqs:
 
 This matters because immediate follow-up converts 5 times better than delayed response, according to Harvard Business Review research. For Australian service businesses, that's the difference between winning the job and watching it go to a competitor who replied first. Right now, 64% of small businesses lose leads purely because their follow-up is too slow.
 
-> **Quick Answer:** To send instant follow-up emails automatically, connect a form or CRM to an email automation platform, create a workflow triggered by "new lead created," write a template email, and set the delay to 0 minutes. Most Australian small businesses use HubSpot (free tier), Mailchimp, or ActiveCampaign to do this without developers.
+> **Quick Answer:** **To send an instant follow-up email to leads automatically, connect your form or CRM to an email platform and trigger a template on every new lead.**
+> - Start the workflow on "new lead created"
+> - Write one template email
+> - Set the delay to 0 minutes
+> - HubSpot's free tier, Mailchimp or ActiveCampaign do it without developers
 
 Jake the electrician lost 8 jobs in one month before he set this up. Enquiries came in while he was on-site, up a ladder, or driving between jobs. By the time he got home to reply, customers had already booked someone else. Now his leads get a reply in 90 seconds, even when he's elbow-deep in a switchboard.
 

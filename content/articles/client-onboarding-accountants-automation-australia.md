@@ -25,7 +25,10 @@ faqs:
 ---
 # Client Onboarding for Accountants Australia 2026: Automate & Simplify Your First Impression
 
-> **Quick Answer:** Accountants can cut 20+ hours of manual admin per week by automating client onboarding workflows,from engagement letters and ATO tax file declarations to document collection and CRM updates. Automated systems get clients revenue-ready 40% faster while cutting repetitive data entry and follow-up emails to near zero.
+> **Quick Answer:** **Accountants can automate and simplify client onboarding, from engagement letters and ATO tax file declarations to document collection and CRM updates.**
+> - Cut 20+ hours of manual admin a week
+> - Get clients revenue-ready 40% faster
+> - Data entry and follow-up emails drop to near zero
 
 Most Australian accounting firms lose an entire work week every month to manual client onboarding. Chasing documents. Sending reminder emails. Copying details from PDF forms into Xero. Following up on unsigned engagement letters. It's grunt work that keeps you at your desk instead of doing the revenue-generating work you trained for.
 

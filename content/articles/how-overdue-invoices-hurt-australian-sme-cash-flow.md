@@ -29,7 +29,11 @@ faqs:
 
 Overdue invoices hurt Australian SME cash flow in three direct ways: they delay incoming payments by an average of 42 days past terms, force business owners to waste 6-8 hours per week chasing money instead of earning it, and create a compounding cash flow gap that makes it impossible to pay suppliers, staff, or yourself on time. According to the Australian Small Business and Family Enterprise Ombudsman (ASBFEO), 64% of small businesses report cash flow stress directly linked to late payments, with the average overdue invoice taking 42 days beyond terms to collect.
 
-> **Quick Answer:** Overdue invoices cost Australian SMEs an average of $7,000 per month in tied-up capital, force owners to spend 6+ hours weekly on collections instead of billable work, and create a cash flow gap that compounds into supplier payment delays, staff wage stress, and personal income shortfalls. The fix isn't hiring a debt collector,it's automating invoice delivery, payment reminders, and follow-up so you get paid in 14 days instead of 42.
+> **Quick Answer:** **Overdue invoices hurt Australian SME cash flow by tying up money you've already earned and pulling owners into hours of chasing payments.**
+> - An average of $7,000 a month tied up in unpaid work
+> - 6+ hours a week on collections instead of billable work
+> - The gap spreads to suppliers, wages and your own pay
+> - Automate invoices, reminders and follow-ups to get paid in 14 days, not 42
 
 Tom runs a plumbing business in Brisbane with three apprentices. He finishes jobs on Tuesday, sends invoices on Sunday night from his laptop, and waits. And waits. By the time most clients pay, it's been 6-8 weeks. Meanwhile, he's covering wages, materials, and van costs out of his own pocket. Last month, he had $18,000 in outstanding invoices and $300 in his business account. That's not a bad month,that's what happens when your cash comes in slower than it goes out.
 

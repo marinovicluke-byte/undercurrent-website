@@ -27,7 +27,11 @@ faqs:
 ---
 # How to Rank in ChatGPT Search (2026 Guide)
 
-> **Quick Answer:** To rank in ChatGPT search, structure your content with question-based H2 headings, lead every section with a direct answer in the first 2-3 sentences, implement [FAQ schema](/glossary/what-is-faq-schema) markup, and build entity associations by getting mentioned on authority domains. ChatGPT citations favour pages with clear semantic structure, answer-first formatting, and verifiable data over marketing fluff.
+> **Quick Answer:** **To rank in ChatGPT search, give your pages question headings and answer each section directly in its first 2-3 sentences.**
+> - Add [FAQ schema](/glossary/what-is-faq-schema) markup
+> - Get mentioned on authority sites to build entity links
+> - ChatGPT favours clear structure, answer-first format and data you can check
+> - Skip the marketing fluff
 
 ![ChatGPT search ranking workflow for Australian content creators optimizing citations and visibility](./body-1.jpg)
 

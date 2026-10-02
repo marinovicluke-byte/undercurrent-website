@@ -24,14 +24,11 @@ faqs:
 ---
 # How to Design a Pet Grooming Website That Converts
 
-> **Quick Answer:** Good pet grooming website design isn't pretty pictures, it's a site that books appointments and feeds Google a clear business identity. The essentials:
-> - Online booking and a clear service menu above the fold
-> - Every service, breed-size price, and suburb you cover, in crawlable text
-> - LocalBusiness schema so Google and AI search read your details cleanly
-> - Fast mobile loading and real before-and-after photos
+> **Quick Answer:** **Good pet grooming website design is a site that books appointments and gives Google a clear picture of your business, not just pretty pictures.**
+> - Online booking and a clear service menu at the top
+> - Every service, breed-size price and suburb in text Google can read
+> - LocalBusiness schema, fast mobile loading and real before-and-after photos
 > - An owned site, not just an Instagram link or a booking widget
->
-> Own the asset. Win the booking.
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="Pet grooming website design conversion workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>How a pet grooming website converts a visitor into a booking</title>

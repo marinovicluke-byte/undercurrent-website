@@ -34,7 +34,10 @@ faqs:
 ---
 # Best AI Search Agency in Australia: What the Data Shows
 
-> **Quick Answer:** Most Australian [SEO](/glossary/what-is-seo) agencies are optimising for a search engine that no longer runs the game. We audited 86 articles across 22 Australian agency domains using the UnderCurrent Article Reviewer and found a 25.5-point gap on a 100-point scale between UC content and the industry average. Fix Answer Architecture and Source Discipline first.
+> **Quick Answer:** **Our AI search audit of Australian [SEO](/glossary/what-is-seo) agencies found most are optimising for a search engine that no longer runs the game.**
+> - We audited 86 articles from 22 agency sites with the UnderCurrent Article Reviewer
+> - UC content scored 25.5 points above the industry average, out of 100
+> - Fix Answer Architecture and Source Discipline first
 
 | Category | UC Score | AU Agency Avg | Gap |
 |---|---|---|---|

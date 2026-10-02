@@ -24,7 +24,11 @@ faqs:
 ---
 # ChatGPT Knowledge Cutoff Australia: Audit Your Visibility
 
-> **Quick Answer:** Every AI model has a fixed knowledge cutoff date, and the chatgpt knowledge cutoff australia answer depends on which model. GPT-5.5 stops at December 2025, Claude Opus 4.7 at January 2026, and Gemini 3 at January 2025. Coverage earned after a cutoff is invisible to that model until the next training cycle, around 6 months later. Live search picks up the rest, but only on queries that trigger it. Plan a retrieval sprint plus an earned-media calendar. Or stay invisible.
+> **Quick Answer:** **The ChatGPT knowledge cutoff depends on the model, and GPT-5.5 stops at December 2025, so newer coverage is invisible to it until the next training cycle.**
+> - Claude Opus 4.7 stops at January 2026, Gemini 3 at January 2025
+> - The next training cycle comes around 6 months later
+> - Live search fills gaps, but only on queries that trigger it
+> - Plan a retrieval sprint plus an earned-media calendar
 
 The chatgpt knowledge cutoff australia question lands in every AI search conversation within 10 minutes. Most agencies dodge it. They talk about "AI visibility" without naming a single date. That vagueness is the whole game. Pin down the dates and you can plan, instead of waiting 12 months for a result you cannot measure.
 

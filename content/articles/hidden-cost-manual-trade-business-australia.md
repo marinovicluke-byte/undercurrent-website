@@ -25,7 +25,10 @@ faqs:
 ---
 # Hidden Cost Manual Trade Business Australia 2026: What Running Without Automation Really Costs You
 
-> **Quick Answer:** Most Australian tradies running a manual trade business lose between $18,720 and $31,200 per year in lost productivity alone, based on Fair Work Commission award rates and documented admin time. When you add invoicing delays, missed follow-ups, and compliance burden, the hidden cost of a manual trade business sits closer to $35,000-$50,000 annually.
+> **Quick Answer:** **The hidden cost of a manual trade business is the money Australian tradies lose to admin, invoicing delays, missed follow-ups and compliance.**
+> - $18,720 to $31,200 a year in lost productivity alone
+> - Based on Fair Work award rates and documented admin time
+> - With delays, missed follow-ups and compliance, closer to $35,000-$50,000
 
 You're billing $80-$120 an hour for the work you do on the tools. But you're spending 6-10 hours a week doing admin at the kitchen table for free. That's not just annoying. It's expensive.
 

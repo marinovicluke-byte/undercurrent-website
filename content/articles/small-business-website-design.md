@@ -24,7 +24,10 @@ faqs:
 ---
 # Small Business Website Design: Build One That Ranks in 2026
 
-> **Quick Answer:** Good small business website design in 2026 means a fast, custom-built site that both Google and AI search engines can read, quote and rank. The fundamentals are speed, clear conversion paths, complete schema markup and answer-first content. A template gets you online. A custom build gets you found.
+> **Quick Answer:** **Good small business website design in 2026 means a fast, custom-built site that Google and AI search engines can read, quote and rank.**
+> - Speed and clear conversion paths
+> - Complete schema markup and answer-first content
+> - A template gets you online, a custom build gets you found
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>AI search optimisation workflow for Australian businesses in five steps</title>

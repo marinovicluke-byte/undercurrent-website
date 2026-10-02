@@ -27,7 +27,7 @@ faqs:
 
 > **Quick Answer:** **Most Australian tradies lose hours every week to admin, and quoting, scheduling and invoicing take the biggest share.**
 >
-> - 62% of construction businesses spend more time on quotes, invoices and scheduling than on the tools.
+> - 62% of construction businesses spend more time on admin than on the tools.
 > - Ten admin hours a week at $90 an hour is $43,200 a year.
 > - Reduce admin time by fixing invoices first.
 

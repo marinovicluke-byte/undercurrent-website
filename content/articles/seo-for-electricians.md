@@ -24,7 +24,11 @@ faqs:
 ---
 # SEO for Electricians: Rank Higher in Local Search
 
-> **Quick Answer:** SEO for electricians is the work of getting an electrical business found the moment a local searches Google for a sparky. It runs on three things: a complete Google Business Profile, suburb-level service pages, and a steady flow of genuine reviews. Most electricians compete in a near-empty field, because 58% of local businesses never do this work properly. Show up first and the calls follow.
+> **Quick Answer:** **SEO for electricians is the work of getting an electrical business found the moment a local searches Google for a sparky.**
+> - A complete Google Business Profile
+> - Service pages for each suburb you cover
+> - A steady flow of genuine reviews
+> - [58% of local businesses](https://www.semrush.com/blog/local-seo-statistics/) never do this properly, so the field is near empty
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>AI search optimisation workflow for Australian businesses in five steps</title>

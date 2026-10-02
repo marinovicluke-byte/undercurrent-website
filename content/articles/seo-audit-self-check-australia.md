@@ -23,7 +23,10 @@ faqs:
 ---
 # Is Your Website Broken? Run a 30-Min SEO Audit
 
-> **Quick Answer:** An SEO audit is a structured check of your website's technical health, content, and visibility signals. You can run the eight most important checks in 30 minutes using only free tools, and most Australian service businesses will find at least two serious problems before they hit the 15-minute mark. Run it before you pay anyone.
+> **Quick Answer:** **An SEO audit is a structured check of your website's technical health, content and visibility, and you can run the key checks yourself in 30 minutes.**
+> - Eight checks, using free tools only
+> - Most Australian service businesses find two serious problems within 15 minutes
+> - Run it before you pay anyone
 
 ![SEO audit workflow showing five steps Australian service businesses use to find technical issues](./body-1.jpg)
 

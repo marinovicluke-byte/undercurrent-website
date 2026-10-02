@@ -24,7 +24,10 @@ faqs:
 ---
 # SEO for Dentists: Win Local and AI Search in Australia
 
-> **Quick Answer:** SEO for dentists means making a dental practice visible across Google's organic results, the local map pack, and AI search engines like ChatGPT and Perplexity. In Australia it adds a layer most guides skip: the AHPRA advertising code, which bans patient testimonials in advertising a practice controls. Compliance is the layer most guides miss.
+> **Quick Answer:** **SEO for dentists makes a dental practice visible in Google's organic results, the local map pack and AI search engines like ChatGPT and Perplexity.**
+> - In Australia, the AHPRA advertising code adds a layer
+> - It bans patient testimonials in advertising a practice controls
+> - Most guides skip this compliance layer
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>AI search optimisation workflow for Australian businesses in five steps</title>
