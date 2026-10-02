@@ -213,7 +213,16 @@ Keep it boring and consistent. The groomers who win aren't posting more, they're
 
 ## How Should You Sequence Your Grooming Marketing?
 
-**Fix the free, compounding channels first, then layer paid and automation on top once the foundation holds.** The order matters because spending on ads before your profile and site are right just sends clicks to a leaky bucket. A sensible Australian sequence is: claim and complete your Google profile, then build a real booking website, then turn on review and reminder automation, then test Google Ads for the gaps. Marketing automation is the system that handles repetitive customer touches, like reminders and review requests, without you doing them by hand, and the rebooking flow often pays back faster than any ad. If you're starting the business itself, [business.gov.au sets out how to register and run a small business](https://business.gov.au/planning/business-plans) before you market it. Each step feeds the next: a complete profile makes your ads cheaper, a fast site makes your AI citations more likely, automation keeps reviews flowing so the profile stays strong. This mirrors how we sequence work for local service businesses, including the approach in our [plumbing local SEO case study](/case-studies/plumbers-south-east-melbourne-seo). When you're ready, the deepest single lever is still [local search](/blog/seo-for-dog-groomers).
+**Fix the free, compounding channels first, then layer paid and automation on top once the foundation holds.** The order matters because spending on ads before your profile and site are right just sends clicks to a leaky bucket. A sensible Australian sequence is:
+
+**The order to build it in**
+
+1. Claim and complete your Google profile.
+2. Build a real booking website.
+3. Turn on review and reminder automation.
+4. Test Google Ads for the gaps.
+
+Marketing automation is the system that handles repetitive customer touches, like reminders and review requests, without you doing them by hand, and the rebooking flow often pays back faster than any ad. If you're starting the business itself, [business.gov.au sets out how to register and run a small business](https://business.gov.au/planning/business-plans) before you market it. Each step feeds the next: a complete profile makes your ads cheaper, a fast site makes your AI citations more likely, automation keeps reviews flowing so the profile stays strong. This mirrors how we sequence work for local service businesses, including the approach in our [plumbing local SEO case study](/case-studies/plumbers-south-east-melbourne-seo). When you're ready, the deepest single lever is still [local search](/blog/seo-for-dog-groomers).
 
 ## Frequently Asked Questions
 
