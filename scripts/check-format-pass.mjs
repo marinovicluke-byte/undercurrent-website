@@ -70,7 +70,8 @@ for (const path of changed) {
   if (added.length) errs.push(`new numbers: ${added.join(', ')}`)
   const plus = git('diff', base, '--', path).split('\n').filter(l => l.startsWith('+') && !l.startsWith('+++'))
   if (plus.some(l => l.includes('—'))) errs.push('em dash added')
-  if ((now.match(/^# /gm) || []).length !== 1) errs.push('not exactly one H1')
+  // a `# comment` inside a code fence isn't a heading
+  if ((now.replace(/^```[\s\S]*?^```/gm, '').match(/^# /gm) || []).length !== 1) errs.push('not exactly one H1')
   if (JSON.stringify(heads(old)) !== JSON.stringify(heads(now))) errs.push('headings changed')
   if (front(old) !== front(now)) errs.push('frontmatter changed (other than dateModified)')
   if (qa(old) !== qa(now)) errs.push('Quick Answer changed')
