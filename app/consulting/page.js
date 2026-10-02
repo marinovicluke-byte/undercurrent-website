@@ -1,7 +1,9 @@
 // app/consulting/page.js — the Consulting service page, the sandbox mockup
 // poured in. Markup verbatim, behaviour in ServiceFx. Industries dial: Grid.
 import '@/app/styles/consulting.css'
+import '@/app/styles/service-blocks.css'
 import ServiceFx from '@/components/site/ServiceFx'
+import { ServiceFigures, ServiceSteps, ServiceWhat, ServiceIncludes } from '@/components/site/ServiceBlocks'
 import JsonLd from '@/components/ui/JsonLd'
 
 const DOMAIN = 'https://undercurrentautomations.com'
@@ -42,6 +44,117 @@ const breadcrumbs = {
   ],
 }
 
+// the shared sections' copy (components/site/ServiceBlocks.js)
+const FIGURES = [
+  [
+    "11%",
+    "of Australian small businesses were using AI last year"
+  ],
+  [
+    "1 in 3",
+    "of the ones not using it say they don't know where to start"
+  ],
+  [
+    "30%",
+    "say the tech they bought last year made them more money"
+  ]
+]
+
+const STEPS = [
+  [
+    "Talk",
+    "What is working, what is not, and what you want a normal week to look like."
+  ],
+  [
+    "Look",
+    "A day or two inside the business. We watch how the work moves and who does what."
+  ],
+  [
+    "The plan",
+    "Written plainly. You should be able to read it on a Sunday and get it."
+  ],
+  [
+    "Stay",
+    "We stay alongside while the work gets done. Or we hand it over and you run it."
+  ]
+]
+
+const WHAT = {
+  "h2": "A plan for what to fix first, and what to leave alone.",
+  "open": "Consulting sounds fancy. It isn't. Someone sits with you and watches how the work really moves:",
+  "flow": [
+    "Where a job comes in",
+    "Who types what",
+    "What gets dropped"
+  ],
+  "close": "Then you get a plan you can read. What to fix first. What to buy, what to build, and what to leave alone.",
+  "rest": "It is not a 60 page report. It is not a long sales pitch for a build. The plan is yours to keep. Take it to us, take it to someone else, or do it yourself. All three are fine.",
+  "areas": [
+    [
+      "The look",
+      "A day or two watching how the work moves. Not how the manual says it does."
+    ],
+    [
+      "The plan",
+      "What to fix first, what comes next, and what to leave alone."
+    ],
+    [
+      "The build",
+      "With us, or with anyone else. The plan works either way."
+    ],
+    [
+      "Teaching",
+      "We show your team how to use AI in the job they already do."
+    ]
+  ]
+}
+
+// what the build includes, grouped under the step of the process that delivers each thing
+const STAGES = [
+  {
+    "n": 2,
+    "step": "Look",
+    "items": [
+      [
+        "The map",
+        "How the work moves now, drawn on one page. Every step, every handover, every place it stalls."
+      ]
+    ]
+  },
+  {
+    "n": 3,
+    "step": "The plan",
+    "items": [
+      [
+        "The plan",
+        "What to fix first, what comes next, what to leave alone. In that order."
+      ],
+      [
+        "The tool list",
+        "What to keep, what to drop, what to buy, with the price next to each one."
+      ],
+      [
+        "The numbers",
+        "What each fix is worth in hours and dollars. These are estimates and we say so."
+      ]
+    ]
+  },
+  {
+    "n": 4,
+    "step": "Stay",
+    "items": [
+      [
+        "Training",
+        "A session with your team, showing them how to use AI in their own work."
+      ],
+      [
+        "A 30 day check-in",
+        "We come back and look at what stuck and what didn't."
+      ]
+    ]
+  }
+]
+
 export default function Consulting() {
   return (
     <>
@@ -69,11 +182,7 @@ export default function Consulting() {
         <p className="rv" style={{"--i":"2"}}>And buying more software is not the fix on its own. Only three in ten Australian small businesses say the tech they paid for last year made them any more money. Buying is the easy part. Knowing what to buy first is the hard part.</p>
       </div>
     </div>
-    <div className="fig">
-      <div className="rv" style={{"--i":"2"}}><b>11%</b><span>of Australian small businesses were using AI last year</span></div>
-      <div className="rv" style={{"--i":"3"}}><b>1 in 3</b><span>of the ones not using it say they don't know where to start</span></div>
-      <div className="rv" style={{"--i":"4"}}><b>30%</b><span>say the tech they bought last year made them more money</span></div>
-    </div>
+    <ServiceFigures figures={FIGURES} />
   </div>
 </section>
 
@@ -94,19 +203,7 @@ export default function Consulting() {
 <section className="sec" id="what" data-reveal="">
   <div className="wrap">
     <div className="sec__head"><span className="eyebrow">What it is</span></div>
-    <div className="two">
-      <div>
-        <h2 className="rv">A plan for what to fix first, and what to leave alone.</h2>
-        <p className="lead-p rv" style={{"--i":"1"}}>Consulting sounds fancy. It isn't. Someone sits with you and watches how the work really moves. Where a job comes in. Who types what. What gets dropped. Then you get a plan you can read. What to fix first. What to buy, what to build, and what to leave alone.</p>
-        <p className="rv" style={{"--i":"2"}}>It is not a 60 page report. It is not a long sales pitch for a build. The plan is yours to keep. Take it to us, take it to someone else, or do it yourself. All three are fine.</p>
-      </div>
-      <div className="areas rv" style={{"--i":"1"}}>
-        <div className="row"><h3>The look</h3><p>A day or two watching how the work moves. Not how the manual says it does.</p></div>
-        <div className="row"><h3>The plan</h3><p>What to fix first, what comes next, and what to leave alone.</p></div>
-        <div className="row"><h3>The build</h3><p>With us, or with anyone else. The plan works either way.</p></div>
-        <div className="row"><h3>Teaching</h3><p>We show your team how to use AI in the job they already do.</p></div>
-      </div>
-    </div>
+    <ServiceWhat {...WHAT} />
   </div>
 </section>
 
@@ -118,12 +215,7 @@ export default function Consulting() {
         <h2 className="rv">Built with you, not delivered to you.</h2>
         <div className="ph ph--photo rv" role="img" aria-label="Luke Marinovic" style={{"--i":"1",marginTop:"32px","--img":"url(/assets/about4-800.jpg)","--y":"40%"}}></div>
       </div>
-      <ol className="steps rv" style={{"--i":"1"}}>
-        <li className="rowb"><div><h3>Talk</h3><p>What is working, what is not, and what you want a normal week to look like.</p></div></li>
-        <li className="rowb"><div><h3>Look</h3><p>A day or two inside the business. We watch how the work moves and who does what.</p></div></li>
-        <li className="rowb"><div><h3>The plan</h3><p>Written plainly. You should be able to read it on a Sunday and get it.</p></div></li>
-        <li className="rowb"><div><h3>Stay</h3><p>We stay alongside while the work gets done. Or we hand it over and you run it.</p></div></li>
-      </ol>
+      <ServiceSteps steps={STEPS} />
     </div>
   </div>
 </section>
@@ -131,17 +223,8 @@ export default function Consulting() {
 <section className="sec" id="includes" data-reveal="">
   <div className="wrap">
     <div className="sec__head"><span className="eyebrow">What the build includes</span></div>
-    <div className="two">
-      <h2 className="rv">Everything you need to decide what to do next.</h2>
-      <div className="spec rv" style={{"--i":"1"}}>
-        <div className="rowb"><b>The map</b><span>How the work moves now, drawn on one page. Every step, every handover, every place it stalls.</span></div>
-        <div className="rowb"><b>The plan</b><span>What to fix first, what comes next, what to leave alone. In that order.</span></div>
-        <div className="rowb"><b>The tool list</b><span>What to keep, what to drop, what to buy, with the price next to each one.</span></div>
-        <div className="rowb"><b>The numbers</b><span>What each fix is worth in hours and dollars. These are estimates and we say so.</span></div>
-        <div className="rowb"><b>Training</b><span>A session with your team, showing them how to use AI in their own work.</span></div>
-        <div className="rowb"><b>A 30 day check-in</b><span>We come back and look at what stuck and what didn't.</span></div>
-      </div>
-    </div>
+    <h2 className="rv">Everything you need to decide what to do next.</h2>
+    <ServiceIncludes stages={STAGES} />
   </div>
 </section>
 

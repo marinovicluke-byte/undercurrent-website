@@ -2,7 +2,9 @@
 // service-website mockup poured in. Markup verbatim from the mockup, behaviour
 // in ServiceFx. The Industries dial landed on Grid, the marquee is gone.
 import '@/app/styles/website.css'
+import '@/app/styles/service-blocks.css'
 import ServiceFx from '@/components/site/ServiceFx'
+import { ServiceFigures, ServiceSteps, ServiceWhat, ServiceIncludes } from '@/components/site/ServiceBlocks'
 import JsonLd from '@/components/ui/JsonLd'
 
 const DOMAIN = 'https://undercurrentautomations.com'
@@ -43,6 +45,117 @@ export const metadata = {
   },
 }
 
+// the shared sections' copy (components/site/ServiceBlocks.js)
+const FIGURES = [
+  [
+    "Over half",
+    "of the smallest businesses in Australia have no website of their own"
+  ],
+  [
+    "8.4%",
+    "more sales after a phone site got a tenth of a second faster"
+  ],
+  [
+    "3 in 4",
+    "Australians trust a business more when its website ends in .au"
+  ]
+]
+
+const STEPS = [
+  [
+    "Talk",
+    "What you do, who you want to hear from, and what you want them to do on the site."
+  ],
+  [
+    "Design",
+    "Every page drawn before a line of code. Changing your mind here costs nothing."
+  ],
+  [
+    "Build together",
+    "You get a link early. You click around on your own phone while we're still building."
+  ],
+  [
+    "Launch and stay",
+    "We move it across, check it, then stay on for a month while you settle in."
+  ]
+]
+
+const WHAT = {
+  "h2": "It's the place people check before they call.",
+  "open": "A website is more than a page with your phone number on it. For a small business it does three jobs:",
+  "flow": [
+    "It says what you do",
+    "It shows people you're real and you're good at it",
+    "It makes getting in touch easy"
+  ],
+  "close": null,
+  "rest": "Everything else follows from that. We work out what each page is for, then write it, then draw it, then build it. If a page doesn't help someone decide, it doesn't go on the site.",
+  "areas": [
+    [
+      "Design",
+      "How it looks and how it moves. Drawn for a phone first, then the big screen."
+    ],
+    [
+      "Build",
+      "The code underneath. Fast to open, easy to change, nothing on it you don't need."
+    ],
+    [
+      "Words",
+      "What each page actually says, written the way you'd say it out loud."
+    ],
+    [
+      "Care",
+      "Domain, hosting, backups, small changes. Someone to call when something looks wrong."
+    ]
+  ]
+}
+
+// what the build includes, grouped under the step of the process that delivers each thing
+const STAGES = [
+  {
+    "n": 2,
+    "step": "Design",
+    "items": [
+      [
+        "The plan",
+        "Which pages you need and how they join up. Agreed before we design a thing."
+      ],
+      [
+        "The design",
+        "Every page drawn out, phone and desktop. You look at it and say yes or no."
+      ]
+    ]
+  },
+  {
+    "n": 3,
+    "step": "Build together",
+    "items": [
+      [
+        "The build",
+        "Coded to open fast. Tested on old phones and weak signal, not just ours."
+      ],
+      [
+        "The words",
+        "We write every page. You read it and tell us what doesn't sound like you."
+      ]
+    ]
+  },
+  {
+    "n": 4,
+    "step": "Launch and stay",
+    "items": [
+      [
+        "The setup",
+        "Domain, hosting, a contact form that reaches you, and stats so you can see who visits."
+      ],
+      [
+        "30 days of care",
+        "After it goes live, included. Any small fix, just ask."
+      ]
+    ]
+  }
+]
+
 export default function WebsiteDesignPage() {
   return (
     <>
@@ -70,11 +183,7 @@ export default function WebsiteDesignPage() {
         <p className="rv" style={{"--i":"2"}}>Over half of the smallest businesses in Australia still have no website of their own. That's good news for you. A clear, fast site puts you in front of half your street before you say a word.</p>
       </div>
     </div>
-    <div className="fig">
-      <div className="rv" style={{"--i":"2"}}><b>Over half</b><span>of the smallest businesses in Australia have no website of their own</span></div>
-      <div className="rv" style={{"--i":"3"}}><b>8.4%</b><span>more sales after a phone site got a tenth of a second faster</span></div>
-      <div className="rv" style={{"--i":"4"}}><b>3 in 4</b><span>Australians trust a business more when its website ends in .au</span></div>
-    </div>
+    <ServiceFigures figures={FIGURES} />
   </div>
 </section>
 
@@ -95,19 +204,7 @@ export default function WebsiteDesignPage() {
 <section className="sec" id="what" data-reveal="">
   <div className="wrap">
     <div className="sec__head"><span className="eyebrow">What it is</span></div>
-    <div className="two">
-      <div>
-        <h2 className="rv">It's the place people check before they call.</h2>
-        <p className="lead-p rv" style={{"--i":"1"}}>A website is more than a page with your phone number on it. For a small business it does three jobs. It says what you do. It shows people you're real and you're good at it. And it makes getting in touch easy.</p>
-        <p className="rv" style={{"--i":"2"}}>Everything else follows from that. We work out what each page is for, then write it, then draw it, then build it. If a page doesn't help someone decide, it doesn't go on the site.</p>
-      </div>
-      <div className="areas rv" style={{"--i":"1"}}>
-        <div className="row"><h3>Design</h3><p>How it looks and how it moves. Drawn for a phone first, then the big screen.</p></div>
-        <div className="row"><h3>Build</h3><p>The code underneath. Fast to open, easy to change, nothing on it you don't need.</p></div>
-        <div className="row"><h3>Words</h3><p>What each page actually says, written the way you'd say it out loud.</p></div>
-        <div className="row"><h3>Care</h3><p>Domain, hosting, backups, small changes. Someone to call when something looks wrong.</p></div>
-      </div>
-    </div>
+    <ServiceWhat {...WHAT} />
   </div>
 </section>
 
@@ -119,12 +216,7 @@ export default function WebsiteDesignPage() {
         <h2 className="rv">Built with you, not delivered to you.</h2>
         <div className="ph ph--photo rv" role="img" aria-label="Luke Marinovic" style={{"--i":"1",marginTop:"32px","--img":"url(/assets/about4-800.jpg)","--y":"40%"}}></div>
       </div>
-      <ol className="steps rv" style={{"--i":"1"}}>
-        <li className="rowb"><div><h3>Talk</h3><p>What you do, who you want to hear from, and what you want them to do on the site.</p></div></li>
-        <li className="rowb"><div><h3>Design</h3><p>Every page drawn before a line of code. Changing your mind here costs nothing.</p></div></li>
-        <li className="rowb"><div><h3>Build together</h3><p>You get a link early. You click around on your own phone while we're still building.</p></div></li>
-        <li className="rowb"><div><h3>Launch and stay</h3><p>We move it across, check it, then stay on for a month while you settle in.</p></div></li>
-      </ol>
+      <ServiceSteps steps={STEPS} />
     </div>
   </div>
 </section>
@@ -132,17 +224,8 @@ export default function WebsiteDesignPage() {
 <section className="sec" id="includes" data-reveal="">
   <div className="wrap">
     <div className="sec__head"><span className="eyebrow">What the build includes</span></div>
-    <div className="two">
-      <h2 className="rv">Yours to run, from the day it goes live.</h2>
-      <div className="spec rv" style={{"--i":"1"}}>
-        <div className="rowb"><b>The plan</b><span>Which pages you need and how they join up. Agreed before we design a thing.</span></div>
-        <div className="rowb"><b>The design</b><span>Every page drawn out, phone and desktop. You look at it and say yes or no.</span></div>
-        <div className="rowb"><b>The build</b><span>Coded to open fast. Tested on old phones and weak signal, not just ours.</span></div>
-        <div className="rowb"><b>The words</b><span>We write every page. You read it and tell us what doesn't sound like you.</span></div>
-        <div className="rowb"><b>The setup</b><span>Domain, hosting, a contact form that reaches you, and stats so you can see who visits.</span></div>
-        <div className="rowb"><b>30 days of care</b><span>After it goes live, included. Any small fix, just ask.</span></div>
-      </div>
-    </div>
+    <h2 className="rv">Yours to run, from the day it goes live.</h2>
+    <ServiceIncludes stages={STAGES} />
   </div>
 </section>
 

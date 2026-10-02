@@ -98,10 +98,6 @@ h2{font-weight:500;letter-spacing:-.02em;font-size:clamp(28px,3.2vw,44px);line-h
 .two h2+p{margin-top:28px}
 .two p.lead-p{color:var(--ink)}
 
-/* ---------- why it matters: the industry record, three figures on a hairline, sources under ---------- */
-.fig{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;border-top:1px solid var(--line);padding-top:clamp(28px,3.4vw,48px);margin-top:clamp(48px,6vw,88px)}
-.fig b{display:block;font-weight:300;font-size:clamp(46px,5.8vw,84px);line-height:1;letter-spacing:-.02em}
-.fig span{display:block;margin-top:10px;font-size:17px;line-height:1.35;color:var(--ink);max-width:26ch}
 
 /* ---------- hairline grid with the service-colour crosses (the clients grid, reused for the problems and the industries) ---------- */
 .xg{display:grid;grid-template-columns:repeat(var(--cols,3),1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -132,27 +128,10 @@ h2{font-weight:500;letter-spacing:-.02em;font-size:clamp(28px,3.2vw,44px);line-h
 .row:hover h3,.row.on h3,.row:hover b,.row.on b{color:var(--sc0)}
 .row:hover p,.row.on p,.row:hover span,.row.on span{color:var(--ink)}
 
-/* ---------- what it is: definition left, the areas of the business right. four cells, hairlines only, no numbers, no crosses, so it doesn't read as the problem grid again ---------- */
-.areas{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
-.areas div{padding:24px 28px 26px 0;border-bottom:1px solid var(--line)}
-.areas div:nth-child(odd){border-right:1px solid var(--line)}
-.areas div:nth-child(even){padding-left:28px}
-.areas h3{font-size:19px;font-weight:500;letter-spacing:-.01em}
-.areas p{margin-top:8px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:30ch}
 
 /* ---------- how we work: six numbered rows, a photo of Luke beside ---------- */
 .how .ph{aspect-ratio:4/5}
-.steps{list-style:none;counter-reset:s;border-top:1px solid var(--line)}
-.steps li{display:grid;grid-template-columns:96px 1fr;gap:24px;padding:22px 20px;border-bottom:1px solid var(--line)}
-.steps li::before{counter-increment:s;content:"0" counter(s);font-weight:300;font-size:clamp(24px,2.2vw,30px);letter-spacing:-.02em;line-height:1}
-.steps h3{font-size:19px;font-weight:500;letter-spacing:-.01em}
-.steps p{margin-top:6px;font-size:15px;color:var(--ink-2);max-width:44ch}
 
-/* ---------- what the build includes: a spec sheet, label and line, hairline rows. no icons, the page has no pictorial marks and a line icon would be the first ---------- */
-.spec{border-top:1px solid var(--line)}
-.spec div{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:18px 20px;border-bottom:1px solid var(--line)}
-.spec b{font-weight:500;font-size:16px;letter-spacing:-.01em}
-.spec span{font-size:15px;color:var(--ink-2);max-width:48ch}
 
 /* placeholder tiles, and the real portraits */
 .ph{position:relative;overflow:hidden;isolation:isolate;background:#1a1d20}
@@ -324,7 +303,6 @@ footer a{transition:color .3s,border-color .3s}footer a:hover{color:#fff}
 @media (max-width:640px){
   .two,.svcs,.case{grid-template-columns:1fr}.svc{min-height:260px}
   .hero{min-height:70vh;min-height:70svh}.hero__inner{padding-bottom:56px}
-  .fig{grid-template-columns:1fr;gap:36px;padding-top:32px}.fig b{font-size:46px}.fig span{font-size:16px}
   /* the problems stack in one column on the phone, no crosses. the industries stay two across like the clients, the crosses on the one inner vertical */
   .xg{--cols:1}.xg .xc{border-right:0;border-bottom:1px solid var(--line);background:var(--white)}.xg .xc:last-child{border-bottom:0}.xg .xc:nth-child(even){background:var(--off)}
   .xg .xc::before,.xg .xc::after{content:none}
@@ -333,15 +311,11 @@ footer a{transition:color .3s,border-color .3s}footer a:hover{color:#fff}
   .ind--grid .xc:nth-child(4n+1),.ind--grid .xc:nth-child(4n){background:var(--off)}.ind--grid .xc:nth-child(4n+2),.ind--grid .xc:nth-child(4n+3){background:var(--white)}
   .ind--grid .xc:nth-child(odd)::after{content:""}.ind--grid .xc:first-child::before{content:""}
   .ig{min-height:110px;font-size:16px;padding:20px 16px}
-  .areas{grid-template-columns:1fr}.areas div,.areas div:nth-child(odd),.areas div:nth-child(even){padding:20px 0 22px;border-right:0}
   .how .ph{aspect-ratio:16/10}
   .mq__track span{padding:20px 0 20px 28px;font-size:18px}.mq__track span::after{margin-left:28px}
   /* the problem's lead cell becomes a plain heading on the phone (Luke: "remove the box, just make it a clear h1"), the grid's top hairline moves to the first problem */
   #problem .xg{border-top:0}.xg .pb--lead{background:transparent;border:0;padding:0 0 32px}.pb--lead+.xc{border-top:1px solid var(--line)}
   .pb--lead p{font-size:28px;font-weight:500;letter-spacing:-.02em;line-height:1.12;max-width:14ch}
-  /* the process on the phone: the number above the title, the way Luke's reference does it */
-  .steps li{display:block;padding:20px 16px 22px}.steps li::before{display:block;font-size:15px;font-weight:400;letter-spacing:0;margin-bottom:12px}.steps h3{font-size:18px}
-  .spec div{grid-template-columns:1fr;gap:4px;padding:16px}
   .cells--scroll .cell h3{margin-top:16px}.cells--scroll .cell__stat{padding-top:36px}
   .wm{width:100%;height:100dvh;max-height:none}.wm__head{min-height:28dvh;padding:24px 22px}.wm__body{padding:26px 22px 40px}.case{grid-template-columns:1fr;gap:22px}
   .tm blockquote{margin-top:46px}.tm-dots{position:absolute;left:0;right:0;top:calc(var(--tmh,75cqw) + 20px);margin:0;justify-content:center}

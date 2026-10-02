@@ -2,7 +2,9 @@
 // service-seo mockup poured in. Markup verbatim, behaviour in ServiceFx.
 // Industries dial resolved to Grid, the marquee markup dropped.
 import '@/app/styles/seo.css'
+import '@/app/styles/service-blocks.css'
 import ServiceFx from '@/components/site/ServiceFx'
+import { ServiceFigures, ServiceSteps, ServiceWhat, ServiceIncludes } from '@/components/site/ServiceBlocks'
 import JsonLd from '@/components/ui/JsonLd'
 
 const DOMAIN = 'https://undercurrentautomations.com'
@@ -43,6 +45,117 @@ const breadcrumbs = {
   ],
 }
 
+// the shared sections' copy (components/site/ServiceBlocks.js)
+const FIGURES = [
+  [
+    "92%",
+    "of Australians who shop online use search or a shop's site to find what they want"
+  ],
+  [
+    "12%",
+    "of Australians say an AI tool is now their main way of finding things online, up from 5%"
+  ],
+  [
+    "Half",
+    "as many clicks on websites when Google puts its own AI answer on top"
+  ]
+]
+
+const STEPS = [
+  [
+    "Talk",
+    "What you do, where you do it, and who you want ringing you."
+  ],
+  [
+    "Map",
+    "Where you come up today and where you don't, in a page you can read."
+  ],
+  [
+    "Build, together",
+    "The Google page, the website, the words. You see it as it goes."
+  ],
+  [
+    "Stay",
+    "A report you can read, and the work carries on month to month."
+  ]
+]
+
+const WHAT = {
+  "h2": "Being the one that comes up when someone looks.",
+  "open": "Someone near you needs what you do. They pick up their phone and ask. Our job is to make sure they find you:",
+  "flow": [
+    "On Google's map",
+    "On the results page",
+    "And now inside AI answers"
+  ],
+  "close": "This is the work people used to call SEO.",
+  "rest": "The change is who they ask. Plenty of people now ask ChatGPT, or read Google's own AI answer and stop there. The good news is it is the same work either way. Fix what Google knows about you. Write pages that answer real questions. Then both start naming you.",
+  "areas": [
+    [
+      "Your Google page",
+      "Hours, photos, reviews, the pin on the map. Most people see this before your website."
+    ],
+    [
+      "Your website",
+      "The pages people land on. One for each job you do, so Google knows what to show."
+    ],
+    [
+      "The questions",
+      "People ask the same things before they book. We write the page that answers each one."
+    ],
+    [
+      "AI answers",
+      "Written plain and clear, so an AI can pick your business out and name it."
+    ]
+  ]
+}
+
+// what the build includes, grouped under the step of the process that delivers each thing
+const STAGES = [
+  {
+    "n": 2,
+    "step": "Map",
+    "items": [
+      [
+        "The search map",
+        "Where you come up now, for what, and who sits above you."
+      ]
+    ]
+  },
+  {
+    "n": 3,
+    "step": "Build, together",
+    "items": [
+      [
+        "Your Google page",
+        "Fixed and filled in. Hours, photos, services, reviews, all of it."
+      ],
+      [
+        "A page per job",
+        "One page for each thing you do, not one page for the lot."
+      ],
+      [
+        "The questions, answered",
+        "We write what people ask before they pick up the phone."
+      ],
+      [
+        "The fixes underneath",
+        "Speed, links, page titles. The plumbing, so Google can read the site."
+      ]
+    ]
+  },
+  {
+    "n": 4,
+    "step": "Stay",
+    "items": [
+      [
+        "A monthly report",
+        "What moved, what we did, what's next. One page, plain words."
+      ]
+    ]
+  }
+]
+
 export default function Seo() {
   return (
     <>
@@ -70,11 +183,7 @@ export default function Seo() {
         <p className="rv" style={{"--i":"2"}}>Here is what's changing. More people ask an AI instead of typing into Google. And when Google puts its own AI answer at the top, most people read it and stop. So it is not enough to be on the list. You want to be the one the answer names.</p>
       </div>
     </div>
-    <div className="fig">
-      <div className="rv" style={{"--i":"2"}}><b>92%</b><span>of Australians who shop online use search or a shop's site to find what they want</span></div>
-      <div className="rv" style={{"--i":"3"}}><b>12%</b><span>of Australians say an AI tool is now their main way of finding things online, up from 5%</span></div>
-      <div className="rv" style={{"--i":"4"}}><b>Half</b><span>as many clicks on websites when Google puts its own AI answer on top</span></div>
-    </div>
+    <ServiceFigures figures={FIGURES} />
   </div>
 </section>
 
@@ -95,19 +204,7 @@ export default function Seo() {
 <section className="sec" id="what" data-reveal="">
   <div className="wrap">
     <div className="sec__head"><span className="eyebrow">What it is</span></div>
-    <div className="two">
-      <div>
-        <h2 className="rv">Being the one that comes up when someone looks.</h2>
-        <p className="lead-p rv" style={{"--i":"1"}}>Someone near you needs what you do. They pick up their phone and ask. Our job is to make sure they find you. On Google's map, on the results page, and now inside AI answers. This is the work people used to call SEO.</p>
-        <p className="rv" style={{"--i":"2"}}>The change is who they ask. Plenty of people now ask ChatGPT, or read Google's own AI answer and stop there. The good news is it is the same work either way. Fix what Google knows about you. Write pages that answer real questions. Then both start naming you.</p>
-      </div>
-      <div className="areas rv" style={{"--i":"1"}}>
-        <div className="row"><h3>Your Google page</h3><p>Hours, photos, reviews, the pin on the map. Most people see this before your website.</p></div>
-        <div className="row"><h3>Your website</h3><p>The pages people land on. One for each job you do, so Google knows what to show.</p></div>
-        <div className="row"><h3>The questions</h3><p>People ask the same things before they book. We write the page that answers each one.</p></div>
-        <div className="row"><h3>AI answers</h3><p>Written plain and clear, so an AI can pick your business out and name it.</p></div>
-      </div>
-    </div>
+    <ServiceWhat {...WHAT} />
   </div>
 </section>
 
@@ -119,12 +216,7 @@ export default function Seo() {
         <h2 className="rv">Built with you, not delivered to you.</h2>
         <div className="ph ph--photo rv" role="img" aria-label="Luke Marinovic" style={{"--i":"1",marginTop:"32px","--img":"url(/assets/about4-800.jpg)","--y":"40%"}}></div>
       </div>
-      <ol className="steps rv" style={{"--i":"1"}}>
-        <li className="rowb"><div><h3>Talk</h3><p>What you do, where you do it, and who you want ringing you.</p></div></li>
-        <li className="rowb"><div><h3>Map</h3><p>Where you come up today and where you don't, in a page you can read.</p></div></li>
-        <li className="rowb"><div><h3>Build, together</h3><p>The Google page, the website, the words. You see it as it goes.</p></div></li>
-        <li className="rowb"><div><h3>Stay</h3><p>A report you can read, and the work carries on month to month.</p></div></li>
-      </ol>
+      <ServiceSteps steps={STEPS} />
     </div>
   </div>
 </section>
@@ -132,17 +224,8 @@ export default function Seo() {
 <section className="sec" id="includes" data-reveal="">
   <div className="wrap">
     <div className="sec__head"><span className="eyebrow">What the build includes</span></div>
-    <div className="two">
-      <h2 className="rv">Everything that goes into getting found.</h2>
-      <div className="spec rv" style={{"--i":"1"}}>
-        <div className="rowb"><b>The search map</b><span>Where you come up now, for what, and who sits above you.</span></div>
-        <div className="rowb"><b>Your Google page</b><span>Fixed and filled in. Hours, photos, services, reviews, all of it.</span></div>
-        <div className="rowb"><b>A page per job</b><span>One page for each thing you do, not one page for the lot.</span></div>
-        <div className="rowb"><b>The questions, answered</b><span>We write what people ask before they pick up the phone.</span></div>
-        <div className="rowb"><b>The fixes underneath</b><span>Speed, links, page titles. The plumbing, so Google can read the site.</span></div>
-        <div className="rowb"><b>A monthly report</b><span>What moved, what we did, what's next. One page, plain words.</span></div>
-      </div>
-    </div>
+    <h2 className="rv">Everything that goes into getting found.</h2>
+    <ServiceIncludes stages={STAGES} />
   </div>
 </section>
 
