@@ -20,7 +20,7 @@ const base = args.includes('--base') ? args[args.indexOf('--base') + 1] : 'origi
 const plain = s => s.replace(/\]\([^)]*\)/g, ']').replace(/[*[\]`]/g, '').trim()
 const words = s => plain(s).split(/\s+/).filter(Boolean).length
 const nums = s => (plain(s).match(/\d+(?:[.,]\d+)*/g) || []).map(n => n.replace(/,/g, ''))
-const STOP = new Set(['a', 'an', 'the', 'for', 'to', 'in', 'of', 'and', 'my', 'your', 'how', 'what', 'is', 'can', 'with', 'on', 'vs', 'using', 'right', 'now', 'do', 'does'])
+const STOP = new Set(['a', 'an', 'the', 'for', 'to', 'in', 'of', 'and', 'my', 'your', 'how', 'what', 'is', 'can', 'with', 'on', 'vs', 'using', 'right', 'now', 'do', 'does', 'much', 'are', 'why'])
 
 function block(src) {
   const lines = src.split('\n')
