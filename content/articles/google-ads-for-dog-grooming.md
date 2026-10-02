@@ -24,13 +24,11 @@ faqs:
 ---
 # How to Run Google Ads for Dog Grooming Profitably
 
-> **Quick Answer:** Google Ads for dog grooming works when you need bookings fast, not when you are already full. Run it well and it pays back:
-> - Budget small, $10 to $20 a day to start
-> - Bid on local, ready-to-book terms only
-> - Geo-target a tight 5 to 10km radius
+> **Quick Answer:** **Google Ads for dog grooming works when you need bookings fast, not when you're already full.**
+> - Start small, $10 to $20 a day
+> - Bid only on local, ready-to-book terms in a 5 to 10km radius
 > - Track bookings, never just clicks
->
-> Most groomers burn cash on broad keywords and no tracking. Fix those two things first.
+> - Most groomers burn cash on broad keywords and no tracking
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="Google Ads for dog grooming campaign workflow for Australian businesses in five steps" style="font-family:-apple-system,Segoe UI,sans-serif">
 <title>Google Ads for dog grooming campaign workflow in five steps</title>

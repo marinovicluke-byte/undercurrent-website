@@ -24,7 +24,11 @@ faqs:
 ---
 # Automating Business Processes: A Practical Guide for Australian SMEs
 
-> **Quick Answer:** Start by automating your invoice follow-ups, quote generation, and appointment reminders. These three processes alone save Australian SMEs 5-10 hours per week and typically pay for themselves within the first month. You don't need technical expertise — no-code tools like Zapier, Make, and n8n let you build automations by connecting the apps you already use.
+> **Quick Answer:** **Automating business processes in Australia starts with three jobs: invoice follow-ups, quote generation and appointment reminders.**
+> - Together they save SMEs 5-10 hours a week
+> - They often pay for themselves within the first month
+> - No technical skills needed
+> - Zapier, Make and n8n connect the apps you already use
 
 Automating business processes isn't about replacing people or turning your business into a robot factory. It's about getting back the 3-4 hours you lose every day to repetitive admin work. The kind of work that keeps the business alive but doesn't make you money.
 

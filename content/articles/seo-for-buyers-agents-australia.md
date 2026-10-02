@@ -24,7 +24,10 @@ faqs:
 ---
 # SEO for Buyers Agents in Australia: Win More Clients
 
-> **Quick Answer:** SEO for buyers agents in Australia means getting your firm in front of buyers the moment they search "buyers agent [suburb]" on Google, in the local map pack, in AI Overviews, and inside ChatGPT. Most buyers-agent sites lose on suburb-level intent and [Google Business Profile](/glossary/what-is-google-business-profile), not on backlinks. Fix those two first, then everything else.
+> **Quick Answer:** **SEO for buyers agents in Australia means getting your firm seen when buyers search "buyers agent [suburb]" on Google, the map pack, AI Overviews and ChatGPT.**
+> - Most sites lose on suburb-level intent, not backlinks
+> - A weak [Google Business Profile](/glossary/what-is-google-business-profile) is the other gap
+> - Fix those two first
 
 ![Five-step SEO for buyers agents in Australia workflow chart with claim and schema steps](./body-1.jpg)
 
