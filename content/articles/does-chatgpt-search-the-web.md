@@ -104,13 +104,11 @@ If your [AI search agency](/blog/best-ai-search-agency-australia) sells "we adde
 
 **The gap between competent and uncited is mostly a gap in earned media, not technical SEO.** Across UC's 146-article Australian corpus audit, 46 sit in the AI-search vertical, drawn from 20 distinct hosts (as of May 2026). Robin Search rubric v2.0.0 scores each article on 100 points across answer-extraction structure, entity density, citation quality, semantic completeness, and brand-voice signals. Same yardstick for our pages and competitors'. Vertical mean: 68.7/100, median 70. UC's own 25 articles sit at 85.2/100.
 
-Three things hit harder than the score sheet shows.
+**Three things hit harder than the score sheet shows**
 
-First, the bottom 18 (Weak band, 30-59) had clean schema and decent meta tags. They scored low because they had zero first-party data, generic stock examples, and no external mentions outside the host site. The technical layer was fine. The entity layer was empty.
-
-Second, the top 19 (Strong band, 80+) shared one pattern: most carried at least one stat or claim other publishers could quote, which means they were designed for re-publication, not just for [SEO](/glossary/what-is-seo). That's the citation-bait pattern.
-
-Third, even strong articles struggled with [internal link density](/blog/au-seo-agencies-ai-search-audit). Average internal-link count sat below the floor for a pillar article.
+- The bottom 18 (Weak band, 30-59) had clean schema and decent meta tags. They scored low because they had zero first-party data, generic stock examples, and no external mentions outside the host site. The technical layer was fine. The entity layer was empty.
+- The top 19 (Strong band, 80+) shared one pattern: most carried at least one stat or claim other publishers could quote, which means they were designed for re-publication, not just for [SEO](/glossary/what-is-seo). That's the citation-bait pattern.
+- Even strong articles struggled with [internal link density](/blog/au-seo-agencies-ai-search-audit). Average internal-link count sat below the floor for a pillar article.
 
 ## How does ChatGPT search change your AEO mix?
 
@@ -133,13 +131,12 @@ This is the split we ran for our [Melbourne buyers-agency case](/blog/how-to-ran
 
 **Stop optimising for ChatGPT like it's a search engine and start optimising like it's a reading list.** Here is the 90-day shape we recommend for any Australian business taking [answer engine optimisation](/glossary/what-is-answer-engine-optimisation) seriously.
 
-**Weeks 1-2.** Audit what ChatGPT already says about you. Open a fresh ChatGPT session, ask the questions a buyer would ask, and write down which sources it pulls on retrieval versus what it states from training data. The split shows which path you are losing on.
+**The 90-day shape**
 
-**Weeks 3-6.** Build the earned-media spine. Reddit AMAs in subreddits where your category gets discussed. Original data published as quotable artefacts (we do one of these every quarter). One serious press release that lands in trade media that ChatGPT crawls.
-
-**Weeks 7-10.** Tighten the on-site retrieval surface. Quick Answer blocks at the top of every cornerstone page. Comparison tables for "vs" intent. Definitions for ambiguous terms. Crawler-friendly pagination.
-
-**Weeks 11-12.** Measure. Re-run the prompts from Week 1. Retrieval should shift visibly. Training-data wins are next-model lottery tickets that pay out months later.
+1. **Audit what ChatGPT already says about you.** Open a fresh ChatGPT session, ask the questions a buyer would ask, and write down which sources it pulls on retrieval versus what it states from training data. The split shows which path you are losing on, **Weeks 1-2**
+2. **Build the earned-media spine.** Reddit AMAs in subreddits where your category gets discussed. Original data published as quotable artefacts (we do one of these every quarter). One serious press release that lands in trade media that ChatGPT crawls, **Weeks 3-6**
+3. **Tighten the on-site retrieval surface.** Quick Answer blocks at the top of every cornerstone page. Comparison tables for "vs" intent. Definitions for ambiguous terms. Crawler-friendly pagination, **Weeks 7-10**
+4. **Measure.** Re-run the prompts from Week 1. Retrieval should shift visibly. Training-data wins are next-model lottery tickets that pay out months later, **Weeks 11-12**
 
 This is the playbook we run for [AI search clients in Australia](/blog/what-is-ai-search-optimisation-australia).
 

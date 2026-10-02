@@ -132,23 +132,27 @@ A buyers agent's fee on a single purchase usually clears five figures, so one ex
 
 *Source: UnderCurrent Article Reviewer corpus, as of May 2026. Numbers refresh as audits land in Supabase.*
 
-Three things hit harder than the score sheet shows. The spread is brutal: 79 of 122 sit in the weak band. Most buyers-agent content isn't bad, it's forgettable, and forgettable is what AI engines skip. The gap is mechanical: high scorers had suburb pages, schema, and a Business Profile set up properly. And almost nobody had structured data, so the firm that adds it gets a near-free head start in AI Overviews.
+**Three things hit harder than the score sheet shows**
+
+- The spread is brutal: 79 of 122 sit in the weak band. Most buyers-agent content isn't bad, it's forgettable, and forgettable is what AI engines skip.
+- The gap is mechanical: high scorers had suburb pages, schema, and a Business Profile set up properly.
+- Almost nobody had structured data, so the firm that adds it gets a near-free head start in AI Overviews.
 
 ## How to Start: A 90-Day SEO Plan for a Buyers Agency
 
 **You don't need a 12-month strategy; you need the right first 90 days, run in order.**
 
-**Days 1 to 14, claim and fix the foundations.** Claim and verify your Google Business Profile, set it as a service-area business, hide the address, add categories and 10 to 20 real photos. Fix the obvious on-site stuff: title tag and heading on every page, fast mobile load, a clear "book a call" path.
+**The first 90 days, in order**
 
-**Days 15 to 45, build the suburb pages.** Pick three to five suburbs that actually bring you clients. Write one useful page each, local auction context, what a buyer there faces, a real example, your process, and add the `RealEstateAgent` schema. One real page beats ten thin ones.
+1. **Claim and fix the foundations.** Claim and verify your Google Business Profile, set it as a service-area business, hide the address, add categories and 10 to 20 real photos. Fix the obvious on-site stuff: title tag and heading on every page, fast mobile load, a clear "book a call" path, **Days 1 to 14**
+2. **Build the suburb pages.** Pick three to five suburbs that actually bring you clients. Write one useful page each, local auction context, what a buyer there faces, a real example, your process, and add the `RealEstateAgent` schema. One real page beats ten thin ones, **Days 15 to 45**
+3. **Measure, then layer on AI-engine work.** Watch Google Search Console. Then start the citable-content and structured-data work for AI-engine visibility, covered in our [Melbourne playbook](/blog/how-to-rank-buyers-agency-ai-search-melbourne) and [AEO guide](/blog/what-is-answer-engine-optimisation), **Days 46 to 90**
 
-**Days 46 to 90, measure, then layer on AI-engine work.** Watch Google Search Console. This regex filter pulls your buyer-intent suburb queries:
+For step three, this regex filter pulls your buyer-intent suburb queries:
 
 ```
 (buyers?\s*agent|buyers?\s*advoca|property\s*buyer)\b.*\b(melbourne|sydney|brisbane|hawthorn|brunswick|toorak|paddington|new\s*farm)\b
 ```
-
-Then start the citable-content and structured-data work for AI-engine visibility, covered in our [Melbourne playbook](/blog/how-to-rank-buyers-agency-ai-search-melbourne) and [AEO guide](/blog/what-is-answer-engine-optimisation).
 
 ## Frequently Asked Questions
 
