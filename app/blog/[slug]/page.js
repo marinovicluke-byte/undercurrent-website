@@ -54,8 +54,9 @@ function shareImage(slug, fm) {
 
 export const dynamicParams = false
 
+// scheduled articles build too, so each resolves on its day without a deploy (and before it, to a direct request)
 export function generateStaticParams() {
-  return getAllArticles().map(a => ({ slug: a.slug }))
+  return getAllArticles({ scheduled: true }).map(a => ({ slug: a.slug }))
 }
 
 export async function generateMetadata({ params }) {
@@ -112,7 +113,10 @@ export default async function ArticlePage({ params }) {
   const { intro, blocks } = splitBlocks(body)
   const rail = [...blocks.map(b => ({ id: b.id, label: b.toc })), ...(faqs.length ? [{ id: 'faq', label: 'FAQ' }] : [])]
 
-  const all = getAllArticles()
+  // the live articles; a scheduled one sees them as it will on its day, itself newest, so its
+  // Read next and its end photo only ever name pages already live
+  const live = getAllArticles()
+  const all = live.some(a => a.slug === slug) ? live : [{ slug, ...fm }, ...live]
   const related = relatedTo(slug, all)
   const endPhoto = endPhotoOf(slug, all)
 
