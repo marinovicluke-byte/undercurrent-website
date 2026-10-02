@@ -88,7 +88,7 @@ A quarter is long enough for change to show, short enough to catch problems befo
 
 **Your Google Business Profile is the single biggest lever in local search, and most are only half-finished.** It's the listing that drops you into the map pack, so an incomplete profile is a capped profile.
 
-Work through this every quarter:
+**Your quarterly profile checks**
 
 - **Primary category** matches exactly what you do ("Plumber", not "Home Services").
 - **Secondary categories** cover every other service you offer.
@@ -113,7 +113,7 @@ A quarterly photo refresh is the cheapest ranking work going.
 
 **Google constantly cross-checks your website against your Google Business Profile, and any mismatch costs you rankings.** Your site has to confirm, in plain text Google can read, exactly what your profile claims.
 
-Check these every quarter:
+**Your quarterly website checks**
 
 - **NAP in the footer** of every page, as real text, never inside an image.
 - **Location in page titles and H1s** on service pages ("Emergency Electrician in Geelong").
@@ -128,7 +128,7 @@ Mobile is the deal-breaker. Most Australian searches now happen on a [mobile dev
 
 **Reviews are a direct ranking factor, and the businesses in the top three local-pack spots average 561 of them.** They are also the trust signal customers act on before they ever pick up the phone.
 
-Your quarterly reviews checklist:
+**Your quarterly reviews checklist**
 
 - **Ask after every completed job**, with a quick SMS or email carrying a review link.
 - **Keep the flow steady**, since a few reviews a week beat a big batch then silence.
@@ -150,7 +150,7 @@ Make asking part of finishing the job, every job, and the velocity looks after i
 
 **A business citation is any online listing of your name, address and phone number, and inconsistency between them quietly drags your ranking down.** Google reads conflicting listings as doubt about which business is the real one.
 
-Audit these each quarter:
+**Your quarterly citation audit**
 
 - **Core directories:** True Local, Yellow Pages, Localsearch, Hotfrog and StartLocal, all showing identical details.
 - **Bing Places and Apple Maps:** both free, both under-claimed by competitors, and both feed AI assistants and in-car navigation.
@@ -186,7 +186,15 @@ Those 93 pages spanned 36 websites: 23 scored strong, 29 competent, 41 weak. Aga
 
 ## What surprised us when we audited 93 local-business pages
 
-**Three patterns in the audit data hit harder than any single score.** First, not one of the 93 pages scored below 30. The floor has lifted, and "bad" local content now means competent-but-forgettable, not broken. Second, nearly half still landed in the weak band, almost always for the same reason: no first-party data, just rephrased advice anyone could write, and the single most common gap across all 93 pages was a missing original statistic. Third, the gap between the corpus average of 64.1 and our own 31 articles at 87.1 came down to one habit: citing real numbers from real work. A checklist tells you what to do. The thing that actually ranks is proof you've done it, which is the whole point of treating [AI search optimisation](/glossary/what-is-ai-search-optimisation) and local SEO as one job, not two. Every page that cleared 80 in the audit shared that habit: it showed its own numbers.
+**Three patterns in the audit data hit harder than any single score.**
+
+**The three patterns**
+
+- Not one of the 93 pages scored below 30. The floor has lifted, and "bad" local content now means competent-but-forgettable, not broken.
+- Nearly half still landed in the weak band, almost always for the same reason: no first-party data, just rephrased advice anyone could write, and the single most common gap across all 93 pages was a missing original statistic.
+- The gap between the corpus average of 64.1 and our own 31 articles at 87.1 came down to one habit: citing real numbers from real work.
+
+A checklist tells you what to do. The thing that actually ranks is proof you've done it, which is the whole point of treating [AI search optimisation](/glossary/what-is-ai-search-optimisation) and local SEO as one job, not two. Every page that cleared 80 in the audit shared that habit: it showed its own numbers.
 
 ## How do you prioritise your local SEO checklist when time is tight?
 
