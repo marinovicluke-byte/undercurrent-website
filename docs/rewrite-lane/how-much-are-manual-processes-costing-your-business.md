@@ -105,7 +105,15 @@ Only one Worked block. No other sourced sum is left that drives the reader's dec
 Body, from the H1 to the Sources list, without the FAQ, with link URLs and image markdown removed:
 
 - Before: 1,953
-- After: see the PR
+- After: 1,513 (down 440, or 23%). The cut stories were most of the loss.
+
+## Checks
+
+- **`next build`** (run directly, so the IndexNow postbuild doesn't fire) passes. The Worked sum (52 - 4 = 48) passes the build's workings check.
+- **`scripts/check-quick-answers.mjs`**: 71 of 71 pass. The new answer's numbers (80, 38, 48) were all in the article on `origin/main`. No keyword warning on this article.
+- **No format-pass check script exists yet.** By hand: no em dash, H1 to H3 headings identical to `origin/main`, and the only numbers left are 80%, 38%, over 500, 52, 4 and 48, plus "5-10" in an FAQ question that stays as it is.
+- **Head against production:** the title, meta description, canonical and every JSON-LD block are byte-identical to undercurrentautomations.com, apart from the FAQ answer text.
+- **`next start`, at 390 and 1440, in Chromium and WebKit** (WebKit with the CSP stripped, per lab-notes 2026-10-02): no sideways scroll. Both Fill blocks, the Worked block and the contrast pair render. The rotating photo sits just before the "Four Biggest Drains" H2. Screenshots are kept out of git.
 
 ## Reads thin (for Luke)
 
