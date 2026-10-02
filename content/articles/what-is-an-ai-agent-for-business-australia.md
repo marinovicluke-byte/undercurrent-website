@@ -118,7 +118,7 @@ An AI agent deployed on your website or via SMS can handle the top 20 questions 
 
 Deloitte's Digital Consumer Trends report for Australia found that 61% of Australian consumers expect a response to a service enquiry within the same day, and 29% expect a response within an hour. For service businesses with high enquiry volume, a customer service agent that responds instantly, even at 11pm on a Sunday, pays for itself in the first month. The [customer experience automation](/customer-experience-automation) service covers exactly this use case.
 
-If you want this scoped for your business, [book a scoping call](/services) — we'll map the highest-value agent build for your existing tools.
+If you want this scoped for your business, [book a scoping call](/services), we'll map the highest-value agent build for your existing tools.
 
 ---
 
@@ -150,25 +150,20 @@ A Footscray wholesale distributor with 12 staff reduced inventory holding by 18%
 
 Getting started with an AI agent doesn't require a developer or a six-month project. Most service businesses can have something running in two to four weeks.
 
-Here's the practical path:
+**Here's the practical path**
 
-**Step 1: Pick one problem.** Don't try to automate everything. Pick the task costing you the most time or the most money. Slow lead response and manual invoice chasing are the two most common starting points for Australian service businesses.
-
-**Step 2: Map the current process.** Write out exactly what happens today, who does what, in which tool, in what order. If you can't describe the process, you can't automate it.
-
-**Step 3: Choose your toolset.** For most small businesses, off-the-shelf platforms (Make, n8n, or vertical tools like ServiceM8's automation features) handle 80% of use cases. For more complex or custom workflows, a purpose-built agent is worth considering. The [AI automation Melbourne](/ai-automation-melbourne) page covers the options we typically recommend for Victorian businesses.
-
-**Step 4: Connect your existing tools.** An AI agent is only as useful as the data it can access. Connect it to your CRM, your accounting software, your calendar. Most major tools have native integrations or APIs.
-
-**Step 5: Test with low stakes.** Run the agent in parallel with your existing process for one to two weeks. Compare outputs. Fix gaps before you turn off the manual process.
-
-**Step 6: Review and adjust monthly.** AI agents improve with feedback. Set a monthly review to check where the agent is making errors, missing context, or triggering false positives.
+1. **Pick one problem.** Don't try to automate everything. Pick the task costing you the most time or the most money. Slow lead response and manual invoice chasing are the two most common starting points for Australian service businesses.
+2. **Map the current process.** Write out exactly what happens today, who does what, in which tool, in what order. If you can't describe the process, you can't automate it.
+3. **Choose your toolset.** For most small businesses, off-the-shelf platforms (Make, n8n, or vertical tools like ServiceM8's automation features) handle 80% of use cases. For more complex or custom workflows, a purpose-built agent is worth considering. The [AI automation Melbourne](/ai-automation-melbourne) page covers the options we typically recommend for Victorian businesses.
+4. **Connect your existing tools.** An AI agent is only as useful as the data it can access. Connect it to your CRM, your accounting software, your calendar. Most major tools have native integrations or APIs.
+5. **Test with low stakes.** Run the agent in parallel with your existing process for one to two weeks. Compare outputs. Fix gaps before you turn off the manual process.
+6. **Review and adjust monthly.** AI agents improve with feedback. Set a monthly review to check where the agent is making errors, missing context, or triggering false positives.
 
 For a broader view of which processes to automate first, the [UC guide to automating business processes in Australia](/blog/automating-business-processes-australia-sme-guide) is a solid starting point. The [finance automation](/finance-automation) and [sales automation](/sales-automation) pages are worth reviewing too if invoicing or lead follow-up is your main bottleneck.
 
 In UC's own client onboarding workflow, the businesses that get the fastest results are the ones that start with a single, clearly defined process, not a sprawling wishlist. One well-built agent beats six half-finished ones every time.
 
-If you'd rather have this built for you, **[book a scoping call](/services)** — most builds go live in under two weeks.
+If you'd rather have this built for you, **[book a scoping call](/services)**, most builds go live in under two weeks.
 
 ---
 
