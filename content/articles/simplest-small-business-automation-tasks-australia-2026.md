@@ -23,7 +23,10 @@ faqs:
 ---
 # What Is the Simplest Task a Small Business Can Automate Right Now Using a No-Code Tool? Australia 2026: 5 Wins You Can Set Up in Under 30 Minutes
 
-> **Quick Answer:** The simplest task most Australian small businesses can automate right now is lead capture to email notifications. When someone fills out your website form, a no-code tool like Zapier or Make can instantly send you an email or Slack message with their details. Takes 10 minutes to set up, costs nothing, and you never miss another lead.
+> **Quick Answer:** **The simplest task a small business can automate right now with a no-code tool is sending every website form lead straight to you.**
+> - Zapier or Make sends you an email or Slack message instantly
+> - Takes 10 minutes to set up and costs nothing
+> - You never miss another lead
 
 Here's the thing about automation. You don't need to be technical. You don't need to hire a developer. And you definitely don't need to automate your entire business on day one.
 

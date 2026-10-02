@@ -29,7 +29,11 @@ faqs:
 
 You can double your team's output without doubling your payroll. **Team efficiency** is the ratio of productive work to total hours worked, and Australian service businesses typically waste 6 hours on admin for every 1 hour 42 minutes spent on strategic tasks, according to a 2024 Atlassian study. The answer isn't more staff. It's better systems, smarter automation, and process redesign that turns busy work into billable hours.
 
-> **Quick Answer:** Australian entrepreneurs can boost team efficiency without hiring by automating repetitive admin tasks (invoicing, follow-ups, scheduling), redesigning workflows to eliminate bottlenecks, using delegation frameworks to free up skilled workers, and implementing tools that handle non-billable work. Most service businesses can increase output by 30-40% within 90 days without adding headcount.
+> **Quick Answer:** **Australian entrepreneurs can boost team efficiency without hiring by automating repetitive admin and fixing the workflows that slow the team down.**
+> - Automate invoicing, follow-ups, scheduling and other non-billable work
+> - Redesign workflows to remove bottlenecks
+> - Delegate so skilled staff stay on skilled work
+> - Most service businesses can lift output 30-40% within 90 days
 
 ![Process workflow visualization showing team efficiency optimization steps for Australian small business owners](./body-1.jpg)
 

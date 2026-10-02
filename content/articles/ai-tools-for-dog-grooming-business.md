@@ -24,12 +24,11 @@ faqs:
 ---
 # How to Use AI Tools in a Dog Grooming Business
 
-> **Quick Answer:** The best AI tools for a dog grooming business are the free or cheap ones you can use this week, no developer needed:
-> - **ChatGPT, Claude or Gemini** for review replies, social captions, FAQ drafts and no-show scripts
-> - **Booking and reminder software** (MoeGo, Gingr) to cut no-shows and chase rebookings
-> - **A review-request automation** so the asks keep flowing
->
-> Start with the admin jobs eating your evenings. Keep the dog calls human.
+> **Quick Answer:** **The best AI tools for a dog grooming business are free or cheap ones you can use this week, with no developer needed.**
+> - ChatGPT, Claude or Gemini for review replies, captions, FAQs and no-show scripts
+> - Booking and reminder software like MoeGo or Gingr to cut no-shows
+> - A review-request automation so the asks keep going out
+> - Start with the admin eating your evenings, keep dog calls human
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="Four ways a dog grooming business can use AI tools in Australia" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>Four ways a dog grooming business can use AI tools</title>

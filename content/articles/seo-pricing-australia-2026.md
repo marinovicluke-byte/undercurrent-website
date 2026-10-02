@@ -30,7 +30,11 @@ faqs:
 ---
 # How Much Does SEO Pricing Australia Cost in 2026?
 
-> **Quick Answer:** Australian SEO pricing runs from $500 to $20,000+ a month, across five price bands. UnderCurrent publishes five fixed tiers: $1,000/mo Foundation for businesses just getting started, $1,500/mo SEO-only (articles + service pages, no paid media), $2,800/mo Local with PPC, $5,500/mo Regional, and $9,500/mo National. Plus a $3,000 custom website build. You can also pick one service at a time instead of a whole package. We checked the 10 top-ranking "seo pricing australia" pages in May 2026. None of them show how the price is worked out. We do.
+> **Quick Answer:** **SEO packages in Australia run from $500 to $20,000+ a month, and UnderCurrent publishes five fixed tiers from $1,000 to $9,500 a month.**
+> - Foundation $1,000, SEO-only $1,500 and Local with PPC $2,800 a month
+> - Regional $5,500 and National $9,500 a month, plus a $3,000 custom website
+> - Or buy one service at a time instead of a package
+> - None of the 10 top-ranking pages we checked show how the price is worked out
 
 ## What does an SEO packages Australia comparison reveal in 2026?
 

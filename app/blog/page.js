@@ -11,6 +11,9 @@ import { CATEGORIES, CATEGORY_ORDER, categoryOf } from '@/lib/categories'
 const SITE_URL = 'https://undercurrentautomations.com'
 const SHOW = 4
 
+// ISR: rebuilt hourly, so a scheduled article joins the index on its date with no deploy
+export const revalidate = 3600
+
 export const metadata = {
   title: 'Blog',
   description: 'Notes from the work. Guides on AI search, automation, websites and strategy for Australian small business, filed under the service each one belongs to.',

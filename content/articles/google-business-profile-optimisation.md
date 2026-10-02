@@ -24,7 +24,11 @@ faqs:
 ---
 # Google Business Profile Optimisation: Win Local Search
 
-> **Quick Answer:** Google Business Profile optimisation means completing and actively maintaining your free Google listing so it ranks in the local pack and on the map. The work is unglamorous: pick the right primary category, add real photos, collect reviews steadily, post weekly, and keep your name, address and phone identical everywhere. A complete profile gets found. An empty one gets skipped.
+> **Quick Answer:** **Google Business Profile optimisation means completing and maintaining your free Google listing so it ranks in the local pack and on the map.**
+> - Pick the right primary category
+> - Add real photos and post weekly
+> - Collect reviews steadily
+> - Keep your name, address and phone identical everywhere
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>AI search optimisation workflow for Australian businesses in five steps</title>

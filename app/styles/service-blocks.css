@@ -109,18 +109,14 @@
    fixed nav (72px). A tab is the card down to the gap under the title's first line: --pt, where the
    title starts, plus 1.23 of the title size (one 1.15 line, then the cut eight hundredths into the
    gap, clear of the descenders above and the ascenders below), so a two-line title shows its first
-   line whole at any width. On a wide screen a card is one row (Luke, 2026-10-02: "the h1 on the left and
-   the text on the right same line"): the text starts on the title's top line, its line height half the
-   title's, so the tab's edge falls in a gap between the text's lines too, and the cut moves to 1.19 of
-   the title size (four hundredths into the gap). Cards are as tall as their words; only the last one
-   is held open. Measured in Chromium and WebKit at 390, 1100 and 1440. Pure
+   line whole at any width. Measured in Chromium and WebKit at 390 and 1440. Pure
    CSS; any number of problems; reduced motion gets a plain list ---------- */
 .sv-open{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:20px;align-items:end;padding-bottom:32px}
 .sv-open__n{display:block;padding:.04em .04em .04em 0;font-size:150px;font-weight:500;line-height:1;letter-spacing:-.05em;font-variant-numeric:tabular-nums;
   color:transparent;-webkit-text-fill-color:transparent;background:var(--sv-scan);-webkit-background-clip:text;background-clip:text}
 .sv-open p{padding-bottom:16px;font-size:21px;font-weight:500;letter-spacing:-.015em;line-height:1.25;max-width:18ch;color:var(--ink)}
-.sv-pile{--nav:72px;--ts:30px;--pt:38.5px;--cut:1.23;--tab:calc(var(--pt) + var(--cut) * var(--ts));list-style:none}
-.sv-pile>li{position:sticky;top:calc(var(--nav) + var(--k) * var(--tab));padding:16px 16px 26px;border-top:1px solid var(--line);background:var(--white)}
+.sv-pile{--nav:72px;--ts:30px;--pt:38.5px;--tab:calc(var(--pt) + 1.23 * var(--ts));list-style:none}
+.sv-pile>li{position:sticky;top:calc(var(--nav) + var(--k) * var(--tab));min-height:250px;padding:16px 16px 26px;border-top:1px solid var(--line);background:var(--white)}
 .sv-pile>li:nth-child(even){background:var(--off)}
 /* the last card fills the screen under the stack, so every card above it has room to settle and the
    pile completes before the section scrolls on (--n, the number of problems, comes from the component) */
@@ -132,9 +128,10 @@
   .sv-open{column-gap:36px;padding-bottom:48px}
   .sv-open__n{font-size:clamp(200px,18vw,260px)}
   .sv-open p{padding-bottom:28px;font-size:clamp(24px,2.4vw,34px);max-width:20ch}
-  .sv-pile{--ts:clamp(34px,3.2vw,44px);--pt:24px;--cut:1.19}
-  .sv-pile>li{display:grid;grid-template-columns:72px minmax(0,6fr) minmax(0,5fr);column-gap:clamp(24px,3vw,48px);align-items:baseline;padding:24px 20px 30px}
+  .sv-pile{--ts:clamp(30px,3.2vw,44px);--pt:24px}
+  .sv-pile>li{display:grid;grid-template-columns:72px minmax(0,6fr) minmax(0,5fr);column-gap:clamp(24px,3vw,48px);align-items:baseline;min-height:240px;padding:24px 20px 32px}
   .sv-pile h3{grid-column:2;margin:0}
-  .sv-pile p{grid-column:3;align-self:start;margin:0;font-size:16px;line-height:calc(var(--ts) * .575)}
+  .sv-pile p{grid-column:3;align-self:end;margin:0;font-size:16px}
+  .sv-pile>li:last-child p{align-self:baseline}
 }
 @media (prefers-reduced-motion:reduce){.sv-pile>li,.sv-pile>li:last-child{position:static;min-height:0}}

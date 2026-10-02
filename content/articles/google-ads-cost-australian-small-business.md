@@ -24,7 +24,11 @@ faqs:
 ---
 # What Google Ads Cost an Australian Small Business in 2026
 
-> **Quick Answer:** Most Australian small businesses spend $1,000 to $5,000 AUD a month on Google Ads, and the average search click costs $2 to $4 AUD. Your true cost has three layers, the Three-Layer Cost Stack: the ad budget you pay Google, the click prices set by a live auction on every search, and the management time it takes to run it well, whether that is yours or an agency at $800 to $2,000 AUD a month. A plumber's click runs cheap while a lawyer's runs dear. Industry decides the rest.
+> **Quick Answer:** **Google Ads cost most Australian small businesses $1,000 to $5,000 AUD a month, and the average search click costs $2 to $4 AUD.**
+> - Layer 1: the ad budget you pay Google
+> - Layer 2: click prices set by a live auction on every search
+> - Layer 3: management time, yours or an agency's at $800 to $2,000 a month
+> - A plumber's clicks run cheap, a lawyer's run dear
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>AI search optimisation workflow for Australian businesses in five steps</title>

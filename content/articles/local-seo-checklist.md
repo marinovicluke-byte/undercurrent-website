@@ -26,7 +26,11 @@ faqs:
 
 Search rankings drift. Competitors move, Google changes the rules, and the Google Business Profile you set up in January looks tired by April. A local SEO checklist you run every quarter keeps that drift in check.
 
-> **Quick Answer:** A local SEO checklist is a fixed set of checks you run every quarter to keep your [Google Business Profile](/glossary/what-is-google-business-profile), website, reviews and business citations strong in local search. For Australian service businesses, the highest-value items are a fully completed Google Business Profile, consistent name-address-phone details, steady review velocity, and genuine location pages. Set and forget loses. Run the list four times a year.
+> **Quick Answer:** **A local SEO checklist is a fixed set of checks you run every quarter to keep your [Google Business Profile](/glossary/what-is-google-business-profile), website, reviews and citations strong.**
+> - A fully completed Google Business Profile
+> - The same name, address and phone details everywhere
+> - Steady new reviews and genuine location pages
+> - Run it four times a year, not once
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>AI search optimisation workflow for Australian businesses in five steps</title>

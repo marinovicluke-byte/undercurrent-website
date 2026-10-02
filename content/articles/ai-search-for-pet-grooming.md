@@ -24,13 +24,11 @@ faqs:
 ---
 # How to Win AI Search for Pet Grooming in 2026
 
-> **Quick Answer:** AI search for pet grooming is showing up when a pet owner asks ChatGPT, Gemini or Google's AI Overview "best dog groomer near me" and gets named in the answer. To get cited you need:
-> - A complete, accurate Google Business Profile (the data layer AI engines read first)
-> - An owned, crawlable website, not an Instagram or booking-widget link
-> - Consistent name, address and phone everywhere online
-> - Steady reviews and clear, structured service and suburb info
->
-> Most groomers are invisible here. The fix is structure, not spend.
+> **Quick Answer:** **AI search for pet grooming is getting named when a pet owner asks ChatGPT, Gemini or Google's AI Overview for the "best dog groomer near me".**
+> - A complete, accurate Google Business Profile, the first thing AI engines read
+> - An owned website AI can crawl, not an Instagram or booking link
+> - The same name, address and phone everywhere online
+> - Steady reviews and clear service and suburb details
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="How AI search picks a pet grooming business in five steps for Australian groomers" style="max-width:1120px;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>How AI search picks a pet grooming business in five steps</title>

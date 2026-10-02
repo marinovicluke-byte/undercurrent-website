@@ -23,7 +23,10 @@ faqs:
 ---
 # How to Do AI Search Optimisation in Australia
 
-> **Quick Answer:** AI search optimisation means structuring your website so that tools like ChatGPT, Perplexity, and Google AI Overviews cite your business when customers ask questions out loud. It goes by several names , GEO, AEO, LLMO , but the core idea is the same: answer questions clearly, get cited as the source.
+> **Quick Answer:** **AI search optimisation means structuring your website so ChatGPT, Perplexity and Google AI Overviews cite your business when customers ask questions.**
+> - It also goes by GEO, AEO or LLMO
+> - The core idea: answer questions clearly
+> - Then you get cited as the source
 
 | Strategy | What it targets | Estimated impact |
 |---|---|---|

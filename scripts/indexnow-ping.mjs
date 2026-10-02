@@ -1,11 +1,11 @@
 // Pings IndexNow with the full sitemap URL list after a production build.
 // Runs via npm postbuild; skips preview/local builds. Never fails the deploy:
 // a dead ping endpoint is not a reason to block a release.
-import { readFile } from 'node:fs/promises'
+// The list comes from lib/sitemap.js, the same builder /sitemap.xml renders per request, so a
+// scheduled article is never pinged before its date.
 
 const HOST = 'undercurrentautomations.com'
 const KEY = '5563149d85e149959f54f0aba4255afa'
-const SITEMAP_BODY = '.next/server/app/sitemap.xml.body'
 
 if (process.env.VERCEL_ENV !== 'production') {
   console.log(`indexnow: skipped (VERCEL_ENV=${process.env.VERCEL_ENV || 'unset'})`)
@@ -13,9 +13,9 @@ if (process.env.VERCEL_ENV !== 'production') {
 }
 
 try {
-  const xml = await readFile(SITEMAP_BODY, 'utf8')
-  const urlList = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1])
-  if (urlList.length === 0) throw new Error(`no <loc> entries found in ${SITEMAP_BODY}`)
+  const { sitemapEntries } = await import('../lib/sitemap.js')
+  const urlList = sitemapEntries().map(e => e.url)
+  if (urlList.length === 0) throw new Error('lib/sitemap.js returned no URLs')
 
   const res = await fetch('https://api.indexnow.org/indexnow', {
     method: 'POST',

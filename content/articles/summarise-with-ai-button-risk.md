@@ -24,7 +24,11 @@ faqs:
 ---
 # How To Audit 'Summarise With AI' Button Memory Risk
 
-> **Quick Answer:** Microsoft formally named the "summarise with AI" button risk on 10 February 2026: **AI Recommendation Poisoning**. The button passes hidden instructions to ChatGPT, Copilot, Claude, Perplexity, Gemini or Grok via a URL parameter, writing biased preferences into the assistant's persistent memory. Microsoft mapped it to MITRE ATLAS AML.T0080 and AML.T0051, with 50 prompts from 31 companies across 14 industries observed in a 60-day window. Strip those buttons from your site.
+> **Quick Answer:** **The "summarise with AI" button risk, named AI Recommendation Poisoning by Microsoft on 10 February 2026, is hidden instructions that bias your AI assistant.**
+> - The button passes them to ChatGPT, Copilot, Claude, Perplexity, Gemini or Grok
+> - They ride in a URL parameter and write into the assistant's memory
+> - Microsoft saw 50 prompts from 31 companies in 14 industries over 60 days
+> - Strip those buttons from your site
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>AI search optimisation workflow for Australian businesses in five steps</title>

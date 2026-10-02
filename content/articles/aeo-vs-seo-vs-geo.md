@@ -26,7 +26,11 @@ faqs:
 
 If your agency is pitching [AEO](/glossary/what-is-answer-engine-optimisation) vs SEO vs [GEO](/glossary/what-is-generative-engine-optimisation) as three separate line items on the invoice, here's the page that sorts out which one actually makes your phone ring. Three letters apart. Very different work. Same job.
 
-> **Quick Answer:** SEO gets your page into Google's ranked list of blue links. AEO formats that same page so Google, Siri and the People Also Ask box can lift a clean one-line answer straight off it. GEO gets your business named and quoted inside the answer ChatGPT or Perplexity writes from scratch. You don't pick one. Build them in order: SEO foundation first, AEO next, GEO last.
+> **Quick Answer:** **SEO ranks your page in Google's links, AEO lets search engines lift a one-line answer from it, and GEO gets your business named in AI answers.**
+> - AEO answers show in Google, Siri and People Also Ask
+> - GEO answers are written by ChatGPT or Perplexity
+> - You don't pick one
+> - Build in order: SEO first, AEO next, GEO last
 
 ![AEO vs SEO vs GEO workflow for Australian businesses, from SEO foundations to GEO authority](./body-1.jpg)
 

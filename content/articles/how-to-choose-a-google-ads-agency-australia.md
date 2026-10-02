@@ -24,7 +24,11 @@ faqs:
 ---
 # How to Choose a Google Ads Agency in Australia in 2026
 
-> **Quick Answer:** A Google Ads agency builds, runs, and improves your paid search campaigns so your ad budget becomes tracked leads or sales, not just clicks. In Australia, management fees usually run from a few hundred to a few thousand dollars a month, charged on top of what you spend with Google. Before signing, confirm who owns the account, how conversions are tracked, and what your exit terms are. Vet hard before you sign.
+> **Quick Answer:** **A Google Ads agency builds, runs and improves your paid search campaigns so your ad budget turns into tracked leads or sales, not just clicks.**
+> - Australian fees run from a few hundred to a few thousand dollars a month
+> - Fees sit on top of what you spend with Google
+> - Before signing, confirm who owns the account and how conversions are tracked
+> - Check the exit terms, and vet hard
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>AI search optimisation workflow for Australian businesses in five steps</title>
