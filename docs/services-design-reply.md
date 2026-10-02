@@ -73,3 +73,27 @@ Luke on round one: "you've just designed things that are already on our site and
 - **Tally:** the numbers become tally marks, one stroke more each row and the newest drawn in the page colour as you reach it, until the fifth crosses the four.
 
 Interface text added: "That's us", "of 5 are yours", "Which one costs you most?" and "Costs us most". The problem copy is unchanged. Round one is kept below on the board for comparison. Pages untouched.
+
+## Stage 5, Pile-up built and released (2026-10-02)
+
+Luke: "lets do the pile-up i think that's nifty, go do that and we're done, put it in and make it all live and fix".
+
+**Pile-up on all four pages** through `ServiceProblem` in `components/site/ServiceBlocks.js`, styled in `app/styles/service-blocks.css`. Each page's own opening line sits beside its count in the hero's stripes (the numeral is the number of problems; all four pages have five). Its five problems are set as cards: small number, large title, grey line, white and grey alternating. As you scroll, each card slides up and sticks under the last, just below the 72px nav, until all five tabs are stacked. The last card fills the screen below the stack so the pile completes, then the whole stack scrolls on together. Copy unchanged; the problem grid's `.pb` rules were removed from the four stylesheets (`.xg`/`.xc` stay for the industries grid).
+
+**Stack checks** (Chromium and WebKit, 390 and 1440, all four pages):
+- Every tab settles at nav + k × tab, the first exactly at the nav's foot, none under it.
+- No title is cut mid-line. A tab ends in the gap under the title's first line, derived from the title size (`--pt + 1.23 × --ts`), so a two-line title shows its first line whole at any width.
+- Reduced motion gives a static list.
+- The accessibility tree is a list of h3s and paragraphs, and nothing in the section is focusable.
+- A three-problem list stacks cleanly (72/147/223).
+- The stack releases before What it is.
+
+**Also fixed:**
+- The nav is 72px, not the 70 first assumed (the first tab sat 2px under it).
+- The tab cut grazed second-line ascenders (line height 1.08 → 1.15, tab derived from the title size).
+- The last two cards never settled; the last card now fills the screen so the pile completes.
+- The reduced-motion rule lost to the last-card rule on specificity.
+- On desktop, the last card's line sat at the foot of its tall card; it now sits beside its title.
+- "Retail and e-commerce" broke at its hyphen in the industries grid on a phone. "e-commerce" now holds together on all four pages. It's a markup wrap, not a copy change.
+
+**Final check before release:** `next build` passes. All four pages, the homepage, /blog and an article show no sideways scroll at 390 or 1440. Why us and About are byte-identical to main (markup and CSS) on all four pages. Title, meta description, canonical, og:title, all five JSON-LD blocks and the single H1 on each page match production exactly. The homepage, blog and articles share no changed file. After screenshots are updated in `docs/screenshots/services-after/`.
