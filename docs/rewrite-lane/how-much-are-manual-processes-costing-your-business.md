@@ -37,7 +37,7 @@ The article was built on invented client stories: a Dandenong plumber, a Brunswi
 
 | # | Figure | Sentence (where) | Source or CUT |
 |--:|---|---|---|
-| 1 | $15,000-$40,000 a year | Meta description | **KEPT, no source.** The brief says to keep the meta. Luke to decide (see below) |
+| 1 | $15,000-$40,000 a year | Meta description | CUT (ops, 3 Oct). Now: "Manual processes cost Australian SMEs paid hours every week. Calculate your hidden costs and find where automation pays for itself." The title and canonical are unchanged |
 | 2 | $15,000-$40,000 a year | Quick Answer point 1 | CUT. Not stated by any source, and not worked in the body |
 | 3 | About 40 hours a week, 5-10 person team | Quick Answer point 2 | CUT. Source Digital, unsourced |
 | 4 | Payback 8-12 months | Quick Answer point 3 | CUT. Source Digital, unsourced |
@@ -112,12 +112,12 @@ Body, from the H1 to the Sources list, without the FAQ, with link URLs and image
 - **`next build`** (run directly, so the IndexNow postbuild doesn't fire) passes. The Worked sum (52 - 4 = 48) passes the build's workings check.
 - **`scripts/check-quick-answers.mjs`**: 71 of 71 pass. The new answer's numbers (80, 38, 48) were all in the article on `origin/main`. No keyword warning on this article.
 - **No format-pass check script exists yet.** By hand: no em dash, H1 to H3 headings identical to `origin/main`, and the only numbers left are 80%, 38%, over 500, 52, 4 and 48, plus "5-10" in an FAQ question that stays as it is.
-- **Head against production:** the title, meta description, canonical and every JSON-LD block are byte-identical to undercurrentautomations.com, apart from the FAQ answer text.
+- **Head against production:** the title, canonical and every JSON-LD block are byte-identical to undercurrentautomations.com, apart from the FAQ answer text. The meta description changed on purpose (figure 1).
 - **`next start`, at 390 and 1440, in Chromium and WebKit** (WebKit with the CSP stripped, per lab-notes 2026-10-02): no sideways scroll. Both Fill blocks, the Worked block and the contrast pair render. The rotating photo sits just before the "Four Biggest Drains" H2. Screenshots are kept out of git.
 
 ## Reads thin (for Luke)
 
 1. **The article no longer answers its own title with a number.** "How much" now means "here's how to work out yours". The $78,600 example and the $15k-$40k range carried the argument, and neither had a source.
-2. **The meta description still says "$15,000-$40,000 a year"**, with no source. The brief says to keep the meta, so it's unchanged. It should change to match the body.
+2. **The meta description lost its "$15,000-$40,000 a year".** Ops approved the change on 3 Oct. The new line makes no figure claim.
 3. **FAQ 4 ("How much does it cost to automate...") gives no price.** UC's own published pricing would answer it, but that's a new number, so I didn't add one.
 4. **There's no client story.** The approved list has one that fits ("Invoice generator (health business)", about 10 hours a week). Its source is "stated by Luke", which the reader can't click, so I left it out. It's a one-paragraph add if Luke wants it.
