@@ -51,3 +51,15 @@ Luke's picks: figures Scanline, steps Fill, What it is the Trigger line opening 
 **Preview** (branch alias, Vercel login): https://undercurrent-website-git-de-49e525-marinovicluke-bytes-projects.vercel.app plus /automation, /website, /seo, /consulting. Nothing merged.
 
 **For Luke:** the three debatable Stages placements above. The figures still have no on-page source (your call in 73da37e), and the dead `.fig` rule can go whenever the Why us line is next touched.
+
+## Stage 3, the problem section on the board (2026-10-02)
+
+Luke asked why the problem section was never redesigned. It was left alone in round one because the crossed grid already gave it its own shape. Since then What it is ends on a crossed grid too, so the page would show the grid twice, two sections apart.
+
+The board now has The problem (section 02): the live grid, then four ideas built from the automation page's problem copy, word for word, at 390 first with the desktop toggle.
+- **Index (pick):** the five titles set large on hairline rows, as the menu sets its links. No stripes, so it doesn't compete with the Scanline figures or the Fill steps, and it leaves the crossed grid to What it is.
+- **Count:** the lead's "five" as one huge striped 5 (decorative, aria-hidden), with compact rows under it.
+- **Dark swipe:** the section on ink, the problems as the work section's static cards, swiped on a phone and five across on desktop.
+- **Strike:** each title crossed through in the page colour as you scroll to it.
+
+The four pages' problem sections are unchanged.

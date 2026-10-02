@@ -47,6 +47,19 @@ const incl = [
   ['Monitoring', 'It tells us when something breaks, before it tells you.'],
   ['30 days of support', 'After handover, included. Longer if you want it.'],
 ]
+const problem = {
+  lead: 'Five things we hear in nearly every first conversation.',
+  items: [
+    ['Costs up, margins down', "Wages, rent, insurance, software, all climbing. The price you can charge isn't. The gap you live on gets thinner every year."],
+    ['No time', "The day goes to the jobs. The admin goes to the night. There's no third shift for working on the business."],
+    ['Too many hats', "Owner, salesperson, bookkeeper, scheduler, IT. Five jobs, one person, none of them done the way you'd like."],
+    ['Double handling', "The same details typed into three systems. Quotes that wait. Invoices that go out late. Nobody's fault, and it costs you every week."],
+    ['Leads going cold', 'An enquiry answered on Thursday was probably booked with someone else on Tuesday.'],
+  ],
+}
+// the live problem grid's cells, with the crosses where its inner verticals meet the rules (desktop only)
+const pbCross = ['tr br', 'tr br', '', 'br', 'br', '']
+const pbNow = () => [['', problem.lead], ...problem.items].map(([h, p], i) => `<div class="xc pb${i === 0 ? ' pb--lead' : ''}${[1, 3, 5].includes(i) ? ' xc--off' : ''}">${pbCross[i].split(' ').filter(Boolean).map((c) => X('x--' + c)).join('')}${i ? `<span class="eyebrow">0${i}</span><h3>${h}</h3>` : ''}<p>${p}</p></div>`).join('')
 const about = {
   h2: "The person you'll deal with.",
   lead: 'UnderCurrent is run by Luke Marinovic out of Melbourne. Strategy, design, code and automation under one roof, so nothing gets lost between the person who understands the problem and the person building the fix.',
@@ -75,7 +88,19 @@ const families = [
     ],
   },
   {
-    id: 'steps', label: '02', title: 'The four steps', sec: 'How we work together',
+    id: 'problem', label: '02', title: 'The problem', sec: 'The problem',
+    what: "Now: the crossed grid, a lead cell and five numbered cells, three across. On a phone it's six stacked boxes. It was left alone in round one because it already had its own shape. Since then What it is ends on a crossed grid too, so the page would show the crossed grid twice, two sections apart. Every idea here moves away from the grid, and none changes a word.",
+    pick: "<b>Pick: Index.</b> It's the fastest read on a phone (five big titles you can take in with one thumb-scroll), it uses no stripes, so it doesn't compete with the Scanline figures above or the Fill steps below, and it leaves the crossed grid to What it is.",
+    looks: [
+      { name: 'Now', idea: 'The live section.', honest: 'Fine on its own. Next to the new areas grid two sections down, the page repeats itself, and on a phone the five boxes are a long scroll of 15px text.', html: `<section class="sec sec--off"><div class="wrap">${head('The problem')}<div class="xg">${pbNow()}</div></div></section>` },
+      { name: 'Index', pick: true, idea: 'The five titles set large on hairline rows, the way the menu sets its links: the number small, the line under on a phone and beside on desktop. The row bands in the page colour on hover or tap.', honest: "The plainest of the four. Its strength is speed: the titles carry the section and the lines are there if you want them. It's another set of rows, but at a scale nothing else on the page uses.", html: `<section class="sec sec--off"><div class="wrap">${head('The problem')}<p class="pi__lead">${problem.lead}</p><ol class="pi">${problem.items.map(([h, p], i) => `<li class="rowb"><span class="pi__n">0${i + 1}</span><h3>${h}</h3><p>${p}</p></li>`).join('')}</ol></div></section>` },
+      { name: 'Count', idea: 'The "five" in the lead set as one huge striped 5 beside the sentence, then the five problems as compact rows.', honest: 'The 5 is decoration (hidden from screen readers; the sentence still says "Five"). It makes three sets of stripes in a row: the figures, the 5, the Fill steps. That\'s the most direct echo of the hero, and the most likely to feel like a gimmick.', html: `<section class="sec sec--off"><div class="wrap">${head('The problem')}<div class="pc"><div class="pc__top"><span class="pc__5" aria-hidden="true">5</span><p class="pc__lead">${problem.lead}</p></div><ol class="pc__list">${problem.items.map(([h, p], i) => `<li class="rowb"><span class="pi__n">0${i + 1}</span><h3>${h}</h3><p>${p}</p></li>`).join('')}</ol></div></div></section>` },
+      { name: 'Dark swipe', idea: "The section goes onto ink, the problems as the work section's static cards (the page colour falling from the top through the grain), swiped one at a time on a phone and five across on desktop.", honest: 'The biggest change in mood, the "before" set in the dark. But the work section is already ink with these cards, so the page would have two. On a phone four of the five sit off screen until you swipe.', html: `<section class="sec sec--ink"><div class="wrap">${head('The problem')}<p class="pd__lead">${problem.lead}</p><div class="pd" tabindex="0" aria-label="The five problems, swipe for more">${problem.items.map(([h, p], i) => `<article class="pd__c"><i class="pd__sig" aria-hidden="true"></i><span class="pi__n">0${i + 1}</span><h3>${h}</h3><p>${p}</p></article>`).join('')}</div><p class="pd__hint" aria-hidden="true">5 problems, swipe</p></div></section>` },
+      { name: 'Strike', idea: 'Five hairline rows, each title struck through in the page colour as you scroll to it, the problems crossed off one by one.', honest: 'Memorable, and the motion is the whole idea, so it reads flat in a screenshot. Crossing them out promises we fix all five, which the copy never says. With reduced motion every line is drawn.', live: true, html: `<section class="sec sec--off"><div class="wrap">${head('The problem')}<p class="pi__lead">${problem.lead}</p><ol class="ps">${problem.items.map(([h, p], i) => `<li><span class="pi__n">0${i + 1}</span><h3><span>${h}</span></h3><p>${p}</p></li>`).join('')}</ol></div></section>` },
+    ],
+  },
+  {
+    id: 'steps', label: '03', title: 'The four steps', sec: 'How we work together',
     what: "Now: 01 to 04 in small light type, four hairline rows. Luke: \"same with this section\", meaning the Fill steps from the blog. Every idea uses the Fill numeral (striped, filling from the foot in green as the run goes on). They differ in layout and in whether it moves. Copy unchanged.",
     pick: "<b>Pick: Fill.</b> It's the blog block exactly, so a reader who has seen an article sees the same thing here. It keeps the photo of Luke beside it and needs no script.",
     looks: [
@@ -87,7 +112,7 @@ const families = [
     ],
   },
   {
-    id: 'what', label: '03', title: 'What it is', sec: 'What it is',
+    id: 'what', label: '04', title: 'What it is', sec: 'What it is',
     what: "Now: a heading, two paragraphs of about 55 words each, then four rows. It's the longest run of body text on the page. The second paragraph is two halves (the AI part, the automation part) written as one block.",
     pick: "<b>Pick: Deck and pair.</b> It cuts no words, and the structure the paragraph already has becomes visible. On the phone, the areas grid breaks the column after a run of rows.",
     looks: [
@@ -98,7 +123,7 @@ const families = [
     ],
   },
   {
-    id: 'includes', label: '04', title: 'What the build includes', sec: 'What the build includes',
+    id: 'includes', label: '05', title: 'What the build includes', sec: 'What the build includes',
     what: 'Now: six label-and-line rows in 15 to 16px, grey on white. It sits straight after the steps, which are also rows, so the two sections run together.',
     pick: "<b>Pick: Ticks.</b> It's a different shape from the Fill rows just above it, it works the same on all four pages, and the names finally read at a size you'd scan.",
     looks: [
@@ -109,7 +134,7 @@ const families = [
     ],
   },
   {
-    id: 'about', label: '05', title: 'About', sec: 'About',
+    id: 'about', label: '06', title: 'About', sec: 'About',
     what: "Now: the photo, a heading, then two paragraphs. The second holds three different ideas in a row: what we automate, what we won't, and the test.",
     pick: "<b>Pick: Pair.</b> \"We automate\" and \"we won't\" is a real do and don't, the case the pair block was made for, and \"we won't\" is the line that sets UnderCurrent apart.",
     looks: [
@@ -122,7 +147,7 @@ const families = [
 ]
 
 // ---------- the frame and the board ----------
-const liveJs = `<script>(function(){var r=[].slice.call(document.querySelectorAll('.fill--live>li'));if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){r.forEach(function(l){l.classList.add('on')});return}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -30% 0px'});r.forEach(function(l){io.observe(l)})})()</script>`
+const liveJs = `<script>(function(){var r=[].slice.call(document.querySelectorAll('.fill--live>li,.ps>li'));if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)){r.forEach(function(l){l.classList.add('on')});return}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -30% 0px'});r.forEach(function(l){io.observe(l)})})()</script>`
 const pinJs = `<script>document.addEventListener('click',function(e){var r=e.target.closest('.rowb');if(r)r.classList.toggle('on')})</script>`
 const frame = (look) => `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/services-concepts.css?v=${V}"></head><body>${look.html}${look.live ? liveJs : ''}${pinJs}</body></html>`
 const attr = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;')
@@ -201,8 +226,9 @@ body.desk iframe{width:1440px}
 <main>
   <section class="intro">
     <h1>Bringing the service pages up to the blog and the proposal</h1>
-    <p>Five sections of the AI Automation page, each shown as it is now and then three or four ideas for it, all at 390 first. Use the toggle top right for 1440. The copy and figures are the page's own, and every idea says plainly where it changes a word. Whichever idea wins in each section goes onto all four pages through one shared component, in that page's colour.</p>
-    <p><b>Staying as they are:</b> the green Why us band (untouched, on every page), the hero, the problem grid, the work cards, testimonials, who it's for, the FAQ, other services and contact. Each of those already has its own shape.</p>
+    <p><b>Round two, 2026-10-02:</b> Luke picked Scanline figures, Fill steps, the Trigger line with the areas grid, and Stages, with About as live. Those are built on all four pages. The problem section is new on the board, and it is the only one still open.</p>
+    <p>Six sections of the AI Automation page, each shown as it is now and then three or four ideas for it, all at 390 first. Use the toggle top right for 1440. The copy and figures are the page's own, and every idea says plainly where it changes a word. Whichever idea wins in each section goes onto all four pages through one shared component, in that page's colour.</p>
+    <p><b>Staying as they are:</b> the green Why us band (untouched, on every page), the hero, the work cards, testimonials, who it's for, the FAQ, other services and contact. Each of those already has its own shape.</p>
     <p><b>To pick:</b> one name per section. A row with a green band can be tapped (that's the live pages' hover).</p>
   </section>
 ${families.map((f) => `  <section class="fam" id="${f.id}" aria-labelledby="${f.id}-h">
