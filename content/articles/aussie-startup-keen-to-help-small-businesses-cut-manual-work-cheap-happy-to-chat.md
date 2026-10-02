@@ -23,7 +23,10 @@ faqs:
 ---
 # Aussie Startup Keen to Help Small Businesses Cut Manual Work Australia 2026: Your Complete Guide to Finding Affordable Automation Support
 
-> **Quick Answer:** If you're searching for an Aussie startup keen to help small businesses cut manual work that's cheap and happy to chat, you're looking for a local automation partner who understands small business constraints, offers transparent pricing (typically $2,000-$8,000 for initial setups), and prioritises accessibility over corporate gatekeeping. The right partner will offer a free audit, speak plain English, and build solutions that fit your actual workflows—not force you into their template.
+> **Quick Answer:** **An Aussie startup keen to help small businesses cut manual work, cheap and happy to chat, is a local automation partner with clear prices.**
+> - Expect about $2,000 to $8,000 for a first setup
+> - A free audit and answers in plain English
+> - Builds that fit how you already work, not their template
 
 You're probably here because you're drowning in manual work. Invoicing, data entry, follow-up emails, scheduling, inventory updates. The stuff that keeps your business alive but doesn't make you money. And you've heard automation can help, but you don't know where to start or who to trust.
 

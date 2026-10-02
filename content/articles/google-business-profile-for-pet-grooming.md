@@ -24,13 +24,11 @@ faqs:
 ---
 # How to Set Up a Google Business Profile for Pet Grooming
 
-> **Quick Answer:** A Google Business Profile for pet grooming is the free Google listing that decides whether you appear in the map pack for "dog groomer near me". To rank:
-> - Set the primary category to Pet Groomer, never Pet Shop or Dog Day Care
-> - List every service and keep your details identical everywhere
-> - Earn steady recent reviews, but know volume alone won't lift you
-> - Accept that proximity does most of the heavy lifting
->
-> Reviews don't win the pack. A built-out profile close to the searcher does.
+> **Quick Answer:** **A Google Business Profile for pet grooming is the free Google listing that decides whether you show in the map pack for "dog groomer near me".**
+> - Set the primary category to Pet Groomer, not Pet Shop or Dog Day Care
+> - List every service and keep your details the same everywhere
+> - Earn steady, recent reviews, but volume alone won't lift you
+> - Being close to the searcher does most of the work
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="Four levers of a pet grooming Google Business Profile that rank in Australian local search" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>Four levers of a pet grooming Google Business Profile</title>
