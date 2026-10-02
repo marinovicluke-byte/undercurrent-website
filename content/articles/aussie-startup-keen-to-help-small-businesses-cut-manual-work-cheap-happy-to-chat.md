@@ -160,7 +160,7 @@ Look, not everyone needs to hire someone. If you're technically confident, have 
 - You have 10-20 hours to invest in learning, testing, and troubleshooting
 - Your time isn't better spent on revenue-generating work
 
-**DIY does NOT make sense if**
+**DIY is the wrong call if**
 
 - You need to connect 3+ systems that don't integrate easily
 - You're not confident with technology and get frustrated when things break
