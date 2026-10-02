@@ -4,7 +4,7 @@
    article's category colour only at the size of a mark, the grain cross, the scanline lettering
    (docs/blocks-design-notes.md). One look a block, picked by Luke on 2026-10-02 from the round 3
    board: steps Fill, pairs Weight, tables Rail, Quick Answer Deck, workings Worked. The other
-   fourteen are kept only on the board, which has its own stylesheet: /article-blocks-concepts.html */
+   fourteen are kept only on the board, which has its own stylesheet: docs/concept-boards/article-blocks-concepts.html */
 
 .body{
   /* a bare URL in the copy breaks rather than push the page sideways on a phone */

@@ -1,5 +1,5 @@
 /* app/styles/service-blocks.css — the blocks the four service pages share (components/site/ServiceBlocks.js),
-   picked by Luke from the services board on 2026-10-02 (/services-concepts.html): figures Scanline, steps
+   picked by Luke from the services board on 2026-10-02 (docs/concept-boards/services-concepts.html): figures Scanline, steps
    Fill, what it is Trigger line with the crossed areas grid, what the build includes Stages. Loaded after
    each page's own stylesheet, so it uses that page's tokens: --sc0 the deep service colour, --band the row
    fill, --line, --ink, --ink-2, --noise-coarse. Phone first */

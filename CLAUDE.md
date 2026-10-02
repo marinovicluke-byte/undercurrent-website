@@ -44,7 +44,7 @@ The live site is the design (Luke, 2026-10-02). BRAND.md, the uc-redesign-v3 moc
 - Colour means the category (green automation, red search, orange web, teal strategy, plum growth) and fills grounds: the hero, cards, bands, the footer. On white paper it appears only at the size of a mark: the grain cross, the rail's underline, a hover, an 8% row band. No accent or offset shadows
 - Grain is inline SVG noise blended over the category colour and jittered with `steps()`. On paper it shows only inside the 13px cross where hairlines meet
 - Scanline lettering (`background-clip:text` over repeating stripes) is kept for the hero H1s, the wordmark, the footer sign and the article blocks' numerals and answers. No other gradient text
-- Article blocks ship one look each (steps Fill, pairs Weight, tables Rail, Quick Answer Deck, workings Worked) from `app/styles/article-blocks.css`. The other fourteen live only on the board, `/article-blocks-concepts.html`, which has its own frozen stylesheet
+- Article blocks ship one look each (steps Fill, pairs Weight, tables Rail, Quick Answer Deck, workings Worked) from `app/styles/article-blocks.css`. The other fourteen live only on the board, `docs/concept-boards/article-blocks-concepts.html` (off the site since 2026-10-02), which has its own frozen stylesheet
 
 ## Errors
 

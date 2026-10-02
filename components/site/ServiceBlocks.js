@@ -1,5 +1,5 @@
 // components/site/ServiceBlocks.js — the sections the four service pages share, so they stay uniform.
-// Picked by Luke from the services board, 2026-10-02 (/services-concepts.html). Each page passes its own
+// Picked by Luke from the services board, 2026-10-02 (docs/concept-boards/services-concepts.html). Each page passes its own
 // copy; the look is app/styles/service-blocks.css in the page's colour. Server components, no behaviour
 // beyond the page's ServiceFx (the reveal, the tap-to-pin rows).
 
