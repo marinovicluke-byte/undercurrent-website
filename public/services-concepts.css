@@ -1,0 +1,349 @@
+/* public/services-concepts.css — the frames on the services board (/services-concepts.html,
+   built by scripts/gen-services-concepts.mjs). Its own stylesheet, cut from the live service
+   pages (app/styles/automation.css) and the article blocks (app/styles/article-blocks.css):
+   Inter, the one hairline, ink and ink-2, square corners, green only at the size of a mark or as
+   a ground, the grain cross, the scanline lettering. Phone first: every rule is written for 390
+   and the wide layouts come in at 641, 801 and 961. Nothing here is loaded by the site */
+
+:root{
+  --white:#fff;--off:#f6f6f6;--ink:#141414;--ink-2:#6b6b6b;--line:rgba(20,20,20,.14);
+  --pad:clamp(20px,4vw,56px);--max:1320px;--ease:cubic-bezier(.22,.8,.2,1);
+  --noise:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='280'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  --noise-coarse:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.32' numOctaves='1' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  /* Automation, green, as the live page */
+  --green:hsl(160 45% 40%);--sc:var(--green);--sc0:hsl(160 45% 34%);--c0:var(--sc0);--band:hsl(160 40% 38% / .08);
+  --b0:#0b3b31;--b1:hsl(165 50% 30%);--b2:hsl(150 40% 42% / .85);
+  /* the hero's scanlines on paper (ink) and on a ground (white) */
+  --scan:repeating-linear-gradient(to bottom,var(--ink) 0 max(1px,.014em),transparent max(1px,.014em) .043em),linear-gradient(rgba(20,20,20,.16),rgba(20,20,20,.16));
+  --scan-w:repeating-linear-gradient(to bottom,#fff 0 max(1px,.014em),transparent max(1px,.014em) .043em),linear-gradient(rgba(255,255,255,.24),rgba(255,255,255,.24));
+}
+@property --f{syntax:"<number>";inherits:true;initial-value:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;line-height:1.5;font-size:16px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.sec{padding:56px 0 64px}
+.sec--off{background:var(--off)}
+.sec__head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding-top:20px;border-top:1px solid var(--line);margin-bottom:40px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+h2{font-weight:500;letter-spacing:-.02em;font-size:clamp(28px,3.2vw,44px);line-height:1.12}
+h3{font-weight:500}
+.two{display:grid;gap:32px}
+.two p{color:var(--ink-2);font-size:17px;max-width:56ch}
+.two p+p{margin-top:18px}
+.two h2+p{margin-top:28px}
+.two p.lead-p{color:var(--ink)}
+.link{display:inline-block;margin-top:36px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding-bottom:6px;border-bottom:1px solid currentColor}
+.ph{background:#e4e4e4 var(--img) var(--x,50%) var(--y,30%)/cover no-repeat}
+.lbl{font-size:12px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+@media (min-width:641px){.two{grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,96px);align-items:start}}
+@media (min-width:961px){.sec{padding:clamp(72px,9vw,128px) 0}.sec__head{margin-bottom:clamp(40px,5vw,72px)}}
+
+/* the grain cross: two 1px lines masked out of green x coarse noise, jittering. Sits where an
+   inner vertical hairline meets a horizontal one */
+.x{position:absolute;z-index:2;width:13px;height:13px;pointer-events:none;background:linear-gradient(var(--sc0),var(--sc0)),var(--noise-coarse) 0 0/220px 220px;background-blend-mode:multiply;
+  -webkit-mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;
+  mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;animation:jit .6s steps(4) infinite}
+@keyframes jit{to{background-position:-84px -60px}}
+@keyframes grain{to{transform:translate(-84px,-60px)}}
+@keyframes breathe{to{opacity:.55}}
+
+/* scanline numerals: the hero's stripes cut through Inter, on paper. line-height 1 keeps the
+   glyph inside the box background-clip paints */
+.scan{font-weight:500;line-height:1;letter-spacing:-.045em;font-variant-numeric:tabular-nums;white-space:nowrap;color:transparent;-webkit-text-fill-color:transparent;background:var(--scan);-webkit-background-clip:text;background-clip:text;padding:.04em 0}
+
+/* the row that answers: an 8% band of green sweeps in from the left on hover or tap */
+.rowb{position:relative;z-index:0}
+.rowb::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--band);transform:scaleX(0);transform-origin:left;transition:transform .55s var(--ease)}
+.rowb:hover::after,.rowb.on::after{transform:scaleX(1)}
+
+/* ================= NOW: the live sections, as they are ================= */
+.fig{display:grid;gap:36px;border-top:1px solid var(--line);padding-top:32px;margin-top:48px}
+.fig b{display:block;font-weight:300;font-size:46px;line-height:1;letter-spacing:-.02em}
+.fig span{display:block;margin-top:10px;font-size:16px;line-height:1.35;max-width:26ch}
+@media (min-width:641px){.fig{grid-template-columns:1fr 1fr;row-gap:44px}}
+@media (min-width:1001px){.fig{grid-template-columns:repeat(3,1fr);gap:32px;padding-top:clamp(28px,3.4vw,48px);margin-top:clamp(48px,6vw,88px)}.fig b{font-size:clamp(46px,5.8vw,84px)}.fig span{font-size:17px}}
+
+.how .ph{aspect-ratio:16/10;margin-top:32px}
+@media (min-width:641px){.how .ph{aspect-ratio:4/5}}
+.steps{list-style:none;counter-reset:s;border-top:1px solid var(--line)}
+.steps li{padding:20px 16px 22px;border-bottom:1px solid var(--line)}
+.steps li::before{counter-increment:s;content:"0" counter(s);display:block;font-size:15px;margin-bottom:12px}
+.steps h3{font-size:18px;letter-spacing:-.01em}
+.steps p{margin-top:6px;font-size:15px;color:var(--ink-2);max-width:44ch}
+@media (min-width:641px){.steps li{display:grid;grid-template-columns:96px 1fr;gap:24px;padding:22px 20px}.steps li::before{font-weight:300;font-size:clamp(24px,2.2vw,30px);letter-spacing:-.02em;line-height:1;margin:0}.steps h3{font-size:19px}}
+
+.areas{display:grid;border-top:1px solid var(--line)}
+.areas div{padding:20px 0 22px;border-bottom:1px solid var(--line)}
+.areas h3{font-size:19px;letter-spacing:-.01em}
+.areas p{margin-top:8px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:30ch}
+@media (min-width:641px){.areas{grid-template-columns:1fr 1fr}.areas div{padding:24px 28px 26px 0}.areas div:nth-child(odd){border-right:1px solid var(--line)}.areas div:nth-child(even){padding-left:28px}}
+
+.spec{border-top:1px solid var(--line)}
+.spec div{display:grid;gap:4px;padding:16px;border-bottom:1px solid var(--line)}
+.spec b{font-weight:500;font-size:16px;letter-spacing:-.01em}
+.spec span{font-size:15px;color:var(--ink-2);max-width:48ch}
+@media (min-width:641px){.spec div{grid-template-columns:200px 1fr;gap:24px;padding:18px 20px}}
+
+.about .ph{aspect-ratio:4/5}
+
+/* ================= STATS ================= */
+/* A, Scanline: the three figures in the hero's stripes, hairline rows on the phone, three hairline
+   cells on a wide screen with the cross where each divider meets the rules */
+.sa{position:relative;margin-top:48px;border-top:1px solid var(--line)}
+.sa__f{position:relative;padding:24px 0 26px;border-bottom:1px solid var(--line)}
+.sa__n{display:block;font-size:76px}
+.sa__c{display:block;margin-top:14px;font-size:16px;line-height:1.4;max-width:26ch}
+.sa .x{display:none}
+@media (min-width:801px){
+  .sa{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--line);margin-top:clamp(48px,6vw,88px)}
+  .sa__f{padding:32px 28px 36px;border-bottom:0}
+  .sa__f:first-child{padding-left:0}
+  .sa__f+.sa__f{border-left:1px solid var(--line)}
+  .sa__n{font-size:clamp(64px,6.6vw,100px)}
+  .sa__c{font-size:17px}
+  .sa .x{display:block;left:-7px}.sa .x--t{top:-7px}.sa .x--b{bottom:-7px}
+}
+
+/* B, Ledger: set the way the workings set a sum, the line on the left, the figure right-aligned
+   at the end of it, a rule in ink over the first row */
+.sb{margin-top:48px;border-top:1px solid var(--ink)}
+.sb__f{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:18px;align-items:end;padding:20px 0 18px;border-bottom:1px solid var(--line)}
+.sb__n{grid-column:2;grid-row:1;font-size:46px;text-align:right}
+.sb__c{grid-column:1;grid-row:1;font-size:15px;line-height:1.4;color:var(--ink-2);max-width:28ch;padding-bottom:.2em}
+@media (min-width:801px){.sb{margin-top:clamp(48px,6vw,88px)}.sb__f{column-gap:48px;padding:26px 0 22px}.sb__n{font-size:clamp(64px,7vw,104px)}.sb__c{font-size:19px;line-height:1.35;color:var(--ink);max-width:34ch}}
+
+/* C, Ground: the whole section on the green ground the hero sits on, the figures in the hero's
+   own white stripes */
+.sec--ground{position:relative;isolation:isolate;overflow:hidden;background:#121416;color:#fff;--line:rgba(255,255,255,.2);--ink-2:rgba(255,255,255,.72)}
+.sec--ground .wrap{position:relative;z-index:2}
+.layer{position:absolute;inset:0;pointer-events:none}
+.band{position:absolute;inset:0;overflow:hidden;isolation:isolate;background:var(--b0)}
+.band::before{content:"";position:absolute;inset:0;background:radial-gradient(90% 70% at 25% 100%,var(--b1),transparent 70%),radial-gradient(60% 50% at 95% 0%,var(--b2),transparent 70%);animation:breathe 12s ease-in-out infinite alternate}
+.band::after{content:"";position:absolute;inset:-100px;background:var(--noise) 0 0/240px 240px;mix-blend-mode:overlay;opacity:.7;animation:grain 1s steps(6) infinite}
+.layer--glow{background:linear-gradient(to bottom,rgba(18,20,22,.1),rgba(18,20,22,.05) 40%,rgba(18,20,22,.62) 100%)}
+.layer--static{inset:-120px;background:linear-gradient(var(--sc),var(--sc)),var(--noise-coarse) 0 0/220px 220px;background-blend-mode:multiply;mix-blend-mode:screen;opacity:.18;animation:grain .6s steps(4) infinite}
+.layer--grain{inset:-120px;background:var(--noise) 0 0/280px 280px;mix-blend-mode:overlay;opacity:.6;animation:grain .9s steps(6) infinite}
+.sec--ground .two p,.sec--ground .two p.lead-p{color:rgba(255,255,255,.88)}
+.sc{display:grid;gap:36px;margin-top:48px;border-top:1px solid var(--line);padding-top:32px}
+.sc__n{display:block;font-size:72px;font-weight:500;line-height:1;letter-spacing:-.045em;white-space:nowrap;color:transparent;-webkit-text-fill-color:transparent;background:var(--scan-w);-webkit-background-clip:text;background-clip:text;padding:.04em 0}
+.sc__c{display:block;margin-top:12px;font-size:16px;line-height:1.4;max-width:26ch;color:#fff}
+@media (min-width:801px){.sc{grid-template-columns:repeat(3,1fr);gap:32px;margin-top:clamp(48px,6vw,88px)}.sc__n{font-size:clamp(64px,6.6vw,100px)}.sc__c{font-size:17px}}
+
+/* D, Lead figure: one figure set as big as the hero H1, the other two under it as a pair */
+.sd{margin-top:48px;border-top:1px solid var(--line)}
+.sd__lead{padding:22px 0 28px;border-bottom:1px solid var(--line)}
+.sd__lead .scan{display:block;font-size:clamp(118px,33vw,260px);letter-spacing:-.055em}
+.sd__lead .sd__c{font-size:18px;color:var(--ink);max-width:24ch}
+.sd__rest{position:relative;display:grid;grid-template-columns:1fr 1fr}
+.sd__rest>div{padding:22px 16px 24px 0}
+.sd__rest>div+div{padding-left:16px;border-left:1px solid var(--line)}
+.sd__rest .scan{display:block;font-size:38px}
+.sd__c{display:block;margin-top:12px;font-size:14px;line-height:1.4;max-width:26ch}
+.sd .x{left:calc(50% - 6px);top:-7px}
+@media (min-width:801px){
+  .sd{display:grid;grid-template-columns:7fr 5fr;margin-top:clamp(48px,6vw,88px);border-bottom:1px solid var(--line)}
+  .sd__lead{padding:32px 40px 36px 0;border-bottom:0;border-right:1px solid var(--line)}
+  .sd__lead .sd__c{font-size:19px}
+  .sd__rest{grid-template-columns:1fr}
+  .sd__rest>div,.sd__rest>div+div{padding:32px 0 32px 36px;border-left:0}
+  .sd__rest>div+div{border-top:1px solid var(--line)}
+  .sd__rest .scan{font-size:clamp(56px,5.4vw,80px)}
+  .sd__c{font-size:16px}
+  .sd .x{left:-7px;top:auto;bottom:calc(50% - 7px)}
+}
+
+/* ================= PROCESS ================= */
+/* the Fill numeral, the article blocks' steps: the hero's stripes, filled from the foot in green
+   as far as the run has gone. An Inter digit runs from about 14% to 86% of its 1em box */
+.fill{list-style:none;counter-reset:s;border-top:1px solid var(--line)}
+.fill>li{counter-increment:s;display:grid;grid-template-columns:64px minmax(0,1fr);column-gap:10px;align-items:start;padding:20px 16px 22px;border-bottom:1px solid var(--line)}
+.fill>li::before{content:counter(s);grid-row:1/span 2;margin-top:-8px;font-size:52px;font-weight:500;line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums;color:transparent;-webkit-text-fill-color:transparent;
+  background:linear-gradient(to top,var(--c0) calc(14% + 72% * var(--n) / var(--of)),transparent 0),var(--scan);-webkit-background-clip:text;background-clip:text}
+.fill>li>*{grid-column:2}
+.fill h3{font-size:18px;letter-spacing:-.01em;line-height:1.3}
+.fill p{margin-top:6px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:44ch}
+@media (min-width:961px){.fill>li{grid-template-columns:96px minmax(0,1fr);padding:22px 20px}.fill>li::before{margin-top:-14px;font-size:72px}.fill h3{font-size:20px}.fill p{font-size:16px}}
+
+/* B, Fill as you read: each numeral fills solid and its row bands as the reader reaches it, the
+   proposal's trace. Reduced motion: all filled, no sweep */
+.fill--live>li::before{background:linear-gradient(to top,var(--c0) calc(14% + 72% * var(--f)),transparent 0),var(--scan);-webkit-background-clip:text;background-clip:text;transition:--f .9s var(--ease)}
+.fill--live>li.on{--f:1}
+.fill--live>li.on::after{transform:scaleX(1)}
+
+/* C, Track: the four steps across the full width on a wide screen, a cross where each column meets
+   the rule; on the phone one rule down the left, a cross at each step */
+.tk__top{display:grid;gap:32px}
+.tk__top .ph{aspect-ratio:16/10}
+.track{list-style:none;counter-reset:s;position:relative;margin-top:40px;padding-left:34px}
+.track::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:1px;background:var(--line)}
+.track>li{counter-increment:s;position:relative;padding:0 0 30px}
+.track>li:last-child{padding-bottom:0}
+.track>li::before{content:counter(s);display:block;font-size:52px;font-weight:500;line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums;width:max-content;color:transparent;-webkit-text-fill-color:transparent;
+  background:linear-gradient(to top,var(--c0) calc(14% + 72% * var(--n) / var(--of)),transparent 0),var(--scan);-webkit-background-clip:text;background-clip:text}
+.track .x{left:-34px;top:20px}
+.track h3{margin-top:10px;font-size:18px;letter-spacing:-.01em}
+.track p{margin-top:6px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:40ch}
+@media (min-width:801px){
+  .tk__top{grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,96px);align-items:end}
+  .tk__top .ph{aspect-ratio:21/9;background-position:50% 74%}
+  .track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(48px,6vw,80px);padding:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .track::before{content:none}
+  .track>li{padding:28px 24px 32px}
+  .track>li:first-child{padding-left:0}
+  .track>li+li{border-left:1px solid var(--line)}
+  .track>li::before{font-size:clamp(72px,6.4vw,96px)}
+  .track .x{left:-7px;top:-7px}
+  .track>li:first-child .x{display:none}
+  .track h3{margin-top:18px;font-size:20px}
+  .track p{font-size:16px}
+}
+
+/* D, Cells: the four steps as the page's crossed grid, two by two, the Fill numeral in each */
+.cl4{display:grid;border-top:1px solid var(--line);border-bottom:1px solid var(--line);counter-reset:s}
+.cl4>li{list-style:none;counter-increment:s;position:relative;display:flex;flex-direction:column;padding:22px 20px 24px;background:var(--white);border-bottom:1px solid var(--line)}
+.cl4>li:nth-child(even){background:var(--off)}
+.cl4>li:last-child{border-bottom:0}
+.cl4>li::before{content:counter(s);font-size:52px;font-weight:500;line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums;width:max-content;color:transparent;-webkit-text-fill-color:transparent;
+  background:linear-gradient(to top,var(--c0) calc(14% + 72% * var(--n) / var(--of)),transparent 0),var(--scan);-webkit-background-clip:text;background-clip:text}
+.cl4 h3{margin-top:28px;font-size:19px;letter-spacing:-.015em}
+.cl4 p{margin-top:8px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:36ch}
+.cl4 .x{display:none}
+@media (min-width:641px){
+  .cl4{grid-template-columns:1fr 1fr}
+  .cl4>li{min-height:clamp(220px,18vw,260px);padding:26px 28px 28px}
+  .cl4>li:nth-child(odd){border-right:1px solid var(--line)}
+  .cl4>li:nth-child(n+3){border-bottom:0}
+  .cl4>li:nth-child(2),.cl4>li:nth-child(3){background:var(--off)}.cl4>li:nth-child(4){background:var(--white)}
+  .cl4 h3{margin-top:auto;padding-top:24px}
+  .cl4 .x{display:block;right:-7px;bottom:-7px}
+}
+
+/* ================= WHAT IT IS ================= */
+/* A, Deck and pair: the first paragraph set as the h2's deck, the second split into its two halves
+   side by side, the four areas a crossed grid under the lot */
+.two .deck{font-size:21px;line-height:1.38;letter-spacing:-.012em;color:var(--ink);max-width:40ch}
+.wa__body .deck{margin-top:0}
+.wa__pair{position:relative;margin-top:32px;border-top:1px solid var(--line)}
+.wa__pair>div{padding:18px 0 20px;border-bottom:1px solid var(--line)}
+.wa__pair p{margin-top:8px;font-size:17px;line-height:1.5;color:var(--ink);max-width:40ch}
+.wa__pair .x{display:none}
+.two .wa__close{margin-top:20px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:48ch}
+.wa__areas{position:relative;display:grid;grid-template-columns:1fr 1fr;margin-top:48px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.wa__areas>div{position:relative;padding:20px 16px 22px;background:var(--white)}
+.wa__areas>div:nth-of-type(odd){border-right:1px solid var(--line)}
+.wa__areas>div:nth-of-type(-n+2){border-bottom:1px solid var(--line)}
+.wa__areas>div:nth-of-type(2),.wa__areas>div:nth-of-type(3){background:var(--off)}
+.wa__areas h3{font-size:18px;letter-spacing:-.01em}
+.wa__areas p{margin-top:8px;font-size:14px;line-height:1.5;color:var(--ink-2)}
+.wa__areas .x{left:calc(50% - 7px);top:calc(50% - 7px)}
+@media (min-width:641px){
+  .two .deck{font-size:clamp(21px,2vw,27px);line-height:1.34}
+  .wa__pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+  .wa__pair>div{padding:20px 24px 24px 0;border-bottom:0}
+  .wa__pair>div+div{padding-left:24px;border-left:1px solid var(--line)}
+  .wa__pair .x{display:block;left:calc(50% - 6px);top:-7px}
+  .wa__areas{grid-template-columns:repeat(4,1fr);margin-top:clamp(48px,6vw,80px)}
+  .wa__areas>div{min-height:180px;padding:24px 24px 26px;display:flex;flex-direction:column;border-bottom:0!important}
+  .wa__areas>div:not(:last-of-type){border-right:1px solid var(--line)}
+  .wa__areas>div:nth-of-type(2){background:var(--off)}.wa__areas>div:nth-of-type(3){background:var(--white)}.wa__areas>div:nth-of-type(4){background:var(--off)}
+  .wa__areas h3{font-size:20px}
+  .wa__areas p{font-size:15px}
+  .wa__areas .x{display:none}
+}
+
+/* B, Trigger line: the pattern the first paragraph names, drawn as the four steps it is, a cross
+   on the rule at each one, the paragraph closing on the line under it */
+.wb__flow{list-style:none;position:relative;margin:22px 0 24px;padding-left:30px}
+.wb__flow::before{content:"";position:absolute;left:6px;top:14px;bottom:14px;width:1px;background:var(--line)}
+.wb__flow li{position:relative;padding:9px 0;font-size:20px;font-weight:500;letter-spacing:-.015em;line-height:1.3;border-bottom:1px solid var(--line)}
+.wb__flow li:first-child{border-top:1px solid var(--line)}
+.wb__flow .x{left:-30px;top:calc(50% - 6px)}
+.wb__flow li:last-child{color:var(--sc0)}
+
+/* C, Index: the four areas as the section's landmark, the names set large on hairline rows */
+.wc__rows{margin-top:48px;border-top:1px solid var(--line)}
+.wc__rows>div{padding:20px 0 22px;border-bottom:1px solid var(--line)}
+.wc__rows h3{font-size:36px;font-weight:500;letter-spacing:-.03em;line-height:1.05}
+.wc__rows p{margin-top:10px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:40ch}
+@media (min-width:801px){
+  .wc__rows{margin-top:clamp(48px,6vw,80px)}
+  .wc__rows>div{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,96px);align-items:baseline;padding:26px 20px 28px}
+  .wc__rows h3{font-size:clamp(40px,4.6vw,64px)}
+  .wc__rows p{margin:0;font-size:18px;color:var(--ink)}
+}
+
+/* ================= INCLUDES ================= */
+/* A, Ticks: six things you keep, each with the square green mark the proposal's legend uses,
+   the names set up, two columns on a wide screen */
+.ia{list-style:none;margin-top:36px;border-top:1px solid var(--line)}
+.ia li{display:grid;grid-template-columns:26px minmax(0,1fr);padding:18px 0 20px;border-bottom:1px solid var(--line)}
+.ia li::before{content:"";width:12px;height:12px;margin-top:.42em;background:linear-gradient(var(--sc0),var(--sc0)),var(--noise-coarse) 0 0/220px 220px;background-blend-mode:multiply}
+.ia b{display:block;font-size:19px;font-weight:500;letter-spacing:-.015em;line-height:1.3}
+.ia span{display:block;margin-top:6px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:42ch}
+@media (min-width:801px){
+  .ia{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(40px,6vw,96px);margin-top:clamp(40px,5vw,64px)}
+  .ia li{padding:24px 0 26px}
+  .ia b{font-size:21px}
+  .ia span{font-size:16px}
+}
+
+/* B, Cells: the six as the crossed grid, three by two on a wide screen */
+.ib{display:grid;margin-top:36px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ib>div{position:relative;display:flex;flex-direction:column;padding:22px 20px 24px;background:var(--white);border-bottom:1px solid var(--line)}
+.ib>div:nth-child(even){background:var(--off)}
+.ib>div:last-child{border-bottom:0}
+.ib b{font-size:19px;font-weight:500;letter-spacing:-.015em}
+.ib span{margin-top:8px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:34ch}
+.ib .x{display:none}
+@media (min-width:801px){
+  .ib{grid-template-columns:repeat(3,1fr);margin-top:clamp(40px,5vw,64px)}
+  .ib>div{min-height:200px;padding:26px 28px 28px;justify-content:flex-end}
+  .ib>div:nth-child(n+4){border-bottom:0}
+  .ib>div:not(:nth-child(3n)){border-right:1px solid var(--line)}
+  .ib>div:nth-child(even){background:var(--white)}.ib>div:nth-child(2),.ib>div:nth-child(4),.ib>div:nth-child(6){background:var(--off)}
+  .ib b{font-size:21px}
+  .ib .x{display:block;right:-7px;bottom:-7px}
+}
+
+/* C, Stages: the same six, grouped by when you get them, a label over each group */
+.ic{display:grid;gap:36px;margin-top:36px}
+.ic__g h3{padding-bottom:12px;border-bottom:1px solid var(--ink)}
+.ic__g ul{list-style:none}
+.ic__g li{padding:16px 0 18px;border-bottom:1px solid var(--line)}
+.ic__g b{display:block;font-size:18px;font-weight:500;letter-spacing:-.01em}
+.ic__g span{display:block;margin-top:6px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:40ch}
+.ic__g h3 i{font-style:normal;color:var(--sc0);margin-right:10px}
+@media (min-width:801px){.ic{grid-template-columns:1fr 1.4fr 1fr;gap:clamp(28px,3vw,48px);margin-top:clamp(40px,5vw,64px)}.ic__g li{padding:20px 0 22px}.ic__g b{font-size:20px}}
+
+/* ================= ABOUT ================= */
+/* A, Pair: what we automate and what we won't, side by side */
+.aa__pair{position:relative;margin-top:28px;border-top:1px solid var(--line)}
+.aa__pair>div{padding:16px 0 18px;border-bottom:1px solid var(--line)}
+.aa__pair p{margin-top:8px;font-size:17px;line-height:1.45;color:var(--ink);max-width:34ch}
+.aa__pair>div:last-child p{font-size:20px;font-weight:500;letter-spacing:-.015em;line-height:1.3}
+.aa__pair .x{display:none}
+.two .aa__test{margin-top:20px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:48ch}
+@media (min-width:961px){
+  .aa__pair{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+  .aa__pair>div{padding:18px 24px 22px 0;border-bottom:0}
+  .aa__pair>div+div{padding-left:24px;border-left:1px solid var(--line)}
+  .aa__pair .x{display:block;left:calc(50% - 6px);top:-7px}
+}
+
+/* B, Pull line: the test the paragraph ends on, lifted out and set large under a rule in ink */
+.two .ab__pull{margin-top:36px;padding-top:20px;border-top:1px solid var(--ink);font-size:26px;font-weight:500;letter-spacing:-.025em;line-height:1.2;color:var(--ink);max-width:22ch}
+.ab__pull span{display:block;color:var(--sc0)}
+@media (min-width:961px){.two .ab__pull{font-size:clamp(28px,2.8vw,40px)}}
+
+/* C, Facts: the two paragraphs as a sheet, label and line */
+.acf{margin-top:28px;border-top:1px solid var(--line)}
+.acf>div{display:grid;gap:4px;padding:14px 0 16px;border-bottom:1px solid var(--line)}
+.acf dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.acf dd{font-size:17px;line-height:1.45;color:var(--ink);max-width:40ch}
+@media (min-width:961px){.acf>div{grid-template-columns:180px 1fr;gap:24px;padding:16px 0 18px}.acf dt{padding-top:4px}}
+
+@media (prefers-reduced-motion:reduce){
+  .x,.band::before,.band::after,.layer--static,.layer--grain{animation:none}
+  .rowb::after,.fill--live>li::before{transition:none}
+}
