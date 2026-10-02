@@ -2,7 +2,9 @@
 // service-automation poured in. Markup verbatim from the mockup, behaviour in
 // ServiceFx. Industries dial resolved to the grid.
 import '@/app/styles/automation.css'
+import '@/app/styles/service-blocks.css'
 import ServiceFx from '@/components/site/ServiceFx'
+import { ServiceFigures, ServiceProblem, ServiceSteps, ServiceWhat, ServiceIncludes } from '@/components/site/ServiceBlocks'
 import JsonLd from '@/components/ui/JsonLd'
 
 const DOMAIN = 'https://undercurrentautomations.com'
@@ -43,6 +45,144 @@ const breadcrumbs = {
   ],
 }
 
+// the shared sections' copy (components/site/ServiceBlocks.js)
+const FIGURES = [
+  [
+    "2.8x",
+    "faster growth for Australian SMEs using AI than those that aren't"
+  ],
+  [
+    "5.6 hrs",
+    "saved a week, per worker, once AI is in the routine"
+  ],
+  [
+    "$209k",
+    "average revenue lift for Australian businesses running AI"
+  ]
+]
+
+const PROBLEM = {
+  "lead": "Five things we hear in nearly every first conversation.",
+  "problems": [
+    [
+      "Costs up, margins down",
+      "Wages, rent, insurance, software, all climbing. The price you can charge isn't. The gap you live on gets thinner every year."
+    ],
+    [
+      "No time",
+      "The day goes to the jobs. The admin goes to the night. There's no third shift for working on the business."
+    ],
+    [
+      "Too many hats",
+      "Owner, salesperson, bookkeeper, scheduler, IT. Five jobs, one person, none of them done the way you'd like."
+    ],
+    [
+      "Double handling",
+      "The same details typed into three systems. Quotes that wait. Invoices that go out late. Nobody's fault, and it costs you every week."
+    ],
+    [
+      "Leads going cold",
+      "An enquiry answered on Thursday was probably booked with someone else on Tuesday."
+    ]
+  ]
+}
+
+const STEPS = [
+  [
+    "Talk",
+    "How the work moves today, and what a good week looks like once it doesn't need you."
+  ],
+  [
+    "Map",
+    "The automations and the workflows around them, drawn before anything is built."
+  ],
+  [
+    "Build, together",
+    "You see it early and often, so it fits how your team actually works."
+  ],
+  [
+    "Stay",
+    "Handover, then we're with you until it's part of the routine. You're not left alone with it."
+  ]
+]
+
+const WHAT = {
+  "h2": "Software that does the admin. Broad on purpose.",
+  "open": "AI automation is a wide term, and that's the point. It covers every part of the business that follows a pattern:",
+  "flow": [
+    "A job comes in",
+    "A quote goes out",
+    "An invoice is raised",
+    "A follow-up falls due"
+  ],
+  "close": "A system watches for the trigger and does the steps, on the tools you already pay for.",
+  "rest": "The AI part is judgment: reading an email, pulling the details out of a photo of a job sheet, drafting the reply. The automation part is the plumbing that moves it along. We build both, and you approve anything that goes out with your name on it.",
+  "areas": [
+    [
+      "Finance",
+      "Invoicing, chasing, reconciliation, the Monday numbers."
+    ],
+    [
+      "Sales",
+      "Enquiries answered, quotes drafted, follow-ups on the third day, the CRM kept honest."
+    ],
+    [
+      "Marketing",
+      "Content drafted, posts scheduled, leads captured and sorted."
+    ],
+    [
+      "Operations",
+      "Bookings, reminders, job sheets into the system, reports out the other end."
+    ]
+  ]
+}
+
+// what the build includes, grouped under the step of the process that delivers each thing
+const STAGES = [
+  {
+    "n": 2,
+    "step": "Map",
+    "items": [
+      [
+        "The process map",
+        "The workflows drawn, before and after. Yours to keep, whatever you decide."
+      ]
+    ]
+  },
+  {
+    "n": 3,
+    "step": "Build, together",
+    "items": [
+      [
+        "The automation",
+        "Built on the tools you already use, tested on your real jobs, not sample data."
+      ],
+      [
+        "Documentation",
+        "How it works and how to change it, in plain words, not a developer's notes."
+      ],
+      [
+        "Training",
+        "A session with the people who'll actually use it, recorded so you can rewatch."
+      ]
+    ]
+  },
+  {
+    "n": 4,
+    "step": "Stay",
+    "items": [
+      [
+        "Monitoring",
+        "It tells us when something breaks, before it tells you."
+      ],
+      [
+        "30 days of support",
+        "After handover, included. Longer if you want it."
+      ]
+    ]
+  }
+]
+
 export default function Automation() {
   return (
     <>
@@ -70,44 +210,21 @@ export default function Automation() {
         <p className="rv" style={{"--i":"2"}}>Nine in ten small businesses with AI say it lifts their revenue. Four in ten Australian ones have already seen it in the numbers, against three in a hundred who saw a drop. Every quarter they have it and you don't, the gap gets wider.</p>
       </div>
     </div>
-    <div className="fig">
-      <div className="rv" style={{"--i":"2"}}><b>2.8x</b><span>faster growth for Australian SMEs using AI than those that aren't</span></div>
-      <div className="rv" style={{"--i":"3"}}><b>5.6 hrs</b><span>saved a week, per worker, once AI is in the routine</span></div>
-      <div className="rv" style={{"--i":"4"}}><b>$209k</b><span>average revenue lift for Australian businesses running AI</span></div>
-    </div>
+    <ServiceFigures figures={FIGURES} />
   </div>
 </section>
 
 <section className="sec sec--off" id="problem" data-reveal="">
   <div className="wrap">
     <div className="sec__head"><span className="eyebrow">The problem</span></div>
-    <div className="xg rv">
-      <div className="xc pb pb--lead xc--x xc--xt"><p>Five things we hear in nearly every first conversation.</p></div>
-      <div className="xc pb xc--off xc--x xc--xt"><span className="eyebrow">01</span><h3>Costs up, margins down</h3><p>Wages, rent, insurance, software, all climbing. The price you can charge isn't. The gap you live on gets thinner every year.</p></div>
-      <div className="xc pb xc--end"><span className="eyebrow">02</span><h3>No time</h3><p>The day goes to the jobs. The admin goes to the night. There's no third shift for working on the business.</p></div>
-      <div className="xc pb xc--off xc--x xc--last"><span className="eyebrow">03</span><h3>Too many hats</h3><p>Owner, salesperson, bookkeeper, scheduler, IT. Five jobs, one person, none of them done the way you'd like.</p></div>
-      <div className="xc pb xc--x xc--last"><span className="eyebrow">04</span><h3>Double handling</h3><p>The same details typed into three systems. Quotes that wait. Invoices that go out late. Nobody's fault, and it costs you every week.</p></div>
-      <div className="xc pb xc--off xc--end xc--last"><span className="eyebrow">05</span><h3>Leads going cold</h3><p>An enquiry answered on Thursday was probably booked with someone else on Tuesday.</p></div>
-    </div>
+    <ServiceProblem {...PROBLEM} />
   </div>
 </section>
 
 <section className="sec" id="what" data-reveal="">
   <div className="wrap">
     <div className="sec__head"><span className="eyebrow">What it is</span></div>
-    <div className="two">
-      <div>
-        <h2 className="rv">Software that does the admin. Broad on purpose.</h2>
-        <p className="lead-p rv" style={{"--i":"1"}}>AI automation is a wide term, and that's the point. It covers every part of the business that follows a pattern: a job comes in, a quote goes out, an invoice is raised, a follow-up falls due. A system watches for the trigger and does the steps, on the tools you already pay for.</p>
-        <p className="rv" style={{"--i":"2"}}>The AI part is judgment: reading an email, pulling the details out of a photo of a job sheet, drafting the reply. The automation part is the plumbing that moves it along. We build both, and you approve anything that goes out with your name on it.</p>
-      </div>
-      <div className="areas rv" style={{"--i":"1"}}>
-        <div className="row"><h3>Finance</h3><p>Invoicing, chasing, reconciliation, the Monday numbers.</p></div>
-        <div className="row"><h3>Sales</h3><p>Enquiries answered, quotes drafted, follow-ups on the third day, the CRM kept honest.</p></div>
-        <div className="row"><h3>Marketing</h3><p>Content drafted, posts scheduled, leads captured and sorted.</p></div>
-        <div className="row"><h3>Operations</h3><p>Bookings, reminders, job sheets into the system, reports out the other end.</p></div>
-      </div>
-    </div>
+    <ServiceWhat {...WHAT} />
   </div>
 </section>
 
@@ -119,12 +236,7 @@ export default function Automation() {
         <h2 className="rv">Built with you, not delivered to you.</h2>
         <div className="ph ph--photo rv" role="img" aria-label="Luke Marinovic" style={{"--i":"1",marginTop:"32px","--img":"url(/assets/about4-800.jpg)","--y":"40%"}}></div>
       </div>
-      <ol className="steps rv" style={{"--i":"1"}}>
-        <li className="rowb"><div><h3>Talk</h3><p>How the work moves today, and what a good week looks like once it doesn't need you.</p></div></li>
-        <li className="rowb"><div><h3>Map</h3><p>The automations and the workflows around them, drawn before anything is built.</p></div></li>
-        <li className="rowb"><div><h3>Build, together</h3><p>You see it early and often, so it fits how your team actually works.</p></div></li>
-        <li className="rowb"><div><h3>Stay</h3><p>Handover, then we're with you until it's part of the routine. You're not left alone with it.</p></div></li>
-      </ol>
+      <ServiceSteps steps={STEPS} />
     </div>
   </div>
 </section>
@@ -132,17 +244,8 @@ export default function Automation() {
 <section className="sec" id="includes" data-reveal="">
   <div className="wrap">
     <div className="sec__head"><span className="eyebrow">What the build includes</span></div>
-    <div className="two">
-      <h2 className="rv">Everything you need to run it without us.</h2>
-      <div className="spec rv" style={{"--i":"1"}}>
-        <div className="rowb"><b>The process map</b><span>The workflows drawn, before and after. Yours to keep, whatever you decide.</span></div>
-        <div className="rowb"><b>The automation</b><span>Built on the tools you already use, tested on your real jobs, not sample data.</span></div>
-        <div className="rowb"><b>Documentation</b><span>How it works and how to change it, in plain words, not a developer's notes.</span></div>
-        <div className="rowb"><b>Training</b><span>A session with the people who'll actually use it, recorded so you can rewatch.</span></div>
-        <div className="rowb"><b>Monitoring</b><span>It tells us when something breaks, before it tells you.</span></div>
-        <div className="rowb"><b>30 days of support</b><span>After handover, included. Longer if you want it.</span></div>
-      </div>
-    </div>
+    <h2 className="rv">Everything you need to run it without us.</h2>
+    <ServiceIncludes stages={STAGES} />
   </div>
 </section>
 
@@ -274,7 +377,7 @@ export default function Automation() {
       <div className="xc ig xc--x xc--xt">Legal and accounting</div>
       <div className="xc ig xc--off xc--end">Real estate</div>
       <div className="xc ig xc--off xc--x xc--last">Hospitality</div>
-      <div className="xc ig xc--x xc--last">Retail and e-commerce</div>
+      <div className="xc ig xc--x xc--last">Retail and <span style={{whiteSpace:"nowrap"}}>e-commerce</span></div>
       <div className="xc ig xc--off xc--x xc--last">Education and training</div>
       <div className="xc ig xc--end xc--last">Creative and media</div>
     </div>

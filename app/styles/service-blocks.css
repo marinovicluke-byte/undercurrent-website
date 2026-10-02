@@ -1,0 +1,137 @@
+/* app/styles/service-blocks.css — the blocks the four service pages share (components/site/ServiceBlocks.js),
+   picked by Luke from the services board on 2026-10-02 (docs/concept-boards/services-concepts.html): figures Scanline, steps
+   Fill, what it is Trigger line with the crossed areas grid, what the build includes Stages. Loaded after
+   each page's own stylesheet, so it uses that page's tokens: --sc0 the deep service colour, --band the row
+   fill, --line, --ink, --ink-2, --noise-coarse. Phone first */
+
+:root{
+  /* the hero's scanlines on paper: ink stripes, .014em on per .043em, over a faint ink body */
+  --sv-scan:repeating-linear-gradient(to bottom,var(--ink) 0 max(1px,.014em),transparent max(1px,.014em) .043em),linear-gradient(rgba(20,20,20,.16),rgba(20,20,20,.16));
+}
+
+/* the grain cross: two 1px lines masked out of the service colour x coarse noise, jittering, where an
+   inner vertical hairline meets a horizontal one */
+.sv-x,.sv-areas>div::before,.sv-areas>div::after{position:absolute;z-index:1;width:13px;height:13px;pointer-events:none;
+  background:linear-gradient(var(--sc0),var(--sc0)),var(--noise-coarse) 0 0/220px 220px;background-blend-mode:multiply;
+  -webkit-mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;
+  mask:linear-gradient(#000,#000) center/1px 100% no-repeat,linear-gradient(#000,#000) center/100% 1px no-repeat;
+  animation:jit .6s steps(4) infinite}
+
+/* ---------- figures, Scanline: the three figures in the hero's stripes, a hairline row each on the phone,
+   three hairline cells with the cross where each divider meets the rules on a wide screen. A worded figure
+   ("Over half") wraps at its space rather than run out of its cell ---------- */
+.sv-figs{position:relative;margin-top:48px;border-top:1px solid var(--line)}
+.sv-fig{position:relative;padding:24px 0 26px;border-bottom:1px solid var(--line)}
+.sv-fig b{display:block;padding:.04em .08em .04em 0;font-size:76px;font-weight:500;line-height:1;letter-spacing:-.045em;font-variant-numeric:tabular-nums;text-wrap:balance;
+  color:transparent;-webkit-text-fill-color:transparent;background:var(--sv-scan);-webkit-background-clip:text;background-clip:text}
+.sv-fig span{display:block;margin-top:14px;font-size:16px;line-height:1.4;color:var(--ink);max-width:26ch}
+.sv-fig .sv-x{display:none}
+@media (min-width:801px){
+  .sv-figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--line);margin-top:clamp(48px,6vw,88px)}
+  .sv-fig{padding:32px 28px 36px;border-bottom:0}
+  .sv-fig:first-child{padding-left:0}
+  .sv-fig+.sv-fig{border-left:1px solid var(--line)}
+  .sv-fig b{font-size:clamp(56px,5.8vw,84px)}
+  .sv-fig span{font-size:17px}
+  .sv-fig .sv-x{display:block;left:-7px}.sv-fig .sv-x--t{top:-7px}.sv-fig .sv-x--b{bottom:-7px}
+}
+
+/* ---------- steps, Fill: the article blocks' steps. Striped numerals, each filled from the foot in the
+   service colour as far as the run has gone. An Inter digit runs from about 14% to 86% of its 1em box, so
+   the fill maps onto that. The row still bands on hover or tap ---------- */
+.sv-fill{list-style:none;counter-reset:sv-s;border-top:1px solid var(--line)}
+.sv-fill>li{counter-increment:sv-s;display:grid;grid-template-columns:64px minmax(0,1fr);column-gap:10px;align-items:start;padding:20px 16px 22px;border-bottom:1px solid var(--line)}
+.sv-fill>li::before{content:counter(sv-s);grid-row:1/span 2;margin-top:-8px;font-size:52px;font-weight:500;line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums;
+  color:transparent;-webkit-text-fill-color:transparent;
+  background:linear-gradient(to top,var(--sc0) calc(14% + 72% * var(--n) / var(--of)),transparent 0),var(--sv-scan);-webkit-background-clip:text;background-clip:text}
+.sv-fill>li>*{grid-column:2}
+.sv-fill h3{font-size:18px;font-weight:500;letter-spacing:-.01em;line-height:1.3}
+.sv-fill p{margin-top:6px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:44ch}
+@media (min-width:961px){
+  .sv-fill>li{grid-template-columns:96px minmax(0,1fr);padding:22px 20px}
+  .sv-fill>li::before{margin-top:-14px;font-size:72px}
+  .sv-fill h3{font-size:20px}
+  .sv-fill p{font-size:16px}
+}
+
+/* ---------- what it is, Trigger line: the pattern the opening paragraph names, drawn as the steps it is
+   on one rule with a cross at each, the last in the service colour. Then the areas as the crossed grid,
+   two by two on the phone with the cross at the centre, four across on a wide screen ---------- */
+.sv-what{align-items:start}
+.sv-flow{list-style:none;position:relative;margin:20px 0 24px;padding-left:30px;max-width:56ch}
+.sv-flow::before{content:"";position:absolute;left:6px;top:14px;bottom:14px;width:1px;background:var(--line)}
+.sv-flow li{position:relative;padding:10px 0;font-size:20px;font-weight:500;letter-spacing:-.015em;line-height:1.3;border-bottom:1px solid var(--line)}
+.sv-flow li:first-child{border-top:1px solid var(--line)}
+.sv-flow li:last-child{color:var(--sc0)}
+.sv-flow .sv-x{left:-30px;top:calc(50% - 6px)}
+.sv-flow+p{margin-top:0}
+
+.sv-areas{display:grid;grid-template-columns:1fr 1fr;margin-top:48px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sv-areas>div{position:relative;padding:20px 16px 22px;background:var(--white)}
+.sv-areas>div:nth-child(odd){border-right:1px solid var(--line)}
+.sv-areas>div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.sv-areas>div:nth-child(2),.sv-areas>div:nth-child(3){background:var(--off)}
+.sv-areas h3{font-size:18px;font-weight:500;letter-spacing:-.01em}
+.sv-areas p{margin-top:8px;font-size:14px;line-height:1.5;color:var(--ink-2)}
+.sv-areas>div:first-child::after{content:"";right:-7px;bottom:-7px}
+@media (min-width:641px){
+  .sv-areas{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(48px,6vw,80px)}
+  .sv-areas>div,.sv-areas>div:nth-child(-n+2){min-height:180px;padding:24px 24px 26px;border-bottom:0}
+  .sv-areas>div:nth-child(odd){border-right:0}
+  .sv-areas>div:not(:last-child){border-right:1px solid var(--line)}
+  .sv-areas>div:nth-child(3){background:var(--white)}.sv-areas>div:nth-child(4){background:var(--off)}
+  .sv-areas>div:not(:last-child)::before{content:"";right:-7px;top:-7px}
+  .sv-areas>div:not(:last-child)::after{content:"";right:-7px;bottom:-7px}
+  .sv-areas h3{font-size:20px}
+  .sv-areas p{font-size:15px;max-width:30ch}
+}
+
+/* ---------- what the build includes, Stages: the six things, grouped under the step of the process that
+   delivers them, each group headed by that step's number and name ---------- */
+.sv-stages{display:grid;gap:36px;margin-top:36px}
+.sv-stage__h{display:flex;gap:10px;padding-bottom:12px;border-bottom:1px solid var(--ink);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.sv-stage__h i{font-style:normal;color:var(--sc0)}
+.sv-stage ul{list-style:none}
+.sv-stage li{padding:16px 0 18px;border-bottom:1px solid var(--line)}
+.sv-stage b{display:block;font-size:18px;font-weight:500;letter-spacing:-.01em;line-height:1.3}
+.sv-stage span{display:block;margin-top:6px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:40ch}
+@media (min-width:801px){
+  .sv-stages{grid-template-columns:1fr 1.4fr 1fr;gap:clamp(28px,3vw,48px);margin-top:clamp(40px,5vw,64px)}
+  .sv-stage li{padding:20px 0 22px}
+  .sv-stage b{font-size:20px}
+}
+
+@media (prefers-reduced-motion:reduce){.sv-x,.sv-areas>div::before,.sv-areas>div::after{animation:none}}
+
+/* ---------- the problem, Pile-up (Luke, 2026-10-02: "lets do the pile-up i think that's nifty"). The
+   opening line beside its count in the hero's stripes, then each problem slides up over the last and
+   stops just under it, so they pile into a stack of tabs (number and title) in white and grey under the
+   fixed nav (72px). A tab is the card down to the gap under the title's first line: --pt, where the
+   title starts, plus 1.23 of the title size (one 1.15 line, then the cut eight hundredths into the
+   gap, clear of the descenders above and the ascenders below), so a two-line title shows its first
+   line whole at any width. Measured in Chromium and WebKit at 390 and 1440. Pure
+   CSS; any number of problems; reduced motion gets a plain list ---------- */
+.sv-open{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:20px;align-items:end;padding-bottom:32px}
+.sv-open__n{display:block;padding:.04em .04em .04em 0;font-size:150px;font-weight:500;line-height:1;letter-spacing:-.05em;font-variant-numeric:tabular-nums;
+  color:transparent;-webkit-text-fill-color:transparent;background:var(--sv-scan);-webkit-background-clip:text;background-clip:text}
+.sv-open p{padding-bottom:16px;font-size:21px;font-weight:500;letter-spacing:-.015em;line-height:1.25;max-width:18ch;color:var(--ink)}
+.sv-pile{--nav:72px;--ts:30px;--pt:38.5px;--tab:calc(var(--pt) + 1.23 * var(--ts));list-style:none}
+.sv-pile>li{position:sticky;top:calc(var(--nav) + var(--k) * var(--tab));min-height:250px;padding:16px 16px 26px;border-top:1px solid var(--line);background:var(--white)}
+.sv-pile>li:nth-child(even){background:var(--off)}
+/* the last card fills the screen under the stack, so every card above it has room to settle and the
+   pile completes before the section scrolls on (--n, the number of problems, comes from the component) */
+.sv-pile>li:last-child{min-height:calc(100vh - var(--nav) - (var(--n) - 1) * var(--tab));min-height:calc(100svh - var(--nav) - (var(--n) - 1) * var(--tab));padding-bottom:40px;border-bottom:1px solid var(--line)}
+.sv-pile__n{display:block;font-size:11px;line-height:1.5;letter-spacing:.14em;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.sv-pile h3{margin-top:6px;font-size:var(--ts);font-weight:500;letter-spacing:-.03em;line-height:1.15}
+.sv-pile p{margin-top:10px;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:42ch}
+@media (min-width:801px){
+  .sv-open{column-gap:36px;padding-bottom:48px}
+  .sv-open__n{font-size:clamp(200px,18vw,260px)}
+  .sv-open p{padding-bottom:28px;font-size:clamp(24px,2.4vw,34px);max-width:20ch}
+  .sv-pile{--ts:clamp(30px,3.2vw,44px);--pt:24px}
+  .sv-pile>li{display:grid;grid-template-columns:72px minmax(0,6fr) minmax(0,5fr);column-gap:clamp(24px,3vw,48px);align-items:baseline;min-height:240px;padding:24px 20px 32px}
+  .sv-pile h3{grid-column:2;margin:0}
+  .sv-pile p{grid-column:3;align-self:end;margin:0;font-size:16px}
+  .sv-pile>li:last-child p{align-self:baseline}
+}
+@media (prefers-reduced-motion:reduce){.sv-pile>li,.sv-pile>li:last-child{position:static;min-height:0}}

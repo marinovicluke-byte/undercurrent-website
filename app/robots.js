@@ -3,8 +3,7 @@
 // ChatGPT Search + Copilot, Bravebot powers Claude's live retrieval. Get the
 // strict `*` disallow because audit reports are user-specific.
 // aiBots: AI training + on-demand fetchers. Looser disallow.
-// the article blocks board is a design record (noindex in its own head), not a page
-const DISALLOW = ['/api/', '/article-blocks-concepts']
+const DISALLOW = ['/api/']
 
 export default function robots() {
   const searchBots = [
