@@ -107,7 +107,15 @@ Batch 3's two Fill blocks stand ("Build your entity, in order" and "The four fir
 Body, from the H1 to the end of the last section before the FAQ, with link URLs removed:
 
 - Before (on batch 3): 2,816
-- After: see Checks
+- After: 2,595 (down 221, or 8%). The format-pass survey script counts 3,361 to 3,059 (-9.0%).
+
+## Checks
+
+- **`next build`** (run directly, no IndexNow postbuild): passes.
+- **`scripts/check-format-pass.mjs --base origin/content/format-pass-batch-3`**: one new number, 160 (hipages' Melbourne rate, credited). No flagged figure, no em dash, one H1, and the headings are identical to batch 3. Words -9.0%. The front matter change is the FAQs. It flags the date (it wants 29 Sep); ops handles that at merge time.
+- **`scripts/check-quick-answers.mjs`**: 71 of 71 pass. The Quick Answer is unchanged.
+- **Head against production:** title, meta description and canonical match. In the JSON-LD only `dateModified` and four FAQ answer texts differ. The page shows "Updated 2 Oct 2026".
+- **`next start`, at 390 and 1440, in Chromium and WebKit** (CSP stripped for WebKit): no sideways scroll, and both Fill blocks render.
 
 ## Reads thin (for Luke)
 
