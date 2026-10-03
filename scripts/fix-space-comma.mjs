@@ -13,6 +13,7 @@
 //
 //   node scripts/fix-space-comma.mjs            fix in place, list what changed
 //   node scripts/fix-space-comma.mjs --check    exit 1 if a fixable " , " is left
+//   node scripts/fix-space-comma.mjs --only a,b  just those slugs
 
 import fs from 'fs'
 
@@ -24,6 +25,10 @@ const REWRITE_LANE = [
   'aussie-startup-keen-to-help-small-businesses-cut-manual-work-cheap-happy-to-chat',
   'what-is-business-process-automation-australia', 'how-to-rank-in-chatgpt-search',
 ]
+
+// swept inside their own format-pass PR (PR 44, PR 52), which edit the same lines; sweeping them
+// here too would make the PRs conflict
+const IN_BATCH_PR = ['what-is-ai-search-optimisation-australia', 'how-to-choose-a-google-ads-agency-australia']
 
 // sentence-level fixes, by a unique fragment of the line: [from, to]
 const FIXES = [
@@ -62,10 +67,11 @@ const FIXES = [
 ]
 
 const check = process.argv.includes('--check')
+const only = process.argv.includes('--only') ? process.argv[process.argv.indexOf('--only') + 1].split(',') : null
 let left = 0
 for (const f of fs.readdirSync(DIR).filter(f => f.endsWith('.md'))) {
   const slug = f.slice(0, -3)
-  if (REWRITE_LANE.includes(slug)) continue
+  if (only ? !only.includes(slug) : REWRITE_LANE.includes(slug) || IN_BATCH_PR.includes(slug)) continue
   const path = `${DIR}/${f}`
   const src = fs.readFileSync(path, 'utf8')
   const fmEnd = src.indexOf('\n---\n', 4) + 5
