@@ -88,7 +88,15 @@ FAQ answers render from `faqs:` and feed the FAQPage JSON-LD, so they change wit
 Body, from the top to the end of the last section before the FAQ, with link URLs removed:
 
 - Before (on batch 2): 2,803
-- After: see Checks
+- After: 2,804 (+1). The format-pass survey script counts 3,116 to 3,108 (-0.3%).
+
+## Checks
+
+- **`next build`** (run directly, no IndexNow postbuild): passes, including both Worked sums (5 x 30 = 150, and 12 x $50 x 48 = $28,800).
+- **`scripts/check-format-pass.mjs --base origin/content/format-pass-batch-2`**: words -0.3%, no flagged figure, no em dash, one H1, and the headings are identical to batch 2. Its new numbers are 48 (Fair Work), 28,800 (the Worked example), and 100, 1,000 and 29.99 (Zapier and Make pricing, linked). It flags the date (it wants 30 Sep). The rewrite-lane rule gives 2 Oct, as with article 6.
+- **`scripts/check-quick-answers.mjs`**: 71 of 71 pass.
+- **Head against production:** title, meta description and canonical match. In the JSON-LD only `dateModified` and three FAQ answer texts differ. The page shows "Updated 2 Oct 2026".
+- **`next start`, at 390 and 1440, in Chromium and WebKit** (CSP stripped for WebKit): no sideways scroll, and all 7 blocks render. The tool-list pair comes from batch 2.
 
 ## Reads thin (for Luke)
 
