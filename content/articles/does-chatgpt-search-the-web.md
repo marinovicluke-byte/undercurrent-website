@@ -2,6 +2,7 @@
 title: "Does ChatGPT Search the Web? The 34.5% Answer"
 description: "ChatGPT only searches the web on 34.5% of queries per Semrush's 1B-row study. Here's how that rewrites the AEO playbook for Australian businesses in 2026."
 date: "2026-05-17"
+dateModified: "2026-10-01"
 slug: "does-chatgpt-search-the-web"
 cluster: "seo-ai-visibility"
 keyword: "does chatgpt search the web"
@@ -41,7 +42,7 @@ If you'd rather we run the analysis on your own site, [here's how our AI search 
 
 The headline finding: as of February 2026, ChatGPT enabled a [live web search on 34.5% of queries](https://www.semrush.com/blog/chatgpt-search-insights/), down from 46% in late 2024 (n=1B+ clickstream rows). The system is leaning more on its [training data](/blog/how-to-do-chatgpt-seo), not less, even as the crawler infrastructure grows. OpenAI's [OAI-SearchBot logged a 3.5x increase in events post-GPT-5](https://openai.com/) across [Botify's 7-billion-log-file analysis](https://www.botify.com/blog/openai-tripled-web-crawl) over the same period.
 
-The two facts only sound contradictory. More crawling feeds the training-data pipeline (everything ingested now lands in the next model's weights). Retrieval-per-query is a separate dial , whether the live model decides any given prompt needs a fresh search , and that dial is being turned down. Up on one channel, down on the other.
+The two facts only sound contradictory. More crawling feeds the training-data pipeline (everything ingested now lands in the next model's weights). Retrieval-per-query is a separate dial (whether the live model decides any given prompt needs a fresh search), and that dial is being turned down. Up on one channel, down on the other.
 
 If you have been optimising your site purely for retrieval, you are working on roughly one-third of the surface area. The rest lives upstream of any query.
 
@@ -104,13 +105,11 @@ If your [AI search agency](/blog/best-ai-search-agency-australia) sells "we adde
 
 **The gap between competent and uncited is mostly a gap in earned media, not technical SEO.** Across UC's 146-article Australian corpus audit, 46 sit in the AI-search vertical, drawn from 20 distinct hosts (as of May 2026). Robin Search rubric v2.0.0 scores each article on 100 points across answer-extraction structure, entity density, citation quality, semantic completeness, and brand-voice signals. Same yardstick for our pages and competitors'. Vertical mean: 68.7/100, median 70. UC's own 25 articles sit at 85.2/100.
 
-Three things hit harder than the score sheet shows.
+**Three things hit harder than the score sheet shows**
 
-First, the bottom 18 (Weak band, 30-59) had clean schema and decent meta tags. They scored low because they had zero first-party data, generic stock examples, and no external mentions outside the host site. The technical layer was fine. The entity layer was empty.
-
-Second, the top 19 (Strong band, 80+) shared one pattern: most carried at least one stat or claim other publishers could quote, which means they were designed for re-publication, not just for [SEO](/glossary/what-is-seo). That's the citation-bait pattern.
-
-Third, even strong articles struggled with [internal link density](/blog/au-seo-agencies-ai-search-audit). Average internal-link count sat below the floor for a pillar article.
+- The bottom 18 (Weak band, 30-59) had clean schema and decent meta tags. They scored low because they had zero first-party data, generic stock examples, and no external mentions outside the host site. The technical layer was fine. The entity layer was empty.
+- The top 19 (Strong band, 80+) shared one pattern: most carried at least one stat or claim other publishers could quote, which means they were designed for re-publication, not just for [SEO](/glossary/what-is-seo). That's the citation-bait pattern.
+- Even strong articles struggled with [internal link density](/blog/au-seo-agencies-ai-search-audit). Average internal-link count sat below the floor for a pillar article.
 
 ## How does ChatGPT search change your AEO mix?
 
@@ -133,13 +132,12 @@ This is the split we ran for our [Melbourne buyers-agency case](/blog/how-to-ran
 
 **Stop optimising for ChatGPT like it's a search engine and start optimising like it's a reading list.** Here is the 90-day shape we recommend for any Australian business taking [answer engine optimisation](/glossary/what-is-answer-engine-optimisation) seriously.
 
-**Weeks 1-2.** Audit what ChatGPT already says about you. Open a fresh ChatGPT session, ask the questions a buyer would ask, and write down which sources it pulls on retrieval versus what it states from training data. The split shows which path you are losing on.
+**The 90-day shape**
 
-**Weeks 3-6.** Build the earned-media spine. Reddit AMAs in subreddits where your category gets discussed. Original data published as quotable artefacts (we do one of these every quarter). One serious press release that lands in trade media that ChatGPT crawls.
-
-**Weeks 7-10.** Tighten the on-site retrieval surface. Quick Answer blocks at the top of every cornerstone page. Comparison tables for "vs" intent. Definitions for ambiguous terms. Crawler-friendly pagination.
-
-**Weeks 11-12.** Measure. Re-run the prompts from Week 1. Retrieval should shift visibly. Training-data wins are next-model lottery tickets that pay out months later.
+1. **Audit what ChatGPT already says about you.** Open a fresh ChatGPT session, ask the questions a buyer would ask, and write down which sources it pulls on retrieval versus what it states from training data. The split shows which path you are losing on, **Weeks 1-2**
+2. **Build the earned-media spine.** Reddit AMAs in subreddits where your category gets discussed. Original data published as quotable artefacts (we do one of these every quarter). One serious press release that lands in trade media that ChatGPT crawls, **Weeks 3-6**
+3. **Tighten the on-site retrieval surface.** Quick Answer blocks at the top of every cornerstone page. Comparison tables for "vs" intent. Definitions for ambiguous terms. Crawler-friendly pagination, **Weeks 7-10**
+4. **Measure.** Re-run the prompts from Week 1. Retrieval should shift visibly. Training-data wins are next-model lottery tickets that pay out months later, **Weeks 11-12**
 
 This is the playbook we run for [AI search clients in Australia](/blog/what-is-ai-search-optimisation-australia).
 
@@ -171,12 +169,12 @@ It overlaps heavily but the centre of gravity is different. Traditional [SEO](/g
 
 ## Related Reading
 
-- [What is AI search optimisation](/glossary/what-is-ai-search-optimisation) , definition and scope
-- [AEO vs SEO vs GEO](/blog/aeo-vs-seo-vs-geo) , the three optimisation jobs and how they differ
-- [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo) , practical setup checklist
-- [How to rank in ChatGPT Search](/blog/how-to-rank-in-chatgpt-search) , retrieval-path specifics
-- [How to choose an AI search agency in Australia](/blog/best-aeo-agencies-australia) , what to look for
-- [AI search vs traditional search Australia 2026](/blog/ai-search-vs-traditional-search-australia-2026) , the bigger picture
-- [What is AI search optimisation in Australia](/blog/what-is-ai-search-optimisation-australia) , local primer
+- [What is AI search optimisation](/glossary/what-is-ai-search-optimisation), definition and scope
+- [AEO vs SEO vs GEO](/blog/aeo-vs-seo-vs-geo), the three optimisation jobs and how they differ
+- [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo), practical setup checklist
+- [How to rank in ChatGPT Search](/blog/how-to-rank-in-chatgpt-search), retrieval-path specifics
+- [How to choose an AI search agency in Australia](/blog/best-aeo-agencies-australia), what to look for
+- [AI search vs traditional search Australia 2026](/blog/ai-search-vs-traditional-search-australia-2026), the bigger picture
+- [What is AI search optimisation in Australia](/blog/what-is-ai-search-optimisation-australia), local primer
 
 Want us to run this playbook? [Book a free AI search audit](/audit) and we'll show you exactly where you sit on the 46-article benchmark.

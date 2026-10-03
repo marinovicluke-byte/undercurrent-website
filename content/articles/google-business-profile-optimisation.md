@@ -229,11 +229,11 @@ A weekly Google Post is a realistic and effective cadence for most small busines
 
 ## Related Reading
 
-- [SEO for small business](/blog/seo-for-small-business) , the wider local search playbook that Google Business Profile work sits inside.
-- [SEO for buyers agents in Australia](/blog/seo-for-buyers-agents-australia) , how a local service business structures content to rank.
-- [Why tradies don't get Google reviews](/blog/why-tradies-dont-get-google-reviews-australia) , the review-velocity problem and a fix.
-- [AEO vs SEO vs GEO](/blog/aeo-vs-seo-vs-geo) , how local search connects to AI-driven answers.
-- [How to measure AI search visibility](/blog/how-to-measure-ai-search-visibility) , tracking whether your profile and content get cited.
-- [SEO pricing in Australia](/blog/seo-pricing-australia-2026) , what local search and profile work typically costs.
+- [SEO for small business](/blog/seo-for-small-business), the wider local search playbook that Google Business Profile work sits inside.
+- [SEO for buyers agents in Australia](/blog/seo-for-buyers-agents-australia), how a local service business structures content to rank.
+- [Why tradies don't get Google reviews](/blog/why-tradies-dont-get-google-reviews-australia), the review-velocity problem and a fix.
+- [AEO vs SEO vs GEO](/blog/aeo-vs-seo-vs-geo), how local search connects to AI-driven answers.
+- [How to measure AI search visibility](/blog/how-to-measure-ai-search-visibility), tracking whether your profile and content get cited.
+- [SEO pricing in Australia](/blog/seo-pricing-australia-2026), what local search and profile work typically costs.
 
 Want to know where your listing stands today? Start with a [free local search audit](/audit) and fix the structural gaps first.

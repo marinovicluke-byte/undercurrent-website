@@ -2,6 +2,7 @@
 title: "How Much Does SEO Pricing Australia Cost in 2026?"
 description: "SEO packages Australia 2026: UnderCurrent's $1,000-$9,500/mo fixed tiers with hours×rate math, plus an audit of the 10 ranking AU pricing pages."
 date: "2026-05-16"
+dateModified: "2026-09-29"
 slug: "seo-pricing-australia-2026"
 cluster: "seo-ai-visibility"
 keyword: "seo packages australia"
@@ -119,7 +120,7 @@ Apple Business Connect launched in Australia on 14 April 2026 and is included fr
 
 ## What does the hours × rate math behind each UC tier look like?
 
-**No agency in our cohort publishes the labour math, UnderCurrent does, using retail line-item rates from our own published pricing methodology , context from [ABS business indicators on professional services](https://www.abs.gov.au/articles/insights-government-finance-statistics-annual-2024-25) and [ASBFEO small-business data](https://www.asbfeo.gov.au/small-business-data-portal/contribution-australian-employment) confirms the Australian SME services market sits inside the bands we publish.** Hours times rate is the underlying calculation. Take the deliverable count, multiply by hours per deliverable, multiply by the billable rate. Subtotals roll up to the published retainer. No slack hidden in a vague "strategy" line.
+**No agency in our cohort publishes the labour math, UnderCurrent does, using retail line-item rates from our own published pricing methodology; context from [ABS business indicators on professional services](https://www.abs.gov.au/articles/insights-government-finance-statistics-annual-2024-25) and [ASBFEO small-business data](https://www.asbfeo.gov.au/small-business-data-portal/contribution-australian-employment) confirms the Australian SME services market sits inside the bands we publish.** Hours times rate is the underlying calculation. Take the deliverable count, multiply by hours per deliverable, multiply by the billable rate. Subtotals roll up to the published retainer. No slack hidden in a vague "strategy" line.
 
 | Tier | Articles (×2hr) | Pages (×1.5hr) | GBP | AI/tech/strategy | Hours/mo | Blended rate | Retainer |
 |---|---|---|---|---|---|---|---|

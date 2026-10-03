@@ -2,6 +2,7 @@
 title: "n8n vs Zapier: Small Business Comparison (Australia)"
 description: "Compare n8n vs Zapier for Australian small businesses. AUD pricing, self-hosting on AWS Sydney for data sovereignty, and which tool fits your task volume."
 date: "2026-04-27"
+dateModified: "2026-10-02"
 slug: "n8n-vs-zapier-australia-small-business"
 cluster: "ai-strategy-training"
 keyword: "n8n vs zapier australia small business"
@@ -95,7 +96,15 @@ Zapier's pricing is task-based, every action in a workflow is a separate task. A
 - **Professional (~$109 AUD/mo):** 2,000 tasks/month, unlimited Zaps
 - **Team (~$329 AUD/mo):** 50,000 tasks/month, shared workspace
 
-The catch: a 3-step Zap running 500 times a month burns 1,500 tasks. A modestly complex workflow, new lead captured, CRM updated, follow-up SMS sent, invoice drafted, hits 4 tasks per run. At 300 leads/month, that's 1,200 tasks, pushing you into Professional territory even if your overall volume feels low.
+The catch: a 3-step Zap running 500 times a month burns 1,500 tasks. A modestly complex workflow, new lead captured, CRM updated, follow-up SMS sent, invoice drafted, hits 4 tasks per run.
+
+**What a modest lead workflow burns on Zapier**
+
+- Tasks per run, **4**
+- Leads a month, **300**
+- = Tasks a month, **1,200**
+
+That pushes you into Professional territory even if your overall volume feels low.
 
 ### What Does n8n Actually Cost Australian Businesses?
 
@@ -136,7 +145,7 @@ According to the [n8n community forum discussion on Zapier vs n8n](https://commu
 
 [Xero's small business insights research](https://www.xero.com/au/resources/small-business-insights/) consistently shows that Australian small businesses cite data security and software costs as their top two technology concerns, a finding that maps directly onto the n8n vs Zapier decision for businesses weighing price against data control.
 
-A practical self-hosting setup for an Australian small business looks like this:
+**A practical self-hosting setup for an Australian small business**
 
 1. Spin up a t3.small EC2 instance in AWS Sydney (ap-southeast-2)
 2. Install n8n via Docker (one command)
@@ -213,7 +222,7 @@ From our automation audits across Australian service businesses, the most common
 
 ## A Practical Decision Framework
 
-Before you sign up for either tool, answer these four questions:
+**Before you sign up for either tool, answer these four questions**
 
 1. **Do you have a developer or technical person on your team?** If no → Zapier. If yes → evaluate n8n.
 2. **How many workflow runs per month do you expect?** Under 1,000 → Zapier's cost is manageable. Over 2,000 → run the numbers on n8n.
