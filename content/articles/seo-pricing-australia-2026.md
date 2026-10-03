@@ -1,68 +1,78 @@
 ---
 title: "How Much Does SEO Pricing Australia Cost in 2026?"
-description: "SEO packages Australia 2026: UnderCurrent's $1,000-$9,500/mo fixed tiers with hours×rate math, plus an audit of the 10 ranking AU pricing pages."
+description: "SEO pricing in Australia for 2026 is case by case, but expect around $500 to $2,000 a month plus a one-off implementation fee. What moves the price."
 date: "2026-05-16"
-dateModified: "2026-09-29"
+dateModified: "2026-10-03"
 slug: "seo-pricing-australia-2026"
 cluster: "seo-ai-visibility"
 keyword: "seo packages australia"
 author: "Luke"
 level: "intermediate"
-readingTime: 19
+readingTime: 7
 faqs:
-  - q: "How much does SEO actually cost in Australia in 2026?"
-    a: "For most Australian small and medium businesses, expect $1,000-$9,500/mo on a real campaign per Australian Bureau of Statistics business spending data. Below $1,000/mo the work is offshored or automated and rarely produces results. UnderCurrent publishes five fixed tiers: Foundation at $1,000/mo, SEO-only at $1,500/mo (articles + service pages, no paid media), Local with PPC at $2,800/mo, Regional at $5,500/mo, and National at $9,500/mo. One-off setup ranges from scope-dependent up to $3,500. Quarterly performance bonus capped between $400 and $2,500 by tier when results trigger."
-  - q: "Why do most Australian SEO agencies hide their pricing?"
-    a: "Hedged pricing lets the agency anchor low (\"from $1,500/mo\") then quote higher on the discovery call. Our audit of the top 10 ranking pages in May 2026 found 90% publish ranges only, 10% publish tiered packages, and 0% publish a fixed retainer. Even the #1 and #2 ranking agencies give you bands, not numbers. It's a sales pattern, not transparency. UnderCurrent publishes the number so you can compare offers before booking a call."
-  - q: "What happens if I cancel after the minimum term?"
-    a: "You can cancel. Tier 1 is a 3-month minimum then month-to-month with 30-day notice. Tier 2 is 6 months then M-t-M. Tier 3 is 12 months then M-t-M. No early-termination penalty after the minimum. SEO ranking improvements typically take 3-6 months to compound per Google's official Search Central documentation, so cancelling exactly at minimum end means you may not see the full return on setup investment."
-  - q: "When does UnderCurrent's pricing step up, and why?"
-    a: "Pricing steps up by 25% across all tiers once we publish three case studies with verified results, client sign-off, and on-site documentation. Tier 1 becomes $3,500/mo, Tier 2 $6,900, Tier 3 $11,900. The trigger is proof-driven, not calendar-driven. Existing clients are grandfathered at signup rate for their full contract. We do an annual December review independent of case-study count, aligned to Reserve Bank of Australia inflation guidance."
-  - q: "Why charge a base retainer AND a performance bonus?"
-    a: "Pure performance creates cash-flow instability and pure retainers misalign incentives. Base covers production work regardless of result variance: content, technical, reporting. Bonus rewards the outcomes you actually buy SEO for: traffic, rankings, qualified leads. The flat retainer with no upside is still the dominant model, but hybrid retainer-plus-bonus is the fastest-growing alternative. We chose hybrid from the start because it ties what we earn to what you actually buy SEO for."
-  - q: "How does UnderCurrent compare to StudioHawk or Safari Digital on price?"
-    a: "StudioHawk frames pricing as three open-ended ranges. Safari Digital frames it as a sliding scale by business size, from sub-$2k to five-figure. UnderCurrent publishes five fixed tiers from $1,000/mo Foundation through to $9,500/mo National, with full deliverables per tier. UC's SEO-only tier at $1,500/mo sits right inside StudioHawk's mid band; the $2,800/mo Local + PPC tier covers paid media too; Tier 3 sits roughly at their top-band floor. The difference is we publish line items, bundle methodology, contract terms, the step-up rule, and the performance bonus structure on the same page."
-  - q: "How long until I see results from SEO at $1,000-$9,500/mo?"
-    a: "Foundation and SEO-only tiers usually show movement on long-tail keywords within 90-120 days because content cadence is lower. The $2,800/mo Local with PPC tier moves faster on long-tail because paid traffic primes the organic feedback loop. Material organic traffic growth and competitive head-term ranking shifts still need 6-9 months at any tier because Google's ranking signals compound slowly per its own Search Central documentation. Tier 3 sees the fastest compounding because content cadence is higher and technical depth is deeper. Anyone promising 90-day top-3 rankings on competitive AU head terms at entry pricing is selling something the algorithm will punish."
+  - q: "How much does SEO cost in Australia in 2026?"
+    a: "It depends on the work, so UnderCurrent prices SEO case by case. For a small business, expect to pay around $500 to $2,000 a month, depending on how many articles you need, how much work your site architecture needs and how much ongoing management you want. Basic SEO starts around $500 a month. There's usually a one-off implementation fee too, scoped at the start, so you know it before the monthly work begins."
+  - q: "What is the SEO implementation fee?"
+    a: "It's a one-off charge for the setup work done before the monthly work starts: a technical audit, schema markup, getting your Google Business Profile in order, a competitor gap analysis and your first content calendar. It's scoped at the start because sites differ. A small site with clean foundations needs far less setup than a large one with years of broken pages. You see the number before you agree to anything."
+  - q: "What makes SEO cost more or less?"
+    a: "Three things move the price most: how many articles and pages you need each month, how much work your site architecture needs, and how much ongoing management you want, such as reporting, Google Business Profile upkeep and technical fixes. A business with a sound site and a light content plan sits near the bottom of the range. A site that needs restructuring or a steady flow of new pages sits nearer the top."
+  - q: "Why do most Australian SEO agencies only publish a range?"
+    a: "Because the work really does differ from one business to the next. In our May 2026 audit of the 10 top-ranking Australian SEO pricing pages, nine published a range and one published tiered packages. None showed how its price was worked out. A range is fine as long as the work is written next to the price, so ask for deliverable counts before you sign."
+  - q: "How long until SEO shows results?"
+    a: "Months, not weeks. Fixes to your Google Business Profile and your on-page basics can show sooner, but rankings for competitive searches build slowly as content and links add up. Google itself says no one can guarantee a number one ranking, so treat any quote that promises one as a warning sign, whatever it costs."
   - q: "Is a monthly SEO retainer worth it compared to project-based pricing?"
-    a: "For ongoing organic growth, retainers outperform projects almost every time. SEO is a compounding discipline: content cadence, internal linking, technical maintenance, and authority building all benefit from continuity. A one-off SEO project ships a snapshot that decays within 6-12 months as the SERP shifts. A retainer keeps the work current. Project pricing makes sense for one-time audits, technical migrations, or schema implementation, but not for the ongoing content + AI search programme our Tier 1-3 packages cover."
-  - q: "How does UnderCurrent's pricing compare to US or UK SEO agencies?"
-    a: "US agencies typically charge 30-50% more than their AU equivalents on like-for-like scope: a Tier 1-equivalent US retainer runs US$3,500-US$5,500/mo against UC's AUD $2,800. UK agencies usually sit 10-20% below AU pricing because the GBP freelance market is deeper. UC's AUD $1,000-$9,500/mo tiers map roughly to US$660-US$6,300/mo at recent exchange rates, putting us below typical US mid-tier and around UK mid-tier on absolute price, with comparable scope and stronger transparency than either market norm."
+    a: "For ongoing organic growth, usually yes. SEO compounds: content, internal linking, technical upkeep and authority all build on what came before. A one-off project ships a snapshot that goes stale as search results shift. Project pricing makes sense for a one-time audit, a site migration or a schema fix. The ongoing work suits a monthly arrangement."
 ---
 # How Much Does SEO Pricing Australia Cost in 2026?
 
-> **Quick Answer:** **SEO packages in Australia run from $500 to $20,000+ a month, and UnderCurrent publishes five fixed tiers from $1,000 to $9,500 a month.**
-> - Foundation $1,000, SEO-only $1,500 and Local with PPC $2,800 a month
-> - Regional $5,500 and National $9,500 a month, plus a $3,000 custom website
-> - Or buy one service at a time instead of a package
-> - None of the 10 top-ranking pages we checked show how the price is worked out
+> **Quick Answer:** **SEO packages in Australia are priced case by case, but a small business should expect to pay around $500 to $2,000 a month.**
+> - Basic SEO starts around $500 a month
+> - Articles, site architecture and ongoing management move the price
+> - Expect a one-off implementation fee, scoped at the start
+> - Ask for the work written next to the price
 
-## What does an SEO packages Australia comparison reveal in 2026?
+## How much does SEO cost in Australia in 2026?
 
-**Across UC's audit of the 10 ranking articles for "seo pricing australia" (May 2026), 0% publish a concrete fixed retainer, 90% publish a range only, and 10% publish tiered packages, none publish the hours-times-rate math behind the range, anchored to [Australian Bureau of Statistics business counts (2.7M trading businesses, +2.5% growth)](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release) on the size of the AU SMB market.** SEO pricing transparency is the practice of publishing concrete monthly retainers and setup fees in advance. The cohort splits 90% range-only, 10% tiered packages. UnderCurrent is the first published in this cohort to show labour math per tier.
+**UnderCurrent Automations prices SEO case by case, because businesses need very different amounts of work. For a small business, expect to pay around $500 to $2,000 a month.** Basic SEO starts around $500 a month. The more articles, site architecture work and ongoing management you need, the further up that range you go.
 
-Most agencies publish a range instead of a fixed price. That sets an anchor before the buyer even talks to them. "From $1,500/mo" lands first, the call quotes higher later. The [ASBFEO small-business data portal](https://www.asbfeo.gov.au/small-business-data-portal/number-small-businesses-australia) counts 2.6M Australian small businesses, all of them facing the same opaque pricing pattern when they shop for SEO. Half the SERP reads like two templates with the names swapped. Run your own [free AU SEO audit](/audit), or compare with our [SEO self-check](/blog/seo-audit-self-check-australia).
+There's usually a one-off implementation fee as well. It's scoped at the start, so you know the number before any monthly work begins. We'd rather give you the range up front and agree the detail on a call than quote a tidy package that doesn't fit your site.
 
-## How does the AU SEO pricing cohort disclose costs?
+How does that compare with the wider market? The most common retainer among the 439 SEO providers [Ahrefs surveyed](https://ahrefs.com/blog/seo-pricing/) was US$501 to US$1,000 a month, charged by 20.4% of them. That survey is global and in US dollars. Closer to home, [SEO Growth's Australian breakdown](https://www.seogrowth.com.au/how-much-does-seo-cost-in-australia) puts a local campaign for a single suburb or city at $1,400 to $3,500 a month, and a national small-business campaign at $2,500 to $7,500. Run your own [free AU SEO audit](/audit), or start with our [SEO self-check](/blog/seo-audit-self-check-australia).
 
-**The cohort splits cleanly along two formats, range-only or tiered packages, and per [Google's Search Central guidance](https://developers.google.com/search/docs/fundamentals/creating-helpful-content), opaque pricing pages tend to lose trust signals over time.** Methodology: organic top-10 via Google Australia, cross-checked against [SEO Growth's 2026 AU pricing analysis](https://www.seogrowth.com.au/how-much-does-seo-cost-in-australia). A pricing range is a published band, not a fixed retainer.
+## What moves the price up or down?
 
-| # | Agency | Format | Headline price |
-|---|---|---|---|
-| 1 | StudioHawk | Range | $500-$1k · $1.5-$3k · $5k+ |
-| 2 | Safari Digital | Range | $1,400-$10,000+/mo |
-| 3 | SOUP Agency | Tiered packages | $2,500 · $4,000 · $6,000+/mo |
-| 4 | Digital Nomads HQ | Range | $1,800-$2,200/mo average |
-| 5 | Xugar | Range | $500-$5,000/mo |
-| 6 | Spicy Web | Range | $1,400-$10,000+/mo |
-| 7 | The Ardor | Range | $500-$1k · $1.5-$3k · $5k+ |
-| 8 | Paramark | Range | $1,200-$2,500/mo small business |
-| 9 | Design Point | Range | $1,500-$2,500 local · $3-$6k regional |
-| 10 | Digital Deluxe | Range | $1k-$10k+/mo |
+**Three things decide where you land in the range: how much content you need, how much your site needs fixing, and how much ongoing management you want.**
 
-## How does the pricing format split look on the SERP today?
+| What changes | Nearer $500 | Nearer $2,000 |
+|---|---|---|
+| Articles | A few a month, or none yet | A steady flow of articles and service pages |
+| Site architecture | A small, sound site | A site that needs restructuring or new service and location pages |
+| Ongoing management | Light upkeep and a monthly report | Hands-on [Google Business Profile](/glossary/what-is-google-business-profile) work, technical fixes, reporting and strategy calls |
 
-**The 0-90-10 split makes the wedge plain: across the 10 pages we audited, nine publish a range and one publishes tiered packages.** A pricing range is a published band, not a fixed retainer. The [ASBFEO data portal](https://www.asbfeo.gov.au/small-business-data-portal/number-small-businesses-australia) counts 2.6M Australian small businesses, all hitting the same opaque pricing wall.
+A plumber with one location and a tidy five-page site doesn't need what a multi-service clinic with a tangled site needs. So we set the price after we've looked at your site.
+
+## What does the implementation fee cover?
+
+**The implementation fee is a one-off charge for the setup work done before the monthly work starts, and it's scoped at the start so you see it before you commit.** Setup covers a technical audit, [schema markup](/glossary/what-is-schema-markup), getting your Google Business Profile in order, a competitor gap analysis and your first content calendar.
+
+It's scoped rather than fixed because sites differ so much. A small site with clean foundations needs far less setup than a large one carrying years of broken pages and duplicate content. Setup is its own line on the quote. It isn't folded into the first month.
+
+## How do Australian SEO agencies show their prices?
+
+**Across UC's audit of the 10 top-ranking pages for "seo pricing australia" (May 2026), nine publish a range, one publishes tiered packages and none publishes a fixed retainer.** None of the 10 shows how its price is worked out. Methodology: organic top 10 via Google Australia.
+
+| # | Agency | Format |
+|---|---|---|
+| 1 | StudioHawk | Range |
+| 2 | Safari Digital | Range |
+| 3 | SOUP Agency | Tiered packages |
+| 4 | Digital Nomads HQ | Range |
+| 5 | Xugar | Range |
+| 6 | Spicy Web | Range |
+| 7 | The Ardor | Range |
+| 8 | Paramark | Range |
+| 9 | Design Point | Range |
+| 10 | Digital Deluxe | Range |
 
 <svg width="100%" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Donut chart: 0 percent fixed retainer, 90 percent range only, 10 percent tiered packages">
   <title>AU SEO Pricing Disclosure Split (Top 10 SERP, May 2026)</title>
@@ -80,199 +90,32 @@ Most agencies publish a range instead of a fixed price. That sets an anchor befo
   </g>
 </svg>
 
-| Format | Share | Sample |
-|---|---|---|
-| Range only | 90% | 9 of 10 |
-| Tiered packages | 10% | 1 of 10 |
-| Fixed retainer | 0% | 0 of 10 |
+We publish a range too, because the work genuinely varies. A range is only useful if the work is written next to the price. Ask any agency, us included, what a given monthly figure buys before you sign.
 
-## How does the SEO packages Australia market split into retainer bands?
+## Which pricing model do Australian SEO agencies use?
 
-**The Australian SEO market sits in five clean retainer bands sized by competition level, confirmed against [ABS Counts of Australian Businesses](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release) on market sizing and [ASBFEO's small business data portal on SME spending patterns](https://www.asbfeo.gov.au/small-business-data-portal/contribution-australian-employment).** SEO retainer is a fixed monthly fee paid for ongoing search optimisation work. Below the cheap floor, the work is offshored or automated.
+**The monthly retainer is the standard model: [Ahrefs' poll of 439 SEO providers](https://ahrefs.com/blog/seo-pricing/) found 78.2% charge one.** A retainer is a monthly fee for ongoing search work. Project pricing covers one-off jobs, and a percentage of spend belongs to ad management rather than SEO.
 
-| Band | Monthly retainer | Scope | Content/mo |
-|---|---|---|---|
-| Micro / startup | $500-$1,200 | Basic tech, GBP setup | 0-1 |
-| Local business | $1,200-$2,500 | [Local SEO](/glossary/what-is-local-seo), on-page, tech | 1-2 |
-| Growth SME | $2,500-$5,000 | Strategy, [schema markup](/glossary/what-is-schema-markup), digital PR | 2-4 |
-| National / eCommerce | $5,000-$10,000 | Enterprise tech, deep content, CRO | 4-8 |
-| Top-tier enterprise | $10,000-$20,000+ | Full team, advanced attribution | 8-15+ |
+| Model | Where it fits |
+|---|---|
+| Monthly retainer | Ongoing content, technical upkeep and reporting (78.2% of providers, per Ahrefs) |
+| Project fee | One-off audits, site migrations, schema fixes |
+| Percentage of ad spend | Google Ads management, not organic SEO |
 
-Sweet spot for serious growth SMEs is the $2-$3.5k band: enough budget for real content cadence, below the enterprise tier's attribution and digital-PR overhead.
-
-## What does each UnderCurrent SEO package actually include?
-
-**UnderCurrent lists five fixed tiers, from a $1,000/mo Foundation through to a $9,500/mo National package, with every part of the work shown for each tier.** Foundation is the entry tier for businesses just getting started. SEO-only at $1,500/mo adds article + service-page production without any paid media. The three main tiers from $2,800/mo upwards bundle PPC alongside the organic work.
-
-| Deliverable | Foundation | SEO-only | Tier 1 Local + PPC | Tier 2 Regional | Tier 3 National |
-|---|---|---|---|---|---|
-| Monthly retainer | $1,000 | $1,500 | $2,800 | $5,500 | $9,500 |
-| Setup fee | Scope-dependent | $800 | $1,200 | $2,000 | $3,500 |
-| Articles per month | 2 | 4 | 8 | 12 | 18 |
-| Service / location pages per month | 2 | 3 | 4 | 6 | 8 |
-| Google Ads / PPC | Not included | Not included | Included | Included | Included |
-| [GBP](/glossary/what-is-google-business-profile) + Apple Business | Not included | 1 location | 1 location | 1-3 locations | Up to 10 |
-| [AI search optimisation](/glossary/what-is-ai-search-optimisation) | Schema fixes | [FAQ schema](/glossary/what-is-faq-schema) + entity | [FAQ schema](/glossary/what-is-faq-schema) + entity | Full + Peec AI monitoring | Full + Rankability |
-| Link building | Not included | Not included | Add-on | Active outreach | 4-6 high-DR/mo |
-| Strategy calls | Onboarding only | Onboarding only | Onboarding only | Quarterly | Bi-weekly |
-
-Apple Business Connect launched in Australia on 14 April 2026 and is included from May 2026.
-
-## What does the hours × rate math behind each UC tier look like?
-
-**No agency in our cohort publishes the labour math, UnderCurrent does, using retail line-item rates from our own published pricing methodology; context from [ABS business indicators on professional services](https://www.abs.gov.au/articles/insights-government-finance-statistics-annual-2024-25) and [ASBFEO small-business data](https://www.asbfeo.gov.au/small-business-data-portal/contribution-australian-employment) confirms the Australian SME services market sits inside the bands we publish.** Hours times rate is the underlying calculation. Take the deliverable count, multiply by hours per deliverable, multiply by the billable rate. Subtotals roll up to the published retainer. No slack hidden in a vague "strategy" line.
-
-| Tier | Articles (×2hr) | Pages (×1.5hr) | GBP | AI/tech/strategy | Hours/mo | Blended rate | Retainer |
-|---|---|---|---|---|---|---|---|
-| Tier 1, $2,800/mo | 8 × $115 | 4 × $115 | 1hr × $115 | 1.4hr × $111 | 24.4 | ~$115/hr | $2,800 |
-| Tier 2, $5,500/mo | 12 × $125 | 6 × $125 | 2hr × $125 | 8hr × $140 | 43 | ~$128/hr | $5,500 |
-| Tier 3, $9,500/mo | 18 × $135 | 8 × $135 | 5hr × $135 | 15.5hr × $150 | 66.5 | ~$143/hr | $9,500 |
-
-Blended rates rise per tier because senior strategy time replaces junior production as scope expands.
-
-## What does each tier's deliverable breakdown cost?
-
-**Each UnderCurrent tier breaks down to line-item subtotals that roll up to the published retainer, with no rounding and no buffer absorbed into a vague "management" fee.** A line-item subtotal is the cost of one deliverable type: its monthly hours multiplied by the billable rate for that work.
-
-**Tier 1 Local, $2,800/mo**
-
-| Deliverable | Hours/mo | Rate | Subtotal |
-|---|---|---|---|
-| 8 articles | 16 | $115/hr | $1,840 |
-| 4 service pages | 6 | $115/hr | $690 |
-| GBP, 1 location | 1 | $115/hr | $115 |
-| Tech + reporting | 1.4 | $111/hr | $155 |
-
-**Tier 3 National, $9,500/mo**
-
-| Deliverable | Hours/mo | Rate | Subtotal |
-|---|---|---|---|
-| 18 articles | 36 | $135/hr | $4,860 |
-| 8 service pages | 12 | $135/hr | $1,620 |
-| GBP, up to 10 | 5 | $135/hr | $675 |
-| GEO + Rankability | 6 | $150/hr | $900 |
-| Advanced tech + Looker | 7.5 | $150/hr | $1,125 |
-| Strategy + QBR | 2 | $160/hr | $320 |
-
-Tier 2 Regional sits between the two at $5,500/mo across 43 monthly hours.
-
-## What does content volume look like across the three tiers?
-
-**Tier 3 publishes 2.25x the content of Tier 1, and per [Google's Search Central guidance](https://developers.google.com/search/docs/fundamentals/creating-helpful-content), publication cadence is one of the strongest topical-authority signals.** Content cadence is the rate at which a site publishes new articles per month. More pages crawled means more chances to show up in a long-tail or AI-search answer. Across our corpus, clients posting weekly outrank monthly publishers.
-
-<svg width="100%" viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart: Tier 1 = 8 articles, Tier 2 = 12, Tier 3 = 18 per month">
-  <title>Articles per month, by tier</title>
-  <desc>Tier 1 8, Tier 2 12, Tier 3 18.</desc>
-  <g transform="translate(80,40)">
-    <line x1="0" y1="120" x2="480" y2="120" stroke="rgba(232,224,208,0.2)"/>
-    <rect x="40" y="68" width="80" height="52" fill="#5B7A9F"/><text x="80" y="58" text-anchor="middle" font-size="14" fill="#F7F3ED">8</text>
-    <rect x="200" y="42" width="80" height="78" fill="#8FAF9F"/><text x="240" y="32" text-anchor="middle" font-size="14" fill="#F7F3ED">12</text>
-    <rect x="360" y="4" width="80" height="116" fill="#D89B6D"/><text x="400" y="-6" text-anchor="middle" font-size="14" fill="#F7F3ED">18</text>
-  </g>
-</svg>
-
-| Tier | Articles/mo | Service / location pages/mo |
-|---|---|---|
-| Tier 1 Local | 8 | 4 |
-| Tier 2 Regional | 12 | 6 |
-| Tier 3 National | 18 | 8 |
-
-Tier 3 builds topical authority roughly twice as fast.
-
-## How do UnderCurrent's setup fees and contract terms work?
-
-**Setup is tier-scaled and one-off, and per [Australian Taxation Office guidance on business expense deductibility](https://www.ato.gov.au), marketing setup costs are deductible as ordinary business expenses in the year they are incurred.** Setup fee refers to the one-off charge for onboarding work before the monthly retainer begins. Setup covers technical audit, [schema markup](/glossary/what-is-schema-markup), [Google Business Profile](/glossary/what-is-google-business-profile) reconfiguration, competitor gap analysis, and your first content calendar.
-
-Contract minimums match the work: Tier 1 is 3 months then month-to-month with 30-day notice. Tier 2 is 6 months then M-t-M. Tier 3 is 12 months then M-t-M. AU market norms per [ASBFEO small business data](https://www.asbfeo.gov.au/small-business-data-portal/number-small-businesses-australia) match those minimums exactly. [Google's Search Central guidance](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) suggests 3-6 months for ranking shifts to compound on competitive head terms. Setup is treated as a discrete onboarding scope, not absorbed into the first month.
-
-## What is the 25% price step-up rule, and when does it trigger?
-
-**Pricing steps up by 25% across all tiers once we publish three case studies with verified results, a proof-driven model that sits above the CPI-linked 3-5% annual increase most AU agencies apply, per [Reserve Bank of Australia inflation data](https://www.rba.gov.au).** A "case study" means published, verified results section, and client sign-off.
-
-Post-step-up: Tier 1 moves to $3,500/mo, Tier 2 to $6,900, Tier 3 to $11,900. **Existing clients stay grandfathered at signup rate for their entire contract.** Never re-priced mid-contract. We run an annual December review independent of case-study count, aligned to [Reserve Bank of Australia inflation guidance](https://www.rba.gov.au). The [ASBFEO small business data portal](https://www.asbfeo.gov.au/small-business-data-portal/number-small-businesses-australia) tracks SME pricing trends, and we exceed the 60-day notice norm by publishing the step-up trigger and the post-step-up numbers in advance, buyers price-shop knowing what month 13 will cost.
-
-## How do UnderCurrent's performance bonuses work?
-
-**None of the 10 ranking pages we audited publishes a performance bonus at all, and retainer-only pricing dominates: an [Ahrefs poll of 439 SEO professionals](https://ahrefs.com/blog/seo-pricing/) found 78% charge a monthly retainer.** A performance bonus is a variable quarterly payment tied to verified result thresholds. UnderCurrent runs the bonus on every package, stacked across three triggers and verified independently each quarter.
-
-| Component | Share | Trigger | Verification |
-|---|---|---|---|
-| Organic traffic growth | 40% | +20-25% QoQ | GA4 organic sessions |
-| Rankings | 30% | Top 3 OR map pack ≥2 | SE Ranking + BrightLocal GeoGrid |
-| Qualified leads | 30% | +15-30% QoQ | HubSpot CRM + CallRail |
-
-Quarterly bonus caps: $400 Tier 1, $900 Tier 2, $2,500 Tier 3. At peak performance Tier 2 maxes at retainer + bonus = $6,400 effective monthly. Bonus is calculated on the last business day of the quarter and invoiced separately.
-
-## Why stacked instead of single-metric?
-
-**Qualified-lead volume and map-pack rankings are the most defensible bonus metrics for AU SMBs, because they map directly to revenue and resist short-term algorithm noise.** Stacked pricing is a structure where the variable bonus is split across multiple metrics rather than tied to one. Organic traffic and keyword rankings are reliable but algo-volatile, so we don't use them solo. AI citation rate is too nascent to make a core trigger today.
-
-Our 40/30/30 is deliberate. We control 70% of the bonus (traffic plus rankings) through our own work. The other 30%, qualified leads, depends on the client's sales process: how fast they respond, what they charge, how the offer lands. A pure cost-per-lead deal would punish us when leads stall on the client's side. Across our own client base, that variance is too wide for one side to carry. Splitting the metric splits the risk. See [AEO vs SEO vs GEO](/blog/aeo-vs-seo-vs-geo) for how the optimisation lanes interact.
-
-## What surprised us when we audited the cohort?
-
-**Three patterns surprised us when we cross-referenced the cohort against [Google's quality content guidelines](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) and [ABS counts of Australian businesses](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release).** Our vertical's audit corpus (n=92 articles across 39 distinct hosts) averages 63.0/100 on UnderCurrent Article Reviewer rubric version 2.0.0. The top 10 ranking pages average closer to 60.
-
-UnderCurrent's own n=25 sample averages 86.3/100, a 23-point gap. The gap is mostly basics, not craft. Most cohort pages skip [FAQPage schema](/glossary/what-is-faq-schema) or llms.txt or both. Only 1 of 10 ranking pages implements FAQPage schema; 0 of 10 publish an `/llms.txt` file. Both take ten minutes per [Google's Search Central guidance](https://developers.google.com/search/docs/fundamentals/creating-helpful-content). The third surprise: nobody uses real client examples, even anonymised ones. As of May 2026 our full corpus is n=180 articles, mean 55.6/100, and the ceiling is still moving up. See our [plumbers South East Melbourne SEO case study](/case-studies/plumbers-south-east-melbourne-seo) for what published proof looks like, or run your [own SEO self-check](/blog/seo-audit-self-check-australia).
-
-## Which agency pricing model wins in Australia in 2026?
-
-**The flat monthly retainer is the dominant SEO pricing model, with an [Ahrefs poll of 439 SEO professionals](https://ahrefs.com/blog/seo-pricing/) finding 78% charge one; hybrid retainer-plus-bonus is the fastest-growing alternative.** Hybrid pricing is a fee structure combining a fixed base retainer with a variable performance bonus tied to verified results. The other models trade off cash-flow stability for incentive alignment.
-
-| Model | Prevalence | Cash flow | Incentive alignment |
-|---|---|---|---|
-| Flat retainer | Dominant (78% per Ahrefs) | Excellent | Low (no upside) |
-| Percentage of ad spend | Common for ad management | Moderate | Weak (rewards spend) |
-| **Hybrid (retainer + bonus)** | **Fastest-growing** | **Good** | **High** |
-
-Revenue-share and cost-per-lead deals exist but stay niche; both fold into the broader performance category. UnderCurrent runs hybrid from day one rather than waiting until the client base is large enough to absorb the variance.
-
-## How does SEO pricing Australia work with bundled packages?
-
-**Bundle discounts on AU SEO packages land between 15% and 25% off the sum of individual line items, based on the standalone retail rates UnderCurrent publishes below.** A bundle is a fixed group of services priced below the sum of their standalone retail. Most agencies don't publish line items because doing so makes the bundle math transparent.
-
-| Line item | Standalone retail | Included |
-|---|---|---|
-| Article | $550 | Research + draft + 2 edits |
-| Service / location page | $600 | Schema + internal links |
-| GBP management | $300/mo | Per location |
-| AI search optimisation | $850/mo | Schema + entity + monitoring |
-
-You don't have to buy a whole package. You can pick just the services you want, one at a time. Each one costs 15% less than the usual market price. Buy the full bundle and you save another 15% on top. UnderCurrent also builds [custom websites](/website-design), made to rank well in Google and AI search from day one. A custom site is a one-time cost of $3,000. Here's the JSON-LD pricing schema UnderCurrent publishes, copy it for your own pricing pages:
-
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Tier 1 Local SEO",
-  "provider": {"@type": "Organization", "name": "UnderCurrent Automations"},
-  "areaServed": {"@type": "Country", "name": "Australia"},
-  "offers": {
-    "@type": "Offer",
-    "price": "2800",
-    "priceCurrency": "AUD",
-    "priceSpecification": {
-      "@type": "UnitPriceSpecification",
-      "price": "2800",
-      "priceCurrency": "AUD",
-      "unitText": "MONTH"
-    }
-  }
-}
-```
+SEO compounds, which is why the retainer dominates. Each month's content and fixes build on the last, and a one-off project goes stale as search results shift.
 
 ## What costs do most AU SEO quotes leave out?
 
-**Most Australian SEO quotes price the visible work and quietly exclude four cost centres, a pattern visible across all 10 cohort pages we audited in May 2026.** A hidden cost is a deliverable the buyer assumes is included but gets billed for separately or never receives.
+**Most Australian SEO quotes price the visible work and leave four cost centres vague, a pattern we saw across the cohort pages we audited in May 2026.** A hidden cost is a deliverable the buyer assumes is included but gets billed for separately, or never receives.
 
-| Hidden cost | Typical real cost | Why it's left out |
-|---|---|---|
-| Content production | $400-$700 per article | Quoted as "strategy", drafts left to the client |
-| Technical fixes | $500-$2,000 one-off | Scoped as a separate audit |
-| Link building | $150-$500 per link | Listed as "available on request" |
-| Reporting and calls | absorbed or $200/mo | Bundled vaguely, then thinned over time |
+| Often left out | What to ask |
+|---|---|
+| Content production | How many articles and pages does the monthly fee include? |
+| Technical fixes | Are fixes included, or scoped as a separate audit? |
+| Link building | Is it part of the work, or "available on request"? |
+| Reporting and calls | How often, and what's in the report? |
 
-When an agency quotes "$1,500/mo", ask what content volume that buys. If the answer is one article, the real content cost sits outside the retainer. Every UnderCurrent deliverable carries a number in the package table, so nothing gets added after you sign.
+When an agency quotes a monthly figure, ask what content volume it buys. If the answer is one article, the real content cost sits outside the retainer.
 
 ## What are the red flags in an SEO pricing quote?
 
@@ -282,96 +125,47 @@ When an agency quotes "$1,500/mo", ask what content volume that buys. If the ans
 |---|---|
 | "From $X/mo" with no ceiling | Anchor pricing; the real quote comes later |
 | No deliverable counts | Scope flexes down when you stop watching |
-| 12-month lock-in at the entry tier | Revenue certainty for them, not results for you |
-| Guaranteed #1 rankings | Against Google's guidelines, often propped on vanity metrics |
-| Setup fee folded into month one | Onboarding cost hidden inside the retainer |
+| A long lock-in before you've seen any work | Revenue certainty for them, not results for you |
+| Guaranteed #1 rankings | [Google says no one can guarantee a number one ranking](https://developers.google.com/search/docs/fundamentals/do-i-need-seo) |
+| Setup cost mentioned only after you sign | Onboarding cost hidden inside the retainer |
 
 None of these is illegal or even rare. They are the difference between a quote built for the agency's cash flow and one built for your result. Ask for deliverable counts in writing before signing.
 
-## How does Australian SEO pricing compare with US and UK markets?
+## What surprised us when we audited the cohort?
 
-**Australian SEO retainers run roughly 30-50% below comparable US agency pricing and sit 10-20% above typical UK pricing, based on published agency rate cards across the three markets.** Cross-market benchmarking is the practice of comparing agency pricing across English-speaking markets to set buyer expectations and detect outliers.
+**Three patterns surprised us when we cross-referenced the cohort against [Google's quality content guidelines](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) and [ABS counts of Australian businesses](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release).** Our vertical's audit corpus (n=92 articles across 39 distinct hosts) averages 63.0/100 on UnderCurrent Article Reviewer rubric version 2.0.0. The top 10 ranking pages average closer to 60.
 
-| Market | SMB retainer | Mid-tier retainer | Premium enterprise |
-|---|---|---|---|
-| Australia | $1,200-$5,000/mo AUD | $5,000-$12,000/mo AUD | $12,000-$20,000+/mo AUD |
-| United States | US$2,500-US$10,000/mo | US$10,000-US$25,000/mo | US$25,000-US$50,000+/mo |
-| United Kingdom | GBP 1,000-5,000/mo | GBP 5,000-15,000/mo | GBP 15,000-40,000+/mo |
+UnderCurrent's own n=25 sample averages 86.3/100, a 23-point gap. The gap is mostly basics, not craft. Most cohort pages skip [FAQPage schema](/glossary/what-is-faq-schema) or llms.txt or both. Only 1 of 10 ranking pages implements FAQPage schema; 0 of 10 publish an `/llms.txt` file. Both take ten minutes per [Google's Search Central guidance](https://developers.google.com/search/docs/fundamentals/creating-helpful-content). The third surprise: nobody uses real client examples, even anonymised ones. As of May 2026 our full corpus is n=180 articles, mean 55.6/100, and the ceiling is still moving up. See our [plumbers South East Melbourne SEO case study](/case-studies/plumbers-south-east-melbourne-seo) for what published proof looks like, or run your [own SEO self-check](/blog/seo-audit-self-check-australia).
 
-Three factors drive the gap. Labour rates: US senior strategists bill at US$250-US$400/hr against AUD $150-$250/hr here. Market maturity: US enterprises run larger digital budgets with longer payback windows. Currency: per [Reserve Bank of Australia exchange-rate data](https://www.rba.gov.au), the AUD's position against the US dollar has widened the headline gap since 2023. UK pricing sits below AU partly because the GBP freelance market is deeper and absorbs more demand.
+## What does a price range up front buy you?
 
-## How does Australian SEO pricing vary by industry?
-
-**Australian SEO pricing varies 2-3x by industry, with legal, medical, and financial services commanding the top retainers, based on UnderCurrent client engagements and SERP competition analysis across each vertical.** Industry variance is the spread of typical SEO retainers across AU verticals driven by keyword competition, conversion value, and compliance overhead.
-
-| AU industry | Typical retainer | What drives the range |
-|---|---|---|
-| Local trades (plumber, electrician) | $1,200-$3,500/mo | Local SEO + GBP focus, moderate competition |
-| Buyers agents / mortgage brokers | $2,500-$6,000/mo | Compliance content, high transaction value |
-| Allied health practitioners | $1,800-$4,500/mo | AHPRA compliance overhead, geographic spread |
-| Legal practitioners | $3,000-$8,000/mo | Tightest content rules, top conversion value |
-| Ecommerce / DTC retailers | $3,500-$12,000/mo | Product-page volume, technical SEO depth |
-| SaaS / B2B services | $5,000-$15,000/mo | Long sales cycles, content-marketing intensive |
-
-Compliance-heavy verticals pay more because every piece of content needs legal or regulatory review. Trades pay less because the work concentrates on GBP, schema, and a small bank of service pages. Our [SEO for buyers agents Australia](/blog/seo-for-buyers-agents-australia) write-up shows what compliance-aware scope looks like in practice.
-
-## Where does UnderCurrent sit in the broader Australian market?
-
-**UnderCurrent occupies the middle two of four AU agency bands above the freelance floor, anchored to [ABS counts of Australian businesses](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release) showing 994,178 employing businesses competing for the same SEO market.** A boutique band is a $3.5k-$6k retainer range typical of 1-10 staff agencies. Tier 1 + 2 cover boutique-equivalent scope at transparent prices, Tier 3 covers mid-tier national scope.
-
-| Band | Bundle (AUD/mo) | Profile |
-|---|---|---|
-| Boutique full-service | $3,500-$6,000 | 1-10 staff |
-| **UC Tier 1 + 2** | **$2,800-$5,500** | **Boutique scope, transparent** |
-| Mid-tier national | $6,000-$12,000 | 10-50 staff, vertical specialism |
-| **UC Tier 3** | **$9,500** | **Mid-tier national scope** |
-| Premium national | $12,000-$20,000+ | Top-50 AU digital |
-
-Our pricing reflects boutique-equivalent execution without the account-management overhead larger agencies carry. [AI search optimisation](/glossary/what-is-ai-search-optimisation) is bundled at every tier; most boutiques charge $500-$1,500/mo extra for it.
-
-## What does transparent SEO pricing Australia actually buy you?
-
-**Publishing the price filters the funnel: buyers who arrive already knowing the number self-qualify, and they close at a far higher rate than cold discovery-call prospects.** Funnel filtering is the practice of disqualifying poor-fit prospects before they enter a sales process. Prospects outside our band self-select out before either side spends an hour on a call. We trade higher inbound disqualification for higher close rate on qualified leads.
-
-We save 4 to 6 hours per engagement on sales calls that go nowhere. The leads that book in already know the price and have decided it's in range. Per [ABS data on small-business operating margins](https://www.abs.gov.au/articles/insights-government-finance-statistics-annual-2024-25), the saved time compounds and shows up as higher gross margin per client. See how it plays out in our [SEO for buyers agents Australia](/blog/seo-for-buyers-agents-australia) vertical case.
+**Giving the range before the first call saves both sides time.** The people who book already know the ballpark, so the call can be about your site and what it needs instead of the price. Anyone for whom $500 to $2,000 a month doesn't fit can rule us out before either side spends an hour. See how scope plays out for one vertical in our [SEO for buyers agents Australia](/blog/seo-for-buyers-agents-australia) write-up.
 
 ## Frequently Asked Questions
 
-### How much does SEO actually cost in Australia in 2026?
+### How much does SEO cost in Australia in 2026?
 
-For most Australian small and medium businesses, expect $1,000-$9,500/mo on a real campaign per [Australian Bureau of Statistics business spending data](https://www.abs.gov.au/articles/insights-government-finance-statistics-annual-2024-25). Below $1,000/mo the work is offshored or automated and rarely produces results. UnderCurrent publishes five fixed tiers: Foundation at $1,000/mo, SEO-only at $1,500/mo (articles + service pages, no paid media), Local with PPC at $2,800/mo, Regional at $5,500/mo, and National at $9,500/mo. Setup ranges from scope-dependent to $3,500. Quarterly performance bonus capped between $400 and $2,500 by tier when results trigger.
+It depends on the work, so UnderCurrent prices SEO case by case. For a small business, expect to pay around $500 to $2,000 a month, depending on how many articles you need, how much work your site architecture needs and how much ongoing management you want. Basic SEO starts around $500 a month. There's usually a one-off implementation fee too, scoped at the start, so you know it before the monthly work begins.
 
-### Why do most Australian SEO agencies hide their pricing?
+### What is the SEO implementation fee?
 
-Hedged pricing lets the agency anchor low ("from $1,500/mo") then quote higher on the discovery call. Our audit of the top 10 ranking pages in May 2026 found 90% publish ranges only, 10% publish tiered packages, and 0% publish a fixed retainer. Even the #1 and #2 ranking agencies give you bands, not numbers. It's a sales pattern, not transparency. UnderCurrent publishes the number so you can compare offers before booking a call.
+It's a one-off charge for the setup work done before the monthly work starts: a technical audit, schema markup, getting your Google Business Profile in order, a competitor gap analysis and your first content calendar. It's scoped at the start because sites differ. A small site with clean foundations needs far less setup than a large one with years of broken pages. You see the number before you agree to anything.
 
-### What happens if I cancel after the minimum term?
+### What makes SEO cost more or less?
 
-You can cancel. Tier 1 is a 3-month minimum then month-to-month with 30-day notice. Tier 2 is 6 months then M-t-M. Tier 3 is 12 months then M-t-M. No early-termination penalty after the minimum. SEO ranking improvements typically take 3-6 months to compound per [Google's official Search Central documentation](https://developers.google.com/search/docs/fundamentals/creating-helpful-content), so cancelling exactly at minimum end means you may not see the full return on setup investment.
+Three things move the price most: how many articles and pages you need each month, how much work your site architecture needs, and how much ongoing management you want, such as reporting, Google Business Profile upkeep and technical fixes. A business with a sound site and a light content plan sits near the bottom of the range. A site that needs restructuring or a steady flow of new pages sits nearer the top.
 
-### When does UnderCurrent's pricing step up, and why?
+### Why do most Australian SEO agencies only publish a range?
 
-Pricing steps up by 25% across all tiers once we publish three case studies with verified results, client sign-off, and on-site documentation. Tier 1 becomes $3,500/mo, Tier 2 $6,900, Tier 3 $11,900. The trigger is proof-driven, not calendar-driven. Existing clients are grandfathered at signup rate for their full contract. We do an annual December review independent of case-study count, aligned to [Reserve Bank of Australia inflation guidance](https://www.rba.gov.au).
+Because the work really does differ from one business to the next. In our May 2026 audit of the 10 top-ranking Australian SEO pricing pages, nine published a range and one published tiered packages. None showed how its price was worked out. A range is fine as long as the work is written next to the price, so ask for deliverable counts before you sign.
 
-### Why charge a base retainer AND a performance bonus?
+### How long until SEO shows results?
 
-Pure performance creates cash-flow instability and pure retainers misalign incentives. Base covers production work regardless of result variance: content, technical, reporting. Bonus rewards the outcomes you actually buy SEO for: traffic, rankings, qualified leads. The flat retainer with no upside is still the dominant model, but hybrid retainer-plus-bonus is the fastest-growing alternative. We chose hybrid from the start because it ties what we earn to what you actually buy SEO for.
-
-### How does UnderCurrent compare to StudioHawk or Safari Digital on price?
-
-StudioHawk frames pricing as three open-ended ranges. Safari Digital frames it as a sliding scale by business size, from sub-$2k to five-figure. UnderCurrent publishes five fixed tiers from $1,000/mo Foundation through to $9,500/mo National, with full deliverables per tier. UC's SEO-only tier at $1,500/mo sits right inside StudioHawk's mid band; the $2,800/mo Local + PPC tier covers paid media too; Tier 3 sits roughly at their top-band floor. The difference is we publish line items, bundle methodology, contract terms, the step-up rule, and the performance bonus structure on the same page.
-
-### How long until I see results from SEO at $1,000-$9,500/mo?
-
-Foundation and SEO-only tiers usually show movement on long-tail keywords within 90-120 days because content cadence is lower. The $2,800/mo Local with PPC tier moves faster on long-tail because paid traffic primes the organic feedback loop. Material organic traffic growth and competitive head-term ranking shifts still need 6-9 months at any tier because Google's ranking signals compound slowly per its own Search Central documentation. Tier 3 sees the fastest compounding because content cadence is higher and technical depth is deeper. Anyone promising 90-day top-3 rankings on competitive AU head terms at entry pricing is selling something the algorithm will punish.
+Months, not weeks. Fixes to your Google Business Profile and your on-page basics can show sooner, but rankings for competitive searches build slowly as content and links add up. [Google itself says no one can guarantee a number one ranking](https://developers.google.com/search/docs/fundamentals/do-i-need-seo), so treat any quote that promises one as a warning sign, whatever it costs.
 
 ### Is a monthly SEO retainer worth it compared to project-based pricing?
 
-For ongoing organic growth, retainers outperform projects almost every time. SEO is a compounding discipline: content cadence, internal linking, technical maintenance, and authority building all benefit from continuity. A one-off SEO project ships a snapshot that decays within 6-12 months as the SERP shifts. A retainer keeps the work current. Project pricing makes sense for one-time audits, technical migrations, or schema implementation, but not for the ongoing content + AI search programme our Tier 1-3 packages cover.
-
-### How does UnderCurrent's pricing compare to US or UK SEO agencies?
-
-US agencies typically charge 30-50% more than their AU equivalents on like-for-like scope: a Tier 1-equivalent US retainer runs US$3,500-US$5,500/mo against UC's AUD $2,800. UK agencies usually sit 10-20% below AU pricing because the GBP freelance market is deeper. UC's AUD $1,000-$9,500/mo tiers map roughly to US$660-US$6,300/mo at recent exchange rates, putting us below typical US mid-tier and around UK mid-tier on absolute price, with comparable scope and stronger transparency than either market norm.
+For ongoing organic growth, usually yes. SEO compounds: content, internal linking, technical upkeep and authority all build on what came before. A one-off project ships a snapshot that goes stale as search results shift. Project pricing makes sense for a one-time audit, a site migration or a schema fix. The ongoing work suits a monthly arrangement.
 
 ## Related Reading
 
@@ -385,4 +179,4 @@ US agencies typically charge 30-50% more than their AU equivalents on like-for-l
 - [SEO + AI visibility service](/seo-ai-visibility), the engagement page
 - [Our process](/process), how an engagement runs end to end
 
-Ready to see if our pricing matches your competition level? [Book a free AU SEO audit](/audit).
+Ready to see where your business sits in that range? [Book a free AU SEO audit](/audit).

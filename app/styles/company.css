@@ -1,0 +1,9 @@
+/* app/styles/company.css — /company-information, on the plain text template
+   (term.css). One addition: the fact list, as the site's hairline rows. A label
+   in the tracked caps, the value beside it, stacked on the phone. */
+.body .facts{margin-top:24px;border-top:1px solid var(--line)}
+.body .facts>div{display:grid;grid-template-columns:minmax(0,13em) minmax(0,1fr);gap:8px 24px;padding:14px 0;border-bottom:1px solid var(--line)}
+.body .facts dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);padding-top:4px}
+.body .facts dd{min-width:0;overflow-wrap:anywhere}
+.body .facts dd a{text-decoration:underline;text-decoration-color:var(--line);text-decoration-thickness:1px;text-underline-offset:4px}
+@media (max-width:640px){.body .facts>div{grid-template-columns:minmax(0,1fr);gap:4px}}

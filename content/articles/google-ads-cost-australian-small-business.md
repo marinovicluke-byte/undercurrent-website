@@ -2,7 +2,7 @@
 title: "What Google Ads Cost an Australian Small Business in 2026"
 description: "What Google Ads really costs an Australian small business in 2026: real monthly budget bands, click prices by industry, and where ad spend leaks."
 date: "2026-05-24"
-dateModified: "2026-09-30"
+dateModified: "2026-10-03"
 slug: "google-ads-cost-australian-small-business"
 cluster: "seo-ai-visibility"
 keyword: "google ads cost"
@@ -28,7 +28,7 @@ faqs:
 > **Quick Answer:** **Google Ads cost most Australian small businesses $1,000 to $5,000 AUD a month, and the average search click costs $2 to $4 AUD.**
 > - Layer 1: the ad budget you pay Google
 > - Layer 2: click prices set by a live auction on every search
-> - Layer 3: management time, yours or an agency's at $800 to $2,000 a month
+> - Layer 3: management, your own time or an agency's fee
 > - A plumber's clicks run cheap, a lawyer's run dear
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 290" role="img" aria-label="AI search optimisation workflow for Australian businesses in five steps" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
@@ -164,15 +164,15 @@ Treating ad spend like any [marketing automation](/glossary/what-is-marketing-au
 
 ## What does it cost to hire an agency to manage Google Ads?
 
-**Agency management of Google Ads is a separate cost from your ad budget itself.** Most agencies charge a flat monthly fee or a percentage of spend, plus a one-off setup fee. The [Australian Government's advertising guidance](https://business.gov.au/marketing/marketing-and-advertising) calls advertising a plannable line item, and [Australian benchmarks](https://digitalnomadshq.com.au/blog/how-much-does-google-ads-cost/) set the standard band.
+**Agency management of Google Ads is a separate cost from your ad budget itself.** Most agencies charge a flat monthly fee or a percentage of spend, plus a one-off setup fee. The [Australian Government's advertising guidance](https://business.gov.au/marketing/marketing-and-advertising) calls advertising a plannable line item. For the agency fee itself, [Digital Nomads HQ](https://digitalnomadshq.com.au/blog/how-much-does-google-ads-cost/), a Sunshine Coast agency, puts the usual band at $800 to $2,000 AUD a month, or 10 to 20% of spend.
 
 | Option | Typical monthly cost |
 |---|---|
 | Do it yourself | Your time only |
-| Agency retainer | $800 to $2,000 AUD, or 10 to 20% of spend |
-| UnderCurrent PPC | From $2,800 AUD, with a performance bonus |
+| Agency retainer (Digital Nomads HQ's band) | $800 to $2,000 AUD, or 10 to 20% of spend |
+| UnderCurrent | From $500 AUD minimum, plus ad spend |
 
-UnderCurrent prices Google Ads management in three tiers, not a bare percentage. Local businesses pay a flat $2,800 AUD a month for management, tracking and reporting on $500 to $3,000 AUD of ad spend. Regional accounts adding Meta are $5,500 AUD, and national multi-platform accounts run $9,500 AUD plus 7 to 10% of spend above $15,000 AUD. Every tier carries a performance bonus on verified leads, not vanity metrics. To build the skill in-house, see our [marketing training](/blog/ai-training-australia-small-business-guide) and [strategy guides](/blog/cluster/ai-strategy-training).
+UnderCurrent's Google Ads management starts at $500 AUD a month, minimum. Ad spend is on top of that fee, and you pay it to Google. To build the skill in-house, see our [marketing training](/blog/ai-training-australia-small-business-guide) and [strategy guides](/blog/cluster/ai-strategy-training).
 
 ## What we learned auditing Australian Google Ads cost articles
 
