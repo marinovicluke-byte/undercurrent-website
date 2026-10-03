@@ -82,7 +82,7 @@ A dental practice is, in search terms, a [local small business](/blog/seo-for-sm
 
 ## Why does SEO matter for an Australian dental practice?
 
-**Nearly half of all Google searches carry local intent, so a dental practice that ignores local search is invisible for its most valuable queries.** Safari Digital's local search analysis puts that figure at 46%, and notes the first result in local business searches takes 24.4% of clicks , see [Safari Digital's local search statistics](https://www.safaridigital.com.au/blog/local-seo-statistics/) for the full breakdown. Google's own [local ranking guidance](https://support.google.com/business/answer/7091) frames the pieces that decide who shows up: relevance, distance, and prominence.
+**Nearly half of all Google searches carry local intent, so a dental practice that ignores local search is invisible for its most valuable queries.** Safari Digital's local search analysis puts that figure at 46%, and notes the first result in local business searches takes 24.4% of clicks; see [Safari Digital's local search statistics](https://www.safaridigital.com.au/blog/local-seo-statistics/) for the full breakdown. Google's own [local ranking guidance](https://support.google.com/business/answer/7091) frames the pieces that decide who shows up: relevance, distance, and prominence.
 
 Demand is not the problem, competition is. Australia had around 20,000 registered dentists in 2023, up from roughly 15,800 a decade earlier, according to the [Australian Institute of Health and Welfare](https://www.aihw.gov.au/reports/dental-oral-health/oral-health-and-dental-care-in-australia/contents/dental-workforce). Private practice is the dominant setting, so nearly every clinic competes in a private, fee-for-service, local market. The [Australian Bureau of Statistics](https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/4839.0~2017-18~Main%20Features~Dental%20professionals~4) tracks dental professionals nationally for a live read on supply in your state, and [local SEO](/glossary/what-is-local-seo) wins the patients already looking for you.
 
@@ -209,12 +209,12 @@ Booked appointments are the only number that pays the rent, so connect call trac
 
 **These guides go deeper on the tactics above.**
 
-- [AEO vs SEO vs GEO](/blog/aeo-vs-seo-vs-geo) , the three search disciplines a dental practice needs.
-- [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo) , getting cited in ChatGPT answers.
-- [How to win at Perplexity SEO](/blog/how-to-win-at-perplexity-seo) , the Perplexity citation playbook.
-- [Australian SEO agencies and AI search](/blog/au-seo-agencies-ai-search-audit) , our audit of how local agencies score on AI visibility.
-- [SEO for buyers agents in Australia](/blog/seo-for-buyers-agents-australia) , the same playbook in another local vertical.
-- [SEO pricing in Australia 2026](/blog/seo-pricing-australia-2026) , what search work really costs.
+- [AEO vs SEO vs GEO](/blog/aeo-vs-seo-vs-geo), the three search disciplines a dental practice needs.
+- [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo), getting cited in ChatGPT answers.
+- [How to win at Perplexity SEO](/blog/how-to-win-at-perplexity-seo), the Perplexity citation playbook.
+- [Australian SEO agencies and AI search](/blog/au-seo-agencies-ai-search-audit), our audit of how local agencies score on AI visibility.
+- [SEO for buyers agents in Australia](/blog/seo-for-buyers-agents-australia), the same playbook in another local vertical.
+- [SEO pricing in Australia 2026](/blog/seo-pricing-australia-2026), what search work really costs.
 
 Dental SEO rewards practices that treat it as a system. If you'd rather have it built right, AHPRA compliance included, [UnderCurrent's SEO and AI visibility service](/seo-ai-visibility) does exactly that for Australian dental practices.
 

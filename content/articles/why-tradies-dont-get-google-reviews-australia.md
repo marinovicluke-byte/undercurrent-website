@@ -2,6 +2,7 @@
 title: "Why Australian Tradies Don't Get Google Reviews"
 description: "Australian tradies are losing local search rankings and customers because they don't ask for reviews. Here's the data on what it costs — and how to fix it."
 date: "2026-03-31"
+dateModified: "2026-10-03"
 slug: "why-tradies-dont-get-google-reviews-australia"
 cluster: "revenue-operations"
 keyword: "why tradies don't get google reviews australia"
@@ -39,7 +40,7 @@ According to [BrightLocal's 2024 Local Consumer Review Survey](https://www.brigh
 
 **A local search ranking factor is any signal Google uses to determine which businesses appear in the map pack and local results.** Google's local search algorithm weighs review quantity, recency, and velocity heavily. A [2023 study by Whitespark](https://whitespark.ca/local-search-ranking-factors/) found that review signals account for roughly 15% of local pack ranking factors, that's more than on-page SEO or citation consistency.
 
-Here's what the data shows for trade businesses specifically:
+**What the data shows for trade businesses specifically**
 
 - **0-10 reviews**: You're invisible in competitive suburbs. A plumber in Brunswick or Bondi with 4 reviews won't crack page one for "emergency plumber [suburb]".
 - **10-25 reviews**: You start appearing in local results for long-tail searches (e.g. "hot water system replacement Frankston").
@@ -104,8 +105,17 @@ The [BrightLocal 2024 survey](https://www.brightlocal.com/research/local-consume
 
 Here's what that looks like in practice. Two electricians appear in search results for "electrician Eastern Suburbs Sydney":
 
-- **Electrician A**: 8 reviews, 4.9 stars, last review 4 months ago
-- **Electrician B**: 42 reviews, 4.7 stars, last review 3 days ago
+**Electrician A**
+
+- 8 reviews
+- 4.9 stars
+- Last review 4 months ago
+
+**Electrician B**
+
+- 42 reviews
+- 4.7 stars
+- Last review 3 days ago
 
 Electrician B gets 3-4x more calls, even though Electrician A has a higher star rating. Volume and recency beat perfection.
 
@@ -145,13 +155,12 @@ That's it. Not a week later. Not when you send the invoice. The same day you fin
 
 Here's how it works in practice:
 
-**Step 1: Collect the customer's mobile number or email at the start of the job** (you probably already do this for invoicing)
+**The review request, step by step**
 
-**Step 2: Mark the job as "completed" in your system** (CRM, spreadsheet, job management app, whatever you use)
-
-**Step 3: An automated text or email goes out 24 hours later** with a direct link to your Google review page and a short message: "Hey [Name], just checking in, how did everything go with the [job type]? If you're happy with the work, would you mind leaving us a quick Google review? [Link]"
-
-**Step 4: If they don't respond, send one follow-up 3 days later** (optional, but increases response rate by 15-20%)
+1. **Collect the customer's mobile number or email at the start of the job** (you probably already do this for invoicing)
+2. **Mark the job as "completed" in your system** (CRM, spreadsheet, job management app, whatever you use)
+3. **An automated text or email goes out 24 hours later** with a direct link to your Google review page and a short message: "Hey [Name], just checking in, how did everything go with the [job type]? If you're happy with the work, would you mind leaving us a quick Google review? [Link]"
+4. **If they don't respond, send one follow-up 3 days later** (optional, but increases response rate by 15-20%)
 
 You can set this up with tools like [Zapier](https://zapier.com), [Make](https://www.make.com/en), or n8n (our preferred option for Australian businesses because it's self-hosted and cost-effective). Connect your job management system or CRM to an SMS provider like [MessageMedia](https://messagemedia.com/au/) or [ClickSend](https://www.clicksend.com/en/), and the whole thing runs in the background.
 

@@ -2,6 +2,7 @@
 title: "SEO for Small Business: Pick What's Worth Paying For"
 description: "What SEO is worth paying for in 2026: the four line items that move enquiries, three to skip, and where DIY beats an agency for Australian SMBs."
 date: "2026-05-17"
+dateModified: "2026-09-30"
 slug: "seo-for-small-business"
 cluster: "seo-ai-visibility"
 keyword: "seo for small business"
@@ -169,9 +170,9 @@ Not entirely, and not soon, but it's already taking a share. People increasingly
 
 1. [ABS Counts of Australian Businesses, latest release](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release)
 2. [Google: new generative AI experiences in Search (AI Overviews launch)](https://blog.google/products-and-platforms/products/search/generative-ai-google-search-may-2024/)
-3. [business.gov.au , online presence guidance for Australian businesses](https://business.gov.au/marketing/online-presence)
+3. [business.gov.au: online presence guidance for Australian businesses](https://business.gov.au/marketing/online-presence)
 4. [Google Search Essentials: spam policies (link schemes)](https://developers.google.com/search/docs/essentials/spam-policies)
-5. [ASBFEO Small Business Data Portal , number of small businesses in Australia](https://www.asbfeo.gov.au/small-business-data-portal/number-small-businesses-australia)
+5. [ASBFEO Small Business Data Portal: number of small businesses in Australia](https://www.asbfeo.gov.au/small-business-data-portal/number-small-businesses-australia)
 6. [Australian SEO and content marketing statistics, 2025](https://www.localdigital.com.au/blog/australian-seo-and-content-marketing-statistics-for-2025)
 7. [Australian local SEO statistics](https://www.redsearch.com.au/resources/local-seo-statistics-australia/)
 8. [Local SEO statistics for Australian businesses](https://www.safaridigital.com.au/blog/local-seo-statistics//)
