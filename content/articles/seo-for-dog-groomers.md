@@ -2,6 +2,7 @@
 title: "How to Do SEO for Dog Groomers in Australia"
 description: "SEO for dog groomers in Australia: rank in Maps, organic and AI search. What our local-pack research found about reviews, proximity and fixable profile gaps."
 date: "2026-06-16"
+dateModified: "2026-09-29"
 slug: "seo-for-dog-groomers"
 cluster: "seo-ai-visibility"
 keyword: "seo for dog groomers"
@@ -37,7 +38,7 @@ This guide sits inside our wider [pet grooming marketing in Australia](/blog/pet
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 300" role="img" aria-label="The four SEO levers for an Australian dog grooming business" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
 <title>The four SEO levers for an Australian dog grooming business</title>
 <rect width="1120" height="300" fill="#121210"/>
-<text x="560" y="46" text-anchor="middle" font-size="25" font-weight="600" fill="#FAF9F5">SEO for Dog Groomers , The 4 Levers</text>
+<text x="560" y="46" text-anchor="middle" font-size="25" font-weight="600" fill="#FAF9F5">SEO for Dog Groomers: The 4 Levers</text>
 <text x="560" y="72" text-anchor="middle" font-size="13" fill="#D4C9B0">What moves a grooming business up local search</text>
 <rect x="40" y="100" width="250" height="160" rx="8" fill="#1C1C1A" stroke="#6A8DAD" stroke-width="1.5"/>
 <text x="58" y="134" font-size="13" font-weight="600" fill="#D4C9B0" font-family="ui-monospace,SF Mono,monospace">01</text>

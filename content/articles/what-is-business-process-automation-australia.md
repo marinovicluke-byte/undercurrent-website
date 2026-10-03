@@ -2,6 +2,7 @@
 title: "What Is Business Process Automation? An Australian SMB Guide"
 description: "Business process automation means software handles repetitive tasks without manual input. What that looks like for Australian small businesses."
 date: "2026-01-10"
+dateModified: "2026-09-30"
 slug: "what-is-business-process-automation-australia"
 cluster: "foundations"
 keyword: "what is business process automation"
@@ -31,7 +32,7 @@ faqs:
 
 > **Business process automation (BPA) is using software to handle repetitive tasks without manual input, so your team can focus on work that actually grows the business.** For Australian small businesses, this typically means connecting tools like Xero, HubSpot, and Gmail so data flows between them automatically, cutting out hours of copy-paste work every week.
 
-**Business process automation is the practice of using software to complete recurring tasks without someone having to do them manually.** That's it. No fancy jargon. You have tasks that happen the same way every time — invoicing, data entry, follow-up emails, booking confirmations — and you set up software to handle them instead of paying someone to do them by hand. For the one-screen version of this definition with the three traits that separate BPA from a single Zap, see our [business process automation glossary entry](/glossary/what-is-business-process-automation).
+**Business process automation is the practice of using software to complete recurring tasks without someone having to do them manually.** That's it. No fancy jargon. You have tasks that happen the same way every time (invoicing, data entry, follow-up emails, booking confirmations) and you set up software to handle them instead of paying someone to do them by hand. For the one-screen version of this definition with the three traits that separate BPA from a single Zap, see our [business process automation glossary entry](/glossary/what-is-business-process-automation).
 
 For most Australian small businesses (1-50 employees), BPA looks like this: you connect the tools you already use (your CRM, your accounting software, your email platform) so they talk to each other. When something happens in one system, it triggers an action in another. Automatically. Without anyone lifting a finger.
 
@@ -73,7 +74,12 @@ Here's what a typical BPA setup looks like for a 10-person business in Sydney:
 | Gmail | Email | HubSpot, Xero, n8n |
 | Stripe | Payments | Xero, HubSpot |
 
-When a lead fills out a form on the website, it goes into HubSpot. That triggers an email sequence (automated). If they book a call, it goes on the calendar and notifies the team in Slack (automated). After the call, the salesperson marks them "won" in HubSpot. That creates a client record in Xero, sends a welcome email, and posts a win notification in Slack (all automated). When the client pays through Stripe, Xero records it, HubSpot updates the deal status, and the project manager gets a Slack ping (automated).
+**One lead, from form to payment**
+
+1. When a lead fills out a form on the website, it goes into HubSpot. That triggers an email sequence (automated).
+2. If they book a call, it goes on the calendar and notifies the team in Slack (automated).
+3. After the call, the salesperson marks them "won" in HubSpot. That creates a client record in Xero, sends a welcome email, and posts a win notification in Slack (all automated).
+4. When the client pays through Stripe, Xero records it, HubSpot updates the deal status, and the project manager gets a Slack ping (automated).
 
 Zero manual data entry. Zero copy-paste between systems. Zero "I forgot to update the spreadsheet". The software just does it.
 
@@ -133,7 +139,7 @@ Good question. People use these terms interchangeably but there's a distinction 
 
 **Business process automation specifically refers to automating entire workflows that span multiple systems and steps.** It's not just one task. It's a series of connected tasks that make up a complete business process.
 
-Example: Setting your HubSpot to send a follow-up email 2 days after a lead signs up — that's automation. Setting your system so that when a lead signs up, they get added to HubSpot, receive a welcome email, get tagged based on their industry, trigger a Slack notification to the sales team, and get added to a nurture sequence with 5 emails over 3 weeks — that's business process automation.
+Example: Setting your HubSpot to send a follow-up email 2 days after a lead signs up, that's automation. Setting your system so that when a lead signs up, they get added to HubSpot, receive a welcome email, get tagged based on their industry, trigger a Slack notification to the sales team, and get added to a nurture sequence with 5 emails over 3 weeks, that's business process automation.
 
 BPA is bigger. More connected. More impact. It's not about automating tasks in isolation. It's about automating the entire flow of work from start to finish.
 
@@ -149,7 +155,15 @@ The honest answer: it depends. But here's the breakdown so you can estimate.
 
 **Enterprise-level BPA platforms:** $500-$5,000+/month for tools like UiPath, Blue Prism, or Automation Anywhere. These are overkill for small businesses. They're built for massive organisations with hundreds of processes. You don't need them.
 
-The ROI calculation is simple. Calculate how many hours per week the automation saves. Multiply by your team's hourly rate. Multiply by 52 weeks. That's your annual saving. If it's more than the setup cost, it pays for itself in year one. After that, it's pure profit.
+The ROI calculation is simple.
+
+**Work out your annual saving**
+
+1. Calculate how many hours per week the automation saves.
+2. Multiply by your team's hourly rate.
+3. Multiply by 52 weeks. That's your annual saving.
+
+If it's more than the setup cost, it pays for itself in year one. After that, it's pure profit.
 
 Use our [automation audit](/audit) to work out your specific numbers. Plug in the tasks you want to automate and it'll show you the payback period.
 

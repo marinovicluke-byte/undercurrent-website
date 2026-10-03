@@ -2,6 +2,7 @@
 title: "Build a Website for Small Business: 2026 AU Guide"
 description: "Build a website for small business with this 2026 Australian guide: plan your pages, compare build routes and real costs, then set up SEO and AI search."
 date: "2026-06-01"
+dateModified: "2026-10-02"
 slug: "build-a-website-for-small-business"
 cluster: "website-experience-design"
 keyword: "build a website for small business"
@@ -90,7 +91,9 @@ Before you build anything, write down the single most important action you want 
 
 **Most small business websites need only five to eight pages to do their job well.**
 
-The [business.gov.au guide to setting up a business website](https://business.gov.au/online-and-digital/business-website/set-up-a-business-website) recommends a tight core set, and you don't need more than that to launch. Build these first:
+The [business.gov.au guide to setting up a business website](https://business.gov.au/online-and-digital/business-website/set-up-a-business-website) recommends a tight core set, and you don't need more than that to launch.
+
+**Build these pages first**
 
 - **Home:** what you do, who you help, and one clear call to action
 - **About:** your story, your team, and why customers should trust you
@@ -119,7 +122,9 @@ Time-poor but cash-rich? An agency saves the hours. The opposite? A DIY platform
 
 **Building a small business website follows the same five steps whichever platform you choose.**
 
-Once your plan and route are set, the build itself is repeatable. Work through these steps in order, and don't skip ahead:
+Once your plan and route are set, the build itself is repeatable.
+
+**Work through these steps in order, and don't skip ahead**
 
 1. **Register a domain and hosting.** Pick a short .com.au or .com name and a fast, Australian-friendly host. Confirm HTTPS is on by default. Budget AUD $15–$30/year for a .com.au domain and AUD $100–$300/year for a quality Australian hosting plan.
 2. **Choose a platform and template.** Match it to your plan from step one, not to the flashiest demo you saw. A trades business owner who needs to capture booking enquiries wants a simple form-forward template, not an e-commerce theme built for product grids.
@@ -169,7 +174,15 @@ Sitemap: https://yourdomain.com.au/sitemap.xml
 
 **Across 179 Australian business web pages our UnderCurrent Article Reviewer scored, the average quality came in at just 57.6 out of 100.**
 
-We run every page through the same 100-point rubric, currently version 2.0.0, and the audit surprised us in three ways. First, most sites compete on a low bar. The majority of the 179 pages we scored landed in the weak band, which means decent structure alone puts you ahead of most rivals. Second, the gap is structural, not cosmetic. The weak pages were not ugly, they simply buried their answers, skipped structured data, and gave AI engines nothing clean to quote. Third, the fix is faster and cheaper than owners expect. The lift comes from answer-first writing and schema, not from a bigger budget. Our own 31 pages average 87.1 out of 100, built exactly the same way, which tells us this is a method any small business can copy.
+We run every page through the same 100-point rubric, currently version 2.0.0, and the audit surprised us in three ways.
+
+**Three surprises**
+
+- **Most sites compete on a low bar.** The majority of the 179 pages we scored landed in the weak band, which means decent structure alone puts you ahead of most rivals.
+- **The gap is structural, not cosmetic.** The weak pages were not ugly, they simply buried their answers, skipped structured data, and gave AI engines nothing clean to quote.
+- **The fix is faster and cheaper than owners expect.** The lift comes from answer-first writing and schema, not from a bigger budget.
+
+Our own 31 pages average 87.1 out of 100, built exactly the same way, which tells us this is a method any small business can copy.
 
 ## How do Australian small business websites score on quality?
 
@@ -198,7 +211,9 @@ Before you go live, test every page on a phone, check load speed, submit your si
 
 **The most expensive website mistakes are decisions made before the first page is built.**
 
-Most underperforming small business websites share the same handful of errors. Fix these and you're already ahead of most competitors:
+Most underperforming small business websites share the same handful of errors. Fix these and you're already ahead of most competitors.
+
+**The six mistakes**
 
 - **No clear goal:** a site that tries to do everything converts no one
 - **Slow or not mobile-friendly:** visitors leave before the page even loads

@@ -2,7 +2,7 @@
 title: "Why Australian Tradies Lose Jobs Before Quoting"
 description: "Most Australian tradies lose 50-70% of enquiries simply by responding too slowly. Learn why the first business to respond wins the job and how to fix it."
 date: "2026-03-31"
-dateModified: "2026-05-13"
+dateModified: "2026-10-01"
 slug: "why-tradies-lose-jobs-before-quoting-australia"
 cluster: "lead-generation"
 keyword: "why tradies lose jobs before quoting australia"
@@ -76,7 +76,7 @@ You're on the tools. You've got back-to-back jobs. You're the person doing the q
 
 Here's the other reason: **hidden leaks of time.** You think you're responding quickly. But by the time you finish the job you're on, drive to the next one, grab lunch, and finally sit down to return calls, it's been 4 hours. In the customer's mind, you're not interested. They've already booked someone else.
 
-The [Australian Small Business and Family Enterprise Ombudsman (ASBFEO)](https://www.asbfeo.gov.au) reports that small businesses lose an average of 11 hours per week on admin tasks that could be automated. For tradies, a big chunk of that is lead follow-up and quoting — see our full breakdown of [how much time Australian tradies spend on admin](/blog/how-much-time-tradies-spend-on-admin-australia). Those 11 hours are costing you jobs.
+The [Australian Small Business and Family Enterprise Ombudsman (ASBFEO)](https://www.asbfeo.gov.au) reports that small businesses lose an average of 11 hours per week on admin tasks that could be automated. For tradies, a big chunk of that is lead follow-up and quoting: see our full breakdown of [how much time Australian tradies spend on admin](/blog/how-much-time-tradies-spend-on-admin-australia). Those 11 hours are costing you jobs.
 
 Most tradies don't realise how fast their competitors are moving. You assume everyone's in the same boat. They're not. The tradie who set up an [automated lead response system](/services) last month is now getting 60% more quote requests than you. Same market. Same customer base. Different response time.
 
@@ -132,7 +132,9 @@ The tradies who figure this out early are the ones who scale past the one-person
 
 **Automation is the only way to respond instantly when you're on a job site.** You can't answer the phone with your hands in a ceiling. But a system can send an SMS for you.
 
-Here's what a basic [automated lead response system](/services) looks like for a trade business:
+Here's what a basic [automated lead response system](/services) looks like for a trade business.
+
+**The three steps**
 
 1. **Instant acknowledgment.** The second someone fills out your contact form or sends an enquiry, they get an automated SMS or email. Something simple: "Thanks for reaching out. I'll call you back within 30 minutes to discuss your project., [Your Name], [Your Business]."
 2. **Lead capture.** The enquiry goes straight into a spreadsheet or CRM. You're not juggling scraps of paper or trying to remember who called.
@@ -146,7 +148,9 @@ A tradie in Geelong set this up and called it his "$50K decision." That's how mu
 
 ## What You Should Do Next
 
-If you're losing enquiries before you get a chance to quote, here's the fastest path to fixing it:
+If you're losing enquiries before you get a chance to quote, here's the fastest path to fixing it.
+
+**The fastest path**
 
 1. **Track your current response time.** For the next week, write down when each enquiry comes in and when you actually call them back. Be honest. Most tradies are shocked when they see the real numbers.
 2. **Set up an instant reply system.** Even a simple SMS that says "I'll call you back in 30 minutes" makes a huge difference. You can do this manually at first, or automate it properly with n8n.

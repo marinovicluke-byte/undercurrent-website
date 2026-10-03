@@ -195,12 +195,12 @@ Get your grooming website on Google by giving it crawlable content and a clear l
 
 ## Related Reading
 
-- [How to market and grow a pet grooming business in Australia](/blog/pet-grooming-marketing-australia) , the full playbook this website guide sits inside.
-- [Google Business Profile management for pet groomers](/blog/google-business-profile-for-pet-grooming) , the local-search asset your website must match.
-- [AI search for pet grooming](/blog/ai-search-for-pet-grooming) , how to get cited when owners ask ChatGPT for a groomer.
-- [AI automation for pet grooming](/blog/ai-automation-for-pet-grooming) , bookings, rebooking and reviews on autopilot once the site is live.
-- [Google Maps SEO](/blog/google-maps-seo) , how to lift the map-pack ranking your website supports.
-- [Google Business Profile optimisation](/blog/google-business-profile-optimisation) , the wider local-listing checklist for Australian businesses.
-- [SEO for dog groomers](/blog/seo-for-dog-groomers) , the full ranking guide your website design supports.
+- [How to market and grow a pet grooming business in Australia](/blog/pet-grooming-marketing-australia), the full playbook this website guide sits inside.
+- [Google Business Profile management for pet groomers](/blog/google-business-profile-for-pet-grooming), the local-search asset your website must match.
+- [AI search for pet grooming](/blog/ai-search-for-pet-grooming), how to get cited when owners ask ChatGPT for a groomer.
+- [AI automation for pet grooming](/blog/ai-automation-for-pet-grooming), bookings, rebooking and reviews on autopilot once the site is live.
+- [Google Maps SEO](/blog/google-maps-seo), how to lift the map-pack ranking your website supports.
+- [Google Business Profile optimisation](/blog/google-business-profile-optimisation), the wider local-listing checklist for Australian businesses.
+- [SEO for dog groomers](/blog/seo-for-dog-groomers), the full ranking guide your website design supports.
 
 Want to know where your current site stands? Start with a [free 30-minute audit](/contact) and we'll show you the exact gaps costing you bookings.
