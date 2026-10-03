@@ -2,7 +2,7 @@
 title: "How to Choose a Google Ads Agency in Australia in 2026"
 description: "Choosing a Google Ads agency in Australia? Here's what a good one actually does, the questions to ask before you sign, fair 2026 pricing, and the red flags."
 date: "2026-06-02"
-dateModified: "2026-10-02"
+dateModified: "2026-10-03"
 slug: "how-to-choose-a-google-ads-agency-australia"
 cluster: "seo-ai-visibility"
 keyword: "google ads agency"
@@ -197,7 +197,7 @@ Quality of thinking shows up everywhere, or nowhere.
 
 **Google Ads buys visibility today while SEO and AI search earn it for years, and businesses running paid and organic together tend to win more clicks and more profit than either channel alone.** Paid and organic search aren't rivals. Google Ads gives instant placement while the slower assets build. Businesses running paid and organic together tend to win more clicks and more profit than either alone, and most search clicks still go to organic results, per a [2026 digital marketing roundup](https://www.safaridigital.com.au/blog/digital-marketing-statistics/). The smarter play is to use Google Ads to learn which keywords convert, then feed that into your content, your [local SEO](/glossary/what-is-local-seo), and your [Google Business Profile](/glossary/what-is-google-business-profile). AI search adds a third layer: ChatGPT and Google's AI Overviews answer questions directly, and being cited there needs answer-first content, [schema markup](/glossary/what-is-schema-markup), and the work of [AI search optimisation](/glossary/what-is-ai-search-optimisation). A strong agency treats paid search, organic, and AI visibility as one [search programme](/seo-ai-visibility). Our notes on [choosing an AI search agency](/blog/best-ai-search-agency-australia), [ranking on AI search](/blog/how-to-rank-buyers-agency-ai-search-melbourne), and the [ChatGPT knowledge cutoff](/blog/chatgpt-knowledge-cutoff-australia) go deeper.
 
-**Want Google Ads run by a team that would pass its own audit?** UnderCurrent manages paid search as part of one search programme: conversion tracking built first, your account owned by you, and fees tied to leads you can verify. [See how we run Google Ads](/services).
+**Want Google Ads run by someone who would pass their own audit?** UnderCurrent manages paid search as part of one search programme: conversion tracking built first and your account owned by you. Management starts at $500 a month, minimum, and your ad spend is paid to Google on top. [Talk to us about Google Ads](/contact).
 
 ## Related Reading
 
