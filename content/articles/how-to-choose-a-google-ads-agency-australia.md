@@ -83,11 +83,11 @@ Choosing a Google Ads agency is easy to get wrong and expensive to undo. The wro
 
 ## Do Google Ads work for small businesses in Australia?
 
-**Google Ads works for Australian small businesses when the maths works, and not before , paid search puts you in front of people already looking for what you sell, which is why it converts.** Across the wider market, 84% of marketers report good results from PPC, according to [HubSpot's marketing statistics](https://www.hubspot.com/marketing-statistics). [HubSpot also reports](https://www.hubspot.com/marketing-statistics) the channel returns a 200% average return, about AUD 2 back for every AUD 1 spent. Global benchmarks put the average search conversion rate near 4.4% and cost per click around $2.69, per a [2026 Google Ads benchmark analysis](https://www.uproas.io/blog/google-ads-statistics). Averages hide a lot, though: pricing is auction-set and swings by industry and location, as one [Australian local-business guide](https://roi.com.au/know-how/google-ads/do-google-ads-work-for-local-business-in-australia-2026) notes. Australia had 2,729,648 actively trading businesses as of 30 June 2025, with 994,178 of them employing staff, per the [Australian Bureau of Statistics](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release). Google Ads works when a customer is worth enough to cover a cost per lead in the tens to low hundreds of dollars, and when you can track which clicks become customers.
+**Google Ads works for Australian small businesses when the maths works, and not before: paid search puts you in front of people already looking for what you sell, which is why it converts.** Across the wider market, 84% of marketers report good results from PPC, according to [HubSpot's marketing statistics](https://www.hubspot.com/marketing-statistics). [HubSpot also reports](https://www.hubspot.com/marketing-statistics) the channel returns a 200% average return, about AUD 2 back for every AUD 1 spent. Global benchmarks put the average search conversion rate near 4.4% and cost per click around $2.69, per a [2026 Google Ads benchmark analysis](https://www.uproas.io/blog/google-ads-statistics). Averages hide a lot, though: pricing is auction-set and swings by industry and location, as one [Australian local-business guide](https://roi.com.au/know-how/google-ads/do-google-ads-work-for-local-business-in-australia-2026) notes. Australia had 2,729,648 actively trading businesses as of 30 June 2025, with 994,178 of them employing staff, per the [Australian Bureau of Statistics](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release). Google Ads works when a customer is worth enough to cover a cost per lead in the tens to low hundreds of dollars, and when you can track which clicks become customers.
 
 ## Should you hire a Google Ads agency or run it yourself?
 
-**Run Google Ads yourself only if you genuinely have time to manage it every week , below roughly AUD 2,000 a month in ad spend, a tidy campaign is learnable; above that, the weekly workload and cost of mistakes usually justify an agency.** The answer depends on your spend, your spare hours, and your appetite for a learning curve. Below roughly AUD 2,000 a month in ad spend, you can often run a tidy campaign yourself once you've learned conversion tracking and negative keywords. Above that, the weekly workload and the cost of mistakes usually justify an agency, and the large majority of businesses now use Google Ads as their main paid channel, per a [2026 benchmark analysis](https://www.uproas.io/blog/google-ads-statistics). With [437,150 new businesses](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release) started across Australia in 2024-25, competition for clicks keeps climbing.
+**Run Google Ads yourself only if you genuinely have time to manage it every week: below roughly AUD 2,000 a month in ad spend, a tidy campaign is learnable; above that, the weekly workload and cost of mistakes usually justify an agency.** The answer depends on your spend, your spare hours, and your appetite for a learning curve. Below roughly AUD 2,000 a month in ad spend, you can often run a tidy campaign yourself once you've learned conversion tracking and negative keywords. Above that, the weekly workload and the cost of mistakes usually justify an agency, and the large majority of businesses now use Google Ads as their main paid channel, per a [2026 benchmark analysis](https://www.uproas.io/blog/google-ads-statistics). With [437,150 new businesses](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release) started across Australia in 2024-25, competition for clicks keeps climbing.
 
 | Factor | Do it yourself | Specialist agency |
 |---|---|---|
@@ -101,7 +101,7 @@ To build the skill in-house, start with our [AI training guide](/blog/ai-trainin
 
 ## How much does a Google Ads agency cost in Australia?
 
-**A Google Ads agency charges a management fee that sits on top of your ad budget, never inside it , your ad spend goes to Google, and the agency fee is separate, with Australian retainers typically running AUD 800 to AUD 3,500 a month.** This is what owners misread most. In Australia, it falls into a few common models.
+**A Google Ads agency charges a management fee that sits on top of your ad budget, never inside it: your ad spend goes to Google, and the agency fee is separate, with Australian retainers typically running AUD 800 to AUD 3,500 a month.** This is what owners misread most. In Australia, it falls into a few common models.
 
 | Pricing model | Typical Australian range | Best suited to |
 |---|---|---|
@@ -156,7 +156,7 @@ The deepest red flag is vagueness. If you can't get a straight answer on convers
 
 ## How do you tell if your Google Ads agency is working?
 
-**Judge your Google Ads agency on cost per qualified lead and revenue, not on clicks , impressions and click-through rate are inputs, not outcomes, and a healthy account improves cost per lead as Quality Score climbs and wasted spend falls.** Clicks, impressions and click-through rate are inputs. They aren't outcomes. The numbers that prove an agency earns its fee are cost per qualified lead, cost per acquired customer, and return on ad spend. A healthy account improves these over time as Quality Score climbs and wasted spend falls.
+**Judge your Google Ads agency on cost per qualified lead and revenue, not on clicks: impressions and click-through rate are inputs, not outcomes, and a healthy account improves cost per lead as Quality Score climbs and wasted spend falls.** Clicks, impressions and click-through rate are inputs. They aren't outcomes. The numbers that prove an agency earns its fee are cost per qualified lead, cost per acquired customer, and return on ad spend. A healthy account improves these over time as Quality Score climbs and wasted spend falls.
 
 **Three signals to check each month**
 
@@ -168,7 +168,7 @@ Judge on a 30-day rolling window, because 7-day windows are mostly noise. Rememb
 
 ## What 88 Australian agency websites revealed about quality
 
-**Most Australian Google Ads content is mediocre, and the campaigns behind it often are too , across 88 scored articles from 35 Australian sites, the average landed at 62.4 out of 100, with 47% falling into the weak band.** We score published articles with the UnderCurrent Article Reviewer, a 100-point rubric (version 2.0.0) that reads content the way an AI search engine does. As of May 2026, we have scored 88 Google Ads and PPC articles drawn from 35 different Australian sites. The average landed at 62.4 out of 100, the median at 61, and scores ranged from 30 to 93. For comparison, UnderCurrent's own articles average 87.1 across 31 pieces, and the whole reviewed corpus of 196 articles averages 56.7. Content quality is a fair proxy for care: a shop publishing thin, interchangeable articles is usually running thin, interchangeable campaigns.
+**Most Australian Google Ads content is mediocre, and the campaigns behind it often are too: across 88 scored articles from 35 Australian sites, the average landed at 62.4 out of 100, with 47% falling into the weak band.** We score published articles with the UnderCurrent Article Reviewer, a 100-point rubric (version 2.0.0) that reads content the way an AI search engine does. As of May 2026, we have scored 88 Google Ads and PPC articles drawn from 35 different Australian sites. The average landed at 62.4 out of 100, the median at 61, and scores ranged from 30 to 93. For comparison, UnderCurrent's own articles average 87.1 across 31 pieces, and the whole reviewed corpus of 196 articles averages 56.7. Content quality is a fair proxy for care: a shop publishing thin, interchangeable articles is usually running thin, interchangeable campaigns.
 
 | Quality band | Score range | Articles | Share |
 |---|---|---|---|
@@ -201,14 +201,14 @@ Quality of thinking shows up everywhere, or nowhere.
 
 ## Related Reading
 
-- [SEO for small business in Australia](/blog/seo-for-small-business) , the organic side of the same search results.
-- [Why tradies don't get Google reviews](/blog/why-tradies-dont-get-google-reviews-australia) , cheap local trust that paid ads cannot buy.
-- [Choosing an AI search agency in Australia](/blog/best-ai-search-agency-australia) , the AI-search version of this vetting guide.
-- [How to rank a buyers agency on AI search](/blog/how-to-rank-buyers-agency-ai-search-melbourne) , a worked example of AI visibility.
-- [AI training for Australian small businesses](/blog/ai-training-australia-small-business-guide) , build the skill in-house instead.
-- [What the ChatGPT knowledge cutoff means](/blog/chatgpt-knowledge-cutoff-australia) , why AI search timing matters.
-- [What is a Google Business Profile?](/glossary/what-is-google-business-profile) , the free listing every local business needs.
-- [Industry guides](/blog/cluster/industry-guides) , search playbooks by trade and sector.
+- [SEO for small business in Australia](/blog/seo-for-small-business), the organic side of the same search results.
+- [Why tradies don't get Google reviews](/blog/why-tradies-dont-get-google-reviews-australia), cheap local trust that paid ads cannot buy.
+- [Choosing an AI search agency in Australia](/blog/best-ai-search-agency-australia), the AI-search version of this vetting guide.
+- [How to rank a buyers agency on AI search](/blog/how-to-rank-buyers-agency-ai-search-melbourne), a worked example of AI visibility.
+- [AI training for Australian small businesses](/blog/ai-training-australia-small-business-guide), build the skill in-house instead.
+- [What the ChatGPT knowledge cutoff means](/blog/chatgpt-knowledge-cutoff-australia), why AI search timing matters.
+- [What is a Google Business Profile?](/glossary/what-is-google-business-profile), the free listing every local business needs.
+- [Industry guides](/blog/cluster/industry-guides), search playbooks by trade and sector.
 
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" role="img" aria-label="Traditional SEO compared with AI search optimisation for Australian businesses" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
