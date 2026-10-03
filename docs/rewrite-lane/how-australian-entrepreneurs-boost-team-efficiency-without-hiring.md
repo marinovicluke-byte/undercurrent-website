@@ -110,7 +110,7 @@ Figures added under the rule update appear in the body only, each linked. FAQ an
 | Worked | Strategy 1 | "Say a Melbourne plumber automates 11 hours of admin a week (an example)": 11 x $120 x 48 = $63,360. hipages and Fair Work |
 | Fill | Strategy 2 | "Find your bottleneck", five steps (was a plain numbered list) |
 | Fill | Choosing the right strategy | "Your 30-day plan", Week 1 to Week 4 as timing |
-| Weight (pair) | Strategy 3 | "Delegate or automate" / "Keep or eliminate": the four-level delegation filter as a neutral pair |
+| List | Strategy 3 | "The delegation filter", the four levels in order as one titled list. Splitting them into a pair would have broken their order, so it stays a list |
 | Rail (kept) | Strategy 4 | The tool table, with the numbers taken out |
 
 ## Word count
@@ -118,7 +118,12 @@ Figures added under the rule update appear in the body only, each linked. FAQ an
 Body, from the H1 to the end of the last section before the FAQ, with link URLs removed:
 
 - Before: 2,880
-- After: see Checks
+- After: 2,576 (down 304, or 11%). The format-pass survey script counts 3,125 to 2,844 (-9.0%).
+
+## Other front matter
+
+- **`dateModified: "2026-10-03"`** was added under Luke's 11:50 dates rule. The rewrite lane picks 2 or 3 Oct deterministically from the slug: the first byte of sha256(slug), even gives 2 Oct, odd gives 3 Oct (`0xf5` here). The published date is unchanged.
+- **`heroImageAlt`:** its one em dash became a colon.
 
 ## Reads thin (for Luke)
 
