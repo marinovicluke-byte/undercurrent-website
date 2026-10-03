@@ -2,6 +2,7 @@
 title: "What Changed: AI Search vs Traditional Search in Australia"
 description: "AI search vs traditional search in Australia, 2026, from UnderCurrent: what changed, what still works from classic SEO, what's dead."
 date: "2026-05-12"
+dateModified: "2026-10-03"
 slug: "ai-search-vs-traditional-search-australia-2026"
 cluster: "seo-ai-visibility"
 keyword: "AI Search vs Traditional Search in Australia (2026)"
@@ -55,7 +56,17 @@ Most of the SEO fundamentals still earn their keep, because AI engines read the 
 
 ## Which Traditional SEO Tactics Are Dead in AI Search?
 
-A short list of old tactics now works against you, because AI engines reward clarity and punish padding. Keyword density is dead: stuffing a phrase in 14 times tells a language model nothing useful. Exact-match doorway pages are dead: 200 near-identical "[service] in [suburb]" pages with no real content read as spam to both Google and AI engines. Buying links is dead, and was already on the way out. Thin "10 best X" listicles with no first-hand testing are dead, because an AI summariser can rewrite them in seconds and won't bother citing one. Meta-keyword stuffing has been dead for a decade and still turns up. The pattern: anything built to game a ranking rather than answer a question. With around 60% of Google searches ending without a click ([Search Engine Land](https://searchengineland.com/google-search-zero-click-study-2024-443869)), there isn't traffic to catch with a thin page anyway. If you're weighing up help with this, UnderCurrent's note on [picking an AI search agency in Australia](/blog/au-seo-agencies-ai-search-audit) lists what good looks like. Cut the tactics that exist only to trick a crawler.
+A short list of old tactics now works against you, because AI engines reward clarity and punish padding.
+
+**The dead tactics**
+
+- **Keyword density is dead:** stuffing a phrase in 14 times tells a language model nothing useful.
+- **Exact-match doorway pages are dead:** 200 near-identical "[service] in [suburb]" pages with no real content read as spam to both Google and AI engines.
+- **Buying links is dead**, and was already on the way out.
+- **Thin "10 best X" listicles with no first-hand testing are dead**, because an AI summariser can rewrite them in seconds and won't bother citing one.
+- **Meta-keyword stuffing** has been dead for a decade and still turns up.
+
+The pattern: anything built to game a ranking rather than answer a question. With around 60% of Google searches ending without a click ([Search Engine Land](https://searchengineland.com/google-search-zero-click-study-2024-443869)), there isn't traffic to catch with a thin page anyway. If you're weighing up help with this, UnderCurrent's note on [picking an AI search agency in Australia](/blog/au-seo-agencies-ai-search-audit) lists what good looks like. Cut the tactics that exist only to trick a crawler.
 
 ## Is "AI SEO" Different From Traditional SEO?
 
@@ -63,11 +74,29 @@ AI SEO isn't a separate discipline, it's SEO with two extra jobs added to the ol
 
 ## What We Learned Auditing Australian AI-Search Articles
 
-When we audit competitor and our own articles on the same yardstick, the AI-search content most Australian businesses publish scores worse than the headlines suggest. Across 72 articles from 47 different hosts in this vertical, scored on the UnderCurrent Article Reviewer rubric, version 2.0.0, the average came in at 55 out of 100, with a range from 27 to 90. Three things hit harder than that average suggests. First, the floor is low: 49 of those 72 pages landed in the weak band of 30 to 59, and fewer than 1 in 10 cleared 80, so the bar to stand out is lower than people assume. Second, the gap is real: across the full corpus of 146 articles we've reviewed, the mean is 52.8, while our own articles average 81.1 over 11 pieces, and the difference is mostly structure and proof, not word count. Third, the cheap wins are everywhere, a missing FAQ block, a buried answer, no schema. You can see one worked example in [this Melbourne plumbing SEO case study](/case-studies/plumbers-south-east-melbourne-seo). Most pages aren't bad. They're just unfinished.
+When we audit competitor and our own articles on the same yardstick, the AI-search content most Australian businesses publish scores worse than the headlines suggest. Across 72 articles from 47 different hosts in this vertical, scored on the UnderCurrent Article Reviewer rubric, version 2.0.0, the average came in at 55 out of 100, with a range from 27 to 90.
+
+**Three things hit harder than that average suggests**
+
+- **The floor is low:** 49 of those 72 pages landed in the weak band of 30 to 59, and fewer than 1 in 10 cleared 80, so the bar to stand out is lower than people assume.
+- **The gap is real:** across the full corpus of 146 articles we've reviewed, the mean is 52.8, while our own articles average 81.1 over 11 pieces, and the difference is mostly structure and proof, not word count.
+- **The cheap wins are everywhere**, a missing FAQ block, a buried answer, no schema.
+
+You can see one worked example in [this Melbourne plumbing SEO case study](/case-studies/plumbers-south-east-melbourne-seo). Most pages aren't bad. They're just unfinished.
 
 ## How Do You Win Both AI Search and Traditional Search in Australia?
 
-One content system, two payoffs, if you build pages that answer cleanly and prove their claims. Five moves cover most of it. One, answer first: every section opens with the takeaway, so a model can quote it without hunting. Two, add [structured data](/glossary/what-is-schema-markup): mark up FAQs and articles so engines parse your content reliably. Three, fix entity consistency: same business name, address and service list everywhere, plus genuine reviews. Four, publish first-hand proof: numbers, examples and observations a competitor can't copy, since an AI summariser can rewrite generic content, not your data. Five, track citations: check whether ChatGPT, Gemini and Google's AI Overviews are naming you. Here's a starter [FAQ schema](/glossary/what-is-faq-schema) block you can adapt and drop into a page's `<head>`:
+One content system, two payoffs, if you build pages that answer cleanly and prove their claims.
+
+**Five moves cover most of it**
+
+1. **Answer first:** every section opens with the takeaway, so a model can quote it without hunting.
+2. **Add [structured data](/glossary/what-is-schema-markup):** mark up FAQs and articles so engines parse your content reliably.
+3. **Fix entity consistency:** same business name, address and service list everywhere, plus genuine reviews.
+4. **Publish first-hand proof:** numbers, examples and observations a competitor can't copy, since an AI summariser can rewrite generic content, not your data.
+5. **Track citations:** check whether ChatGPT, Gemini and Google's AI Overviews are naming you.
+
+Here's a starter [FAQ schema](/glossary/what-is-faq-schema) block you can adapt and drop into a page's `<head>`:
 
 ```html
 <script type="application/ld+json">
@@ -90,7 +119,17 @@ If you'd rather have someone do the build, [UnderCurrent's SEO and AI visibility
 
 ## How Should an Australian Small Business Start This Week?
 
-Start small, with one engine and your three best pages, not a full rebuild. Day one: pick the engine your customers actually use, usually ChatGPT or Google's AI Overviews, and search a few real service-plus-suburb queries to see who gets named. Day two: take your three highest-value pages and rewrite the opening of each section so the answer comes first, in plain language. Day three: add FAQ and article schema to those pages, using questions real customers type. Day four: tidy up your business name, address and service list so they match across your site, [Google Business Profile](/glossary/what-is-google-business-profile) and any directories. Day five: set a reminder every 30 days to re-run the citation check. Five focused jobs, for about $0 in tools. If you want a shortlist of help, UnderCurrent's guide on [how to compare AI search agencies in Australia](/blog/au-seo-agencies-ai-search-audit) is a good filter, [what AI automation means for small business](/blog/what-is-ai-automation-australia) shows where this connects, and you can [talk to the UnderCurrent team](/contact) if you'd rather not DIY. One week, one engine, three pages.
+Start small, with one engine and your three best pages, not a full rebuild.
+
+**Your first week**
+
+1. Pick the engine your customers actually use, usually ChatGPT or Google's AI Overviews, and search a few real service-plus-suburb queries to see who gets named, **Day one**
+2. Take your three highest-value pages and rewrite the opening of each section so the answer comes first, in plain language, **Day two**
+3. Add FAQ and article schema to those pages, using questions real customers type, **Day three**
+4. Tidy up your business name, address and service list so they match across your site, [Google Business Profile](/glossary/what-is-google-business-profile) and any directories, **Day four**
+5. Set a reminder every 30 days to re-run the citation check, **Day five**
+
+Five focused jobs, for about $0 in tools. If you want a shortlist of help, UnderCurrent's guide on [how to compare AI search agencies in Australia](/blog/au-seo-agencies-ai-search-audit) is a good filter, [what AI automation means for small business](/blog/what-is-ai-automation-australia) shows where this connects, and you can [talk to the UnderCurrent team](/contact) if you'd rather not DIY. One week, one engine, three pages.
 
 
 ![Before and after comparison of traditional search versus AI search for Australian businesses](./body-2.jpg)

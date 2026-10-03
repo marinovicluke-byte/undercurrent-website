@@ -2,6 +2,7 @@
 title: "How to Design a Pet Grooming Website That Converts"
 description: "Pet grooming website design that books appointments and feeds Google a clear identity: booking, pricing, schema and mobile speed for Australian groomers."
 date: "2026-06-16"
+dateModified: "2026-10-03"
 slug: "pet-grooming-website-design"
 cluster: "website-experience-design"
 keyword: "pet grooming website design"
@@ -111,7 +112,17 @@ Search "pet grooming website design" and you'll get a wall of template galleries
 
 ## How Do You Build A Pet Grooming Website From Scratch?
 
-**Build a pet grooming website from scratch homepage-first: lead above the fold with a real happy-dog photo, a one-line promise, and a single booking button, then stack the proof below.** A visitor decides in seconds whether you're the groomer for their dog. Below the hero, in order: a service overview with breed-size pricing, a trust strip showing your review rating, a before-and-after gallery, your suburbs and hours, and a "meet your groomer" section. Pricing transparency is non-negotiable; open or size-based pricing is one of the most consistent patterns on grooming sites that convert, and [Shopify's grooming guide](https://www.shopify.com/blog/dog-grooming-business) lists clear service menus and pricing as core. The peer-reviewed evidence backs low-friction design: a [study hosted by the National Library of Medicine](https://pmc.ncbi.nlm.nih.gov/articles/PMC9596803/) found grooming-related concerns in 4% to 6% of companion animals and argued easier access to grooming care improves welfare. Make services, pricing and booking immediately visible and you cut that friction, the same thinking behind our [small business website design guide](/blog/small-business-website-design).
+**Build a pet grooming website from scratch homepage-first: lead above the fold with a real happy-dog photo, a one-line promise, and a single booking button, then stack the proof below.** A visitor decides in seconds whether you're the groomer for their dog. Below the hero, in order:
+
+**The homepage, top to bottom**
+
+1. A service overview with breed-size pricing.
+2. A trust strip showing your review rating.
+3. A before-and-after gallery.
+4. Your suburbs and hours.
+5. A "meet your groomer" section.
+
+Pricing transparency is non-negotiable; open or size-based pricing is one of the most consistent patterns on grooming sites that convert, and [Shopify's grooming guide](https://www.shopify.com/blog/dog-grooming-business) lists clear service menus and pricing as core. The peer-reviewed evidence backs low-friction design: a [study hosted by the National Library of Medicine](https://pmc.ncbi.nlm.nih.gov/articles/PMC9596803/) found grooming-related concerns in 4% to 6% of companion animals and argued easier access to grooming care improves welfare. Make services, pricing and booking immediately visible and you cut that friction, the same thinking behind our [small business website design guide](/blog/small-business-website-design).
 
 ## What Pet Grooming Website Features Convert Clients?
 

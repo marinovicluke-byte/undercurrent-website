@@ -2,6 +2,7 @@
 title: "ChatGPT Knowledge Cutoff Australia: Audit Your Visibility"
 description: "GPT-5.5, Claude Opus 4.7, and Gemini 3 each have different knowledge cutoffs. Here's the verified table and the two-track plan for Australian SMBs."
 date: "2026-05-18"
+dateModified: "2026-10-02"
 slug: "chatgpt-knowledge-cutoff-australia"
 cluster: "seo-ai-visibility"
 keyword: "chatgpt knowledge cutoff australia"
@@ -98,17 +99,21 @@ Live search runs through Bing for ChatGPT, through Google for Gemini, and throug
 
 A TechCrunch mention for an Australian SaaS product lands in June 2026. What happens?
 
-1. **Within hours.** Google and Bing crawl the URL. It is retrievable through live search.
-2. **Within days.** The brand starts appearing in conversational answers that trigger a search.
-3. **Within months.** Other sites pick up the story. The mention becomes one of many citations the next training crawl will see.
-4. **Around December 2026.** The next major OpenAI model trains on data including the TechCrunch mention. The brand appears in answers that do not trigger a live search.
-5. **Within 12 months.** Claude and Gemini's next major versions follow.
+**From the mention to the model**
+
+1. Google and Bing crawl the URL. It is retrievable through live search, **Within hours**
+2. The brand starts appearing in conversational answers that trigger a search, **Within days**
+3. Other sites pick up the story. The mention becomes one of many citations the next training crawl will see, **Within months**
+4. The next major OpenAI model trains on data including the TechCrunch mention. The brand appears in answers that do not trigger a live search, **Around December 2026**
+5. Claude and Gemini's next major versions follow, **Within 12 months**
 
 You can't accelerate the crawl-to-training pipeline. Start earlier and stack mentions, so the next training cycle has enough signal to bake the brand into the weights.
 
 ## The retrieval sprint for AI search visibility
 
 **The retrieval sprint is a 30 to 60 day push that gets a business visible to live search across Bing and Google.** This is the cheap track. Most Australian SMBs can ship it inside 4 weeks. Our [ChatGPT SEO workflow](/blog/how-to-do-chatgpt-seo) walks through the exact sequence.
+
+**The retrieval sprint**
 
 - Submit the sitemap to Bing Webmaster Tools and Google Search Console. Verify indexation.
 - Publish answer-first content using [FAQ schema](/glossary/what-is-faq-schema) for the queries that matter.
@@ -140,6 +145,8 @@ Only around 1 in 4 Australian agency sites carry an llms.txt today, based on our
 
 **The earned-media calendar is the slow play that compounds across the 6 to 12 month gap between model cutoff and release.** This is the work that gets a brand into the next model's training data, not just its retrieval index. The [Anthropic Claude product overview](https://claude.com/product/overview) frames the same retrieval-vs-training split from the model-vendor side.
 
+**The earned-media calendar**
+
 - Map the next 12 months of tier-one mention opportunities, awards, journalist queries, podcasts, conference talks.
 - Maintain a Wikipedia, Reddit, and review-site presence (G2, Capterra, ProductReview Australia).
 - Time biggest mentions to land 6 to 9 months before the next expected major model release.
@@ -154,11 +161,13 @@ Most Australian SMBs are running neither track. Disciplines like [generative eng
 
 ## What surprised us when auditing 146 Australian agency articles
 
-**Three patterns hit harder than the corpus mean alone suggests.** First, zooming into the AI search vertical subset (46 of the 146 articles, drawn from 20 distinct Australian hosts) shows a U-shaped distribution rather than a normal bell. The mean is 68.7 out of 100, but the spread is 19 articles above 80, just 9 in the 60-79 "competent" band, and 18 below 60. The middle tier is thin, only about 1 in 5 of the vertical sample.
+**Three patterns hit harder than the corpus mean alone suggests.**
 
-Second, our own articles averaged 85.2 out of 100, but that gap is closing every month as other agencies catch up to retrieval-sprint basics.
+**The three patterns**
 
-Third, the single biggest predictor of an article appearing in a ChatGPT response was not word count, domain authority, or backlink profile. It was whether the article carried a labelled "Quick Answer:" block in the first 100 words (formatted as a styled callout, not just bold text). Zero percent of the audited corpus had one under that strict definition. We started flagging that to every client during onboarding, and the correlation held across the last 90 days of audits, scored against Robin Search rubric version 2.0.0.
+- Zooming into the AI search vertical subset (46 of the 146 articles, drawn from 20 distinct Australian hosts) shows a U-shaped distribution rather than a normal bell. The mean is 68.7 out of 100, but the spread is 19 articles above 80, just 9 in the 60-79 "competent" band, and 18 below 60. The middle tier is thin, only about 1 in 5 of the vertical sample.
+- Our own articles averaged 85.2 out of 100, but that gap is closing every month as other agencies catch up to retrieval-sprint basics.
+- The single biggest predictor of an article appearing in a ChatGPT response was not word count, domain authority, or backlink profile. It was whether the article carried a labelled "Quick Answer:" block in the first 100 words (formatted as a styled callout, not just bold text). Zero percent of the audited corpus had one under that strict definition. We started flagging that to every client during onboarding, and the correlation held across the last 90 days of audits, scored against Robin Search rubric version 2.0.0.
 
 ## Planning your next 12 months around the chatgpt knowledge cutoff
 
@@ -166,11 +175,13 @@ Third, the single biggest predictor of an article appearing in a ChatGPT respons
 
 Practical sequence for an Australian SMB pursuing both tracks of [AI search optimisation](/glossary/what-is-ai-search-optimisation):
 
-1. **Month 1.** Run a retrieval audit. Confirm Bing and Google indexation. Add schema markup, llms.txt, and Quick Answer blocks across the top 20 pages.
-2. **Months 2-3.** Publish 6 to 10 answer-first articles. Use [AI training for Australian small businesses](/blog/ai-training-australia-small-business-guide) as a depth benchmark.
-3. **Months 3-6.** Stack earned-media. Three tier-one mentions in this window is the working minimum.
-4. **Months 6-9.** Increase mention cadence. This is the window most likely to land in the next training cycle.
-5. **Months 9-12.** Audit against a real-world rubric. Vertical examples like [SEO for buyers agents in Australia](/blog/seo-for-buyers-agents-australia) show how the playbook adapts.
+**The 12 months, in order**
+
+1. Run a retrieval audit. Confirm Bing and Google indexation. Add schema markup, llms.txt, and Quick Answer blocks across the top 20 pages, **Month 1**
+2. Publish 6 to 10 answer-first articles. Use [AI training for Australian small businesses](/blog/ai-training-australia-small-business-guide) as a depth benchmark, **Months 2-3**
+3. Stack earned-media. Three tier-one mentions in this window is the working minimum, **Months 3-6**
+4. Increase mention cadence. This is the window most likely to land in the next training cycle, **Months 6-9**
+5. Audit against a real-world rubric. Vertical examples like [SEO for buyers agents in Australia](/blog/seo-for-buyers-agents-australia) show how the playbook adapts, **Months 9-12**
 
 For Australian SMBs already running [business process automation](/blog/what-is-business-process-automation-australia) workflows, the same compounding logic applies. Our [AI search audit](/audit) covers both tracks in one report.
 
