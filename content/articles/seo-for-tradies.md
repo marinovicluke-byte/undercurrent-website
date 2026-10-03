@@ -2,6 +2,7 @@
 title: "How to Do SEO for Tradies in Australia"
 description: "SEO for tradies is how Australian trade businesses get found in Google's map pack and AI search. UnderCurrent's pillar guide to local search and schema."
 date: "2026-05-23"
+dateModified: "2026-10-01"
 slug: "seo-for-tradies"
 cluster: "seo-ai-visibility"
 keyword: "seo for tradies"
@@ -80,13 +81,19 @@ If you want a quick read on where your own site stands first, you can [run a fre
 
 ## What is SEO for tradies, and why does it matter?
 
-**SEO for tradies is the work of making a trade business the first name a nearby customer sees when they search for a job they need done.** It blends three jobs into one: ranking in Google's local map pack, ranking in the standard blue-link results, and getting named by AI assistants , the Three-Layer Trade Search Stack. Each layer targets a different moment in the customer's search, and together they cover the full surface area of local trade demand. For trades, [local SEO](/glossary/what-is-local-seo) carries most of the load, because nearly every job is tied to a place and a postcode. Google's own [SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) is the baseline, and the trade-specific layer sits on top.
+**SEO for tradies is the work of making a trade business the first name a nearby customer sees when they search for a job they need done.** It blends three jobs into one: ranking in Google's local map pack, ranking in the standard blue-link results, and getting named by AI assistants: the Three-Layer Trade Search Stack. Each layer targets a different moment in the customer's search, and together they cover the full surface area of local trade demand. For trades, [local SEO](/glossary/what-is-local-seo) carries most of the load, because nearly every job is tied to a place and a postcode. Google's own [SEO starter guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) is the baseline, and the trade-specific layer sits on top.
 
 The demand is steady and large. Safari Digital's 2026 local search analysis found [97% of people search online to find a local business](https://www.safaridigital.com.au/blog/local-seo-statistics/), and 12% do it every single day. Australia had 2,729,648 actively trading businesses at 30 June 2025, with 437,150 new ones entering that year ([ABS counts of Australian businesses](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release)), and the [overwhelming majority are small businesses](https://www.asbfeo.gov.au/small-business-data-portal). It's crowded. The trade that owns the search owns the job.
 
 ## How do tradie customers actually search for a trade?
 
-**Tradie customers search in three distinct modes, and each one needs its own page waiting to catch it.** The first is emergency: "burst pipe", "no hot water", "emergency electrician". This searcher is stressed, on a phone, and ringing the first credible result. The second is research: "how much to rewire a house", "cost to clear a blocked drain". They're comparing before they commit. The third is near-me and suburb intent: "plumber near me", "electrician Frankston", the mode where [trade-specific SEO is really won](https://www.safaridigital.com.au/seo-for-tradies/).
+**Tradie customers search in three distinct modes, and each one needs its own page waiting to catch it.**
+
+**The three search modes**
+
+- **Emergency:** "burst pipe", "no hot water", "emergency electrician". This searcher is stressed, on a phone, and ringing the first credible result.
+- **Research:** "how much to rewire a house", "cost to clear a blocked drain". They're comparing before they commit.
+- **Near-me and suburb intent:** "plumber near me", "electrician Frankston", the mode where [trade-specific SEO is really won](https://www.safaridigital.com.au/seo-for-tradies/).
 
 That third mode decides most jobs. Around [46% of all Google searches carry local intent](https://www.rankmax.com.au/articles/local-seo-statistics), and 24.4% of clicks on a local search go to the very first result. Against the 2,729,648 businesses trading in Australia ([ABS](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release)), the top three map slots are tight space. Your customer rarely scrolls. They tap the top of the pack, skim two reviews, and call.
 
@@ -98,7 +105,14 @@ Standard results still matter for research-stage queries, so they're worth havin
 
 ## How do you set up Google Business Profile for a trade business?
 
-**A complete, accurate Google Business Profile is the single highest-impact move in SEO for tradies.** Claim the profile, then fill every field. Set the primary category to exactly what you do, "Plumber" or "Electrician", not a vague "Home Services". Add every secondary service category that fits. List your services with real descriptions. Upload genuine photos of your vans, team, and finished jobs, because Google's image systems read them and stock photos count for nothing.
+**A complete, accurate Google Business Profile is the single highest-impact move in SEO for tradies.** Claim the profile, then fill every field.
+
+**Fill the profile, field by field**
+
+1. Set the primary category to exactly what you do, "Plumber" or "Electrician", not a vague "Home Services".
+2. Add every secondary service category that fits.
+3. List your services with real descriptions.
+4. Upload genuine photos of your vans, team, and finished jobs, because Google's image systems read them and stock photos count for nothing.
 
 Keep your business name, address, and phone number identical everywhere they appear online. Set service areas to the suburbs you actually cover. Post updates most weeks so the profile reads as an active, trading business. Most trade competitors do half of this and stop. A profile with every category, service, and photo filled in will out-rank a half-built one in the same suburb, often within 3 weeks. It's free. It's just the unglamorous work most people skip.
 
@@ -120,7 +134,13 @@ The words matter too. When a customer writes "fixed our blocked drain in Coburg,
 
 <svg viewBox="0 0 320 120" role="img" aria-label="SEO audit score distribution: 41 weak, 29 competent, 23 strong of 93 Australian articles" xmlns="http://www.w3.org/2000/svg"><title>SEO audit score distribution across 93 articles</title><rect x="6" y="12" width="246" height="26" fill="#6A8DAD"/><rect x="6" y="48" width="174" height="26" fill="#8FAF9F"/><rect x="6" y="84" width="138" height="26" fill="#D4C9B0"/></svg>
 
-First, 41 of 93 sat in the weak band for missing schema; only 1 in 4 scored strong. Second, our 31 articles averaged 87.1. Third, the wider 196-article corpus averaged 56.7. Our [audit of Australian SEO providers](/blog/au-seo-agencies-ai-search-audit) digs in.
+**What the audit found**
+
+- 41 of 93 sat in the weak band for missing schema; only 1 in 4 scored strong.
+- Our 31 articles averaged 87.1.
+- The wider 196-article corpus averaged 56.7.
+
+Our [audit of Australian SEO providers](/blog/au-seo-agencies-ai-search-audit) digs in.
 
 ## Which pages should a tradie website actually have?
 
@@ -158,7 +178,7 @@ Swap the type and suburbs for your trade, then test it before you ship. Google's
 
 **AI search is changing SEO for tradies by turning some searches into a single answer, with no map and no ten blue links to scroll.** When a customer asks ChatGPT or Google's AI for "a good electrician nearby", the engine names a few businesses instead of listing ten links. Getting named is the new goal. That discipline goes by three names you'll see around: [answer engine optimisation](/glossary/what-is-answer-engine-optimisation), [generative engine optimisation](/glossary/what-is-generative-engine-optimisation), and the broader [AI search optimisation](/glossary/what-is-ai-search-optimisation).
 
-The good news is that the work overlaps with normal SEO. AI engines favour clear structure, real data, named locations, and content that answers the question in its first line. A page stating "we service Frankston and Dandenong, 7 days, with same-day callouts" can be quoted word for word. The same profile, reviews, and schema that win the map pack also feed [ChatGPT Search](/glossary/what-is-chatgpt-search) , this is the third layer of the Three-Layer Trade Search Stack clicking into place. For the platform detail, see our guides to [ChatGPT SEO](/blog/how-to-do-chatgpt-seo) and [winning at Perplexity](/blog/how-to-win-at-perplexity-seo).
+The good news is that the work overlaps with normal SEO. AI engines favour clear structure, real data, named locations, and content that answers the question in its first line. A page stating "we service Frankston and Dandenong, 7 days, with same-day callouts" can be quoted word for word. The same profile, reviews, and schema that win the map pack also feed [ChatGPT Search](/glossary/what-is-chatgpt-search); this is the third layer of the Three-Layer Trade Search Stack clicking into place. For the platform detail, see our guides to [ChatGPT SEO](/blog/how-to-do-chatgpt-seo) and [winning at Perplexity](/blog/how-to-win-at-perplexity-seo).
 
 ## How much does SEO for tradies cost in Australia?
 
@@ -248,21 +268,21 @@ Yes, and arguably it matters more. Emergency searches like "burst pipe" or "no p
 
 ## Related Reading
 
-- [SEO pricing in Australia for 2026](/blog/seo-pricing-australia-2026) , what SEO actually costs across the DIY, agency, and built-system routes.
-- [AEO vs SEO vs GEO](/blog/aeo-vs-seo-vs-geo) , how the three search disciplines differ and where they overlap.
-- [The hidden cost of a manual trade business](/blog/hidden-cost-manual-trade-business-australia) , where trade businesses quietly lose hours and jobs.
-- [AI search vs traditional search in Australia](/blog/ai-search-vs-traditional-search-australia-2026) , why being named by an AI engine is the new ranking.
-- [How much time tradies spend on admin](/blog/how-much-time-tradies-spend-on-admin-australia) , the hours that disappear before SEO is even on the list.
+- [SEO pricing in Australia for 2026](/blog/seo-pricing-australia-2026), what SEO actually costs across the DIY, agency, and built-system routes.
+- [AEO vs SEO vs GEO](/blog/aeo-vs-seo-vs-geo), how the three search disciplines differ and where they overlap.
+- [The hidden cost of a manual trade business](/blog/hidden-cost-manual-trade-business-australia), where trade businesses quietly lose hours and jobs.
+- [AI search vs traditional search in Australia](/blog/ai-search-vs-traditional-search-australia-2026), why being named by an AI engine is the new ranking.
+- [How much time tradies spend on admin](/blog/how-much-time-tradies-spend-on-admin-australia), the hours that disappear before SEO is even on the list.
 
 ## Sources
 
-1. [Safari Digital , Local SEO statistics](https://www.safaridigital.com.au/blog/local-seo-statistics/)
-2. [ABS , Counts of Australian Businesses](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release)
-3. [ASBFEO , Small Business Data Portal](https://www.asbfeo.gov.au/small-business-data-portal)
-4. [Google , SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)
-5. [RankMax , Local SEO statistics](https://www.rankmax.com.au/articles/local-seo-statistics)
-6. [Safari Digital , SEO for tradies](https://www.safaridigital.com.au/seo-for-tradies/)
-7. [Google , LocalBusiness structured data](https://developers.google.com/search/docs/appearance/structured-data/local-business)
-8. [Schema.org , LocalBusiness](https://schema.org/LocalBusiness)
-9. [Google , FAQ structured data](https://developers.google.com/search/docs/appearance/structured-data/faqpage)
-10. [HubSpot , Marketing statistics](https://www.hubspot.com/marketing-statistics)
+1. [Safari Digital: Local SEO statistics](https://www.safaridigital.com.au/blog/local-seo-statistics/)
+2. [ABS: Counts of Australian Businesses](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release)
+3. [ASBFEO: Small Business Data Portal](https://www.asbfeo.gov.au/small-business-data-portal)
+4. [Google: SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)
+5. [RankMax: Local SEO statistics](https://www.rankmax.com.au/articles/local-seo-statistics)
+6. [Safari Digital: SEO for tradies](https://www.safaridigital.com.au/seo-for-tradies/)
+7. [Google: LocalBusiness structured data](https://developers.google.com/search/docs/appearance/structured-data/local-business)
+8. [Schema.org: LocalBusiness](https://schema.org/LocalBusiness)
+9. [Google: FAQ structured data](https://developers.google.com/search/docs/appearance/structured-data/faqpage)
+10. [HubSpot: Marketing statistics](https://www.hubspot.com/marketing-statistics)

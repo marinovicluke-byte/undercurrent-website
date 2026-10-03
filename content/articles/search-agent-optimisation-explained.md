@@ -2,6 +2,7 @@
 title: "Search Agent Optimisation: Win the Next AI Search Layer"
 description: "Search agent optimisation makes your site readable and bookable by the AI agents that compare, shortlist and buy for your customers. Here is how it works."
 date: "2026-05-15"
+dateModified: "2026-10-03"
 slug: "search-agent-optimisation-explained"
 cluster: "seo-ai-visibility"
 keyword: "search agent optimisation"
@@ -62,7 +63,7 @@ Two more details for search agent optimisation. The agents pulled their starting
 
 ## What Does Your Site Need So an AI Agent Can Use It?
 
-**Five things, and none need a rebuild.** First, a 40-to-60-word answer at the top of every key page: what you do, where, for whom , the format AI summaries quote. Second, schema markup: an Organization or LocalBusiness entity, a Service or Offer with a `priceRange` and an `areaServed`, and an FAQPage block. Third, machine-readable specifics: prices, service areas and availability in HTML text, not a PDF or JPEG. Fourth, stable URLs and fast pages; an agent that times out moves on. Fifth, a path to act: a bookable calendar, a quote form, a clear contact endpoint.
+**Five things, and none need a rebuild.** First, a 40-to-60-word answer at the top of every key page: what you do, where, for whom, the format AI summaries quote. Second, schema markup: an Organization or LocalBusiness entity, a Service or Offer with a `priceRange` and an `areaServed`, and an FAQPage block. Third, machine-readable specifics: prices, service areas and availability in HTML text, not a PDF or JPEG. Fourth, stable URLs and fast pages; an agent that times out moves on. Fifth, a path to act: a bookable calendar, a quote form, a clear contact endpoint.
 
 A minimal Offer block:
 
@@ -88,6 +89,8 @@ Where's this heading? MCP, the Model Context Protocol, is an emerging open stand
 
 **Most of this fits in an afternoon.** Work the list in order; each step makes the next one cheaper.
 
+**The readiness checklist**
+
 1. **Write the answer first.** Put a 40-to-60-word summary at the top of every key page: what you do, where, for whom. Google's SAGE work showed agents skip the deep research when the answer sits in one place ([Search Engine Journal](https://www.searchenginejournal.com/googles-sage-agentic-ai-research-what-it-means-for-seo/566215/)), and about 60% of searches now end without a click ([Aidan Coleman's 2026 figures](https://aidancoleman.com.au/ai-seo-statistics/)), so that summary may be all the agent reads.
 2. **Add schema markup.** Organization or LocalBusiness, Service or Offer with `priceRange` and `areaServed`, and FAQPage on your FAQ pages.
 3. **Free the data.** Move prices, service areas, hours and availability out of PDFs and images into real HTML text an agent can parse.
@@ -98,7 +101,13 @@ Where's this heading? MCP, the Model Context Protocol, is an emerging open stand
 
 **We run a deterministic scorer over our articles and the field, and the field is behind.** Across our own audit corpus, 65 AI-search and agent articles from 33 Australian and overseas publishers, the median is 49 out of 100, the mean 52.6. Only 7 of the 65 cleared 80; 46 sat in the weak band, 30 to 59. Across the wider 146-article corpus, the mean barely moves: 52.8. Our own articles average 81.1 out of 100, and the difference is almost all structure, not prose.
 
-Three things hit harder than the score sheet. First, the weak ones weren't badly written, they were badly built: no answer up top, no schema, no machine-readable specifics, the exact gap Google's SAGE work flags ([Search Engine Journal](https://www.searchenginejournal.com/googles-sage-agentic-ai-research-what-it-means-for-seo/566215/)). Second, almost none had a comparison table or clean FAQ block, the formats agents quote most. Third, the agencies writing about agent search were, on average, worse at it than at plain SEO. The discipline is new enough that doing the basics puts you in the [top tenth](/blog/au-seo-agencies-ai-search-audit); the [case studies](/case-studies) show the work behind it.
+**Three things hit harder than the score sheet**
+
+- The weak ones weren't badly written, they were badly built: no answer up top, no schema, no machine-readable specifics, the exact gap Google's SAGE work flags ([Search Engine Journal](https://www.searchenginejournal.com/googles-sage-agentic-ai-research-what-it-means-for-seo/566215/)).
+- Almost none had a comparison table or clean FAQ block, the formats agents quote most.
+- The agencies writing about agent search were, on average, worse at it than at plain SEO.
+
+The discipline is new enough that doing the basics puts you in the [top tenth](/blog/au-seo-agencies-ai-search-audit); the [case studies](/case-studies) show the work behind it.
 
 ## Should You Invest in Search Agent Optimisation Now or Wait?
 

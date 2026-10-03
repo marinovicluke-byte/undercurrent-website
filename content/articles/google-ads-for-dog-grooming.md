@@ -221,11 +221,11 @@ Track real bookings, not clicks. Turn on conversion tracking for phone calls fro
 
 ## Related Reading
 
-- [Marketing a pet grooming business in Australia](/blog/pet-grooming-marketing-australia) , the full growth guide this paid-search chapter sits inside.
-- [SEO versus Google Ads for a grooming business](/blog/seo-vs-google-ads-dog-grooming) , the head-to-head on cost, speed and durability to decide what to run first.
-- [SEO for dog groomers](/blog/seo-for-dog-groomers) , how to win the free local results that paid search sits on top of.
-- [Google Business Profile for pet grooming](/blog/google-business-profile-for-pet-grooming) , the proximity-driven local listing that decides who shows in the map pack.
-- [Google Ads cost for an Australian small business](/blog/google-ads-cost-australian-small-business) , realistic budgets and what drives the price of a click.
-- [How to choose a Google Ads agency in Australia](/blog/how-to-choose-a-google-ads-agency-australia) , what to look for if you would rather hand the campaign off.
+- [Marketing a pet grooming business in Australia](/blog/pet-grooming-marketing-australia), the full growth guide this paid-search chapter sits inside.
+- [SEO versus Google Ads for a grooming business](/blog/seo-vs-google-ads-dog-grooming), the head-to-head on cost, speed and durability to decide what to run first.
+- [SEO for dog groomers](/blog/seo-for-dog-groomers), how to win the free local results that paid search sits on top of.
+- [Google Business Profile for pet grooming](/blog/google-business-profile-for-pet-grooming), the proximity-driven local listing that decides who shows in the map pack.
+- [Google Ads cost for an Australian small business](/blog/google-ads-cost-australian-small-business), realistic budgets and what drives the price of a click.
+- [How to choose a Google Ads agency in Australia](/blog/how-to-choose-a-google-ads-agency-australia), what to look for if you would rather hand the campaign off.
 
 Want to know whether paid search is the right first move for your salon? Start with a [free 30-minute audit](/audit) and we will map your real numbers before you spend a dollar, or [get in touch](/contact) to talk it through.

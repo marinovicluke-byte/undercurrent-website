@@ -3,6 +3,7 @@ title: "How to Rank a Melbourne Buyers Agency on AI Search"
 description: "Melbourne buyers agencies average 45/100 on our AI search and SEO rubric. Six structural fixes — quick-answer block, schema with sameAs, tier-1 sources, comparison tables, valid llms.txt — to rank in AI search across ChatGPT, Perplexity, and Google AI Overviews."
 metaDescription: "Melbourne buyers agencies average 45/100 on our AI search rubric. Six structural fixes to rank in ChatGPT, Perplexity, and Google AI Overviews."
 date: "2026-05-08"
+dateModified: "2026-10-03"
 slug: "how-to-rank-buyers-agency-ai-search-melbourne"
 cluster: "seo-ai-visibility"
 keyword: "how to rank a buyers agency on ai search melbourne"
@@ -154,7 +155,7 @@ Every buyers-agency article comparing two or more options should render that com
 
 A BOM prefix is a hidden byte-order-mark character that some content management systems, including Yoast's SEO plugin under certain server configurations, prepend to plain-text files automatically, causing AI crawler validators to reject the file as malformed even when the visible content looks correct.
 
-A valid `llms.txt` for a Melbourne buyers agency needs four things:
+**A valid `llms.txt` for a Melbourne buyers agency needs four things**
 
 1. No BOM prefix (the invisible character Yoast sometimes prepends that breaks validation)
 2. A plain-text description of the site's primary topic and geographic focus
