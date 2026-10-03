@@ -96,7 +96,16 @@ Read the last column first, it tells you where your money goes. A tradie chasing
 
 **SEO first, always, because AEO is a layer that sits on top of pages that already work.**
 
-You can't get lifted into an AI Overview if the page isn't indexed and ranking, so the order is: build the page, earn the ranking, which takes 6 to 9 months on a competitive term and 2 to 3 months on a quiet one, then format it for extraction, then build the off-site authority GEO needs. There's one exception. A brand-new site with no content does the SEO and AEO basics at the same time, because clear structure, useful answers and clean schema help both at once, so there's no point staging them. In our own audit corpus, the pages that show up in AI answers are almost always the ones already ranking on page one, not the ones with the fanciest schema bolted onto thin content. For what AEO, GEO and the rest of the alphabet actually mean, see [this rundown of the 2025 search acronyms](https://vtdigital.com.au/seo-strategies-2025-what-aeo-geo-aio-and-sxo-actually-mean/), then run [the free self-check](/blog/seo-audit-self-check-australia) before you spend a cent on AEO.
+You can't get lifted into an AI Overview if the page isn't indexed and ranking, so the order is:
+
+**The order, layer by layer**
+
+1. Build the page.
+2. Earn the ranking, which takes 6 to 9 months on a competitive term and 2 to 3 months on a quiet one.
+3. Format it for extraction.
+4. Build the off-site authority GEO needs.
+
+There's one exception. A brand-new site with no content does the SEO and AEO basics at the same time, because clear structure, useful answers and clean schema help both at once, so there's no point staging them. In our own audit corpus, the pages that show up in AI answers are almost always the ones already ranking on page one, not the ones with the fanciest schema bolted onto thin content. For what AEO, GEO and the rest of the alphabet actually mean, see [this rundown of the 2025 search acronyms](https://vtdigital.com.au/seo-strategies-2025-what-aeo-geo-aio-and-sxo-actually-mean/), then run [the free self-check](/blog/seo-audit-self-check-australia) before you spend a cent on AEO.
 
 ## Which Layer Matters Most for a Local Service Business?
 
@@ -157,7 +166,13 @@ The whole sweep takes about 30 minutes. If layer one has gaps, fix that before y
 
 **Three things hit harder than the score sheet alone shows.**
 
-First, the scores are low across the board. Of the 69 articles we audited against the UnderCurrent Article Reviewer rubric, version 2.0.0, the median landed at 58 out of 100, and 38 of them sat in the weak band below 60. Only 9 cleared 80. Second, the gap almost never came from missing schema or clever GEO tactics. It came from thin content and broken internal links, which is plain old SEO. Third, the pages that did show up in AI answers were, with very few exceptions, the ones already ranking on page one. AEO and GEO never rescued a weak page, they amplified a strong one. Our own articles average about 81 out of 100, and that's the whole trick: do layer one properly, and the other two become worth doing. We've been tracking these scores for 12 months and the pattern hasn't shifted. Want the longer version? Read [how AI search differs from traditional SEO in Australia](/blog/ai-search-vs-traditional-search-australia-2026), or browse [more from our AI-search visibility series](/blog/cluster/seo-ai-visibility).
+**The three things**
+
+- The scores are low across the board. Of the 69 articles we audited against the UnderCurrent Article Reviewer rubric, version 2.0.0, the median landed at 58 out of 100, and 38 of them sat in the weak band below 60. Only 9 cleared 80.
+- The gap almost never came from missing schema or clever GEO tactics. It came from thin content and broken internal links, which is plain old SEO.
+- The pages that did show up in AI answers were, with very few exceptions, the ones already ranking on page one. AEO and GEO never rescued a weak page, they amplified a strong one.
+
+Our own articles average about 81 out of 100, and that's the whole trick: do layer one properly, and the other two become worth doing. We've been tracking these scores for 12 months and the pattern hasn't shifted. Want the longer version? Read [how AI search differs from traditional SEO in Australia](/blog/ai-search-vs-traditional-search-australia-2026), or browse [more from our AI-search visibility series](/blog/cluster/seo-ai-visibility).
 
 ## Do You Need an Agency for This, or Can You DIY?
 

@@ -47,7 +47,14 @@ It isn't only consumers. The [Australian Bureau of Statistics AI transparency st
 
 ## How Does ChatGPT Decide Which Business to Recommend?
 
-**It doesn't "decide" the way Google ranks pages, it reconstructs an answer from the most consistent, credible signals it can find about businesses in your category and area.** Four things do the heavy lifting. First, identity: your name, address, phone, category, and service area must match across your site, your Google Business Profile, and the directories you appear in, or you look like two half-businesses instead of one real one. Second, reputation: a trickle of recent reviews reads as "people use this business", while a last review 18 months old reads as a business gone quiet. Third, third-party mentions: being named on sites you don't control, a local roundup, a directory, a news mention, is the closest thing to a vote AI engines have. Fourth, structure: a site that says plainly what you do, where, and for whom is easy to quote.
+**It doesn't "decide" the way Google ranks pages, it reconstructs an answer from the most consistent, credible signals it can find about businesses in your category and area.**
+
+**Four things do the heavy lifting**
+
+- **Identity:** your name, address, phone, category, and service area must match across your site, your Google Business Profile, and the directories you appear in, or you look like two half-businesses instead of one real one.
+- **Reputation:** a trickle of recent reviews reads as "people use this business", while a last review 18 months old reads as a business gone quiet.
+- **Third-party mentions:** being named on sites you don't control, a local roundup, a directory, a news mention, is the closest thing to a vote AI engines have.
+- **Structure:** a site that says plainly what you do, where, and for whom is easy to quote.
 
 None of that's exotic. It's the same trust stack behind [why some tradies struggle to get Google reviews](/blog/why-tradies-dont-get-google-reviews-australia) and the gaps a [basic SEO self-check](/blog/seo-audit-self-check-australia) flags. A 2023 study even found people answered everyday search tasks faster in a chat than by scanning a results page ([arXiv preprint](https://arxiv.org/pdf/2307.01135)), and [local SEO benchmarks](https://www.rankmax.com.au/articles/local-seo-statistics) keep pointing at consistent business data as the lever.
 
@@ -70,11 +77,13 @@ Keep doing real Google SEO, because ranking on Google in Australia still drives 
 
 **Here is the 30-minute run, in the order I would do it for a business that has never touched ChatGPT SEO.** Set a timer. Nothing needs a developer except step three, and that's copy-paste.
 
-1. **Check your baseline (5 minutes).** In a fresh chat, ask ChatGPT "best [your trade] in [your suburb]" and a couple of variations. Note if you're named and whether the facts are right.
-2. **Tidy your Google Business Profile (8 minutes).** Confirm your name, primary category, service area, phone, hours, and website, then add a few recent photos. It's one of the most reliable sources ChatGPT pulls from for local picks.
-3. **Add LocalBusiness schema (7 minutes).** Paste the snippet from the next section onto your homepage and swap in your real details.
-4. **Trigger three fresh reviews (5 minutes).** Text three recent customers a one-line ask with your review link. Recency beats volume.
-5. **Pitch one local list (5 minutes).** Find one "best [trade] in [city]" roundup and send the author a short, specific pitch.
+**The 30-minute run**
+
+1. **Check your baseline.** In a fresh chat, ask ChatGPT "best [your trade] in [your suburb]" and a couple of variations. Note if you're named and whether the facts are right, **5 minutes**
+2. **Tidy your Google Business Profile.** Confirm your name, primary category, service area, phone, hours, and website, then add a few recent photos. It's one of the most reliable sources ChatGPT pulls from for local picks, **8 minutes**
+3. **Add LocalBusiness schema.** Paste the snippet from the next section onto your homepage and swap in your real details, **7 minutes**
+4. **Trigger three fresh reviews.** Text three recent customers a one-line ask with your review link. Recency beats volume, **5 minutes**
+5. **Pitch one local list.** Find one "best [trade] in [city]" roundup and send the author a short, specific pitch, **5 minutes**
 
 Steps two and three move the most weight for the least effort, so if you only have 10 minutes, do those. Afterwards, run our [free AI search audit](/audit) or the [SEO self-check for Australian businesses](/blog/seo-audit-self-check-australia) to see what's left.
 
@@ -117,7 +126,13 @@ That 25-query sweep is exactly what we run as a free [ChatGPT visibility check](
 
 **We reviewed 69 published articles from 37 Australian websites that target ChatGPT SEO and AI search, scored them on the UnderCurrent Article Reviewer, and honestly, the spread was wider than I expected.** Fewer than 1 in 7 of those articles cleared 80 out of 100. From our wider audit corpus of 146 articles, the ChatGPT-and-AI-search slice averages 59 out of 100, while our own articles on the same rubric average 81. The gap we keep finding is the same: the bar isn't high, most published content just isn't clearing it.
 
-Three things stood out. First, length wasn't the signal: some of the lowest-scoring pieces were the longest, padded with definitions nobody searched for. Second, the cheap wins were the ones people skipped: a direct answer up top, consistent business facts, a real citation or two. Those are the same gaps a [basic AI search self-check](/blog/seo-audit-self-check-australia) flags, and the ones that take minutes to fix. Third, when we look at how our own blog posts get cited by AI tools, the pages that earn mentions are the plain, well-sourced ones. The full benchmark is in [the data behind the best AI search agencies in Australia](/blog/au-seo-agencies-ai-search-audit) and a guide to [comparing AI search agencies](/blog/au-seo-agencies-ai-search-audit).
+**Three things stood out**
+
+- Length wasn't the signal: some of the lowest-scoring pieces were the longest, padded with definitions nobody searched for.
+- The cheap wins were the ones people skipped: a direct answer up top, consistent business facts, a real citation or two. Those are the same gaps a [basic AI search self-check](/blog/seo-audit-self-check-australia) flags, and the ones that take minutes to fix.
+- When we look at how our own blog posts get cited by AI tools, the pages that earn mentions are the plain, well-sourced ones.
+
+The full benchmark is in [the data behind the best AI search agencies in Australia](/blog/au-seo-agencies-ai-search-audit) and a guide to [comparing AI search agencies](/blog/au-seo-agencies-ai-search-audit).
 
 ## What's the Fastest Way to Start Showing Up in ChatGPT Answers?
 
