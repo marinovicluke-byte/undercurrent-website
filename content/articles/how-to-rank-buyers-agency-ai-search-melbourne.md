@@ -154,7 +154,7 @@ Every buyers-agency article comparing two or more options should render that com
 
 A BOM prefix is a hidden byte-order-mark character that some content management systems, including Yoast's SEO plugin under certain server configurations, prepend to plain-text files automatically, causing AI crawler validators to reject the file as malformed even when the visible content looks correct.
 
-A valid `llms.txt` for a Melbourne buyers agency needs four things:
+**A valid `llms.txt` for a Melbourne buyers agency needs four things**
 
 1. No BOM prefix (the invisible character Yoast sometimes prepends that breaks validation)
 2. A plain-text description of the site's primary topic and geographic focus
