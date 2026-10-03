@@ -68,7 +68,17 @@ If your new "AEO" line item has the same deliverables as your old SEO line item,
 
 ## What Are the Red Flags in an AEO Proposal?
 
-**The biggest red flag in an AEO proposal is a guaranteed result, because nobody controls what a model says.** If an agency promises a "#1 spot in ChatGPT" or a fixed ranking inside 3 months, that's a claim they can't substantiate, and the [ACCC](https://www.accc.gov.au/business) is fairly clear that businesses shouldn't make claims they can't back up. Other warning signs: no monthly deliverable you could photograph; "AEO" priced identically to a [generic SEO package](/blog/ai-search-vs-traditional-search-australia-2026); no mention of schema, entities or [a citation report](/blog/seo-audit-self-check-australia); a "proprietary AI ranking score" with no method behind it; and slide after slide about how big AI search is, with nothing about what they'll do for you. Google's own [search spam policies](https://developers.google.com/search/docs/essentials/spam-policies) are blunt about manipulative tactics, so be wary of anyone selling a shortcut. One quieter flag: an agency that won't show you a real client's recent report. Good agencies are itching to. A buyer's guide that won't show its working has the same problem an agency does, which is why ours does.
+**The biggest red flag in an AEO proposal is a guaranteed result, because nobody controls what a model says.** If an agency promises a "#1 spot in ChatGPT" or a fixed ranking inside 3 months, that's a claim they can't substantiate, and the [ACCC](https://www.accc.gov.au/business) is fairly clear that businesses shouldn't make claims they can't back up.
+
+**Other warning signs**
+
+- No monthly deliverable you could photograph.
+- "AEO" priced identically to a [generic SEO package](/blog/ai-search-vs-traditional-search-australia-2026).
+- No mention of schema, entities or [a citation report](/blog/seo-audit-self-check-australia).
+- A "proprietary AI ranking score" with no method behind it.
+- Slide after slide about how big AI search is, with nothing about what they'll do for you.
+
+Google's own [search spam policies](https://developers.google.com/search/docs/essentials/spam-policies) are blunt about manipulative tactics, so be wary of anyone selling a shortcut. One quieter flag: an agency that won't show you a real client's recent report. Good agencies are itching to. A buyer's guide that won't show its working has the same problem an agency does, which is why ours does.
 
 ## How Much Should an AEO Retainer Cost an Australian Small Business?
 
@@ -80,7 +90,15 @@ If your new "AEO" line item has the same deliverables as your old SEO line item,
 
 ## What Surprised Us Auditing Australia's AEO Agency Pages?
 
-**Three things hit harder than the score sheet alone shows.** First, the floor is low: we audited 60 Australian pages targeting agency and AI-search keywords against our own Robin Search rubric, version 2.0.0, and the mean landed at 58.8 out of 100, with 32 of the 60 stuck in the weak band below 60. Looking credible isn't a high bar right now. Second, the gap is real but narrow: just 8 of those 60 pages cleared 80, about 1 in 8, and they did it with the same plain moves, direct answers, schema, hyperlinked sources, not anything exotic. Third, the spread is huge: scores ran from 30 to 90 across 32 different hosts, so "we're an AEO agency" tells you close to nothing about whether the work is any good. Across the [wider set of pages we publish and track](/blog/cluster/seo-ai-visibility), the same pattern holds. The pages that [earned citations in AI answers](/blog/how-to-rank-in-chatgpt-search) looked like real work; the rest looked like last year's SEO deck with a new cover.
+**Three things hit harder than the score sheet alone shows.**
+
+**The three things**
+
+- **The floor is low:** we audited 60 Australian pages targeting agency and AI-search keywords against our own Robin Search rubric, version 2.0.0, and the mean landed at 58.8 out of 100, with 32 of the 60 stuck in the weak band below 60. Looking credible isn't a high bar right now.
+- **The gap is real but narrow:** just 8 of those 60 pages cleared 80, about 1 in 8, and they did it with the same plain moves, direct answers, schema, hyperlinked sources, not anything exotic.
+- **The spread is huge:** scores ran from 30 to 90 across 32 different hosts, so "we're an AEO agency" tells you close to nothing about whether the work is any good.
+
+Across the [wider set of pages we publish and track](/blog/cluster/seo-ai-visibility), the same pattern holds. The pages that [earned citations in AI answers](/blog/how-to-rank-in-chatgpt-search) looked like real work; the rest looked like last year's SEO deck with a new cover.
 
 ## How Does the Best AEO Agency in Australia Earn AI Citations?
 
