@@ -151,25 +151,25 @@ If you're only mentioned on your own website, you're a weak entity. If you're me
 
 For Australian service businesses, the key entity sources are your Google Business Profile, industry associations like Master Plumbers or HIA, and major directories like True Local or Yellow Pages. Getting listed in these places isn't just about backlinks, it's about entity verification. This is part of what we assess when you [work with UnderCurrent](/about).
 
-Start with your [Google Business Profile](https://business.google.com/en-all/business-profile/). Make sure your name, address, phone, service areas, and categories are accurate. Add photos, respond to reviews, post updates. Google's entity data feeds into multiple AI models, including ChatGPT's knowledge graph.
+**Build your entity, in order**
 
-Next, get listed on industry-specific directories. If you're a tradie, get on Master Plumbers, Master Electricians, or HIA member directories. If you're a consultant, get on CPA Australia or a relevant professional body. These are authority signals AI engines trust.
+1. **Start with your [Google Business Profile](https://business.google.com/en-all/business-profile/).** Make sure your name, address, phone, service areas, and categories are accurate. Add photos, respond to reviews, post updates. Google's entity data feeds into multiple AI models, including ChatGPT's knowledge graph.
+2. **Get listed on industry-specific directories.** If you're a tradie, get on Master Plumbers, Master Electricians, or HIA member directories. If you're a consultant, get on CPA Australia or a relevant professional body. These are authority signals AI engines trust.
+3. **Get mentioned in local news or industry blogs.** Write a guest post for a trade publication. Get interviewed by a local business podcast. Sponsor a community event and get listed on the event site. Every mention on an authority domain strengthens your entity profile.
+4. **Use schema markup to connect your content to your entity.** Include Organization schema with a link to your Google Business Profile. Use Person schema for your author bio. Link your content to your verified entities so AI engines know they're the same business.
 
-Then, get mentioned in local news or industry blogs. Write a guest post for a trade publication. Get interviewed by a local business podcast. Sponsor a community event and get listed on the event site. Every mention on an authority domain strengthens your entity profile.
-
-Finally, use schema markup to connect your content to your entity. Include Organization schema with a link to your Google Business Profile. Use Person schema for your author bio. Link your content to your verified entities so AI engines know they're the same business. Our [blog](/blog) covers more on entity-building strategies for Australian service businesses.
+Our [blog](/blog) covers more on entity-building strategies for Australian service businesses.
 
 ## What Should Australian Businesses Do First to Rank in ChatGPT Search?
 
 You don't need a massive content library or a six-month SEO campaign to start showing up in ChatGPT. You need to fix the basics, structure your existing content properly, and make sure AI crawlers can find you.
 
-Start by auditing your top 5-10 service pages. Check if they lead with a direct answer in the first 60 words. If they don't, rewrite the opening paragraph. Answer-first, no preamble. [UnderCurrent's automation services](/services) can help you audit and fix these structural issues faster.
+**The four first steps**
 
-Next, add an FAQ section to each service page. Pick the 5-7 questions customers actually ask you, write 60-80 word answers, and wrap them in FAQPage schema. Use [Google's Rich Results Test](https://search.google.com/test/rich-results) to validate. This alone will get you into AI citation contention for those queries.
-
-Then, submit your sitemap to [Bing Webmaster Tools](https://www.bing.com/webmasters/about). ChatGPT uses Bing's index for newer content. If Bing hasn't crawled you, ChatGPT doesn't know you exist. Check your robots.txt file and make sure you're not blocking GPTBot or ClaudeBot. [Google's Search Console documentation](https://support.google.com/webmasters/answer/9128668) covers the technical setup.
-
-Finally, claim and set up your Google Business Profile. Add your service areas in kilometres, upload photos with alt text describing your location and service, and link it in your Organization schema. This is your entity anchor for AI search.
+1. **Audit your top 5-10 service pages.** Check if they lead with a direct answer in the first 60 words. If they don't, rewrite the opening paragraph. Answer-first, no preamble. [UnderCurrent's automation services](/services) can help you audit and fix these structural issues faster.
+2. **Add an FAQ section to each service page.** Pick the 5-7 questions customers actually ask you, write 60-80 word answers, and wrap them in FAQPage schema. Use [Google's Rich Results Test](https://search.google.com/test/rich-results) to validate. This alone will get you into AI citation contention for those queries.
+3. **Submit your sitemap to [Bing Webmaster Tools](https://www.bing.com/webmasters/about).** ChatGPT uses Bing's index for newer content. If Bing hasn't crawled you, ChatGPT doesn't know you exist. Check your robots.txt file and make sure you're not blocking GPTBot or ClaudeBot. [Google's Search Console documentation](https://support.google.com/webmasters/answer/9128668) covers the technical setup.
+4. **Claim and set up your Google Business Profile.** Add your service areas in kilometres, upload photos with alt text describing your location and service, and link it in your Organization schema. This is your entity anchor for AI search.
 
 In our automation assessments, businesses that complete these four steps typically see first AI citations within 4-6 weeks. One Melbourne-based plumbing outfit implemented these changes over two weeks and started getting enquiries from people who said "ChatGPT recommended you for emergency plumbing Oakleigh" within a month. Their AI referrals went from zero to 4-6 jobs per month, worth about $2,800-$4,200 in revenue.
 
