@@ -2,6 +2,7 @@
 title: "Best Marketing Automation Software for Australian SMBs (9 Tools)"
 description: "Compare the 9 best marketing automation tools for Australian SMEs in 2026. Real pricing, local integrations, and which pain points each platform solves."
 date: "2026-01-09"
+dateModified: "2026-09-29"
 slug: "best-marketing-automation-software-australia-2026"
 cluster: "lead-generation"
 keyword: "best marketing automation software australia 2026"

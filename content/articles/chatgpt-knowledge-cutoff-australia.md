@@ -2,6 +2,7 @@
 title: "ChatGPT Knowledge Cutoff Australia: Audit Your Visibility"
 description: "GPT-5.5, Claude Opus 4.7, and Gemini 3 each have different knowledge cutoffs. Here's the verified table and the two-track plan for Australian SMBs."
 date: "2026-05-18"
+dateModified: "2026-10-02"
 slug: "chatgpt-knowledge-cutoff-australia"
 cluster: "seo-ai-visibility"
 keyword: "chatgpt knowledge cutoff australia"
