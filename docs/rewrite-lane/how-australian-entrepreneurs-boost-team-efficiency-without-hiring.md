@@ -120,6 +120,15 @@ Body, from the H1 to the end of the last section before the FAQ, with link URLs 
 - Before: 2,880
 - After: 2,576 (down 304, or 11%). The format-pass survey script counts 3,125 to 2,844 (-9.0%).
 
+## Checks
+
+- **`next build`** (run directly, no IndexNow postbuild): passes. Both Worked sums ($70,000 + $8,400 = $78,400, and 11 x $120 x 48 = $63,360) pass the workings check.
+- **`scripts/check-format-pass.mjs`** (batch 1 script, not committed here): no flagged figure, no em dash, one H1. Its new numbers are 48, 52, 2025, 8,400, 78,400 and 63,360, plus "03" from the new date. All are sourced or a labelled example. The words (-9.0%), front matter and Quick Answer changes are intended.
+- **`scripts/check-quick-answers.mjs`**: 71 of 71 pass.
+- **Headings:** unchanged. A Sources H2 was added.
+- **Head against production:** title and canonical match. In the JSON-LD only `dateModified`, the description (the new meta) and the FAQ answer texts differ. The page shows "Updated 3 Oct 2026".
+- **`next start`, at 390 and 1440, in Chromium and WebKit** (CSP stripped for WebKit): no sideways scroll, and all 5 blocks render. The rotating photo sits before the same H2 as on production.
+
 ## Other front matter
 
 - **`dateModified: "2026-10-03"`** was added under Luke's 11:50 dates rule. The rewrite lane picks 2 or 3 Oct deterministically from the slug: the first byte of sha256(slug), even gives 2 Oct, odd gives 3 Oct (`0xf5` here). The published date is unchanged.
