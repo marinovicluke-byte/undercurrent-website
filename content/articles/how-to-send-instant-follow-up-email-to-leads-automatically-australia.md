@@ -2,6 +2,7 @@
 title: "How to Send Instant Follow-Up Emails Automatically"
 description: "Step-by-step guide to setting up instant automated follow-up emails for Australian small businesses. Templates, timing, and platform comparisons."
 date: "2026-04-15"
+dateModified: "2026-09-29"
 slug: "how-to-send-instant-follow-up-email-to-leads-automatically-australia"
 cluster: "lead-generation"
 heroImage: "/articles/how-to-send-instant-follow-up-email-to-leads-automatically-australia/hero.jpg"
@@ -81,25 +82,13 @@ Jake the electrician uses HubSpot free tier. Sarah the agency owner uses ActiveC
 
 We'll walk through HubSpot (free tier) because it's the most common platform for Australian small businesses getting started with [sales automation](/sales-automation).
 
-**Step 1: Create your form**
+**Set it up in HubSpot, step by step**
 
-Log into HubSpot, go to Marketing > Forms, click Create Form. Add fields for name, email, phone, and a dropdown for service type (if you offer multiple services). Embed the form on your website or use the HubSpot-hosted link.
-
-**Step 2: Write your template email**
-
-Go to Marketing > Email, click Create Email, choose Simple. Write your instant response. Template below.
-
-**Step 3: Build the workflow**
-
-Go to Automation > Workflows, click Create Workflow, choose "Start from scratch." **A workflow** is a set of automated actions triggered by specific contact behaviours or properties. Set the trigger to "Contact has filled out [your form name]." Add an action: Send Email > choose your template. Set delay to 0 minutes. Turn the workflow on.
-
-**Step 4: Test it**
-
-Fill out your own form with a test email. You should get the automated reply within 60 seconds. If not, check the workflow is turned on and the trigger matches your form.
-
-**Step 5: Monitor and improve**
-
-HubSpot shows you open rates, click rates, and reply rates. After 2 weeks, check your data. If open rates are below 40%, test a new subject line. If reply rates are low, make your call-to-action clearer.
+1. **Create your form.** Log into HubSpot, go to Marketing > Forms, click Create Form. Add fields for name, email, phone, and a dropdown for service type (if you offer multiple services). Embed the form on your website or use the HubSpot-hosted link.
+2. **Write your template email.** Go to Marketing > Email, click Create Email, choose Simple. Write your instant response. Template below.
+3. **Build the workflow.** Go to Automation > Workflows, click Create Workflow, choose "Start from scratch." **A workflow** is a set of automated actions triggered by specific contact behaviours or properties. Set the trigger to "Contact has filled out [your form name]." Add an action: Send Email > choose your template. Set delay to 0 minutes. Turn the workflow on.
+4. **Test it.** Fill out your own form with a test email. You should get the automated reply within 60 seconds. If not, check the workflow is turned on and the trigger matches your form.
+5. **Monitor and improve.** HubSpot shows you open rates, click rates, and reply rates. After 2 weeks, check your data. If open rates are below 40%, test a new subject line. If reply rates are low, make your call-to-action clearer.
 
 The whole setup takes 30-45 minutes first time. After that, you can duplicate the workflow for different lead sources in under 10 minutes.
 
@@ -113,7 +102,8 @@ Your automated email isn't trying to close the sale. It's trying to keep you in 
 
 **A follow-up sequence** is a series of timed emails sent to a lead after their initial enquiry, designed to move them closer to booking.
 
-Good instant follow-up emails do three things:
+**Good instant follow-up emails do three things**
+
 1. Confirm you received their enquiry
 2. Set expectations for next steps
 3. Give them something useful while they wait
@@ -173,12 +163,12 @@ Lisa the management consultant tested three versions of her instant email. Versi
 
 But one email isn't enough. You need a sequence.
 
-Here's the proven timing structure for Australian service businesses:
+**Here's the proven timing structure for Australian service businesses**
 
-**Email 1: Instant (0 minutes):** Confirmation + next steps
-**Email 2: Same day or next day (+4-24 hours):** Detailed response, quote, or booking link
-**Email 3: Day 3 (+72 hours):** "Still interested?" nudge with added value
-**Email 4: Day 7 (+168 hours):** Final check-in before you move on
+1. Confirmation + next steps, **Instant (0 minutes)**
+2. Detailed response, quote, or booking link, **Same day or next day (+4-24 hours)**
+3. "Still interested?" nudge with added value, **Day 3 (+72 hours)**
+4. Final check-in before you move on, **Day 7 (+168 hours)**
 
 Research from HubSpot shows that sending 3-5 follow-ups increases reply rates by 40% compared to sending just one. But there's a balance. More than 6 emails in 2 weeks tips into spam territory.
 
@@ -222,15 +212,12 @@ The more specific your form, the more you can personalise. But don't make your f
 
 ## How Do You Know If Your Automated Follow-Up Is Actually Working?
 
-Track four metrics:
+**Track four metrics**
 
-**1. Delivery rate:** What percentage of emails actually land in inboxes? Should be 98%+. If it's lower, your domain or IP is flagged as spam.
-
-**2. Open rate:** What percentage of delivered emails get opened? 40-60% is normal for instant follow-ups. Below 30% means bad subject lines or wrong timing.
-
-**3. Click rate:** What percentage clicked a link? 10-20% is good for instant emails. Below 5% means your call-to-action is weak.
-
-**4. Reply/conversion rate:** What percentage booked a call, replied, or became a customer? This is the only metric that matters for revenue. Track it in your CRM.
+- **Delivery rate:** What percentage of emails actually land in inboxes? Should be 98%+. If it's lower, your domain or IP is flagged as spam.
+- **Open rate:** What percentage of delivered emails get opened? 40-60% is normal for instant follow-ups. Below 30% means bad subject lines or wrong timing.
+- **Click rate:** What percentage clicked a link? 10-20% is good for instant emails. Below 5% means your call-to-action is weak.
+- **Reply/conversion rate:** What percentage booked a call, replied, or became a customer? This is the only metric that matters for revenue. Track it in your CRM.
 
 Sarah tracks one more: **time to first response.** Her automation logs when the lead came in and when she sent her personalised follow-up. Goal is under 4 hours. If it creeps above 6 hours, she knows her team is stretched.
 
@@ -244,15 +231,14 @@ For more on how automation impacts your bottom line, check out our [free automat
 
 ## What Should You Automate Next After Instant Follow-Up Emails?
 
-Once instant follow-up is working, the next high-impact automations for Australian service businesses are:
+Once instant follow-up is working, the next high-impact automations for Australian service businesses are these.
 
-**Quote follow-up:** If they don't reply to your quote in 3 days, send a "did you get my quote?" email. Recovers 15-20% of ghosted leads.
+**The next four automations**
 
-**Review requests:** 24 hours after job completion, send an email asking for a Google review. Most tradies don't ask at the right time.
-
-**Invoice reminders:** Chase overdue invoices automatically at 7, 14, and 30 days. Overdue invoices hurt your cash flow more than you think.
-
-**Appointment reminders:** SMS or email 24 hours before a booked job. Cuts no-shows by 40%.
+- **Quote follow-up:** If they don't reply to your quote in 3 days, send a "did you get my quote?" email. Recovers 15-20% of ghosted leads.
+- **Review requests:** 24 hours after job completion, send an email asking for a Google review. Most tradies don't ask at the right time.
+- **Invoice reminders:** Chase overdue invoices automatically at 7, 14, and 30 days. Overdue invoices hurt your cash flow more than you think.
+- **Appointment reminders:** SMS or email 24 hours before a booked job. Cuts no-shows by 40%.
 
 Tom the plumber automated all four. His revenue is up 30% year-on-year, he's spending 8 hours less per week on admin, and he's closed 40% more jobs from the same lead volume.
 
