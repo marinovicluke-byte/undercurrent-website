@@ -2,6 +2,7 @@
 title: "What Google Ads Cost an Australian Small Business in 2026"
 description: "What Google Ads really costs an Australian small business in 2026: real monthly budget bands, click prices by industry, and where ad spend leaks."
 date: "2026-05-24"
+dateModified: "2026-09-30"
 slug: "google-ads-cost-australian-small-business"
 cluster: "seo-ai-visibility"
 keyword: "google ads cost"
@@ -150,11 +151,16 @@ Your daily budget is an average, not a hard cap: [Google can spend up to twice i
 
 ## Where do small businesses burn money on Google Ads?
 
-**Most wasted Google Ads spend traces back to four fixable mistakes, and broken conversion tracking is the biggest.** If you can't see which clicks become customers, every decision is a guess, and [Google's automated bidding](https://support.google.com/google-ads/answer/2979071) just chases noise. For trade businesses using ServiceM8, connecting job completions back to the ad click that generated the booking is often the single highest-leverage fix available.
+**Most wasted Google Ads spend traces back to four fixable mistakes, and broken conversion tracking is the biggest.**
 
-The second leak is broad keyword matching with no negative-keyword list. Unchecked, a large slice of search spend flows to queries that never convert: people searching for jobs, free options, or how-to advice. Reviewing your search-term report and adding negatives pays for itself fast.
+**The four leaks**
 
-The third is sending paid clicks to your homepage instead of a focused landing page; [landing page experience is a Quality Score signal](https://support.google.com/google-ads/answer/6167118), and a homepage answers ten questions while a paid visitor has one. The fourth is leaving Google's auto-apply recommendations on, which quietly raise budgets in Google's interest. Treating ad spend like any [marketing automation](/glossary/what-is-marketing-automation) decision, measured and reviewed, separates a profitable account from a leaky one, the discipline behind any [system we build](/blog/cluster/custom-integrations). It also explains [why some trades quietly lose customers](/blog/why-tradies-dont-get-google-reviews-australia).
+- **Broken conversion tracking.** If you can't see which clicks become customers, every decision is a guess, and [Google's automated bidding](https://support.google.com/google-ads/answer/2979071) just chases noise. For trade businesses using ServiceM8, connecting job completions back to the ad click that generated the booking is often the single highest-leverage fix available.
+- **Broad keyword matching with no negative-keyword list.** Unchecked, a large slice of search spend flows to queries that never convert: people searching for jobs, free options, or how-to advice. Reviewing your search-term report and adding negatives pays for itself fast.
+- **Sending paid clicks to your homepage** instead of a focused landing page; [landing page experience is a Quality Score signal](https://support.google.com/google-ads/answer/6167118), and a homepage answers ten questions while a paid visitor has one.
+- **Leaving Google's auto-apply recommendations on**, which quietly raise budgets in Google's interest.
+
+Treating ad spend like any [marketing automation](/glossary/what-is-marketing-automation) decision, measured and reviewed, separates a profitable account from a leaky one, the discipline behind any [system we build](/blog/cluster/custom-integrations). It also explains [why some trades quietly lose customers](/blog/why-tradies-dont-get-google-reviews-australia).
 
 ## What does it cost to hire an agency to manage Google Ads?
 

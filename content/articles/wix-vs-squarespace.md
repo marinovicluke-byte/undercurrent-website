@@ -126,7 +126,7 @@ Both builders cover the SEO basics: editable page titles, meta descriptions, cle
 | Apps, integrations and flexibility | 10% | 9 | 6 |
 | Speed and technical SEO control | 10% | 6 | 6 |
 
-*These scores reflect editorial judgement weighted across the criteria shown , they are not drawn from external research or third-party benchmarks.*
+*These scores reflect editorial judgement weighted across the criteria shown; they are not drawn from external research or third-party benchmarks.*
 
 Weighted out, Wix scores 7.5 and Squarespace 7.35, a rounding-error gap. But look at the bottom row: both score 6 on speed and technical SEO control, the lowest mark on either card. That weak spot is why the comparison can't stop here.
 
@@ -265,11 +265,11 @@ Wix and Squarespace both handle the basics of local SEO well enough for an Austr
 
 ## Sources
 
-1. [ABS , Counts of Australian Businesses, latest release](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release)
-2. [Expert Market , Wix vs Squarespace 2026 comparison](https://www.expertmarket.com/website-builders/wix-vs-squarespace)
-3. [Site Builder Report , Wix vs Squarespace](https://www.sitebuilderreport.com/wix-vs-squarespace)
-4. [Zapier , Wix vs Squarespace](https://zapier.com/blog/wix-vs-squarespace/)
-5. [Ecommerce Gold , Wix vs Squarespace speed and performance testing](https://www.ecommerce-gold.com/wix-vs-squarespace/)
-6. [Google , new generative AI experiences in Search (AI Overviews launch)](https://blog.google/products-and-platforms/products/search/generative-ai-google-search-may-2024/)
-7. [Google Search Central , structured data guidelines](https://developers.google.com/search/docs/appearance/structured-data)
-8. [ASBFEO , number of small businesses in Australia](https://www.asbfeo.gov.au/small-business-data-portal/number-small-businesses-australia)
+1. [ABS: Counts of Australian Businesses, latest release](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release)
+2. [Expert Market: Wix vs Squarespace 2026 comparison](https://www.expertmarket.com/website-builders/wix-vs-squarespace)
+3. [Site Builder Report: Wix vs Squarespace](https://www.sitebuilderreport.com/wix-vs-squarespace)
+4. [Zapier: Wix vs Squarespace](https://zapier.com/blog/wix-vs-squarespace/)
+5. [Ecommerce Gold: Wix vs Squarespace speed and performance testing](https://www.ecommerce-gold.com/wix-vs-squarespace/)
+6. [Google: new generative AI experiences in Search (AI Overviews launch)](https://blog.google/products-and-platforms/products/search/generative-ai-google-search-may-2024/)
+7. [Google Search Central: structured data guidelines](https://developers.google.com/search/docs/appearance/structured-data)
+8. [ASBFEO: number of small businesses in Australia](https://www.asbfeo.gov.au/small-business-data-portal/number-small-businesses-australia)
