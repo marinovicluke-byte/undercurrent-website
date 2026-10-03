@@ -122,7 +122,9 @@ Time-poor but cash-rich? An agency saves the hours. The opposite? A DIY platform
 
 **Building a small business website follows the same five steps whichever platform you choose.**
 
-Once your plan and route are set, the build itself is repeatable. **Work through these steps in order, and don't skip ahead**
+Once your plan and route are set, the build itself is repeatable.
+
+**Work through these steps in order, and don't skip ahead**
 
 1. **Register a domain and hosting.** Pick a short .com.au or .com name and a fast, Australian-friendly host. Confirm HTTPS is on by default. Budget AUD $15–$30/year for a .com.au domain and AUD $100–$300/year for a quality Australian hosting plan.
 2. **Choose a platform and template.** Match it to your plan from step one, not to the flashiest demo you saw. A trades business owner who needs to capture booking enquiries wants a simple form-forward template, not an e-commerce theme built for product grids.
