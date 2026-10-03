@@ -2,7 +2,7 @@
 title: "Run This Local SEO Checklist Every Quarter (2026 Guide)"
 description: "A practical quarterly local SEO checklist for Australian service businesses. Audit your Google Business Profile, reviews, citations and pages, step by step."
 date: "2026-06-07"
-dateModified: "2026-09-30"
+dateModified: "2026-10-03"
 slug: "local-seo-checklist"
 cluster: "seo-ai-visibility"
 keyword: "local seo checklist"
@@ -11,7 +11,7 @@ level: "intermediate"
 readingTime: 11
 faqs:
   - q: "How much does local SEO cost for a small business in Australia?"
-    a: "Local SEO costs vary by how you run it. Doing it yourself costs only your time, roughly four to six hours each quarter to work the checklist. Hiring an agency in Australia usually costs between AUD $1,000 and AUD $3,000 a month, depending on your market and how many locations you cover, with competitive niches sitting at the top of that range. Whichever route you pick, budget for at least a year, since local SEO compounds over quarterly passes rather than working overnight."
+    a: "Local SEO costs vary by how you run it. Doing it yourself costs only your time, roughly four to six hours each quarter to work the checklist. Hiring someone is priced by the work. UnderCurrent prices it case by case: expect to pay around $500 to $2,000 a month, depending on your market and how many locations you cover, plus a one-off implementation fee scoped at the start. Prices exclude GST. Whichever route you pick, budget for at least a year, since local SEO compounds over quarterly passes rather than working overnight."
   - q: "What is the difference between local SEO and national SEO?"
     a: "Local SEO targets searches tied to a place, like \"electrician in Geelong\" or \"near me\" queries, and it leans heavily on your Google Business Profile, reviews and map-pack ranking. Standard SEO targets searches with no location attached and competes on content depth and backlinks across a whole country. A service business that wins work from its local area should prioritise local SEO first, then expand into broader SEO once the local pack is locked in."
   - q: "How many Google reviews do I need to rank in the local pack?"
@@ -205,7 +205,7 @@ You also have to decide who runs it. Here's the honest comparison:
 
 | Factor | DIY (in-house) | SEO agency |
 |---|---|---|
-| Typical cost | Your time, around 4-6 hours a quarter | AUD $1,000-$3,000 per month |
+| Typical cost | Your time, around 4-6 hours a quarter | Case by case, around $500-$2,000 a month with UnderCurrent |
 | Best for | Single-location businesses | Multi-location or competitive niches |
 | Speed to results | Slower, with a learning curve | Faster, an established process |
 | Main risk | Missing the technical items | Paying through the quiet months |
@@ -277,7 +277,7 @@ Four passes a year is a full year of staying ahead of the set-and-forget crowd, 
 
 **How much does local SEO cost for a small business in Australia?**
 
-Local SEO costs vary by how you run it. Doing it yourself costs only your time, roughly four to six hours each quarter to work the checklist. Hiring an agency in Australia usually costs between AUD $1,000 and AUD $3,000 a month, depending on your market and how many locations you cover, with competitive niches sitting at the top of that range. Whichever route you pick, budget for at least a year, since local SEO compounds over quarterly passes rather than working overnight.
+Local SEO costs vary by how you run it. Doing it yourself costs only your time, roughly four to six hours each quarter to work the checklist. Hiring someone is priced by the work. UnderCurrent prices it case by case: expect to pay around $500 to $2,000 a month, depending on your market and how many locations you cover, plus a one-off implementation fee scoped at the start. Prices exclude GST. Whichever route you pick, budget for at least a year, since local SEO compounds over quarterly passes rather than working overnight.
 
 **What is the difference between local SEO and national SEO?**
 

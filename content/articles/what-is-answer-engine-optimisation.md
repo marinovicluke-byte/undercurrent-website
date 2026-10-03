@@ -2,7 +2,7 @@
 title: "What is Answer Engine Optimisation? A Plain-English Guide"
 description: "Answer engine optimisation is how Australian businesses get cited by ChatGPT, Perplexity, and Google AI Overviews. A plain-English guide for owners."
 date: "2026-05-14"
-dateModified: "2026-10-02"
+dateModified: "2026-10-03"
 slug: "what-is-answer-engine-optimisation"
 cluster: "seo-ai-visibility"
 keyword: "answer engine optimisation"
@@ -11,7 +11,7 @@ level: "intermediate"
 readingTime: 10
 faqs:
   - q: "How much does answer engine optimisation cost in Australia in 2026?"
-    a: "Pricing splits into three tiers in our experience. A foundational AEO audit and one-off schema implementation lands at $1,500 to $3,000. An ongoing retainer that covers content production, schema maintenance, and citation tracking runs $2,000 to $10,000 per month for small to mid-sized service businesses, in line with TitanBlue's benchmarks for Australian SEO. Enterprise scopes with multiple brands or product lines can exceed $15,000 per month. Tooling alone, if you DIY, sits at $40 to $300 per month depending on whether you're tracking a single location or a multi-site footprint."
+    a: "UnderCurrent prices AEO case by case. Expect to pay around $500 to $2,000 a month, depending on the work needed, plus a one-off implementation fee for the audit and schema work, scoped at the start. Prices exclude GST. Titan Blue, a Gold Coast agency, puts typical Australian SEO spend higher, at A$2,000 to A$10,000 a month, with enterprise work above A$15,000. Tooling alone, if you DIY, sits at $40 to $300 per month depending on whether you're tracking a single location or a multi-site footprint."
   - q: "Which AI engines does AEO target, ChatGPT, Perplexity, Google AI Overviews?"
     a: "The four worth tracking today are ChatGPT (OpenAI), Perplexity, Google's AI Overviews and AI Mode, and Gemini. Claude is increasingly relevant for B2B research queries. The four overlap on retrieval signals, but each weights citation differently, which is why a page can get cited in Perplexity and missed by ChatGPT. A serious AEO program tracks all four on a weekly cadence and writes the gaps into the next sprint. Tracking only Google AI Overviews understates how much of buyer research has moved to direct ChatGPT and Perplexity sessions."
   - q: "Do I need AEO if my Google rankings are already good?"
@@ -100,8 +100,8 @@ For step three, the minimal FAQ block looks like this:
 | Approach | Setup time | Monthly spend | Best for |
 |---|---|---|---|
 | DIY AEO | 4-6 hrs/wk ongoing | $0-$200 in tools | Technical owners |
-| Hybrid (audit then DIY) | 4 hrs/mo | $1,500-$3,000 + tool stack | Limited ops capacity |
-| Full agency partnership | 2 hrs/mo on review calls | [$2,000-$10,000/mo per AU benchmarks](https://titanblue.com.au/seo-services-in-2026-a-strategic-comparison-for-australian-businesses/) | AI search as a sales channel |
+| Hybrid (audit then DIY) | 4 hrs/mo | One-off implementation fee, scoped at the start, + tool stack | Limited ops capacity |
+| Full agency partnership | 2 hrs/mo on review calls | Around $500-$2,000/mo with UnderCurrent; [A$2,000-$10,000/mo per Titan Blue](https://titanblue.com.au/seo-services-in-2026-a-strategic-comparison-for-australian-businesses/) | AI search as a sales channel |
 
 Most owners sit in the hybrid lane for the first six months. If you're comparing Australian AI search agencies, shortlist on citation evidence, not slide decks. [Search Engine Journal's review of AEO methodology](https://www.searchenginejournal.com) is a useful sense-check.
 
@@ -116,7 +116,7 @@ Most owners sit in the hybrid lane for the first six months. If you're comparing
 
 ### How much does answer engine optimisation cost in Australia in 2026?
 
-**Pricing splits into three tiers in our experience.** A foundational AEO audit and one-off schema implementation lands at $1,500 to $3,000. An ongoing retainer that covers content production, schema maintenance, and citation tracking runs $2,000 to $10,000 per month for small to mid-sized service businesses, in line with [TitanBlue's benchmarks for Australian SEO](https://titanblue.com.au/seo-services-in-2026-a-strategic-comparison-for-australian-businesses/). Enterprise scopes with multiple brands or product lines can exceed $15,000 per month. Tooling alone, if you DIY, sits at $40 to $300 per month depending on whether you're tracking a single location or a multi-site footprint.
+**UnderCurrent prices AEO case by case.** Expect to pay around $500 to $2,000 a month, depending on the work needed, plus a one-off implementation fee for the audit and schema work, scoped at the start. Prices exclude GST. [Titan Blue](https://titanblue.com.au/seo-services-in-2026-a-strategic-comparison-for-australian-businesses/), a Gold Coast agency, puts typical Australian SEO spend higher, at A$2,000 to A$10,000 a month, with enterprise work above A$15,000. Tooling alone, if you DIY, sits at $40 to $300 per month depending on whether you're tracking a single location or a multi-site footprint.
 
 ### Which AI engines does AEO target, ChatGPT, Perplexity, Google AI Overviews?
 

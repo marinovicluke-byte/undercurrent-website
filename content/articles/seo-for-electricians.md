@@ -2,7 +2,7 @@
 title: "SEO for Electricians: Rank Higher in Local Search"
 description: "SEO for electricians, built for Australian sparkies. Rank in the Google map pack with a complete profile, suburb pages, and a steady review habit."
 date: "2026-06-04"
-dateModified: "2026-10-01"
+dateModified: "2026-10-03"
 slug: "seo-for-electricians"
 cluster: "seo-ai-visibility"
 keyword: "seo for electricians"
@@ -174,16 +174,16 @@ Three things surprised us when we audited that [SEO content corpus](/blog/au-seo
 
 ## What does SEO for electricians cost in Australia?
 
-**Electrician SEO in Australia runs from a few hundred dollars a month to several thousand, and the cheap end is a trap.** Price tracks scope: a micro package covers basics, a local retainer adds content, citations, and review systems. Below the market floor, work is offshored or not happening.
+**Electrician SEO is priced by the work it needs.** UnderCurrent prices SEO case by case. Expect to pay around $500 to $2,000 a month, depending on the work needed. Basic SEO starts around $500 a month, and there is usually a one-off implementation fee, scoped at the start. Prices exclude GST. Price tracks scope: a micro package covers basics, a local retainer adds content, citations and review systems.
 
-| Option | Typical monthly cost (AUD) | What you get |
-|---|---|---|
-| Do it yourself | Your own time | Profile setup, slow progress, no link building |
-| Micro package | AUD $500 to $1,200 | Basic fixes, profile, a little content |
-| Local retainer | AUD $1,200 to $2,500 | On-page work, citations, reviews, reporting |
-| Growth retainer | AUD $2,500 to $5,000 | Full strategy, content, active link building |
+| Option | What you get |
+|---|---|
+| Do it yourself | Profile setup, slow progress, no link building |
+| Micro package | Basic fixes, profile, a little content |
+| Local retainer | On-page work, citations, reviews, reporting |
+| Growth retainer | Full strategy, content, active link building |
 
-For most suburban electricians, the local retainer band fits: enough to move the map pack without enterprise scope. Watch for lock-in contracts and vague deliverables; a good provider names the work, suburbs, and reporting up front. See our full guide to [SEO pricing in Australia](/blog/seo-pricing-australia-2026).
+For most suburban electricians, the local retainer fits: enough to move the map pack without enterprise scope. Watch for lock-in contracts and vague deliverables; a good provider names the work, suburbs, and reporting up front. See our full guide to [SEO pricing in Australia](/blog/seo-pricing-australia-2026).
 
 ## What mistakes cost electricians the most rankings?
 

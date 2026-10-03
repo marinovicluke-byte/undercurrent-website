@@ -2,7 +2,7 @@
 title: "How to Choose Local SEO Services in Australia"
 description: "What local SEO services include, from Google Business Profile to reviews and AI-search visibility, and how to choose a provider in Australia."
 date: "2026-05-20"
-dateModified: "2026-10-02"
+dateModified: "2026-10-03"
 slug: "local-seo-services-australia"
 cluster: "seo-ai-visibility"
 keyword: "local seo services"
@@ -219,11 +219,11 @@ We pressure-tested this in our [audit of Australian SEO agencies on AI search](/
 
 ## How much do local SEO services cost in Australia?
 
-**Local SEO services in Australia generally run from $200 to $2,000 a month, with one-off setup work charged separately.** The range is wide because "local SEO" describes both a light listings tidy-up and a full multi-channel program.
+**Local SEO is priced by the work it needs, with one-off setup work charged separately.** UnderCurrent prices it case by case: expect to pay around $500 to $2,000 a month, depending on the work needed, plus a one-off implementation fee scoped at the start. Prices exclude GST. The work varies because "local SEO" describes both a light listings tidy-up and a full multi-channel program.
 
-As a working guide, basic profile maintenance for a single location sits around AUD 200 to AUD 500 a month, a standard managed service around AUD 500 to AUD 1,000, and an active premium service with competitor tracking and AI-search work around AUD 1,000 to AUD 2,000. Multi-location businesses pay more in total but less per site.
+Basic profile upkeep for a single location sits at the low end. Competitor tracking and AI-search work move it up. Multi-location businesses pay more in total but less per site.
 
-One-off jobs are priced apart: initial profile setup runs roughly AUD 400 to AUD 1,200, and a 50-directory citation build around AUD 400 to AUD 700. Anything far cheaper usually means automated bulk submissions that can actively hurt you, the kind of shortcut the [federal small business advice service](https://business.gov.au/expertise-and-advice/australian-small-business-and-family-enterprise-ombudsman-asbfeo) is worth checking against. For the wider picture, see our breakdown of [SEO pricing in Australia](/blog/seo-pricing-australia-2026).
+One-off jobs, such as the first profile setup and a citation build, are scoped and priced apart. A citation build that costs next to nothing usually means automated bulk submissions that can actively hurt you, the kind of shortcut the [federal small business advice service](https://business.gov.au/expertise-and-advice/australian-small-business-and-family-enterprise-ombudsman-asbfeo) is worth checking against. For the wider picture, see our breakdown of [SEO pricing in Australia](/blog/seo-pricing-australia-2026).
 
 ## How long do local SEO services take to work?
 

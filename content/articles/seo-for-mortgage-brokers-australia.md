@@ -2,7 +2,7 @@
 title: "How to Win SEO for Mortgage Brokers in Australia, 2026"
 description: "SEO for mortgage brokers in 2026 is four jobs: Google organic, local map pack, AI search, and comparison content. A plain-English guide for Australian brokers."
 date: "2026-06-05"
-dateModified: "2026-10-02"
+dateModified: "2026-10-03"
 slug: "seo-for-mortgage-brokers-australia"
 cluster: "industry-guides"
 keyword: "seo for mortgage brokers"
@@ -175,15 +175,15 @@ When a dispute does escalate, it lands with [AFCA](/glossary/what-is-afca), the 
 
 ## What does SEO for mortgage brokers cost, and how long until it works?
 
-**Most Australian brokers spend between AUD $1,000 and $2,500 a month on local SEO, and results land in 3 to 6 months, not three weeks.** The range tracks the rates finance-focused agencies advertise, per the [Semrush agency directory](https://agencies.semrush.com/list/seo/banking-finance/victoria/small-business/).
+**SEO for a broker is priced by the work it needs, and results land in 3 to 6 months, not three weeks.** UnderCurrent prices SEO case by case. Expect to pay around $500 to $2,000 a month, depending on the work needed. Basic SEO starts around $500 a month, and there is usually a one-off implementation fee, scoped at the start. Prices exclude GST.
 
 Cost scales with competition, not effort. A solo broker owning one suburb needs far less than a multi-broker firm fighting capital-city searches.
 
-| Stage | AU spend per month | What it covers | Who it suits |
-|---|---|---|---|
-| Foundation | $500–$1,200 | Profile setup, on-page basics, citations | Solo broker, one suburb |
-| Local growth | $1,200–$2,500 | On-page, profile, citations, monthly content | Office with a set service area |
-| Competitive | $2,500–$5,000 | Full content, authority, AI search | Multi-broker firm, city competition |
+| Stage | What it covers | Who it suits |
+|---|---|---|
+| Foundation | Profile setup, on-page basics, citations | Solo broker, one suburb |
+| Local growth | On-page, profile, citations, monthly content | Office with a set service area |
+| Competitive | Full content, authority, AI search | Multi-broker firm, city competition |
 
 The timeline trips brokers up. SEO compounds: a page published today is barely indexed inside its first 90 days and pulling steady enquiries 6 months on. Most engagements run 6 to 12 months, because that is how long authority takes to build. Anyone promising page one in 30 days is selling the 30 days, not the result. For the full picture, see our [Australian SEO pricing guide](/blog/seo-pricing-australia-2026).
 
