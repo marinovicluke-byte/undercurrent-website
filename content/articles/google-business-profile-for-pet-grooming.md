@@ -2,6 +2,7 @@
 title: "How to Set Up a Google Business Profile for Pet Grooming"
 description: "Set up a Google Business Profile for pet grooming that ranks. Real audit findings on why reviews don't win the map pack and what actually does in 2026."
 date: "2026-06-16"
+dateModified: "2026-09-29"
 slug: "google-business-profile-for-pet-grooming"
 cluster: "seo-ai-visibility"
 keyword: "google business profile for pet grooming"
@@ -172,10 +173,10 @@ A new profile usually takes a few weeks to settle into local results after verif
 
 ## Related Reading
 
-- [Pet grooming marketing in Australia](/blog/pet-grooming-marketing-australia) , the full guide this profile work sits inside, covering every channel a groomer needs.
-- [SEO for dog groomers](/blog/seo-for-dog-groomers) , how to rank a grooming business across Maps, organic and AI search together.
-- [AI search for pet grooming](/blog/ai-search-for-pet-grooming) , getting your salon recommended when pet owners ask ChatGPT and Perplexity.
-- [AI automation for pet grooming](/blog/ai-automation-for-pet-grooming) , automating the review requests, reminders and rebooking that feed your profile.
-- [Google Business Profile optimisation](/blog/google-business-profile-optimisation) , the general checklist behind the grooming-specific version above.
+- [Pet grooming marketing in Australia](/blog/pet-grooming-marketing-australia), the full guide this profile work sits inside, covering every channel a groomer needs.
+- [SEO for dog groomers](/blog/seo-for-dog-groomers), how to rank a grooming business across Maps, organic and AI search together.
+- [AI search for pet grooming](/blog/ai-search-for-pet-grooming), getting your salon recommended when pet owners ask ChatGPT and Perplexity.
+- [AI automation for pet grooming](/blog/ai-automation-for-pet-grooming), automating the review requests, reminders and rebooking that feed your profile.
+- [Google Business Profile optimisation](/blog/google-business-profile-optimisation), the general checklist behind the grooming-specific version above.
 
 Want to know where your grooming listing stands today? Start with a [free local search audit](/audit) and fix the structural gaps first.

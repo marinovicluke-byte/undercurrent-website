@@ -2,6 +2,7 @@
 title: "How to Run Google Ads for Dog Grooming Profitably"
 description: "When Google Ads for dog grooming actually pays back, realistic Australian budgets, the campaign structure that works, and why most groomers burn their cash."
 date: "2026-06-16"
+dateModified: "2026-10-03"
 slug: "google-ads-for-dog-grooming"
 cluster: "lead-generation"
 keyword: "google ads for dog grooming"
@@ -104,7 +105,15 @@ Most groomers who try Google Ads do one of two things. They flick on a campaign,
 
 ## When Do Google Ads Actually Make Sense for a Groomer?
 
-**Google Ads for dog grooming make sense when you have empty slots to fill, not when your book is already full.** Paid search buys attention you cannot earn fast enough any other way. If you are already turning dogs away, every dollar buys a booking you would have got for free. So before you open an ad account, be honest about your real capacity. There are three clean cases where the maths usually works. A brand-new salon nobody has heard of yet, where organic visibility takes months to build. A quiet patch, like the slow weeks after the Christmas rush, where you want to top up the diary. And a mobile expansion, where you are pushing your van into new suburbs and need pet owners there to know you exist. In each case you have a specific gap and a specific window, which is what paid search fills well. Demand is not the problem here: with [2,729,648 actively trading businesses recorded in Australia at June 2025](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release), competition for local customers is fierce, and an invisible grooming business loses the booking to the salon that showed up. Our guide to [SEO for small business](/blog/seo-for-small-business) covers the slower, free side of getting found, and [SEO for dog groomers](/blog/seo-for-dog-groomers) covers the local results paid search sits on top of.
+**Google Ads for dog grooming make sense when you have empty slots to fill, not when your book is already full.** Paid search buys attention you cannot earn fast enough any other way. If you are already turning dogs away, every dollar buys a booking you would have got for free. So before you open an ad account, be honest about your real capacity.
+
+**Three clean cases where the maths usually works**
+
+- A brand-new salon nobody has heard of yet, where organic visibility takes months to build.
+- A quiet patch, like the slow weeks after the Christmas rush, where you want to top up the diary.
+- A mobile expansion, where you are pushing your van into new suburbs and need pet owners there to know you exist.
+
+In each case you have a specific gap and a specific window, which is what paid search fills well. Demand is not the problem here: with [2,729,648 actively trading businesses recorded in Australia at June 2025](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release), competition for local customers is fierce, and an invisible grooming business loses the booking to the salon that showed up. Our guide to [SEO for small business](/blog/seo-for-small-business) covers the slower, free side of getting found, and [SEO for dog groomers](/blog/seo-for-dog-groomers) covers the local results paid search sits on top of.
 
 ## What Is Google Ads for Dog Grooming, and How Does It Pay Back?
 
@@ -122,7 +131,15 @@ Most groomers who try Google Ads do one of two things. They flick on a campaign,
 
 ## What Does Google Ads Cost Per Click for Local Dog Grooming?
 
-**Cost per click for local grooming terms usually sits in the low single dollars, and a hot "near me" search in a big city can spike higher.** The good news for groomers is the auction is quiet, so clicks stay cheap. But the click price is not the number that decides profit, your cost per booking is. Work it backwards from the [average $95 grooming ticket](https://www.woofspark.com.au/is-dog-grooming-profitable-australia/): if a $4 click converts to a booking one time in ten, that is $40 to win a $95 groom, which works. The same $4 click on a broad term that converts one time in fifty costs $200 a booking, which does not. Two levers pull the click price down. Quality Score, the relevance rating Google gives each keyword, lowers your cost when your ad and landing page match the search. And [Google's ad auction uses both your bid and your ad quality to set position](https://support.google.com/google-ads/answer/2375454), so you often pay less than your maximum bid. Tight, high-intent keywords lift quality and cut the price, which is why the next section matters most.
+**Cost per click for local grooming terms usually sits in the low single dollars, and a hot "near me" search in a big city can spike higher.** The good news for groomers is the auction is quiet, so clicks stay cheap. But the click price is not the number that decides profit, your cost per booking is. Work it backwards from the [average $95 grooming ticket](https://www.woofspark.com.au/is-dog-grooming-profitable-australia/).
+
+**A $4 click that converts to a booking one time in ten**
+
+- Cost per click, **$4**
+- Clicks per booking, **10**
+- = Cost per booking, **$40**
+
+That is $40 to win a $95 groom, which works. The same $4 click on a broad term that converts one time in fifty costs $200 a booking, which does not. Two levers pull the click price down. Quality Score, the relevance rating Google gives each keyword, lowers your cost when your ad and landing page match the search. And [Google's ad auction uses both your bid and your ad quality to set position](https://support.google.com/google-ads/answer/2375454), so you often pay less than your maximum bid. Tight, high-intent keywords lift quality and cut the price, which is why the next section matters most.
 
 ## What Are the Best Keywords for a Grooming Google Ads Campaign?
 
@@ -204,11 +221,11 @@ Track real bookings, not clicks. Turn on conversion tracking for phone calls fro
 
 ## Related Reading
 
-- [Marketing a pet grooming business in Australia](/blog/pet-grooming-marketing-australia) , the full growth guide this paid-search chapter sits inside.
-- [SEO versus Google Ads for a grooming business](/blog/seo-vs-google-ads-dog-grooming) , the head-to-head on cost, speed and durability to decide what to run first.
-- [SEO for dog groomers](/blog/seo-for-dog-groomers) , how to win the free local results that paid search sits on top of.
-- [Google Business Profile for pet grooming](/blog/google-business-profile-for-pet-grooming) , the proximity-driven local listing that decides who shows in the map pack.
-- [Google Ads cost for an Australian small business](/blog/google-ads-cost-australian-small-business) , realistic budgets and what drives the price of a click.
-- [How to choose a Google Ads agency in Australia](/blog/how-to-choose-a-google-ads-agency-australia) , what to look for if you would rather hand the campaign off.
+- [Marketing a pet grooming business in Australia](/blog/pet-grooming-marketing-australia), the full growth guide this paid-search chapter sits inside.
+- [SEO versus Google Ads for a grooming business](/blog/seo-vs-google-ads-dog-grooming), the head-to-head on cost, speed and durability to decide what to run first.
+- [SEO for dog groomers](/blog/seo-for-dog-groomers), how to win the free local results that paid search sits on top of.
+- [Google Business Profile for pet grooming](/blog/google-business-profile-for-pet-grooming), the proximity-driven local listing that decides who shows in the map pack.
+- [Google Ads cost for an Australian small business](/blog/google-ads-cost-australian-small-business), realistic budgets and what drives the price of a click.
+- [How to choose a Google Ads agency in Australia](/blog/how-to-choose-a-google-ads-agency-australia), what to look for if you would rather hand the campaign off.
 
 Want to know whether paid search is the right first move for your salon? Start with a [free 30-minute audit](/audit) and we will map your real numbers before you spend a dollar, or [get in touch](/contact) to talk it through.

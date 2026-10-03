@@ -2,6 +2,7 @@
 title: "How to Measure AI Search Visibility (and Fix It)"
 description: "AI search visibility is how often ChatGPT, Perplexity and Google's AI Overviews cite your business. Here's how to measure it, plus three fixes that work."
 date: "2026-05-16"
+dateModified: "2026-10-03"
 slug: "how-to-measure-ai-search-visibility"
 cluster: "seo-ai-visibility"
 keyword: "ai search visibility"
@@ -46,7 +47,9 @@ A number like that only means something when you measure your own. So before the
 
 ## Which metrics actually matter for AI search visibility?
 
-**Five numbers tell you almost everything; the rest is noise.** Track these monthly, per engine:
+**Five numbers tell you almost everything; the rest is noise.** Track these monthly, per engine.
+
+**The five metrics**
 
 1. **Citation rate.** Of the buyer-intent prompts you test, what share return an answer that names or links you? This is the headline metric, and everything else explains it.
 2. **Share of the answer.** When you're cited, how many competitors are cited alongside you? Being one of two beats being one of nine.
@@ -129,13 +132,28 @@ Cadence matters too. One genuinely useful piece a month beats a burst of thin po
 
 ### What surprised us when we scored our own audit corpus
 
-Three things hit harder than the scoreboard shows. First, the spread: not one page scored below 30, so nobody's catastrophically bad. The field is just mediocre, and small moves leapfrog real competitors. Second, how often one missing FAQ page was the biggest gap on an otherwise solid site, maybe 3 hours' work for double-digit points. Third, the pages over 80 weren't longer or fancier. They answered in the first line and backed it with specifics. Plainness, on purpose, was the pattern. None of it shows up if you only watch traffic.
+**Three things hit harder than the scoreboard shows**
+
+- **The spread:** not one page scored below 30, so nobody's catastrophically bad. The field is just mediocre, and small moves leapfrog real competitors.
+- **How often one missing FAQ page was the biggest gap** on an otherwise solid site, maybe 3 hours' work for double-digit points.
+- **The pages over 80 weren't longer or fancier.** They answered in the first line and backed it with specifics.
+
+Plainness, on purpose, was the pattern. None of it shows up if you only watch traffic.
 
 ## How long does AI search visibility take to move?
 
 **Plan for 1 to 3 months to see the first movement, and treat anything faster as luck.** AI engines re-crawl on their own clock. A page might be reprocessed within 5 days or take 6 weeks. The structural fixes get picked up fastest: schema, answer-first rewrites, FAQ pages. Fresh-content gains compound more slowly, over 6 to 9 months.
 
-The rhythm: baseline now, ship the structural fixes this month, re-run the same prompts on the same day a month later, compare. Citation rate is noisy, so track the trend across three or four checks. If 4 months pass with the structural fixes done and nothing's moved, the problem is usually content depth, not markup. We walked that timeline with a [Melbourne buyers agency](/blog/how-to-rank-buyers-agency-ai-search-melbourne) too.
+
+
+**The rhythm**
+
+1. Baseline now.
+2. Ship the structural fixes this month.
+3. Re-run the same prompts on the same day a month later.
+4. Compare.
+
+Citation rate is noisy, so track the trend across three or four checks. If 4 months pass with the structural fixes done and nothing's moved, the problem is usually content depth, not markup. We walked that timeline with a [Melbourne buyers agency](/blog/how-to-rank-buyers-agency-ai-search-melbourne) too.
 
 The honest answer to give a client or your boss: AI search visibility is earnable and measurable, but it's a garden, not a switch. The businesses that win it are the ones still measuring at 6 months. Two free moves today: run the baseline above, and [grab a free SEO and AI search audit](/audit) for a second pair of eyes on what's missing.
 

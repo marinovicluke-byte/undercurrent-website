@@ -2,6 +2,7 @@
 title: "Small Business Website Design: Build One That Ranks in 2026"
 description: "Small business website design in 2026 comes down to speed, schema and AI-search readiness. Why a custom build beats a template for ranking and trust."
 date: "2026-05-21"
+dateModified: "2026-10-03"
 slug: "small-business-website-design"
 cluster: "website-experience-design"
 keyword: "small business website design"
@@ -77,7 +78,11 @@ Most Australian small businesses compete for attention with one hand tied behind
 
 **A small business website design works in 2026 when it loads fast, reads cleanly for people and AI engines alike, and points every visitor toward one clear next step.** The site's job isn't to look busy. It's to be found, understood and trusted, then to turn that trust into an enquiry.
 
-Three things carry the weight. Speed, because a slow site loses people before they've read a word. Structure, because Google and AI tools like ChatGPT and Perplexity now quote sections of pages, not whole sites. And conversion design, because traffic that never books anything is just expensive decoration.
+**Three things carry the weight**
+
+- **Speed**, because a slow site loses people before they've read a word.
+- **Structure**, because Google and AI tools like ChatGPT and Perplexity now quote sections of pages, not whole sites.
+- **Conversion design**, because traffic that never books anything is just expensive decoration.
 
 A template can manage the first by accident. It rarely touches the other two. That's the thread running through this guide: strong [search engine optimisation](/glossary/what-is-seo) and reliable conversion both reward a site built around your business, not a theme that's been sold to thousands of others. Getting all three right is what a [custom website design service](/website-design) is built to do.
 
@@ -171,7 +176,11 @@ Our own 31 published pages average 87.1 on the same rubric. The gap isn't budget
 
 **The lowest-scoring small business websites we reviewed were rarely the ugly ones.** They were structurally empty, and three patterns hit harder than the score sheet alone shows.
 
-First, most pages we scored under 60 carried no schema markup at all, a fixable gap rather than a redesign. Second, speed problems were almost always image weight, fixable in around 30 minutes of compression rather than a rebuild. Third, the two small-business web-design pages in our review set so far scored 35 and 87, a gap of more than 50 points on the same topic.
+**The three patterns**
+
+- Most pages we scored under 60 carried no schema markup at all, a fixable gap rather than a redesign.
+- Speed problems were almost always image weight, fixable in around 30 minutes of compression rather than a rebuild.
+- The two small-business web-design pages in our review set so far scored 35 and 87, a gap of more than 50 points on the same topic.
 
 That last one is the whole argument for this guide. Two pages, one subject, and a 52-point spread in how quotable the result is. The topic doesn't decide the score. The build does, and the build is the part you control.
 
@@ -191,15 +200,15 @@ Brief your designer on speed and structured data as requirements, not nice-to-ha
 
 ## Related Reading
 
-- [SEO for small business](/blog/seo-for-small-business) , how ranking works once the site is built
-- [Website experience design hub](/blog/cluster/website-experience-design) , the full cluster this guide anchors
-- [AI training for Australian small business](/blog/ai-training-australia-small-business-guide) , building AI skills in-house
-- [Top 5 small business automation tools for 2026](/blog/top-5-small-business-automation-tools-2026) , the stack behind a working site
-- [AI content automation case study](/case-studies/ai-content-automation-small-business-australia) , our own client results
-- [How we automated content for an Australian SMB](/blog/ai-content-automation-small-business-australia-case-study) , the build, step by step
-- [n8n vs Zapier for Australian small business](/blog/n8n-vs-zapier-australia-small-business) , choosing an automation engine
-- [The hidden cost of manual work in trade businesses](/blog/hidden-cost-manual-trade-business-australia) , why systems pay off
-- [Simplest small business automation tasks for 2026](/blog/simplest-small-business-automation-tasks-australia-2026) , quick wins to start with
+- [SEO for small business](/blog/seo-for-small-business), how ranking works once the site is built
+- [Website experience design hub](/blog/cluster/website-experience-design), the full cluster this guide anchors
+- [AI training for Australian small business](/blog/ai-training-australia-small-business-guide), building AI skills in-house
+- [Top 5 small business automation tools for 2026](/blog/top-5-small-business-automation-tools-2026), the stack behind a working site
+- [AI content automation case study](/case-studies/ai-content-automation-small-business-australia), our own client results
+- [How we automated content for an Australian SMB](/blog/ai-content-automation-small-business-australia-case-study), the build, step by step
+- [n8n vs Zapier for Australian small business](/blog/n8n-vs-zapier-australia-small-business), choosing an automation engine
+- [The hidden cost of manual work in trade businesses](/blog/hidden-cost-manual-trade-business-australia), why systems pay off
+- [Simplest small business automation tasks for 2026](/blog/simplest-small-business-automation-tasks-australia-2026), quick wins to start with
 
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" role="img" aria-label="Traditional SEO compared with AI search optimisation for Australian businesses" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
