@@ -2,6 +2,7 @@
 title: "What Is Generative Engine Optimisation? GEO Explained"
 description: "Generative engine optimisation (GEO) is how Australian businesses get quoted by AI answer engines. UnderCurrent explains what GEO is and how it works."
 date: "2026-05-12"
+dateModified: "2026-09-29"
 slug: "what-is-geo-generative-engine-optimisation-explained-australia"
 cluster: "seo-ai-visibility"
 keyword: "What is GEO? Generative Engine Optimisation Explained"
@@ -69,25 +70,26 @@ Where they ground their answers matters for GEO. ChatGPT and Copilot run live we
 
 A generative engine can only quote what it can fetch, parse and trust, so retrievability is the part of GEO with no SEO twin: clean chunks, [schema markup](/glossary/what-is-schema-markup), fresh dates, and a site that doesn't block the crawlers.
 
-Retrieval-augmented generation is the technique most AI engines use to ground an answer; they search, pull a few documents, and feed those to the model alongside your question. Your page has to survive that pipeline. Four levers do most of the work:
+Retrieval-augmented generation is the technique most AI engines use to ground an answer; they search, pull a few documents, and feed those to the model alongside your question. Your page has to survive that pipeline. Four levers do most of the work.
+
+**The four levers**
 
 - **Chunkable structure.** Short sections under question-shaped headings, one idea each, so a retriever can lift a clean self-contained passage instead of a tangled paragraph.
 - **Schema markup.** Article and FAQPage JSON-LD so machines know what the page is and who wrote it ([schema.org's Article type](https://schema.org/Article)). A basic Article block takes about 10 minutes to add and looks like this:
 
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "What Is Generative Engine Optimisation? GEO Explained",
-  "datePublished": "2024-04-21",
-  "dateModified": "2026-05-12",
-  "author": { "@type": "Organization", "name": "UnderCurrent Automations" },
-  "publisher": { "@type": "Organization", "name": "UnderCurrent Automations" },
-  "about": "Generative engine optimisation",
-  "isAccessibleForFree": true
-}
-```
-
+  ```json
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "What Is Generative Engine Optimisation? GEO Explained",
+    "datePublished": "2024-04-21",
+    "dateModified": "2026-05-12",
+    "author": { "@type": "Organization", "name": "UnderCurrent Automations" },
+    "publisher": { "@type": "Organization", "name": "UnderCurrent Automations" },
+    "about": "Generative engine optimisation",
+    "isAccessibleForFree": true
+  }
+  ```
 - **Freshness.** A visible publish date and an honest `dateModified`. Refresh anything important every 90 days; a page untouched in 12 months reads as stale, while a fresh update can get re-crawled within 24 hours.
 - **Crawlability.** Don't block GPTBot, Google-Extended or PerplexityBot in robots.txt if you want to be quoted. An `llms.txt` file pointing to your best pages doesn't hurt either. The on-page basics here cost $0 beyond a couple of hours of your time.
 
@@ -113,7 +115,13 @@ We audited 69 Australian service-business pages against the rubric we use for cl
 
 ### What surprised us when we ran the numbers
 
-Three things hit harder than the bare numbers suggest. First, the gap is wide and lopsided: across 37 different sites, scores ran from 30 to 90, but barely 1 in 7 landed in the strong band (80 and up), roughly 1 in 3 sat in the competent middle, and more than 1 in 2 were stuck in the weak band. Second, the fixes are cheap, the pages at the bottom were usually missing the basics, no schema, no clear publish date, no quotable stat, and about 30 minutes of work on each closed most of the gap. Third, our own articles score the way you'd expect when you actually do the work: across the 11 UnderCurrent pages in that set the mean was 81 out of 100, well clear of the 53 out of 100 average across every page we've scored. The lesson isn't "AI is hard". It's that almost nobody locally is doing GEO yet, so the bar to clear is low, for now.
+**Three things hit harder than the bare numbers suggest**
+
+- **The gap is wide and lopsided:** across 37 different sites, scores ran from 30 to 90, but barely 1 in 7 landed in the strong band (80 and up), roughly 1 in 3 sat in the competent middle, and more than 1 in 2 were stuck in the weak band.
+- **The fixes are cheap**, the pages at the bottom were usually missing the basics, no schema, no clear publish date, no quotable stat, and about 30 minutes of work on each closed most of the gap.
+- **Our own articles score the way you'd expect when you actually do the work:** across the 11 UnderCurrent pages in that set the mean was 81 out of 100, well clear of the 53 out of 100 average across every page we've scored.
+
+The lesson isn't "AI is hard". It's that almost nobody locally is doing GEO yet, so the bar to clear is low, for now.
 
 
 ![SEO only versus SEO plus generative engine optimisation for Australian businesses, blue link versus AI citation](./body-2.jpg)

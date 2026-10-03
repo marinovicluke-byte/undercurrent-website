@@ -2,6 +2,7 @@
 title: "How to Do SEO for Tradies in Australia"
 description: "SEO for tradies is how Australian trade businesses get found in Google's map pack and AI search. UnderCurrent's pillar guide to local search and schema."
 date: "2026-05-23"
+dateModified: "2026-10-01"
 slug: "seo-for-tradies"
 cluster: "seo-ai-visibility"
 keyword: "seo for tradies"
@@ -86,7 +87,13 @@ The demand is steady and large. Safari Digital's 2026 local search analysis foun
 
 ## How do tradie customers actually search for a trade?
 
-**Tradie customers search in three distinct modes, and each one needs its own page waiting to catch it.** The first is emergency: "burst pipe", "no hot water", "emergency electrician". This searcher is stressed, on a phone, and ringing the first credible result. The second is research: "how much to rewire a house", "cost to clear a blocked drain". They're comparing before they commit. The third is near-me and suburb intent: "plumber near me", "electrician Frankston", the mode where [trade-specific SEO is really won](https://www.safaridigital.com.au/seo-for-tradies/).
+**Tradie customers search in three distinct modes, and each one needs its own page waiting to catch it.**
+
+**The three search modes**
+
+- **Emergency:** "burst pipe", "no hot water", "emergency electrician". This searcher is stressed, on a phone, and ringing the first credible result.
+- **Research:** "how much to rewire a house", "cost to clear a blocked drain". They're comparing before they commit.
+- **Near-me and suburb intent:** "plumber near me", "electrician Frankston", the mode where [trade-specific SEO is really won](https://www.safaridigital.com.au/seo-for-tradies/).
 
 That third mode decides most jobs. Around [46% of all Google searches carry local intent](https://www.rankmax.com.au/articles/local-seo-statistics), and 24.4% of clicks on a local search go to the very first result. Against the 2,729,648 businesses trading in Australia ([ABS](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release)), the top three map slots are tight space. Your customer rarely scrolls. They tap the top of the pack, skim two reviews, and call.
 
@@ -98,7 +105,14 @@ Standard results still matter for research-stage queries, so they're worth havin
 
 ## How do you set up Google Business Profile for a trade business?
 
-**A complete, accurate Google Business Profile is the single highest-impact move in SEO for tradies.** Claim the profile, then fill every field. Set the primary category to exactly what you do, "Plumber" or "Electrician", not a vague "Home Services". Add every secondary service category that fits. List your services with real descriptions. Upload genuine photos of your vans, team, and finished jobs, because Google's image systems read them and stock photos count for nothing.
+**A complete, accurate Google Business Profile is the single highest-impact move in SEO for tradies.** Claim the profile, then fill every field.
+
+**Fill the profile, field by field**
+
+1. Set the primary category to exactly what you do, "Plumber" or "Electrician", not a vague "Home Services".
+2. Add every secondary service category that fits.
+3. List your services with real descriptions.
+4. Upload genuine photos of your vans, team, and finished jobs, because Google's image systems read them and stock photos count for nothing.
 
 Keep your business name, address, and phone number identical everywhere they appear online. Set service areas to the suburbs you actually cover. Post updates most weeks so the profile reads as an active, trading business. Most trade competitors do half of this and stop. A profile with every category, service, and photo filled in will out-rank a half-built one in the same suburb, often within 3 weeks. It's free. It's just the unglamorous work most people skip.
 
@@ -120,7 +134,13 @@ The words matter too. When a customer writes "fixed our blocked drain in Coburg,
 
 <svg viewBox="0 0 320 120" role="img" aria-label="SEO audit score distribution: 41 weak, 29 competent, 23 strong of 93 Australian articles" xmlns="http://www.w3.org/2000/svg"><title>SEO audit score distribution across 93 articles</title><rect x="6" y="12" width="246" height="26" fill="#6A8DAD"/><rect x="6" y="48" width="174" height="26" fill="#8FAF9F"/><rect x="6" y="84" width="138" height="26" fill="#D4C9B0"/></svg>
 
-First, 41 of 93 sat in the weak band for missing schema; only 1 in 4 scored strong. Second, our 31 articles averaged 87.1. Third, the wider 196-article corpus averaged 56.7. Our [audit of Australian SEO providers](/blog/au-seo-agencies-ai-search-audit) digs in.
+**What the audit found**
+
+- 41 of 93 sat in the weak band for missing schema; only 1 in 4 scored strong.
+- Our 31 articles averaged 87.1.
+- The wider 196-article corpus averaged 56.7.
+
+Our [audit of Australian SEO providers](/blog/au-seo-agencies-ai-search-audit) digs in.
 
 ## Which pages should a tradie website actually have?
 

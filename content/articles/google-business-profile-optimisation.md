@@ -2,6 +2,7 @@
 title: "Google Business Profile Optimisation: Win Local Search"
 description: "Google Business Profile optimisation: UnderCurrent's 2026 checklist to rank Australian small businesses in the local pack, the map, and AI search."
 date: "2026-05-26"
+dateModified: "2026-09-29"
 slug: "google-business-profile-optimisation"
 cluster: "seo-ai-visibility"
 keyword: "google business profile optimisation"
@@ -160,7 +161,15 @@ These figures are a snapshot as of May 2026 and shift over time. The method is i
 
 ## What Surprised Us Auditing Local-Search Content?
 
-**Three things hit harder than the score sheet alone shows.** First, the gap was structural, not creative: weak articles were not badly written, they simply buried the answer and skipped the schema, so machines had nothing clean to lift. A profile shows the same pattern, plenty of effort, no structure. Second, the cheapest fixes moved the needle most. Across the 31 articles, the lowest scorers were missing things that take 30 minutes: a clear primary topic, an honest answer up front, a verified set of facts. Third, almost nobody used first-party proof. Not one weak article cited its own numbers, the way this section just cited ours. That absence is the opportunity. A profile with real photos, specific reviews and accurate categories is first-party proof, and it is the one thing a competitor cannot copy from a template. Structure and proof, not polish, are what separated the strong band from the weak.
+**Three things hit harder than the score sheet alone shows.**
+
+**The three things**
+
+- **The gap was structural, not creative:** weak articles were not badly written, they simply buried the answer and skipped the schema, so machines had nothing clean to lift. A profile shows the same pattern, plenty of effort, no structure.
+- **The cheapest fixes moved the needle most.** Across the 31 articles, the lowest scorers were missing things that take 30 minutes: a clear primary topic, an honest answer up front, a verified set of facts.
+- **Almost nobody used first-party proof.** Not one weak article cited its own numbers, the way this section just cited ours.
+
+That absence is the opportunity. A profile with real photos, specific reviews and accurate categories is first-party proof, and it is the one thing a competitor cannot copy from a template. Structure and proof, not polish, are what separated the strong band from the weak.
 
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" role="img" aria-label="Traditional SEO compared with AI search optimisation for Australian businesses" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
