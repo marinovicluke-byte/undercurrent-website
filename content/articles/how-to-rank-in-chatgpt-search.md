@@ -178,7 +178,7 @@ Add a Quick Answer block to every article. Right after the H1, write a 40-60 wor
 
 Build entity mentions. Write a guest post for an industry blog. Get featured in a local business roundup. Sponsor a trade association event and get listed on their site. Aim for five or more authority mentions outside your own domain within six months.
 
-Track your AI referrals. In Google Analytics 4, check referral traffic from chatgpt.com and perplexity.ai every week. If you're still not seeing AI referrals after a couple of months, your content structure or schema is broken. Go back and audit it. Our [instant lead follow-up guide](/blog/how-to-send-instant-follow-up-email-to-leads-automatically-australia) shows how to track and convert these AI-driven enquiries once they come in.
+Track your AI referrals. In Google Analytics 4, check referral traffic from chatgpt.com and perplexity.ai every week. Visits to UnderCurrent's own site from ChatGPT grew by more than 150% after we made these changes. If you're still not seeing AI referrals after a couple of months, your content structure or schema is broken. Go back and audit it. Our [instant lead follow-up guide](/blog/how-to-send-instant-follow-up-email-to-leads-automatically-australia) shows how to track and convert these AI-driven enquiries once they come in.
 
 
 ![ChatGPT search ranking visibility for Australian content creators optimizing Bing index integration](./body-2.jpg)
