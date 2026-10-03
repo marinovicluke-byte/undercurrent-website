@@ -378,7 +378,7 @@ export default function Seo() {
       <h2 className="rv">Questions before the email.</h2>
       <div className="rv" style={{"--i":"1"}}>
         <details><summary>How long until I see a change?</summary><p>Your Google page can move in a few weeks. The rest takes longer, usually three to six months before you feel it in the calls.</p></details>
-        <details><summary>What does it cost?</summary><p>A set price each month, agreed before we start, with what you get written next to it.</p></details>
+        <details><summary>What does it cost?</summary><p>It depends on the work, so we price it case by case. Expect to pay around $500 to $2,000 a month, depending on how many articles you need, how much your site needs restructuring and how much ongoing management you want. Basic SEO starts around $500 a month. There's usually a one-off implementation fee too, scoped at the start, so you know it before we begin.</p></details>
         <details><summary>Do I need a new website?</summary><p>Usually not. Most of the time we add pages to the site you have and fix what's already there.</p></details>
         <details><summary>What is AI search, and does it matter for a business like mine?</summary><p>It means people asking ChatGPT, or reading Google's AI answer instead of clicking through to a website. It matters, because that answer names two or three businesses and you want to be one of them.</p></details>
         <details><summary>What do you actually do each month?</summary><p>Write pages, keep your Google page fresh, fix what's broken, and send you one page saying what moved.</p></details>

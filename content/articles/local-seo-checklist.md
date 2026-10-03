@@ -305,7 +305,7 @@ Local search is one channel, and for service businesses it is still where most o
 
 - [What is local SEO?](/glossary/what-is-local-seo), the plain-English definition.
 - [SEO for small business](/blog/seo-for-small-business), the wider strategy this checklist sits inside.
-- [SEO pricing in Australia 2026](/blog/seo-pricing-australia-2026), what local SEO costs at each tier.
+- [SEO pricing in Australia 2026](/blog/seo-pricing-australia-2026), what local SEO costs and what moves the price.
 - [The SEO and AI visibility cluster](/blog/cluster/seo-ai-visibility), every guide in this topic, in one place.
 - [AEO vs SEO vs GEO](/blog/aeo-vs-seo-vs-geo), how the search acronyms fit together.
 - [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo), getting cited in ChatGPT answers.

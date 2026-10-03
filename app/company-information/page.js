@@ -6,7 +6,7 @@ import PillCTA from '@/components/ui/PillCTA'
 import SectionEyebrow from '@/components/ui/SectionEyebrow'
 import { SERVICES } from '@/lib/data/services'
 import { LOCATIONS } from '@/lib/data/locations'
-import { PRICING_TIERS } from '@/lib/data/pricing'
+import { SEO_PRICING } from '@/lib/data/pricing'
 
 const DOMAIN = 'https://undercurrentautomations.com'
 const PAGE_URL = `${DOMAIN}/company-information`
@@ -793,7 +793,7 @@ function Pricing() {
             maxWidth: 900,
           }}
         >
-          Three engagement models.
+          SEO pricing, case by case.
         </h2>
 
         <p
@@ -806,97 +806,82 @@ function Pricing() {
             maxWidth: 720,
           }}
         >
-          All prices in AUD, exclusive of GST. Most clients start with a Starter Project and move to a Growth Retainer once the first workflow proves itself.
+          All prices in AUD, exclusive of GST. SEO is priced case by case, so this is the range to expect and what moves it.
         </p>
 
         <div
-          className="uc-pricing-grid"
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: 18,
+            maxWidth: 720,
+            padding: '28px 26px',
+            borderRadius: 14,
+            background: 'var(--charcoal)',
+            border: '1px solid var(--text-faint)',
+            boxShadow: '6px 6px 0 0 var(--sage)',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 16,
           }}
         >
-          <style>{`
-            @media (max-width: 880px) {
-              .uc-pricing-grid { grid-template-columns: 1fr !important; }
-            }
-          `}</style>
-          {PRICING_TIERS.map((tier, i) => {
-            const accent = tier.featured ? 'var(--sage)' : i === 0 ? 'var(--orange)' : 'var(--blue)'
-            return (
-              <div
-                key={tier.name}
+          <div>
+            <h3 style={{
+              margin: '0 0 6px',
+              fontFamily: 'var(--font-display)',
+              fontWeight: 500,
+              fontSize: 20,
+              letterSpacing: '-0.02em',
+              color: 'var(--off-white)',
+            }}>
+              {SEO_PRICING.name}
+            </h3>
+            <p style={{
+              margin: 0,
+              fontFamily: 'var(--font-mono)',
+              fontSize: 18,
+              color: 'var(--off-white)',
+              letterSpacing: '-0.005em',
+            }}>
+              {SEO_PRICING.price}
+            </p>
+          </div>
+          <p style={{
+            margin: 0,
+            fontFamily: 'var(--font-body)',
+            fontSize: 14.5,
+            lineHeight: 1.6,
+            color: 'var(--text-secondary)',
+          }}>
+            {SEO_PRICING.description}
+          </p>
+          <ul style={{
+            listStyle: 'none',
+            padding: 0,
+            margin: 0,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 8,
+          }}>
+            {SEO_PRICING.features.map(feat => (
+              <li
+                key={feat}
                 style={{
-                  padding: '28px 26px',
-                  borderRadius: 14,
-                  background: 'var(--charcoal)',
-                  border: '1px solid var(--text-faint)',
-                  boxShadow: `6px 6px 0 0 ${accent}`,
                   display: 'flex',
-                  flexDirection: 'column',
-                  gap: 16,
+                  gap: 10,
+                  alignItems: 'flex-start',
+                  fontFamily: 'var(--font-body)',
+                  fontSize: 14,
+                  color: 'var(--text-secondary)',
+                  lineHeight: 1.5,
                 }}
               >
-                <div>
-                  <h3 style={{
-                    margin: '0 0 6px',
-                    fontFamily: 'var(--font-display)',
-                    fontWeight: 500,
-                    fontSize: 20,
-                    letterSpacing: '-0.02em',
-                    color: 'var(--off-white)',
-                  }}>
-                    {tier.name}
-                  </h3>
-                  <p style={{
-                    margin: 0,
-                    fontFamily: 'var(--font-mono)',
-                    fontSize: 18,
-                    color: 'var(--off-white)',
-                    letterSpacing: '-0.005em',
-                  }}>
-                    {tier.price}
-                  </p>
-                </div>
-                <p style={{
-                  margin: 0,
-                  fontFamily: 'var(--font-body)',
-                  fontSize: 14.5,
-                  lineHeight: 1.6,
-                  color: 'var(--text-secondary)',
-                }}>
-                  {tier.description}
-                </p>
-                <ul style={{
-                  listStyle: 'none',
-                  padding: 0,
-                  margin: 0,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 8,
-                }}>
-                  {tier.features.map(feat => (
-                    <li
-                      key={feat}
-                      style={{
-                        display: 'flex',
-                        gap: 10,
-                        alignItems: 'flex-start',
-                        fontFamily: 'var(--font-body)',
-                        fontSize: 14,
-                        color: 'var(--text-secondary)',
-                        lineHeight: 1.5,
-                      }}
-                    >
-                      <span style={{ color: 'var(--off-white)', flexShrink: 0, marginTop: 1 }}>·</span>
-                      {feat}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )
-          })}
+                <span style={{ color: 'var(--off-white)', flexShrink: 0, marginTop: 1 }}>·</span>
+                {feat}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div style={{ marginTop: 32 }}>
+          <PillCTA label="Book a Call" href="/contact" tone="blue" />
         </div>
       </div>
     </section>
@@ -1127,7 +1112,7 @@ const FAQS = [
   },
   {
     q: 'How much does UnderCurrent Automations charge?',
-    a: 'UnderCurrent Automations charges from $1,000 AUD per month across all retainer services. SEO and AI search runs as a tiered monthly package from $1,000 AUD per month. Custom AI automation, implementation, and business AI workshops also start at $1,000 AUD per month. Custom websites are quoted as fixed-price builds, scoped per engagement. All prices exclude GST.',
+    a: 'UnderCurrent Automations prices SEO and AI search case by case: expect to pay around $500 to $2,000 AUD per month, depending on the work needed (articles, site architecture and ongoing management). Basic SEO starts around $500 AUD per month, and there is usually a one-off implementation fee, scoped at the start. Custom AI automation, implementation, and business AI workshops start at $1,000 AUD per month. Custom websites are quoted as fixed-price builds, scoped per engagement. All prices exclude GST.',
   },
   {
     q: 'How long does an UnderCurrent build take?',
