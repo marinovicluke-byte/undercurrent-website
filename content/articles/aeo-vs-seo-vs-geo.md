@@ -2,6 +2,7 @@
 title: "AEO vs SEO vs GEO: Pick the One That Gets You Found"
 description: "SEO ranks your page, AEO formats it for answer boxes, GEO gets you cited in AI replies. Here is what each one changes, and which to build first."
 date: "2026-05-13"
+dateModified: "2026-10-01"
 slug: "aeo-vs-seo-vs-geo"
 cluster: "seo-ai-visibility"
 keyword: "aeo vs seo"

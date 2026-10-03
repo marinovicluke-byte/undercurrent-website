@@ -2,6 +2,7 @@
 title: "Google Maps SEO: Rank in the Local Pack (2026)"
 description: "Google Maps SEO decides who wins the local pack. Here's how Australian businesses climb the rankings, what moves the needle, and how to measure it."
 date: "2026-05-30"
+dateModified: "2026-10-01"
 slug: "google-maps-seo"
 cluster: "seo-ai-visibility"
 keyword: "google maps seo"

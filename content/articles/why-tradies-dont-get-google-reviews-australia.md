@@ -2,6 +2,7 @@
 title: "Why Australian Tradies Don't Get Google Reviews"
 description: "Australian tradies are losing local search rankings and customers because they don't ask for reviews. Here's the data on what it costs — and how to fix it."
 date: "2026-03-31"
+dateModified: "2026-10-03"
 slug: "why-tradies-dont-get-google-reviews-australia"
 cluster: "revenue-operations"
 keyword: "why tradies don't get google reviews australia"

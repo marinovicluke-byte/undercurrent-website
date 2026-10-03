@@ -8,7 +8,7 @@ date: 2026-10-03
 
 Branch `content/format-pass-batch-3`, off `origin/main` at `1c4aec2`. **The PR is open and not merged.** Luke squash-merges it.
 
-The rule is the same as batches 1 and 2: **keep the words, change the shape.** Titles, meta, canonicals, schema, slugs, dates (published and `dateModified`) and the Quick Answer are unchanged. The scripts are batch 2's, with the fence-aware H1 count. Pair titles stay neutral, and step timings use the ", **Day 1**" form.
+The rule is the same as batches 1 and 2: **keep the words, change the shape.** Titles, meta, canonicals, schema, slugs, the published date and the Quick Answer are unchanged. The scripts are batch 2's, with the fence-aware H1 count. Pair titles stay neutral, and step timings use the ", **Day 1**" form.
 
 ## What changed, per article
 
@@ -115,8 +115,25 @@ These are figures to check. None of them is in a block.
 - **Mid-body photo:** on all ten, it sits before the same H2 as production. GEO for buyers agents has none, on production too.
 - **Against production:** titles, meta descriptions, canonicals, all six JSON-LD blocks, the H1 count and the hero Quick Answer are identical on all ten.
 
+## Updated dates (added 3 Oct, Luke's rule)
+
+Luke, 3 Oct: changed articles get a new updated date, mixed across 29 Sep to 3 Oct so they don't stack on one day. `scripts/set-updated-date.mjs` sets `dateModified` from a hash of the slug, so a rerun gives the same date. Published dates don't move. `scripts/check-format-pass.mjs` asserts each date. The Article JSON-LD `dateModified`, the visible "Updated" line and the sitemap lastmod move with it. Everything else in the schema is unchanged.
+
+| Article | Updated |
+|---|---|
+| aeo-vs-seo-vs-geo | 2026-10-01 |
+| ai-automation-for-pet-grooming | 2026-10-03 |
+| best-aeo-agencies-australia | 2026-09-29 |
+| geo-for-buyers-agents-australia | 2026-10-01 |
+| google-maps-seo | 2026-10-01 |
+| how-to-do-chatgpt-seo | 2026-10-01 |
+| how-to-rank-buyers-agency-ai-search-melbourne | 2026-10-03 |
+| how-to-rank-in-chatgpt-search | 2026-09-29 |
+| small-business-website-design | 2026-10-03 |
+| why-tradies-dont-get-google-reviews-australia | 2026-10-03 |
+
 ## Rollback
 
 The PR goes in as a squash merge, so main gets one commit. Roll back with `git revert <squash commit>` (no `-m 1`), merged through a PR. The revert deploys itself.
 
-PR 44 and PR 47 both add the three scripts. Batch 3 carries batch 2's version (`e2849c7`'s fence-aware H1 line), so it matches PR 47 exactly. Against PR 44 it has the same one-line add/add conflict. It will be rebased onto main after those merge, as ops asked for batch 2.
+PRs 44, 47 and 49 add the same four scripts, byte for byte (synced in the updated-dates commit), so they merge in any order without a conflict. Each article file belongs to one PR only.

@@ -2,6 +2,7 @@
 title: "How to Rank in ChatGPT Search (2026 Guide)"
 description: "To rank in ChatGPT search, structure your content with question-based H2 headings, lead every section with a direct answer in the first 2-3 sentences."
 date: "2026-04-22"
+dateModified: "2026-09-29"
 slug: "how-to-rank-in-chatgpt-search"
 cluster: "seo-ai-visibility"
 keyword: "how to rank in chatgpt search"

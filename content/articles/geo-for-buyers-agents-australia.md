@@ -2,6 +2,7 @@
 title: "GEO for Buyers Agents: Win AI Search in Australia"
 description: "GEO for buyers agents is how Australian agencies get cited by ChatGPT, Gemini and Perplexity. Five pillars, 90-day rollout, and the metrics that matter."
 date: "2026-05-13"
+dateModified: "2026-10-01"
 slug: "geo-for-buyers-agents-australia"
 cluster: "seo-ai-visibility"
 keyword: "GEO for buyers agents"

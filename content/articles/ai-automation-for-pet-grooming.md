@@ -2,6 +2,7 @@
 title: "How to Use AI Automation in a Pet Grooming Business"
 description: "A practical 2026 guide to AI automation for pet grooming in Australia: what to automate first, which software fits, and how to set it up so it saves you hours."
 date: "2026-06-16"
+dateModified: "2026-10-03"
 slug: "ai-automation-for-pet-grooming"
 cluster: "custom-integrations"
 keyword: "ai automation for pet grooming"

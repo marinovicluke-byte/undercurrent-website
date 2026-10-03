@@ -2,6 +2,7 @@
 title: "How to Choose the Best AEO Agency in Australia (2026)"
 description: "An honest buyer's guide to the best AEO agency in Australia: monthly deliverables, proposal red flags, and how an AEO retainer differs from SEO."
 date: "2026-05-14"
+dateModified: "2026-09-29"
 slug: "best-aeo-agencies-australia"
 cluster: "seo-ai-visibility"
 keyword: "best aeo agency australia"
