@@ -2,6 +2,7 @@
 title: "How to Win AI Search for Pet Grooming in 2026"
 description: "A 2026 guide to AI search for pet grooming: how to get your Australian grooming business named by ChatGPT, Gemini and Google's AI Overviews."
 date: "2026-06-16"
+dateModified: "2026-10-03"
 slug: "ai-search-for-pet-grooming"
 cluster: "seo-ai-visibility"
 keyword: "ai search for pet grooming"
@@ -135,7 +136,16 @@ Fix those rows and you stop being the business the engine skips. None of it cost
 
 ## How Do You Optimise Your Profile and Website for AI Search?
 
-**Start with the Google Business Profile, because it is the single richest data source AI engines read for local recommendations.** Pick the most exact primary category ("Pet groomer", not "Pet care service"), then add every secondary category that genuinely applies, since each one tells the engine another thing you do. List every service with a plain-English description, set the suburbs you actually serve, and keep the name, address and phone identical to your website. Then back the profile with an owned website the engine can crawl, not a link to your Instagram. As Search Engine Land puts it, [your website is now the source of truth in local AI search](https://searchengineland.com/why-your-website-is-now-the-source-of-truth-in-local-ai-search-474389), and an incomplete one leaves the AI to assemble an answer from scraps. Add LocalBusiness [schema markup](/glossary/what-is-schema-markup) so machines read your details without guessing. In the page head, drop a single LocalBusiness block from [schema.org](https://schema.org/LocalBusiness) carrying your business name, full address, telephone, the suburbs you cover in areaServed, your opening hours, and a sameAs link back to your Google profile. Want a second pair of eyes on the gaps? Start with a [free local search and AI visibility audit](/audit).
+**Start with the Google Business Profile, because it is the single richest data source AI engines read for local recommendations.**
+
+**The profile first, then the site**
+
+1. Pick the most exact primary category ("Pet groomer", not "Pet care service"), then add every secondary category that genuinely applies, since each one tells the engine another thing you do.
+2. List every service with a plain-English description, set the suburbs you actually serve, and keep the name, address and phone identical to your website.
+3. Back the profile with an owned website the engine can crawl, not a link to your Instagram. As Search Engine Land puts it, [your website is now the source of truth in local AI search](https://searchengineland.com/why-your-website-is-now-the-source-of-truth-in-local-ai-search-474389), and an incomplete one leaves the AI to assemble an answer from scraps.
+4. Add LocalBusiness [schema markup](/glossary/what-is-schema-markup) so machines read your details without guessing. In the page head, drop a single LocalBusiness block from [schema.org](https://schema.org/LocalBusiness) carrying your business name, full address, telephone, the suburbs you cover in areaServed, your opening hours, and a sameAs link back to your Google profile.
+
+Want a second pair of eyes on the gaps? Start with a [free local search and AI visibility audit](/audit).
 
 ## Which AI Search Tools Do Pet Owners Use to Find a Groomer?
 
