@@ -1,7 +1,8 @@
 ---
 title: "The Hidden Cost of Running a Trade Business Without Automation"
-description: "Calculate the real dollar cost of running your Australian trade business manually. Fair Work + ABS hours + Xero insights = the number you need to see."
+description: "Work out the real cost of running your Australian trade business manually: your rate, your admin hours, your working weeks. A method you can check."
 date: "2026-03-31"
+dateModified: "2026-10-03"
 slug: "hidden-cost-manual-trade-business-australia"
 cluster: "foundations"
 keyword: "hidden cost manual trade business australia"
@@ -11,45 +12,44 @@ readingTime: 9
 summary: "A step-by-step calculation of what Australian tradies lose annually by running their business manually, using Fair Work Commission wage data, ABS time-tracking stats, and Xero invoicing research to build a fully defensible dollar figure with transparent maths."
 faqs:
   - q: 'How much money do tradies lose to admin each year in Australia?'
-    a: 'Most Australian tradies lose between $31,500 and $54,400 per year to admin work, based on Fair Work Commission wage data and ASBFEO time-tracking research. The figure includes opportunity cost (time spent on admin instead of billable work), invoicing delays, and compliance burden. High-earning tradies with poor systems can lose over $70,000 annually.'
+    a: 'There''s no reliable published average for Australian tradies, and the figures that get quoted rarely link to a study. Work out your own: your hourly rate, times your weekly admin hours, times 48 working weeks. That''s the billable time admin costs you each year, before slow payments and missed jobs.'
   - q: 'What is the opportunity cost of doing admin manually for a trade business?'
-    a: 'Opportunity cost is the revenue you didn''t earn because you were busy doing something else. For a tradie charging $90 per hour who spends 7 hours per week on admin, the opportunity cost is $630 per week or $31,500 per year. That''s billable work you could''ve done but didn''t because you were stuck doing invoicing, bookkeeping, and paperwork instead.'
+    a: 'Opportunity cost is the revenue you didn''t earn because you were busy doing something else. For a tradie, it''s your hourly rate times the hours you spend on admin each week, times 48 working weeks. That''s billable work you could''ve done but didn''t because you were stuck doing invoicing, bookkeeping, and paperwork instead.'
   - q: 'How much does slow invoicing cost Australian small businesses?'
-    a: 'Xero''s 2024 Small Business Insights report found that Australian small businesses lose an average of $8,400 per year to late payments caused by invoicing delays. Businesses that invoice immediately after job completion get paid 11 days faster than those who batch their invoicing weekly. The cost includes cash flow stress, interest charges on overdrafts, and missed opportunities due to lack of working capital.'
+    a: 'Slow invoicing means you wait longer for money you''ve already earned. Invoicing in end-of-week batches adds days before the customer''s payment clock even starts. The cost is cash flow stress, interest charges on overdrafts, and materials you can''t buy up front. Sending each invoice when the job is marked done removes the batching delay.'
   - q: 'What does ASBFEO say about the cost of compliance for small businesses?'
-    a: 'The Australian Small Business and Family Enterprise Ombudsman''s 2023 Red Tape Report found that small businesses spend an average of $5,100 per year dealing with regulatory compliance. For trade businesses specifically, the cost sits closer to $6,500-$8,000 when you include time spent on licensing, insurance documentation, safety records, and subcontractor paperwork.'
+    a: 'We couldn''t find an ASBFEO report that puts a yearly dollar figure on a small business''s compliance cost, so we don''t quote one. For your own trade business, count compliance time (licensing, insurance documentation, safety records and subcontractor paperwork) in your weekly admin hours, and it flows through the same sum.'
   - q: 'How much could a plumber or electrician in Australia save by automating their business?'
-    a: 'A typical Australian tradie can save between $31,000 and $50,000 per year by automating invoicing, quote follow-ups, and compliance paperwork. The payback period on automation setup (typically $8,000-$12,000) is 3-5 months. After that, you''re earning back 5-8 hours per week that you can spend on billable work, with your family, or growing the business.'
+    a: 'It depends on how many admin hours automation takes off your week and how many jobs you stop losing. The time saved is the hours that go, times your rate, times 48 working weeks. Add the jobs you win back by following up every quote. Compare that total with the setup and running cost before you commit.'
   - q: 'How do I calculate the hidden cost of running my trade business manually?'
-    a: 'Use this formula: (Your hourly rate × Admin hours per week × 50 weeks) + Invoicing delay cost ($8,400 average) + Missed follow-ups (estimate 1-2 per month × average job value) + Compliance time cost ($6,500-$8,000). For example: ($95 × 7 × 50) + $8,400 + $24,000 + $7,000 = $72,650 per year. Track your actual admin hours for 2 weeks to get an accurate number.'
+    a: 'Use this formula: (your hourly rate × admin hours per week × 48 weeks) + the cost of slow payments + missed follow-ups (missed quotes a month × average job value × 12) + compliance time, if it isn''t already in your admin hours. Track your actual admin hours for 2 weeks to get an accurate number.'
 ---
 # Hidden Cost Manual Trade Business Australia 2026: What Running Without Automation Really Costs You
 
 > **Quick Answer:** **The hidden cost of a manual trade business is the money Australian tradies lose to admin, invoicing delays, missed follow-ups and compliance.**
-> - $18,720 to $31,200 a year in lost productivity alone
-> - Based on Fair Work award rates and documented admin time
-> - With delays, missed follow-ups and compliance, closer to $35,000-$50,000
+> - Admin hours cost you billable work, not just time
+> - Slow invoices and missed follow-ups cost real money
+> - Track two weeks of admin to see yours
 
-You're billing $80-$120 an hour for the work you do on the tools. But you're spending 6-10 hours a week doing admin at the kitchen table for free. That's not just annoying. It's expensive.
+You charge good money for the work you do on the tools. But every week you're also doing admin at the kitchen table, for free. That's not just annoying. It's expensive.
 
-Let's do the maths with real numbers. No guesses. No made-up stats. Just Fair Work Commission data, ABS research, and Xero's small business insights. By the end of this article, you'll know exactly what running manually costs you every year.
+This article shows you how to do the maths with your own numbers. Published averages for trade admin are thin, and the ones that get quoted rarely link to a study. Two weeks of your own tracking beats all of them.
 
 And you'll have the numbers to justify fixing it.
 
 ## How Much Money Do Tradies Lose to Admin Each Year?
 
-The hidden cost of a manual trade business in Australia starts with a simple equation: your hourly rate × the hours you're giving away for free.
+**There's no reliable published figure, so the honest answer is your own: your hourly rate, times the admin hours you give away, times your working weeks.** That's the hidden cost of a manual trade business in Australia, before you count anything else.
 
-According to the [Fair Work Commission's 2025-2026 award rates](https://www.fwc.gov.au), a qualified electrician earns $35.94 per hour under the Electrical, Electronic and Communications Contracting Award. A plumber under the Plumbing and Fire Sprinklers Award earns $34.78 per hour. A carpenter sits at $33.25 under the Building and Construction Award.
+Most people get the weeks wrong. A year has 52 weeks, but you don't work all of them.
 
-But you're not charging award rates. You're running a business. Most self-employed tradies in Australia charge between $80 and $120 per hour for billable work, according to [ABS data on trade service pricing](https://www.abs.gov.au).
+**Why to count 48 working weeks, not 52**
 
-Now here's the problem. The [Australian Small Business and Family Enterprise Ombudsman (ASBFEO)](https://www.asbfeo.gov.au) reports that small business owners spend an average of 7.2 hours per week on admin and compliance tasks. For trade business owners specifically, the number sits closer to 8-10 hours when you count quoting, invoicing, follow-ups, bookkeeping, and compliance paperwork.
+- Weeks in a year, **52 weeks**
+- Four weeks off, the annual leave an employee gets, **4 weeks**
+- = Working weeks, 52 − 4, **48 weeks**
 
-Let's use the conservative number. 7 hours a week at $90 per hour.
-
-**7 hours × $90 = $630 per week**
-**$630 × 52 weeks = $32,760 per year**
+*The 4 weeks are the annual leave in the [National Employment Standards](https://www.fairwork.gov.au/leave/annual-leave). If you're self-employed, take the same. Public holidays come off on top.*
 
 That's what you're losing in opportunity cost. Not the cost of doing admin. The cost of *not doing billable work* while you're stuck doing admin.
 
@@ -59,146 +59,93 @@ That's what you're losing in opportunity cost. Not the cost of doing admin. The 
 
 Every hour you spend chasing unpaid invoices is an hour you're not on the tools. Every hour sorting receipts for the accountant is an hour you're not quoting the next job. Every hour manually entering job details into Xero is an hour you could've spent with your family.
 
-Here's the full calculation for a typical Australian tradie running a manual business:
+**Work out your own cost**
 
-**Base calculation:**
-- Hourly billable rate: $90 (conservative average for trades in Australia)
-- Admin hours per week: 7 hours (ASBFEO data)
-- Weeks worked per year: 50 (allowing 2 weeks off)
-- Annual opportunity cost: $90 × 7 × 50 = **$31,500**
+1. Take your hourly billable rate, the price of an hour on the tools.
+2. Track your admin hours for two weeks: quoting, invoicing, follow-ups, bookkeeping and compliance paperwork. Average them to a week.
+3. Use 48 working weeks, as worked out above.
+4. Multiply the three. That's your yearly opportunity cost.
 
-But that's not the full picture. Let's add the other costs.
+Here's the method worked through as an example. Say a plumber charges $90 an hour, inside the [$80 to $200 an hour hipages lists for plumbers](https://hipages.com.au/article/how_much_does_a_plumber_cost), and spends 10 hours a week on admin.
 
-**Invoicing delays:**
-[Xero's Small Business Insights 2024 report](https://www.xero.com) found that Australian small businesses lose an average of $8,400 per year to late payments caused by invoicing delays. Tradies who invoice manually (end of week, end of month batches) wait an extra 2-3 weeks for payment compared to those who send invoices immediately after job completion.
+**Say a plumber gives 10 hours a week to admin (an example)**
 
-**Missed follow-ups:**
-According to research by [Service Seeking](https://www.serviceseeking.com.au), 42% of trade leads go cold within 7 days if there's no follow-up. At 2-3 missed opportunities per month worth $2,000 each, that's $48,000-$72,000 in lost revenue annually. Even if you only miss one per quarter, that's $8,000 gone.
+- Admin hours a week, the example's assumption, **10 hours**
+- Hourly rate, inside hipages' range for plumbers, **$90**
+- Working weeks in a year, **48 weeks**
+- = Billable time lost in a year, **$43,200**
 
-**Compliance burden:**
-The ASBFEO's [2023 Red Tape Report](https://www.asbfeo.gov.au) found that small businesses spend $5,100 per year on average dealing with regulatory compliance. For trade businesses specifically (licensing, insurance documentation, safety records, subcontractor paperwork), the number sits closer to $6,500-$8,000.
+*Swap in your own hours and rate. An electrician at $80, the low end of the [$80 to $100 hipages lists for electricians](https://hipages.com.au/article/how_much_does_an_electrician_cost), loses $38,400 on the same 10 hours.*
 
-**Total annual cost of running manually:**
-- Opportunity cost (admin time): $31,500
-- Invoicing delays and cash flow impact: $8,400
-- Missed follow-ups (conservative): $8,000
-- Compliance burden: $6,500
-- **Total: $54,400 per year**
+But that's not the full picture. Three other costs sit on top.
 
-That's the middle range. If you're doing 8-10 hours of admin per week or charging $110-$120 per hour, the number climbs past $70,000.
+**The three costs on top of admin time**
+
+- Slow payments: in [Xero's Small Business Insights](https://www.xero.com/au/resources/small-business-insights/latest-australia/), Australian small businesses waited 22.9 days on average to be paid in the June 2026 quarter, and were paid 6.0 days late. Batch invoicing adds days before that clock even starts
+- Missed follow-ups: a quote nobody chases often goes to whoever called back first, so count last month's unchased quotes and their job values
+- Compliance: licensing, insurance documents, safety records and subcontractor paperwork take real hours, so make sure they're in your tracking
 
 ## What Is the Opportunity Cost of Admin for a Tradie?
 
-Let's break this down with a real example. Meet Dave. He's a plumber in Melbourne. He runs a one-person operation with occasional help from a subbie on bigger jobs.
+**Opportunity cost is the paid work you could have done in the hours you spent on admin.** For a one-person trade business, admin rarely happens in one block. It's spread across the week in small pieces, which is why it's easy to guess low.
 
-Dave charges $95 per hour for his work. He's good. He's busy. But he's also doing all his own admin.
+**Where admin hides in a tradie's week**
 
-Here's what his week looks like:
-- Monday to Thursday: 8 hours on the tools each day (32 hours)
-- Friday morning: 3 hours finishing a job
-- Friday afternoon: 2 hours invoicing, following up quotes, updating his job spreadsheet
-- Saturday morning: 2 hours doing bookkeeping and sorting receipts for his accountant
-- Sunday: 1 hour replying to quote requests and scheduling next week
+- Friday afternoon: invoicing, following up quotes, updating the job spreadsheet
+- Saturday morning: bookkeeping and sorting receipts for the accountant
+- Sunday: replying to quote requests and scheduling next week
+- Weeknights: typing up quotes from site notes
 
-That's 8 hours of admin. At $95 per hour, that's $760 per week he's not earning.
+Batching invoices to the end of the week also delays when you get paid, on top of the days late the average invoice already lands. That squeezes the next materials order. Quotes you don't follow up convert less often than quotes you do. Neither shows up on a timesheet, but both cost you.
 
-**$760 × 50 weeks = $38,000 per year**
+## Manual vs Automated: What Changes
 
-Dave also batches his invoices at the end of each week. According to [Xero's research](https://www.xero.com), businesses that invoice immediately after job completion get paid 11 days faster on average than those who batch their invoicing weekly. That delay costs him cash flow and creates stress about whether he can afford the next materials order.
+Here's what changes between a manual and an automated trade business, job by job.
 
-And Dave misses follow-ups. He quotes 3-4 bathroom renos a month. He's got a 50% conversion rate on quotes he follows up within 48 hours. But the ones he doesn't follow up? Maybe 10% convert. He's losing 2 jobs a month, worth an average of $3,500 each. That's $7,000 per month. $84,000 per year.
+**Manual operation**
 
-**Dave's total annual cost of running manually:**
-- Opportunity cost: $38,000
-- Invoicing delays: $8,400
-- Missed follow-ups: $84,000
-- Compliance time: $7,000
-- **Total: $137,400**
+- Admin happens at the kitchen table after hours
+- Invoices go out days after the job, in batches
+- Some quotes get followed up, when you remember
+- You chase late payments by phone and text
 
-Dave's not unusual. He's typical. And he's leaving six figures on the table every year because he hasn't set up the systems to do the admin for him.
+**Automated operation**
 
-## Manual vs Automated: The Real Numbers
-
-Here's what the difference between manual and automated trade business operations looks like in dollars and time:
-
-| Metric | Manual Operation | Automated Operation | Annual Difference |
-|--------|------------------|---------------------|-------------------|
-| Admin hours per week | 7-10 hours | 2-3 hours | 250-350 hours saved |
-| Invoice turnaround | 3-7 days after job | Same day | 11 days faster payment |
-| Quote follow-up rate | 30-40% followed up | 95-100% followed up | 4-8 extra jobs won |
-| Average payment time | 34 days | 23 days | $8,400 cash flow gain |
-| Annual opportunity cost | $31,500-$60,000 | $9,000-$18,000 | $22,500-$42,000 saved |
+- Most admin runs while you're on the tools
+- The invoice goes out when you mark the job done
+- Every quote gets a follow-up on a set schedule
+- Reminders go out before and after the due date
 
 The difference isn't small. It's the gap between struggling with cash flow and having money in the bank. Between working weekends on admin and having your weekends back.
 
 ## How Much Could a Plumber or Electrician Earn Back by Automating?
 
-Here's the good news. Every dollar you're losing to manual work is a dollar you can earn back by automating the boring stuff.
+**What you earn back is the admin hours that go, times your rate, times 48 weeks, plus the jobs you stop losing.** Every dollar you're losing to manual work is a dollar you can earn back by automating the boring stuff.
 
-Let's use a real scenario. You're an electrician in Brisbane. You charge $100 per hour. You're doing 7 hours of admin per week. You invoice weekly (not immediately). You miss about one follow-up opportunity per month worth $2,500.
+**What a trade business usually automates first**
 
-**Current annual cost:**
-- Admin time: $100 × 7 × 50 = $35,000
-- Invoicing delays: $8,400
-- Missed follow-ups: $2,500 × 12 = $30,000
-- **Total: $73,400**
+- Job details go straight from your phone into Xero
+- Invoices send automatically soon after you mark a job complete
+- Quote follow-ups send automatically if the customer hasn't responded
+- Compliance documents file themselves in the right folders
+- Your accountant gets a live feed of your receipts and expenses
 
-You decide to fix it. You set up proper automation through a service like [UnderCurrent's automation offering](/services). The cost is $8,000 for the initial setup and $300/month ongoing ($3,600/year). Total first-year cost: $11,600.
-
-Here's what you automate:
-1. Job details go straight from your phone to Xero with one click
-2. Invoices send automatically within 2 hours of marking a job complete
-3. Quote follow-ups send automatically after 3 days if the customer hasn't responded
-4. Compliance documents automatically file themselves in the right folders
-5. Your accountant gets a live feed of your receipts and expenses
-
-**Time saved:**
-- Admin drops from 7 hours per week to 2 hours per week (5 hours back)
-- 5 hours × $100 × 50 weeks = **$25,000 back**
-
-**Cash flow improvement:**
-- Invoices now send same-day instead of weekly
-- Average payment time drops from 34 days to 23 days
-- **$8,400 back**
-
-**Missed follow-ups:**
-- Automatic reminders mean you follow up every quote within 3 days
-- Conversion rate on quotes improves from 10% to 40%
-- You win an extra 4 jobs per year worth $2,500 each
-- **$10,000 back**
-
-**Total first-year gain:**
-- Time back: $25,000
-- Cash flow improvement: $8,400
-- Extra revenue from follow-ups: $10,000
-- Total value: $43,400
-- Minus automation cost: $11,600
-- **Net gain: $31,800 in year one**
-
-And it gets better in year two. The setup cost is gone. You're just paying the $3,600 annual maintenance. Your net gain jumps to $39,800.
-
-Over five years, you've earned back $186,200 that you would've lost to manual work. And you've got 1,250 hours back to spend on the tools, with your family, or on growing the business.
+Run your own numbers before you buy anything. Time a fortnight of admin now, set up the first automation, then time a fortnight again. The hours that went are your saving. If it's worth building properly, [UnderCurrent's automation offering](/services) can set it up for you.
 
 ## What Does It Cost a Trade Business to Run Manually in Australia?
 
-Let's summarise the full cost breakdown with transparent sources for every number.
+**Running a trade business manually costs three things you can measure yourself, and three you can only estimate.** Count the first three properly, and keep the last three honest.
 
-**Direct costs:**
-1. **Admin time opportunity cost:** 7-10 hours per week (ASBFEO data) × $80-$120 per hour (ABS trade pricing data) × 50 weeks = $28,000-$60,000 per year
-2. **Invoicing delays:** Average $8,400 per year (Xero Small Business Insights 2024)
-3. **Compliance burden time cost:** $6,500-$8,000 per year (ASBFEO Red Tape Report 2023)
+**What to count**
 
-**Indirect costs:**
-4. **Missed follow-ups:** 1-2 opportunities per month at $2,000-$5,000 each = $24,000-$120,000 per year (Service Seeking lead conversion data)
-5. **Quote delays:** Slow quote turnaround means losing 20-30% of urgent jobs to faster competitors = $10,000-$40,000 per year
-6. **Error costs:** Manual data entry means invoice errors, missed charges, forgotten materials = $2,000-$5,000 per year (Xero data)
+- Admin time: your weekly admin hours × your rate × 48 weeks
+- Slow payments: how long your invoices wait to go out, and how long customers then take to pay
+- Compliance time: licensing, insurance and safety paperwork, if it isn't already in your admin hours
+- Missed follow-ups: unchased quotes a month × your average job value
+- Slow quotes: urgent jobs lost to a faster competitor
+- Errors: missed charges and forgotten materials on hand-typed invoices
 
-**Total cost range:**
-- Conservative (small operation, lower rates): $54,900 per year
-- Typical (mid-size operation, average rates): $73,400 per year
-- High (busy operation, premium rates): $141,000 per year
-
-These aren't made-up numbers. Every figure links back to Fair Work Commission award data, ABS business statistics, ASBFEO compliance research, or Xero's invoicing studies. The maths is transparent. The sources are cited. The cost is real.
+The first three come from your own records. The last three are estimates, so use your own job values and keep them conservative.
 
 Want to know exactly where you're losing money? Use our [free business audit](/audit) to find your hidden leaks.
 
@@ -206,24 +153,31 @@ Want to know exactly where you're losing money? Use our [free business audit](/a
 
 ### How much money do tradies lose to admin each year in Australia?
 
-Most Australian tradies lose between $31,500 and $54,400 per year to admin work, based on Fair Work Commission wage data and ASBFEO time-tracking research. The figure includes opportunity cost (time spent on admin instead of billable work), invoicing delays, and compliance burden. High-earning tradies with poor systems can lose over $70,000 annually.
+There's no reliable published average for Australian tradies, and the figures that get quoted rarely link to a study. Work out your own: your hourly rate, times your weekly admin hours, times 48 working weeks. That's the billable time admin costs you each year, before slow payments and missed jobs.
 
 ### What is the opportunity cost of doing admin manually for a trade business?
 
-**Opportunity cost is the revenue you didn't earn because you were busy doing something else.** For a tradie charging $90 per hour who spends 7 hours per week on admin, the opportunity cost is $630 per week or $31,500 per year. That's billable work you could've done but didn't because you were stuck doing invoicing, bookkeeping, and paperwork instead.
+**Opportunity cost is the revenue you didn't earn because you were busy doing something else.** For a tradie, it's your hourly rate times the hours you spend on admin each week, times 48 working weeks. That's billable work you could've done but didn't because you were stuck doing invoicing, bookkeeping, and paperwork instead.
 
 ### How much does slow invoicing cost Australian small businesses?
 
-Xero's 2024 Small Business Insights report found that Australian small businesses lose an average of $8,400 per year to late payments caused by invoicing delays. Businesses that invoice immediately after job completion get paid 11 days faster than those who batch their invoicing weekly. The cost includes cash flow stress, interest charges on overdrafts, and missed opportunities due to lack of working capital.
+Slow invoicing means you wait longer for money you've already earned. Invoicing in end-of-week batches adds days before the customer's payment clock even starts. The cost is cash flow stress, interest charges on overdrafts, and materials you can't buy up front. Sending each invoice when the job is marked done removes the batching delay.
 
 ### What does ASBFEO say about the cost of compliance for small businesses?
 
-The Australian Small Business and Family Enterprise Ombudsman's 2023 Red Tape Report found that small businesses spend an average of $5,100 per year dealing with regulatory compliance. For trade businesses specifically, the cost sits closer to $6,500-$8,000 when you include time spent on licensing, insurance documentation, safety records, and subcontractor paperwork.
+We couldn't find an ASBFEO report that puts a yearly dollar figure on a small business's compliance cost, so we don't quote one. For your own trade business, count compliance time (licensing, insurance documentation, safety records and subcontractor paperwork) in your weekly admin hours, and it flows through the same sum.
 
 ### How much could a plumber or electrician in Australia save by automating their business?
 
-A typical Australian tradie can save between $31,000 and $50,000 per year by automating invoicing, quote follow-ups, and compliance paperwork. The payback period on automation setup (typically $8,000-$12,000) is 3-5 months. After that, you're earning back 5-8 hours per week that you can spend on billable work, with your family, or growing the business.
+It depends on how many admin hours automation takes off your week and how many jobs you stop losing. The time saved is the hours that go, times your rate, times 48 working weeks. Add the jobs you win back by following up every quote. Compare that total with the setup and running cost before you commit.
 
 ### How do I calculate the hidden cost of running my trade business manually?
 
-Use this formula: (Your hourly rate × Admin hours per week × 50 weeks) + Invoicing delay cost ($8,400 average) + Missed follow-ups (estimate 1-2 per month × average job value) + Compliance time cost ($6,500-$8,000). For example: ($95 × 7 × 50) + $8,400 + $24,000 + $7,000 = $72,650 per year. Track your actual admin hours for 2 weeks to get an accurate number.
+Use this formula: (your hourly rate × admin hours per week × 48 weeks) + the cost of slow payments + missed follow-ups (missed quotes a month × average job value × 12) + compliance time, if it isn't already in your admin hours. Track your actual admin hours for 2 weeks to get an accurate number.
+
+## Sources
+
+1. [Fair Work Ombudsman, Annual leave](https://www.fairwork.gov.au/leave/annual-leave)
+2. [Xero, Australian Small Business Insights (June 2026 quarter, published 30 July 2026)](https://www.xero.com/au/resources/small-business-insights/latest-australia/)
+3. [hipages, How much does a plumber cost?](https://hipages.com.au/article/how_much_does_a_plumber_cost)
+4. [hipages, How much does an electrician cost?](https://hipages.com.au/article/how_much_does_an_electrician_cost)

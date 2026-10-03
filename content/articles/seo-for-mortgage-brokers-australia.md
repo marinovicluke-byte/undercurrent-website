@@ -2,6 +2,7 @@
 title: "How to Win SEO for Mortgage Brokers in Australia, 2026"
 description: "SEO for mortgage brokers in 2026 is four jobs: Google organic, local map pack, AI search, and comparison content. A plain-English guide for Australian brokers."
 date: "2026-06-05"
+dateModified: "2026-10-02"
 slug: "seo-for-mortgage-brokers-australia"
 cluster: "industry-guides"
 keyword: "seo for mortgage brokers"
@@ -111,7 +112,14 @@ More than 92% of marketers are already preparing content for both traditional an
 
 The map pack runs on its own ranking system. It rewards three things: a complete business listing, physical closeness to the searcher, and reviews. You cannot fake proximity, so the work sits in the other two. Start with the [Google Business Profile](/glossary/what-is-google-business-profile), the entity Google actually ranks here, not your website.
 
-Set the primary category to "Mortgage broker", not "Financial consultant". List every service as its own entry: refinancing, first home buyer loans, investment lending, construction finance. Upload real photos of the office and team, since Google's image AI reads them and stock shots are detectable. Post weekly, and keep your name, address and phone number identical everywhere online. This is the foundation of [local SEO](/glossary/what-is-local-seo) for a broking business.
+**Set up the listing, field by field**
+
+1. Set the primary category to "Mortgage broker", not "Financial consultant".
+2. List every service as its own entry: refinancing, first home buyer loans, investment lending, construction finance.
+3. Upload real photos of the office and team, since Google's image AI reads them and stock shots are detectable.
+4. Post weekly, and keep your name, address and phone number identical everywhere online.
+
+This is the foundation of [local SEO](/glossary/what-is-local-seo) for a broking business.
 
 ## How do reviews drive a broker's local ranking?
 
@@ -141,7 +149,11 @@ The platforms differ. ChatGPT favours encyclopedic, factual writing. Perplexity 
 
 **[Schema markup](/glossary/what-is-schema-markup) hands search engines a labelled map of your page, and skipping it leaves attribution on the table, because every AI engine that cannot parse your structure is an engine that will cite a competitor instead.** It is invisible code that tells an engine what each part of the page means.
 
-Three types matter for a broker. The FAQPage type, often called [FAQ schema](/glossary/what-is-faq-schema), wraps your question-and-answer content so it can be pulled straight into an answer box. LocalBusiness schema confirms the office, service area and opening hours, feeding the map pack. Article schema attaches a named author, which feeds the credibility check every AI engine runs.
+**Three types matter for a broker**
+
+- **FAQPage:** the FAQPage type, often called [FAQ schema](/glossary/what-is-faq-schema), wraps your question-and-answer content so it can be pulled straight into an answer box.
+- **LocalBusiness:** LocalBusiness schema confirms the office, service area and opening hours, feeding the map pack.
+- **Article:** Article schema attaches a named author, which feeds the credibility check every AI engine runs.
 
 None of this shows on the page, and none of it is hard to add. Tools like [ChatGPT Search](/glossary/what-is-chatgpt-search) reward pages whose structure is obvious, and a broker site with clean schema is simply easier for every engine to read and trust. Of the four search surfaces, schema is the cheapest job with the widest payoff, and the one most broker sites skip.
 
@@ -199,7 +211,13 @@ Miss one line and you are handing a search surface to a competitor. None of it n
 
 **We ran 100 published SEO and AI-search articles through UnderCurrent's Article Reviewer, and the field scored worse than we expected.** This is our own first-party data, scored on rubric version 2.0.0, as of May 2026: 100 articles across 38 different sites, with scores from 32.0% to 94.0%.
 
-Three findings hit harder than the 62.9% field average alone shows. First, nearly 1 in 2 of the 100 articles scored in the weak band, so the bar to build a broker page that genuinely gets cited is lower than it looks. Second, the median article landed at 60.0% and not one scored under 30, so the field is competent-but-forgettable, not broken, and forgettable is the easy thing to beat. Third, our own 31 articles averaged 87.1%, while across the wider 196-article corpus the mean is just 56.7%. That gap is pure structure: answer-first sections, real data, schema. None of it costs more. It just has to be built in from the first draft, the way this page was. The method behind those numbers sits in our [audit of Australian SEO agencies](/blog/au-seo-agencies-ai-search-audit).
+**Three findings hit harder than the 62.9% field average alone shows**
+
+- Nearly 1 in 2 of the 100 articles scored in the weak band, so the bar to build a broker page that genuinely gets cited is lower than it looks.
+- The median article landed at 60.0% and not one scored under 30, so the field is competent-but-forgettable, not broken, and forgettable is the easy thing to beat.
+- Our own 31 articles averaged 87.1%, while across the wider 196-article corpus the mean is just 56.7%.
+
+That gap is pure structure: answer-first sections, real data, schema. None of it costs more. It just has to be built in from the first draft, the way this page was. The method behind those numbers sits in our [audit of Australian SEO agencies](/blog/au-seo-agencies-ai-search-audit).
 
 ## Where do most broker-space SEO articles land on quality?
 
@@ -278,8 +296,8 @@ The brokers who win the next two years will not have the biggest SEO invoice. Th
 
 ## Related Reading
 
-- [SEO for buyers agents in Australia](/blog/seo-for-buyers-agents-australia) , the same four-surface playbook for a neighbouring property niche.
-- [AEO vs SEO vs GEO, explained](/blog/aeo-vs-seo-vs-geo) , how the optimisation disciplines fit together.
-- [How to win at Perplexity SEO](/blog/how-to-win-at-perplexity-seo) , getting cited by the AI tool borrowers research in.
-- [SEO pricing in Australia, 2026](/blog/seo-pricing-australia-2026) , what SEO actually costs across business sizes.
-- [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo) , getting a broking business quoted by ChatGPT.
+- [SEO for buyers agents in Australia](/blog/seo-for-buyers-agents-australia), the same four-surface playbook for a neighbouring property niche.
+- [AEO vs SEO vs GEO, explained](/blog/aeo-vs-seo-vs-geo), how the optimisation disciplines fit together.
+- [How to win at Perplexity SEO](/blog/how-to-win-at-perplexity-seo), getting cited by the AI tool borrowers research in.
+- [SEO pricing in Australia, 2026](/blog/seo-pricing-australia-2026), what SEO actually costs across business sizes.
+- [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo), getting a broking business quoted by ChatGPT.
