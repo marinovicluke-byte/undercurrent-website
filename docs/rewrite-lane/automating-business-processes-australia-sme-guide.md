@@ -146,3 +146,7 @@ Body, from the H1 to the Sources list, without the FAQ, with link URLs removed:
 2. **The FAQ "How long does it take to see ROI" no longer gives a time.** It says how to work it out.
 3. **The meta description no longer says "Real examples".** Ops approved the change on 3 Oct. It now says "Worked patterns".
 4. **The 336 hours is a new total.** Ops kept it on 3 Oct, because it's arithmetic on two sourced inputs.
+
+## Update, 3 Oct: link phrase
+
+The link to `hidden-cost-manual-trade-business-australia` said "For a dollar-side breakdown by trade". That article (PR #46) no longer has a breakdown by trade. It now has a method and one worked example. The phrase now reads "To work out what manual admin costs a trade business in dollars". Ops asked for this change. No figure changed.

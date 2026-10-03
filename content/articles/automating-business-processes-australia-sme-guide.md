@@ -133,7 +133,7 @@ If you get stuck, [book a free business audit](/audit) and we'll map out your pr
 
 *7 hours is MYOB's 2022 average. 48 weeks is 52 less the 4 weeks of annual leave in the [National Employment Standards](https://www.fairwork.gov.au/leave/annual-leave). Multiply by your hourly rate to price it.*
 
-And here's the thing: the longer you wait, the more embedded these manual processes become. Your team learns them. Your clients expect them. Changing becomes harder. For a dollar-side breakdown by trade, see our [hidden cost of manual processes in a trade business](/blog/hidden-cost-manual-trade-business-australia) piece, and our [tradie admin-hours breakdown](/blog/how-much-time-tradies-spend-on-admin-australia) puts a working figure on the time before you decide what to fix first.
+And here's the thing: the longer you wait, the more embedded these manual processes become. Your team learns them. Your clients expect them. Changing becomes harder. To work out what manual admin costs a trade business in dollars, see our [hidden cost of manual processes in a trade business](/blog/hidden-cost-manual-trade-business-australia) piece, and our [tradie admin-hours breakdown](/blog/how-much-time-tradies-spend-on-admin-australia) puts a working figure on the time before you decide what to fix first.
 
 **Process automation doesn't have to be expensive.** Most of the tools below have a free tier, so your first automations can cost nothing but your time.
 
