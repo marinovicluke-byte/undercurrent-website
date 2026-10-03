@@ -2,6 +2,7 @@
 title: "SEO for Dentists: Win Local and AI Search in Australia"
 description: "SEO for dentists in Australia: rank in Google's local pack and AI search, structure treatment pages, and stay AHPRA-compliant. Costs, timelines, and tactics."
 date: "2026-05-29"
+dateModified: "2026-10-03"
 slug: "seo-for-dentists"
 cluster: "seo-ai-visibility"
 keyword: "seo for dentists"
@@ -97,7 +98,11 @@ Most dental guides tell you to flood your site with five-star testimonials, and 
 
 **The Google local pack is the three-business box above organic results, and proximity, your Business Profile, and reviews decide who lands in it.** For "dentist near me" and "emergency dentist [suburb]" searches, the pack sits above every organic listing on the page.
 
-Three levers move local pack ranking. First, your [Google Business Profile](/glossary/what-is-google-business-profile): the primary category must read "Dentist" or "Dental clinic", with every service listed and real photos, not stock imagery, as the [Google Business Profile Help](https://support.google.com/business) sets out. Second, proximity, which you can't fake, though genuine suburb pages widen the radius. Third, reviews: total volume, a steady weekly velocity, and a reply to every one.
+**Three levers move local pack ranking**
+
+- **Your [Google Business Profile](/glossary/what-is-google-business-profile):** the primary category must read "Dentist" or "Dental clinic", with every service listed and real photos, not stock imagery, as the [Google Business Profile Help](https://support.google.com/business) sets out.
+- **Proximity**, which you can't fake, though genuine suburb pages widen the radius.
+- **Reviews:** total volume, a steady weekly velocity, and a reply to every one.
 
 NAP consistency underpins all of it. Your name, address, and phone number must match exactly across your Business Profile, your website, and directories like Apple Maps and Bing Places. Those two verified listings are free, under-claimed by most practices, and feed Siri and ChatGPT. Claim them and you close a gap competitors can't see.
 
@@ -113,7 +118,7 @@ Google [announced generative AI in Search in 2023](https://blog.google/products/
 
 **The keywords that fill a dental chair are treatment-intent and suburb-specific, not broad terms like "dentist".** A search for "dentist" is mostly research. A search for "emergency dentist Brunswick" or "dental implants cost Brisbane" is a patient with their wallet open.
 
-Group your keywords by intent:
+**Group your keywords by intent**
 
 - **Emergency intent:** "emergency dentist", "tooth pain", "broken tooth [suburb]". High urgency, high conversion.
 - **Treatment intent:** "dental implants", "Invisalign", "teeth whitening", "wisdom teeth removal", each with a city or suburb modifier.
@@ -177,7 +182,13 @@ The chart maps the opportunity: 41 guides are weak, so a well-built practice pag
 
 ## What surprised us auditing SEO content for this guide
 
-**Three patterns stood out, and the gap between them is the whole opportunity.** First, the floor is low: 41 of the 93 guides scored below 60, so competent structure alone beats most of the market. Second, compliance barely rated a mention, across the dental marketing guides we surveyed for this article, the AHPRA advertising code was almost never raised. Third, the distance at the top comes from evidence, not effort.
+**Three patterns stood out, and the gap between them is the whole opportunity.**
+
+**The three patterns**
+
+- **The floor is low:** 41 of the 93 guides scored below 60, so competent structure alone beats most of the market.
+- **Compliance barely rated a mention**, across the dental marketing guides we surveyed for this article, the AHPRA advertising code was almost never raised.
+- **The distance at the top comes from evidence, not effort.**
 
 Our own 31 published articles average 87.1 out of 100, a 23-point lead on the 64.1 corpus mean, and that gap is built on first-party data and answer-first structure rather than length. These are the articles we review against the same rubric every week. We mapped the wider pattern across the sector in our [audit of Australian SEO agencies' AI search readiness](/blog/au-seo-agencies-ai-search-audit). For a dental practice the lesson is short: competent beats most of the market, and compliant beats competent.
 
@@ -185,7 +196,7 @@ Our own 31 published articles average 87.1 out of 100, a 23-point lead on the 64
 
 **Dental SEO is a compounding asset, not an ad campaign, so progress runs in phases rather than days.** Expect local pack movement first, often inside the first 90 days, because Business Profile and citation fixes resolve quickly. Organic rankings for treatment keywords build over three to six months. AI citations are slowest, since they depend on structure, freshness, and being crawled.
 
-Track four things, not vanity traffic:
+**Track four things, not vanity traffic**
 
 - **Local pack position** for your core "near me" and suburb keywords, scanned monthly with a grid map.
 - **Business Profile actions:** calls, direction requests, and website clicks.
