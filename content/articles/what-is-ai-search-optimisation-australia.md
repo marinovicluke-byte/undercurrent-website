@@ -2,6 +2,7 @@
 title: "How to Do AI Search Optimisation in Australia"
 description: "AI search optimisation structures your site so ChatGPT, Perplexity, and Google AI Overviews cite your business when Australian customers ask questions."
 date: "2026-05-14"
+dateModified: "2026-09-29"
 slug: "what-is-ai-search-optimisation-australia"
 cluster: "foundations"
 keyword: "ai search optimisation"
@@ -85,7 +86,7 @@ According to the [ABS Business Characteristics Survey](https://www.abs.gov.au/st
 
 ---
 
-## GEO, AEO, LLMO , What's the Difference?
+## GEO, AEO, LLMO: What's the Difference?
 
 **GEO, AEO, and LLMO are all names for the same underlying practice, applied to slightly different platforms or popularised by different communities.** You don't need three separate strategies.
 
