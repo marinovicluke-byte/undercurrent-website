@@ -2,7 +2,7 @@
 title: "Simplest Small Business Automation Tasks: 5 No-Code Wins"
 description: "Five concrete automation wins small business owners in Australia can implement in under 30 minutes using free no-code tools. No technical skills required."
 date: "2026-01-20"
-dateModified: "2026-10-02"
+dateModified: "2026-10-03"
 slug: "simplest-small-business-automation-tasks-australia-2026"
 cluster: "foundations"
 keyword: "What is the simplest task a small business can automate right now using a no-code tool?"
@@ -129,7 +129,7 @@ Three touchpoints. Zero manual work.
 5. Write your message templates (keep them short and friendly)
 6. Turn it on
 
-We worked with a physio clinic in Brisbane that cut no-shows from 18% to 4% just by adding SMS reminders. That's 14% of bookings that now turn up instead of sitting empty.
+We worked with a physio clinic in Brisbane that cut no-shows from 18% to 4% just by adding SMS reminders. That's 14 more of every 100 bookings turning up instead of sitting empty.
 
 And here's the kicker: Twilio and ClickSend charge about 8 cents per SMS in Australia. If one reminder saves you one $150 appointment, you've paid for 1,875 SMS reminders.
 
