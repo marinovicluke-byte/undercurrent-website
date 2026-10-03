@@ -34,7 +34,7 @@ faqs:
 
 eInvoicing is structured digital invoicing that goes straight from your accounting system to your customer's accounting system. No PDFs. No emails. No manual data entry on either end.
 
-Manual invoice processing costs Australian SMEs between $0.80 and $2.00 per invoice, according to the Australian Taxation Office. If you're sending 50 invoices a month, that's $600-$1,200 a year just in admin time. eInvoicing drops that cost to almost nothing because the data flows automatically.
+Manual invoice processing costs Australian SMEs between $0.80 and $2.00 per invoice, according to the Australian Taxation Office. If you're sending 50 invoices a month, that's $480-$1,200 a year just in admin time. eInvoicing drops that cost to almost nothing because the data flows automatically.
 
 And here's the kicker: automated invoicing reduces payment delays by 40% on average. Your invoices arrive instantly, they're already in your customer's system, and there's no "I didn't get it" excuse. Faster invoices mean faster payments.
 
