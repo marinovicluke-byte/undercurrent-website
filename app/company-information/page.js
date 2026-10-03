@@ -17,7 +17,7 @@ const LAST_UPDATED_ISO = '2026-10-03'
 export const metadata = {
   title: 'Company Information',
   description:
-    'UnderCurrent Automations is a Melbourne business founded by Luke Marinovic in 2026. Services, prices, contact details and trading details on one page.',
+    'UnderCurrent Automations is a Melbourne business founded by Luke Marinovic in March 2026. Services, prices, contact and trading details on one page.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Company Information | UnderCurrent Automations',
@@ -34,7 +34,7 @@ const FACTS = [
   { label: 'Also known as', value: 'UnderCurrent' },
   { label: 'Business type', value: 'Sole trader, Australia' },
   { label: 'ABN', value: '23 368 496 814' },
-  { label: 'Founded', value: '2026' },
+  { label: 'Founded', value: 'March 2026' },
   { label: 'Founder', value: 'Luke Marinovic' },
   { label: 'Based in', value: 'Melbourne, Victoria, Australia' },
   { label: 'Clients', value: 'Across Australia, and some overseas' },
@@ -66,7 +66,7 @@ const PRICES = [
 const FAQS = [
   {
     q: 'What is UnderCurrent Automations?',
-    a: 'UnderCurrent Automations is a small business in Melbourne, Australia. It builds automation, websites and search for small and mid-sized service businesses. It also helps owners plan what to automate first and teaches their teams to use AI. Luke Marinovic founded it in 2026 and does the work himself.',
+    a: 'UnderCurrent Automations is a small business in Melbourne, Australia. It builds automation, websites and search for small and mid-sized service businesses. It also helps owners plan what to automate first and teaches their teams to use AI. Luke Marinovic founded it in March 2026 and does the work himself.',
   },
   {
     q: 'Where is UnderCurrent Automations based?',
@@ -78,7 +78,7 @@ const FAQS = [
   },
   {
     q: 'Who founded UnderCurrent Automations?',
-    a: 'Luke Marinovic founded UnderCurrent Automations in 2026. He runs the business and does the work himself, from the first call to handover. Before UnderCurrent, he worked in sales, where he built an automation that saved him three hours a day.',
+    a: 'Luke Marinovic founded UnderCurrent Automations in March 2026. He runs the business and does the work himself, from the first call to handover. Before UnderCurrent, he worked in sales, where he built an automation that saved him three hours a day.',
   },
   {
     q: 'How much does UnderCurrent Automations charge?',
@@ -190,10 +190,10 @@ export default function CompanyInformationPage() {
         <p>A project starts with a 30-minute call. We agree the scope and the price before any work starts. A first automation is usually live in two to four weeks. Larger systems are built in stages, and each stage runs before the next one starts. After handover you get documentation, a handover session and an optional support arrangement.</p>
 
         <h2>What tools does UnderCurrent build with?</h2>
-        <p>Most of the work connects the software a business already uses. Automations run on n8n, Make, Zapier or direct APIs. AI work uses ChatGPT, Claude and Gemini. Common systems include Xero and MYOB for accounts, HubSpot and Pipedrive for sales, ServiceM8, Jobber and simPRO for field service, and Cliniko and Halaxy for allied health. Websites are built on Next.js and hosted on Vercel.</p>
+        <p>UnderCurrent works with many tools and builds on the software a business already uses.</p>
 
         <h2>Who runs UnderCurrent?</h2>
-        <p>Luke Marinovic founded UnderCurrent Automations in 2026 and runs it from Melbourne. Before UnderCurrent, he worked in sales, where he built an automation for his own prospecting, research and email drafts. It saved him three hours a day. He started UnderCurrent to do the same for small businesses. <a href="/about">Read more about Luke</a> or find him on <a href="https://www.linkedin.com/in/lukemarinovic/">LinkedIn</a>.</p>
+        <p>Luke Marinovic founded UnderCurrent Automations in March 2026 and runs it from Melbourne. Before UnderCurrent, he worked in sales, where he built an automation for his own prospecting, research and email drafts. It saved him three hours a day. He started UnderCurrent to do the same for small businesses. <a href="/about">Read more about Luke</a> or find him on <a href="https://www.linkedin.com/in/lukemarinovic/">LinkedIn</a>.</p>
 
         <h2>Frequently asked questions</h2>
         {FAQS.map(f => (
