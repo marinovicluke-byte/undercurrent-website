@@ -89,7 +89,17 @@ The FAQ answers render from the `faqs:` front matter and feed the FAQPage JSON-L
 Body, from the H1 to the end of the last section before the FAQ, with link URLs removed:
 
 - Before: 1,790
-- After: see Checks
+- After: 1,126 (down 664, or 37%). The format-pass survey script counts 1,976 to 1,427 on its own rules. Most of the loss is the Dave and Brisbane worked examples and the totals.
+
+## Checks
+
+- **`next build`** (run directly, no IndexNow postbuild): passes. The Worked sum, 52 - 4 = 48, passes the workings check.
+- **`scripts/check-format-pass.mjs`** (from `content/format-pass-batch-1`, not committed here): **no new numbers** and no flagged figure. No em dash, one H1. It fails on word count (-27.8%), headings, front matter and Quick Answer, which are the intended rewrite changes.
+- **`scripts/check-quick-answers.mjs`**: 71 of 71 pass.
+- **Numbers left in the article:** 52, 4 and 48 (Fair Work), plus "2 weeks" and "12" as method instructions.
+- **Headings:** one H2 changed, "Manual vs Automated: The Real Numbers" to "... What Changes". A Sources H2 was added.
+- **Head against production:** title, meta description, canonical and every JSON-LD block are identical, apart from the FAQ answer text.
+- **`next start`, at 390 and 1440, in Chromium and WebKit** (CSP stripped for WebKit): no sideways scroll, and every block renders. The rotating photo sits before "What Is the Opportunity Cost of Admin for a Tradie?", one H2 earlier than on production, because the body is shorter.
 
 ## Reads thin (for Luke)
 
