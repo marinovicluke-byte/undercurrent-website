@@ -62,3 +62,64 @@ Vendor facts were read on the vendors' own pages on 3 Oct 2026. Some help centre
 | 94 | FAQ 6: BrightLocal 2025, 72% expect a reply within 24 hours | FAQ | CUT. See the checks below |
 
 FAQ answers render from `faqs:` and feed the FAQPage JSON-LD, so they change with the visible FAQ. The questions are unchanged.
+
+**FAQ 6 check:** No BrightLocal survey holds "72% within 24 hours", in the 2024 edition or the 2026 one. BrightLocal's own [learn page](https://www.brightlocal.com/learn/reviews-on-social-media/) credits a similar line to Sprout Social, which makes it secondhand, so it isn't used.
+
+**Sources:** the article has no Sources list. Every source is linked in the text.
+
+## Verdict
+
+- **Four personas were presented as real customers, and none is any longer.**
+  - Sarah's agency, Jake the electrician and Lisa the consultant return as labelled examples ("Say a...") with no results. Their followers +34%, 47 vs 12 interactions and "10 minutes instead of 2 hours" are cut.
+  - Tom the plumber is cut.
+  - "One agency owner we spoke to" (18 hours) is cut.
+- **Eight unlinked statistics are cut:** OAIC 67%, MYOB 58%, HubSpot 23%, Sensis 41%/18%, OAIC 31%, Deloitte 44% and BrightLocal 72%. None could be found at the body named.
+- **"The ACCC's 2025 guidelines" for scheduling tools don't exist,** and neither do the "2024 warnings" on chatbots. The three checks stay as UC's own advice.
+- **The pricing table was wrong in kind, not just in amount.**
+  - No vendor bills in AUD.
+  - The tools price by different units: channel (Buffer), seat (Sprout, Hootsuite), workspace (Planable, Sendible), social set (Later) and brands (Metricool).
+  - The table is rebuilt from the eight pricing pages, each linked, read 3 Oct 2026. Hootsuite's price isn't shown, because the page renders it in the browser and the sources disagree.
+- **Two factual errors are fixed:**
+  - "Instagram's API doesn't allow" auto-posting Stories. Meta's Content Publishing API supports Stories and Reels for professional accounts. Stickers and links are the exception.
+  - "Your scheduling platform is a data processor under Australian law." That's GDPR language. The OAIC's $3 million threshold replaces it, linked.
+- **Data residency:** none of the eight stores data in Australia. Metricool is in the EU and six say the US, each linked.
+
+## Front matter
+
+- **`dateModified`: "2026-09-30" (batch 4) became "2026-10-03"**, under the rewrite-lane date rule: the first byte of sha256(slug), `0x4b`, is odd, so 3 Oct. The published date is unchanged.
+- **`summary`** (blog card text) said "AUD pricing, ACCC compliance notes, and real performance benchmarks". All three are now false, so it reads "each vendor's own pricing, Australian privacy notes, and a pick by business type". The brief's keep-list doesn't name `summary`.
+- **The meta description is unchanged, as the brief says.** It still says "tested", "pricing in AUD" and "real performance data", and the H1 says "Tested". See "Reads thin".
+
+## Blocks
+
+| Block | Where | What it holds |
+|---|---|---|
+| Worked (new) | H2 3, Buffer | "What Buffer costs for three channels": US$5 x 3 = US$15 a month. US$5 is from Buffer's pricing page (linked in the sentence above). The 3 channels are the article's own count (a page, an account and a profile) |
+| Titled list (batch 4) | H2 5 | "Reporting depth, platform by platform", unchanged |
+| Titled list (batch 4) | H2 9 | "The pick, by business type", with the prices corrected |
+| Rail (rebuilt) | H2 2 | The tool table: five columns, a vendor link per row |
+
+No Fill: there's no step run. No Weight: there's no before/after pair that carries the decision.
+
+## Word count
+
+Body, from the H1 to the end of the last section before the FAQ, with link URLs removed:
+
+- Before (on batch 4): 2,138
+- After: 2,125 (down 13). The format-pass survey script counts 2,286 to 2,277 (-0.4%).
+
+## Checks
+
+- **`next build`** (run directly, no IndexNow postbuild): passes, including the Worked sum (5 x 3 = 15).
+- **`scripts/check-format-pass.mjs --base origin/content/format-pass-batch-4`**: words -0.4%, no em dash added (the one em dash is batch 4's, in `heroImageAlt`), one H1, and the headings are identical to batch 4.
+  - New numbers: 14 (14-day trials), 18.75, 30 and 33. All are sourced vendor figures.
+  - It flags the front matter (the FAQs and `summary`), the Quick Answer (the price range) and the date (it wants 30 Sep). The rewrite-lane rule gives 3 Oct.
+- **`scripts/check-quick-answers.mjs`**: 71 of 71 pass.
+- **`next start`, at 390 and 1440, in Chromium and WebKit** (CSP and HSTS stripped for WebKit, which otherwise upgrades localhost to https and loads no CSS): 200, no sideways scroll, one H1, "Updated 3 Oct 2026". All three blocks render. The table scrolls inside its own frame at 390.
+
+## Reads thin (for Luke)
+
+1. **The meta description and H1 promise testing and "real performance data".** Nothing in the article was tested. Both are on the brief's keep-list, so they're unchanged. Changing them is Luke's call: "compared" for "tested", and "vendor pricing" for "pricing in AUD ... real performance data".
+2. **No Hootsuite price.** Check https://www.hootsuite.com/plans in a browser and add it to the table and the bottom-line list if wanted.
+3. **No evidence that scheduling pays off.** Every result was a persona's. No story on the approved list fits social scheduling.
+4. **Prices date fast.** The table says "read on 3 Oct 2026". It's worth a recheck at the next touch.
