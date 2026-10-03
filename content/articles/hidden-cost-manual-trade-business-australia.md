@@ -1,6 +1,6 @@
 ---
 title: "The Hidden Cost of Running a Trade Business Without Automation"
-description: "Calculate the real dollar cost of running your Australian trade business manually. Fair Work + ABS hours + Xero insights = the number you need to see."
+description: "Work out the real cost of running your Australian trade business manually: your rate, your admin hours, your working weeks. A method you can check."
 date: "2026-03-31"
 slug: "hidden-cost-manual-trade-business-australia"
 cluster: "foundations"
@@ -65,11 +65,22 @@ Every hour you spend chasing unpaid invoices is an hour you're not on the tools.
 3. Use 48 working weeks, as worked out above.
 4. Multiply the three. That's your yearly opportunity cost.
 
+Here's the method worked through as an example. Say a plumber charges $90 an hour, inside the [$80 to $200 an hour hipages lists for plumbers](https://hipages.com.au/article/how_much_does_a_plumber_cost), and spends 10 hours a week on admin.
+
+**Say a plumber gives 10 hours a week to admin (an example)**
+
+- Admin hours a week, the example's assumption, **10 hours**
+- Hourly rate, inside hipages' range for plumbers, **$90**
+- Working weeks in a year, **48 weeks**
+- = Billable time lost in a year, **$43,200**
+
+*Swap in your own hours and rate. An electrician at $80, the low end of the [$80 to $100 hipages lists for electricians](https://hipages.com.au/article/how_much_does_an_electrician_cost), loses $38,400 on the same 10 hours.*
+
 But that's not the full picture. Three other costs sit on top.
 
 **The three costs on top of admin time**
 
-- Slow payments: invoicing in end-of-week or end-of-month batches means waiting longer for money you've already earned
+- Slow payments: in [Xero's Small Business Insights](https://www.xero.com/au/resources/small-business-insights/latest-australia/), Australian small businesses waited 22.9 days on average to be paid in the June 2026 quarter, and were paid 6.0 days late. Batch invoicing adds days before that clock even starts
 - Missed follow-ups: a quote nobody chases often goes to whoever called back first, so count last month's unchased quotes and their job values
 - Compliance: licensing, insurance documents, safety records and subcontractor paperwork take real hours, so make sure they're in your tracking
 
@@ -84,7 +95,7 @@ But that's not the full picture. Three other costs sit on top.
 - Sunday: replying to quote requests and scheduling next week
 - Weeknights: typing up quotes from site notes
 
-Batching invoices to the end of the week also delays when you get paid, and that squeezes the next materials order. Quotes you don't follow up convert less often than quotes you do. Neither shows up on a timesheet, but both cost you.
+Batching invoices to the end of the week also delays when you get paid, on top of the days late the average invoice already lands. That squeezes the next materials order. Quotes you don't follow up convert less often than quotes you do. Neither shows up on a timesheet, but both cost you.
 
 ## Manual vs Automated: What Changes
 
@@ -166,3 +177,6 @@ Use this formula: (your hourly rate × admin hours per week × 48 weeks) + the c
 ## Sources
 
 1. [Fair Work Ombudsman, Annual leave](https://www.fairwork.gov.au/leave/annual-leave)
+2. [Xero, Australian Small Business Insights (June 2026 quarter, published 30 July 2026)](https://www.xero.com/au/resources/small-business-insights/latest-australia/)
+3. [hipages, How much does a plumber cost?](https://hipages.com.au/article/how_much_does_a_plumber_cost)
+4. [hipages, How much does an electrician cost?](https://hipages.com.au/article/how_much_does_an_electrician_cost)
