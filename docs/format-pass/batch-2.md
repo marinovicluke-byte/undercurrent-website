@@ -6,9 +6,9 @@ date: 2026-10-03
 
 # Format pass, batch 2: blocks for 10 older articles
 
-Branch `content/format-pass-batch-2`, off `origin/main` at `1c4aec2`. **The PR is open and not merged.** Luke squash-merges it. It doesn't depend on batch 1 (PR 44). The three scripts were copied from the batch 1 branch tip. One line in `check-format-pass.mjs` was then fixed here (see "Found on the way"), so whichever PR merges second has a one-line conflict in that file. Keep batch 2's line.
+Branch `content/format-pass-batch-2`, off `origin/main` at `1c4aec2`. **The PR is open and not merged.** Luke squash-merges it. It doesn't depend on batch 1 (PR 44). The scripts were copied from the batch 1 branch tip and later synced so PRs 44, 47 and 49 carry the same four scripts byte for byte. They merge in any order without a conflict.
 
-The rule is the same as batch 1: **keep the words, change the shape.** Titles, meta, canonicals, schema, slugs, dates (published and `dateModified`) and the Quick Answer are unchanged.
+The rule is the same as batch 1: **keep the words, change the shape.** Titles, meta, canonicals, schema, slugs, the published date and the Quick Answer are unchanged.
 
 Two batch 1 notes were applied to every block:
 
@@ -119,13 +119,29 @@ The Google Ads cost article has two Worked blocks that were on main before this 
 
 ## Found on the way
 
-- **The check counted `# comments` inside code fences as H1s.** n8n vs Zapier has a commented Docker Compose fence (six `# ` lines on main too), so it failed "not exactly one H1". `check-format-pass.mjs` now strips fences before counting (commit `e2849c7`). Batch 1 adds the same file with the old line, so the second of the two PRs to merge gets an add/add conflict on that one line. Keep the line with the fence comment. I can rebase this branch after PR 44 merges, if that's easier.
+- **The check counted `# comments` inside code fences as H1s.** n8n vs Zapier has a commented Docker Compose fence (six `# ` lines on main too), so it failed "not exactly one H1". `check-format-pass.mjs` now strips fences before counting (commit `e2849c7`). The updated-dates commit synced this fix into PR 44 too, so the copies are identical and there's no conflict.
 - **"Go with" and "with" make a pair a contrast.** The PLUS words include `with`, so a title like "Go with SEO first if" turns a neutral choice into plus and minus. Pick verbs outside both word lists ("Pick", "Choose").
 - **Old em-dash swaps left " , " in 25 articles.** Most are in Related Reading lists ("[link] , the guide"), and a few are in body prose (does-chatgpt-search-the-web line 44). The memory rule is never to produce " , ". This batch doesn't touch them: four of the ten have them, and fixing four of 25 would leave the site half done. One sweep across all 25 is a separate small PR.
 
 ## Scripts
 
 These are reused from batch 1 and copied from the batch 1 branch tip (`scripts/survey-article-blocks.mjs`, `scripts/convert-step-runs.mjs`, `scripts/check-format-pass.mjs`). The only change is the code-fence fix above. The converter matched only two of the plans this time: the Weeks plan in the ChatGPT article and the Days plan for buyers agents. Both have a long first sentence that works better as a bold step title, so they were converted by hand in the same shape.
+
+## Updated dates (added 3 Oct, Luke's rule)
+
+Luke, 3 Oct: changed articles get a new updated date, mixed across 29 Sep to 3 Oct so they don't stack on one day. `scripts/set-updated-date.mjs` sets `dateModified` from a hash of the slug, so a rerun gives the same date. Published dates don't move. `scripts/check-format-pass.mjs` asserts each date. The Article JSON-LD `dateModified`, the visible "Updated" line and the sitemap lastmod move with it. Everything else in the schema is unchanged.
+
+| Article | Updated |
+|---|---|
+| does-chatgpt-search-the-web | 2026-10-01 |
+| google-ads-cost-australian-small-business | 2026-09-30 |
+| how-to-win-at-perplexity-seo | 2026-10-02 |
+| local-seo-checklist | 2026-09-30 |
+| n8n-vs-zapier-australia-small-business | 2026-10-02 |
+| pet-grooming-marketing-australia | 2026-10-03 |
+| seo-for-buyers-agents-australia | 2026-10-01 |
+| seo-vs-google-ads-dog-grooming | 2026-09-29 |
+| what-is-business-process-automation-australia | 2026-09-30 |
 
 ## Rollback
 

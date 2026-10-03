@@ -2,6 +2,7 @@
 title: "How to Choose SEO or Google Ads for Dog Grooming"
 description: "SEO vs Google Ads for dog grooming in Australia: a 2026 comparison of cost, speed and durability, plus a clear verdict on which channel to start first."
 date: "2026-06-16"
+dateModified: "2026-09-29"
 slug: "seo-vs-google-ads-dog-grooming"
 cluster: "seo-ai-visibility"
 keyword: "seo vs google ads for dog grooming"

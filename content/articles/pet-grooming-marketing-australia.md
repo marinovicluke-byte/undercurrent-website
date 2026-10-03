@@ -2,6 +2,7 @@
 title: "How to Do Dog Grooming Marketing in Australia"
 description: "A 2026 guide to dog grooming marketing in Australia: win the Google local pack, get cited by AI search, build a booking site, and automate reviews."
 date: "2026-06-16"
+dateModified: "2026-10-03"
 slug: "pet-grooming-marketing-australia"
 cluster: "industry-guides"
 keyword: "dog grooming marketing"

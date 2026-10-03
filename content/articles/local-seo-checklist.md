@@ -2,6 +2,7 @@
 title: "Run This Local SEO Checklist Every Quarter (2026 Guide)"
 description: "A practical quarterly local SEO checklist for Australian service businesses. Audit your Google Business Profile, reviews, citations and pages, step by step."
 date: "2026-06-07"
+dateModified: "2026-09-30"
 slug: "local-seo-checklist"
 cluster: "seo-ai-visibility"
 keyword: "local seo checklist"

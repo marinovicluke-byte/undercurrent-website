@@ -2,6 +2,7 @@
 title: "How to Win at Perplexity SEO: Freshness Beats Backlinks"
 description: "Perplexity SEO rewards freshness, citations and structured sources over backlinks. UnderCurrent shows what gets Australian businesses cited, and how."
 date: "2026-05-13"
+dateModified: "2026-10-02"
 slug: "how-to-win-at-perplexity-seo"
 cluster: "seo-ai-visibility"
 keyword: "perplexity seo"

@@ -5,6 +5,7 @@
 //   - no em dash added
 //   - no flagged figure inside a Worked block (FLAGGED, from docs/quick-answers-reply.md)
 //   - one H1, and the headings, frontmatter (bar dateModified) and Quick Answer unchanged
+//   - dateModified set to the slug's day (scripts/set-updated-date.mjs), published date unchanged
 //
 //   node scripts/check-format-pass.mjs [--base origin/main]
 // Exits 1 on any failure.
@@ -12,6 +13,7 @@
 import fs from 'fs'
 import { execFileSync } from 'child_process'
 import { survey } from './survey-article-blocks.mjs'
+import { dayFor } from './set-updated-date.mjs'
 
 const DIR = 'content/articles'
 const args = process.argv.slice(2)
@@ -34,9 +36,9 @@ const FLAGGED = {
   'how-to-send-instant-follow-up-email-to-leads-automatically-australia': ['30%', '40%'],
 }
 
-// an ordered list's own numerals ("1. ") are structure, not figures
-const nums = s => (s.replace(/^\d+\.\s/gm, '').replace(/\]\([^)]*\)/g, ']').match(/\d+(?:[.,]\d+)*/g) || []).map(n => n.replace(/,/g, ''))
-const front = s => (s.match(/^---\n[\s\S]*?\n---\n/) || [''])[0].replace(/^dateModified:.*$/m, '')
+// an ordered list's own numerals ("1. ") and the updated date are structure, not figures
+const nums = s => (s.replace(/^dateModified:.*$/m, '').replace(/^\d+\.\s/gm, '').replace(/\]\([^)]*\)/g, ']').match(/\d+(?:[.,]\d+)*/g) || []).map(n => n.replace(/,/g, ''))
+const front = s => (s.match(/^---\n[\s\S]*?\n---\n/) || [''])[0].replace(/^dateModified:.*\n/m, '')
 const qa = s => (s.match(/^> \*\*Quick Answer[\s\S]*?(?=\n[^>])/m) || [''])[0]
 const heads = s => s.split('\n').filter(l => /^#{1,6}\s/.test(l))
 
@@ -75,6 +77,8 @@ for (const path of changed) {
   if (JSON.stringify(heads(old)) !== JSON.stringify(heads(now))) errs.push('headings changed')
   if (front(old) !== front(now)) errs.push('frontmatter changed (other than dateModified)')
   if (qa(old) !== qa(now)) errs.push('Quick Answer changed')
+  const mod = (now.match(/^dateModified:\s*"?([\d-]+)/m) || [])[1]
+  if (mod !== dayFor(slug)) errs.push(`dateModified ${mod || 'missing'}, want ${dayFor(slug)} (node scripts/set-updated-date.mjs)`)
   for (const w of worked(now)) for (const f of FLAGGED[slug] || []) if (w.items.join(' ').includes(f)) errs.push(`flagged figure "${f}" in Worked block ${w.title}`)
   const blocks = b.blocks - a.blocks
   console.log(`${errs.length ? 'FAIL' : 'ok  '} ${slug}: words ${a.words} → ${b.words} (${(drift * 100).toFixed(1)}%), blocks +${blocks}, Worked ${worked(now).length}`)

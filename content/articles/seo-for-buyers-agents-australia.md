@@ -2,6 +2,7 @@
 title: "SEO for Buyers Agents in Australia: Win More Clients"
 description: "SEO for buyers agents in Australia means winning four search surfaces: Google, the map pack, AI Overviews, and ChatGPT. The 2026 playbook."
 date: "2026-05-13"
+dateModified: "2026-10-01"
 slug: "seo-for-buyers-agents-australia"
 cluster: "industry-guides"
 keyword: "seo for buyers agents australia"

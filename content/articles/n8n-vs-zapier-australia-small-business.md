@@ -2,6 +2,7 @@
 title: "n8n vs Zapier: Small Business Comparison (Australia)"
 description: "Compare n8n vs Zapier for Australian small businesses. AUD pricing, self-hosting on AWS Sydney for data sovereignty, and which tool fits your task volume."
 date: "2026-04-27"
+dateModified: "2026-10-02"
 slug: "n8n-vs-zapier-australia-small-business"
 cluster: "ai-strategy-training"
 keyword: "n8n vs zapier australia small business"

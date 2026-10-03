@@ -2,6 +2,7 @@
 title: "What Google Ads Cost an Australian Small Business in 2026"
 description: "What Google Ads really costs an Australian small business in 2026: real monthly budget bands, click prices by industry, and where ad spend leaks."
 date: "2026-05-24"
+dateModified: "2026-09-30"
 slug: "google-ads-cost-australian-small-business"
 cluster: "seo-ai-visibility"
 keyword: "google ads cost"

@@ -2,6 +2,7 @@
 title: "Does ChatGPT Search the Web? The 34.5% Answer"
 description: "ChatGPT only searches the web on 34.5% of queries per Semrush's 1B-row study. Here's how that rewrites the AEO playbook for Australian businesses in 2026."
 date: "2026-05-17"
+dateModified: "2026-10-01"
 slug: "does-chatgpt-search-the-web"
 cluster: "seo-ai-visibility"
 keyword: "does chatgpt search the web"
