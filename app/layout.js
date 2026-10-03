@@ -1,8 +1,9 @@
-// app/layout.js — the root shell for the 2026 design. Inter via next/font, the
+// app/layout.js — the root shell for the 2026 design. Inter via next/font/local, the
 // sitewide JSON-LD, analytics. Nav and Footer are the sandbox's, on every page.
 // Each page imports its own stylesheet (app/styles/*.css) and links are plain
 // anchors, so a page's sheet never leaks into the next one.
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
+import './fonts/inter/inter-fallback.css'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { GoogleAnalytics } from '@next/third-parties/google'
@@ -10,12 +11,120 @@ import Script from 'next/script'
 import Nav from '@/components/site/Nav'
 import Footer from '@/components/site/Footer'
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
+// Inter, self-hosted (3 Oct 2026): the build used to fetch it from Google
+// (next/font/google) and failed now and then on the fetch. These are the files
+// Google serves for Inter 300 to 600, one variable file per subset, declared in
+// Google's order with Google's unicode ranges, so the page renders the same.
+// Only latin is preloaded, as before. The fallback face keeps Google's metrics
+// (inter-fallback.css). Licence: app/fonts/inter/OFL.txt.
+const interCyrillicExt = localFont({
+  src: [
+    { path: './fonts/inter/inter-cyrillic-ext.woff2', weight: '300', style: 'normal' },
+    { path: './fonts/inter/inter-cyrillic-ext.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/inter/inter-cyrillic-ext.woff2', weight: '500', style: 'normal' },
+    { path: './fonts/inter/inter-cyrillic-ext.woff2', weight: '600', style: 'normal' },
+  ],
   display: 'swap',
-  weight: ['300', '400', '500', '600'],
+  preload: false,
+  adjustFontFallback: false,
+  declarations: [
+    { prop: 'font-family', value: 'Inter' },
+    { prop: 'unicode-range', value: 'U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F' },
+  ],
 })
+const interCyrillic = localFont({
+  src: [
+    { path: './fonts/inter/inter-cyrillic.woff2', weight: '300', style: 'normal' },
+    { path: './fonts/inter/inter-cyrillic.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/inter/inter-cyrillic.woff2', weight: '500', style: 'normal' },
+    { path: './fonts/inter/inter-cyrillic.woff2', weight: '600', style: 'normal' },
+  ],
+  display: 'swap',
+  preload: false,
+  adjustFontFallback: false,
+  declarations: [
+    { prop: 'font-family', value: 'Inter' },
+    { prop: 'unicode-range', value: 'U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116' },
+  ],
+})
+const interGreekExt = localFont({
+  src: [
+    { path: './fonts/inter/inter-greek-ext.woff2', weight: '300', style: 'normal' },
+    { path: './fonts/inter/inter-greek-ext.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/inter/inter-greek-ext.woff2', weight: '500', style: 'normal' },
+    { path: './fonts/inter/inter-greek-ext.woff2', weight: '600', style: 'normal' },
+  ],
+  display: 'swap',
+  preload: false,
+  adjustFontFallback: false,
+  declarations: [
+    { prop: 'font-family', value: 'Inter' },
+    { prop: 'unicode-range', value: 'U+1F00-1FFF' },
+  ],
+})
+const interGreek = localFont({
+  src: [
+    { path: './fonts/inter/inter-greek.woff2', weight: '300', style: 'normal' },
+    { path: './fonts/inter/inter-greek.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/inter/inter-greek.woff2', weight: '500', style: 'normal' },
+    { path: './fonts/inter/inter-greek.woff2', weight: '600', style: 'normal' },
+  ],
+  display: 'swap',
+  preload: false,
+  adjustFontFallback: false,
+  declarations: [
+    { prop: 'font-family', value: 'Inter' },
+    { prop: 'unicode-range', value: 'U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF' },
+  ],
+})
+const interVietnamese = localFont({
+  src: [
+    { path: './fonts/inter/inter-vietnamese.woff2', weight: '300', style: 'normal' },
+    { path: './fonts/inter/inter-vietnamese.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/inter/inter-vietnamese.woff2', weight: '500', style: 'normal' },
+    { path: './fonts/inter/inter-vietnamese.woff2', weight: '600', style: 'normal' },
+  ],
+  display: 'swap',
+  preload: false,
+  adjustFontFallback: false,
+  declarations: [
+    { prop: 'font-family', value: 'Inter' },
+    { prop: 'unicode-range', value: 'U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB' },
+  ],
+})
+const interLatinExt = localFont({
+  src: [
+    { path: './fonts/inter/inter-latin-ext.woff2', weight: '300', style: 'normal' },
+    { path: './fonts/inter/inter-latin-ext.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/inter/inter-latin-ext.woff2', weight: '500', style: 'normal' },
+    { path: './fonts/inter/inter-latin-ext.woff2', weight: '600', style: 'normal' },
+  ],
+  display: 'swap',
+  preload: false,
+  adjustFontFallback: false,
+  declarations: [
+    { prop: 'font-family', value: 'Inter' },
+    { prop: 'unicode-range', value: 'U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF' },
+  ],
+})
+const inter = localFont({
+  src: [
+    { path: './fonts/inter/inter-latin.woff2', weight: '300', style: 'normal' },
+    { path: './fonts/inter/inter-latin.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/inter/inter-latin.woff2', weight: '500', style: 'normal' },
+    { path: './fonts/inter/inter-latin.woff2', weight: '600', style: 'normal' },
+  ],
+  display: 'swap',
+  variable: '--font-inter',
+  adjustFontFallback: false,
+  fallback: ['Inter Fallback'],
+  declarations: [
+    { prop: 'font-family', value: 'Inter' },
+    { prop: 'unicode-range', value: 'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD' },
+  ],
+})
+// the other subsets are declared above for their @font-face rules only
+void [interCyrillicExt, interCyrillic, interGreekExt, interGreek, interVietnamese, interLatinExt]
 
 export const metadata = {
   metadataBase: new URL('https://undercurrentautomations.com'),

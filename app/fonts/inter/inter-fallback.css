@@ -1,0 +1,3 @@
+/* The metric-matched fallback next/font/google used to generate for Inter,
+   with Google's exact values, so text holds the same box before Inter loads. */
+@font-face{font-family:'Inter Fallback';src:local(Arial);ascent-override:90.44%;descent-override:22.52%;line-gap-override:0%;size-adjust:107.12%}
