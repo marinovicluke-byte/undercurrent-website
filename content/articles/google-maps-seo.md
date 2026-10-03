@@ -2,6 +2,7 @@
 title: "Google Maps SEO: Rank in the Local Pack (2026)"
 description: "Google Maps SEO decides who wins the local pack. Here's how Australian businesses climb the rankings, what moves the needle, and how to measure it."
 date: "2026-05-30"
+dateModified: "2026-10-01"
 slug: "google-maps-seo"
 cluster: "seo-ai-visibility"
 keyword: "google maps seo"
@@ -114,7 +115,15 @@ Work the priorities in order. Skipping ahead while the foundation is missing was
 
 **Reviews are a direct local pack ranking factor, not a vanity metric you check once a quarter, with businesses in the top three positions averaging 561 reviews at a 4.8-star rating.** [That benchmark from real pack data](https://www.rankmax.com.au/articles/local-seo-statistics) is the company you are up against.
 
-Reviews feed [what Google calls prominence](https://support.google.com/business/answer/7091?hl=en) through three signals at once. Volume builds trust. Velocity, a steady flow rather than a one-off batch, proves you're still active. And the words customers use, like "fixed our blocked drain", tie service keywords straight to your profile. Two reviews a week beats thirty in a month then silence.
+Reviews feed [what Google calls prominence](https://support.google.com/business/answer/7091?hl=en) through three signals at once.
+
+**The three review signals**
+
+- **Volume** builds trust.
+- **Velocity**, a steady flow rather than a one-off batch, proves you're still active.
+- **The words customers use**, like "fixed our blocked drain", tie service keywords straight to your profile.
+
+Two reviews a week beats thirty in a month then silence.
 
 Respond to every review within 24 hours where you can, because Google tracks that too. Never script or buy reviews. If you're a trade business struggling to collect them at all, our guide on [why tradies don't get Google reviews](/blog/why-tradies-dont-get-google-reviews-australia) covers the fix.
 
@@ -196,7 +205,15 @@ Weak guides outnumber strong ones nearly two to one, and across our whole 196-ar
 
 ## What surprised us when we audited 94 local-SEO guides
 
-**Three patterns in our 94-article audit hit harder than the overall score suggests, and each one points to a fixable mistake that most Australian SEO guides repeat.** First, almost nobody separates the channels: most of the 94 articles blur Maps, organic, and AI search into one pile of tips, so readers fix the wrong system. Second, the weak band, 42 of 94 articles, nearly always failed the same way, no original data, just a recycled stat list. Third, the strongest pieces weren't the longest, they were the most specific, naming real suburbs, council rules, and tools. Specificity, not length, separated an 80-plus guide from one stuck in the 50s.
+**Three patterns in our 94-article audit hit harder than the overall score suggests, and each one points to a fixable mistake that most Australian SEO guides repeat.**
+
+**The three patterns**
+
+- Almost nobody separates the channels: most of the 94 articles blur Maps, organic, and AI search into one pile of tips, so readers fix the wrong system.
+- The weak band, 42 of 94 articles, nearly always failed the same way, no original data, just a recycled stat list.
+- The strongest pieces weren't the longest, they were the most specific, naming real suburbs, council rules, and tools.
+
+Specificity, not length, separated an 80-plus guide from one stuck in the 50s.
 
 <svg viewBox="0 0 400 230" role="img" aria-label="Quality of 94 audited Australian local-SEO articles: 42 weak, 29 competent, 23 strong" xmlns="http://www.w3.org/2000/svg">
 <rect x="50" y="40" width="80" height="170" fill="#c98a4a"/>

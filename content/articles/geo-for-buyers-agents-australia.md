@@ -2,6 +2,7 @@
 title: "GEO for Buyers Agents: Win AI Search in Australia"
 description: "GEO for buyers agents is how Australian agencies get cited by ChatGPT, Gemini and Perplexity. Five pillars, 90-day rollout, and the metrics that matter."
 date: "2026-05-13"
+dateModified: "2026-10-01"
 slug: "geo-for-buyers-agents-australia"
 cluster: "seo-ai-visibility"
 keyword: "GEO for buyers agents"
@@ -64,7 +65,7 @@ For a buyers agent, the practical question becomes: when a Toorak couple types "
 
 AI engines blend three sources on every query: their pre-trained knowledge, real time retrieval (usually a search API call), and your structured metadata. The retrieval layer is where most buyers-agent sites are leaking visibility.
 
-Three retrieval signals move the needle:
+**Three retrieval signals move the needle**
 
 - **Direct-answer paragraph at the top of every page.** AI engines pull the first 60–80 words when the query matches the H1.
 - **Schema markup that explicitly identifies your service.** `LocalBusiness` plus `RealEstateAgent` plus `FAQPage` schema gives the engine a clean entity to attach to.
@@ -78,7 +79,11 @@ It's a 100-point rubric across 9 categories, built against [Google Search Centra
 
 ### What surprised us when auditing the corpus
 
-Three things hit harder than the score sheet alone shows. First, schema. Most sites had a single `Article` block and not much else; `RealEstateAgent` markup was rare; `sameAs` arrays were almost non-existent. The full bundle is a 30-minute fix nobody had made. Second, the FAQ pattern: every firm answered "Why choose us?", almost none answered "How much does a buyers agent cost in Sydney?" Third, citations clustered: InfoTrack and Domain showed up everywhere; ABS, ASBFEO, and Treasury showed up nowhere. The cheapest, highest-authority sources were the most ignored.
+**Three things hit harder than the score sheet alone shows**
+
+- **Schema.** Most sites had a single `Article` block and not much else; `RealEstateAgent` markup was rare; `sameAs` arrays were almost non-existent. The full bundle is a 30-minute fix nobody had made.
+- **The FAQ pattern:** every firm answered "Why choose us?", almost none answered "How much does a buyers agent cost in Sydney?"
+- **Citations clustered:** InfoTrack and Domain showed up everywhere; ABS, ASBFEO, and Treasury showed up nowhere. The cheapest, highest-authority sources were the most ignored.
 
 ## The 5 pillars of GEO for buyers agents
 
@@ -188,13 +193,12 @@ You don't choose between them. Traditional SEO still feeds AI retrieval. The eng
 
 **The 90-day rollout we use for buyers-agent clients runs in four phases, every one mechanical.**
 
-**Days 1–14: schema and tech audit.** Drop `RealEstateAgent` and `LocalBusiness` schema on every service page. Add `FAQPage` schema to your FAQ blocks. Validate with Google's Rich Results Test. Fix anything blocking crawl: `noindex` tags, slow LCP, broken canonicals.
+**The 90-day rollout, in four phases**
 
-**Days 15–35: rewrite the top 8 commercial pages.** Lead with a 60–80 word direct answer. Restructure H2s as questions. Add a comparison table to your "do I need a buyers agent" page. Three hyperlinked tier-1 citations per page minimum. Our [AI strategy and training programme](/ai-strategy-training) walks teams through it.
-
-**Days 36–60: build three suburb-anchored cluster pillars.** Pick three highest-revenue cities and a flagship suburb or two each. Melbourne (Toorak, Albert Park, Hawthorn, Brighton) at [/ai-automation-melbourne](/ai-automation-melbourne). Sydney (Mosman, Paddington, Double Bay, Bondi) at [/ai-automation-sydney](/ai-automation-sydney). Brisbane (New Farm, Bulimba, Hamilton) at [/ai-automation-brisbane](/ai-automation-brisbane). Perth at [/ai-automation-perth](/ai-automation-perth). Adelaide at [/ai-automation-adelaide](/ai-automation-adelaide). Each pillar gets a master page plus 4–6 supporting articles, cross-linked through [the national hub](/ai-automation-australia).
-
-**Days 61–90: case studies plus reciprocal citation.** Publish three suburb-anchored case studies with named outcomes. Reach out to three tier-1 sources you cite. Reciprocal citation grows your retrieval graph faster than cold-pitch link building.
+1. **Schema and tech audit.** Drop `RealEstateAgent` and `LocalBusiness` schema on every service page. Add `FAQPage` schema to your FAQ blocks. Validate with Google's Rich Results Test. Fix anything blocking crawl: `noindex` tags, slow LCP, broken canonicals, **Days 1–14**
+2. **Rewrite the top 8 commercial pages.** Lead with a 60–80 word direct answer. Restructure H2s as questions. Add a comparison table to your "do I need a buyers agent" page. Three hyperlinked tier-1 citations per page minimum. Our [AI strategy and training programme](/ai-strategy-training) walks teams through it, **Days 15–35**
+3. **Build three suburb-anchored cluster pillars.** Pick three highest-revenue cities and a flagship suburb or two each. Melbourne (Toorak, Albert Park, Hawthorn, Brighton) at [/ai-automation-melbourne](/ai-automation-melbourne). Sydney (Mosman, Paddington, Double Bay, Bondi) at [/ai-automation-sydney](/ai-automation-sydney). Brisbane (New Farm, Bulimba, Hamilton) at [/ai-automation-brisbane](/ai-automation-brisbane). Perth at [/ai-automation-perth](/ai-automation-perth). Adelaide at [/ai-automation-adelaide](/ai-automation-adelaide). Each pillar gets a master page plus 4–6 supporting articles, cross-linked through [the national hub](/ai-automation-australia), **Days 36–60**
+4. **Case studies plus reciprocal citation.** Publish three suburb-anchored case studies with named outcomes. Reach out to three tier-1 sources you cite. Reciprocal citation grows your retrieval graph faster than cold-pitch link building, **Days 61–90**
 
 ## Why now: Australian small business AI adoption context
 
