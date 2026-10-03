@@ -2,6 +2,7 @@
 title: "Is Your Website Broken? Run a 30-Min SEO Audit"
 description: "Run a free 30-minute SEO audit on your Australian service business website. 8 checks, no agency required. Spot whats broken before you spend a cent."
 date: "2026-05-06"
+dateModified: "2026-10-03"
 slug: "seo-audit-self-check-australia"
 cluster: "foundations"
 keyword: "seo audit"
@@ -66,13 +67,12 @@ The self-check below covers all three layers in 30 minutes. It won't replace a d
 
 **Start with the four signals Google reads first.** Each takes three to five minutes.
 
-**Check 1, Indexation:** Type `site:yourdomain.com.au` into Google. Zero results means Google isn't indexing your site. Check your `robots.txt` and any `noindex` tags in the page source.
+**The first four checks**
 
-**Check 2, Search Console coverage:** Open [Google Search Console](https://search.google.com/search-console/about). The Coverage report should show zero "Error" URLs and the Core Web Vitals report should show URLs in the "Good" band per [Google's thresholds](https://developers.google.com/search/docs/appearance/core-web-vitals). Across UC's audit corpus, unoptimised images are the most common Core Web Vitals red flag, a 10-minute fix most owners miss.
-
-**Check 3, Mobile usability:** Use [Google's PageSpeed Insights](https://pagespeed.web.dev/) (Mobile tab) or run [Chrome Lighthouse](https://developer.chrome.com/docs/lighthouse/) from Chrome DevTools. A broken mobile layout suppresses your whole domain. Per Statista's Australian mobile usage data, over 60% of Australian web traffic is mobile.
-
-**Check 4, On-page basics:** Every page needs a unique title under 60 characters, one H1 matching search intent, a meta description under 160 characters, and LocalBusiness schema. Validate via [Google's Rich Results Test](https://search.google.com/test/rich-results). [Google's structured data documentation](https://developers.google.com/search/docs/appearance/structured-data/local-business) confirms LocalBusiness schema feeds directly into local pack rankings.
+- **Check 1, Indexation:** Type `site:yourdomain.com.au` into Google. Zero results means Google isn't indexing your site. Check your `robots.txt` and any `noindex` tags in the page source.
+- **Check 2, Search Console coverage:** Open [Google Search Console](https://search.google.com/search-console/about). The Coverage report should show zero "Error" URLs and the Core Web Vitals report should show URLs in the "Good" band per [Google's thresholds](https://developers.google.com/search/docs/appearance/core-web-vitals). Across UC's audit corpus, unoptimised images are the most common Core Web Vitals red flag, a 10-minute fix most owners miss.
+- **Check 3, Mobile usability:** Use [Google's PageSpeed Insights](https://pagespeed.web.dev/) (Mobile tab) or run [Chrome Lighthouse](https://developer.chrome.com/docs/lighthouse/) from Chrome DevTools. A broken mobile layout suppresses your whole domain. Per Statista's Australian mobile usage data, over 60% of Australian web traffic is mobile.
+- **Check 4, On-page basics:** Every page needs a unique title under 60 characters, one H1 matching search intent, a meta description under 160 characters, and LocalBusiness schema. Validate via [Google's Rich Results Test](https://search.google.com/test/rich-results). [Google's structured data documentation](https://developers.google.com/search/docs/appearance/structured-data/local-business) confirms LocalBusiness schema feeds directly into local pack rankings.
 
 Below is the canonical JSON-LD structure for an Australian local service business. Copy it into your site's `<head>` and fill in your details:
 
@@ -108,13 +108,12 @@ Below is the canonical JSON-LD structure for an Australian local service busines
 
 **The final four checks cover authority, content depth, and local signals.** Run them in order.
 
-**Check 5, Internal linking:** Go to Search Console → Links → Internal links. Any important service page with fewer than three internal links is effectively hidden from Google. An orphaned page for "emergency electrical Footscray" won't rank even with perfect content. Our [automation services](/services) page has a section on how we handle this for clients.
+**The last four checks**
 
-**Check 6, Content depth:** Open a private browser, search your target keyword, and compare the top three results to your page. A business we worked with, a residential landscaping team in Coburg, had three service pages each under 200 words. After expanding them to match competitor depth, all three moved from page 3 to page 1 within two months.
-
-**Check 7, GBP parity:** Search your business name in Google Maps. Every field, name, address, phone, website URL, primary category, must exactly match your website footer. According to [Google's Business Profile help documentation](https://support.google.com/business/answer/7091), consistent NAP data is a primary local ranking signal.
-
-**Check 8, Backlink profile:** Go to Search Console → Links → External links. You want a spread of real referring domains, local directories, industry associations, supplier pages. [Ahrefs' free backlink checker](https://ahrefs.com/backlink-checker) shows the top 100 referring domains.
+- **Check 5, Internal linking:** Go to Search Console → Links → Internal links. Any important service page with fewer than three internal links is effectively hidden from Google. An orphaned page for "emergency electrical Footscray" won't rank even with perfect content. Our [automation services](/services) page has a section on how we handle this for clients.
+- **Check 6, Content depth:** Open a private browser, search your target keyword, and compare the top three results to your page. A business we worked with, a residential landscaping team in Coburg, had three service pages each under 200 words. After expanding them to match competitor depth, all three moved from page 3 to page 1 within two months.
+- **Check 7, GBP parity:** Search your business name in Google Maps. Every field, name, address, phone, website URL, primary category, must exactly match your website footer. According to [Google's Business Profile help documentation](https://support.google.com/business/answer/7091), consistent NAP data is a primary local ranking signal.
+- **Check 8, Backlink profile:** Go to Search Console → Links → External links. You want a spread of real referring domains, local directories, industry associations, supplier pages. [Ahrefs' free backlink checker](https://ahrefs.com/backlink-checker) shows the top 100 referring domains.
 
 ---
 
