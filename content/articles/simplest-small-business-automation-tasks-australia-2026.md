@@ -129,7 +129,7 @@ Three touchpoints. Zero manual work.
 5. Write your message templates (keep them short and friendly)
 6. Turn it on
 
-We worked with a physio clinic in Brisbane that cut no-shows from 18% to 4% just by adding SMS reminders. That's 14% more revenue from the same number of bookings.
+We worked with a physio clinic in Brisbane that cut no-shows from 18% to 4% just by adding SMS reminders. That's 14% of bookings that now turn up instead of sitting empty.
 
 And here's the kicker: Twilio and ClickSend charge about 8 cents per SMS in Australia. If one reminder saves you one $150 appointment, you've paid for 1,875 SMS reminders.
 
