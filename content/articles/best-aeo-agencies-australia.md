@@ -2,7 +2,7 @@
 title: "How to Choose the Best AEO Agency in Australia (2026)"
 description: "An honest buyer's guide to the best AEO agency in Australia: monthly deliverables, proposal red flags, and how an AEO retainer differs from SEO."
 date: "2026-05-14"
-dateModified: "2026-09-29"
+dateModified: "2026-10-03"
 slug: "best-aeo-agencies-australia"
 cluster: "seo-ai-visibility"
 keyword: "best aeo agency australia"
@@ -83,7 +83,7 @@ Google's own [search spam policies](https://developers.google.com/search/docs/es
 
 ## How Much Should an AEO Retainer Cost an Australian Small Business?
 
-**A fair AEO retainer for an Australian small business sits between $3,000 and $5,000 a month, with simpler scopes lower and competitive niches higher.** That's real money: more than [2,500,000 actively trading businesses](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release) operate in Australia, and the [ATO](https://www.ato.gov.au/businesses-and-organisations/starting-registering-or-closing-a-business/running-your-own-business/supporting-your-small-business) and the government's [own business portal](https://business.gov.au/online-and-digital) both peg most of them as small and running lean. So price it like a hire, not a punt. Below roughly $2,000 a month you're usually getting a content writer with a new label, not [a real AEO programme](/blog/what-is-ai-search-optimisation-australia). Above $5,000 you should be getting a senior strategist, not just more pages. Whatever the number, tie it to the report: prompts tracked, content shipped, citation movement. A useful sanity check before you sign: get the price broken into writing, schema, prompt tracking and reporting, not lumped together as "content", so you can see what each dollar actually does. If you can't see the work, the price is wrong no matter what it is. Pay for output you can point at, not for activity you have to take on faith.
+**What a fair AEO retainer costs depends on the work, so judge the price by what it buys.** UnderCurrent prices AEO case by case: expect to pay around $500 to $2,000 a month, depending on the work needed, plus a one-off implementation fee scoped at the start. Prices exclude GST. Whatever the number, check it buys [a real AEO programme](/blog/what-is-ai-search-optimisation-australia), not a content writer with a new label, and tie it to the report: prompts tracked, content shipped, citation movement. A useful sanity check before you sign: get the price broken into writing, schema, prompt tracking and reporting, not lumped together as "content", so you can see what each dollar actually does. If you can't see the work, the price is wrong no matter what it is. Pay for output you can point at, not for activity you have to take on faith.
 
 ## Specialist or Full-Service: Which Kind of AEO Agency Do You Need?
 

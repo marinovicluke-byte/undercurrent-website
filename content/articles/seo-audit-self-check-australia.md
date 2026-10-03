@@ -20,7 +20,7 @@ faqs:
   - q: "Does a Google algorithm update mean I need to redo my SEO audit?"
     a: "A confirmed Google core algorithm update is a strong trigger for re-running your SEO audit, particularly if you notice a traffic drop in Search Console within 2-4 weeks of the update. Google's Search Central blog documents each core update with the rollout period. Not every update will affect your site, but sites relying on thin content, weak backlink profiles, or outdated structured data are most vulnerable. A quarterly audit cadence means you're rarely more than a few months behind any algorithm change, close enough to catch damage before it compounds."
   - q: "What does an SEO audit cost for a small business in Australia?"
-    a: "A professional SEO audit for an Australian small business typically costs between $500 and $2,500 as a standalone engagement, depending on site size and audit depth. Ongoing monthly retainers that include regular auditing sit in the $2,000–$10,000 range. According to IBISWorld's Australian Digital Advertising industry data, demand for SEO services has grown steadily as businesses shift spend toward search visibility. Running the free self-audit in this article first is worthwhile, it confirms whether a real problem exists before you commit budget, and gives any agency you engage a clearer brief to work from."
+    a: "A professional SEO audit for an Australian small business typically costs between $500 and $2,500 as a standalone engagement, depending on site size and audit depth. For ongoing work, UnderCurrent prices SEO case by case: expect around $500 to $2,000 a month, depending on the work needed. Prices exclude GST. According to IBISWorld's Australian Digital Advertising industry data, demand for SEO services has grown steadily as businesses shift spend toward search visibility. Running the free self-audit in this article first is worthwhile, it confirms whether a real problem exists before you commit budget, and gives any agency you engage a clearer brief to work from."
 ---
 # Is Your Website Broken? Run a 30-Min SEO Audit
 
@@ -165,7 +165,7 @@ According to [Semrush's local SEO data](https://www.semrush.com/blog/seo-statist
 
 ### What does an SEO audit cost for a small business in Australia?
 
-**A professional SEO audit for an Australian small business typically costs between $500 and $2,500 as a standalone engagement, depending on site size and audit depth.** Ongoing monthly retainers that include regular auditing sit in the $2,000–$10,000 range. According to IBISWorld's Australian Digital Advertising industry data, demand for SEO services has grown steadily as businesses shift spend toward search visibility. Running the free self-audit in this article first is worthwhile, it confirms whether a real problem exists before you commit budget, and gives any agency you engage a clearer brief to work from.
+**A professional SEO audit for an Australian small business typically costs between $500 and $2,500 as a standalone engagement, depending on site size and audit depth.** For ongoing work, UnderCurrent prices SEO case by case: expect around $500 to $2,000 a month, depending on the work needed. Prices exclude GST. According to IBISWorld's Australian Digital Advertising industry data, demand for SEO services has grown steadily as businesses shift spend toward search visibility. Running the free self-audit in this article first is worthwhile, it confirms whether a real problem exists before you commit budget, and gives any agency you engage a clearer brief to work from.
 
 ---
 

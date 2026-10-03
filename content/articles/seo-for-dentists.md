@@ -21,7 +21,7 @@ faqs:
   - q: "Does a dental practice need to show up in ChatGPT and AI search?"
     a: "Yes, and it's becoming urgent. Patients increasingly ask AI assistants for recommendations before searching the traditional way. AI engines cite pages with clear answer-first structure, schema markup, and self-contained sections. The work overlaps heavily with good local SEO, so you rarely do it twice. A practice invisible to ChatGPT and Perplexity today is missing a fast-growing slice of patient research."
   - q: "How do I choose an SEO provider for a dental practice?"
-    a: "Look for two things general SEO agencies often lack. First, health-sector awareness: they must understand the AHPRA advertising code and not push prohibited testimonial tactics. Second, AI search capability: ask how they get practices cited in ChatGPT and Google AI Overviews, not just ranked on Google. Avoid anyone quoting under a thousand dollars a month or promising guaranteed page-one rankings, because both are red flags."
+    a: "Look for two things general SEO agencies often lack. First, health-sector awareness: they must understand the AHPRA advertising code and not push prohibited testimonial tactics. Second, AI search capability: ask how they get practices cited in ChatGPT and Google AI Overviews, not just ranked on Google. Avoid anyone promising guaranteed page-one rankings, because that is a red flag."
 ---
 # SEO for Dentists: Win Local and AI Search in Australia
 
@@ -155,16 +155,15 @@ Location pages follow the same rule with one warning. A "dentist in [suburb]" pa
 
 ## What does SEO for dentists cost in Australia?
 
-**SEO for dentists in Australia typically costs AUD $1,200 to $5,000 a month, depending on competition and scope.** Pricing splits by approach, with the ranges below consistent with our [2026 SEO pricing guide](/blog/seo-pricing-australia-2026), [Softtrix's dental SEO cost analysis](https://www.softtrix.com/blog/how-much-does-seo-cost-for-your-dental-business/), and [Semrush's dental SEO directory](https://agencies.semrush.com/list/marketing-strategy/dental-clinics-supplies/australia/small-business/).
+**SEO for a dental practice is priced by the work it needs, so the cost depends on competition and scope.** UnderCurrent prices SEO case by case. Expect to pay around $500 to $2,000 a month, depending on the work needed. Basic SEO starts around $500 a month, and there is usually a one-off implementation fee, scoped at the start. Prices exclude GST. Our [2026 SEO pricing guide](/blog/seo-pricing-australia-2026) explains what moves the price.
 
-| Approach | Monthly cost (AUD) | What you get | Main risk |
-|---|---|---|---|
-| In-house / DIY | $0 plus time | Basic profile, ad-hoc posts | Slow; ad-code breaches |
-| Budget agency | Under $1,000 | Templated pages, citations | Thin content, AHPRA gaps |
-| Generalist agency | $1,200 to $2,500 | On-page, local SEO, reporting | May miss health ad rules |
-| Health specialist | $2,500 to $5,000 | Local pack, AI search, compliance | Costs more, compounds fastest |
+| Approach | What you get | Main risk |
+|---|---|---|
+| In-house / DIY | Basic profile, ad-hoc posts | Slow; ad-code breaches |
+| Templated agency | Templated pages, citations | Thin content, AHPRA gaps |
+| Generalist agency | On-page, local SEO, reporting | May miss health ad rules |
+| Health specialist | Local pack, AI search, compliance | Compounds fastest |
 
-Below a thousand dollars a month, the work is usually offshored or not happening. [ATO small business benchmarks](https://www.ato.gov.au/businesses-and-organisations/income-deductions-and-concessions/small-business-benchmarks/in-detail/dental-specialists) show healthy practice margins, so a growth-focused clinic should expect AUD $2,000 to $3,500 a month.
 
 ## What did auditing 93 SEO guides reveal about dental content?
 
@@ -272,4 +271,4 @@ Yes, and it's becoming urgent. Patients increasingly ask AI assistants for recom
 
 ### How do I choose an SEO provider for a dental practice?
 
-Look for two things general SEO agencies often lack. First, health-sector awareness: they must understand the AHPRA advertising code and not push prohibited testimonial tactics. Second, AI search capability: ask how they get practices cited in ChatGPT and Google AI Overviews, not just ranked on Google. Avoid anyone quoting under a thousand dollars a month or promising guaranteed page-one rankings, because both are red flags.
+Look for two things general SEO agencies often lack. First, health-sector awareness: they must understand the AHPRA advertising code and not push prohibited testimonial tactics. Second, AI search capability: ask how they get practices cited in ChatGPT and Google AI Overviews, not just ranked on Google. Avoid anyone promising guaranteed page-one rankings, because that is a red flag.

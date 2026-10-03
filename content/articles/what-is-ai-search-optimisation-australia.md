@@ -2,7 +2,7 @@
 title: "How to Do AI Search Optimisation in Australia"
 description: "AI search optimisation structures your site so ChatGPT, Perplexity, and Google AI Overviews cite your business when Australian customers ask questions."
 date: "2026-05-14"
-dateModified: "2026-09-29"
+dateModified: "2026-10-03"
 slug: "what-is-ai-search-optimisation-australia"
 cluster: "foundations"
 keyword: "ai search optimisation"
@@ -14,7 +14,7 @@ faqs:
   - q: "How long does it take to see results from AI search optimisation?"
     a: "AI search optimisation results typically appear within 4–12 weeks of implementing structural content changes, depending on your domain authority and how frequently AI engines re-index your pages. Businesses that add FAQPage JSON-LD schema and rewrite existing pages with answer-first paragraph structure tend to see citation appearances in Perplexity and Google AI Overviews faster than those starting from scratch. According to Zapier's automation research, content restructured for answer-first format is typically picked up within 4–6 weeks of republishing."
   - q: "How much does AI search optimisation cost for a small Australian business?"
-    a: "AI search optimisation costs in Australia range from roughly $500–$1,500 for a DIY schema implementation on an existing site, up to $3,000–$8,000 for a full agency-led content audit and rebuild across 10–20 pages. The ASBFEO estimates Australian SMBs spend an average of $2,200 per year on digital marketing , AI search optimisation at the foundational level (answer-first rewrites and FAQ schema) can often be implemented within that existing budget by reallocating spend from low-performing paid ads. Ongoing monthly monitoring typically runs $300–$800."
+    a: "AI search optimisation is priced by the work it needs. UnderCurrent prices it case by case: expect to pay around $500 to $2,000 a month, depending on the work needed, plus a one-off implementation fee scoped at the start. Prices exclude GST. The foundational work, answer-first rewrites and FAQ schema, can often be paid for by moving spend away from low-performing paid ads."
   - q: "Does AI search optimisation work for trades businesses like plumbers or electricians?"
     a: "AI search optimisation works particularly well for trades businesses because local service queries , \"plumber in Geelong\", \"electrician Brunswick Melbourne\" , are among the most common prompts entered into tools like ChatGPT and Perplexity. The large majority of Australian consumers search online before contacting a local trades business, making accurate and well-structured digital content essential. Trades businesses that add suburb-level entity mentions, maintain an accurate Google Business Profile, and structure service pages with direct answer paragraphs see the strongest local AI citation gains within 6–10 weeks."
   - q: "What's the difference between AI search optimisation and just having a Google Business Profile?"
@@ -172,7 +172,7 @@ If you'd rather skip the testing and have the whole thing built for you, [that's
 
 ### How much does AI search optimisation cost for a small Australian business?
 
-**AI search optimisation costs in Australia range from roughly $500–$1,500 for a DIY schema implementation on an existing site, up to $3,000–$8,000 for a full agency-led content audit and rebuild across 10–20 pages.** The ASBFEO estimates Australian SMBs spend an average of $2,200 per year on digital marketing , AI search optimisation at the foundational level (answer-first rewrites and FAQ schema) can often be implemented within that existing budget by reallocating spend from low-performing paid ads. Ongoing monthly monitoring typically runs $300–$800.
+**AI search optimisation is priced by the work it needs.** UnderCurrent prices it case by case: expect to pay around $500 to $2,000 a month, depending on the work needed, plus a one-off implementation fee scoped at the start. Prices exclude GST. The foundational work, answer-first rewrites and FAQ schema, can often be paid for by moving spend away from low-performing paid ads.
 
 ### Does AI search optimisation work for trades businesses like plumbers or electricians?
 

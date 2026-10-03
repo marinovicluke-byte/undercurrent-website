@@ -2,7 +2,7 @@
 title: "How to Do SEO for Tradies in Australia"
 description: "SEO for tradies is how Australian trade businesses get found in Google's map pack and AI search. UnderCurrent's pillar guide to local search and schema."
 date: "2026-05-23"
-dateModified: "2026-10-01"
+dateModified: "2026-10-03"
 slug: "seo-for-tradies"
 cluster: "seo-ai-visibility"
 keyword: "seo for tradies"
@@ -182,15 +182,15 @@ The good news is that the work overlaps with normal SEO. AI engines favour clear
 
 ## How much does SEO for tradies cost in Australia?
 
-**SEO for tradies costs from almost nothing to a few thousand dollars a month, depending on whether you do, buy, or build it.** The right route comes down to your spare hours and growth plans.
+**SEO for tradies costs anything from your own time to a monthly fee, depending on whether you do, buy, or build it.** The right route comes down to your spare hours and growth plans.
 
 | Approach | Cost (AUD) | What you get | Best fit |
 |---|---|---|---|
 | Do it yourself | AUD $0–$120/month | Slow learning curve, your time | Solo tradies with spare hours |
-| SEO agency retainer | AUD $1,200–$2,500/month | Done-for-you, content often thin | Trades with budget |
+| SEO agency retainer | Case by case; around AUD $500–$2,000/month with UnderCurrent | Done-for-you, content often thin | Trades with budget |
 | A built lead system | Setup fee, then monthly | A system you own, compounding content | Trades chasing steady jobs |
 
-Do-it-yourself works only if you keep at it weekly; most tradies start keen and drift. Agency retainers for a single-location trade sit in the mid four figures a month. A built system costs more up front, but you own the asset. Judge any route on leads and booked jobs, not ranking screenshots. Our [SEO pricing guide](/blog/seo-pricing-australia-2026) breaks down the detail.
+Do-it-yourself works only if you keep at it weekly; most tradies start keen and drift. UnderCurrent prices SEO case by case: expect around $500 to $2,000 a month, depending on the work, plus an implementation fee scoped at the start. Prices exclude GST. A built system costs more up front, but you own the asset. Judge any route on leads and booked jobs, not ranking screenshots. Our [SEO pricing guide](/blog/seo-pricing-australia-2026) breaks down the detail.
 
 ## How long does SEO for tradies take to work?
 

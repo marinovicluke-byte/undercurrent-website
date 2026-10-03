@@ -2,7 +2,7 @@
 title: "SEO for Buyers Agents in Australia: Win More Clients"
 description: "SEO for buyers agents in Australia means winning four search surfaces: Google, the map pack, AI Overviews, and ChatGPT. The 2026 playbook."
 date: "2026-05-13"
-dateModified: "2026-10-01"
+dateModified: "2026-10-03"
 slug: "seo-for-buyers-agents-australia"
 cluster: "industry-guides"
 keyword: "seo for buyers agents australia"
@@ -88,15 +88,15 @@ Google's [local-business structured data guide](https://developers.google.com/se
 
 ## What Does Buyers-Agent SEO Cost in Australia, and Is It Worth It?
 
-**A specialist real estate SEO retainer in Australia typically runs $2,000 to $3,000 a month, and a buyers agent should expect to sit at the top of that band in Sydney or Melbourne.** Small businesses across the board budget around $1,200 a month for SEO, per [Local Digital's 2025 figures](https://www.localdigital.com.au/blog/australian-seo-and-content-marketing-statistics-for-2025); buyers agents in competitive metros need more, because the suburb-page work is heavier. [One Egg's Australian pricing breakdown](https://www.oneegg.com.au/blog/generative-seo-pricing-australia/) puts AI-engine work in a similar band.
+**SEO for a buyers agent is priced by the work it needs, and suburb pages in Sydney or Melbourne take more work than most.** UnderCurrent prices SEO case by case. Expect to pay around $500 to $2,000 a month, depending on the work needed. Basic SEO starts around $500 a month, and there is usually a one-off implementation fee, scoped at the start. Prices exclude GST. Across Australia, small businesses budget an average of $1,200 a month for SEO, per [Local Digital's 2025 figures](https://www.localdigital.com.au/blog/australian-seo-and-content-marketing-statistics-for-2025), which cite IBISWorld.
 
 A buyers agent's fee on a single purchase usually clears five figures, so one extra engagement a quarter covers a year of retainer with room to spare. Run the numbers with our [automation audit](/audit); for an exact starting point, our [free four-surface visibility audit](/audit) sends back the patch list, and our [case studies](/case-studies) show what consistent suburb-page work compounds into.
 
-| Spend tier | Monthly cost | What you should get |
-|---|---|---|
-| DIY | $0 plus time | GBP claimed, basics fixed, one suburb page a month |
-| Generalist agency | $800 to $1,500 | Template suburb pages, generic blog |
-| Specialist retainer | $2,000 to $3,000 | Real suburb pages, GBP managed, schema, AI-engine work |
+| Approach | What you should get |
+|---|---|
+| DIY | GBP claimed, basics fixed, one suburb page a month |
+| Generalist agency | Template suburb pages, generic blog |
+| Specialist work | Real suburb pages, GBP managed, schema, AI-engine work |
 
 ## What Surprised Us Auditing 122 Property and Buyers-Agent Websites
 
