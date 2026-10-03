@@ -30,11 +30,11 @@ faqs:
 > - Connect your accounting software to send invoices digitally
 > - Send them to any other Peppol-registered business
 > - Setup takes 1-2 hours
-> - Processing can drop from $2 an invoice to near zero
+> - Pricing varies by provider, and the admin per invoice drops to near zero
 
 eInvoicing is structured digital invoicing that goes straight from your accounting system to your customer's accounting system. No PDFs. No emails. No manual data entry on either end.
 
-Manual invoice processing costs Australian SMEs between $0.80 and $2.00 per invoice, according to the Australian Taxation Office. If you're sending 50 invoices a month, that's $480-$1,200 a year just in admin time. eInvoicing drops that cost to almost nothing because the data flows automatically.
+Every invoice you key in, send and chase by hand costs admin time. What it costs you per invoice depends on your setup, and pricing varies by provider. eInvoicing drops the admin to almost nothing because the data flows automatically.
 
 And here's the kicker: automated invoicing reduces payment delays by 40% on average. Your invoices arrive instantly, they're already in your customer's system, and there's no "I didn't get it" excuse. Faster invoices mean faster payments.
 
@@ -82,7 +82,7 @@ Here's the breakdown:
 
 For most small businesses in Melbourne, Sydney, or anywhere in Australia, the answer is simple: if you're already paying for Xero or MYOB, eInvoicing is included. Just turn it on.
 
-The real cost of eInvoicing isn't the subscription. It's the 1-2 hours you'll spend setting it up the first time. That's it. After that, you're saving $0.80-$2.00 per invoice you send and getting paid faster.
+The real cost of eInvoicing isn't the subscription. It's the 1-2 hours you'll spend setting it up the first time. That's it. After that, every invoice you send takes less admin, and you get paid faster.
 
 Compare that to the manual invoice process: printing, emailing, chasing late payments, dealing with "I never got it" excuses. The cost of NOT using eInvoicing is higher than the cost of using it.
 
@@ -163,7 +163,7 @@ If you're NOT over $20M turnover, you're not legally required to use eInvoicing.
 **Why do it anyway**
 
 - Your larger clients might require it. If you want to work with government or big corporates, they'll ask for eInvoicing capability.
-- It saves you money. Even at $0.80 per invoice, manual processing adds up fast.
+- It saves you money. Pricing varies by provider, but manual processing adds up fast.
 - It speeds up payments. 40% faster payment cycles mean better cash flow.
 - It's a competitive advantage. If your competitor can send eInvoices and you can't, guess who wins the contract?
 
