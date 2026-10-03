@@ -2,6 +2,7 @@
 title: "How to Win at Perplexity SEO: Freshness Beats Backlinks"
 description: "Perplexity SEO rewards freshness, citations and structured sources over backlinks. UnderCurrent shows what gets Australian businesses cited, and how."
 date: "2026-05-13"
+dateModified: "2026-10-02"
 slug: "how-to-win-at-perplexity-seo"
 cluster: "seo-ai-visibility"
 keyword: "perplexity seo"
@@ -53,7 +54,16 @@ Most Australian businesses still treat AI search as one thing. It isn't. ChatGPT
 
 ## What Does Perplexity Actually Reward?
 
-**Four signals do most of the work, and not one of them is a backlink.** Freshness comes first: Perplexity skews hard toward content published or updated recently, so a page untouched for 6 months is already behind. Then source density. Pages packed with concrete, checkable claims (numbers, dates, named methods) get pulled into answers more often than pages that hand-wave. Then structure. Short, self-contained passages and clean FAQ blocks are easy for the engine to lift in one piece; walls of text aren't. Last, entity clarity. The page, plus your wider footprint (LinkedIn, Wikidata, consistent business details), should make obvious who you are. We see the same split in our own corpus: the pages that do three of those four well sit in the top bands, and the rest are usually long, undated and short on data. Practitioner [reverse-engineering of Perplexity citations](https://llmclicks.ai/blog/perplexity-seo-reverse-engineering/) found format beat brand size, with a small site outranking a big one. Run your top page through our [self-check SEO audit](/blog/seo-audit-self-check-australia), and our how to rank on Google in Australia guide for the search side.
+**Four signals do most of the work, and not one of them is a backlink.**
+
+**The four signals, in order**
+
+- **Freshness comes first:** Perplexity skews hard toward content published or updated recently, so a page untouched for 6 months is already behind.
+- **Source density:** pages packed with concrete, checkable claims (numbers, dates, named methods) get pulled into answers more often than pages that hand-wave.
+- **Structure:** short, self-contained passages and clean FAQ blocks are easy for the engine to lift in one piece; walls of text aren't.
+- **Entity clarity:** the page, plus your wider footprint (LinkedIn, Wikidata, consistent business details), should make obvious who you are.
+
+We see the same split in our own corpus: the pages that do three of those four well sit in the top bands, and the rest are usually long, undated and short on data. Practitioner [reverse-engineering of Perplexity citations](https://llmclicks.ai/blog/perplexity-seo-reverse-engineering/) found format beat brand size, with a small site outranking a big one. Run your top page through our [self-check SEO audit](/blog/seo-audit-self-check-australia), and our how to rank on Google in Australia guide for the search side.
 
 ## How Does Perplexity Pick Which Sources to Cite?
 
@@ -69,7 +79,13 @@ Most Australian businesses still treat AI search as one thing. It isn't. ChatGPT
 | Competent (60–79) | 22 | 32% |
 | Weak (30–59) | 38 | 55% |
 
-Three things stood out. First, freshness, not length, split the bands. Pages below 60% were mostly long, undated and over a year old. Second, fewer than 1 in 7 cleared the strong band, more than 1 in 2 sat in the weak one, and the strong few weren't all agencies. Several were one-person shops with a dated FAQ block kept current. Third, almost none of the weak pages cited source-grade data. Our own pages average 81% on the same rubric, and the gap is structure and cadence rather than budget. The sector runs near 2.5 million firms ([ASBFEO data](https://www.asbfeo.gov.au/small-business-data-portal/number-small-businesses-australia)), and most of those sites are invisible to answer engines ([ABS counts](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release)). See our [plumbers' SEO case study](/case-studies/plumbers-south-east-melbourne-seo) and the [Melbourne buyers-agency AI-search write-up](/blog/how-to-rank-buyers-agency-ai-search-melbourne).
+**Three things stood out**
+
+- Freshness, not length, split the bands. Pages below 60% were mostly long, undated and over a year old.
+- Fewer than 1 in 7 cleared the strong band, more than 1 in 2 sat in the weak one, and the strong few weren't all agencies. Several were one-person shops with a dated FAQ block kept current.
+- Almost none of the weak pages cited source-grade data.
+
+Our own pages average 81% on the same rubric, and the gap is structure and cadence rather than budget. The sector runs near 2.5 million firms ([ASBFEO data](https://www.asbfeo.gov.au/small-business-data-portal/number-small-businesses-australia)), and most of those sites are invisible to answer engines ([ABS counts](https://www.abs.gov.au/statistics/economy/business-indicators/counts-australian-businesses-including-entries-and-exits/latest-release)). See our [plumbers' SEO case study](/case-studies/plumbers-south-east-melbourne-seo) and the [Melbourne buyers-agency AI-search write-up](/blog/how-to-rank-buyers-agency-ai-search-melbourne).
 
 ## How Often Should You Publish to Stay Cited on Perplexity?
 
@@ -128,7 +144,16 @@ Build the page once to answer the question properly, structure it so any engine 
 
 ## Your 30-Day Perplexity SEO Action Plan
 
-**Thirty days is enough to move from invisible to cited if you're disciplined about it.** Week 1: unblock PerplexityBot in robots.txt, add `datePublished` and `dateModified` to your articles, and add FAQ schema to your top three money pages. Week 2: rewrite those three pages so every H2 is a real question and the first sentence answers it, and add at least one checkable data point per section. Week 3: publish one new page targeting a question you know your buyers ask Perplexity, dated today, with sources. Week 4: run your priority questions in Perplexity, log which pages it cites, and lock in a recurring fortnightly publish slot and a 90-day refresh cycle. Then keep going, because Perplexity SEO is a cadence, not a project. Pressure-test your site with our [self-check SEO audit](/blog/seo-audit-self-check-australia), read the [AI-search visibility pillar](/blog/cluster/seo-ai-visibility) for the strategy layer, or hand the cadence to us with an [AEO and content retainer](/seo-ai-visibility).
+**Thirty days is enough to move from invisible to cited if you're disciplined about it.**
+
+**The 30 days, week by week**
+
+1. Unblock PerplexityBot in robots.txt, add `datePublished` and `dateModified` to your articles, and add FAQ schema to your top three money pages, **Week 1**
+2. Rewrite those three pages so every H2 is a real question and the first sentence answers it, and add at least one checkable data point per section, **Week 2**
+3. Publish one new page targeting a question you know your buyers ask Perplexity, dated today, with sources, **Week 3**
+4. Run your priority questions in Perplexity, log which pages it cites, and lock in a recurring fortnightly publish slot and a 90-day refresh cycle, **Week 4**
+
+Then keep going, because Perplexity SEO is a cadence, not a project. Pressure-test your site with our [self-check SEO audit](/blog/seo-audit-self-check-australia), read the [AI-search visibility pillar](/blog/cluster/seo-ai-visibility) for the strategy layer, or hand the cadence to us with an [AEO and content retainer](/seo-ai-visibility).
 
 
 ![Comparison of traditional Google SEO habits versus Perplexity SEO for Australian service businesses](./body-2.jpg)
