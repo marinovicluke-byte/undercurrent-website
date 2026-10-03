@@ -150,3 +150,7 @@ Body, from the H1 to the Sources list, without the FAQ, with link URLs removed:
 ## Update, 3 Oct: link phrase
 
 The link to `hidden-cost-manual-trade-business-australia` said "For a dollar-side breakdown by trade". That article (PR #46) no longer has a breakdown by trade. It now has a method and one worked example. The phrase now reads "To work out what manual admin costs a trade business in dollars". Ops asked for this change. No figure changed.
+
+## Update, 3 Oct: updated date (Luke, 11:50)
+
+`dateModified` is now `"2026-10-03"` (was `"2026-05-14"`). The rewrite lane picks 2 or 3 Oct deterministically from the slug: the first byte of sha256(slug), even gives 2 Oct, odd gives 3 Oct (`0x6f` here). The published date is unchanged. `dateModified` feeds the visible "Updated" line, the Article JSON-LD `dateModified`, og `modifiedTime` and the sitemap `lastmod`.
