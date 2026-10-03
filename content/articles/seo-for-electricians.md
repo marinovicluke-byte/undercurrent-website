@@ -2,6 +2,7 @@
 title: "SEO for Electricians: Rank Higher in Local Search"
 description: "SEO for electricians, built for Australian sparkies. Rank in the Google map pack with a complete profile, suburb pages, and a steady review habit."
 date: "2026-06-04"
+dateModified: "2026-10-01"
 slug: "seo-for-electricians"
 cluster: "seo-ai-visibility"
 keyword: "seo for electricians"

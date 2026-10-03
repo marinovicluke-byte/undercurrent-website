@@ -2,6 +2,7 @@
 title: "How to Use an AI Agent for Business in Australia"
 description: "An AI agent is autonomous software that books jobs, chases invoices, and qualifies leads on your behalf. Australian SMB guide and pricing."
 date: "2026-04-30"
+dateModified: "2026-10-01"
 slug: "what-is-an-ai-agent-for-business-australia"
 cluster: "ai-strategy-training"
 keyword: "what is an AI agent for business australia"

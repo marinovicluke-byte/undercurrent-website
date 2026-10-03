@@ -2,6 +2,7 @@
 title: "How Overdue Invoices Hurt Australian SME Cash Flow"
 description: "Overdue invoices cost Australian SMEs $7,000 a month in lost cash flow. The real numbers on days-to-payment, time wasted, and how automation fixes it."
 date: "2026-04-15"
+dateModified: "2026-10-02"
 slug: "how-overdue-invoices-hurt-australian-sme-cash-flow"
 cluster: "revenue-operations"
 heroImage: "/articles/how-overdue-invoices-hurt-australian-sme-cash-flow/hero.jpg"

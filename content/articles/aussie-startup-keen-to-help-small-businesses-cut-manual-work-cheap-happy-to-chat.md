@@ -2,6 +2,7 @@
 title: "Finding an Affordable Aussie Automation Partner"
 description: "Looking for an Aussie startup to help cut manual work? How to find affordable, approachable automation partners who understand small business."
 date: "2026-01-10"
+dateModified: "2026-10-01"
 slug: "aussie-startup-keen-to-help-small-businesses-cut-manual-work-cheap-happy-to-chat"
 cluster: "ai-strategy-training"
 keyword: "aussie startup keen to help small businesses cut manual work cheap happy to chat"

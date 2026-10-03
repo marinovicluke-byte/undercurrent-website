@@ -8,7 +8,7 @@ date: 2026-10-03
 
 Branch `content/format-pass-batch-1`, off `origin/main` at `1c4aec2`. **The PR is open and not merged.** Luke squash-merges it.
 
-The rule of the job: **keep the words, change the shape.** Titles, meta, canonicals, schema, slugs, dates (published and `dateModified`) and the Quick Answer are unchanged. I left `dateModified` alone because a shape change isn't a content update, and leaving it keeps the schema identical.
+The rule of the job: **keep the words, change the shape.** Titles, meta, canonicals, schema, slugs, the published date and the Quick Answer are unchanged.
 
 ## What changed, per article
 
@@ -123,6 +123,22 @@ This is a hypothetical with the reader's own numbers, not a statistic.
 - `scripts/survey-article-blocks.mjs`: the survey. Add `--slugs a,b --lines` for the hits with line numbers.
 - `scripts/convert-step-runs.mjs`: deterministic step-run conversion. It handles four shapes: `**Day 1:** text`, `**Weeks 3-4: Title.** text`, `**Step 1: Title**` plus a paragraph, and `**Step 1: Title.** text`. The model gives the title.
 - `scripts/check-format-pass.mjs`: run it before every push.
+
+## Updated dates (added 3 Oct, Luke's rule)
+
+Luke, 3 Oct: changed articles get a new updated date, mixed across 29 Sep to 3 Oct so they don't stack on one day. `scripts/set-updated-date.mjs` sets `dateModified` from a hash of the slug, so a rerun gives the same date. Published dates don't move. `scripts/check-format-pass.mjs` asserts each date. The Article JSON-LD `dateModified`, the visible "Updated" line and the sitemap lastmod move with it. Everything else in the schema is unchanged.
+
+| Article | Updated |
+|---|---|
+| au-seo-agencies-ai-search-audit | 2026-10-03 |
+| aussie-startup-keen-to-help-small-businesses-cut-manual-work-cheap-happy-to-chat | 2026-10-01 |
+| how-overdue-invoices-hurt-australian-sme-cash-flow | 2026-10-02 |
+| how-to-use-ai-to-optimise-tradie-business-australia | 2026-09-30 |
+| seo-for-electricians | 2026-10-01 |
+| what-is-ai-search-optimisation-australia | 2026-09-29 |
+| what-is-an-ai-agent-for-business-australia | 2026-10-01 |
+| what-is-answer-engine-optimisation | 2026-10-02 |
+| wix-vs-squarespace | 2026-10-01 |
 
 ## Rollback
 

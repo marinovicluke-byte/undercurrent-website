@@ -2,6 +2,7 @@
 title: "What is Answer Engine Optimisation? A Plain-English Guide"
 description: "Answer engine optimisation is how Australian businesses get cited by ChatGPT, Perplexity, and Google AI Overviews. A plain-English guide for owners."
 date: "2026-05-14"
+dateModified: "2026-10-02"
 slug: "what-is-answer-engine-optimisation"
 cluster: "seo-ai-visibility"
 keyword: "answer engine optimisation"

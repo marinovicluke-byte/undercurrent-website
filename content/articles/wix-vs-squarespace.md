@@ -2,6 +2,7 @@
 title: "Wix vs Squarespace: Pick One, or Skip Both"
 description: "Wix vs Squarespace compared honestly for Australian small business: which builder suits you, and the SEO ceiling that sends growing brands to a custom build."
 date: "2026-05-27"
+dateModified: "2026-10-01"
 slug: "wix-vs-squarespace"
 cluster: "website-experience-design"
 keyword: "wix vs squarespace"
