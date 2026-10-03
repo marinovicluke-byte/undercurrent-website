@@ -2,6 +2,7 @@
 title: "How Much Are Manual Processes Costing Your Business?"
 description: "Manual processes cost Australian SMEs paid hours every week. Calculate your hidden costs and find where automation pays for itself."
 date: "2026-04-19"
+dateModified: "2026-10-03"
 slug: "how-much-are-manual-processes-costing-your-business"
 cluster: "foundations"
 keyword: "How Much Are Manual Processes Costing Your Business"

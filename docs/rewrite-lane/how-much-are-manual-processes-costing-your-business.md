@@ -121,3 +121,7 @@ Body, from the H1 to the Sources list, without the FAQ, with link URLs and image
 2. **The meta description lost its "$15,000-$40,000 a year".** Ops approved the change on 3 Oct. The new line makes no figure claim.
 3. **FAQ 4 ("How much does it cost to automate...") gives no price.** UC's own published pricing would answer it, but that's a new number, so I didn't add one.
 4. **There's no client story.** The approved list has one that fits ("Invoice generator (health business)", about 10 hours a week). Its source is "stated by Luke", which the reader can't click, so I left it out. It's a one-paragraph add if Luke wants it.
+
+## Update, 3 Oct: updated date (Luke, 11:50)
+
+`dateModified` is now `"2026-10-03"` (was absent, so the page showed the published date as "Updated"). The rewrite lane picks 2 or 3 Oct deterministically from the slug: the first byte of sha256(slug), even gives 2 Oct, odd gives 3 Oct (`0x67` here). The published date is unchanged. `dateModified` feeds the visible "Updated" line, the Article JSON-LD `dateModified`, og `modifiedTime` and the sitemap `lastmod`.
