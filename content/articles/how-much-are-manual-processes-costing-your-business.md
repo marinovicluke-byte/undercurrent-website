@@ -97,7 +97,7 @@ Manual invoicing is the silent killer. You finish a job, get back to the van or 
 - Job details flow from the job app into your accounts
 - Reminders go out before and after the due date
 
-The tools for this already exist. [ServiceM8 syncs invoices to Xero](https://www.servicem8.com/au/xero-integration), and [Xero sends payment reminders](https://www.xero.com/au/accounting-software/send-invoices/) on a schedule you set. To price your own invoicing, time a week of it, from finishing the job to the invoice going out, and put it through the sum above.
+The tools for this already exist. [ServiceM8 syncs invoices to Xero](https://www.servicem8.com/au/xero-integration), and [Xero sends payment reminders](https://www.xero.com/au/accounting-software/send-invoices/) on a schedule you set. Where the off-the-shelf tools don't fit, it can be built. A health business UnderCurrent works with was writing its invoices by hand every week, so we built it an invoice generator. To price your own invoicing, time a week of it, from finishing the job to the invoice going out, and put it through the sum above.
 
 ### How Much Time Do You Lose to Manual Data Entry?
 
