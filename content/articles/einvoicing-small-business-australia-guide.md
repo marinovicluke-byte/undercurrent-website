@@ -2,6 +2,7 @@
 title: "eInvoicing for Small Business: Australian Setup Guide"
 description: "Step-by-step guide for Australian small businesses to set up eInvoicing, meet ATO requirements, and get paid 40% faster with automated invoicing."
 date: "2026-03-31"
+dateModified: "2026-10-02"
 slug: "einvoicing-small-business-australia-guide"
 cluster: "industry-guides"
 keyword: "getting started with eInvoicing for small business"
@@ -45,7 +46,7 @@ This guide walks you through the whole setup process, from picking your software
 
 **eInvoicing is a system that sends invoices directly between accounting software using a secure network called Peppol.** Instead of creating a PDF, emailing it, and waiting for your customer to manually enter the data into their system, eInvoicing sends [structured data](/glossary/what-is-schema-markup) that populates their accounts payable automatically.
 
-Here's the simple version of how it works:
+**Here's the simple version of how it works**
 
 1. You create an invoice in your accounting software (Xero, MYOB, QuickBooks, etc.)
 2. Your software sends the invoice data to the Peppol network via your Access Point provider
@@ -89,39 +90,27 @@ Compare that to the manual invoice process: printing, emailing, chasing late pay
 
 Here's the exact process to get eInvoicing running in your business. This assumes you're using Xero, MYOB, or QuickBooks, which covers about 80% of Australian small businesses.
 
-**Step 1: Check if your accounting software supports eInvoicing**
+**Five steps to your first eInvoice**
 
-Log into your accounting platform and look for "eInvoicing", "Peppol", or "digital invoicing" in the settings menu. If you're using Xero, MYOB AccountRight, MYOB Essentials, or QuickBooks Online, it's already there. If you're using older desktop software or a niche platform, you might need to switch providers or add a standalone Access Point.
+1. **Check if your accounting software supports eInvoicing.** Log into your accounting platform and look for "eInvoicing", "Peppol", or "digital invoicing" in the settings menu. If you're using Xero, MYOB AccountRight, MYOB Essentials, or QuickBooks Online, it's already there. If you're using older desktop software or a niche platform, you might need to switch providers or add a standalone Access Point.
+2. **Register your business on the Peppol network.** Inside your accounting software, find the eInvoicing setup wizard. You'll need:
+   - Your ABN (Australian Business Number)
+   - Your business name and address
+   - An email contact for invoice notifications
 
-**Step 2: Register your business on the Peppol network**
+   The software will generate a Peppol ID for your business. This is your unique identifier on the network, think of it like your business email address, but for invoices. It's usually your ABN plus a network code.
 
-Inside your accounting software, find the eInvoicing setup wizard. You'll need:
-- Your ABN (Australian Business Number)
-- Your business name and address
-- An email contact for invoice notifications
+   Registration takes about 10 minutes. Most platforms approve you instantly.
+3. **Add your customers' Peppol IDs.** For eInvoicing to work, your customer needs to be registered on Peppol too. You can search for customers by ABN inside your accounting software. If they're registered, their Peppol ID will show up and you can add it to their customer record.
 
-The software will generate a Peppol ID for your business. This is your unique identifier on the network, think of it like your business email address, but for invoices. It's usually your ABN plus a network code.
+   If your customer isn't registered yet, you'll send them invoices the old way until they get set up. You can't force them onto eInvoicing, both sides need to opt in.
+4. **Send your first eInvoice.** Create an invoice like you normally would. When you hit "send", your software will check if the customer has a Peppol ID. If they do, the invoice goes through the Peppol network automatically. If they don't, it sends as a regular PDF email.
 
-Registration takes about 10 minutes. Most platforms approve you instantly.
-
-**Step 3: Add your customers' Peppol IDs**
-
-For eInvoicing to work, your customer needs to be registered on Peppol too. You can search for customers by ABN inside your accounting software. If they're registered, their Peppol ID will show up and you can add it to their customer record.
-
-If your customer isn't registered yet, you'll send them invoices the old way until they get set up. You can't force them onto eInvoicing, both sides need to opt in.
-
-**Step 4: Send your first eInvoice**
-
-Create an invoice like you normally would. When you hit "send", your software will check if the customer has a Peppol ID. If they do, the invoice goes through the Peppol network automatically. If they don't, it sends as a regular PDF email.
-
-That's it. The invoice appears in their system within seconds. They get a notification. You get a delivery confirmation. No chasing, no wondering if it arrived.
-
-**Step 5: Set up payment automations (optional but recommended)**
-
-This is where things get powerful. Once eInvoicing is running, you can layer on automation:
-- Auto-send payment reminders 7 days before due date
-- Auto-reconcile payments when they hit your bank account
-- Auto-update your CRM when an invoice is paid
+   That's it. The invoice appears in their system within seconds. They get a notification. You get a delivery confirmation. No chasing, no wondering if it arrived.
+5. **Set up payment automations (optional but recommended).** This is where things get powerful. Once eInvoicing is running, you can layer on automation:
+   - Auto-send payment reminders 7 days before due date
+   - Auto-reconcile payments when they hit your bank account
+   - Auto-update your CRM when an invoice is paid
 
 We set this up for clients using n8n or Make. It turns eInvoicing from a manual time-saver into a fully automated revenue cycle. But you can start simple and add automation later.
 
@@ -159,7 +148,7 @@ The goal isn't to find the "best" eInvoicing platform. The goal is to get set up
 
 **eInvoicing is mandatory for businesses with annual turnover over $20 million when dealing with the federal government as of 1 July 2024.** If your business is under $20M turnover, eInvoicing is optional but strongly encouraged by the Australian Taxation Office.
 
-Here's what the ATO requires if you fall under the mandate:
+**Here's what the ATO requires if you fall under the mandate**
 
 1. **Peppol network registration:** You must register on the Peppol network through an accredited Access Point provider. The ATO publishes a list of approved providers on their website.
 
@@ -169,7 +158,9 @@ Here's what the ATO requires if you fall under the mandate:
 
 4. **Audit trail:** You need to keep records of all eInvoices sent and received for 5 years, just like regular invoices. Your accounting software stores these automatically.
 
-If you're NOT over $20M turnover, you're not legally required to use eInvoicing. But here's why you should do it anyway:
+If you're NOT over $20M turnover, you're not legally required to use eInvoicing. But here's why you should do it anyway.
+
+**Why do it anyway**
 
 - Your larger clients might require it. If you want to work with government or big corporates, they'll ask for eInvoicing capability.
 - It saves you money. Even at $0.80 per invoice, manual processing adds up fast.
@@ -218,7 +209,7 @@ Don't flip the switch and start sending eInvoices to everyone at once. Test it w
 
 eInvoicing is one piece of a bigger puzzle. On its own, it saves you time and speeds up payments. Combined with other automations, it transforms your entire finance workflow.
 
-Here's what a full finance automation stack looks like for a small business:
+**Here's what a full finance automation stack looks like for a small business**
 
 1. **Quote generation:** Auto-generate quotes from your CRM when a deal reaches a certain stage
 2. **Invoice creation:** Auto-create invoices when a quote is accepted or a project milestone is hit
