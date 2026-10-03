@@ -102,7 +102,15 @@ Batch 1's blocks are unchanged in shape: Fill (a typical engagement, week by wee
 Body, from the H1 to the end of the last section before the FAQ, with link URLs removed:
 
 - Before (on batch 1): 2,975
-- After: see Checks
+- After: 2,649 (down 326, or 11%). The format-pass survey script counts 3,230 to 2,776 (-14.1%).
+
+## Checks
+
+- **`next build`** (run directly, no IndexNow postbuild): passes, including the Worked sum (30 x $100 = $3,000).
+- **`scripts/check-format-pass.mjs --base origin/content/format-pass-batch-1`** (now in the repo on this branch): one new number, 29.99 (Zapier, linked). No flagged figure, no em dash, one H1, and the headings are identical to batch 1. It fails on words (-14.1%), front matter and Quick Answer, which are intended. It also says "dateModified 2026-10-03, want 2026-10-01": the format pass's date script spreads 29 Sep to 3 Oct. **The brief gives rewrite-lane articles 2 or 3 Oct, so 3 Oct stands.** If PR #44 is merged first and its script is rerun on main, it would set this article back to 1 Oct.
+- **`scripts/check-quick-answers.mjs`**: 71 of 71 pass.
+- **Head against production:** title, meta description and canonical match. In the JSON-LD only `dateModified` and the FAQ answer texts differ. The page shows "Updated 3 Oct 2026".
+- **`next start`, at 390 and 1440, in Chromium and WebKit** (CSP stripped for WebKit): no sideways scroll, and all 5 blocks render.
 
 ## Reads thin (for Luke)
 
