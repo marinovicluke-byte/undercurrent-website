@@ -119,3 +119,7 @@ Body, from the H1 to the end of the last section before the FAQ, with link URLs 
 1. **No Australian figure for onboarding time.** The only sourced hours figure is Progress Software's global "nearly 20 hours a week", which covers client coordination generally. The article says so plainly.
 2. **The three practice examples are examples now, not case studies.** If UC has a real accounting build, it needs to go on the approved list first.
 3. **Ignition and Karbon have no price.** Their pages didn't give a readable, confirmed AUD price.
+
+## Update, 3 Oct: updated date (Luke, 11:50)
+
+`dateModified` is now `"2026-10-03"` (was absent, so the page showed the published date as "Updated"). The rewrite lane picks 2 or 3 Oct deterministically from the slug: the first byte of sha256(slug), even gives 2 Oct, odd gives 3 Oct (`0x81` here). The published date is unchanged. `dateModified` feeds the visible "Updated" line, the Article JSON-LD `dateModified`, og `modifiedTime` and the sitemap `lastmod`.

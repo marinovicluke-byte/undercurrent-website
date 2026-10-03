@@ -2,6 +2,7 @@
 title: "Client Onboarding for Accountants: Automate the First Week"
 description: "Automate client onboarding for your accounting firm: engagement letters, agent nomination, document collection and practice records. A guide for Australian accountants."
 date: "2026-03-31"
+dateModified: "2026-10-03"
 slug: "client-onboarding-accountants-automation-australia"
 cluster: "industry-guides"
 keyword: "client onboarding for accountants automate simplify"
