@@ -2,6 +2,7 @@
 title: "How to Choose SEO or Google Ads for Dog Grooming"
 description: "SEO vs Google Ads for dog grooming in Australia: a 2026 comparison of cost, speed and durability, plus a clear verdict on which channel to start first."
 date: "2026-06-16"
+dateModified: "2026-09-29"
 slug: "seo-vs-google-ads-dog-grooming"
 cluster: "seo-ai-visibility"
 keyword: "seo vs google ads for dog grooming"
@@ -168,9 +169,9 @@ A new dog grooming salon should usually start with Google Ads. A fresh business 
 
 ## Related Reading
 
-- [Marketing a pet grooming business in Australia](/blog/pet-grooming-marketing-australia) , the full 2026 playbook this comparison sits inside.
-- [SEO for dog groomers](/blog/seo-for-dog-groomers) , how to rank a grooming business on Maps and organic search.
-- [Google Ads for dog grooming](/blog/google-ads-for-dog-grooming) , the profitable paid setup, budgets and negative keywords explained.
-- [Google Business Profile for pet grooming](/blog/google-business-profile-for-pet-grooming) , the flagship local-search data piece for groomers.
-- [SEO pricing in Australia](/blog/seo-pricing-australia-2026) , what local search and profile work typically costs.
-- [SEO for small business](/blog/seo-for-small-business) , the wider organic playbook for local service businesses.
+- [Marketing a pet grooming business in Australia](/blog/pet-grooming-marketing-australia), the full 2026 playbook this comparison sits inside.
+- [SEO for dog groomers](/blog/seo-for-dog-groomers), how to rank a grooming business on Maps and organic search.
+- [Google Ads for dog grooming](/blog/google-ads-for-dog-grooming), the profitable paid setup, budgets and negative keywords explained.
+- [Google Business Profile for pet grooming](/blog/google-business-profile-for-pet-grooming), the flagship local-search data piece for groomers.
+- [SEO pricing in Australia](/blog/seo-pricing-australia-2026), what local search and profile work typically costs.
+- [SEO for small business](/blog/seo-for-small-business), the wider organic playbook for local service businesses.

@@ -2,6 +2,7 @@
 title: "GEO for Buyers Agents: Win AI Search in Australia"
 description: "GEO for buyers agents is how Australian agencies get cited by ChatGPT, Gemini and Perplexity. Five pillars, 90-day rollout, and the metrics that matter."
 date: "2026-05-13"
+dateModified: "2026-10-01"
 slug: "geo-for-buyers-agents-australia"
 cluster: "seo-ai-visibility"
 keyword: "GEO for buyers agents"
@@ -72,7 +73,7 @@ Three retrieval signals move the needle:
 
 ## What does the audit data say about Australian buyers agents?
 
-**The Melbourne buyers-agency vertical averages 45/100 against our rubric, with zero articles in the Strong band.** In May 2026 we ran the UnderCurrent Article Reviewer across 27 articles from 9 firms. Method, per-firm scoring, and structural problems sit in [our Melbourne buyers-agency AI search audit](/blog/how-to-rank-buyers-agency-ai-search-melbourne) , the methodology source for this article.
+**The Melbourne buyers-agency vertical averages 45/100 against our rubric, with zero articles in the Strong band.** In May 2026 we ran the UnderCurrent Article Reviewer across 27 articles from 9 firms. Method, per-firm scoring, and structural problems sit in [our Melbourne buyers-agency AI search audit](/blog/how-to-rank-buyers-agency-ai-search-melbourne), the methodology source for this article.
 
 It's a 100-point rubric across 9 categories, built against [Google Search Central docs](https://developers.google.com/search/docs) and [Schema.org's RealEstateAgent definition](https://schema.org/RealEstateAgent). Rubric version 3.2. Across the 145-article corpus, the whole-corpus mean sits at ~53/100; our own articles average ~80/100. The Melbourne vertical sits 8 points below the wider agency average and 35 below our benchmark.
 

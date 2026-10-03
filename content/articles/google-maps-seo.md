@@ -2,6 +2,7 @@
 title: "Google Maps SEO: Rank in the Local Pack (2026)"
 description: "Google Maps SEO decides who wins the local pack. Here's how Australian businesses climb the rankings, what moves the needle, and how to measure it."
 date: "2026-05-30"
+dateModified: "2026-10-01"
 slug: "google-maps-seo"
 cluster: "seo-ai-visibility"
 keyword: "google maps seo"
@@ -276,12 +277,12 @@ Google Posts have a small, mostly indirect effect. They don't move ranking the w
 
 ## Related Reading
 
-- [Small business SEO guide](/blog/seo-for-small-business) , the wider playbook the local pack sits inside.
-- [SEO pricing in Australia](/blog/seo-pricing-australia-2026) , what local and organic SEO actually costs.
-- [Why tradies don't get Google reviews](/blog/why-tradies-dont-get-google-reviews-australia) , fixing the review pipeline.
-- [Measuring AI search visibility](/blog/how-to-measure-ai-search-visibility) , the third channel beyond Maps and organic.
-- [AEO vs SEO vs GEO](/blog/aeo-vs-seo-vs-geo) , how local search fits the AI-era picture.
-- [Audit of Australian SEO agencies](/blog/au-seo-agencies-ai-search-audit) , the first-party method behind our corpus data.
-- [SEO and AI visibility hub](/blog/cluster/seo-ai-visibility) , every guide in this cluster, in one place.
+- [Small business SEO guide](/blog/seo-for-small-business), the wider playbook the local pack sits inside.
+- [SEO pricing in Australia](/blog/seo-pricing-australia-2026), what local and organic SEO actually costs.
+- [Why tradies don't get Google reviews](/blog/why-tradies-dont-get-google-reviews-australia), fixing the review pipeline.
+- [Measuring AI search visibility](/blog/how-to-measure-ai-search-visibility), the third channel beyond Maps and organic.
+- [AEO vs SEO vs GEO](/blog/aeo-vs-seo-vs-geo), how local search fits the AI-era picture.
+- [Audit of Australian SEO agencies](/blog/au-seo-agencies-ai-search-audit), the first-party method behind our corpus data.
+- [SEO and AI visibility hub](/blog/cluster/seo-ai-visibility), every guide in this cluster, in one place.
 
 Ranking in the local pack is reachable for any business that does the foundation properly and measures honestly. Start with the profile, build reviews, match your website, then expand suburb by suburb. When you're ready for the rest of the picture, the [SEO and AI visibility hub](/blog/cluster/seo-ai-visibility) ties Maps, organic, and AI search into one plan.

@@ -2,6 +2,7 @@
 title: "How to Use AI Tools in a Dog Grooming Business"
 description: "The best AI tools for a dog grooming business in Australia, from ChatGPT prompts to booking software, with real costs and an honest line on safety."
 date: "2026-06-16"
+dateModified: "2026-10-03"
 slug: "ai-tools-for-dog-grooming-business"
 cluster: "ai-strategy-training"
 keyword: "ai tools for dog grooming business"
@@ -164,11 +165,11 @@ Mobile groomers get the most value from AI on the road, where desk time is scarc
 
 ## Related Reading
 
-- [Marketing and growing a pet grooming business in Australia](/blog/pet-grooming-marketing-australia) , the full hub guide this article sits inside.
-- [AI automation for pet grooming](/blog/ai-automation-for-pet-grooming) , booking, rebooking and review requests on autopilot.
-- [AI search for pet grooming](/blog/ai-search-for-pet-grooming) , how to get your salon recommended by ChatGPT and Perplexity.
-- [Google Business Profile management for pet groomers](/blog/google-business-profile-for-pet-grooming) , the profile work that actually lifts your map ranking.
-- [SEO for dog groomers](/blog/seo-for-dog-groomers) , the complete guide to ranking a grooming business in local search.
-- [AI training for Australian small business](/blog/ai-training-australia-small-business-guide) , how to get your whole team confident with these tools.
+- [Marketing and growing a pet grooming business in Australia](/blog/pet-grooming-marketing-australia), the full hub guide this article sits inside.
+- [AI automation for pet grooming](/blog/ai-automation-for-pet-grooming), booking, rebooking and review requests on autopilot.
+- [AI search for pet grooming](/blog/ai-search-for-pet-grooming), how to get your salon recommended by ChatGPT and Perplexity.
+- [Google Business Profile management for pet groomers](/blog/google-business-profile-for-pet-grooming), the profile work that actually lifts your map ranking.
+- [SEO for dog groomers](/blog/seo-for-dog-groomers), the complete guide to ranking a grooming business in local search.
+- [AI training for Australian small business](/blog/ai-training-australia-small-business-guide), how to get your whole team confident with these tools.
 
 Ready to find the admin jobs AI can take off your plate? Book a [free 30-minute audit](/audit) and we'll map your quick wins, or see how our [AI strategy and training work](/blog/cluster/ai-strategy-training) fits a grooming salon.

@@ -2,6 +2,7 @@
 title: "How to Win SEO for Mortgage Brokers in Australia, 2026"
 description: "SEO for mortgage brokers in 2026 is four jobs: Google organic, local map pack, AI search, and comparison content. A plain-English guide for Australian brokers."
 date: "2026-06-05"
+dateModified: "2026-10-02"
 slug: "seo-for-mortgage-brokers-australia"
 cluster: "industry-guides"
 keyword: "seo for mortgage brokers"
@@ -278,8 +279,8 @@ The brokers who win the next two years will not have the biggest SEO invoice. Th
 
 ## Related Reading
 
-- [SEO for buyers agents in Australia](/blog/seo-for-buyers-agents-australia) , the same four-surface playbook for a neighbouring property niche.
-- [AEO vs SEO vs GEO, explained](/blog/aeo-vs-seo-vs-geo) , how the optimisation disciplines fit together.
-- [How to win at Perplexity SEO](/blog/how-to-win-at-perplexity-seo) , getting cited by the AI tool borrowers research in.
-- [SEO pricing in Australia, 2026](/blog/seo-pricing-australia-2026) , what SEO actually costs across business sizes.
-- [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo) , getting a broking business quoted by ChatGPT.
+- [SEO for buyers agents in Australia](/blog/seo-for-buyers-agents-australia), the same four-surface playbook for a neighbouring property niche.
+- [AEO vs SEO vs GEO, explained](/blog/aeo-vs-seo-vs-geo), how the optimisation disciplines fit together.
+- [How to win at Perplexity SEO](/blog/how-to-win-at-perplexity-seo), getting cited by the AI tool borrowers research in.
+- [SEO pricing in Australia, 2026](/blog/seo-pricing-australia-2026), what SEO actually costs across business sizes.
+- [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo), getting a broking business quoted by ChatGPT.

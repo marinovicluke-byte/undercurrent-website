@@ -2,6 +2,7 @@
 title: "How to Do Dog Grooming Marketing in Australia"
 description: "A 2026 guide to dog grooming marketing in Australia: win the Google local pack, get cited by AI search, build a booking site, and automate reviews."
 date: "2026-06-16"
+dateModified: "2026-10-03"
 slug: "pet-grooming-marketing-australia"
 cluster: "industry-guides"
 keyword: "dog grooming marketing"
@@ -247,13 +248,13 @@ Yes, and increasingly it does. When owners ask ChatGPT, Perplexity or Google's A
 
 ## Related Reading
 
-- [SEO for dog groomers](/blog/seo-for-dog-groomers) , the deep guide to ranking a grooming business in Maps, organic and AI search.
-- [Google Business Profile for pet grooming](/blog/google-business-profile-for-pet-grooming) , the flagship data piece with the full worked example and fixable checklist.
-- [AI search for pet grooming](/blog/ai-search-for-pet-grooming) , how to get cited when owners ask ChatGPT for the best groomer near them.
-- [Pet grooming website design](/blog/pet-grooming-website-design) , what a grooming site needs to book jobs and feed Google an entity.
-- [AI automation for pet grooming](/blog/ai-automation-for-pet-grooming) , bookings, rebooking, no-shows and reviews on autopilot.
-- [AI tools for a dog grooming business](/blog/ai-tools-for-dog-grooming-business) , copy-paste ChatGPT and Claude prompts a groomer can use this week.
-- [Google Ads for dog grooming](/blog/google-ads-for-dog-grooming) , when paid search pays back and how to structure it profitably.
-- [SEO vs Google Ads for dog grooming](/blog/seo-vs-google-ads-dog-grooming) , the balanced decision piece on which channel to run first.
+- [SEO for dog groomers](/blog/seo-for-dog-groomers), the deep guide to ranking a grooming business in Maps, organic and AI search.
+- [Google Business Profile for pet grooming](/blog/google-business-profile-for-pet-grooming), the flagship data piece with the full worked example and fixable checklist.
+- [AI search for pet grooming](/blog/ai-search-for-pet-grooming), how to get cited when owners ask ChatGPT for the best groomer near them.
+- [Pet grooming website design](/blog/pet-grooming-website-design), what a grooming site needs to book jobs and feed Google an entity.
+- [AI automation for pet grooming](/blog/ai-automation-for-pet-grooming), bookings, rebooking, no-shows and reviews on autopilot.
+- [AI tools for a dog grooming business](/blog/ai-tools-for-dog-grooming-business), copy-paste ChatGPT and Claude prompts a groomer can use this week.
+- [Google Ads for dog grooming](/blog/google-ads-for-dog-grooming), when paid search pays back and how to structure it profitably.
+- [SEO vs Google Ads for dog grooming](/blog/seo-vs-google-ads-dog-grooming), the balanced decision piece on which channel to run first.
 
 Want to know where your grooming business stands across all of these channels? Start with a [free 30-minute audit](/audit) and we'll show you the cheapest gaps to close first.

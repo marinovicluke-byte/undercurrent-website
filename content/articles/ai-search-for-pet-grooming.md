@@ -2,6 +2,7 @@
 title: "How to Win AI Search for Pet Grooming in 2026"
 description: "A 2026 guide to AI search for pet grooming: how to get your Australian grooming business named by ChatGPT, Gemini and Google's AI Overviews."
 date: "2026-06-16"
+dateModified: "2026-10-03"
 slug: "ai-search-for-pet-grooming"
 cluster: "seo-ai-visibility"
 keyword: "ai search for pet grooming"
@@ -181,11 +182,11 @@ Yes. A mobile dog groomer can run a service-area Google Business Profile that hi
 
 ## Related Reading
 
-- [How to market a pet grooming business in Australia](/blog/pet-grooming-marketing-australia) , the full channel-by-channel playbook this guide sits inside.
-- [SEO for dog groomers](/blog/seo-for-dog-groomers) , how Maps, organic and AI search fit together for a grooming business.
-- [Google Business Profile for pet grooming](/blog/google-business-profile-for-pet-grooming) , the profile setup that feeds every AI answer.
-- [Pet grooming website design that converts](/blog/pet-grooming-website-design) , building the owned site AI engines can actually crawl.
-- [What is answer engine optimisation](/blog/what-is-answer-engine-optimisation) , the practice behind getting cited in AI answers.
-- [How to measure AI search visibility](/blog/how-to-measure-ai-search-visibility) , tracking whether the assistants name your business.
+- [How to market a pet grooming business in Australia](/blog/pet-grooming-marketing-australia), the full channel-by-channel playbook this guide sits inside.
+- [SEO for dog groomers](/blog/seo-for-dog-groomers), how Maps, organic and AI search fit together for a grooming business.
+- [Google Business Profile for pet grooming](/blog/google-business-profile-for-pet-grooming), the profile setup that feeds every AI answer.
+- [Pet grooming website design that converts](/blog/pet-grooming-website-design), building the owned site AI engines can actually crawl.
+- [What is answer engine optimisation](/blog/what-is-answer-engine-optimisation), the practice behind getting cited in AI answers.
+- [How to measure AI search visibility](/blog/how-to-measure-ai-search-visibility), tracking whether the assistants name your business.
 
 Ready to find out where your grooming business stands in AI search today? Book a [free local search audit](/audit) and we'll map the gaps first.

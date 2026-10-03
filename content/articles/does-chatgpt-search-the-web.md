@@ -2,6 +2,7 @@
 title: "Does ChatGPT Search the Web? The 34.5% Answer"
 description: "ChatGPT only searches the web on 34.5% of queries per Semrush's 1B-row study. Here's how that rewrites the AEO playbook for Australian businesses in 2026."
 date: "2026-05-17"
+dateModified: "2026-10-01"
 slug: "does-chatgpt-search-the-web"
 cluster: "seo-ai-visibility"
 keyword: "does chatgpt search the web"
@@ -41,7 +42,7 @@ If you'd rather we run the analysis on your own site, [here's how our AI search 
 
 The headline finding: as of February 2026, ChatGPT enabled a [live web search on 34.5% of queries](https://www.semrush.com/blog/chatgpt-search-insights/), down from 46% in late 2024 (n=1B+ clickstream rows). The system is leaning more on its [training data](/blog/how-to-do-chatgpt-seo), not less, even as the crawler infrastructure grows. OpenAI's [OAI-SearchBot logged a 3.5x increase in events post-GPT-5](https://openai.com/) across [Botify's 7-billion-log-file analysis](https://www.botify.com/blog/openai-tripled-web-crawl) over the same period.
 
-The two facts only sound contradictory. More crawling feeds the training-data pipeline (everything ingested now lands in the next model's weights). Retrieval-per-query is a separate dial , whether the live model decides any given prompt needs a fresh search , and that dial is being turned down. Up on one channel, down on the other.
+The two facts only sound contradictory. More crawling feeds the training-data pipeline (everything ingested now lands in the next model's weights). Retrieval-per-query is a separate dial (whether the live model decides any given prompt needs a fresh search), and that dial is being turned down. Up on one channel, down on the other.
 
 If you have been optimising your site purely for retrieval, you are working on roughly one-third of the surface area. The rest lives upstream of any query.
 
@@ -171,12 +172,12 @@ It overlaps heavily but the centre of gravity is different. Traditional [SEO](/g
 
 ## Related Reading
 
-- [What is AI search optimisation](/glossary/what-is-ai-search-optimisation) , definition and scope
-- [AEO vs SEO vs GEO](/blog/aeo-vs-seo-vs-geo) , the three optimisation jobs and how they differ
-- [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo) , practical setup checklist
-- [How to rank in ChatGPT Search](/blog/how-to-rank-in-chatgpt-search) , retrieval-path specifics
-- [How to choose an AI search agency in Australia](/blog/best-aeo-agencies-australia) , what to look for
-- [AI search vs traditional search Australia 2026](/blog/ai-search-vs-traditional-search-australia-2026) , the bigger picture
-- [What is AI search optimisation in Australia](/blog/what-is-ai-search-optimisation-australia) , local primer
+- [What is AI search optimisation](/glossary/what-is-ai-search-optimisation), definition and scope
+- [AEO vs SEO vs GEO](/blog/aeo-vs-seo-vs-geo), the three optimisation jobs and how they differ
+- [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo), practical setup checklist
+- [How to rank in ChatGPT Search](/blog/how-to-rank-in-chatgpt-search), retrieval-path specifics
+- [How to choose an AI search agency in Australia](/blog/best-aeo-agencies-australia), what to look for
+- [AI search vs traditional search Australia 2026](/blog/ai-search-vs-traditional-search-australia-2026), the bigger picture
+- [What is AI search optimisation in Australia](/blog/what-is-ai-search-optimisation-australia), local primer
 
 Want us to run this playbook? [Book a free AI search audit](/audit) and we'll show you exactly where you sit on the 46-article benchmark.

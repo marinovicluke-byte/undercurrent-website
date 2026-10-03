@@ -2,6 +2,7 @@
 title: "Search Agent Optimisation: Win the Next AI Search Layer"
 description: "Search agent optimisation makes your site readable and bookable by the AI agents that compare, shortlist and buy for your customers. Here is how it works."
 date: "2026-05-15"
+dateModified: "2026-10-03"
 slug: "search-agent-optimisation-explained"
 cluster: "seo-ai-visibility"
 keyword: "search agent optimisation"
@@ -62,7 +63,7 @@ Two more details for search agent optimisation. The agents pulled their starting
 
 ## What Does Your Site Need So an AI Agent Can Use It?
 
-**Five things, and none need a rebuild.** First, a 40-to-60-word answer at the top of every key page: what you do, where, for whom , the format AI summaries quote. Second, schema markup: an Organization or LocalBusiness entity, a Service or Offer with a `priceRange` and an `areaServed`, and an FAQPage block. Third, machine-readable specifics: prices, service areas and availability in HTML text, not a PDF or JPEG. Fourth, stable URLs and fast pages; an agent that times out moves on. Fifth, a path to act: a bookable calendar, a quote form, a clear contact endpoint.
+**Five things, and none need a rebuild.** First, a 40-to-60-word answer at the top of every key page: what you do, where, for whom, the format AI summaries quote. Second, schema markup: an Organization or LocalBusiness entity, a Service or Offer with a `priceRange` and an `areaServed`, and an FAQPage block. Third, machine-readable specifics: prices, service areas and availability in HTML text, not a PDF or JPEG. Fourth, stable URLs and fast pages; an agent that times out moves on. Fifth, a path to act: a bookable calendar, a quote form, a clear contact endpoint.
 
 A minimal Offer block:
 

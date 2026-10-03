@@ -2,6 +2,7 @@
 title: "ChatGPT Knowledge Cutoff Australia: Audit Your Visibility"
 description: "GPT-5.5, Claude Opus 4.7, and Gemini 3 each have different knowledge cutoffs. Here's the verified table and the two-track plan for Australian SMBs."
 date: "2026-05-18"
+dateModified: "2026-10-02"
 slug: "chatgpt-knowledge-cutoff-australia"
 cluster: "seo-ai-visibility"
 keyword: "chatgpt knowledge cutoff australia"
@@ -202,11 +203,11 @@ Major versions ship roughly every 6 to 12 months, with each release a fresh trai
 
 ## Related Reading
 
-- [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo) , the retrieval-sprint workflow for AI search visibility
-- [What is ChatGPT Search](/glossary/what-is-chatgpt-search) , definitional reference on the live-search layer
-- [What is AI Search Optimisation](/glossary/what-is-ai-search-optimisation) , broader frame for the AI search opportunity in Australia
-- [What is Generative Engine Optimisation](/glossary/what-is-generative-engine-optimisation) , the technical discipline behind earning AI citations
-- [What is Answer Engine Optimisation](/glossary/what-is-answer-engine-optimisation) , companion discipline focused on direct AI answers
-- [AI training for Australian small businesses](/blog/ai-training-australia-small-business-guide) , practical training framework for SMBs
-- [SEO for buyers agents in Australia](/blog/seo-for-buyers-agents-australia) , vertical example of the two-track playbook applied
-- [What is Business Process Automation](/blog/what-is-business-process-automation-australia) , adjacent discipline that compounds AI visibility gains
+- [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo), the retrieval-sprint workflow for AI search visibility
+- [What is ChatGPT Search](/glossary/what-is-chatgpt-search), definitional reference on the live-search layer
+- [What is AI Search Optimisation](/glossary/what-is-ai-search-optimisation), broader frame for the AI search opportunity in Australia
+- [What is Generative Engine Optimisation](/glossary/what-is-generative-engine-optimisation), the technical discipline behind earning AI citations
+- [What is Answer Engine Optimisation](/glossary/what-is-answer-engine-optimisation), companion discipline focused on direct AI answers
+- [AI training for Australian small businesses](/blog/ai-training-australia-small-business-guide), practical training framework for SMBs
+- [SEO for buyers agents in Australia](/blog/seo-for-buyers-agents-australia), vertical example of the two-track playbook applied
+- [What is Business Process Automation](/blog/what-is-business-process-automation-australia), adjacent discipline that compounds AI visibility gains
