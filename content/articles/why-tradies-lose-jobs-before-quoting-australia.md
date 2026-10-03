@@ -12,9 +12,9 @@ readingTime: 8
 summary: "This article explains why Australian trade businesses lose the majority of new enquiries before they even submit a quote, focusing on lead response time data and customer expectations, with practical automation solutions."
 faqs:
   - q: 'How fast should a tradie respond to a new enquiry in Australia?'
-    a: 'You should respond within 5 minutes for the best chance of winning the job. InsideSales' research found a lead called within 5 minutes is 100 times more likely to be reached than one called 30 minutes later. In practical terms for Australian tradies, an instant automated SMS followed by a phone call within 30 minutes is the target.'
+    a: 'You should respond within 5 minutes for the best chance of winning the job. InsideSales'' research found a lead called within 5 minutes is 100 times more likely to be reached than one called 30 minutes later. In practical terms for Australian tradies, an instant automated SMS followed by a phone call within 30 minutes is the target.'
   - q: 'Do customers really go with the first tradie to respond?'
-    a: 'Often, yes. The first to respond isn't necessarily the cheapest or most experienced, but they're the one the customer is talking to. When customers have an urgent problem like a leaking pipe or broken air conditioner, they contact multiple tradies and book with whoever gets back to them first.'
+    a: 'Often, yes. The first to respond isn''t necessarily the cheapest or most experienced, but they''re the one the customer is talking to. When customers have an urgent problem like a leaking pipe or broken air conditioner, they contact multiple tradies and book with whoever gets back to them first.'
   - q: 'What is the average response time for Australian trade businesses?'
     a: 'No one publishes an Australian figure. In a Harvard Business Review audit of 2,241 US companies, the average reply took 42 hours, and 23% never replied at all. The tradies winning the most work send an instant acknowledgment while they''re still on job sites, then call back.'
   - q: 'How much work am I losing by responding slowly to enquiries?'
