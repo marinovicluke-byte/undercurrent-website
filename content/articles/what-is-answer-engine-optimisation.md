@@ -2,6 +2,7 @@
 title: "What is Answer Engine Optimisation? A Plain-English Guide"
 description: "Answer engine optimisation is how Australian businesses get cited by ChatGPT, Perplexity, and Google AI Overviews. A plain-English guide for owners."
 date: "2026-05-14"
+dateModified: "2026-10-02"
 slug: "what-is-answer-engine-optimisation"
 cluster: "seo-ai-visibility"
 keyword: "answer engine optimisation"
@@ -63,7 +64,19 @@ If you've spent the last decade chasing Google rankings, AEO is the discipline t
 
 ## The 5-step AEO playbook for Australian small businesses
 
-**Working backwards from what actually moves the score sheet, the playbook comes down to five steps.** Step one, map the questions a buyer asks before they buy: pull People Also Ask data, scrape ChatGPT for the same query, and list every adjacent question. Step two, write a tight definitional answer in the first 80 words of every page that targets one of those questions. Step three, mark up FAQ blocks, Article schema, and Organization schema using [Schema.org vocabularies](https://schema.org). The minimal FAQ block looks like this:
+**Working backwards from what actually moves the score sheet, the playbook comes down to five steps.**
+
+**The five steps, in order**
+
+1. Map the questions a buyer asks before they buy: pull People Also Ask data, scrape ChatGPT for the same query, and list every adjacent question.
+2. Write a tight definitional answer in the first 80 words of every page that targets one of those questions.
+3. Mark up FAQ blocks, Article schema, and Organization schema using [Schema.org vocabularies](https://schema.org).
+4. Layer in first-party data: original observations, internal benchmarks, named clients (with permission), and specific dollar figures from your own operations.
+5. Track citations weekly across ChatGPT, Perplexity, Gemini, and Google AI Overviews, and feed the gaps back into the next round of edits.
+
+None of the five steps require a six-figure tool stack. They require a clear weekly cadence and a [structured AI search audit](/blog/seo-audit-self-check-australia) you actually run.
+
+For step three, the minimal FAQ block looks like this:
 
 ```json
 {
@@ -79,8 +92,6 @@ If you've spent the last decade chasing Google rankings, AEO is the discipline t
   }]
 }
 ```
-
-Step four, layer in first-party data: original observations, internal benchmarks, named clients (with permission), and specific dollar figures from your own operations. Step five, track citations weekly across ChatGPT, Perplexity, Gemini, and Google AI Overviews, and feed the gaps back into the next round of edits. None of the five steps require a six-figure tool stack. They require a clear weekly cadence and a [structured AI search audit](/blog/seo-audit-self-check-australia) you actually run.
 
 ## Should you do answer engine optimisation yourself or hire help?
 
