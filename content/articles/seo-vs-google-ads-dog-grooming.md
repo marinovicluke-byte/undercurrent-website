@@ -184,9 +184,9 @@ A new dog grooming salon should usually start with Google Ads. A fresh business 
 
 ## Related Reading
 
-- [Marketing a pet grooming business in Australia](/blog/pet-grooming-marketing-australia) , the full 2026 playbook this comparison sits inside.
-- [SEO for dog groomers](/blog/seo-for-dog-groomers) , how to rank a grooming business on Maps and organic search.
-- [Google Ads for dog grooming](/blog/google-ads-for-dog-grooming) , the profitable paid setup, budgets and negative keywords explained.
-- [Google Business Profile for pet grooming](/blog/google-business-profile-for-pet-grooming) , the flagship local-search data piece for groomers.
-- [SEO pricing in Australia](/blog/seo-pricing-australia-2026) , what local search and profile work typically costs.
-- [SEO for small business](/blog/seo-for-small-business) , the wider organic playbook for local service businesses.
+- [Marketing a pet grooming business in Australia](/blog/pet-grooming-marketing-australia), the full 2026 playbook this comparison sits inside.
+- [SEO for dog groomers](/blog/seo-for-dog-groomers), how to rank a grooming business on Maps and organic search.
+- [Google Ads for dog grooming](/blog/google-ads-for-dog-grooming), the profitable paid setup, budgets and negative keywords explained.
+- [Google Business Profile for pet grooming](/blog/google-business-profile-for-pet-grooming), the flagship local-search data piece for groomers.
+- [SEO pricing in Australia](/blog/seo-pricing-australia-2026), what local search and profile work typically costs.
+- [SEO for small business](/blog/seo-for-small-business), the wider organic playbook for local service businesses.

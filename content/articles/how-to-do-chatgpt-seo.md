@@ -172,24 +172,24 @@ You can do the 30-minute checklist yourself, and most service owners should star
 
 ## Related Reading
 
-- [How to rank in ChatGPT search](/blog/how-to-rank-in-chatgpt-search) , the deeper, section-by-section breakdown of the citation signals AI engines look for.
-- [AI search vs traditional SEO in Australia](/blog/ai-search-vs-traditional-search-australia-2026) , what changes, what carries over, and where to put your effort first.
-- [SEO self-check for Australian businesses](/blog/seo-audit-self-check-australia) , a quick DIY audit that flags the same gaps the 30-minute checklist fixes.
-- [AI search visibility hub for Australia](/blog/cluster/seo-ai-visibility) , the wider map of getting found across ChatGPT, Perplexity, Gemini, and Google.
-- [The data behind the best AI search agencies in Australia](/blog/au-seo-agencies-ai-search-audit) , what audited agency content reveals about who is actually doing this well.
+- [How to rank in ChatGPT search](/blog/how-to-rank-in-chatgpt-search), the deeper, section-by-section breakdown of the citation signals AI engines look for.
+- [AI search vs traditional SEO in Australia](/blog/ai-search-vs-traditional-search-australia-2026), what changes, what carries over, and where to put your effort first.
+- [SEO self-check for Australian businesses](/blog/seo-audit-self-check-australia), a quick DIY audit that flags the same gaps the 30-minute checklist fixes.
+- [AI search visibility hub for Australia](/blog/cluster/seo-ai-visibility), the wider map of getting found across ChatGPT, Perplexity, Gemini, and Google.
+- [The data behind the best AI search agencies in Australia](/blog/au-seo-agencies-ai-search-audit), what audited agency content reveals about who is actually doing this well.
 
 ## Sources
 
-1. [Semrush , ChatGPT traffic analysis](https://www.semrush.com/blog/chatgpt-search-insights/)
-2. [ROI , ChatGPT advertising in Australia, what's coming](https://roi.com.au/chatgpt-advertising-in-australia-whats-really-coming/)
-3. [First Page Sage , ChatGPT usage statistics](https://firstpagesage.com/seo-blog/chatgpt-usage-statistics/)
-4. [ROI , ChatGPT in Australia: usage, context and practical impact](https://roi.com.au/blog/stats/chatgpt-in-australia-2026-usage-context-and-practical-impact)
-5. [Australian Bureau of Statistics , AI transparency statement](https://www.abs.gov.au/about/legislation-and-policy/ai-transparency-statement)
-6. [Information Age (ACS) , ABS used ChatGPT to write ANZSCO job descriptions](https://ia.acs.org.au/article/2024/abs-used-chatgpt-to-write-anzsco-job-descriptions.html)
-7. [The Treasury , government getting high-quality results from AI](https://ministers.treasury.gov.au/ministers/andrew-leigh-2022/articles/opinion-piece-government-getting-high-quality-results-ai)
-8. [arXiv , ChatGPT vs Google: a comparative study of search performance](https://arxiv.org/pdf/2307.01135)
-9. [Rankmax , local SEO statistics](https://www.rankmax.com.au/articles/local-seo-statistics)
-10. [Aidan Coleman , AI SEO statistics for 2026](https://aidancoleman.com.au/ai-seo-statistics/)
-11. [ClickRank , ChatGPT for keyword research](https://www.clickrank.ai/chatgpt-for-keyword-research/)
-12. [SE Ranking , ChatGPT deep research for SEO](https://seranking.com/blog/chatgpt-deep-research-for-seo/)
-13. [Grand Cru Digital , 2026 SEO tips for Australian small businesses](https://grandcrudigital.com.au/blog/2026-seo-tips/)
+1. [Semrush: ChatGPT traffic analysis](https://www.semrush.com/blog/chatgpt-search-insights/)
+2. [ROI: ChatGPT advertising in Australia, what's coming](https://roi.com.au/chatgpt-advertising-in-australia-whats-really-coming/)
+3. [First Page Sage: ChatGPT usage statistics](https://firstpagesage.com/seo-blog/chatgpt-usage-statistics/)
+4. [ROI: ChatGPT in Australia: usage, context and practical impact](https://roi.com.au/blog/stats/chatgpt-in-australia-2026-usage-context-and-practical-impact)
+5. [Australian Bureau of Statistics: AI transparency statement](https://www.abs.gov.au/about/legislation-and-policy/ai-transparency-statement)
+6. [Information Age (ACS): ABS used ChatGPT to write ANZSCO job descriptions](https://ia.acs.org.au/article/2024/abs-used-chatgpt-to-write-anzsco-job-descriptions.html)
+7. [The Treasury: government getting high-quality results from AI](https://ministers.treasury.gov.au/ministers/andrew-leigh-2022/articles/opinion-piece-government-getting-high-quality-results-ai)
+8. [arXiv: ChatGPT vs Google: a comparative study of search performance](https://arxiv.org/pdf/2307.01135)
+9. [Rankmax: local SEO statistics](https://www.rankmax.com.au/articles/local-seo-statistics)
+10. [Aidan Coleman: AI SEO statistics for 2026](https://aidancoleman.com.au/ai-seo-statistics/)
+11. [ClickRank: ChatGPT for keyword research](https://www.clickrank.ai/chatgpt-for-keyword-research/)
+12. [SE Ranking: ChatGPT deep research for SEO](https://seranking.com/blog/chatgpt-deep-research-for-seo/)
+13. [Grand Cru Digital: 2026 SEO tips for Australian small businesses](https://grandcrudigital.com.au/blog/2026-seo-tips/)

@@ -86,7 +86,7 @@ According to the [ABS Business Characteristics Survey](https://www.abs.gov.au/st
 
 ---
 
-## GEO, AEO, LLMO , What's the Difference?
+## GEO, AEO, LLMO: What's the Difference?
 
 **GEO, AEO, and LLMO are all names for the same underlying practice, applied to slightly different platforms or popularised by different communities.** You don't need three separate strategies.
 

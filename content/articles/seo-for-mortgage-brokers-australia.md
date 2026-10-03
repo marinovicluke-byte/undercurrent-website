@@ -296,8 +296,8 @@ The brokers who win the next two years will not have the biggest SEO invoice. Th
 
 ## Related Reading
 
-- [SEO for buyers agents in Australia](/blog/seo-for-buyers-agents-australia) , the same four-surface playbook for a neighbouring property niche.
-- [AEO vs SEO vs GEO, explained](/blog/aeo-vs-seo-vs-geo) , how the optimisation disciplines fit together.
-- [How to win at Perplexity SEO](/blog/how-to-win-at-perplexity-seo) , getting cited by the AI tool borrowers research in.
-- [SEO pricing in Australia, 2026](/blog/seo-pricing-australia-2026) , what SEO actually costs across business sizes.
-- [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo) , getting a broking business quoted by ChatGPT.
+- [SEO for buyers agents in Australia](/blog/seo-for-buyers-agents-australia), the same four-surface playbook for a neighbouring property niche.
+- [AEO vs SEO vs GEO, explained](/blog/aeo-vs-seo-vs-geo), how the optimisation disciplines fit together.
+- [How to win at Perplexity SEO](/blog/how-to-win-at-perplexity-seo), getting cited by the AI tool borrowers research in.
+- [SEO pricing in Australia, 2026](/blog/seo-pricing-australia-2026), what SEO actually costs across business sizes.
+- [How to do ChatGPT SEO](/blog/how-to-do-chatgpt-seo), getting a broking business quoted by ChatGPT.

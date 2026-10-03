@@ -146,11 +146,11 @@ No. Most grooming platforms have the common automations, reminders, rebooking an
 
 ## Related Reading
 
-- [Pet grooming marketing in Australia](/blog/pet-grooming-marketing-australia) , the full guide this automation playbook sits inside, covering search, reviews and ads.
-- [Google Business Profile management for pet groomers](/blog/google-business-profile-for-pet-grooming) , why review velocity and a complete profile decide your local visibility.
-- [Pet grooming website design that converts](/blog/pet-grooming-website-design) , the booking-first site your automations plug into.
-- [AI tools for a dog grooming business](/blog/ai-tools-for-dog-grooming-business) , copy-paste ChatGPT and Claude prompts for replies, captions and review responses.
-- [Simplest small business automation tasks for 2026](/blog/simplest-small-business-automation-tasks-australia-2026) , where to start if grooming-specific tools feel like overkill.
-- [Top 5 small business automation tools for 2026](/blog/top-5-small-business-automation-tools-2026) , the connectors and platforms that run the workflows above.
+- [Pet grooming marketing in Australia](/blog/pet-grooming-marketing-australia), the full guide this automation playbook sits inside, covering search, reviews and ads.
+- [Google Business Profile management for pet groomers](/blog/google-business-profile-for-pet-grooming), why review velocity and a complete profile decide your local visibility.
+- [Pet grooming website design that converts](/blog/pet-grooming-website-design), the booking-first site your automations plug into.
+- [AI tools for a dog grooming business](/blog/ai-tools-for-dog-grooming-business), copy-paste ChatGPT and Claude prompts for replies, captions and review responses.
+- [Simplest small business automation tasks for 2026](/blog/simplest-small-business-automation-tasks-australia-2026), where to start if grooming-specific tools feel like overkill.
+- [Top 5 small business automation tools for 2026](/blog/top-5-small-business-automation-tools-2026), the connectors and platforms that run the workflows above.
 
 Ready to find the workflow leaking the most money in your salon? Book a [free 30-minute automation audit](/audit) and we'll map your booking, reminder and review gaps in one call.

@@ -200,15 +200,15 @@ Brief your designer on speed and structured data as requirements, not nice-to-ha
 
 ## Related Reading
 
-- [SEO for small business](/blog/seo-for-small-business) , how ranking works once the site is built
-- [Website experience design hub](/blog/cluster/website-experience-design) , the full cluster this guide anchors
-- [AI training for Australian small business](/blog/ai-training-australia-small-business-guide) , building AI skills in-house
-- [Top 5 small business automation tools for 2026](/blog/top-5-small-business-automation-tools-2026) , the stack behind a working site
-- [AI content automation case study](/case-studies/ai-content-automation-small-business-australia) , our own client results
-- [How we automated content for an Australian SMB](/blog/ai-content-automation-small-business-australia-case-study) , the build, step by step
-- [n8n vs Zapier for Australian small business](/blog/n8n-vs-zapier-australia-small-business) , choosing an automation engine
-- [The hidden cost of manual work in trade businesses](/blog/hidden-cost-manual-trade-business-australia) , why systems pay off
-- [Simplest small business automation tasks for 2026](/blog/simplest-small-business-automation-tasks-australia-2026) , quick wins to start with
+- [SEO for small business](/blog/seo-for-small-business), how ranking works once the site is built
+- [Website experience design hub](/blog/cluster/website-experience-design), the full cluster this guide anchors
+- [AI training for Australian small business](/blog/ai-training-australia-small-business-guide), building AI skills in-house
+- [Top 5 small business automation tools for 2026](/blog/top-5-small-business-automation-tools-2026), the stack behind a working site
+- [AI content automation case study](/case-studies/ai-content-automation-small-business-australia), our own client results
+- [How we automated content for an Australian SMB](/blog/ai-content-automation-small-business-australia-case-study), the build, step by step
+- [n8n vs Zapier for Australian small business](/blog/n8n-vs-zapier-australia-small-business), choosing an automation engine
+- [The hidden cost of manual work in trade businesses](/blog/hidden-cost-manual-trade-business-australia), why systems pay off
+- [Simplest small business automation tasks for 2026](/blog/simplest-small-business-automation-tasks-australia-2026), quick wins to start with
 
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" role="img" aria-label="Traditional SEO compared with AI search optimisation for Australian businesses" style="width:100%;height:auto;font-family:-apple-system,Segoe UI,sans-serif">
