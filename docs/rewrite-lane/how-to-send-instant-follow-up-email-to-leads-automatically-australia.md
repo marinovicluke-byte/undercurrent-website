@@ -101,3 +101,18 @@ Body, from the H1 to the end of the last section before the FAQ, with link URLs 
 
 - Before (on batch 5): 2,378
 - After: 2,445 (up 67, mostly the Worked block and the HBR detail). The format-pass survey script counts 2,652 to 2,721 (+2.6%). The 2% cap is the format pass's rule, not the rewrite lane's.
+
+## Checks
+
+- **`next build`** (run directly, no IndexNow postbuild): passes, including the Worked sum (37 + 16 + 24 + 23 = 100).
+- **`scripts/check-format-pass.mjs --base origin/content/format-pass-batch-5`**: no flagged figure in the Worked block, no em dash added (the one em dash is batch 5's, in `heroImageAlt`), one H1, and the headings are identical to batch 5.
+  - New numbers: 2,241, 42, 2011, 37, 23 (HBR) and 250 (Mailchimp). All are sourced.
+  - It flags words +2.6%, the front matter (FAQs, `summary`) and the date (it wants 29 Sep), all as intended.
+- **`scripts/check-quick-answers.mjs`**: 71 of 71 pass. The Quick Answer is unchanged.
+- **`next start`, at 390 and 1440, in Chromium and WebKit** (CSP and HSTS stripped for WebKit): 200, no sideways scroll, one H1, "Updated 3 Oct 2026". All 7 blocks render.
+
+## Reads thin (for Luke)
+
+1. **The strongest numbers are American.** HBR and InsideSales studied US firms, and the article now says so. No Australian lead-response study turned up.
+2. **There's no proof that instant follow-up wins jobs for a tradie.** Every result was a persona's. No story on the approved list fits. The founder's own enquiry handling might, if Luke has a figure.
+3. **The Spam Act isn't mentioned.** An enquiry doesn't create consent to marketing under ACMA's rules, which matters for the "nudge" emails on days 3 and 7. ACMA's site timed out on every fetch, so nothing was added. It's worth a line once someone checks [acma.gov.au/avoid-sending-spam](https://www.acma.gov.au/avoid-sending-spam) in a browser.
