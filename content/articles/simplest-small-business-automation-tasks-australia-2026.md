@@ -2,6 +2,7 @@
 title: "Simplest Small Business Automation Tasks: 5 No-Code Wins"
 description: "Five concrete automation wins small business owners in Australia can implement in under 30 minutes using free no-code tools. No technical skills required."
 date: "2026-01-20"
+dateModified: "2026-10-02"
 slug: "simplest-small-business-automation-tasks-australia-2026"
 cluster: "foundations"
 keyword: "What is the simplest task a small business can automate right now using a no-code tool?"
@@ -76,7 +77,7 @@ Here's the fix. Connect your form to Zapier or Make. When someone submits, the t
 
 That's it. Ten minutes. Now every lead hits your inbox instantly.
 
-We've seen tradies in Geelong set this up and cut their response time from 4 hours to 4 minutes. That's the difference between winning the job and losing it to someone faster. Trade businesses in particular bleed time here — full picture of [how much time Australian tradies spend on admin](/blog/how-much-time-tradies-spend-on-admin-australia) if you want the numbers.
+We've seen tradies in Geelong set this up and cut their response time from 4 hours to 4 minutes. That's the difference between winning the job and losing it to someone faster. Trade businesses in particular bleed time here: full picture of [how much time Australian tradies spend on admin](/blog/how-much-time-tradies-spend-on-admin-australia) if you want the numbers.
 
 ## Automation Win #2: Automatic Invoice Payment Reminders
 
@@ -201,7 +202,9 @@ That's the shift. Automation isn't expensive anymore. It's just a matter of whet
 
 **The best first automation isn't the most impressive one. It's the one you'll actually finish and use.**
 
-Here's how to pick. Ask yourself three questions:
+Here's how to pick.
+
+**Ask yourself three questions**
 
 1. **Does this task happen at least once a week?** If it's monthly or less, save it for later. Start with something frequent.
 2. **Does it follow the same steps every time?** If the process changes based on the situation, it's not a good first automation.

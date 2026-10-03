@@ -2,6 +2,7 @@
 title: "How To Audit 'Summarise With AI' Button Memory Risk"
 description: "Microsoft named the 'summarise with AI' button risk in Feb 2026 — AI Recommendation Poisoning (MITRE ATLAS AML.T0080). 5-step audit inside."
 date: "2026-05-19"
+dateModified: "2026-10-03"
 slug: "summarise-with-ai-button-risk"
 cluster: "seo-ai-visibility"
 keyword: "summarise with ai button risk"
@@ -114,13 +115,19 @@ The honest column is what [Australia's AI Assurance Framework](https://www.digit
 
 **Three things hit harder than the audit score sheet alone shows.** Across UC's 146-article Australian corpus audit, the AI-search vertical mean sits at 68.7% across 46 articles from 20 distinct hosts, against a UC own benchmark of 85.2% over 25 articles (Robin Search rubric v2.0.0, as of May 2026).
 
-First, we expected the button risk to cluster on dodgy [SEO](/glossary/what-is-seo) shops. It didn't. Reputable agency sites carried "Summarise with AI" widgets with pre-filled prompts that named the agency. Second, in three audits where the team agreed to cut the widget, we shipped the fix in under 30 minutes, single button removal plus a query-string sanitiser. Third, the lowest-frequency control was the easiest to add: only 1 in 46 sites we audited had a written policy to review assistant memory entries monthly, on the cadence Microsoft itself recommends. The pillars at [foundations](/blog/cluster/foundations) and [website experience design](/blog/cluster/website-experience-design) cover the structural side, and the [AI agent](/glossary/what-is-an-ai-agent) glossary entry covers the persistence side.
+**The three things**
+
+- We expected the button risk to cluster on dodgy [SEO](/glossary/what-is-seo) shops. It didn't. Reputable agency sites carried "Summarise with AI" widgets with pre-filled prompts that named the agency.
+- In three audits where the team agreed to cut the widget, we shipped the fix in under 30 minutes, single button removal plus a query-string sanitiser.
+- The lowest-frequency control was the easiest to add: only 1 in 46 sites we audited had a written policy to review assistant memory entries monthly, on the cadence Microsoft itself recommends.
+
+The pillars at [foundations](/blog/cluster/foundations) and [website experience design](/blog/cluster/website-experience-design) cover the structural side, and the [AI agent](/glossary/what-is-an-ai-agent) glossary entry covers the persistence side.
 
 ## The safer alternative is structured data, not buttons
 
 **You don't need a 'Summarise with AI' button to get cited by AI assistants, you need retrievable structure.** Australia's regulators are sharpening AI transparency expectations: the [Australian Bureau of Statistics' AI Transparency Statement](https://www.abs.gov.au/about/legislation-and-policy/ai-transparency-statement) and the [Australian government AI Assurance Framework](https://www.digital.gov.au/policy/ai/ai-assurance-framework-pilot-report/findings-recommendations) both frame AI features as needing the same scrutiny as any other system handling untrusted input. The same lens applies to "share to AI" widgets.
 
-Three structures do the work:
+**Three structures do the work**
 
 - **JSON-LD entity markup** declaring who you are, what services you sell, where you operate.
 - **An llms.txt declaration** at your domain root. An llms.txt file is a structured declaration that gives assistants a map of your priority content. UC's audit corpus shows 22% of Australian AI-search-vertical sites now publish one.
@@ -132,7 +139,7 @@ For the deeper version, our [AEO vs SEO vs GEO breakdown](/blog/aeo-vs-seo-vs-ge
 
 **The shape is predictable once you know what to look for.** Vendors selling poisoning vectors don't call them memory writes, they call them "AI ranking boost" or "ChatGPT visibility uplift." [Microsoft observed marketing-agency plugins doing exactly this](https://www.microsoft.com/en-us/security/blog/2026/02/10/ai-recommendation-poisoning/) in its Feb 2026 sample. The pitch is friendly; the mechanism is the same hidden URL parameter.
 
-Three things worth flagging in procurement:
+**Three things worth flagging in procurement**
 
 - Any plugin that "automatically generates AI-ready share links." Inspect what the link actually writes into the URL.
 - Any vendor promising "ChatGPT will cite you in 30 days" without showing structured-data or [schema markup](/glossary/what-is-schema-markup) work.
