@@ -102,7 +102,17 @@ Other fixes:
 Body, from the H1 to the end of the last section before the FAQ, with link URLs removed:
 
 - Before: 2,972
-- After: see Checks
+- After: 2,981 (+9). The cut figures and results were replaced by the example framing, the ATO correction and the Progress scope note. The format-pass survey script counts 3,262 to 3,280 (+0.6%).
+
+## Checks
+
+- **`next build`** (run directly, no IndexNow postbuild): passes. The Worked example, 4 x 3 x $200 = $2,400, passes the workings check.
+- **`scripts/check-format-pass.mjs`** (batch 1 script, not committed here): words +0.6%, no flagged figure, no em dash, one H1. Its "new numbers" are 355 (Progress), 163.90 (XPM), 2,400 (the Worked example), and 60 and 30 from the Progress release's title and date in Sources. All are in the table. The front matter and Quick Answer changes are intended.
+- **`scripts/check-quick-answers.mjs`**: 71 of 71 pass.
+- **Also changed:** "PAYG summaries" became "income statements", the ATO's name for them since Single Touch Payroll.
+- **Headings:** H1, H2 and H3 unchanged. A Sources H2 was added.
+- **Head against production:** title and canonical match. In the JSON-LD only the description (the new meta) and the FAQ answer texts differ.
+- **`next start`, at 390 and 1440, in Chromium and WebKit** (CSP stripped for WebKit): no sideways scroll. All 17 blocks render: 3 Fill (plus the three-step plan), 4 contrast pairs, 1 Worked. The rotating photo sits before the same H2 as on production.
 
 ## Reads thin (for Luke)
 
