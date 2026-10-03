@@ -131,3 +131,7 @@ Luke changed the lane's rule: sourced figures from a primary source may be **add
 **No new figures in the FAQ.** FAQ answers render as plain text from the `faqs:` front matter, so a figure there can't carry a clickable link. They keep the method only.
 
 **Reads thin, revised:** item 1 is partly answered, because the method now has a worked dollar figure with sourced inputs. Item 2 is done (new meta). Item 4 is done (the PR #45 phrase is fixed). Item 3 (the ASBFEO FAQ) still stands.
+
+## Update, 3 Oct: updated date (Luke, 11:50)
+
+`dateModified` is now `"2026-10-03"` (was absent, so the page showed the published date as "Updated"). The rewrite lane picks 2 or 3 Oct deterministically from the slug: the first byte of sha256(slug), even gives 2 Oct, odd gives 3 Oct (`0x97` here). The published date is unchanged. `dateModified` feeds the visible "Updated" line, the Article JSON-LD `dateModified`, og `modifiedTime` and the sitemap `lastmod`.

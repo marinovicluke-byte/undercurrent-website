@@ -2,6 +2,7 @@
 title: "The Hidden Cost of Running a Trade Business Without Automation"
 description: "Work out the real cost of running your Australian trade business manually: your rate, your admin hours, your working weeks. A method you can check."
 date: "2026-03-31"
+dateModified: "2026-10-03"
 slug: "hidden-cost-manual-trade-business-australia"
 cluster: "foundations"
 keyword: "hidden cost manual trade business australia"
