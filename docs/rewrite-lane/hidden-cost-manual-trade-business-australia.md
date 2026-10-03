@@ -107,3 +107,27 @@ Body, from the H1 to the end of the last section before the FAQ, with link URLs 
 2. **The meta description says "Fair Work + ABS hours + Xero insights = the number you need to see."** It has no figure, but none of those three sources is used any more. I didn't change it, because ops approves meta changes per article. Proposed: "Work out the real cost of running your Australian trade business manually: your rate, your admin hours, your working weeks. A method you can check."
 3. **FAQ 4 asks what ASBFEO says, and the honest answer is that no such ASBFEO figure was found.** Better to replace the question, but the schema keeps its questions.
 4. **Article 2 (PR #45) links here as "a dollar-side breakdown by trade".** After this rewrite that's no longer true. One phrase in PR #45 to fix if ops agrees.
+
+## Update, 3 Oct (ops and Luke's rule update, 10:50)
+
+Luke changed the lane's rule: sourced figures from a primary source may be **added**, and examples are fine when they're framed as examples. Ops asked for these changes on this article:
+
+| # | Figure | Where | Source |
+|--:|---|---|---|
+| A1 | 22.9 days on average to be paid | "The three costs on top" list, Slow payments | **ADDED.** [Xero Small Business Insights](https://www.xero.com/au/resources/small-business-insights/latest-australia/), June 2026 quarter, published 30 Jul 2026 |
+| A2 | 6.0 days late | Same line | **ADDED**, same source |
+| A3 | $80 to $200 an hour, plumbers | Example intro and Worked block | **ADDED.** [hipages, plumber cost](https://hipages.com.au/article/how_much_does_a_plumber_cost), updated 24 Jul 2026 |
+| A4 | $80 to $100 an hour, electricians | Worked block note | **ADDED.** [hipages, electrician cost](https://hipages.com.au/article/how_much_does_an_electrician_cost), updated 8 Jan 2026 |
+| A5 | 10 hours a week | Worked block | The example's own assumption, labelled as one ("the example's assumption") |
+| A6 | $90 an hour | Worked block | Inside hipages' $80 to $200 for plumbers (A3). The same rate the PR 34 tradie admin article uses |
+| A7 | 10 x $90 x 48 = $43,200 | Worked block | Arithmetic on A5, A6 and Fair Work's 48 weeks. The build checks it. It matches the tradie admin article's own sum |
+| A8 | $80 x 10 x 48 = $38,400 | Worked block note | Arithmetic on A4's low end, A5 and 48 weeks |
+| M | Meta description | Front matter | **CHANGED** (ops approved) to: "Work out the real cost of running your Australian trade business manually: your rate, your admin hours, your working weeks. A method you can check." The title and canonical are unchanged |
+
+**Xero's figures differ from what ops asked for.** Ops asked for "22.6 days and 6.5 days late". Those were the March 2024 quarter, from a search summary. Xero's linkable page now shows the June 2026 quarter, 22.9 and 6.0, and a figure has to match its link. So the article uses 22.9 and 6.0, and names the quarter. Xero says to treat June quarter results with caution, because of year-end effects.
+
+**Blocks after the update:** two Worked blocks now (the 48 weeks, and the plumber example). The rest is unchanged.
+
+**No new figures in the FAQ.** FAQ answers render as plain text from the `faqs:` front matter, so a figure there can't carry a clickable link. They keep the method only.
+
+**Reads thin, revised:** item 1 is partly answered, because the method now has a worked dollar figure with sourced inputs. Item 2 is done (new meta). Item 4 is done (the PR #45 phrase is fixed). Item 3 (the ASBFEO FAQ) still stands.
