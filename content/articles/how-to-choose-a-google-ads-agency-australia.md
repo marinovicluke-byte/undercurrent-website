@@ -2,6 +2,7 @@
 title: "How to Choose a Google Ads Agency in Australia in 2026"
 description: "Choosing a Google Ads agency in Australia? Here's what a good one actually does, the questions to ask before you sign, fair 2026 pricing, and the red flags."
 date: "2026-06-02"
+dateModified: "2026-10-02"
 slug: "how-to-choose-a-google-ads-agency-australia"
 cluster: "seo-ai-visibility"
 keyword: "google ads agency"
@@ -113,7 +114,9 @@ Most small businesses on a single platform pay a flat retainer. Percentage-of-sp
 
 ## What should you ask a Google Ads agency before you sign?
 
-**The questions you ask before signing reveal more than any case study on the agency's website, and a good agency answers all of them without flinching.** A good agency answers all of these without flinching, so ask them cold:
+**The questions you ask before signing reveal more than any case study on the agency's website, and a good agency answers all of them without flinching.** A good agency answers all of these without flinching, so ask them cold.
+
+**Six questions to ask before you sign**
 
 - **Who owns the Google Ads account?** It must be registered to you, under your email, with you as the admin.
 - **How are conversions tracked?** You want native tracking through Google Tag Manager, counting calls and form submissions.
@@ -138,7 +141,9 @@ Our [process page](/process) shows how each of these should be handled.
 
 ## What are the red flags of a bad Google Ads agency?
 
-**The clearest red flag is an agency that owns your account and will not hand it back, because leaving them means starting again from zero campaign history.** Bad agencies share a pattern, and once you see it, it's hard to miss:
+**The clearest red flag is an agency that owns your account and will not hand it back, because leaving them means starting again from zero campaign history.** Bad agencies share a pattern, and once you see it, it's hard to miss.
+
+**The pattern of a bad agency**
 
 - **They own your account.** You become a tenant in your own campaigns, and leaving means starting again from zero history.
 - **They report clicks and impressions**, never cost per lead or revenue, so you can never tell if the money worked.
@@ -151,7 +156,15 @@ The deepest red flag is vagueness. If you can't get a straight answer on convers
 
 ## How do you tell if your Google Ads agency is working?
 
-**Judge your Google Ads agency on cost per qualified lead and revenue, not on clicks , impressions and click-through rate are inputs, not outcomes, and a healthy account improves cost per lead as Quality Score climbs and wasted spend falls.** Clicks, impressions and click-through rate are inputs. They aren't outcomes. The numbers that prove an agency earns its fee are cost per qualified lead, cost per acquired customer, and return on ad spend. A healthy account improves these over time as Quality Score climbs and wasted spend falls. Check three signals each month: is cost per lead holding or falling while volume grows; is the search-terms report being actively pruned; and can the agency explain plainly what they changed and why. Judge on a 30-day rolling window, because 7-day windows are mostly noise. Remember too that paid search shares the page with organic results and AI Overviews, so a good agency watches the whole result, not just the ad. Our [case studies](/case-studies) show what real, measured progress looks like.
+**Judge your Google Ads agency on cost per qualified lead and revenue, not on clicks , impressions and click-through rate are inputs, not outcomes, and a healthy account improves cost per lead as Quality Score climbs and wasted spend falls.** Clicks, impressions and click-through rate are inputs. They aren't outcomes. The numbers that prove an agency earns its fee are cost per qualified lead, cost per acquired customer, and return on ad spend. A healthy account improves these over time as Quality Score climbs and wasted spend falls.
+
+**Three signals to check each month**
+
+- Is cost per lead holding or falling while volume grows?
+- Is the search-terms report being actively pruned?
+- Can the agency explain plainly what they changed and why?
+
+Judge on a 30-day rolling window, because 7-day windows are mostly noise. Remember too that paid search shares the page with organic results and AI Overviews, so a good agency watches the whole result, not just the ad. Our [case studies](/case-studies) show what real, measured progress looks like.
 
 ## What 88 Australian agency websites revealed about quality
 
@@ -168,7 +181,15 @@ The deepest red flag is vagueness. If you can't get a straight answer on convers
 
 ## What surprised us when we audited those agency articles
 
-**Three findings from auditing 88 Australian Google Ads articles hit harder than the score sheet alone shows, and the pattern inside ad accounts matched what we found in the content.** First, the weak band wasn't full of bad writing. It was competent writing with nothing original in it: no first-party data, no real numbers, nothing an AI engine couldn't pull from ten other pages. Second, the gap between the 62.4 average and our own 87.1 came almost entirely from evidence, not polish. The mediocre articles read fine; they just cited nothing a reader could check. Third, the pattern matches what we see inside ad accounts. The same shop that writes a generic blog post tends to run a generic campaign, with no negative keywords and no conversion tracking. Quality of thinking shows up everywhere, or nowhere.
+**Three findings from auditing 88 Australian Google Ads articles hit harder than the score sheet alone shows, and the pattern inside ad accounts matched what we found in the content.**
+
+**The three findings**
+
+- The weak band wasn't full of bad writing. It was competent writing with nothing original in it: no first-party data, no real numbers, nothing an AI engine couldn't pull from ten other pages.
+- The gap between the 62.4 average and our own 87.1 came almost entirely from evidence, not polish. The mediocre articles read fine; they just cited nothing a reader could check.
+- The pattern matches what we see inside ad accounts. The same shop that writes a generic blog post tends to run a generic campaign, with no negative keywords and no conversion tracking.
+
+Quality of thinking shows up everywhere, or nowhere.
 
 <svg viewBox="0 0 470 162" role="img" aria-label="Audit of 88 Australian Google Ads articles by quality band: 20 strong, 27 competent, 41 weak, none below 30, as of May 2026" xmlns="http://www.w3.org/2000/svg"><rect x="150" y="8" width="98" height="26" fill="#7c9c6b"/><text x="6" y="26" font-family="sans-serif" font-size="13" fill="#1a1a18">Strong: 20</text><rect x="150" y="44" width="132" height="26" fill="#3f6fa8"/><text x="6" y="62" font-family="sans-serif" font-size="13" fill="#1a1a18">Competent: 27</text><rect x="150" y="80" width="200" height="26" fill="#c8893f"/><text x="6" y="98" font-family="sans-serif" font-size="13" fill="#1a1a18">Weak: 41</text><rect x="150" y="116" width="6" height="26" fill="#9a9a92"/><text x="6" y="134" font-family="sans-serif" font-size="13" fill="#1a1a18">Below 30: 0</text></svg>
 
