@@ -32,7 +32,7 @@ faqs:
 > - You keep the kickoff call personal
 > - Start with the deposit invoice
 
-It's Thursday and the quote you won on Monday still hasn't turned into a job. You're chasing the deposit, the site address and a signed scope, one email at a time. The client's excitement is cooling, and so is your cash flow.
+Winning the quote is the easy part. Then come five more emails, and without customer onboarding automation you send every one by hand.
 
 This guide shows what to automate, what to keep human, and how to set it up in a week.
 

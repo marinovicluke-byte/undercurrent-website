@@ -32,7 +32,7 @@ faqs:
 > - Zapier, Make or n8n join your apps together
 > - Start with your biggest weekly time leak
 
-It's Thursday night and a new enquiry has landed. You copy the details into your CRM, then into a quote, then into Xero. Same name, same phone number, typed three times.
+This is a list of five tools, and you should buy as few of them as you can. Each one you add is another monthly bill and another link that can break.
 
 This guide compares the five tools on cost, effort and fit, then shows you where to start.
 

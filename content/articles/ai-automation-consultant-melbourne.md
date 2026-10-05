@@ -32,7 +32,7 @@ faqs:
 > - Start with a short paid trial
 > - Own every account they build in
 
-It's Tuesday night and you've got three Melbourne consultant websites open. Each one says it's AI-powered and none of them says what it would actually build on Monday. You still have 40 unread enquiries and a stack of invoices to send.
+The quickest way to sort Melbourne AI consultants is to ask who owns the accounts when the work is done. A good one sets everything up in your name, and a weak one keeps the keys.
 
 This guide shows how to compare consultants, what drives the cost, and what to ask before you sign.
 

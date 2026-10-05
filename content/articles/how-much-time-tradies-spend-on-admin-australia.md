@@ -31,7 +31,7 @@ faqs:
 > - Ten admin hours a week at $90 an hour is $43,200 a year.
 > - Reduce admin time by fixing invoices first.
 
-It's 8pm on a Thursday and the van's finally unpacked. Dinner's done, but three quotes still aren't written and Monday's invoices haven't gone out.
+Nobody pays a tradie for the quote, yet it's the admin job that takes the longest. In one hipages survey, 77% of trade firms put quoting among the admin jobs that take longest.
 
 Here's how much time tradies spend on admin, what it costs you, and the order to fix it in.
 

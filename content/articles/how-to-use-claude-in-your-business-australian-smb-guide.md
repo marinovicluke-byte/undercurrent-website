@@ -31,7 +31,7 @@ faqs:
 > - Team plans don't train on your chats by default
 > - Start with one weekly task
 
-It's Thursday night and you've asked Claude to rewrite one email. It did a nice job, then you closed the tab. Monday comes and every job is still sitting on your desk.
+It's easy to think of Claude as a writing tool. Anthropic's study of 1.2 million Cowork sessions found the biggest use was business operations: reports, checklists and spreadsheets.
 
 This guide shows you how to use Claude in your business, so it does the work instead of just chatting about it.
 
