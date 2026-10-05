@@ -30,7 +30,7 @@ faqs:
 > - Most use it for writing and data
 > - Few have changed how work runs
 
-It's Thursday night and you've just read that "everyone" is using AI now. You tried a chatbot once for a quote email. It was fine, and then you went back to doing it the old way.
+One government survey says 44% of small and medium businesses use AI. The ABS puts small and micro firms nearer 11%, and both numbers can be right.
 
 Here's what the government numbers say about AI in Australia, and where small businesses get stuck.
 

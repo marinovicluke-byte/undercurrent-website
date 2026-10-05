@@ -30,7 +30,7 @@ faqs:
 > - Turn uncoded transactions into client questions
 > - Flag odd numbers before review, then draft reports
 
-It's the second week of October and the quarter's BAS work is piling up. Half your clients still haven't sent their receipts. Your inbox has 140 unread emails, and most of them say "quick question".
+Which jobs in your practice does Xero's own AI leave alone? Start there, because it already reconciles bank transactions and chases overdue invoices.
 
 Here are the five jobs to turn into a workflow first, how each one works with Xero, and the rules on client data.
 

@@ -32,7 +32,7 @@ faqs:
 > - Hands-on sessions leave you with something running
 > - Start with one weekly task
 
-It's Friday afternoon and someone on your team has pasted a client's email into a free chatbot to draft a reply. It worked, sort of. Nobody showed them how, and nobody checked where that client's details went.
+AI training in Australia runs from a free TAFE course of a few hours to a $595 university day. The price matters less than whether your team walks out with one real job automated.
 
 Here's what each kind of AI training covers, what it costs, and how to pick one that changes Monday.
 

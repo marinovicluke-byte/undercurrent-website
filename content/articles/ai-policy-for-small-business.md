@@ -30,7 +30,7 @@ faqs:
 > - A named person approves new tools
 > - Review it every six months
 
-It's Monday and a staff member is quoting a job. They paste the customer's name, address and notes into a free AI chatbot on their phone. Nobody told them not to, and nobody knows it happened.
+If your staff use AI and nobody has written down the rules, you already have an AI policy. It's just the one each person made up on their own.
 
 A written AI policy stops that. Government templates are thorough, and long for a five-person business. One page that staff actually read does more.
 

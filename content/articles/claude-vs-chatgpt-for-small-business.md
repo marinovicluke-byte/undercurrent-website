@@ -32,7 +32,7 @@ faqs:
 > - Each costs US$20 a month for one person
 > - Test both on one real job
 
-It's Tuesday night and you've got three quotes to send before bed. You paste the first job into ChatGPT, then wonder if Claude would have done it better. This is the Claude vs ChatGPT question, and it has a plain answer once you sort your work by job.
+We build on Claude at UnderCurrent Automations, and we'd still point you to ChatGPT for some jobs. It makes images, and it's where most of your customers already ask their questions.
 
 Below is a job-by-job list, the data rules for each tool, and a one-week test you can run yourself.
 

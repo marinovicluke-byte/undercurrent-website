@@ -32,7 +32,7 @@ faqs:
 > - Opus wins on long, open-ended judgement
 > - The gap matters most at high volume
 
-It's Thursday night and your quote-writing prompt finally works. Now there's a dropdown with two names in it, and one costs twice as much. You don't want to pay double for nothing, and you don't want sloppy quotes going out either.
+Claude Opus 5.5 costs twice as much as Sonnet 5.5 through the API. On most tests they score within a few points, so paying double only makes sense for some jobs.
 
 This guide sets out the Claude Opus vs Sonnet choice the way we make it. Every price was checked on Anthropic's own pages on 2 October 2026.
 

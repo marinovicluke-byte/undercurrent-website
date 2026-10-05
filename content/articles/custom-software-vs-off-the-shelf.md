@@ -30,7 +30,7 @@ faqs:
 > - Build only the small job no tool covers
 > - Most owners never need a full build
 
-It's Thursday night and you've got three tabs open: the booking tool, the accounting software and a spreadsheet that glues them together. A developer has quoted you a system that "does it all". The number has a comma in it, and you're wondering if this is the year to stop patching things together.
+A quote for custom software that "does it all" usually has a comma in the price. Before you sign, check whether buying a tool, or connecting the ones you have, would do the job.
 
 This page gives you a plain rule for build or buy, the sums to check it, and the questions to ask before you sign anything.
 

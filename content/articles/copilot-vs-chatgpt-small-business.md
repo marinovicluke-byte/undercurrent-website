@@ -30,7 +30,7 @@ faqs:
 > - Free Copilot Chat is already in your plan
 > - Test free before you buy seats
 
-It's Thursday afternoon and your office manager wants ChatGPT. Your accountant says Copilot is "already in Outlook". You're already paying Microsoft every month, and nobody can tell you what the extra seat actually buys.
+Most Microsoft 365 business plans already include Copilot Chat at no extra cost. That gives you a free test to run before anyone buys a ChatGPT seat.
 
 This guide on Copilot vs ChatGPT compares what each does inside Outlook, Teams and Excel, with Australian prices checked on each vendor's own page on 2 October 2026.
 

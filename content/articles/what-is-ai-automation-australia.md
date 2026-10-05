@@ -33,7 +33,7 @@ faqs:
 > - For a small business, admin gets done without you typing it.
 > - Start with one weekly job.
 
-It's 9pm on a Sunday and the invoices still aren't out. You did the jobs, so you know they're finished. If you've asked what is AI automation, that hour of typing is the answer.
+Every enquiry that arrives as an email, PDF or photo still gets typed in by someone, usually you. AI automation is the software that reads it and does the typing for you.
 
 This guide covers what it is, what waiting costs you, and where to start.
 

@@ -30,7 +30,7 @@ faqs:
 > - Build when the yearly bill tops the build
 > - Keep it small and owned
 
-It's Monday and a customer rings about the quote you sent in July. You find it in your sent items, a text thread and a notebook in the ute. Someone has told you that you need a CRM for small business, and every one you look at wants a monthly fee per person.
+A CRM for small business priced per person per month looks cheap until you add up three years of seats. For some teams, that total costs more than building a small one of their own.
 
 Here's the rule we use for buying or building, with a three-year sum you can check against your own quotes.
 

@@ -30,7 +30,7 @@ faqs:
 > - OpenAI's recent incidents didn't leak chats
 > - Your own setup is the bigger risk
 
-It's Tuesday afternoon and your office manager pastes a customer complaint into ChatGPT to soften the reply. The name, address and invoice number go in with it. Nobody set a rule, so nobody asked the real question: is ChatGPT safe for this?
+Australia's privacy regulator says personal details shouldn't go into public AI chatbots. Without a rule in place, a customer's name, address and invoice number can end up in one anyway.
 
 OpenAI's own pages answer most of it. They say where that text goes, and what its last three incidents did and didn't touch.
 

@@ -30,7 +30,7 @@ faqs:
 > - Copilot if you live in Microsoft 365
 > - Gemini if you live in Gmail
 
-It's Monday morning and three of your staff are paying for three different AI tools. One swears by ChatGPT, one by Claude, and the bookkeeper uses whatever came with Outlook. Nobody can say which one is actually better for quotes, emails or the end-of-month report.
+Asking which AI model is best is like asking which ute is best before you know what you're carrying. The answer depends on your most common job and the software you already pay for.
 
 This guide gives you one table of five models against the jobs a small business really has, with prices checked on each vendor's own page on 2 October 2026.
 

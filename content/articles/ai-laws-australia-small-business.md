@@ -30,7 +30,7 @@ faqs:
 > - The safety standard is voluntary, not law
 > - New privacy rule starts 10 December 2026
 
-You've got a chatbot on the website and staff who use AI to draft emails. Then a customer asks if any of it is legal, and you're not sure. A search for AI laws in Australia mostly turns up long papers from law firms, written for big companies.
+Australia has no AI law yet, but it does have an AI deadline. If software decides anything about your customers, your privacy policy may need to say so by 10 December 2026.
 
 This guide sticks to what the regulators say on their own sites. It's general information, not legal advice. For your own case, talk to a lawyer.
 

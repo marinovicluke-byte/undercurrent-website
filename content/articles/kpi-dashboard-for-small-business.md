@@ -29,7 +29,7 @@ faqs:
 > - Two come from jobs: margin and quotes won
 > - The inbox gives enquiries and reply time
 
-It's Monday at 7am. You've got Xero open in one tab, the job board in another, and 40 unread emails. By the time you've worked out if last week was good, the phone is ringing.
+Your bank balance says what came in last week. It can't say how many quotes you won or how fast you answered new enquiries.
 
 A KPI dashboard puts the six numbers that matter on one screen. Three of them already sit in Xero. The other three are why most owners never see the whole week at once.
 
