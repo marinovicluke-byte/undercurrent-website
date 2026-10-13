@@ -127,6 +127,8 @@ export async function POST(request) {
     utm_medium: f.utm_medium || null,
     utm_campaign: f.utm_campaign || null,
     utm_content: f.utm_content || null,
+    utm_term: f.utm_term || null,
+    ad_id: f.ad_id || null,
     fbclid: f.fbclid || null,
     fbc: f.fbc || null,
     fbp: f.fbp || null,
@@ -178,6 +180,8 @@ export async function POST(request) {
         utm_source: f.utm_source,
         utm_campaign: f.utm_campaign,
         utm_content: f.utm_content,
+        utm_term: f.utm_term,
+        ad_id: f.ad_id,
         repeat_submit: Boolean(existing),
       }),
     ])
