@@ -271,7 +271,7 @@ export default function GoogleReviewsPage({ d }) {
           <p className="ft__px">We use the Meta Pixel and Conversions API to measure our ads.</p>
           <div className="ft__bar">
             <span>© 2026 UnderCurrent Automations</span>
-            <span className="ft__links"><a href="/privacy" target="_blank" rel="noopener">Privacy</a><a href="/terms" target="_blank" rel="noopener">Terms</a><a href="#" data-cookies="">Cookie settings</a></span>
+            <span className="ft__links"><a href="/privacy" target="_blank" rel="noopener">Privacy</a><a href="/terms" target="_blank" rel="noopener">Terms</a><a href="#" data-cookies="">Cookie settings and opt out</a></span>
             <span>Google is a trademark of Google LLC. We&apos;re not part of Google.</span>
           </div>
         </div>

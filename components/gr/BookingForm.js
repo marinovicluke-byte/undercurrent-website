@@ -6,6 +6,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { buildDays, fetchDays, slotLabel, localHint } from './slots'
 import { captureAttribution, utmProps, metaIds, track, distinctId } from './track'
+import { adConsent as hasAdConsent } from './Consent'
 
 const YEARS = [['<1', 'Under 1 year'], ['1-3', '1 to 3 years'], ['3-10', '3 to 10 years'], ['10+', '10+ years']]
 // compliance/consent-copy.md §2, word for word. Sent with the lead as the record of what was shown.
@@ -111,8 +112,7 @@ export default function BookingForm({ niche, variant }) {
     setBusy(true); setMsg('')
     const attr = captureAttribution()
     const event_id = uuid()
-    let adConsent = false
-    try { adConsent = localStorage.getItem('uc_consent') === 'granted' } catch {}
+    const adConsent = hasAdConsent()
     const body = {
       name: v.name.trim(), phone, email: v.email.trim(),
       business_name: v.business_name.trim(), website: siteUrl(v.website) || '', gbp_url: gbpText ? v.gbp_url.trim() : gbpUrl(v.gbp_url),
@@ -122,7 +122,7 @@ export default function BookingForm({ niche, variant }) {
       ...utmProps(attr), ...metaIds(attr),
       posthog_distinct_id: distinctId(), event_id, consent: true,
       // beyond the shared contract, safe to ignore server side: the consent wording shown, and whether
-      // the visitor accepted ad cookies (CAPI is the lead-booking pane's call)
+      // the visitor opted out of the Pixel (false only after "Turn it off")
       consent_text: CONSENT, ad_consent: adConsent,
     }
     track('gr_form_submit', { ...base(), duration_min: duration })
@@ -131,7 +131,7 @@ export default function BookingForm({ niche, variant }) {
       let j = {}
       try { j = await res.json() } catch {}
       if (res.ok && j.ok && j.duplicate) {
-        setMsg('You\'re already booked. Check your texts and email for the time.')
+        setMsg('You\'re already booked. Check your texts and email.')
       } else if (res.ok && j.ok) {
         track('gr_booked', { ...base(), duration_min: duration, lead_id: j.lead_id || '' })
         if (adConsent) window.ucPixel?.trackLead(event_id)
