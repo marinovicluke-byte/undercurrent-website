@@ -14,6 +14,20 @@ const MAX_BODY_SIZE = 10_000
 const MIN_NOTICE_MS = 60 * 60_000
 const MAX_AHEAD_MS = 60 * 86_400_000
 
+// Optional bot check: on once TURNSTILE_SECRET_KEY is set (the page then sends cf_turnstile_token).
+async function turnstileOk(token, ip) {
+  const secret = process.env.TURNSTILE_SECRET_KEY
+  if (!secret) return true
+  if (!token) return false
+  const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    method: 'POST',
+    body: new URLSearchParams({ secret, response: token, ...(ip !== 'unknown' && { remoteip: ip }) }),
+    signal: AbortSignal.timeout(8_000),
+  }).catch(() => null)
+  const body = res ? await res.json().catch(() => ({})) : {}
+  return body.success === true
+}
+
 const fail = (status, error, extra) => NextResponse.json({ ok: false, error, ...extra }, { status })
 
 export async function POST(request) {
@@ -34,6 +48,7 @@ export async function POST(request) {
   if (!parsed.success) return fail(422, 'validation_failed', { fields: parsed.error.flatten().fieldErrors })
   const f = parsed.data
   if (f.honeypot) return NextResponse.json({ ok: true, lead_id: null })
+  if (!(await turnstileOk(f.cf_turnstile_token, ip))) return fail(403, 'bot_check_failed')
 
   const mobile = toE164AU(f.phone)
   if (!mobile) return fail(422, 'validation_failed', { fields: { phone: ['Enter an Australian phone number'] } })
@@ -54,9 +69,10 @@ export async function POST(request) {
   }
 
   // Dedupe on phone: an upcoming booking stands, a second submit does not double-book.
+  // The reply carries no id or time, so nobody can look up another person's booking by phone.
   if (existing?.status === 'booked' && existing.slot_start && new Date(existing.slot_start) > new Date()) {
     await updateLead(existing.id, { submissions: (existing.submissions || 1) + 1 }).catch(() => {})
-    return NextResponse.json({ ok: true, lead_id: existing.id, slot_start: existing.slot_start, duplicate: true })
+    return NextResponse.json({ ok: true, lead_id: null, duplicate: true })
   }
 
   let booking
@@ -128,6 +144,7 @@ export async function POST(request) {
       // slot_start, so the new slot gets a fresh set of texts.
       await updateLead(existing.id, {
         ...row,
+        status: existing.status === 'won' ? 'won' : 'booked', // never downgrade a client
         submissions: (existing.submissions || 1) + 1,
         luke_pinged_at: null,
         capi_sent_at: null,
@@ -140,7 +157,7 @@ export async function POST(request) {
   } catch (err) {
     // The booking exists (Cal.com emailed Luke and the lead), but nothing downstream will see it.
     // Log loud and still confirm to the lead: their slot is real.
-    console.error('[gr-lead] LEAD_NOT_SAVED', booking.uid, mobile, err.message)
+    console.error('[gr-lead] LEAD_NOT_SAVED cal booking', booking.uid, err.message)
     return NextResponse.json({ ok: true, lead_id: null, slot_start: row.slot_start })
   }
 
