@@ -62,7 +62,7 @@ export function Suburbs({ subs, of }) {
 }
 
 const fmt = x => 'A$' + Math.round(x).toLocaleString('en-AU')
-export function Calc({ value, customer, customers }) {
+export function Calc({ value, note, customer, customers }) {
   const [val, setVal] = useState(String(value))
   const [n, setN] = useState(2)
   const v = Math.max(0, parseFloat(val.replace(/[^0-9.]/g, '')) || 0)
@@ -70,7 +70,7 @@ export function Calc({ value, customer, customers }) {
   return (
     <div className="calc">
       <div className="calc__in">
-        <div><label htmlFor="gr-val">One new {customer} is worth<small>Example, change it</small></label>
+        <div><label htmlFor="gr-val">One new {customer} is worth<small>{note}</small></label>
           <div className="calc__money"><span>A$</span><input id="gr-val" inputMode="numeric" value={val} onChange={e => setVal(e.target.value)} /></div></div>
         <div><label htmlFor="gr-n">Extra {customers} a month <span className="calc__n">{n}</span></label>
           <input id="gr-n" type="range" min="1" max="10" value={n} onChange={e => setN(+e.target.value)} /></div>

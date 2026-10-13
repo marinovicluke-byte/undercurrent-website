@@ -213,7 +213,7 @@ export default function GoogleReviewsPage({ d }) {
               </div>
               <div className="rv" style={{ '--i': 1 }}>
                 <h3>Do your own maths</h3>
-                <Calc value={d.calcValue} customer={d.customer} customers={d.customers} />
+                <Calc value={d.calcValue} note={d.calcNote} customer={d.customer} customers={d.customers} />
               </div>
             </div>
           </div>
