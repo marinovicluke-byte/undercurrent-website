@@ -16,14 +16,16 @@ const nextConfig = {
   // 169 URLs missing baseline headers). CSP is intentionally permissive enough
   // to keep Vercel Analytics, Google Analytics, Clarity, Ahrefs, and inline
   // JSON-LD working; tighten further once the next iteration drops 'unsafe-inline'.
+  // PostHog (us) and the Meta Pixel added 2026-10-13 for the Google reviews ads page: without them the
+  // layout's PostHog snippet and /js/uc-pixel.js load nothing.
   async headers() {
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://analytics.ahrefs.com https://va.vercel-scripts.com https://vercel.live",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://analytics.ahrefs.com https://va.vercel-scripts.com https://vercel.live https://us-assets.i.posthog.com https://us.posthog.com https://connect.facebook.net",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "img-src 'self' data: blob: https:",
       "font-src 'self' data: https://fonts.gstatic.com",
-      "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://*.clarity.ms https://analytics.ahrefs.com https://vitals.vercel-insights.com https://va.vercel-scripts.com https://vercel.live wss://vercel.live",
+      "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://*.clarity.ms https://analytics.ahrefs.com https://vitals.vercel-insights.com https://va.vercel-scripts.com https://vercel.live wss://vercel.live https://us.i.posthog.com https://us-assets.i.posthog.com https://us.posthog.com https://www.facebook.com https://connect.facebook.net",
       "frame-src 'self' https://cal.com https://app.cal.com https://vercel.live",
       "frame-ancestors 'self'",
       "base-uri 'self'",
