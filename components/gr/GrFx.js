@@ -10,7 +10,7 @@ export default function GrFx({ niche, variant }) {
     const props = { niche, page_variant: variant, ...utmProps(captureAttribution()) }
     track('gr_page_view', props)
 
-    // every "Book my call" button jumps to the form; log which one was tapped
+    // every "Book my free Google check" button jumps to the form; log which one was tapped
     const onClick = e => {
       const a = e.target.closest('[data-cta]')
       if (a) track('gr_cta_click', { ...props, cta: a.getAttribute('data-cta') })

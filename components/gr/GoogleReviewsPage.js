@@ -1,6 +1,6 @@
 // components/gr/GoogleReviewsPage.js — the Google reviews offer page, built for Meta ad traffic on a phone.
 // v2d's copy and v2c's layout (landing-pages/gbp-reviews/), one entry per niche in lib/data/googleReviews.js.
-// Ads rules: logo only, no nav, no links out of the page, one CTA ("Book my call with Luke") that jumps
+// Ads rules: logo only, no nav, no links out of the page, one CTA ("Book my free Google check") that jumps
 // to the form at #book, a sticky phone bar. The site's own Nav and Footer are hidden by the page sheet.
 // Schwartz levels per section as in v2d: problem aware → solution aware → product aware → most aware.
 import Image from 'next/image'
@@ -9,7 +9,8 @@ import GrFx, { Suburbs, Calc } from './GrFx'
 import BookingForm from './BookingForm'
 import Consent from './Consent'
 
-const CTA = 'Book my call with Luke'
+// One wording on every button (landing-pages 06 §6.1). "Free" and "Google check" match the ads.
+export const CTA = 'Book my free Google check'
 
 export default function GoogleReviewsPage({ d }) {
   const { price, ih, stats } = SHARED
@@ -36,10 +37,10 @@ export default function GoogleReviewsPage({ d }) {
                 <div className="hero__act" id="gr-hero-cta">
                   <a className="btn btn--w" href="#book" data-cta="hero">{CTA}</a>
                 </div>
-                <p className="reassure">Pick a 15 or 30 minute call. You’ll see where you sit on the map.</p>
+                <p className="reassure">{d.reassure}</p>
               </div>
               <div className="ihx" aria-label={`Vildan's real results: 6 times more new clients from Google a month, and 11 to 29 of 66 nearby suburb searches in the map top 3`}>
-                <div className="ihx__bar"><span>Vildan’s real numbers</span><span>Moorabbin, 2026</span></div>
+                <div className="ihx__bar"><span>Vildan&apos;s real numbers</span><span>Moorabbin, 2026</span></div>
                 <div className="ihx__top">
                   <b className="ihx__x">{ih.mult}</b>
                   <p>more new clients from Google a month.</p>
@@ -55,7 +56,7 @@ export default function GoogleReviewsPage({ d }) {
             The Maps-style mock has no Google logos or icons (Google's brand terms) and is labelled Example. */}
         <section className="sec sec--off" id="problem">
           <div className="wrap">
-            <div className="sec__head"><span className="label"><b>What you can’t see</b></span></div>
+            <div className="sec__head"><span className="label"><b>What you can&apos;t see</b></span></div>
             <div className="two">
               <div>
                 <h2 className="rv">{d.problemH2}</h2>
@@ -135,7 +136,7 @@ export default function GoogleReviewsPage({ d }) {
                 <div className="vt__poster"><Image src="/assets/tm-vildan.jpg" alt="Vildan, owner of Intelligentle Healing" fill sizes="(max-width:960px) 100vw, 40vw" style={{ objectPosition: '50% 30%' }} /></div>
                 <p className="vt__stat"><b>6×</b>new clients from Google</p>
                 <figcaption className="vt__cap">
-                  <div className="vt__line ph"><b>Vildan’s words coming</b>His one line goes here once he sends it.</div>
+                  <div className="vt__line ph"><b>Vildan&apos;s words coming</b>His one line goes here once he sends it.</div>
                   <p className="vt__who"><b>Vildan</b>Owner, Intelligentle Healing · Moorabbin</p>
                 </figcaption>
               </figure>
@@ -157,14 +158,14 @@ export default function GoogleReviewsPage({ d }) {
                 <div className="vq__ph"><Image src="/assets/tm-allyjana.jpg" alt="Allyjana, director of Allyjana Marie Creative" fill sizes="112px" style={{ objectPosition: '50% 18%' }} /></div>
                 <div className="vq__t">
                   <span className="vq__res">3× demand</span>
-                  <blockquote>“Since then we’ve seen our demand increase 3x, and it’s saved me hours of work every week.”</blockquote>
+                  <blockquote>&quot;Since then we&apos;ve seen our demand increase 3x, and it&apos;s saved me hours of work every week.&quot;</blockquote>
                   <figcaption className="vq__who"><b>Allyjana</b>Director, Allyjana Marie Creative</figcaption>
                 </div>
               </figure>
               <figure className="vq rv" style={{ '--i': 1 }}>
                 <div className="vq__ph"><Image src="/assets/tm-edward.jpg" alt="Edward Bun, director of Lyso" fill sizes="112px" style={{ objectPosition: '50% 28%' }} /></div>
                 <div className="vq__t">
-                  <div className="ph"><b>Ed’s words coming</b>His one line and one number go here once he sends them.</div>
+                  <div className="ph"><b>Ed&apos;s words coming</b>His one line and one number go here once he sends them.</div>
                   <figcaption className="vq__who"><b>Edward Bun</b>Director, Lyso</figcaption>
                 </div>
               </figure>
@@ -191,7 +192,7 @@ export default function GoogleReviewsPage({ d }) {
                     <p className="pay__note">Months 6 to 11 are half price, so the {price.setup} comes back to you. Year one: {price.yearOne} all up.</p>
                   </div>
                   <div className="cta-row"><a className="btn btn--w" href="#book" data-cta="offer">{CTA}</a></div>
-                  <p className="reassure">Live within 7 days of you giving us access, or you don’t pay that month.</p>
+                  <p className="reassure">Live within 7 days of you giving us access, or you don&apos;t pay that month.</p>
                 </div>
               </div>
               <ul className="inc rv" style={{ '--i': 2 }}>
@@ -238,17 +239,17 @@ export default function GoogleReviewsPage({ d }) {
             <div className="sec__head"><span className="label"><b>Talk to Luke</b></span><span className="label">{price.monthly} a month</span></div>
             <div className="bookg">
               <div className="bookg__form">
-                <h2>Book your call with Luke.</h2>
-                <p className="lede">Pick a time that suits you. Luke looks at your Google profile with you and shows you where you sit on the map.</p>
+                <h2>Book your free Google check.</h2>
+                <p className="lede">Pick a time that suits you. Luke looks at your Google profile with you and shows you where you sit on the map. 15 minutes, or 30 if you want longer.</p>
                 <BookingForm niche={d.niche} variant={d.variant} />
               </div>
               <div className="bookg__side">
                 <div className="luke__ph gph"><Image src="/assets/gr/luke-on-phone.jpg" alt="Luke Marinovic on the phone at his desk" fill sizes="(max-width:960px) 100vw, 40vw" style={{ objectPosition: '50% 40%' }} /></div>
                 <h2 className="rv">Almost no risk. Every review you get stays yours.</h2>
-                <p className="lede rv" style={{ '--i': 1 }}>You deal with me, Luke, the owner. I’ll tell you straight if this will help you.</p>
+                <p className="lede rv" style={{ '--i': 1 }}>You deal with me, Luke, the owner. I&apos;ll tell you straight if this will help you.</p>
                 <ol className="gu rv" style={{ '--i': 2 }}>
-                  <li><div><b>Your review asks are live in 7 days, or you don’t pay that month.</b></div></li>
-                  <li><div><b>Every review answered in 1 business day, or you don’t pay that month.</b></div></li>
+                  <li><div><b>Your review asks are live in 7 days, or you don&apos;t pay that month.</b></div></li>
+                  <li><div><b>Every review answered in 1 business day, or you don&apos;t pay that month.</b></div></li>
                   <li><div><b>More new reviews in your first 90 days than the 90 before, or you get your {price.setup} back.</b><span>As long as the asks stay on and you keep serving {d.customers}.</span></div></li>
                   <li><div><b>Cancel any time. Your Google profile and every review stay yours.</b></div></li>
                 </ol>
@@ -271,7 +272,7 @@ export default function GoogleReviewsPage({ d }) {
           <div className="ft__bar">
             <span>© 2026 UnderCurrent Automations</span>
             <span className="ft__links"><a href="/privacy" target="_blank" rel="noopener">Privacy</a><a href="/terms" target="_blank" rel="noopener">Terms</a><a href="#" data-cookies="">Cookie settings</a></span>
-            <span>Google is a trademark of Google LLC. We’re not part of Google.</span>
+            <span>Google is a trademark of Google LLC. We&apos;re not part of Google.</span>
           </div>
         </div>
       </footer>

@@ -17,6 +17,8 @@ export function captureAttribution() {
   if (!a.captured && [...UTM, 'fbclid'].some(k => q.get(k))) {
     UTM.forEach(k => { a[k] = q.get(k) || '' })
     a.fbclid = q.get('fbclid') || ''
+    a.utm_term = q.get('utm_term') || ''
+    a.ad_id = q.get('ad_id') || ''
     a.fbclid_at = Date.now()
     a.captured = true
     try { sessionStorage.setItem(KEY, JSON.stringify(a)) } catch {}
@@ -27,6 +29,9 @@ export function captureAttribution() {
 export function utmProps(a) {
   const p = {}
   UTM.forEach(k => { p[k] = a[k] || '' })
+  // lead-booking also takes utm_term and ad_id when the ad URL carries them
+  if (a.utm_term) p.utm_term = a.utm_term
+  if (a.ad_id) p.ad_id = a.ad_id
   return p
 }
 

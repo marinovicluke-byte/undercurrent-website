@@ -1,7 +1,7 @@
 // components/gr/slots.js — call slots in Melbourne time, whatever the visitor's own time zone.
-// Next 10 business days, 9:00 to 17:00 in 30 minute steps (last start 16:30), nothing sooner than
-// 2 hours from now. GET /api/leads/google-reviews/slots then hides the taken ones; until that route
-// exists (lead-booking pane) every slot shows. The server stays the judge: a taken slot is refused there.
+// Fallback grid: next 10 business days, 9:00 to 17:00 in 30 minute steps (last start 16:30), nothing
+// sooner than 2 hours from now. Used only when the slots route (below) is missing or fails.
+// The server stays the judge: a taken slot is refused there.
 const TZ = 'Australia/Melbourne'
 const DAYS = 10
 const LEAD_MS = 2 * 60 * 60 * 1000
@@ -74,19 +74,23 @@ export function localHint(iso) {
   const fmt = tz => new Intl.DateTimeFormat('en-AU', { timeZone: tz, hour: 'numeric', minute: '2-digit', hour12: true }).format(new Date(ms))
   const mine = Intl.DateTimeFormat().resolvedOptions().timeZone
   if (!mine || fmt(mine) === fmt(TZ)) return ''
-  return `That’s ${fmt(mine).replace(/\s?([ap])\.?m\.?/i, ' $1m')} your time.`
+  return `That's ${fmt(mine).replace(/\s?([ap])\.?m\.?/i, ' $1m')} your time.`
 }
 
-// Accepts either { taken: [iso] } or { available: [iso] } from the slots route. Anything else: show all.
-export async function fetchTaken(duration) {
+// The lead-booking pane's route (feat/lead-booking): GET ?duration=15|30&days=14 →
+// { ok, timezone, duration_min, slots: { 'YYYY-MM-DD': [iso, ...] } } from Luke's real Cal.com availability.
+// Those slots win over the 9 to 5 grid above, whatever hours they fall in. No route (or an error): the grid.
+export async function fetchDays(duration) {
   try {
-    const res = await fetch(`/api/leads/google-reviews/slots?duration=${duration}`, { headers: { accept: 'application/json' } })
-    if (!res.ok) return { stub: true }
+    const res = await fetch(`/api/leads/google-reviews/slots?duration=${duration}&days=14`, { headers: { accept: 'application/json' } })
+    if (!res.ok) return null
     const j = await res.json()
-    if (Array.isArray(j.taken)) return { taken: new Set(j.taken.map(t => Date.parse(t))) }
-    if (Array.isArray(j.available)) return { available: new Set(j.available.map(t => Date.parse(t))) }
-    return { stub: true }
+    if (!j.ok || !j.slots || typeof j.slots !== 'object') return null
+    return Object.keys(j.slots).sort().slice(0, DAYS).map(key => {
+      const slots = j.slots[key].map(iso => ({ iso, ms: Date.parse(iso), label: slotLabel(iso).split(', ').pop() })).filter(x => x.ms)
+      return { key, label: slots.length ? dayLabel(slots[0].ms) : key, slots }
+    }).filter(d => d.slots.length)
   } catch {
-    return { stub: true }
+    return null
   }
 }
