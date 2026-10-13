@@ -82,7 +82,8 @@ export function localHint(iso) {
 // Those slots win over the 9 to 5 grid above, whatever hours they fall in. No route (or an error): the grid.
 export async function fetchDays(duration) {
   try {
-    const res = await fetch(`/api/leads/google-reviews/slots?duration=${duration}&days=14`, { headers: { accept: 'application/json' } })
+    // 6s cap: a slow Cal.com or a missing route must never leave the form on "Loading times…"
+    const res = await fetch(`/api/leads/google-reviews/slots?duration=${duration}&days=14`, { headers: { accept: 'application/json' }, signal: AbortSignal.timeout(6000) })
     if (!res.ok) return null
     const j = await res.json()
     if (!j.ok || !j.slots || typeof j.slots !== 'object') return null
